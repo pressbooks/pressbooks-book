@@ -8,7 +8,7 @@ Copyright 2011-2015 Book Oven Inc. (Pressbooks.com) code@pressbooks.com
 Version: 1.7.0
 */
 
-@import 'fonts-web', '../../assets/scss/partials/tables', '../../assets/scss/partials/textboxes', 'assets/src/styles/partials/colors';
+@import 'fonts-web', 'assets/legacy/styles/tables', 'assets/legacy/styles/textboxes', 'assets/src/styles/partials/colors';
 
 $url-base: '' !default;
 
