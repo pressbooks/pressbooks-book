@@ -4,11 +4,18 @@
   "description": "Named after Martin Luther, this is a traditional book theme, good for novels, and text-heavy non-fiction. An earlier version of this theme was commissioned by Fortress Press.",
   "author": "Pressbooks (Book Oven Inc.)",
   "license": "GPL-2.0+",
-  "dependencies": {},
+  "engines": {
+    "node": ">= 6.9.4"
+  },
+  "devDependencies": {
+    "jquery-columnizer": "^1.6.3",
+    "laravel-mix": "^0.12.1",
+    "sharer.js": "^0.3.1"
+  },
   "scripts": {
-    "build-structure": "sass assets/src/styles/structure.scss css/structure.css",
-    "build-structure:production": "sass assets/src/styles/structure.scss css/structure.css --style=compressed --sourcemap=none",
-    "build-style": "sass style.scss style.css",
-    "build-style:production": "sass style.scss style.css --style=compressed --sourcemap=none"
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   }
 }

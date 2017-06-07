@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ee77d69ff14d84f342378708c58824c",
+    "content-hash": "d620c621bbd46109e674090a0bc53792",
     "packages": [
         {
             "name": "composer/installers",
@@ -119,6 +119,41 @@
                 "zikula"
             ],
             "time": "2017-04-24T06:37:16+00:00"
+        },
+        {
+            "name": "pressbooks/mix",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pressbooks/mix.git",
+                "reference": "ee3ff7d927f7c005b6ea187ddfd0eaf6b79c54c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pressbooks/mix/zipball/ee3ff7d927f7c005b6ea187ddfd0eaf6b79c54c6",
+                "reference": "ee3ff7d927f7c005b6ea187ddfd0eaf6b79c54c6",
+                "shasum": ""
+            },
+            "require-dev": {
+                "humanmade/coding-standards": "^0.2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PressbooksMix\\": "inc/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pressbooks (Book Oven Inc.)",
+                    "email": "code@pressbooks.com"
+                }
+            ],
+            "time": "2017-06-07T13:27:14+00:00"
         }
     ],
     "packages-dev": [
