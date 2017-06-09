@@ -3,8 +3,8 @@
     "description": "The default book theme for Pressbooks installations.",
     "type": "wordpress-theme",
     "require": {
-        "composer/installers": "^1.2",
-        "pressbooks/mix": "^1.1"
+        "composer/installers": "~1.2",
+        "pressbooks/mix": "~1.2"
     },
     "require-dev": {
         "humanmade/coding-standards": "^0.2.1"
