@@ -4,7 +4,7 @@
     "type": "wordpress-theme",
     "require": {
         "composer/installers": "~1.2",
-        "pressbooks/mix": "~1.2"
+        "pressbooks/mix": "~2.0"
     },
     "require-dev": {
         "humanmade/coding-standards": "^0.2.1"
