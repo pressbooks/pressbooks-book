@@ -29,8 +29,8 @@ $metakeys = array(
  * ------------------------------------------------------------------------ */
 
 function pressbooks_book_info_page () {
-	$assets_pb = new Assets( 'pressbooks', 'assets/dist', 'plugin' );
-	$assets = new Assets( 'pressbooks-book', 'dist', 'theme' );
+	$assets = new Assets( 'pressbooks-book', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'pressbooks-book-info', $assets->getPath( 'styles/book-info.css' ), [], null, 'all' );
@@ -41,7 +41,7 @@ function pressbooks_book_info_page () {
 		wp_enqueue_script( 'columnizer-load', $assets->getPath( 'scripts/columnizer-load.js' ), [ 'jquery', 'columnizer' ], '1.7.0', false );
 
 		// Sharer.js
-		wp_enqueue_script( 'sharer', $assets_pb->getPath( 'scripts/sharer.js' ) );
+		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
@@ -75,7 +75,8 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
  * Register and enqueue scripts and stylesheets.
  * ------------------------------------------------------------------------ */
 function pb_enqueue_scripts() {
-	$assets = new Assets( 'pressbooks-book', 'dist', 'theme' );
+    $assets = new Assets( 'pressbooks-book', 'theme' );
+    $assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 	wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), [], '1.7.0', 'screen, print' );
 	wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
 
