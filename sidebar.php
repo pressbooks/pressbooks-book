@@ -1,5 +1,5 @@
 <?php global $blog_id; ?>
-	<?php if ( get_option( 'blog_public' ) == '1' || (get_option( 'blog_public' ) == '0' && current_user_can_for_blog( $blog_id, 'read' )) ) : ?>
+	<?php if ( pb_is_public() ) : ?>
 
 	<div id="sidebar">
 
@@ -9,7 +9,7 @@
 			<?php if ( current_user_can_for_blog( $blog_id, 'edit_posts' ) || is_super_admin() ) : ?>
 				<li class="admin-btn"><a href="<?php echo get_option( 'home' ); ?>/wp-admin"><?php _e( 'Admin', 'pressbooks' ); ?></a></li>
 			<?php endif; ?>
-		
+
 				<li class="home-btn"><a href="<?php echo get_option( 'home' ); ?>"><?php _e( 'Home', 'pressbooks' ); ?></a></li>
 
 		<!-- TOC button always there -->

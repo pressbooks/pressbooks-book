@@ -1,14 +1,1 @@
-(function($) {
-
-    $(document).ready(function() {
-
-      	 // Book info page Table of Content columns
-		$('#table-of-content').columnize({ width: 320 });
-
-		$('table-of-content').scrollLeft(300);
-
-        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        //Don't add anything below this line
-    }); //End of $(document).ready()
-
-})(jQuery); //End of ( function( $ ) {
+!function(t){t(document).ready(function(){t("#table-of-content").columnize({width:320}),t("table-of-content").scrollLeft(300)})}(jQuery);

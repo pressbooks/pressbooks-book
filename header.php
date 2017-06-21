@@ -45,9 +45,8 @@ if ( $paged >= 2 || $page >= 2 ) {
 	$schema = 'itemscope itemtype="http://schema.org/WebPage" itemref="about copyrightHolder copyrightYear inLanguage publisher" ';
 } ?>
 <body <?php body_class();
-if ( wp_title( '', false ) != '' ) { print ' id="' . str_replace( ' ', '', strtolower( wp_title( '', false ) ) ) . '"'; } ?> <?php echo $schema; ?>>
-<?php $social_media = get_option( 'pressbooks_theme_options_web' );
-if ( 1 === @$social_media['social_media'] || ! isset( $social_media['social_media'] ) ) { ?>
+if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strtolower( wp_title( '', false ) ) ) . '"'; } ?> <?php echo $schema; ?>>
+<?php if ( pb_social_media_enabled() ) { ?>
 	<!-- Faccebook share js sdk -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -82,14 +81,12 @@ if ( 1 === @$social_media['social_media'] || ! isset( $social_media['social_medi
 
 				<div class="sub-nav-right">
 
-						<?php if ( @array_filter( get_option( 'pressbooks_ecommerce_links' ) ) ) : ?>
+						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
 						<!-- Buy -->
 						<div class="buy">
 							<a href="<?php echo get_option( 'home' ); ?>/buy" class="button-red"><?php _e( 'Buy', 'pressbooks' ); ?></a>
 						</div>
 						<?php endif; ?>
-
-						<?php get_template_part( 'content', 'social-header' ); ?>
 
 				</div> <!-- end .sub-nav-right -->
 			</nav>

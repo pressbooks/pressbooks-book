@@ -8,12 +8,20 @@
 ?>
 
 <?php if ( have_comments() ) : ?>
-			<h3 id="comments-title"><?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'comments title', 'pressbooks' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<em>' . get_the_title() . '</em>'
-				);
+			<h3 id="comments-title">
+			<?php printf( // WPCS: XSS OK.
+				esc_html(
+					_nx(
+						'%1$d Response to %2$s',
+						'%1$d Responses to %2$s',
+						get_comments_number(),
+						'comments title',
+						'pressbooks'
+					)
+				),
+				number_format_i18n( get_comments_number() ),
+				'<em>' . get_the_title() . '</em>'
+			);
 			?></h3>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
@@ -24,7 +32,7 @@
 <?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">
-				<?php wp_list_comments( array( 'callback' => 'pressbooks_comment' ) ); ?>
+				<?php wp_list_comments( [ 'callback' => 'pressbooks_comment' ] ); ?>
 			</ol>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
@@ -38,15 +46,15 @@
 	if ( ! comments_open() ) :
 ?>
 	<p class="nocomments"><?php _e( 'Comments are closed.', 'pressbooks' ); ?></p>
-<?php endif; // end ! comments_open() ?>
+<?php endif; ?>
 
-<?php endif; // end have_comments() ?>
+<?php endif; ?>
 
 <?php
 /* Comment form submit text*/
-$comments_args = array(
+$comments_args = [
 		'label_submit' => __( 'Submit', 'pressbooks' ),
-);
+];
 
 comment_form( $comments_args ); ?>
 

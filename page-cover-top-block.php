@@ -1,4 +1,4 @@
-<section id="post-<?php the_ID(); ?>" <?php post_class( array( 'top-block', 'clearfix', 'home-post' ) ); ?>>
+<section id="post-<?php the_ID(); ?>" <?php post_class( [ 'top-block', 'clearfix', 'home-post' ] ); ?>>
 
 	<?php pb_get_links( false ); ?>
 	<?php $metadata = pb_get_book_information();?>
@@ -58,7 +58,7 @@
 						<a class="btn red" href="<?php global $first_chapter;
 						echo $first_chapter; ?>"><span class="read-icon"></span><?php _e( 'Read', 'pressbooks' ); ?></a>
 
-						<?php if ( @array_filter( get_option( 'pressbooks_ecommerce_links' ) ) ) : ?>
+						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
 						 <!-- Buy -->
 							 <a class="btn black" href="<?php echo get_option( 'home' ); ?>/buy"><span class="buy-icon"></span><?php _e( 'Buy', 'pressbooks' ); ?></a>
 							<?php endif; ?>
@@ -75,9 +75,9 @@
 					*/
 
 					$files = \Pressbooks\Utility\latest_exports();
-					$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', array( 'allow_redistribution' => 0 ) );
-					$option = get_option( 'pbt_redistribute_settings', array( 'latest_files_public' => 0 ) );
-				if ( ! empty( $files ) && ( true == $site_option['allow_redistribution'] ) && ( true == $option['latest_files_public'] ) ) { ?>
+					$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
+					$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
+				if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
 						<div class="downloads">
 							<h4><?php _e( 'Download in the following formats:', 'pressbooks' ); ?></h4>
 							<?php foreach ( $files as $filetype => $filename ) :
@@ -86,7 +86,7 @@
 								// Rewrite rule
 								$url = home_url( "/open/download?type={$filetype}" );
 
-								// Tracking event defaults to Google Analytics (Universal).
+								// Tracking event defaults to Google Analytics (Universal). @codingStandardsIgnoreStart
 								// Filter like so (for Piwik):
 								// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
 								//  return "_paq.push(['trackEvent','exportFiles','Downloads','{$filetype}']);";
@@ -94,7 +94,7 @@
 								// Or for Google Analytics (Classic):
 								// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
 								//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$file_class}']);";
-								// }, 10, 2);
+								// }, 10, 2); @codingStandardsIgnoreEnd
 								$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$filetype}');", $filetype );
 							?>
 								<link itemprop="bookFormat" href="http://schema.org/EBook">

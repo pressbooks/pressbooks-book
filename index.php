@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 $book = pb_get_book_structure();
 ?>
-<?php if ( get_option( 'blog_public' ) == '1' || (get_option( 'blog_public' ) == '0' && current_user_can_for_blog( $blog_id, 'read' )) ) : ?>
+<?php if ( pb_is_public() ) : ?>
 	<?php if ( have_posts() ) { the_post();} ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<h2 class="page-title"><?php _e( 'Table of Contents', 'pressbooks' ); ?></h2>

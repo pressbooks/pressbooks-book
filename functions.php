@@ -7,23 +7,24 @@
 use PressbooksMix\Assets;
 
 // Turn off admin bar
-add_filter( 'show_admin_bar', function () { return false;
+add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
+	return false;
 } );
 
 /**
  * Set up array of metadata keys for display in web book footer.
  */
 global $metakeys;
-$metakeys = array(
+$metakeys = [
 	'pb_author' => __( 'Author', 'pressbooks' ),
 	'pb_contributing_authors' => __( 'Contributing Author', 'pressbooks' ),
-	 'pb_publisher'  => __( 'Publisher', 'pressbooks' ),
+	'pb_publisher'  => __( 'Publisher', 'pressbooks' ),
 	'pb_print_isbn'  => __( 'Print ISBN', 'pressbooks' ),
 	'pb_keywords_tags'  => __( 'Keywords/Tags', 'pressbooks' ),
 	'pb_publication_date'  => __( 'Publication Date', 'pressbooks' ),
 	'pb_hashtag'  => __( 'Hashtag', 'pressbooks' ),
 	'pb_ebook_isbn'  => __( 'Ebook ISBN', 'pressbooks' ),
-);
+];
 
 /* ------------------------------------------------------------------------ *
  * Scripts and styles for Book Info Page (cover page)
@@ -39,7 +40,7 @@ function pressbooks_book_info_page() {
 
 		// Book info page Table of Content columns
 		wp_enqueue_script( 'columnizer',  $assets->getPath( 'scripts/columnizer.js' ), [ 'jquery' ], null );
-		wp_enqueue_script( 'columnizer-load', $assets->getPath( 'scripts/columnizer-load.js' ), [ 'jquery', 'columnizer' ], '1.7.0', false );
+		wp_enqueue_script( 'columnizer-load', $assets->getPath( 'scripts/columnizer-load.js' ), [ 'jquery', 'columnizer' ], null, false );
 
 		// Sharer.js
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
@@ -52,7 +53,7 @@ add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
  * ------------------------------------------------------------------------ */
 
 function pressbooks_async_scripts( $tag, $handle, $src ) {
-	$async = array(
+	$async = [
 		'pressbooks/a11y',
 		'pressbooks/keyboard-nav',
 		'pressbooks/navbar',
@@ -61,9 +62,9 @@ function pressbooks_async_scripts( $tag, $handle, $src ) {
 		'columnizer-load',
 		'sharer',
 		'jquery-migrate',
-	);
+	];
 
-	if ( in_array( $handle, $async ) ) {
+	if ( in_array( $handle, $async, true ) ) {
 		return "<script async type='text/javascript' src='{$src}'></script>" . "\n";
 	}
 
@@ -85,7 +86,7 @@ function pb_enqueue_scripts() {
 		wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), false, get_option( 'pressbooks_last_custom_css' ), 'screen' );
 	} else {
 		if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) || \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
-			if ( get_stylesheet() == 'pressbooks-book' && ! get_option( 'pressbooks_webbook_structure_version' ) ) {
+			if ( get_stylesheet() === 'pressbooks-book' && ! get_option( 'pressbooks_webbook_structure_version' ) ) {
 				\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
 				update_option( 'pressbooks_webbook_structure_version', 1 );
 			}
@@ -93,23 +94,20 @@ function pb_enqueue_scripts() {
 			if ( ! is_file( $fullpath ) ) {
 				\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
 			}
-			if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) ) {
-				wp_enqueue_style( 'pressbooks/base', PB_PLUGIN_URL . 'themes-book/pressbooks-book/style.css', false, '1.7.0', 'screen, print' );
-			}
 			wp_enqueue_style( 'pressbooks/theme', \Pressbooks\Container::get( 'Sass' )->urlToUserGeneratedCss() . '/style.css', false, null, 'screen, print' );
 		} else {
 			wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
 		}
 	}
 
-	wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), array( 'jquery' ), '1.7.0', true );
+	wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), [ 'jquery' ], null, true );
 
 	if ( is_single() ) {
-		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), array( 'jquery' ), '1.7.0', false );
+		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), [ 'jquery' ], null, false );
 	}
 
-	wp_enqueue_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), array( 'jquery' ), '1.7.0' );
-	wp_enqueue_style( 'pressbooks/a11y', $assets->getPath( 'styles/a11y.css' ), array( 'dashicons' ), '1.7.0', 'screen' );
+	wp_enqueue_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), [ 'jquery' ], null );
+	wp_enqueue_style( 'pressbooks/a11y', $assets->getPath( 'styles/a11y.css' ), [ 'dashicons' ], null, 'screen' );
 }
 add_action( 'wp_enqueue_scripts', 'pb_enqueue_scripts' );
 
@@ -117,21 +115,21 @@ add_action( 'wp_enqueue_scripts', 'pb_enqueue_scripts' );
  * Update web book stylesheet.
  */
 function pressbooks_update_webbook_stylesheet() {
-	if ( false == \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) && false == \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
+	if ( false === \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) && false === \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
 		return;
 	}
 
 	if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) ) {
-		$inputs = array(
+		$inputs = [
 			get_stylesheet_directory() . '/_fonts-web.scss',
 			get_stylesheet_directory() . '/_mixins.scss',
 			get_stylesheet_directory() . '/style.scss',
-		);
+		];
 	} elseif ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
-		$inputs = array(
+		$inputs = [
 			get_stylesheet_directory() . '/assets/styles/web/_fonts.scss',
 			get_stylesheet_directory() . '/assets/styles/web/style.scss',
-		);
+		];
 		foreach ( glob( get_stylesheet_directory() . '/assets/styles/components/*.scss' ) as $import ) {
 			$inputs[] = realpath( $import );
 		}
@@ -150,7 +148,7 @@ function pressbooks_update_webbook_stylesheet() {
 		}
 	}
 
-	if ( true == $recompile ) {
+	if ( true === $recompile ) {
 		if ( WP_DEBUG ) {
 			error_log( 'Updating web book stylesheet.' );
 		}
@@ -162,7 +160,7 @@ function pressbooks_update_webbook_stylesheet() {
 	}
 }
 
-if ( defined( 'WP_ENV' ) && 'development' == WP_ENV ) {
+if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 	add_action( 'template_redirect', 'pressbooks_update_webbook_stylesheet' );
 }
 
@@ -189,10 +187,10 @@ function pb_get_links( $echo = true ) {
 	if ( $echo ) :
 	?><nav class="navigation posts-navigation" role="navigation">
 	<div class="nav-links">
-	<?php if ( $prev_chapter != '/' ) : ?>
+	<?php if ( $prev_chapter !== '/' ) : ?>
 	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e( 'Previous', 'pressbooks' ); ?></a></div>
 	<?php endif; ?>
-	<?php if ( $next_chapter != '/' ) : ?>
+	<?php if ( $next_chapter !== '/' ) : ?>
 	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e( 'Next', 'pressbooks' ); ?></a></div>
 	<?php endif; ?>
 	</div>
@@ -209,7 +207,7 @@ function pb_private() {
 }
 
 
-if ( ! function_exists( 'pressbooks_comment' ) ) :
+if ( ! function_exists( 'pressbooks_comment' ) ) {
 
 	/**
  * Template for comments and pingbacks.
@@ -223,7 +221,7 @@ if ( ! function_exists( 'pressbooks_comment' ) ) :
 
 	function pressbooks_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
-		switch ( $comment->comment_type ) :
+		switch ( $comment->comment_type ) {
 			case '' :
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
@@ -232,7 +230,7 @@ if ( ! function_exists( 'pressbooks_comment' ) ) :
 			<?php echo get_avatar( $comment, 40 ); ?>
 			<?php printf( __( '%s on', 'pressbooks' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks' ), ' ' ); ?>
 		</div><!-- .comment-author .vcard -->
-		<?php if ( $comment->comment_approved == '0' ) : ?>
+		<?php if ( empty( $comment->comment_approved ) ) : ?>
 			<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks' ); ?></em>
 			<br />
 		<?php endif; ?>
@@ -240,7 +238,7 @@ if ( ! function_exists( 'pressbooks_comment' ) ) :
 		<div class="comment-body"><?php comment_text(); ?></div>
 
 		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			<?php comment_reply_link( array_merge( $args, [ 'depth' => $depth, 'max_depth' => $args['max_depth'] ] ) ); ?>
 		</div><!-- .reply -->
 	</div><!-- #comment-##  -->
 
@@ -253,9 +251,9 @@ if ( ! function_exists( 'pressbooks_comment' ) ) :
 		<p><?php _e( 'Pingback:', 'pressbooks' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks' ), ' ' ); ?></p>
 	<?php
 			break;
-			endswitch;
+		}
 	}
-endif;
+};
 
 /* ------------------------------------------------------------------------ *
  * Copyright License
@@ -268,7 +266,7 @@ function pressbooks_copyright_license() {
 
 	// if they don't want to see it, return
 	// at minimum we need book copyright information set
-	if ( isset( $option['copyright_license'] ) && false == $option['copyright_license'] || ! isset( $option['copyright_license'] ) || ! isset( $book_meta['pb_book_license'] ) ) {
+	if ( isset( $option['copyright_license'] ) && false === (bool) $option['copyright_license'] || ! isset( $option['copyright_license'] ) || ! isset( $book_meta['pb_book_license'] ) ) {
 		return '';
 	}
 
@@ -279,7 +277,7 @@ function pressbooks_copyright_license() {
 	$link = get_permalink( $id );
 	$html = $license = $copyright_holder = '';
 	$transient = get_transient( "license-inf-$id" );
-	$updated = array( $license, $copyright_holder, $title );
+	$updated = [ $license, $copyright_holder, $title ];
 	$changed = false;
 	$lang = ( ! empty( $book_meta['pb_language'] ) ) ? $book_meta['pb_language'] : 'en' ;
 
@@ -307,7 +305,6 @@ function pressbooks_copyright_license() {
 		$license = $book_meta['pb_book_license'];
 	}
 
-	 //delete_transient("license-inf-$id");
 	 // check if the user has changed anything
 	if ( is_array( $transient ) ) {
 		foreach ( $updated as $val ) {
@@ -317,7 +314,7 @@ function pressbooks_copyright_license() {
 		}
 	}
 	// if the cache has expired, or the user changed the license
-	if ( false === $transient || true == $changed ) {
+	if ( false === $transient || true === $changed ) {
 
 		// get xml response from API
 		$response = \Pressbooks\Metadata::getLicenseXml( $license, $copyright_holder, $link, $title, $lang );
@@ -337,11 +334,11 @@ function pressbooks_copyright_license() {
 			error_log( $e->getMessage() );
 		}
 		// store it with the license as a key
-		$value = array(
+		$value = [
 			$license => $html,
 			$copyright_holder => '',
 			$title => '',
-		);
+		];
 		// expires in 24 hours
 		set_transient( "license-inf-$id", $value, 86400 );
 	} else {
@@ -405,7 +402,7 @@ add_action( 'wp_head', 'pressbooks_theme_add_metadata' );
 
 function pressbooks_cover_promo() {
 	?>
-	<?php if ( ! defined( 'PB_HIDE_COVER_PROMO' ) || PB_HIDE_COVER_PROMO == false ) : ?>
+	<?php if ( ! defined( 'PB_HIDE_COVER_PROMO' ) || PB_HIDE_COVER_PROMO === false ) : ?>
 	<a href="https://pressbooks.com" class="pressbooks-brand"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/pressbooks-branding-2x.png" alt="pressbooks-branding" width="186" height="123" /> <span><?php _e( 'Make your own books on Pressbooks', 'pressbooks' ); ?></span></a>
 	<?php else : ?>
 	<div class="spacer"></div>
@@ -419,9 +416,32 @@ add_action( 'pb_cover_promo', 'pressbooks_cover_promo' );
  */
 function pb_filter_search( $query ) {
 	if ( $query->is_search && ! is_admin() ) {
-		$query->set( 'post_type', array( 'front-matter', 'back-matter', 'chapter', 'part' ) );
+		$query->set( 'post_type', [ 'front-matter', 'back-matter', 'chapter', 'part' ] );
 	}
 
 	return $query;
 }
 add_filter( 'pre_get_posts', 'pb_filter_search' );
+
+/**
+ * Check if the book is private or public.
+ */
+
+function pb_is_public() {
+	global $blog_id;
+	$blog_public = absint( get_option( 'blog_public' ) );
+	if ( $blog_public === 1 || $blog_public === 0 && current_user_can_for_blog( $blog_id, 'read' ) ) {
+		return true;
+	}
+	return false;
+}
+
+function pb_social_media_enabled() {
+	$options = get_option( 'pressbooks_theme_options_web' );
+	if ( ! isset( $options['social_media'] ) ) {
+		return true;
+	} elseif ( isset( $options['social_media'] ) && absint( $optiobns['social_media'] === 1 ) ) {
+		return true;
+	}
+	return false;
+}

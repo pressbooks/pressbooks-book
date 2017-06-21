@@ -26,13 +26,13 @@
     <!-- Re-enable rules Pressbooks agrees with -->
     <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 
-    <!-- Disable Side Effects rule for bootstrapping file, extends WordPress core, cron scripts -->
+    <!-- Disable Side Effects rule for functions.php -->
     <rule ref="PSR1.Files.SideEffects">
-        <exclude-pattern>/bin/*</exclude-pattern>
+				<exclude-pattern>functions.php</exclude-pattern>
     </rule>
 
-    <!-- Disable Namespaced Functions for cron scripts -->
+    <!-- Disable Namespaced Functions for functions.php -->
     <rule ref="HM.Functions.NamespacedFunctions">
-        <exclude-pattern>/bin/*</exclude-pattern>
+				<exclude-pattern>functions.php</exclude-pattern>
     </rule>
 </ruleset>

@@ -11,8 +11,7 @@
 								<?php endif; ?>
 
 									<div id="share">
-										<?php $social_media = get_option( 'pressbooks_theme_options_web' );
-										if ( 1 === @$social_media['social_media'] || ! isset( $social_media['social_media'] ) ) { ?>
+										<?php if ( pb_social_media_enabled() ) { ?>
 											<button id="twitter" class="sharer btn" data-sharer="twitter" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks' ); ?>" data-url="<?php the_permalink(); ?>" data-via="pressbooks"><?php _e( 'Tweet', 'pressbooks' ); ?></button>
 											<button id="facebook" class="sharer btn" data-sharer="facebook" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( 'Like', 'pressbooks' ); ?></button>
 											<button id="googleplus" class="sharer btn" data-sharer="googleplus" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( '+1', 'pressbooks' ); ?></button>
@@ -20,16 +19,16 @@
 									</div>
 						</div>
 
-								<?php	$args = $args = array(
+								<?php	$args = [
 											'post_type' => 'back-matter',
-											'tax_query' => array(
-												array(
+											'tax_query' => [ // @codingStandardsIgnoreLine
+												[
 													'taxonomy' => 'back-matter-type',
 													'field' => 'slug',
 													'terms' => 'about-the-author',
-												),
-											),
-										); ?>
+												],
+											],
+										]; ?>
 
 
 								<div class="author-book-info">
