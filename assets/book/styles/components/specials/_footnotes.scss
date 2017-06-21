@@ -43,6 +43,13 @@
   p {
     prince-footnote-policy: keep-with-line;
   }
+
+  @page {
+    @footnotes {
+      margin-top: $footnote-block-margin-top;
+      border-top: $footnote-block-border-top;
+   }
+  }
 }
 
 @mixin epub-footnotes {
