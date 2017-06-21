@@ -38,7 +38,6 @@ function pressbooks_book_info_page () {
 
 		// Book info page Table of Content columns
 		wp_enqueue_script( 'columnizer',  $assets->getPath( 'scripts/columnizer.js' ), [ 'jquery' ], null );
-		wp_enqueue_script( 'columnizer-load', $assets->getPath( 'scripts/columnizer-load.js' ), [ 'jquery', 'columnizer' ], '1.7.0', false );
 
 		// Sharer.js
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
@@ -57,7 +56,6 @@ function pressbooks_async_scripts( $tag, $handle, $src ) {
 		'pressbooks/navbar',
 		'pressbooks/toc',
 		'columnizer',
-		'columnizer-load',
 		'sharer',
 		'jquery-migrate',
 	);
@@ -92,23 +90,20 @@ function pb_enqueue_scripts() {
 			if ( ! is_file( $fullpath ) ) {
 				\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
 			}
-			if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) ) {
-				wp_enqueue_style( 'pressbooks/base', PB_PLUGIN_URL . 'themes-book/pressbooks-book/style.css', false, '1.7.0', 'screen, print' );
-			}
 			wp_enqueue_style( 'pressbooks/theme', \Pressbooks\Container::get( 'Sass' )->urlToUserGeneratedCss() . '/style.css', false, null, 'screen, print' );
 		} else {
 			wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
 		}
 	}
 
-	wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), array( 'jquery' ), '1.7.0', true );
+	wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), array( 'jquery' ), null, true );
 
 	if ( is_single() ) {
-		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), array( 'jquery' ), '1.7.0', false );
+		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), array( 'jquery' ), null, false );
 	}
 
-	wp_enqueue_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), array( 'jquery' ), '1.7.0' );
-	wp_enqueue_style( 'pressbooks/a11y', $assets->getPath( 'styles/a11y.css' ), array( 'dashicons' ), '1.7.0', 'screen' );
+	wp_enqueue_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), array( 'jquery' ), null );
+	wp_enqueue_style( 'pressbooks/a11y', $assets->getPath( 'styles/a11y.css' ), array( 'dashicons' ), null, 'screen' );
 }
 add_action( 'wp_enqueue_scripts', 'pb_enqueue_scripts' );
 
