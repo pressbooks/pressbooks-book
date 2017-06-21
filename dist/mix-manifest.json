@@ -1,12 +1,11 @@
 {
-  "/mix.js": "/mix.531beb759056b33bb600.js",
-  "/styles/a11y.css": "/styles/a11y.c95f5352e9b0db896d8141b9c58423c8.css",
-  "/styles/book-info.css": "/styles/book-info.764910e57a105cbb309db9a049d9aeb7.css",
-  "/styles/structure.css": "/styles/structure.6753541b97a47f714b59bb2aa496badf.css",
-  "/scripts/a11y.js": "/scripts/a11y.3faa829da7a4aa2b976ad0453f3315ca.js",
-  "/scripts/columnizer.js": "/scripts/columnizer.e77f35ea7b8e71214431de078a924b18.js",
-  "/scripts/columnizer-load.js": "/scripts/columnizer-load.d98f8da38ac56aa5f1a790e66c591749.js",
-  "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.a4855900bd7bb142bd702e95359f9296.js",
-  "/scripts/sharer.js": "/scripts/sharer.b257fe1ee31a1838f3438ab856ae5498.js",
-  "/scripts/toc.js": "/scripts/toc.41dec06e39b599e9d22daec4b24c803d.js"
+    "/styles/a11y.css": "/styles/a11y.css?id=52283bbd1dbf5a7c8028",
+    "/styles/book-info.css": "/styles/book-info.css?id=ebe1f89880aafa184688",
+    "/styles/structure.css": "/styles/structure.css?id=decbec228fcdff185bab",
+    "/scripts/a11y.js": "/scripts/a11y.js?id=3faa829da7a4aa2b976a",
+    "/scripts/columnizer.js": "/scripts/columnizer.js?id=e77f35ea7b8e71214431",
+    "/scripts/columnizer-load.js": "/scripts/columnizer-load.js?id=d98f8da38ac56aa5f1a7",
+    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=a4855900bd7bb142bd70",
+    "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343",
+    "/scripts/toc.js": "/scripts/toc.js?id=41dec06e39b599e9d22d"
 }

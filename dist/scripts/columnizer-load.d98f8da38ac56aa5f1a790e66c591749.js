@@ -1,1 +1,0 @@
-!function(t){t(document).ready(function(){t("#table-of-content").columnize({width:320}),t("table-of-content").scrollLeft(300)})}(jQuery);

@@ -77,7 +77,7 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
 function pb_enqueue_scripts() {
     $assets = new Assets( 'pressbooks-book', 'theme' );
     $assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-	wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), [], '1.7.0', 'screen, print' );
+	wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
 	wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
 
 	if ( pb_is_custom_theme() ) { // Custom CSS
