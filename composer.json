@@ -18,5 +18,13 @@
             "name": "Pressbooks (Book Oven Inc.)",
             "email": "code@pressbooks.com"
         }
-    ]
+    ],
+    "scripts": {
+      "test": [
+        "@standards"
+      ],
+      "standards": [
+        "vendor/bin/phpcs --standard=phpcs.ruleset.xml *.php"
+      ]
+    }
 }

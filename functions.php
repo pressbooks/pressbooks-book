@@ -7,7 +7,8 @@
 use PressbooksMix\Assets;
 
 // Turn off admin bar
-add_filter( 'show_admin_bar', function () { return false; } );
+add_filter( 'show_admin_bar', function () { return false;
+} );
 
 /**
  * Set up array of metadata keys for display in web book footer.
@@ -16,7 +17,7 @@ global $metakeys;
 $metakeys = array(
 	'pb_author' => __( 'Author', 'pressbooks' ),
 	'pb_contributing_authors' => __( 'Contributing Author', 'pressbooks' ),
- 	'pb_publisher'  => __( 'Publisher', 'pressbooks' ),
+	 'pb_publisher'  => __( 'Publisher', 'pressbooks' ),
 	'pb_print_isbn'  => __( 'Print ISBN', 'pressbooks' ),
 	'pb_keywords_tags'  => __( 'Keywords/Tags', 'pressbooks' ),
 	'pb_publication_date'  => __( 'Publication Date', 'pressbooks' ),
@@ -28,7 +29,7 @@ $metakeys = array(
  * Scripts and styles for Book Info Page (cover page)
  * ------------------------------------------------------------------------ */
 
-function pressbooks_book_info_page () {
+function pressbooks_book_info_page() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
@@ -75,8 +76,8 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
  * Register and enqueue scripts and stylesheets.
  * ------------------------------------------------------------------------ */
 function pb_enqueue_scripts() {
-    $assets = new Assets( 'pressbooks-book', 'theme' );
-    $assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-book', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 	wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
 	wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
 
@@ -169,31 +170,31 @@ if ( defined( 'WP_ENV' ) && 'development' == WP_ENV ) {
  * Replaces the excerpt "more" text by a link
  * ------------------------------------------------------------------------ */
 
-function new_pressbooks_excerpt_more($more) {
-       global $post;
-	return '<a class="more-tag" href="'. get_permalink($post->ID) . '"> Read more &raquo;</a>';
+function new_pressbooks_excerpt_more( $more ) {
+	   global $post;
+	return '<a class="more-tag" href="' . get_permalink( $post->ID ) . '"> Read more &raquo;</a>';
 }
-add_filter('excerpt_more', 'new_pressbooks_excerpt_more');
+add_filter( 'excerpt_more', 'new_pressbooks_excerpt_more' );
 
 /**
  * Render Previous and next buttons
  *
  * @param bool $echo
  */
-function pb_get_links($echo=true) {
-  global $first_chapter, $prev_chapter, $next_chapter;
-  $first_chapter = pb_get_first();
-  $prev_chapter = pb_get_prev();
-  $next_chapter = pb_get_next();
-  if ($echo):
-?><nav class="navigation posts-navigation" role="navigation">
+function pb_get_links( $echo = true ) {
+	global $first_chapter, $prev_chapter, $next_chapter;
+	$first_chapter = pb_get_first();
+	$prev_chapter = pb_get_prev();
+	$next_chapter = pb_get_next();
+	if ( $echo ) :
+	?><nav class="navigation posts-navigation" role="navigation">
 	<div class="nav-links">
-  <?php if ($prev_chapter != '/') : ?>
-	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e('Previous', 'pressbooks'); ?></a></div>
-  <?php endif; ?>
-  <?php if ($next_chapter != '/') : ?>
-	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e('Next', 'pressbooks'); ?></a></div>
-  <?php endif; ?>
+	<?php if ( $prev_chapter != '/' ) : ?>
+	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e( 'Previous', 'pressbooks' ); ?></a></div>
+	<?php endif; ?>
+	<?php if ( $next_chapter != '/' ) : ?>
+	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e( 'Next', 'pressbooks' ); ?></a></div>
+	<?php endif; ?>
 	</div>
 	</nav><?php
   endif;
@@ -204,13 +205,13 @@ function pb_get_links($echo=true) {
  * Prevent access by unregistered user if the book in question is private.
  */
 function pb_private() {
-	get_template_part('private');
+	get_template_part( 'private' );
 }
 
 
 if ( ! function_exists( 'pressbooks_comment' ) ) :
 
-/**
+	/**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
@@ -220,12 +221,12 @@ if ( ! function_exists( 'pressbooks_comment' ) ) :
  *
  */
 
-function pressbooks_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case '' :
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+	function pressbooks_comment( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment;
+		switch ( $comment->comment_type ) :
+			case '' :
+		?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<div id="comment-<?php comment_ID(); ?>">
 		<div class="comment-author vcard">
 			<?php echo get_avatar( $comment, 40 ); ?>
@@ -245,15 +246,15 @@ function pressbooks_comment( $comment, $args, $depth ) {
 
 	<?php
 			break;
-		case 'pingback'  :
-		case 'trackback' :
-	?>
-	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'pressbooks' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'pressbooks'), ' ' ); ?></p>
+			case 'pingback'  :
+			case 'trackback' :
+		?>
+		<li class="post pingback">
+		<p><?php _e( 'Pingback:', 'pressbooks' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks' ), ' ' ); ?></p>
 	<?php
 			break;
-	endswitch;
-}
+			endswitch;
+	}
 endif;
 
 /* ------------------------------------------------------------------------ *
@@ -267,21 +268,20 @@ function pressbooks_copyright_license() {
 
 	// if they don't want to see it, return
 	// at minimum we need book copyright information set
-	if ( isset ( $option['copyright_license'] ) && false == $option['copyright_license'] || !isset ( $option['copyright_license'] ) || !isset( $book_meta['pb_book_license'] ) ) {
+	if ( isset( $option['copyright_license'] ) && false == $option['copyright_license'] || ! isset( $option['copyright_license'] ) || ! isset( $book_meta['pb_book_license'] ) ) {
 		return '';
 	}
 
 	global $post;
 	$id = $post->ID;
-	$title = ( is_front_page() ) ? get_bloginfo('name') : $post->post_title ;
+	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title ;
 	$post_meta = get_post_meta( $id );
 	$link = get_permalink( $id );
 	$html = $license = $copyright_holder = '';
-	$transient = get_transient("license-inf-$id" );
+	$transient = get_transient( "license-inf-$id" );
 	$updated = array( $license, $copyright_holder, $title );
 	$changed = false;
 	$lang = ( ! empty( $book_meta['pb_language'] ) ) ? $book_meta['pb_language'] : 'en' ;
-
 
 	// Copyright holder, set in order of precedence
 	if ( isset( $post_meta['pb_section_author'] ) ) {
@@ -338,9 +338,9 @@ function pressbooks_copyright_license() {
 		}
 		// store it with the license as a key
 		$value = array(
-		    $license => $html,
-		    $copyright_holder => '',
-		    $title => '',
+			$license => $html,
+			$copyright_holder => '',
+			$title => '',
 		);
 		// expires in 24 hours
 		set_transient( "license-inf-$id", $value, 86400 );
@@ -392,7 +392,7 @@ function pressbooks_theme_ebook_hacks( $hacks ) {
 }
 add_filter( 'pb_epub_hacks', 'pressbooks_theme_ebook_hacks' );
 
-function pressbooks_theme_add_metadata(){
+function pressbooks_theme_add_metadata() {
 	if ( is_front_page() ) {
 		echo pb_get_seo_meta_elements();
 		echo pb_get_microdata_elements();
@@ -403,9 +403,10 @@ function pressbooks_theme_add_metadata(){
 
 add_action( 'wp_head', 'pressbooks_theme_add_metadata' );
 
-function pressbooks_cover_promo() { ?>
-	<?php if ( !defined( 'PB_HIDE_COVER_PROMO' ) || PB_HIDE_COVER_PROMO == false ) : ?>
-	<a href="https://pressbooks.com" class="pressbooks-brand"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/pressbooks-branding-2x.png" alt="pressbooks-branding" width="186" height="123" /> <span><?php _e('Make your own books on Pressbooks', 'pressbooks'); ?></span></a>
+function pressbooks_cover_promo() {
+	?>
+	<?php if ( ! defined( 'PB_HIDE_COVER_PROMO' ) || PB_HIDE_COVER_PROMO == false ) : ?>
+	<a href="https://pressbooks.com" class="pressbooks-brand"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/pressbooks-branding-2x.png" alt="pressbooks-branding" width="186" height="123" /> <span><?php _e( 'Make your own books on Pressbooks', 'pressbooks' ); ?></span></a>
 	<?php else : ?>
 	<div class="spacer"></div>
 	<?php endif;

@@ -1,9 +1,9 @@
-<?php if( !is_single() ){?>
+<?php if ( ! is_single() ) {?>
 
 	</div><!-- #content -->
 
 <?php } ?>
-<?php if( !is_front_page() ){?>
+<?php if ( ! is_front_page() ) {?>
 
 	<?php get_sidebar(); ?>
 
@@ -16,8 +16,8 @@
 
 <div class="footer">
 	<div class="inner">
-		<?php if ( get_option('blog_public' ) == '1' || is_user_logged_in() ): ?>
-			<?php if ( is_page() || is_home() ): ?>
+		<?php if ( get_option( 'blog_public' ) == '1' || is_user_logged_in() ) : ?>
+			<?php if ( is_page() || is_home() ) : ?>
 
 			<dl>
 				<dt><?php _e( 'Book Name', 'pressbooks' ); ?>:</dt>
@@ -46,7 +46,7 @@
 			<?php echo pressbooks_copyright_license(); ?>
 
 			<?php endif; ?>
-			<p class="cie-name"><a href="https://pressbooks.com">Pressbooks: <?php _e('Simple Book Production', 'pressbooks'); ?></a></p>
+			<p class="cie-name"><a href="https://pressbooks.com">Pressbooks: <?php _e( 'Simple Book Production', 'pressbooks' ); ?></a></p>
 	</div><!-- #inner -->
 </div><!-- #footer -->
 <?php wp_footer(); ?>
