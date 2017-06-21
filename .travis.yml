@@ -18,8 +18,8 @@ php:
   - nightly
 
 env:
-  - WP_VERSION=latest WP_MULTISITE=1 TRAVIS_NODE_VERSION="6"
-  - WP_VERSION=latest WP_MULTISITE=1 TRAVIS_NODE_VERSION="7"
+  - TRAVIS_NODE_VERSION="6"
+  - TRAVIS_NODE_VERSION="7"
 
 matrix:
   fast_finish: true
