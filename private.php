@@ -1,7 +1,7 @@
-<?php $bloginfourl = get_bloginfo('url'); ?>
+<?php $bloginfourl = get_bloginfo( 'url' ); ?>
 
 	<div <?php post_class(); ?>>
-		<h2 class="entry-title denied-title"><?php _e('Access Denied', 'pressbooks'); ?></h2>
+		<h2 class="entry-title denied-title"><?php _e( 'Access Denied', 'pressbooks' ); ?></h2>
 		<!-- Table of content loop goes here. -->
 		<div class="entry-content denied-text">
 			<p><?php printf(
