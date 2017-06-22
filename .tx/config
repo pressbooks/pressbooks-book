@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[pressbooks.pressbooks-book]
+[pressbooks-book.pressbooks-book]
 source_file = languages/pressbooks-book.pot
 source_lang = en
 type = PO
