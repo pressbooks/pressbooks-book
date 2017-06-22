@@ -9,9 +9,9 @@ if ( pb_is_public() ) :
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php endif; ?>
 				<div class="entry-content">
-					<?php edit_post_link( __( 'Edit', 'pressbooks' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<span class="edit-link">', '</span>' ); ?>
 					<?php the_content(); ?>
-					<?php wp_link_pages( [ 'before' => '<div class="page-link">' . __( 'Pages:', 'pressbooks' ), 'after' => '</div>' ] ); ?>
+					<?php wp_link_pages( [ 'before' => '<div class="page-link">' . __( 'Pages:', 'pressbooks-book' ), 'after' => '</div>' ] ); ?>
 				</div><!-- .entry-content -->
 			</div><!-- #post-## -->
 <?php else : ?>

@@ -2,7 +2,7 @@
 				<div class="second-block clearfix">
 						<div class="description-book-info">
 							<?php $metadata = pb_get_book_information();?>
-							<h2><?php _e( 'Book Description', 'pressbooks' ); ?></h2>
+							<h2><?php _e( 'Book Description', 'pressbooks-book' ); ?></h2>
 								<?php if ( ! empty( $metadata['pb_about_unlimited'] ) ) : ?>
 									<p><?php
 										$about_unlimited = pb_decode( $metadata['pb_about_unlimited'] );
@@ -12,9 +12,9 @@
 
 									<div id="share">
 										<?php if ( pb_social_media_enabled() ) { ?>
-											<button id="twitter" class="sharer btn" data-sharer="twitter" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks' ); ?>" data-url="<?php the_permalink(); ?>" data-via="pressbooks"><?php _e( 'Tweet', 'pressbooks' ); ?></button>
-											<button id="facebook" class="sharer btn" data-sharer="facebook" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( 'Like', 'pressbooks' ); ?></button>
-											<button id="googleplus" class="sharer btn" data-sharer="googleplus" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( '+1', 'pressbooks' ); ?></button>
+											<button id="twitter" class="sharer btn" data-sharer="twitter" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks-book' ); ?>" data-url="<?php the_permalink(); ?>" data-via="pressbooks"><?php _e( 'Tweet', 'pressbooks-book' ); ?></button>
+											<button id="facebook" class="sharer btn" data-sharer="facebook" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks-book' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( 'Like', 'pressbooks-book' ); ?></button>
+											<button id="googleplus" class="sharer btn" data-sharer="googleplus" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks-book' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( '+1', 'pressbooks-book' ); ?></button>
 										<?php } ?>
 									</div>
 						</div>

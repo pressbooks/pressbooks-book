@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <?php if ( pb_is_public() ) : ?>
 
-				<?php edit_post_link( __( 'Edit', 'pressbooks' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<span class="edit-link">', '</span>' ); ?>
 				<?php
 				// add part title to chapters
 				$web_options = get_option( 'pressbooks_theme_options_web' );
@@ -16,7 +16,7 @@
 				}
 				?>
 			<h2 class="entry-title"><?php
-			$chapter_number = pb_get_chapter_number( $post->post_name )
+			$chapter_number = pb_get_chapter_number( $post->post_name );
 			if ( $chapter_number ) {
 				echo "<span>$chapter_number</span>  ";
 			}
@@ -26,11 +26,11 @@
 				<div id="post-<?php the_ID(); ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 
 					<div class="entry-content">
-						<?php $subtitle = get_post_meta( $post->ID, 'pb_subtitle', true )
+						<?php $subtitle = get_post_meta( $post->ID, 'pb_subtitle', true );
 						if ( $subtitle ) : ?>
 						<h2 class="chapter_subtitle"><?php echo $subtitle; ?></h2>
 					<?php endif;?>
-					<?php $chap_author = get_post_meta( $post->ID, 'pb_section_author', true )
+					<?php $chap_author = get_post_meta( $post->ID, 'pb_section_author', true );
 					if ( $chap_author ) : ?>
 					   <h2 class="chapter_author"><?php echo $chap_author; ?></h2>
 					<?php endif; ?>

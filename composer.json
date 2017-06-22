@@ -10,7 +10,7 @@
         "humanmade/coding-standards": "^0.2.1"
     },
     "archive": {
-        "exclude": [".github"]
+        "exclude": [".github", ".tx"]
     },
     "license": "GPL-2.0+",
     "authors": [
@@ -25,6 +25,9 @@
       ],
       "standards": [
         "vendor/bin/phpcs --standard=phpcs.ruleset.xml *.php"
+      ],
+      "localize": [
+        "wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
       ]
     }
 }

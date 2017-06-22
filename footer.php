@@ -20,7 +20,7 @@
 			<?php if ( is_page() || is_home() ) : ?>
 
 			<dl>
-				<dt><?php _e( 'Book Name', 'pressbooks' ); ?>:</dt>
+				<dt><?php _e( 'Book Name', 'pressbooks-book' ); ?>:</dt>
 				<dd><?php bloginfo( 'name' ); ?></dd>
 				<?php global $metakeys;
 				$metadata = pb_get_book_information();
@@ -35,10 +35,10 @@
 				endforeach; ?>
 				<?php
 				// Copyright
-				echo '<dt>' . __( 'Copyright', 'pressbooks' ) . ':</dt><dd>';
+				echo '<dt>' . __( 'Copyright', 'pressbooks-book' ) . ':</dt><dd>';
 				echo ( ! empty( $metadata['pb_copyright_year'] ) ) ? $metadata['pb_copyright_year'] : date( 'Y' );
 				if ( ! empty( $metadata['pb_copyright_holder'] ) ) {
-					echo ' ' . __( 'by', 'pressbooks' ) . ' ' . $metadata['pb_copyright_holder'];
+					echo ' ' . __( 'by', 'pressbooks-book' ) . ' ' . $metadata['pb_copyright_holder'];
 				}
 				echo "</dd>\n"; ?>
 
@@ -48,7 +48,7 @@
 			<?php echo pressbooks_copyright_license(); ?>
 
 		<?php endif; ?>
-		<p class="cie-name"><a href="https://pressbooks.com">Pressbooks: <?php _e( 'Simple Book Production', 'pressbooks' ); ?></a></p>
+		<p class="cie-name"><a href="https://pressbooks.com">Pressbooks: <?php _e( 'Simple Book Production', 'pressbooks-book' ); ?></a></p>
 	</div><!-- #inner -->
 </div><!-- #footer -->
 <?php wp_footer(); ?>

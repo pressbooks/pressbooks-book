@@ -29,7 +29,7 @@ if ( $site_description && ( is_home() || is_front_page() ) ) {
 
 	// Add a page number if necessary:
 if ( $paged >= 2 || $page >= 2 ) {
-	echo ' | ' . sprintf( __( 'Page %s', 'pressbooks' ), max( $paged, $page ) );
+	echo ' | ' . sprintf( __( 'Page %s', 'pressbooks-book' ), max( $paged, $page ) );
 }
 
 	?></title>
@@ -84,7 +84,7 @@ if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strt
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
 						<!-- Buy -->
 						<div class="buy">
-							<a href="<?php echo get_option( 'home' ); ?>/buy" class="button-red"><?php _e( 'Buy', 'pressbooks' ); ?></a>
+							<a href="<?php echo get_option( 'home' ); ?>/buy" class="button-red"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
 						</div>
 						<?php endif; ?>
 
