@@ -2,7 +2,7 @@
 <?php $metadata = pb_get_book_information(); ?>
 <?php if ( pb_is_public() ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<h2 class="page-title"><?php _e( 'About The Book', 'pressbooks' ); ?></h2>
+		<h2 class="page-title"><?php _e( 'About The Book', 'pressbooks-book' ); ?></h2>
 
 		 <!-- Display About unlimited description first -->
 			<?php  if ( ! empty( $metadata['pb_about_unlimited'] ) ) : ?>
@@ -18,7 +18,7 @@
 
 					 <!-- if no About set at all -->
 			<?php else : ?>
-		   <p><?php _e( 'It\'s coming!', 'pressbooks' ); ?></p>
+		   <p><?php _e( 'It\'s coming!', 'pressbooks-book' ); ?></p>
 
 						<?php endif; ?>
 			</div><!-- #post-## -->

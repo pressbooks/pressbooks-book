@@ -2,7 +2,7 @@
 if ( pb_is_public() ) :
 	if ( have_posts() ) : ?>
 			<div>
-				<h2 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pressbooks' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+				<h2 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pressbooks-book' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 				<ul class="search-results">
 				<?php while ( have_posts() ) : the_post();
 					get_template_part( 'content', 'search' );

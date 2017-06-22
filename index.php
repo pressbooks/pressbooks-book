@@ -10,7 +10,7 @@ $book = pb_get_book_structure();
 <?php if ( pb_is_public() ) : ?>
 	<?php if ( have_posts() ) { the_post();} ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h2 class="page-title"><?php _e( 'Table of Contents', 'pressbooks' ); ?></h2>
+	<h2 class="page-title"><?php _e( 'Table of Contents', 'pressbooks-book' ); ?></h2>
 	<!-- Table of content loop goes here. -->
 	<ul id="inline-toc">
 

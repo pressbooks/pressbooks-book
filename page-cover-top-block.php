@@ -5,11 +5,11 @@
 	<div class="log-wrap">	<!-- Login/Logout -->
 		<?php if ( ! is_single() ) : ?>
 			<?php if ( ! is_user_logged_in() ) : ?>
-				<a href="<?php echo wp_login_url( get_permalink() ); ?>" class=""><?php _e( 'login', 'pressbooks' ); ?></a>
+				<a href="<?php echo wp_login_url( get_permalink() ); ?>" class=""><?php _e( 'login', 'pressbooks-book' ); ?></a>
 				<?php else : ?>
-				<a href="<?php echo  wp_logout_url(); ?>" class=""><?php _e( 'logout', 'pressbooks' ); ?></a>
+				<a href="<?php echo  wp_logout_url(); ?>" class=""><?php _e( 'logout', 'pressbooks-book' ); ?></a>
 				<?php if ( is_super_admin() || is_user_member_of_blog() ) : ?>
-				<a href="<?php echo get_option( 'home' ); ?>/wp-admin"><?php _e( 'Admin', 'pressbooks' ); ?></a>
+				<a href="<?php echo get_option( 'home' ); ?>/wp-admin"><?php _e( 'Admin', 'pressbooks-book' ); ?></a>
 				<?php endif; ?>
 			<?php endif; ?>
 		<?php endif; ?>
@@ -56,11 +56,11 @@
 					<?php global $first_chapter; ?>
 					<div class="call-to-action">
 						<a class="btn red" href="<?php global $first_chapter;
-						echo $first_chapter; ?>"><span class="read-icon"></span><?php _e( 'Read', 'pressbooks' ); ?></a>
+						echo $first_chapter; ?>"><span class="read-icon"></span><?php _e( 'Read', 'pressbooks-book' ); ?></a>
 
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
 						 <!-- Buy -->
-							 <a class="btn black" href="<?php echo get_option( 'home' ); ?>/buy"><span class="buy-icon"></span><?php _e( 'Buy', 'pressbooks' ); ?></a>
+							 <a class="btn black" href="<?php echo get_option( 'home' ); ?>/buy"><span class="buy-icon"></span><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
 							<?php endif; ?>
 
 
@@ -79,7 +79,7 @@
 					$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
 				if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
 						<div class="downloads">
-							<h4><?php _e( 'Download in the following formats:', 'pressbooks' ); ?></h4>
+							<h4><?php _e( 'Download in the following formats:', 'pressbooks-book' ); ?></h4>
 							<?php foreach ( $files as $filetype => $filename ) :
 								$filename = preg_replace( '/(-\d{10})(.*)/ui', '$1', $filename );
 

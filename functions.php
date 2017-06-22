@@ -16,14 +16,14 @@ add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
  */
 global $metakeys;
 $metakeys = [
-	'pb_author' => __( 'Author', 'pressbooks' ),
-	'pb_contributing_authors' => __( 'Contributing Author', 'pressbooks' ),
-	'pb_publisher'  => __( 'Publisher', 'pressbooks' ),
-	'pb_print_isbn'  => __( 'Print ISBN', 'pressbooks' ),
-	'pb_keywords_tags'  => __( 'Keywords/Tags', 'pressbooks' ),
-	'pb_publication_date'  => __( 'Publication Date', 'pressbooks' ),
-	'pb_hashtag'  => __( 'Hashtag', 'pressbooks' ),
-	'pb_ebook_isbn'  => __( 'Ebook ISBN', 'pressbooks' ),
+	'pb_author' => __( 'Author', 'pressbooks-book' ),
+	'pb_contributing_authors' => __( 'Contributing Author', 'pressbooks-book' ),
+	'pb_publisher'  => __( 'Publisher', 'pressbooks-book' ),
+	'pb_print_isbn'  => __( 'Print ISBN', 'pressbooks-book' ),
+	'pb_keywords_tags'  => __( 'Keywords/Tags', 'pressbooks-book' ),
+	'pb_publication_date'  => __( 'Publication Date', 'pressbooks-book' ),
+	'pb_hashtag'  => __( 'Hashtag', 'pressbooks-book' ),
+	'pb_ebook_isbn'  => __( 'Ebook ISBN', 'pressbooks-book' ),
 ];
 
 /* ------------------------------------------------------------------------ *
@@ -188,10 +188,10 @@ function pb_get_links( $echo = true ) {
 	?><nav class="navigation posts-navigation" role="navigation">
 	<div class="nav-links">
 	<?php if ( $prev_chapter !== '/' ) : ?>
-	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e( 'Previous', 'pressbooks' ); ?></a></div>
+	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e( 'Previous', 'pressbooks-book' ); ?></a></div>
 	<?php endif; ?>
 	<?php if ( $next_chapter !== '/' ) : ?>
-	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e( 'Next', 'pressbooks' ); ?></a></div>
+	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e( 'Next', 'pressbooks-book' ); ?></a></div>
 	<?php endif; ?>
 	</div>
 	</nav><?php
@@ -228,10 +228,10 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
 		<div id="comment-<?php comment_ID(); ?>">
 		<div class="comment-author vcard">
 			<?php echo get_avatar( $comment, 40 ); ?>
-			<?php printf( __( '%s on', 'pressbooks' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks' ), ' ' ); ?>
+			<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
 		</div><!-- .comment-author .vcard -->
 		<?php if ( empty( $comment->comment_approved ) ) : ?>
-			<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks' ); ?></em>
+			<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks-book' ); ?></em>
 			<br />
 		<?php endif; ?>
 
@@ -248,7 +248,7 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
 			case 'trackback' :
 		?>
 		<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'pressbooks' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks' ), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'pressbooks-book' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?></p>
 	<?php
 			break;
 		}
@@ -403,7 +403,7 @@ add_action( 'wp_head', 'pressbooks_theme_add_metadata' );
 function pressbooks_cover_promo() {
 	?>
 	<?php if ( ! defined( 'PB_HIDE_COVER_PROMO' ) || PB_HIDE_COVER_PROMO === false ) : ?>
-	<a href="https://pressbooks.com" class="pressbooks-brand"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/pressbooks-branding-2x.png" alt="pressbooks-branding" width="186" height="123" /> <span><?php _e( 'Make your own books on Pressbooks', 'pressbooks' ); ?></span></a>
+	<a href="https://pressbooks.com" class="pressbooks-brand"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/pressbooks-branding-2x.png" alt="pressbooks-branding" width="186" height="123" /> <span><?php _e( 'Make your own books on Pressbooks', 'pressbooks-book' ); ?></span></a>
 	<?php else : ?>
 	<div class="spacer"></div>
 	<?php endif;
