@@ -13,8 +13,7 @@ let mix = require('laravel-mix');
 
 mix.setPublicPath('dist')
 	.scripts('assets/scripts/a11y.js','dist/scripts/a11y.js')
-	.scripts('node_modules/jquery-columnizer/src/jquery.columnizer.js', 'dist/scripts/columnizer.js')
-  .scripts('assets/scripts/columnizer-load.js','dist/scripts/columnizer-load.js')
+	.scripts(['node_modules/jquery-columnizer/src/jquery.columnizer.js', 'assets/scripts/columnizer-load.js'], 'dist/scripts/columnizer.js')
   .scripts('assets/scripts/keyboard-nav.js','dist/scripts/keyboard-nav.js')
 	.scripts('node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js')
 	.scripts('assets/scripts/toc.js','dist/scripts/toc.js')

@@ -40,7 +40,6 @@ function pressbooks_book_info_page() {
 
 		// Book info page Table of Content columns
 		wp_enqueue_script( 'columnizer',  $assets->getPath( 'scripts/columnizer.js' ), [ 'jquery' ], null );
-		wp_enqueue_script( 'columnizer-load', $assets->getPath( 'scripts/columnizer-load.js' ), [ 'jquery', 'columnizer' ], null, false );
 
 		// Sharer.js
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
@@ -59,7 +58,6 @@ function pressbooks_async_scripts( $tag, $handle, $src ) {
 		'pressbooks/navbar',
 		'pressbooks/toc',
 		'columnizer',
-		'columnizer-load',
 		'sharer',
 		'jquery-migrate',
 	];
