@@ -25,6 +25,7 @@ $url-base: '' !default;
 
 h1 {
   @extend %hx;
+
   font-size: 1em;
   font-style: normal;
   font-weight: bold;
@@ -34,6 +35,7 @@ h1 {
 
 h2 {
   @extend %hx;
+
   font-size: 1em;
   font-style: normal;
   font-weight: normal;
@@ -43,6 +45,7 @@ h2 {
 
 h3 {
   @extend %hx;
+
   font-size: 1em;
   font-style: normal;
   font-weight: bold;
@@ -52,6 +55,7 @@ h3 {
 
 h4 {
   @extend %hx;
+
   font-size: 1em;
   font-style: normal;
   font-weight: bold;
@@ -61,6 +65,7 @@ h4 {
 
 h5 {
   @extend %hx;
+
   font-size: 1em;
   font-style: normal;
   font-weight: normal;
@@ -70,7 +75,8 @@ h5 {
 
 h6 {
   @extend %hx;
-  font-size: .9em;
+
+  font-size: 0.9em;
   font-style: italic;
   font-weight: normal;
   text-align: left;
@@ -80,7 +86,6 @@ h6 {
 del {
   text-decoration: line-through;
 }
-
 
 table {
   display: block;
@@ -124,7 +129,7 @@ sup {
 }
 
 sub {
-  top: .5ex;
+  top: 0.5ex;
 }
 
 hr {
@@ -163,7 +168,7 @@ img.left {
   float: left;
   padding: 7px;
   margin: 10px 12px 6px -8px;
-  background-color: darken($white, .5%);
+  background-color: darken($white, 0.5%);
   border: 1px solid lighten($mercury, 1%);
 }
 
@@ -171,7 +176,7 @@ img.right {
   float: right;
   padding: 7px;
   margin: 10px -8px 6px 12px;
-  background-color: darken($white, .5%);
+  background-color: darken($white, 0.5%);
   border: 1px solid lighten($mercury, 1%);
 }
 
@@ -200,7 +205,7 @@ img.author-avatar {
 }
 
 .wp-caption-text {
-  font-size: .75em;
+  font-size: 0.75em;
   color: $black;
   text-align: center;
 }
@@ -239,9 +244,8 @@ img.author-avatar {
   padding-top: 4px;
 }
 
-
 /* TITLE, SUB-TITLE, AUTHOR AND APHORIS
-==========================================*/
+========================================== */
 .part-title {
   text-align: right;
 }
@@ -279,7 +283,7 @@ img.author-avatar {
 .chapter_author {
   margin-top: -10px;
   margin-bottom: 30px;
-  font-size: .875em;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 600;
   font-variant: normal;
@@ -300,7 +304,7 @@ img.author-avatar {
 .aphorism p {
   padding: 0;
   margin: 0;
-  font-size: .875em;
+  font-size: 0.875em;
   font-style: italic;
 }
 
@@ -311,7 +315,7 @@ img.author-avatar {
 }
 
 /* TEXTBOXES & PULLQUOTES
-===============*/
+=============== */
 
 @include textboxes();
 
@@ -360,8 +364,8 @@ aside {
   padding: 10px;
   margin: 15px 0 15px 15px;
   overflow: hidden;
-  font-size: .85em;
-  background-color: lighten($wild-sand, .5%);
+  font-size: 0.85em;
+  background-color: lighten($wild-sand, 0.5%);
   border-color: $silver;
   border-style: solid;
   border-width: 0 1px 1px 0;
@@ -533,14 +537,13 @@ ol li li li::before {
 }
 
 .endnotes ol {
-  font-size: .75em;
+  font-size: 0.75em;
 }
-
 
 /* FOOTNOTES
 ============== */
 .footnotes {
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .footnotes ol li {
@@ -572,8 +575,8 @@ ol li li li::before {
   }
 
   pre {
-    padding: .5em;
-    font-size: .7em;
+    padding: 0.5em;
+    font-size: 0.7em;
   }
 
   // Images
