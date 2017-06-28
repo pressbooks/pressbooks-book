@@ -36,10 +36,11 @@ before_install:
 
 install:
   - node -v
-  - npm install
+  - npm install -g yarn
+  - yarn
   - composer install
 
 script:
-  - npm run lint
-  - npm run production
+  - yarn run lint
+  - yarn run production
   - composer test
