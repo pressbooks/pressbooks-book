@@ -36,10 +36,10 @@ before_install:
 
 install:
   - node -v
-  - npm install -g webpack
   - npm install
   - composer install
 
 script:
+  - npm run lint
   - npm run production
   - composer test
