@@ -1,15 +1,14 @@
 // SASS MIXINS -- TABLE OF CONTENTS STYLING
 
-
 //=====================
 //SASS: TocLeft
 //=====================
 
 // scss-lint:disable NameFormat
 @mixin TocLeft {
-// scss-lint:enable NameFormat
+  // scss-lint:enable NameFormat
 
- /* TOC general page structure */
+  /* TOC general page structure */
 
   @page toc {
     @include blankheadandfoot;
@@ -20,10 +19,11 @@
     page-break-before: right;
   }
 
- /* TOC Header */
+  /* TOC Header */
 
   #toc h1 {
     @include frontmattertitle;
+
     display: block;
     padding-bottom: 1.5em;
     margin-top: 2cm;
@@ -32,7 +32,7 @@
     text-align: left;
   }
 
-/* TOC general styling */
+  /* TOC general styling */
 
   #toc a {
     margin-left: 0;
@@ -60,11 +60,11 @@
   /* TOC FRONT-MATTER/BACK-MATTER & Margins */
 
   #toc li.front-matter {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   #toc li.back-matter {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   #toc li.chapter {
@@ -108,6 +108,7 @@
 
   #toc .part {
     @include tocparttitle;
+
     width: 80%;
     margin: 1.5em 0;
     page-break-after: avoid;
@@ -115,6 +116,7 @@
 
   #toc .part a::before {
     @include tocpartnumber;
+
     width: 80%;
     text-align: left;
     content: $part ' ' counter(part, upper-roman) '.\A0';
@@ -128,12 +130,13 @@
   /* TOC CHAPTER STYLING */
 
   #toc .chapter {
-    margin-top: .3em;
+    margin-top: 0.3em;
     margin-left: 0;
   }
 
   #toc span.toc-chapter-title {
     @include tocchaptertitle;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -161,6 +164,7 @@
 
   #toc .chapter a::before {
     @include tocchapternumber;
+
     position: relative;
     left: -1.5em;
     display: inline-block;
@@ -177,16 +181,18 @@
 
   #toc .back-matter span.toc-chapter-title {
     @include tocbackmattertitle;
+
     position: relative;
     display: block;
   }
 
-/* TOC PAGE NUMBERS */
+  /* TOC PAGE NUMBERS */
 
   #toc a::after {
     @include tocpagenumber;
+
     position: absolute;
-    top: .2em;
+    top: 0.2em;
     right: 0;
     line-height: 1.2;
     text-decoration: none;
@@ -196,6 +202,7 @@
 
   #toc .front-matter a::after {
     @include tocfrontmatterpagenumber;
+
     content: leader(' ') target-counter(attr(href), page, lower-roman);
   }
 
@@ -204,16 +211,15 @@
   }
 }
 
-
 //=====================
 //SASS: TocLeftChimero
 //=====================
 
 // scss-lint:disable NameFormat
 @mixin TocLeftChimero {
-// scss-lint:enable NameFormat
+  // scss-lint:enable NameFormat
 
- /* TOC general page structure */
+  /* TOC general page structure */
 
   @page toc {
     @include blankheadandfoot;
@@ -224,10 +230,11 @@
     page-break-before: right;
   }
 
- /* TOC Header */
+  /* TOC Header */
 
   #toc h1 {
     @include frontmattertitle;
+
     display: block;
     padding-bottom: 1.5em;
     margin-top: 2cm;
@@ -236,7 +243,7 @@
     text-align: left;
   }
 
-/* TOC general styling */
+  /* TOC general styling */
 
   #toc a {
     margin-left: 0;
@@ -264,11 +271,11 @@
   /* TOC FRONT-MATTER/BACK-MATTER & Margins */
 
   #toc li.front-matter {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   #toc li.back-matter {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   #toc li.chapter {
@@ -297,6 +304,7 @@
 
   #toc .front-matter span.toc-chapter-title {
     @include tocfrontmattertitle;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -307,6 +315,7 @@
 
   #toc .introduction span.toc-chapter-title {
     @include tocfrontmattertitle;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -319,6 +328,7 @@
 
   #toc .part {
     @include tocparttitle;
+
     width: 80%;
     margin: 1.5em 0;
     page-break-after: avoid;
@@ -326,6 +336,7 @@
 
   #toc .part a::before {
     @include tocpartnumber;
+
     width: 80%;
     text-align: left;
     content: $part ' ' counter(part, upper-roman) '.\A0';
@@ -339,12 +350,13 @@
   /* TOC CHAPTER STYLING */
 
   #toc .chapter {
-    margin-top: .3em;
+    margin-top: 0.3em;
     margin-left: 0;
   }
 
   #toc span.toc-chapter-title {
     @include tocchaptertitle;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -372,6 +384,7 @@
 
   #toc .chapter a::before {
     @include tocpagenumber;
+
     position: relative;
     left: -1.5em;
     display: inline-block;
@@ -388,6 +401,7 @@
 
   #toc .back-matter span.toc-chapter-title {
     @include tocbackmattertitle;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -396,10 +410,11 @@
     vertical-align: top;
   }
 
-/* TOC PAGE NUMBERS */
+  /* TOC PAGE NUMBERS */
 
   #toc .front-matter a::before {
     @include tocfrontmatterpagenumber;
+
     position: relative;
     left: -1.5em;
     display: inline-block;
@@ -412,6 +427,7 @@
 
   #toc .introduction a::before {
     @include tocfrontmatterpagenumber;
+
     position: relative;
     left: -1.5em;
     display: inline-block;
@@ -425,6 +441,7 @@
 
   #toc .back-matter a::before {
     @include tocpagenumber;
+
     position: relative;
     left: -1.5em;
     display: inline-block;
@@ -437,16 +454,15 @@
   }
 }
 
-
 //=========================
 //SASS: TocLeftBringhurst
 //==========================
 
 // scss-lint:disable NameFormat
 @mixin TocLeftBringhurst {
-// scss-lint:enable NameFormat
+  // scss-lint:enable NameFormat
 
- /* TOC general page structure */
+  /* TOC general page structure */
 
   @page toc {
     @include blankheadandfoot;
@@ -457,10 +473,11 @@
     page-break-before: right;
   }
 
- /* TOC Header */
+  /* TOC Header */
 
   #toc h1 {
     @include frontmattertitle;
+
     display: block;
     padding-bottom: 1.5em;
     margin-top: 2cm;
@@ -469,7 +486,7 @@
     text-align: center;
   }
 
-/* TOC general styling */
+  /* TOC general styling */
 
   #toc a {
     margin-left: 0;
@@ -497,11 +514,11 @@
   /* TOC FRONT-MATTER/BACK-MATTER & Margins */
 
   #toc li.front-matter {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   #toc li.back-matter {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   #toc li.chapter {
@@ -540,6 +557,7 @@
 
   #toc .part {
     @include tocparttitle;
+
     width: 80%;
     margin: 1.5em 0;
     page-break-after: avoid;
@@ -547,6 +565,7 @@
 
   #toc .part a::before {
     @include tocpartnumber;
+
     width: 80%;
     text-align: left;
     content: $part ' ' counter(part, upper-roman) '.\A0';
@@ -560,12 +579,13 @@
   /* TOC CHAPTER STYLING */
 
   #toc .chapter {
-    margin-top: .3em;
+    margin-top: 0.3em;
     margin-left: 0;
   }
 
   #toc span.toc-chapter-title {
     @include tocchaptertitle;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -575,11 +595,13 @@
 
   #toc span.chapter-subtitle {
     @include tocchaptersubtitle;
+
     display: none;
   }
 
   #toc span.chapter-author {
     @include tocchapterauthor;
+
     display: none;
   }
 
@@ -594,6 +616,7 @@
 
   #toc .chapter a::before {
     @include tocchapternumber;
+
     position: relative;
     left: -1.5em;
     display: inline-block;
@@ -612,10 +635,11 @@
     @include tocbackmattertitle;
   }
 
-/* TOC PAGE NUMBERS */
+  /* TOC PAGE NUMBERS */
 
   #toc a::after {
     @include tocpagenumber;
+
     display: inline;
     text-decoration: none;
     content: '\A0\A0\A0\A0' target-counter(attr(href), page);
@@ -623,6 +647,7 @@
 
   #toc .front-matter a::after {
     @include tocfrontmatterpagenumber;
+
     content: '\A0\A0\A0\A0' target-counter(attr(href), page, lower-roman);
   }
 
@@ -631,15 +656,13 @@
   }
 }
 
-
-
 //================
 //SASS: TocCenter
 //================
 
 // scss-lint:disable NameFormat
 @mixin TocCenter {
-// scss-lint:enable NameFormat
+  // scss-lint:enable NameFormat
 
   /* TOC general page structure */
 
@@ -648,23 +671,24 @@
   }
 
   #toc {
-    margin-right: .5cm;
-    margin-left: .5cm;
-    font-size: .9em;
+    margin-right: 0.5cm;
+    margin-left: 0.5cm;
+    font-size: 0.9em;
     counter-reset: part;
     page-break-before: right;
   }
 
- /* TOC Header */
+  /* TOC Header */
 
   #toc h1 {
     @include frontmattertitle;
+
     display: block;
     padding-bottom: 2em;
     text-align: center;
   }
 
-/* TOC general styling */
+  /* TOC general styling */
 
   #toc a {
     color: inherit;
@@ -690,15 +714,15 @@
     position: relative;
   }
 
- /* TOC FRONT-MATTER/BACK-MATTER & Margins */
+  /* TOC FRONT-MATTER/BACK-MATTER & Margins */
 
   #toc li.front-matter {
-    margin-top: .3em;
+    margin-top: 0.3em;
     text-align: center;
   }
 
   #toc li.back-matter {
-    margin-top: .3em;
+    margin-top: 0.3em;
     text-align: center;
   }
 
@@ -712,16 +736,19 @@
 
   #toc .front-matter span.toc-chapter-title {
     @include tocfrontmattertitle;
+
     text-align: center;
   }
 
   #toc .introduction span.toc-chapter-title {
     @include tocfrontmattertitle;
+
     text-align: center;
   }
 
   #toc .back-matter span.toc-chapter-title {
     @include tocbackmattertitle;
+
     text-align: center;
   }
 
@@ -729,6 +756,7 @@
 
   #toc .part {
     @include tocparttitle;
+
     margin-top: 2em;
     margin-bottom: 1.5em;
     text-align: center;
@@ -751,6 +779,7 @@
 
   #toc .chapter a::before {
     @include tocchapternumber;
+
     display: inline;
     content: counter(chapter) '.\A0\A0\A0';
     counter-increment: chapter;
@@ -760,11 +789,12 @@
   /* TOC CHAPTER STYLING */
 
   #toc .chapter {
-    margin-top: .75em;
+    margin-top: 0.75em;
   }
 
   #toc span.toc-chapter-title {
     @include tocchaptertitle;
+
     display: inline-block;
     text-align: center;
     page-break-after: avoid;
@@ -796,6 +826,7 @@
 
   #toc a::after {
     @include tocpagenumber;
+
     display: inline;
     text-decoration: none;
     content: '\A0\A0\A0' target-counter(attr(href), page);

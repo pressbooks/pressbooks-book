@@ -6,28 +6,35 @@ copyright 2013-2015 Book Oven Inc. */
 @import 'tables', 'textboxes';
 
 @mixin header-style {
-	color: red;
+  color: red;
 }
 
 /* DROPCAPS - (NOTE: WRAP FIRST CHAR IN A SPAN) */
 
-
 /* Override hierarchy.
 See: http://www.princexml.com/doc/8.1/pdf-bookmarks */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   prince-bookmark-level: 1;
 }
 
-div.ugc h1, div.ugc h2, div.ugc h3, div.ugc h4, div.ugc h5, div.ugc h6 {
+div.ugc h1,
+div.ugc h2,
+div.ugc h3,
+div.ugc h4,
+div.ugc h5,
+div.ugc h6 {
   bookmark-level: none;
   page-break-after: avoid;
 }
 
-
 /* DEFAULT PAGE GROUPINGS & associated style
 note: should all page groupings be put here? probably.
 ===================================================== */
-
 
 /*  PAGE GROUPINGS */
 
@@ -35,54 +42,67 @@ div.front-matter.before-title {
   page: before-title;
   prince-page-group: start;
 }
+
 div#half-title-page {
   page: halftitle-page;
   prince-page-group: start;
 }
+
 div#title-page {
   page: title-page;
   prince-page-group: start;
 }
+
 #toc {
   page: toc;
   prince-page-group: start;
 }
+
 div.front-matter {
   page: front-matter;
   prince-page-group: start;
 }
+
 div#copyright-page {
   page: copyright-page;
   prince-page-group: start;
 }
+
 div.front-matter.dedication {
   page: dedication;
   prince-page-group: start;
 }
+
 div.front-matter.epigraph {
   page: epigraph;
   prince-page-group: start;
 }
+
 div.front-matter.introduction {
   page: introduction;
   prince-page-group: start;
 }
+
 div.chapter {
   page: chapter;
   prince-page-group: start;
 }
+
 div.chapter.standard {
   page: chapter;
   prince-page-group: start;
 }
+
 div.back-matter {
   page: back-matter;
   prince-page-group: start;
 }
+
 div.part {
   page: part;
   prince-page-group: start;
 }
+
 div.blank-page {
   page: blank-page;
   prince-page-group: start;
@@ -90,468 +110,608 @@ div.blank-page {
 
 /* ALWAYS BLANK PAGES */
 
-
 @page before-title {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page halftitle-page {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page title-page {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page epigraph {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page dedication {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page copyright-page {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page toc {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page front-matter:blank {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page introduction:blank {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page part:blank {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page chapter:blank {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page back-matter:blank {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page:blank {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
-}
-@page blank-page {
-    @top {
-       content: "";
-    }
-    @top-right {
-       content: "";
-    }
-    @top-right-corner {
-      content: "";
-    }
-    @top-left {
-       content: "";
-    }
-    @top-left-corner {
-      content: "";
-    }
-    @bottom {
-       content: "";
-    }
-    @bottom-right {
-       content: "";
-    }
-    @bottom-right-corner {
-       content: "";
-    }
-    @bottom-left {
-       content: "";
-    }
-    @bottom-left-corner {
-       content: "";
-    }
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
 }
 
+@page halftitle-page {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page title-page {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page epigraph {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page dedication {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page copyright-page {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page toc {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page front-matter:blank {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page introduction:blank {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page part:blank {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page chapter:blank {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page back-matter:blank {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page:blank {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
+
+@page blank-page {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+
+  @bottom {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+
+  @bottom-right-corner {
+    content: "";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-left-corner {
+    content: "";
+  }
+}
 
 /* ALWAYS START ON RIGHT HAND PAGE */
 
 div.front-matter.introduction {
   page-break-before: right !important;
- }
+}
+
 #half-title-page {
   page-break-before: right;
 }
+
 #title-page {
   page-break-before: right;
- }
+}
+
 #toc {
   page-break-before: right;
 }
@@ -597,28 +757,27 @@ meta[name="pb-publisher-city"] {
 /* PART & CHAPTER STRINGS */
 
 .part-title-wrap h3.part-number {
-	string-set: part-number content();
+  string-set: part-number content();
 }
 
 .part-title-wrap h1.part-title {
-	string-set: part-title content();
+  string-set: part-title content();
 }
 
 h3.chapter-number {
-    string-set: chapter-number content();
+  string-set: chapter-number content();
 }
 
 div.chapter.numberless h3.chapter-number {
-	display: none;
+  display: none;
 }
 
 /* chapter title */
 div.front-matter .front-matter-title-wrap > h1:first-of-type,
 div.chapter .chapter-title-wrap > h2:first-of-type,
-div.back-matter .back-matter-title-wrap > h1:first-of-type  {
+div.back-matter .back-matter-title-wrap > h1:first-of-type {
   string-set: section-title content();
 }
-
 
 /* "short title override" ... this sets short chapter title content (for running header) but does not display it.
 it can cause problems with spacing of things, so be careful to design around it */
@@ -633,11 +792,11 @@ div.back-matter > div.ugc h6.short-title:first-of-type {
 }
 
 div.ugc h2.chapter-author {
-	string-set: chapter-author content();
+  string-set: chapter-author content();
 }
 
 div.ugc h2.chapter-subtitle {
-	string-set: chapter-subtitle content();
+  string-set: chapter-subtitle content();
 }
 
 /*  TITLE PAGE */
@@ -658,11 +817,11 @@ body,
 .back-matter,
 p,
 p.no-indent {
-   hyphenate-before: 3;
-   hyphenate-after: 3;
-   hyphenate-lines: 2;
-   widows: 2;
-   orphans: 1;
+  hyphenate-before: 3;
+  hyphenate-after: 3;
+  hyphenate-lines: 2;
+  widows: 2;
+  orphans: 1;
 }
 
 p.no-indent {
@@ -701,10 +860,10 @@ div.ugc h3.section-break,
 
 div.ugc h3.section-break-space,
 .section-break-space {
-   visibility: hidden;
-   margin-top: 1em;
-   line-height: 1em;
-   margin-bottom: 0em;
+  visibility: hidden;
+  margin-top: 1em;
+  line-height: 1em;
+  margin-bottom: 0;
 }
 
 div.ugc h3.section-break-page,
@@ -749,6 +908,7 @@ sup.footnote {
   padding-bottom: 1em;
   margin-left: -1.5em;
 }
+
 .endnotes hr {
   border: none;
   margin-top: 1cm;
@@ -760,8 +920,9 @@ sup.footnote {
   margin-left: 0;
   list-style-position: outside;
 }
+
 .endnotes li {
-   margin-top: 5px;
+  margin-top: 5px;
 }
 
 .endnotes p + p {
@@ -774,6 +935,7 @@ span.fn_p {
   display: block;
   text-indent: 1.5em;
 }
+
 span.fn_blockquote {
   display: block;
   font-size: 0.95em;
@@ -788,7 +950,6 @@ ol.upper-alpha {
   list-style-type: upper-alpha;
 }
 
-
 /* ASIDES, PULLQUOTES & TEXTBOXES
 ================================== */
 
@@ -799,7 +960,9 @@ ol.upper-alpha {
   padding: 10px 0;
   text-indent: 0;
 }
+
 @include textboxes();
+
 .pullquote {
   border: 1px solid;
   border-width: 1px 0;
@@ -811,6 +974,7 @@ ol.upper-alpha {
   text-align: center;
   width: 65%;
 }
+
 .pullquote-left {
   border: 1px solid;
   border-width: 1px 0;
@@ -821,6 +985,7 @@ ol.upper-alpha {
   text-align: center;
   width: 45%;
 }
+
 .pullquote-right {
   border: 1px solid #000;
   border-width: 1px 0;
@@ -832,30 +997,31 @@ ol.upper-alpha {
   width: 45%;
 }
 
-
 /* SPECIAL PAGES */
 
 #copyright-page {
   text-align: left;
   hyphens: none;
 }
+
 #copyright-page p {
   text-align: left;
   hyphens: none;
 }
+
 /* TOC
  =============== */
 
 #toc .chapter.numberless a::before {
-	content:'' ;
-	counter-increment: none;
-	margin-right: 0;
-	left: 0;
-	width: 0;
+  content: '';
+  counter-increment: none;
+  margin-right: 0;
+  left: 0;
+  width: 0;
 }
 
 #toc .part.invisible {
-	display: none;
+  display: none;
 }
 
 #toc li {
@@ -867,8 +1033,8 @@ ol.upper-alpha {
 }
 
 #toc .chapter .section a::before {
-	content:'';
-	counter-increment: none;
+  content: '';
+  counter-increment: none;
 }
 
 /* TOC SECTIONS */
@@ -886,21 +1052,20 @@ li.section {
 }
 
 li.section a::after {
- margin-right: -1cm;
+  margin-right: -1cm;
 }
-
 
 /* INVISIBLE PARTS
  =============== */
 
 div.part.invisible {
-	display: none;
+  display: none;
 }
 
 /* BIBLIOGRAPHY
  =============== */
 
-.bibliography p  {
+.bibliography p {
   font-size: 0.9em;
   padding-left: 14pt;
   text-indent: -14pt;
@@ -908,22 +1073,25 @@ div.part.invisible {
 
 /* INDEX
 ================== */
-.index .ugc  {
+.index .ugc {
   column-count: 2;
   column-gap: 2.5em;
   text-align: left;
 }
-.index .ugc  div {
+
+.index .ugc div {
   margin-bottom: 4em;
 }
-.index .ugc  p {
+
+.index .ugc p {
   font-size: 0.9em;
   padding-left: 14pt;
   text-indent: -14pt;
   text-align: left;
 }
-.index .ugc  p.sub-entry {
-  padding-left:30px;
+
+.index .ugc p.sub-entry {
+  padding-left: 30px;
 }
 
 /* SPECIAL PARAGRAPHS */
@@ -940,14 +1108,14 @@ p.hanging-indent {
 
 .tight,
 p.tight {
-	letter-spacing: -0.25px;
-	word-spacing: -0.075em;
+  letter-spacing: -0.25px;
+  word-spacing: -0.075em;
 }
 
 .very-tight,
 p.very-tight {
-	letter-spacing: -0.5px;
-	word-spacing: -0.09em;
+  letter-spacing: -0.5px;
+  word-spacing: -0.09em;
 }
 
 .loose,
@@ -1017,9 +1185,11 @@ IN VARIOUS CIRCUMSTANCES
 .not-pdf {
   display: none;
 }
+
 .web-only {
   display: none;
 }
+
 .epub-only {
   display: none;
 }
@@ -1051,9 +1221,11 @@ div.back-matter-title-wrap {
 div.front-matter.introduction {
   counter-reset: page 1 !important;
 }
+
 div.part.introduction {
   counter-reset: page 1 !important;
 }
+
 div.chapter.introduction {
   counter-reset: page 1 !important;
 }
@@ -1063,17 +1235,21 @@ div.chapter.introduction {
 .float-top {
   float: top;
 }
+
 .float-top + p {
   margin-top: 0;
   text-indent: 1.5em;
 }
+
 .float-bottom {
   float: bottom;
 }
+
 .float-bottom + p {
   margin-top: 0;
   text-indent: 1.5em;
 }
+
 .float-none {
   float: none;
 }
@@ -1086,7 +1262,7 @@ div.chapter.introduction {
   margin-right: 20%;
 }
 
-.thin-image-wrap  {
+.thin-image-wrap {
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
@@ -1097,7 +1273,7 @@ div.chapter.introduction {
 }
 
 img {
-  prince-image-resolution: auto,normal;
+  prince-image-resolution: auto, normal;
 }
 
 /* TABLES */
@@ -1127,7 +1303,7 @@ table.no-border thead {
 /* SHADING ETC */
 
 .shaded {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 /* COLUMNS */
@@ -1142,6 +1318,7 @@ table.no-border thead {
   column-gap: 1.5em;
   column-fill: balance !important;
 }
+
 .twocolumn p,
 .twocolumn p + p {
   line-height: 1.2;
@@ -1158,6 +1335,7 @@ table.no-border thead {
   column-gap: 1em;
   column-fill: balance !important;
 }
+
 .threecolumn p,
 .threecolumn p + p {
   text-align: left;
@@ -1170,11 +1348,12 @@ div.sidebar {
   margin-left: 0.75em;
   margin-right: 0;
   padding: 0.75em;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   font-size: 0.8em;
   font-style: italic;
   text-align: left;
 }
+
 div.sidebar p,
 div.sidebar p + p {
   text-align: left;

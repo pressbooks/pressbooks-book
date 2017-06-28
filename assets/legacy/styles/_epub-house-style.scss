@@ -22,8 +22,8 @@ h1.front-matter-title,
 h1.part-title,
 h2.chapter-title,
 h1.back-matter-title {
-	hyphens: none;
-	-webkit-hyphens: none;
+  hyphens: none;
+  -webkit-hyphens: none;
   page-break-after: avoid;
 }
 
@@ -32,18 +32,20 @@ IN VARIOUS CIRCUMSTANCES
 ========================= */
 
 .display-none {
-	display: none;
+  display: none;
 }
 
 /* this ONLY works/is declared in EPUB, ignored in MOBI & PDF */
 
 .epub-display-none,
 .not-epub {
-    display:none;
+  display: none;
 }
+
 .web-only {
   display: none;
 }
+
 .pdf-only {
   display: none;
 }
@@ -55,6 +57,7 @@ display: none; */
 .short-book-title {
   display: none;
 }
+
 .short-title,
 h6.short-title {
   display: none;
@@ -63,13 +66,13 @@ h6.short-title {
 /* Invisible Parts are invisible */
 
 .part.invisible {
-	display: none;
+  display: none;
 }
 
 /* Numberless chapters have no chapter numbers */
 
 div.chapter.numberless h3.chapter-number {
-	display: none;
+  display: none;
 }
 
 /* Blank page ... this is to add a blank page in PDF ... */
@@ -128,7 +131,6 @@ div.ugc.chapter-ugc p.indent.no-indent {
   margin-top: 1em !important;
 }
 
-
 body,
 p {
   widows: 2;
@@ -147,6 +149,7 @@ span.fn_p {
   display: block;
   text-indent: 1.5em;
 }
+
 span.fn_blockquote {
   display: block;
   font-size: 0.95em;
@@ -256,7 +259,7 @@ div.sidebar {
   margin-left: 0.75em;
   margin-right: 0;
   padding: 0.75em;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   font-size: 0.8em;
   font-style: italic;
   text-align: left !important;

@@ -1,17 +1,22 @@
 @import 'mixins', 'fonts-prince', 'pdf-house-style';
 
 /* Override hierarchy. See: http://www.princexml.com/doc/8.1/pdf-bookmarks */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   prince-bookmark-level: 1;
 }
 
 /* Page */
 @page {
-  size:6in 9in;
+  size: 6in 9in;
   margin: 2cm;
   font-size: 0.9em;
-  orphans:3;
-  widows:3;
+  orphans: 3;
+  widows: 3;
 }
 
 @page :left {
@@ -24,90 +29,104 @@ h1, h2, h3, h4, h5, h6 {
 
 @page {
   @top {
-    padding-top: .4in;
+    padding-top: 0.4in;
   }
+
   @top-left-corner {
-    padding-top: .4in;
+    padding-top: 0.4in;
   }
+
   @top-left {
-    padding-top: .4in;
+    padding-top: 0.4in;
   }
+
   @top-center {
-    padding-top: .4in;
+    padding-top: 0.4in;
   }
+
   @top-right {
-    padding-top: .4in;
+    padding-top: 0.4in;
   }
+
   @top-right-corner {
-    padding-top: .4in;
+    padding-top: 0.4in;
   }
 }
 
 @page {
   @bottom {
-    padding-bottom: .4in;
+    padding-bottom: 0.4in;
   }
+
   @bottom-left-corner {
-    padding-bottom: .4in;
+    padding-bottom: 0.4in;
   }
+
   @bottom-left {
-    padding-bottom: .4in;
+    padding-bottom: 0.4in;
   }
+
   @bottom-center {
-    padding-bottom: .4in;
+    padding-bottom: 0.4in;
   }
+
   @bottom-right {
-    padding-bottom: .4in;
+    padding-bottom: 0.4in;
   }
+
   @bottom-right-corner {
-    padding-bottom: .4in;
+    padding-bottom: 0.4in;
   }
 }
 
 /* TOC */
 @page toc {
   @bottom {
-  content: counter(page, lower-roman);
-  vertical-align: center;
+    content: counter(page, lower-roman);
+    vertical-align: center;
   }
 }
+
 @page toc:blank {
   @bottom {
-  content: "";
+    content: "";
   }
 }
 
 /* Front-Matter */
-@page front-matter:left
-{
-  @top-left
-  {
-  font-family: $font-1;
-  content: counter(page, lower-roman) "\A0\A0\A0" string(book-title);
-  vertical-align: left;
+@page front-matter:left {
+  @top-left {
+    font-family: $font-1;
+    content: counter(page, lower-roman) "\A0\A0\A0" string(book-title);
+    vertical-align: left;
   }
 }
+
 @page front-matter:right {
   @top-right {
-  font-family: $font-1;
-  content: string(section-title, last) "\A0\A0\A0" counter(page, lower-roman);
-  vertical-align: right;
+    font-family: $font-1;
+    content: string(section-title, last) "\A0\A0\A0" counter(page, lower-roman);
+    vertical-align: right;
   }
 }
+
 @page front-matter:first {
   @top-right {
-  content: "";
+    content: "";
   }
-   @bottom {
-  content: counter(page, lower-roman);
-  font-family: $font-1;
-  vertical-align: center;
+
+  @bottom {
+    content: counter(page, lower-roman);
+    font-family: $font-1;
+    vertical-align: center;
   }
 }
+
 @page front-matter:blank {
-    @top-left {
+  @top-left {
     content: "";
-    }
+  }
+
   @bottom {
     content: "";
   }
@@ -115,15 +134,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Dedication, Epigraph & Before Title */
 @page dedication,
-    epigraph,
-    before-title {
+  epigraph,
+  before-title {
   @bottom {
-  content:"";
+    content: "";
   }
 }
+
 @page dedication:blank {
   @bottom {
-  content:"";
+    content: "";
   }
 }
 
@@ -131,124 +151,133 @@ h1, h2, h3, h4, h5, h6 {
 
 @page introduction:left {
   @top-left {
-  font-family: $font-1;
-  content: counter(page) "\A0\A0\A0" string(book-title);
-  vertical-align: left;
+    font-family: $font-1;
+    content: counter(page) "\A0\A0\A0" string(book-title);
+    vertical-align: left;
   }
 }
+
 @page introduction:right {
   @top-right {
-  font-family: $font-1;
-  content: string(section-title, last) "\A0\A0\A0" counter(page);
-  vertical-align: right;
+    font-family: $font-1;
+    content: string(section-title, last) "\A0\A0\A0" counter(page);
+    vertical-align: right;
   }
 }
 
 @page introduction:first {
   @top-left {
-  content: "";
+    content: "";
   }
+
   @top-right {
-  content: "";
+    content: "";
   }
+
   @bottom {
-  content: counter(page);
-  font-family: $font-1;
-  vertical-align: center;
+    content: counter(page);
+    font-family: $font-1;
+    vertical-align: center;
   }
-
 }
+
 @page introduction:blank {
-
   @top-left {
-  content: "";
+    content: "";
   }
-
 }
 
 /* Part */
 @page part {
+  // TODO
 }
 
 /* Chapter */
 
 @page chapter:left {
   @top-left {
-  font-family: $font-1;
-  content: counter(page) "\A0\A0\A0" string(book-title);
-  vertical-align: left;
+    font-family: $font-1;
+    content: counter(page) "\A0\A0\A0" string(book-title);
+    vertical-align: left;
   }
 }
-@page chapter:right
-{
-  @top-right
-  {
-  font-family: $font-1;
-  content: string(section-title, last) "\A0\A0\A0" counter(page);
-  vertical-align: right;
+
+@page chapter:right {
+  @top-right {
+    font-family: $font-1;
+    content: string(section-title, last) "\A0\A0\A0" counter(page);
+    vertical-align: right;
   }
 }
+
 @page chapter:first {
   @top-left {
-  content: "";
+    content: "";
   }
+
   @top-right {
-  content: "";
+    content: "";
   }
+
   @bottom {
-  content: counter(page);
-  font-family: $font-1;
-  vertical-align: center;
+    content: counter(page);
+    font-family: $font-1;
+    vertical-align: center;
   }
 }
-@page chapter:blank {
 
+@page chapter:blank {
   @top-left {
-  content: "";
+    content: "";
   }
 }
 
 /* Footnotes */
 @page {
-    @footnotes {
+  @footnotes {
     padding-top: 1em;
   }
 }
+
 /* Back-matter */
 @page back-matter:left {
   @top-left {
-  font-family: $font-1;
-  content: counter(page) "\A0\A0\A0" string(book-title);
-  vertical-align: left;
+    font-family: $font-1;
+    content: counter(page) "\A0\A0\A0" string(book-title);
+    vertical-align: left;
   }
 }
+
 @page back-matter:right {
-  @top-right
-  {
-  font-family: $font-1;
-  content: string(section-title, last) "\A0\A0\A0" counter(page);
-  vertical-align: right;
+  @top-right {
+    font-family: $font-1;
+    content: string(section-title, last) "\A0\A0\A0" counter(page);
+    vertical-align: right;
   }
 }
+
 @page back-matter:first {
   @top-left {
-  content: "";
+    content: "";
   }
+
   @top-right {
-  content: "";
+    content: "";
   }
-  @bottom
-  {
-  content: counter(page);
-  font-family: $font-1;
-  vertical-align: center;
+
+  @bottom {
+    content: counter(page);
+    font-family: $font-1;
+    vertical-align: center;
   }
 }
+
 @page back-matter:blank {
   @top-left {
-  content: "";
+    content: "";
   }
 }
+
 #toc {
   page: toc;
   prince-page-group: start;
@@ -258,22 +287,27 @@ div.front-matter {
   page: front-matter;
   prince-page-group: start;
 }
+
 div.front-matter.dedication {
   page: dedication;
   prince-page-group: start;
 }
+
 div.front-matter.epigraph {
   page: epigraph;
   prince-page-group: start;
 }
+
 div.front-matter.before-title {
   page: before-title;
   prince-page-group: start;
 }
+
 div.front-matter.introduction {
   page: introduction;
   prince-page-group: start;
 }
+
 div.introduction {
   counter-reset: page 1;
 }
@@ -291,9 +325,8 @@ div.back-matter {
 div.part {
   background-repeat: no-repeat;
   background-position: bottom center;
-    margin-top: 2.5cm;
+  margin-top: 2.5cm;
   padding-bottom: 0.25em;
-  padding: part;
 }
 
 div.part.invisible {
@@ -323,6 +356,7 @@ p + p,
   text-indent: 2em;
   margin-top: 0;
 }
+
 .nonindent,
 .no-indent {
   text-indent: 0;
@@ -332,74 +366,94 @@ p + ul {
   margin-top: 10px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: center;
 }
+
 hr {
   margin: 10px auto;
   text-align: center;
   width: 20%;
 }
+
 hr.break-symbols {
   border: none;
   font-size: 1.1em;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 hr.break-symbols::after {
   display: block;
   content: "\066D";
   font-size: 1.8em;
   text-align: center;
 }
+
 table {
   border: 1px solid #000;
   border-width: 1px 0;
 }
+
 dt {
-    float: left;
-    font-weight: bold;
-    margin-right: 5px;
-    margin-bottom: 0;
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-bottom: 0;
 }
+
 dd {
   margin-bottom: 0;
 }
+
 ul ul,
 ul ul ul {
   list-style-type: none;
 }
+
 ul li li {
   list-style-image: url('images/em-dash.png');
-
 }
+
 ul li li li {
   list-style-image: none;
 }
+
 ul li li li::before {
   content: "\002A";
   font-size: 0.5em;
   margin-right: 5px;
 }
+
 ol {
-    list-style-type: none;
-     counter-reset: level1;
+  list-style-type: none;
+  counter-reset: level1;
 }
+
 ol li::before {
   content: counter(level1) ". ";
   counter-increment: level1;
 }
+
 ol ol {
   list-style-type: none;
-    counter-reset: level2;
+  counter-reset: level2;
 }
+
 ol li li::before {
   content: counter(level1) "." counter(level2) " ";
   counter-increment: level2;
 }
+
 ol ol ol {
   list-style-type: none;
-    counter-reset: level3;
+  counter-reset: level3;
 }
+
 ol li li li::before {
   content: counter(level1) ". " counter(level2) ". " counter(level3) " ";
   counter-increment: level3;
@@ -408,28 +462,29 @@ ol li li li::before {
 cite {
   font-weight: normal;
 }
+
 .hanging-indent {
   padding-left: 1em;
-    text-indent: -1em;
+  text-indent: -1em;
 }
 
 /* HALFTITLE PAGE
 ==================== */
 #half-title-page h1.title:first-of-type {
-    string-set: book-title content();
+  string-set: book-title content();
   page-break-before: right;
-    page-break-after: always;
-    bookmark-level: none;
-    font-size: 1.5em;
-    margin-top: 6cm;
-    text-transform: uppercase;
+  page-break-after: always;
+  bookmark-level: none;
+  font-size: 1.5em;
+  margin-top: 6cm;
+  text-transform: uppercase;
 }
 
 /* TITLE PAGE
 ================ */
 #title-page {
-    page-break-before: right;
-    height: 100%;
+  page-break-before: right;
+  height: 100%;
 }
 
 #title-page > .subtitle,
@@ -439,6 +494,7 @@ cite {
 #title-page > .publisher-city {
   bookmark-level: none;
 }
+
 #title-page > .title {
   font-size: 2.5em;
   margin-top: 2cm;
@@ -453,13 +509,15 @@ cite {
 
 #title-page > div.logo {
   margin-top: 2cm;
-    height: 26px;
-    background-repeat: no-repeat;
-    background-position: bottom center;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
+
 #title-page .title + div.logo {
   margin-top: 4cm;
 }
+
 #title-page > .author {
   font-size: 1.5em;
   margin-top: 1.5cm;
@@ -470,7 +528,7 @@ cite {
   font-size: 1.25em;
   float: bottom;
   margin-bottom: 0;
- }
+}
 
 #title-page > .publisher-city {
   font-size: 1em;
@@ -478,16 +536,14 @@ cite {
   margin-top: 1em;
 }
 
-
 #copyright-page {
-    page-break-before: always;
+  page-break-before: always;
 }
-
 
 #copyright-page p {
   font-size: 0.9em;
-    text-indent: 0;
-    margin-bottom: 0.5em;
+  text-indent: 0;
+  margin-bottom: 0.5em;
 }
 
 #copyright-page > .ugc {
@@ -500,43 +556,59 @@ cite {
   font-style: italic;
   text-align: center;
 }
+
 /*   TITLES
 ===================  */
-h3.front-matter-number, h3.part-number, h3.chapter-number, h3.back-matter-number {
+h3.front-matter-number,
+h3.part-number,
+h3.chapter-number,
+h3.back-matter-number {
   bookmark-level: none;
 }
 
-div.ugc h1, div.ugc h2, div.ugc h3, div.ugc h4, div.ugc h5, div.ugc h6 {
+div.ugc h1,
+div.ugc h2,
+div.ugc h3,
+div.ugc h4,
+div.ugc h5,
+div.ugc h6 {
   bookmark-level: none;
   margin-bottom: 5px;
-  page-break-after:avoid;
+  page-break-after: avoid;
 }
+
 div.ugc h1,
 div.ugc h2,
 div.ugc h3 {
-   font-weight: normal;
- }
+  font-weight: normal;
+}
+
 div.ugc h1 {
   font-size: 1.1em;
 }
+
 div.ugc h2,
 div.ugc h3 {
   font-style: italic;
   font-size: 1em;
 }
+
 div.ugc h3,
 div.ugc h4,
 div.ugc h5 {
   text-align: left;
 }
+
 div.ugc h4 {
   font-size: 0.875em;
   font-style: italic;
   font-weight: normal;
 }
+
 div.ugc h5 {
   font-size: 0.75em;
 }
+
 div.ugc h1 + p,
 div.ugc h2 + p,
 div.ugc h3 + p,
@@ -544,6 +616,7 @@ div.ugc h4 + p,
 div.ugc h5 + p {
   margin-top: 0;
 }
+
 div.front-matter > div.ugc h6.short-title:first-of-type,
 div.chapter > div.ugc h6.short-title:first-of-type,
 div.back-matter > div.ugc h6.short-title:first-of-type {
@@ -552,14 +625,16 @@ div.back-matter > div.ugc h6.short-title:first-of-type {
   font-size: 0;
   height: 0;
 }
+
 div.front-matter .front-matter-title-wrap > h1:first-of-type,
 div.chapter .chapter-title-wrap > h2:first-of-type,
-div.back-matter .back-matter-title-wrap > h1:first-of-type  {
+div.back-matter .back-matter-title-wrap > h1:first-of-type {
   font-size: 1.5em;
   string-set: section-title content();
   counter-reset: footnote;
   margin-bottom: 20pt;
 }
+
 div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
 #toc > h1:first-of-type {
   font-size: 1.5em;
@@ -567,24 +642,28 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   margin-bottom: 2.5cm;
 }
 
-
- /* TABLE OF CONTENTS
+/* TABLE OF CONTENTS
 ======================= */
 
 .toc h1 {
-  text-align: center
+  text-align: center;
 }
+
 #toc a {
   border: none;
 }
-#toc ul, #toc li {
+
+#toc ul,
+#toc li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 #toc li {
   position: relative;
 }
+
 #toc a::after {
   content: leader(' ') target-counter(attr(href), page);
   font-style: normal;
@@ -593,40 +672,49 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   right: 0;
   text-decoration: none;
 }
+
 #toc .front-matter a::after {
   content: leader(' ') target-counter(attr(href), page, lower-roman);
 }
+
 #toc .introduction a::after {
   content: leader(' ') target-counter(attr(href), page);
 }
+
 #toc .part {
-  margin: .6cm 0 .4em;
+  margin: 0.6cm 0 0.4em;
   text-align: center;
   font-weight: bold;
   page-break-after: avoid;
 }
+
 #toc .part.invisible {
   display: none;
 }
+
 #toc {
   page-break-before: right;
   counter-reset: part;
   font-size: 1em;
 }
+
 #toc ul {
   counter-reset: chapter;
   line-height: fix-descender(1.2);
 }
+
 #toc .part a::before {
   content: $part " " counter(part, upper-roman) ". ";
   text-transform: capitalize;
   counter-increment: part;
 }
+
 #toc .chapter a,
 #toc .front-matter a,
 #toc .back-matter a {
   padding-left: 25px;
 }
+
 #toc .chapter a::before {
   content: counter(chapter) ". ";
   counter-increment: chapter;
@@ -635,24 +723,28 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   left: 0;
   top: 0;
 }
+
 #toc .chapter .section a::before,
 #toc .front-matter .section a::before,
 #toc .back-matter .section a::before {
-  content:'';
+  content: '';
   counter-increment: none;
 }
 
 #toc .chapter.numberless a::before {
-  content:'' ;
+  content: '';
   counter-increment: none;
   margin-right: 0;
 }
+
 #toc .part a::after {
-  content:'' ;
+  content: '';
 }
+
 #toc .chapter + .back-matter {
   margin-top: 1.3em;
 }
+
 #toc span.chapter-author,
 #toc span.chapter-license,
 #toc span.chapter-subtitle {
@@ -661,21 +753,21 @@ div.front-matter.preface .front-matter-title-wrap > h1:first-of-type,
   margin-left: 2em;
   width: 80%;
 }
+
 #toc span.toc-chapter-title {
   display: inline-block;
   width: 80%;
 }
+
 #toc span.chapter-author,
 #toc span.chapter-license,
 #toc span.chapter-subtitle {
   margin-bottom: 5px;
 }
-#toc span.chapter-subtitle +
-span.chapter-author,
-span.chapter-author +
-span.chapter-license,
-#toc span.chapter-subtitle +
-span.chapter-license {
+
+#toc span.chapter-subtitle + span.chapter-author,
+span.chapter-author + span.chapter-license,
+#toc span.chapter-subtitle + span.chapter-license {
   margin-bottom: 5px;
   position: relative;
   top: -5px;
@@ -704,21 +796,26 @@ li.section a::after {
   display: none;
 }
 
-/*end toc*/
+/* end toc */
 
 /* MOAR TRADITIONAL CSS
 ================== */
 
-div.part, div.front-matter, div.back-matter, div.chapter {
+div.part,
+div.front-matter,
+div.back-matter,
+div.chapter {
   page-break-before: right;
 }
 
-
-.display-none, h3.front-matter-number, h3.back-matter-number {
+.display-none,
+h3.front-matter-number,
+h3.back-matter-number {
   display: none;
 }
 
-h3.part-number, h3.chapter-number {
+h3.part-number,
+h3.chapter-number {
   background-repeat: no-repeat;
   background-position: bottom center;
   padding-bottom: 1em;
@@ -728,25 +825,30 @@ h3.part-number, h3.chapter-number {
 h3.part-number::before {
   content: $part " ";
 }
+
 h3.chapter-number {
   margin-bottom: 3em;
 }
+
 div.chapter.numberless h3.chapter-number {
   display: none;
 }
+
 .aphorism {
   font-size: 1em;
-    font-style: italic;
-    margin: 0 auto 4em;
-    width: 50%;
+  font-style: italic;
+  margin: 0 auto 4em;
+  width: 50%;
 }
+
 .aphorism cite {
-    display: block;
-     font-size: 0.875em;
-    font-style: normal;
-    font-variant: small-caps;
-    text-align: right;
+  display: block;
+  font-size: 0.875em;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: right;
 }
+
 .aphorism cite::before {
   content: "–";
 }
@@ -768,9 +870,10 @@ div.chapter.numberless h3.chapter-number {
   text-indent: 1em;
   text-align: left;
 }
+
 sup.endnote {
   line-height: fix-descender(1);
-    vertical-align: top;
+  vertical-align: top;
 }
 
 /* ENDNOTES
@@ -779,15 +882,17 @@ sup.endnote {
   border: none;
   margin-top: 1cm;
 }
+
 .endnotes h3 {
   margin-bottom: 0;
 }
+
 .endnotes ol {
   font-size: 0.8em;
-
   margin-top: 5px;
   margin-left: 0;
 }
+
 .endnotes li {
   text-indent: 22pt;
 }
@@ -795,6 +900,7 @@ sup.endnote {
 .endnotes p + p {
   text-indent: 0;
 }
+
 /* CUT AND PASTE FROM EPUB FORTRESS.CSS
 ================== */
 
@@ -806,17 +912,21 @@ sup.endnote {
   padding: 10px 0;
   text-indent: 0;
 }
+
 .textbox {
   border: 1px solid #000;
   margin: 10px 0;
   padding: 10px;
 }
+
 .textbox.shaded {
   background-color: #eee;
 }
+
 .textbox p {
   margin-top: 0;
 }
+
 .textbox-caption {
   display: block;
   font-size: 0.9em;
@@ -828,21 +938,25 @@ h2.chapter-subtitle {
   font-weight: normal;
   font-style: italic;
 }
+
 div.ugc h2.chapter-subtitle,
 div.ugc h2.chapter-author {
-    font-size: 1.4em;
-    font-variant: normal;
-    margin: -1.4em 0 3em;
+  font-size: 1.4em;
+  font-variant: normal;
+  margin: -1.4em 0 3em;
 }
+
 div.ugc h2.chapter-subtitle {
   margin-bottom: 2.8em;
-    padding-top: 0.5em;
+  padding-top: 0.5em;
 }
+
 div.ugc h2.chapter-author {
   font-size: 0.9em;
   font-style: normal;
   font-weight: 600;
 }
+
 .pullquote {
   border: 1px solid #000;
   border-width: 1px 0;
@@ -851,6 +965,7 @@ div.ugc h2.chapter-author {
   text-align: center;
   width: 45%;
 }
+
 .pullquote-left {
   border: 1px solid #000;
   border-width: 1px 0;
@@ -860,6 +975,7 @@ div.ugc h2.chapter-author {
   text-align: center;
   width: 45%;
 }
+
 .pullquote-right {
   border: 1px solid #000;
   border-width: 1px 0;
@@ -876,35 +992,42 @@ img {
   height: auto;
   max-width: 100%;
 }
+
 .alignleft {
   float: left;
   margin: 1em 1em 1em 0;
 }
+
 .alignright {
   float: right;
   margin: 1em 0 1em 1em;
 }
+
 .aligncenter {
   display: block;
   margin: 1em auto;
   text-align: center;
 }
+
 div.aligncenter {
   display: block;
   margin: 1em auto;
   text-align: center;
 }
+
 img.aligncenter {
   display: block;
   margin: 1em auto;
   text-align: center;
 }
+
 .wp-caption {
-    float: prince-top-if-necessary;
+  float: prince-top-if-necessary;
   height: auto;
   max-width: 100%;
   margin: 1em 0;
 }
+
 .wp-caption-text {
   font-size: 0.875em;
   font-style: italic;
@@ -919,46 +1042,49 @@ div.blockquote {
   padding: 0 15%;
   margin-bottom: 2em;
 }
+
 p.bl_nonindent {
   margin: 2em 10% 0;
   text-indent: 0;
 }
+
 p.bl_indent {
   margin: 0 10%;
   text-indent: 1em;
 }
 
-
 /* BIBLIOGRAPHY
  =============== */
 
-.bibliography p  {
+.bibliography p {
   padding-left: 14pt;
   text-indent: -14pt;
 }
 
 /* INDEX
 ================== */
-.index .ugc  {
+.index .ugc {
   column-count: 2;
   column-gap: 2.5em;
   text-align: left;
-
 }
-.index .ugc  div {
+
+.index .ugc div {
   margin-bottom: 4em;
 }
-.index .ugc  p {
-    font-size: 0.9em;
+
+.index .ugc p {
+  font-size: 0.9em;
   padding-left: 14pt;
   text-indent: -14pt;
   text-align: left;
 }
-.index .ugc  p.sub-entry {
-  padding-left:30px;
+
+.index .ugc p.sub-entry {
+  padding-left: 30px;
 }
 
 div.license-attribution > p:first-of-type {
-  text-align:center;
+  text-align: center;
   font-size: 0.75em;
 }

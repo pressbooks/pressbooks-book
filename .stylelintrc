@@ -18,6 +18,9 @@
 					"hyphenate-before",
 					"hyphenate-after",
 					"hyphenate-lines",
+					"margin-inside",
+					"margin-outside",
+					"prince-bookmark-level",
 					"prince-footnote-policy",
 					"prince-image-resolution",
 					"prince-page-group"

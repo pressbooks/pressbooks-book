@@ -1,10 +1,11 @@
 // SASS MIXINS -- PDF IMAGES
 
-/* ============================= 
+/* =============================
 PDF IMAGES & CAPTIONS - STANDARD
 ================================ */
 
 /* CAPTIONS -  BASIC */
+
 /* FURTHER STYLING SHOULD BE DONE IN OTHER THEME FILES */
 
 p.wp-caption-text {
@@ -12,13 +13,13 @@ p.wp-caption-text {
   padding-bottom: 0.5em;
 }
 
-/* IMAGES - GENERIC */ 
+/* IMAGES - GENERIC */
 
 img {
   height: auto;
   max-width: 100%;
   margin: 0;
-  padding-left: 0;  
+  padding-left: 0;
   padding-right: 0;
   display: inline-block;
   page-break-inside: avoid;
@@ -28,7 +29,7 @@ img {
 
 div.wp-caption,
 div.wp-nocaption {
-  height: auto;        
+  height: auto;
   max-width: 100%;
   text-align: center;
   margin-top: 0.5em;
@@ -51,7 +52,7 @@ div.wp-nocaption {
 .alignnone img,
 .wp-caption.alignnone img,
 .wp-nocaption.alignnone img {
-  max-width: 100%; 
+  max-width: 100%;
   page-break-inside: avoid;
 }
 
@@ -79,9 +80,10 @@ div.wp-nocaption {
   text-align: center;
   page-break-inside: avoid;
 }
- 
- /* ALIGN LEFT */ 
- /* MAX-WIDTH IS SET TO 50% */ 
+
+/* ALIGN LEFT */
+
+/* MAX-WIDTH IS SET TO 50% */
 .wp-caption.alignleft,
 .wp-nocaption.alignleft {
   max-width: 50%;
@@ -96,12 +98,13 @@ div.wp-nocaption {
 .alignleft img,
 .wp-caption.alignleft img,
 .wp-nocaption.alignleft img {
-  max-width: 100%; 
+  max-width: 100%;
   page-break-inside: avoid;
 }
 
- /* ALIGN RIGHT */ 
- /* MAX-WIDTH IS SET TO 50% */ 
+/* ALIGN RIGHT */
+
+/* MAX-WIDTH IS SET TO 50% */
 
 .wp-caption.alignright,
 .wp-nocaption.alignright {
@@ -121,7 +124,7 @@ div.wp-nocaption {
   page-break-inside: avoid;
 }
 
-/* SPECIAL IMAGES */ 
+/* SPECIAL IMAGES */
 
 .publisher-logo {
   width: 30px;
@@ -135,4 +138,3 @@ div.wp-nocaption {
   max-width: 100%;
   height: auto;
 }
-
