@@ -438,7 +438,7 @@ function pb_social_media_enabled() {
 	$options = get_option( 'pressbooks_theme_options_web' );
 	if ( ! isset( $options['social_media'] ) ) {
 		return true;
-	} elseif ( isset( $options['social_media'] ) && absint( $optiobns['social_media'] === 1 ) ) {
+	} elseif ( isset( $options['social_media'] ) && absint( $options['social_media'] === 1 ) ) {
 		return true;
 	}
 	return false;

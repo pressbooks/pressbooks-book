@@ -12,7 +12,7 @@ body {
   line-height: if-map-get($body-line-height, $type);
   word-wrap: break-word;
   overflow-wrap: break-word;
- }
+}
 
 @mixin mobi-style-body {
   @media amzn-mobi {

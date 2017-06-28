@@ -12,15 +12,9 @@
 // Margins
 
 @page:left {
-  margin-top: $page-margin-top;
-  margin-right: $page-margin-inside;
-  margin-bottom: $page-margin-bottom;
-  margin-left: $page-margin-outside;
+  margin: $page-margin-top $page-margin-inside $page-margin-bottom $page-margin-outside;
 }
 
 @page:right {
-  margin-top: $page-margin-top;
-  margin-right: $page-margin-outside;
-  margin-bottom: $page-margin-bottom;
-  margin-left: $page-margin-inside;
+  margin: $page-margin-top $page-margin-outside $page-margin-bottom $page-margin-inside;
 }

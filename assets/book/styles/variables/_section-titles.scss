@@ -65,9 +65,9 @@ $section-title-text-transform: none !default;
 // Section subtitle
 
 $section-subtitle-margin-bottom: (
-  epub: .5em,
-  prince: .375cm,
-  web: .5em
+  epub: 0.5em,
+  prince: 0.375cm,
+  web: 0.5em
 ) !default;
 $section-subtitle-font-family: $font-2 !default;
 $section-subtitle-font-size: 1em !default;
@@ -79,9 +79,9 @@ $section-subtitle-text-transform: none !default;
 // Section author
 
 $section-author-margin-bottom: (
-  epub: .5em,
-  prince: .375cm,
-  web: .5em
+  epub: 0.5em,
+  prince: 0.375cm,
+  web: 0.5em
 ) !default;
 $section-author-font-family: $font-2 !default;
 $section-author-font-size: 1em !default;
@@ -93,9 +93,9 @@ $section-author-text-transform: uppercase !default;
 // Section Aphorism
 
 $aphorism-font-family: $body-font-family !default;
-$aphorism-font-size: .9em; // TODO
+$aphorism-font-size: 0.9em; // TODO
 $aphorism-align: left !default;
-$aphorism-cite-font-size: .9em !default;
+$aphorism-cite-font-size: 0.9em !default;
 
 // PARTS
 

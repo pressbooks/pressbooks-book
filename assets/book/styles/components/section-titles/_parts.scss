@@ -7,10 +7,7 @@
 // --- PARTS --- //
 
 .part-title-wrap {
-  margin-top: if-map-get($section-title-block-margin-top, $type);
-  margin-right: $section-title-block-margin-right;
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  margin-left: $section-title-block-margin-left;
+  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
 
   .part-number {
     display: $part-number-display;

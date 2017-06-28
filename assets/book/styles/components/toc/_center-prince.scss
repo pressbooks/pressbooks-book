@@ -27,6 +27,7 @@
 
   .part {
     @include toc-part-title;
+
     text-align: center;
     page-break-after: avoid;
   }
@@ -34,7 +35,7 @@
   .part a::before {
     display: block;
     text-align: center;
-    content: $part '\A0' counter(part, upper-roman)'.\A0';
+    content: $part '\A0' counter(part, upper-roman) '.\A0';
     counter-increment: part;
     page-break-after: avoid;
   }
@@ -47,11 +48,13 @@
 
   .front-matter .toc-chapter-title {
     @include toc-front-matter-title;
+
     text-align: center;
   }
 
   .introduction .toc-chapter-title {
     @include toc-front-matter-title;
+
     text-align: center;
   }
 
@@ -67,6 +70,7 @@
 
   .chapter a::before {
     @include toc-chapter-number;
+
     display: $toc-chapter-number-display;
     content: counter(chapter) '.\A0\A0\A0';
     counter-increment: chapter;
@@ -75,6 +79,7 @@
 
   .toc-chapter-title {
     @include toc-chapter-title;
+
     display: inline;
     text-align: center;
     page-break-after: avoid;
@@ -98,7 +103,7 @@
 
   .back-matter .toc-chapter-title {
     @include toc-back-matter-title;
+
     text-align: center;
   }
-
 }

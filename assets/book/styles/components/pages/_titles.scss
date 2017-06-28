@@ -123,13 +123,13 @@ h5.publisher-city {
 
 @if $type == 'epub' {
   @media amzn-kf8 {
-     #title-page h1.title::before {
-           content: '';
-     }
+    #title-page h1.title::before {
+      content: '';
+    }
 
-     #title-page h1.title::after {
-           content: '';
-     }
+    #title-page h1.title::after {
+      content: '';
+    }
   }
 
   @media amzn-mobi {
@@ -162,15 +162,15 @@ h5.publisher-city {
     }
 
     .pb-publogo-wrap {
-        display: none;
+      display: none;
     }
 
     .pb-publogo {
-        display: none;
+      display: none;
     }
 
     .pb-publogo-wide {
-        display: none;
+      display: none;
     }
   }
 }

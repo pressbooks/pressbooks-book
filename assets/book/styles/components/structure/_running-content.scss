@@ -58,7 +58,9 @@ $right-page-number: (
 @if head-or-foot($running-content-position) == 'head' {
   @include runninghead('left', convert-position('left', $running-content-position));
   @include runninghead('right', convert-position('right', $running-content-position));
-} @elseif head-or-foot($running-content-position) == 'foot' {
+}
+
+@elseif head-or-foot($running-content-position) == 'foot' {
   @include runningfoot('left', convert-position('left', $running-content-position));
   @include runningfoot('right', convert-position('right', $running-content-position));
 }
@@ -69,11 +71,11 @@ $right-page-number: (
 //note we're using if-map-get, which will enable us to pull in the right variable
 //depending on section type
 
-
 // Front Matter
 @page front-matter:first {
   @include blank-head-and-foot;
 }
+
 @include page-structure('front-matter', 'first', convert-position('first', $first-numbering-position), false);
 @include page-structure('front-matter', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
 @include page-structure('front-matter', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));
@@ -82,6 +84,7 @@ $right-page-number: (
 @page introduction:first {
   @include blank-head-and-foot;
 }
+
 @include page-structure('introduction', 'first', convert-position('first', $first-numbering-position), false);
 @include page-structure('introduction', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
 @include page-structure('introduction', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));
@@ -90,6 +93,7 @@ $right-page-number: (
 @page part:first {
   @include blank-head-and-foot;
 }
+
 @include page-structure('part', 'first', convert-position('first', $first-numbering-position), false);
 @include page-structure('part', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
 @include page-structure('part', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));
@@ -98,6 +102,7 @@ $right-page-number: (
 @page chapter:first {
   @include blank-head-and-foot;
 }
+
 @include page-structure('chapter', 'first', convert-position('first', $first-numbering-position), false);
 @include page-structure('chapter', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
 @include page-structure('chapter', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));
@@ -106,6 +111,7 @@ $right-page-number: (
 @page back-matter:first {
   @include blank-head-and-foot;
 }
+
 @include page-structure('back-matter', 'first', convert-position('first', $first-numbering-position), false);
 @include page-structure('back-matter', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
 @include page-structure('back-matter', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));

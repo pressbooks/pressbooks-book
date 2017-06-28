@@ -37,7 +37,6 @@ $running-content-position: 'top-center' !default;
 //$running-content-position: 'bottom-center' !default;
 //$running-content-position: 'bottom-inside' !default;
 
-
 // Finally, for the running separator, it either exists or it doesn't,
 //so choose between two options (null, or defined content):
 
@@ -49,24 +48,24 @@ $right-running-separator: '' !default;
 // Page Numbers
 
 $front-matter-page-number-font-family: $font-2 !default;
-$front-matter-page-number-font-size: .8em !default;
+$front-matter-page-number-font-size: 0.8em !default;
 $front-matter-page-number-font-style: normal !default;
 $front-matter-page-number-font-weight: normal !default;
 $front-matter-page-number-text-transform: none !default;
 
 $page-number-font-family: $font-2 !default;
-$page-number-font-size: .9em !default;
+$page-number-font-size: 0.9em !default;
 $page-number-font-style: normal !default;
 $page-number-font-weight: normal !default;
 $page-number-text-transform: none !default;
 
 // Running Head Styling
 
-$runninghead-padding-top: .4in !default;
+$runninghead-padding-top: 0.4in !default;
 
 // Running head left
 $runninghead-left-font-family: $font-3 !default;
-$runninghead-left-font-size: .7em !default;
+$runninghead-left-font-size: 0.7em !default;
 $runninghead-left-font-style: normal !default;
 $runninghead-left-font-weight: normal !default;
 $runninghead-left-text-transform: uppercase !default;
@@ -75,7 +74,7 @@ $runninghead-left-word-spacing: 2px !default;
 
 // Running head right
 $runninghead-right-font-family: $font-3 !default;
-$runninghead-right-font-size: .7em !default;
+$runninghead-right-font-size: 0.7em !default;
 $runninghead-right-font-style: normal !default;
 $runninghead-right-font-weight: normal !default;
 $runninghead-right-text-transform: uppercase !default;
@@ -84,16 +83,16 @@ $runninghead-right-word-spacing: 2px !default;
 
 // Running Feet Styling
 
-$runningfoot-padding-bottom: .4in !default;
+$runningfoot-padding-bottom: 0.4in !default;
 $runningfoot-left-font-family: $font-2 !default;
-$runningfoot-left-font-size: .7em !default;
+$runningfoot-left-font-size: 0.7em !default;
 $runningfoot-left-font-style: normal !default;
 $runningfoot-left-font-weight: normal !default;
 $runningfoot-left-text-transform: uppercase !default;
 $runningfoot-left-letter-spacing: normal !default;
 $runningfoot-left-word-spacing: normal !default;
 $runningfoot-right-font-family: $font-2 !default;
-$runningfoot-right-font-size: .7em !default;
+$runningfoot-right-font-size: 0.7em !default;
 $runningfoot-right-font-style: normal !default;
 $runningfoot-right-font-weight: normal !default;
 $runningfoot-right-text-transform: uppercase !default;
