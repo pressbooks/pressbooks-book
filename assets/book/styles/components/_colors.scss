@@ -161,7 +161,8 @@ h1.back-matter-title {
 
 // SIDEBARS, TEXTBOXES COLOR
 div.sidebar {
-  background-color: if-map-get($sidebar-color, $type);}
+  background-color: if-map-get($sidebar-color, $type);
+}
 
 div.textbox {
   background-color: if-map-get($textbox-background-color, $type);

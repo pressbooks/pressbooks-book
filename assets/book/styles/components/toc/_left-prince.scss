@@ -18,10 +18,7 @@
   }
 
   ul {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: $toc-left-margin-left;
+    margin: 0 0 0 $toc-left-margin-left;
     text-align: left;
   }
 
@@ -33,14 +30,16 @@
 
   .part {
     @include toc-part-title;
+
     width: $toc-title-width;
     page-break-after: avoid;
   }
 
   .part a::before {
     @include toc-part-number;
+
     text-align: left;
-    content: $part '\A0' counter(part, upper-roman)'.\A0';
+    content: $part '\A0' counter(part, upper-roman) '.\A0';
     counter-increment: part;
   }
 
@@ -52,12 +51,14 @@
 
   .front-matter .toc-chapter-title {
     @include toc-front-matter-title;
+
     position: relative;
     display: block;
   }
 
   .front-matter a::after {
     @include toc-front-matter-page-number;
+
     content: leader(' ') target-counter(attr(href), page, lower-roman);
   }
 
@@ -69,6 +70,7 @@
 
   .chapter a::before {
     @include toc-chapter-number;
+
     position: relative;
     left: -1 * $toc-left-chapter-number-width + $toc-left-chapter-number-margin-right;
     display: $toc-chapter-number-display;
@@ -83,6 +85,7 @@
 
   .toc-chapter-title {
     @include toc-chapter-title;
+
     position: relative;
     top: 0;
     display: inline-block;
@@ -110,6 +113,7 @@
 
   .back-matter .toc-chapter-title {
     @include toc-back-matter-title;
+
     position: relative;
     display: block;
   }
@@ -127,5 +131,4 @@
   .section a::before {
     display: none;
   }
-
 }

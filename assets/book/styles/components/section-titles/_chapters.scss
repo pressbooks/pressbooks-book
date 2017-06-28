@@ -36,10 +36,7 @@
 // Web markup for chapters (above) is different than EPUB and PDF (below)
 
 .chapter-title-wrap {
-  margin-top: if-map-get($section-title-block-margin-top, $type);
-  margin-right: $section-title-block-margin-right;
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  margin-left: $section-title-block-margin-left;
+  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
 
   .chapter-number {
     display: $chapter-number-display;
@@ -80,11 +77,15 @@
 h2.chapter-subtitle,
 h2.chapter_subtitle { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
   display: block;
+
   @if $type == 'prince' {
     margin-top: if-map-get($section-title-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
-     margin-top: 1em;
   }
+
+  @else if $type == 'epub' {
+    margin-top: 1em;
+  }
+
   margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
   font-family: $section-subtitle-font-family;
   font-size: if-map-get($section-subtitle-font-size, $type);
@@ -100,11 +101,15 @@ h2.chapter_subtitle { //ned, in web the markup is with a underscore, in xhtml it
 h2.chapter-author,
 h2.chapter_author { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
   display: block;
+
   @if $type == 'prince' {
     margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
+  }
+
+  @else if $type == 'epub' {
     margin-bottom: if-map-get($section-author-margin-bottom, $type);
   }
+
   font-family: $section-author-font-family;
   font-size: if-map-get($section-author-font-size, $type);
   font-style: $section-author-font-style;
@@ -117,7 +122,9 @@ h2.chapter_author { //ned, in web the markup is with a underscore, in xhtml it's
 h2.chapter-subtitle + h2.chapter-author {
   @if $type == 'prince' {
     margin-top: if-map-get($section-subtitle-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
+  }
+
+  @else if $type == 'epub' {
     margin-top: 0;
   }
 }
@@ -126,7 +133,9 @@ h2.chapter-title-wrap + h2.chapter-author,
 h2.chapter-author:first-child {
   @if $type == 'prince' {
     margin-top: if-map-get($section-title-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
+  }
+
+  @else if $type == 'epub' {
     margin-top: 0;
   }
 }
@@ -155,7 +164,9 @@ h2.chapter-author + blockquote.aphorism,
 h2.chapter-author + .aphorism {
   @if $type == 'prince' {
     margin-top: if-map-get($section-author-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
+  }
+
+  @else if $type == 'epub' {
     margin-top: 0;
   }
 }
@@ -164,7 +175,9 @@ h2.chapter-subtitle + blockquote.aphorism,
 h2.chapter-subtitle + .aphorism {
   @if $type == 'prince' {
     margin-top: if-map-get($section-subtitle-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
+  }
+
+  @else if $type == 'epub' {
     margin-top: 0;
   }
 }
@@ -173,7 +186,9 @@ h2.chapter-subtitle + .aphorism {
 .aphorism:first-child {
   @if $type == 'prince' {
     margin-top: if-map-get($section-title-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  } @else if $type == 'epub' {
+  }
+
+  @else if $type == 'epub' {
     margin-top: 0;
   }
 }
@@ -204,18 +219,18 @@ h2.chapter-subtitle + .aphorism {
     }
 
     h2.chapter-subtitle {
-      margin-top: .5em;
-      margin-bottom: .5em;
-      font-size: .9em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
       font-style: normal;
       font-weight: normal;
       text-align: center;
     }
 
     h2.chapter-author {
-      margin-top: .5em;
-      margin-bottom: .5em;
-      font-size: .8em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: 0.8em;
       font-style: normal;
       font-weight: normal;
       text-align: center;
@@ -223,12 +238,12 @@ h2.chapter-subtitle + .aphorism {
   }
 
   @media amzn-kf8 {
-     .chapter-title-wrap h2.chapter-title::before {
-        content: '';
-     }
+    .chapter-title-wrap h2.chapter-title::before {
+      content: '';
+    }
 
-     .chapter-title-wrap h2.chapter-title::after {
-        content: '';
-     }
+    .chapter-title-wrap h2.chapter-title::after {
+      content: '';
+    }
   }
 }

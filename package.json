@@ -10,12 +10,16 @@
   "devDependencies": {
     "jquery-columnizer": "^1.6.3",
     "laravel-mix": "^1.0.0",
-    "sharer.js": "^0.3.1"
+    "sharer.js": "^0.3.1",
+    "stylelint": "^7.12.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-webpack-plugin": "^0.7.1"
   },
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "node_modules/stylelint/bin/stylelint.js 'assets/book/styles/**/*.scss' 'assets/book/typography/styles/*.scss' 'assets/styles/**/*.scss' --syntax scss"
   }
 }

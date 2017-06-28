@@ -7,7 +7,6 @@
   hyphens: none;
 }
 
-
 // No Wrap
 .nowrap {
   white-space: nowrap;
@@ -71,9 +70,13 @@
 }
 
 @if $type == 'epub' {
-	@include epub-display-none;
-} @else if $type == 'prince' {
-	@include pdf-display-none;
-} @else if $type == 'web' {
-	@include web-display-none;
+  @include epub-display-none;
+}
+
+@else if $type == 'prince' {
+  @include pdf-display-none;
+}
+
+@else if $type == 'web' {
+  @include web-display-none;
 }

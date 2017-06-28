@@ -6,14 +6,8 @@
 
 aside,
 .aside {
-  padding-top: $aside-padding-top;
-  padding-right: $aside-padding-right;
-  padding-bottom: $aside-padding-bottom;
-  padding-left: $aside-padding-left;
-  margin-top: $aside-margin-top;
-  margin-right: $aside-margin-right;
-  margin-bottom: $aside-margin-bottom;
-  margin-left: $aside-margin-left;
+  padding: $aside-padding-top $aside-padding-right $aside-padding-bottom $aside-padding-left;
+  margin: $aside-margin-top $aside-margin-right $aside-margin-bottom $aside-margin-left;
   line-height: $aside-line-height;
   text-indent: 0;
   border-top: $aside-border-top;
@@ -46,19 +40,13 @@ aside,
 .pullquote-left {
   float: left;
   width: $pullquote-left-width;
-  margin-top: $pullquote-margin-top;
-  margin-right: $pullquote-left-margin-right;
-  margin-bottom: $pullquote-margin-bottom;
-  margin-left: $pullquote-left-margin-left;
+  margin: $pullquote-margin-top $pullquote-left-margin-right $pullquote-margin-bottom $pullquote-left-margin-left;
 }
 
 .pullquote-right {
   float: right;
   width: $pullquote-right-width;
-  margin-top: $pullquote-margin-top;
-  margin-right: $pullquote-right-margin-right;
-  margin-bottom: $pullquote-margin-bottom;
-  margin-left: $pullquote-right-margin-left;
+  margin: $pullquote-margin-top $pullquote-right-margin-right $pullquote-margin-bottom $pullquote-right-margin-left;
   border-top: 0;
   border-bottom: 0;
 }
@@ -67,10 +55,7 @@ aside,
 .sidebar {
   float: right;
   width: $sidebar-width;
-  padding-top: $sidebar-padding-top;
-  padding-right: $sidebar-padding-right;
-  padding-bottom: $sidebar-padding-bottom;
-  padding-left: $sidebar-padding-left;
+  padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left;
   margin-top: $sidebar-margin-top;
   margin-right: $sidebar-margin-right;
   margin-left: $sidebar-margin-left;

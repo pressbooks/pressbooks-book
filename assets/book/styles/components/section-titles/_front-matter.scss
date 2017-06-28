@@ -5,10 +5,7 @@
 @import '../utilities';
 
 .front-matter-title-wrap {
-  margin-top: if-map-get($section-title-block-margin-top, $type);
-  margin-right: $section-title-block-margin-right;
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  margin-left: $section-title-block-margin-left;
+  margin: if-map-get($section-title-block-margin-top, $type)  $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
 
   .front-matter-number {
     display: none;
@@ -33,10 +30,7 @@
 
 #toc h1 {
   display: block;
-  margin-top: if-map-get($section-title-block-margin-top, $type);
-  margin-right: $section-title-block-margin-right;
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  margin-left: $section-title-block-margin-left;
+  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
   font-family: $toc-title-font-family;
   font-size: if-map-get($toc-title-font-size, $type);
   font-style: $toc-title-font-style;

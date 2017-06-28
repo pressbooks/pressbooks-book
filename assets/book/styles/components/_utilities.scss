@@ -4,7 +4,9 @@
 @function if-map-get($var, $type) {
   @if type-of($var) == 'map' {
     @return map-get($var, $type);
-  } @else {
+  }
+
+  @else {
     @return $var;
   }
 }
@@ -15,66 +17,110 @@
 @function convert-position($page-position, $position) {
   @if $position == null {
     @return false;
-  } @elseif $position == 'top-outside-corner' {
+  }
+
+  @elseif $position == 'top-outside-corner' {
     @if $page-position != 'first' {
       @return '@top-#{$page-position}-corner';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'top-outside' {
+  }
+
+  @elseif $position == 'top-outside' {
     @if $page-position != 'first' {
       @return '@top-#{$page-position}';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'top-center' {
+  }
+
+  @elseif $position == 'top-center' {
     @return '@top-center';
-  } @elseif $position == 'top-inside' {
+  }
+
+  @elseif $position == 'top-inside' {
     @if $page-position == 'left' {
       @return '@top-right';
-    } @elseif $page-position == 'right' {
+    }
+
+    @elseif $page-position == 'right' {
       @return '@top-left';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'outside-top' {
+  }
+
+  @elseif $position == 'outside-top' {
     @if $page-position != 'first' {
       @return '@#{$page-position}-top';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'outside-middle' {
+  }
+
+  @elseif $position == 'outside-middle' {
     @if $page-position != 'first' {
       @return '@#{$page-position}-middle';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'outside-bottom' {
+  }
+
+  @elseif $position == 'outside-bottom' {
     @if $page-position != 'first' {
       @return '@#{$page-position}-bottom';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'bottom-outside-corner' {
+  }
+
+  @elseif $position == 'bottom-outside-corner' {
     @if $page-position != 'first' {
       @return '@bottom-#{$page-position}-corner';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'bottom-outside' {
+  }
+
+  @elseif $position == 'bottom-outside' {
     @if $page-position != 'first' {
       @return '@bottom-#{$page-position}';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
-  } @elseif $position == 'bottom-center' {
+  }
+
+  @elseif $position == 'bottom-center' {
     @return '@bottom-center';
-  } @elseif $position == 'bottom-inside' {
+  }
+
+  @elseif $position == 'bottom-inside' {
     @if $page-position == 'left' {
       @return '@bottom-right';
-    } @elseif $page-position == 'right' {
+    }
+
+    @elseif $page-position == 'right' {
       @return '@bottom-left';
-    } @else {
+    }
+
+    @else {
       @return false;
     }
   }
@@ -84,33 +130,37 @@
 /// @param {string} $position - The running content or page number position.
 @function head-or-foot($position) {
   @if $position == 'top-outside-corner'
-  or $position == '@top-left-corner'
-  or $position == '@top-right-corner'
-  or $position == 'top-outside'
-  or $position == '@top-left'
-  or $position == '@top-right'
-  or $position == 'top-center'
-  or $position == '@top-center'
-  or $position == 'top-inside'
-  or $position == 'outside-top'
-  or $position == '@left-top'
-  or $position == '@right-top'
-  or $position == 'outside-middle'
-  or $position == '@left-middle'
-  or $position == '@right-middle' {
+    or $position == '@top-left-corner'
+    or $position == '@top-right-corner'
+    or $position == 'top-outside'
+    or $position == '@top-left'
+    or $position == '@top-right'
+    or $position == 'top-center'
+    or $position == '@top-center'
+    or $position == 'top-inside'
+    or $position == 'outside-top'
+    or $position == '@left-top'
+    or $position == '@right-top'
+    or $position == 'outside-middle'
+    or $position == '@left-middle'
+    or $position == '@right-middle' {
     @return 'head';
-  } @elseif $position == 'outside-bottom'
-  or $position == 'bottom-outside-corner'
-  or $position == '@bottom-left-corner'
-  or $position == '@bottom-right-corner'
-  or $position == 'bottom-outside'
-  or $position == '@bottom-left'
-  or $position == '@bottom-right'
-  or $position == 'bottom-center'
-  or $position == '@bottom-center'
-  or $position == 'bottom-inside' {
+  }
+
+  @elseif $position == 'outside-bottom'
+    or $position == 'bottom-outside-corner'
+    or $position == '@bottom-left-corner'
+    or $position == '@bottom-right-corner'
+    or $position == 'bottom-outside'
+    or $position == '@bottom-left'
+    or $position == '@bottom-right'
+    or $position == 'bottom-center'
+    or $position == '@bottom-center'
+    or $position == 'bottom-inside' {
     @return 'foot';
-  } @else {
+  }
+
+  @else {
     @return false;
   }
 }

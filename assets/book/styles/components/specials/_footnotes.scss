@@ -48,7 +48,7 @@
     @footnotes {
       margin-top: $footnote-block-margin-top;
       border-top: $footnote-block-border-top;
-   }
+    }
   }
 }
 
@@ -69,7 +69,9 @@
 
 @if $type == 'prince' {
   @include prince-footnotes;
-} @else if $type == 'epub' {
+}
+
+@else if $type == 'epub' {
   @include epub-footnotes;
 }
 

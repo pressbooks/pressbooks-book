@@ -5,10 +5,7 @@
 @import '../utilities';
 
 .back-matter-title-wrap {
-  margin-top: if-map-get($section-title-block-margin-top, $type);
-  margin-right: $section-title-block-margin-right;
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  margin-left: $section-title-block-margin-left;
+  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
 
   .back-matter-number {
     display: none;
@@ -19,7 +16,6 @@
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-
     font-family: $back-matter-title-font-family;
     font-size: if-map-get($section-title-font-size, $type);
     font-style: $section-title-font-style;
@@ -39,6 +35,6 @@
       font-style: normal;
       font-weight: normal;
       text-align: center;
-     }
+    }
   }
 }

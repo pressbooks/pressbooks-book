@@ -37,22 +37,13 @@
 
 @mixin educational-textbox() {
   float: none;
-  padding-top: $edu-textbox-padding-top;
-  padding-right: $edu-textbox-padding-right;
-  padding-bottom: $edu-textbox-padding-bottom;
-  padding-left: $edu-textbox-padding-left;
+  padding: $edu-textbox-padding-top $edu-textbox-padding-right $edu-textbox-padding-bottom $edu-textbox-padding-left;
   margin-bottom: $edu-textbox-margin-bottom;
   border-radius: $edu-textbox-border-radius;
 
   h3 {
-    padding-top: $edu-header-padding-top;
-    padding-right: $edu-header-padding-right;
-    padding-bottom: $edu-header-padding-bottom;
-    padding-left: $edu-header-padding-left;
-    margin-top: $edu-header-margin-top;
-    margin-right: $edu-header-margin-right;
-    margin-bottom: $edu-header-margin-bottom;
-    margin-left: $edu-header-margin-left;
+    padding: $edu-header-padding-top $edu-header-padding-right $edu-header-padding-bottom $edu-header-padding-left;
+    margin: $edu-header-margin-top $edu-header-margin-right $edu-header-margin-bottom $edu-header-margin-left;
     font-size: $edu-header-font-size;
     color: $edu-header-text-color;
     text-align: $edu-header-text-align;
@@ -61,6 +52,7 @@
 
 .learning-objectives {
   @include educational-textbox();
+
   background-color: $learning-objectives-background;
 
   h3 {
@@ -72,6 +64,7 @@
 
 .key-takeaways {
   @include educational-textbox();
+
   background-color: $key-takeaways-background;
 
   h3 {
@@ -83,6 +76,7 @@
 
 .exercises {
   @include educational-textbox();
+
   background-color: $exercises-background;
 
   h3 {
@@ -94,6 +88,7 @@
 
 .examples {
   @include educational-textbox();
+
   background-color: $examples-background;
 
   h3 {
@@ -122,18 +117,15 @@
 @if $type == 'epub' {
   @media amzn-mobi {
     div.textbox {
-     margin: 5%;
-     border-top: 1px solid;
-     border-bottom: 1px solid;
+      margin: 5%;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
     }
 
     .ugc.chapter-ugc.textbox {
       padding-left: 10%;
-      margin-top: 1.5em;
-      margin-right: 5%;
-      margin-bottom: 1.5em;
-      margin-left: 10%;
-      font-size: .9em;
+      margin: 1.5em 5% 1.5em 10%;
+      font-size: 0.9em;
       font-style: italic;
       border-top: 1px solid;
     }
@@ -142,7 +134,7 @@
     .ugc.chapter-ugc.textbox p.indent {
       margin-right: 5%;
       margin-left: 10%;
-      font-size: .9em;
+      font-size: 0.9em;
       font-style: italic;
     }
   }

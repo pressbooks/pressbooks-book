@@ -4,13 +4,13 @@
 
 /// Bottom padding for image captions.
 /// @type String
-$image-caption-padding-bottom: .5em !default;
+$image-caption-padding-bottom: 0.5em !default;
 /// Font stack for image captions.
 /// @type String
 $image-caption-font-family: $font-1 !default;
 /// Font size for image captions.
 /// @type String
-$image-caption-font-size: .8em !default;
+$image-caption-font-size: 0.8em !default;
 /// Font style for image captions.
 /// @type String
 $image-caption-font-style: normal !default;
@@ -28,10 +28,10 @@ $image-caption-text-align: left !default;
 $image-caption-text-transform: none !default;
 /// Top margin for image wrappers.
 /// @type String
-$image-wrapper-margin-top: .5em !default;
+$image-wrapper-margin-top: 0.5em !default;
 /// Bottom margin for image wrappers.
 /// @type String
-$image-wrapper-margin-bottom: .5em !default;
+$image-wrapper-margin-bottom: 0.5em !default;
 /// Right margin for left-aligned images.
 /// @type String
 $image-alignleft-margin-right: 1em !default;

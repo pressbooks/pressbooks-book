@@ -29,10 +29,7 @@ img {
   width: 80%;
   height: auto;
   max-width: 80%;
-  margin-top: $image-wrapper-margin-top;
-  margin-right: 10%;
-  margin-bottom: $image-wrapper-margin-bottom;
-  margin-left: 10%;
+  margin: $image-wrapper-margin-top 10% $image-wrapper-margin-bottom;
   text-align: center;
   page-break-inside: avoid !important;
 
@@ -68,7 +65,7 @@ img {
   // Align (Right) – width is 50%
   &.alignright {
     float: right;
-    width: 50% !important;;
+    width: 50% !important;
     max-width: 50%;
     padding-left: 0;
     margin-right: 0;
@@ -87,11 +84,13 @@ img {
   .wp-caption {
     text-align: center;
   }
+
   .wp-nocaption {
     text-align: center;
   }
+
   p.wp-caption-text {
-    font-size: .8em !important;
+    font-size: 0.8em !important;
     font-style: italic !important;
     margin-bottom: 1em !important;
     text-align: center !important;
@@ -107,7 +106,8 @@ img {
     margin-right: auto !important;
     text-align: center !important;
     page-break-inside: avoid !important;
-}
+  }
+
   div.wp-caption img,
   div.wp-nocaption img {
     width: auto;

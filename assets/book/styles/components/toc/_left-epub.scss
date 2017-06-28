@@ -31,12 +31,12 @@
   }
 
   li {
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
   }
 
   .front-matter,
   .back-matter {
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
   }
 
   .front-matter {
@@ -60,40 +60,44 @@
 
   .part .toc-chapter-title {
     @include toc-part-title;
+
     margin-top: $toc-block-margin-top;
     text-align: left;
   }
 
   .toc-chapter-title {
     @include toc-chapter-title;
+
     display: block;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   .chapter-author {
     @include toc-chapter-author;
+
     display: block;
     padding-left: 2em;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 
   .chapter-subtitle {
     @include toc-chapter-subtitle;
+
     display: block;
     padding-left: 2em;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 
   .chapter-subtitle + .chapter-author {
-    margin-top: -.5em;
-    margin-bottom: .5em;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
   }
 
   ul.sections {
-    padding-top: .5em;
-    padding-bottom: .5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     margin-left: 2em;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   .section {
