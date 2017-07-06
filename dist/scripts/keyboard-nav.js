@@ -1,1 +1,1 @@
-jQuery(document).ready(function(t){t(document).keydown(function(e){var n=!1;37==e.which?n=t(".previous a").attr("href"):39==e.which&&(n=t(".next a").attr("href")),n&&!t("textarea, input").is(":focus")&&(window.location=n)})});
+jQuery(document).ready(function(n){n(document).keydown(function(t){var a=!1;37==t.which?a=n(".nav-previous a").attr("href"):39==t.which&&(a=n(".nav-next a").attr("href")),a&&!n("textarea, input").is(":focus")&&(window.location=a)})});
