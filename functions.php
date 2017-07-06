@@ -315,7 +315,7 @@ function pressbooks_copyright_license() {
 	if ( false === $transient || true === $changed ) {
 
 		// get xml response from API
-		$response = \Pressbooks\Metadata::getLicenseXml( $license, $copyright_holder, $link, $title, $lang );
+		$response = \Pressbooks\Metadata\get_license_xml( $license, $copyright_holder, $link, $title, $lang );
 
 		try {
 			// convert to object
@@ -326,7 +326,7 @@ function pressbooks_copyright_license() {
 				throw new \Exception( 'Creative Commons license API not returning expected results at Pressbooks\Metadata::getLicenseXml' );
 			} else {
 				// process the response, return html
-				$html = \Pressbooks\Metadata::getWebLicenseHtml( $result->html );
+				$html = \Pressbooks\Metadata\get_web_license_html( $result->html );
 			}
 		} catch ( \Exception $e ) {
 			error_log( $e->getMessage() );
