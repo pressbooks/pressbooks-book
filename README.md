@@ -1,6 +1,6 @@
 # Pressbooks Book
 
-[![Travis](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book/) [![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
+[![Travis](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book/) [![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/vpre/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
 
 The default book theme for Pressbooks.
 
