@@ -274,9 +274,7 @@ function pressbooks_copyright_license() {
 	$post_meta = get_post_meta( $id );
 	$link = get_permalink( $id );
 	$html = $license = $copyright_holder = '';
-	$transient = get_transient( "license-inf-$id" );
-	$updated = [ $license, $copyright_holder, $title ];
-	$changed = false;
+	$transient_id = "license-inf-$id";
 	$lang = ( ! empty( $book_meta['pb_language'] ) ) ? $book_meta['pb_language'] : 'en' ;
 
 	// Copyright holder, set in order of precedence
@@ -303,9 +301,12 @@ function pressbooks_copyright_license() {
 		$license = $book_meta['pb_book_license'];
 	}
 
-	 // check if the user has changed anything
+	// check if the user has changed anything
+	$transient = get_transient( $transient_id );
+	$changed = false;
 	if ( is_array( $transient ) ) {
-		foreach ( $updated as $val ) {
+		$updated = [ $license, $copyright_holder, $title ];
+		foreach ( $updated as $key => $val ) {
 			if ( ! array_key_exists( $val, $transient ) ) {
 				$changed = true;
 			}
@@ -338,7 +339,7 @@ function pressbooks_copyright_license() {
 			$title => '',
 		];
 		// expires in 24 hours
-		set_transient( "license-inf-$id", $value, 86400 );
+		set_transient( $transient_id, $value, DAY_IN_SECONDS );
 	} else {
 		$html = $transient[ $license ] ;
 	}
