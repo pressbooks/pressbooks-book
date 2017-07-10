@@ -1,46 +1,51 @@
 language: php
-
 notifications:
   email:
     on_success: never
     on_failure: change
-
 branches:
   only:
   - dev
-
+  - "/\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
 php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - nightly
-
+- 5.6
+- 7.0
+- 7.1
+- nightly
 env:
-  - TRAVIS_NODE_VERSION="6"
-  - TRAVIS_NODE_VERSION="7"
-
+- TRAVIS_NODE_VERSION="6"
+- TRAVIS_NODE_VERSION="7"
 matrix:
   fast_finish: true
   allow_failures:
   - php: nightly
-
 cache:
   apt: true
   directories:
-    - $HOME/.composer/cache
-    - node_modules
-    - vendor
-
+  - "$HOME/.composer/cache"
+  - node_modules
+  - vendor
 before_install:
-  - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
-
+- source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
 install:
-  - node -v
-  - npm install -g yarn
-  - yarn
-  - composer install
-
+- node -v
+- npm install -g yarn
+- yarn
+- composer install
 script:
-  - yarn run lint
-  - yarn run production
-  - composer test
+- yarn run lint
+- yarn run production
+- composer test
+before_deploy:
+- composer install --no-dev
+- zip -9 -ry pressbooks-book-$TRAVIS_TAG.zip ../pressbooks-book
+  -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
+  *.github* *.gitignore* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
+deploy:
+  provider: releases
+  api_key:
+    secure: XdchVIQYOB87JkkIdkIfhQUeU6jkATDaAf2MypPNoiSJKmShVyWRxXehl0b8ieZqz8WP0wciZhDXfRSufbBIxeNy+nXh7dSn0L3BMOv7Up+/lYTmBIQUtXJM6UJV1CBALgcmO4K0vFVnUQzEi1TbTQK62QUgfTJ1sQBAKB7Eg7WMhgn3sSVhV0pADRJshsOTsuVMiZ3DuDnWQ3RzGjC0deIlKCr/GO4+R6W5giR7+05WPZOB9o/+ugD2ZbeblBJIk8kt6ZcyQBbhGv1cCEoSPsyXg4B7vA15jZdabDFkMu0ebbnpxgMWCuh2PReoc7jaefyR5/c+Le5mSelFkY/wEB92VBO2TcjgEzXbf5cx7AxWaI9AFyDf7XUrqept/0xXdmpyOzgg6J6SNcOoc9rs6P24q2RGYUCTUGcynd+wTzlsWWpL1pi/ZG2A3mvHaPfCltvyGgXxTBWCI3mTClEebu+rg0GED1LDGKlwlop4wFVvX+5KzBfuo5buULIouud1deav63xBq9Td7HGcAH9N3zwEOaNjTDCc/cw9ZgzjTcOC4sbyLLeFJ6xHpONd7HtvstibSlu5aHuDd6hRD3Kgzs11JUzXMwgo3jiCWTfAZ25lDisEVmIqYS+Ea8lyCoY+BLfDcPlEeyhOtlXfRT4n2xtGPWZmgbndvtOMXDXuDds=
+  file: "pressbooks-book-$TRAVIS_TAG.zip"
+  on:
+    tags: true
+    repo: pressbooks/pressbooks-book
