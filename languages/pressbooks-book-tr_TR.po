@@ -1,0 +1,297 @@
+# Copyright (C) 2017 pressbooks-book
+# This file is distributed under the same license as the pressbooks-book package.
+# Translators:
+# Antonio Devís <colomet@hotmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: pressbooks-book\n"
+"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2017\n"
+"Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../comments.php:3
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Bu gönderi şifreyle korunmaktadır. Yorumları görebilmek için şifreyi "
+"giriniz."
+
+#: ../comments.php29, ../comments.php:40
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> Önceki yorumlar"
+
+#: ../comments.php30, ../comments.php:41
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Yeni yorumlar <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../comments.php:48
+msgid "Comments are closed."
+msgstr "Yorumlar kapalıdır."
+
+#: ../comments.php:56
+msgid "Submit"
+msgstr "Giriş yap"
+
+#: ../content-accessibility-toolbar.php:3
+msgid "Toggle Font size"
+msgstr "Yazı tipi boyutunu değiştir"
+
+#: ../content-none.php:2
+msgid "Nothing Found"
+msgstr "Hiçbir şey bulunamadı."
+
+#: ../content-none.php:3
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Üzgünüz, fakat hiçbir şey arama terimleriniz ile eşleşmedi. Lütfen farklı "
+"anahtar kelimeler kullanarak tekrar deneyiniz."
+
+#: ../content-social-footer.php:4
+msgid "I wanted to share this post with you from"
+msgstr "Bu yazıyı sizinle paylaşmak istedim"
+
+#: ../content-social-footer.php:5
+msgid "Email to a friend"
+msgstr "Bir arkadaşa e-posta gönder"
+
+#: ../content-social-footer.php:5
+msgid "Share via Email"
+msgstr "E-posta ile paylaş"
+
+#: ../footer.php:23
+msgid "Book Name"
+msgstr "Kitap İsmi"
+
+#: ../footer.php:38
+msgid "Copyright"
+msgstr "Telif hakkı"
+
+#: ../footer.php:41
+msgid "by"
+msgstr "ile"
+
+#: ../footer.php:51
+msgid "Simple Book Production"
+msgstr "Basit Kitap Üretimi"
+
+#: ../functions.php:19
+msgid "Author"
+msgstr "Yazar"
+
+#: ../functions.php:20
+msgid "Contributing Author"
+msgstr "Katkıda Bulunan Yazar"
+
+#: ../functions.php:21
+msgid "Publisher"
+msgstr "Yayınevi"
+
+#: ../functions.php:22
+msgid "Print ISBN"
+msgstr "ISBN'yi yazdır."
+
+#: ../functions.php:23
+msgid "Keywords/Tags"
+msgstr "Anahtar kelimeler/Etiketler"
+
+#: ../functions.php:24
+msgid "Publication Date"
+msgstr "Yayın Tarihi"
+
+#: ../functions.php:25
+msgid "Hashtag"
+msgstr "Hashtag"
+
+#: ../functions.php:26
+msgid "Ebook ISBN"
+msgstr "E-kitap ISBN"
+
+#: ../functions.php:191
+msgid "Previous"
+msgstr "Önceki"
+
+#: ../functions.php:194
+msgid "Next"
+msgstr "Sonraki"
+
+#: ../functions.php:231
+msgid "%s on"
+msgstr "%s üstte"
+
+#: ../functions.php:231
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php231, ../functions.php:251
+msgid "(Edit)"
+msgstr "(Editle)"
+
+#: ../functions.php:234
+msgid "Your comment is awaiting moderation."
+msgstr "Yorumunuz onay bekliyor."
+
+#: ../functions.php:251
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../functions.php406, ../page-cover-private-block.php:2
+msgid "Make your own books on Pressbooks"
+msgstr "Pressbooks'da kendi kitaplarınızı yapın"
+
+#: ../header.php:32
+msgid "Page %s"
+msgstr "Sayfa %s"
+
+#: ../header.php87, ../page-cover-top-block.php:63
+msgid "Buy"
+msgstr "Satın al"
+
+#: ../index.php13, ../page-cover-third-block.php4, ../sidebar.php:16
+msgid "Table of Contents"
+msgstr "İçindekiler"
+
+#: ../page-about.php:5
+msgid "About The Book"
+msgstr "Kitap Hakkında"
+
+#: ../page-about.php21, ../page-buy.php9, ../page-buy.php:17
+msgid "It's coming!"
+msgstr "Yakında!"
+
+#: ../page-authors.php:26
+msgid "Authors"
+msgstr "Yazarlar"
+
+#: ../page-buy.php:4
+msgid "Buy the Book"
+msgstr "Kitabı satın al"
+
+#: ../page-buy.php:19
+msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
+msgstr ""
+"Ürününü <a href=\"%1$s\">%2$s</a> aşağıdaki bağlantılara tıklayarak satın "
+"alabilirsiniz:"
+
+#: ../page-buy.php:23
+msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
+msgstr "Satın al <a href=\"%1$s\">amazon.com</a>"
+
+#: ../page-buy.php:27
+msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
+msgstr "Satın al  <a href=\"%1$s\">oreilly.com</a>"
+
+#: ../page-buy.php:31
+msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
+msgstr "Satın al   <a href=\"%1$s\">barnesandnoble.com</a>"
+
+#: ../page-buy.php:35
+msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
+msgstr " Satın al  <a href=\"%1$s\">kobobooks.com</a>"
+
+#: ../page-buy.php:39
+msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
+msgstr "Satın al <a href=\"%1$s\">apple.com</a>"
+
+#: ../page-buy.php:43
+msgid "Elsewhere"
+msgstr "Başka bir yerde"
+
+#: ../page-buy.php:43
+msgid "Purchase here:"
+msgstr "Buradan satın al:"
+
+#: ../page-cover-fourth-block.php:21
+msgid "Other books"
+msgstr "Diğer kitaplar"
+
+#: ../page-cover-second-block.php:5
+msgid "Book Description"
+msgstr "Kitap Tanımı"
+
+#: ../page-cover-second-block.php15, ../page-cover-second-block.php16,
+#: ../page-cover-second-block.php:17
+msgid "Check out this great book on Pressbooks."
+msgstr "Pressbooks'daki bu harika kitaba göz atın."
+
+#: ../page-cover-second-block.php:15
+msgid "Tweet"
+msgstr "Tweet"
+
+#: ../page-cover-second-block.php:16
+msgid "Like"
+msgstr "Beğen"
+
+#: ../page-cover-second-block.php:17
+msgid "+1"
+msgstr "+1"
+
+#: ../page-cover-top-block.php:8
+msgid "login"
+msgstr "giriş yap"
+
+#: ../page-cover-top-block.php:10
+msgid "logout"
+msgstr "Çıkış Yap"
+
+#: ../page-cover-top-block.php12, ../sidebar.php:10
+msgid "Admin"
+msgstr "Yönetici"
+
+#: ../page-cover-top-block.php:59
+msgid "Read"
+msgstr "Oku"
+
+#: ../page-cover-top-block.php:82
+msgid "Download in the following formats:"
+msgstr "Aşağıdaki formatlarda indirin:"
+
+#: ../page.php12, ../single.php:5
+msgid "Edit"
+msgstr "Editle"
+
+#: ../page.php:14
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: ../private.php:4
+msgid "Access Denied"
+msgstr "Erişim Reddedildi"
+
+#: ../private.php:8
+msgid ""
+"This book is private, and accessible only to registered users. If you have "
+"an account you can %s."
+msgstr ""
+"Bu kitap gizlidir, yalnızca kayıtlı kullanıcılar tarafından erişilebilir. "
+"Hesabınız varsa%s"
+
+#: ../private.php:12
+msgid "login here"
+msgstr "buradan giriş yapın"
+
+#: ../private.php:16
+msgid "You can also set up your own Pressbooks book at %s."
+msgstr "Kendi Pressbooks kitabınızı şu adresten de kurabilirsiniz %s"
+
+#: ../search.php:5
+msgid "Search Results for: %s"
+msgstr "Şunun için Sonuç ara: %s"
+
+#: ../sidebar.php:13
+msgid "Home"
+msgstr "Ana sayfa"
+
+#: ../sidebar.php:23
+msgid "Close"
+msgstr "Kapat"

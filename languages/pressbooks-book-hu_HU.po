@@ -1,0 +1,286 @@
+# Copyright (C) 2017 pressbooks-book
+# This file is distributed under the same license as the pressbooks-book package.
+msgid ""
+msgstr ""
+"Project-Id-Version: pressbooks-book\n"
+"Language-Team: Hungarian (Hungary) (https://www.transifex.com/pressbooks/teams/9194/hu_HU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../comments.php:3
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../comments.php29, ../comments.php:40
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: ../comments.php30, ../comments.php:41
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../comments.php:48
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:56
+msgid "Submit"
+msgstr ""
+
+#: ../content-accessibility-toolbar.php:3
+msgid "Toggle Font size"
+msgstr ""
+
+#: ../content-none.php:2
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:3
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-social-footer.php:4
+msgid "I wanted to share this post with you from"
+msgstr ""
+
+#: ../content-social-footer.php:5
+msgid "Email to a friend"
+msgstr ""
+
+#: ../content-social-footer.php:5
+msgid "Share via Email"
+msgstr ""
+
+#: ../footer.php:23
+msgid "Book Name"
+msgstr ""
+
+#: ../footer.php:38
+msgid "Copyright"
+msgstr ""
+
+#: ../footer.php:41
+msgid "by"
+msgstr ""
+
+#: ../footer.php:51
+msgid "Simple Book Production"
+msgstr ""
+
+#: ../functions.php:19
+msgid "Author"
+msgstr ""
+
+#: ../functions.php:20
+msgid "Contributing Author"
+msgstr ""
+
+#: ../functions.php:21
+msgid "Publisher"
+msgstr ""
+
+#: ../functions.php:22
+msgid "Print ISBN"
+msgstr ""
+
+#: ../functions.php:23
+msgid "Keywords/Tags"
+msgstr ""
+
+#: ../functions.php:24
+msgid "Publication Date"
+msgstr ""
+
+#: ../functions.php:25
+msgid "Hashtag"
+msgstr ""
+
+#: ../functions.php:26
+msgid "Ebook ISBN"
+msgstr ""
+
+#: ../functions.php:191
+msgid "Previous"
+msgstr ""
+
+#: ../functions.php:194
+msgid "Next"
+msgstr ""
+
+#: ../functions.php:231
+msgid "%s on"
+msgstr ""
+
+#: ../functions.php:231
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php231, ../functions.php:251
+msgid "(Edit)"
+msgstr ""
+
+#: ../functions.php:234
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:251
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php406, ../page-cover-private-block.php:2
+msgid "Make your own books on Pressbooks"
+msgstr ""
+
+#: ../header.php:32
+msgid "Page %s"
+msgstr ""
+
+#: ../header.php87, ../page-cover-top-block.php:63
+msgid "Buy"
+msgstr ""
+
+#: ../index.php13, ../page-cover-third-block.php4, ../sidebar.php:16
+msgid "Table of Contents"
+msgstr ""
+
+#: ../page-about.php:5
+msgid "About The Book"
+msgstr ""
+
+#: ../page-about.php21, ../page-buy.php9, ../page-buy.php:17
+msgid "It's coming!"
+msgstr ""
+
+#: ../page-authors.php:26
+msgid "Authors"
+msgstr ""
+
+#: ../page-buy.php:4
+msgid "Buy the Book"
+msgstr ""
+
+#: ../page-buy.php:19
+msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
+msgstr ""
+
+#: ../page-buy.php:23
+msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
+msgstr ""
+
+#: ../page-buy.php:27
+msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
+msgstr ""
+
+#: ../page-buy.php:31
+msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
+msgstr ""
+
+#: ../page-buy.php:35
+msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
+msgstr ""
+
+#: ../page-buy.php:39
+msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
+msgstr ""
+
+#: ../page-buy.php:43
+msgid "Elsewhere"
+msgstr ""
+
+#: ../page-buy.php:43
+msgid "Purchase here:"
+msgstr ""
+
+#: ../page-cover-fourth-block.php:21
+msgid "Other books"
+msgstr ""
+
+#: ../page-cover-second-block.php:5
+msgid "Book Description"
+msgstr ""
+
+#: ../page-cover-second-block.php15, ../page-cover-second-block.php16,
+#: ../page-cover-second-block.php:17
+msgid "Check out this great book on Pressbooks."
+msgstr ""
+
+#: ../page-cover-second-block.php:15
+msgid "Tweet"
+msgstr ""
+
+#: ../page-cover-second-block.php:16
+msgid "Like"
+msgstr ""
+
+#: ../page-cover-second-block.php:17
+msgid "+1"
+msgstr ""
+
+#: ../page-cover-top-block.php:8
+msgid "login"
+msgstr ""
+
+#: ../page-cover-top-block.php:10
+msgid "logout"
+msgstr ""
+
+#: ../page-cover-top-block.php12, ../sidebar.php:10
+msgid "Admin"
+msgstr ""
+
+#: ../page-cover-top-block.php:59
+msgid "Read"
+msgstr ""
+
+#: ../page-cover-top-block.php:82
+msgid "Download in the following formats:"
+msgstr ""
+
+#: ../page.php12, ../single.php:5
+msgid "Edit"
+msgstr ""
+
+#: ../page.php:14
+msgid "Pages:"
+msgstr ""
+
+#: ../private.php:4
+msgid "Access Denied"
+msgstr ""
+
+#: ../private.php:8
+msgid ""
+"This book is private, and accessible only to registered users. If you have "
+"an account you can %s."
+msgstr ""
+
+#: ../private.php:12
+msgid "login here"
+msgstr ""
+
+#: ../private.php:16
+msgid "You can also set up your own Pressbooks book at %s."
+msgstr ""
+
+#: ../search.php:5
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../sidebar.php:13
+msgid "Home"
+msgstr ""
+
+#: ../sidebar.php:23
+msgid "Close"
+msgstr ""
