@@ -92,6 +92,9 @@ function pb_enqueue_scripts() {
 			if ( ! is_file( $fullpath ) ) {
 				\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
 			}
+			if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
+				wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', false, null, 'screen, print' );
+			}
 			wp_enqueue_style( 'pressbooks/theme', \Pressbooks\Container::get( 'Sass' )->urlToUserGeneratedCss() . '/style.css', false, null, 'screen, print' );
 		} else {
 			wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
