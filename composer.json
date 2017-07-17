@@ -10,7 +10,7 @@
         "humanmade/coding-standards": "^0.2.1"
     },
     "archive": {
-        "exclude": [".github", ".tx"]
+        "exclude": [".github", ".tx", "bin"]
     },
     "license": "GPL-2.0+",
     "authors": [
