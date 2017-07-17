@@ -37,9 +37,11 @@ script:
 - composer test
 before_deploy:
 - composer install --no-dev
-- zip -9 -ry pressbooks-book-$TRAVIS_TAG.zip ../pressbooks-book
+- cd ../
+- zip -9 -ry pressbooks-book-$TRAVIS_TAG.zip pressbooks-book
   -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
   *.github* *.gitignore* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
+- mv pressbooks-book-$TRAVIS_TAG.zip pressbooks-book/pressbooks-book-$TRAVIS_TAG.zip
 deploy:
   provider: releases
   api_key:
