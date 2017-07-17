@@ -447,3 +447,9 @@ function pb_social_media_enabled() {
 	}
 	return false;
 }
+
+function pressbooks_book_setup() {
+	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
+}
+
+add_action( 'after_setup_theme', 'pressbooks_book_setup' );
