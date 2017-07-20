@@ -36,12 +36,13 @@ script:
 - yarn run production
 - composer test
 before_deploy:
+- export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
 - composer install --no-dev
 - cd ../
-- zip -9 -ry pressbooks-book-$TRAVIS_TAG.zip pressbooks-book
+- zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
   -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
   *.github* *.gitignore* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
-- mv pressbooks-book-$TRAVIS_TAG.zip pressbooks-book/pressbooks-book-$TRAVIS_TAG.zip
+- cd $TRAVIS_BUILD_DIR
 deploy:
   provider: releases
   api_key:
