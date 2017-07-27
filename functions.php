@@ -257,94 +257,40 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
  * Copyright License
  * ------------------------------------------------------------------------ */
 
+/**
+ * @return string
+ */
 function pressbooks_copyright_license() {
-
 	$option = get_option( 'pressbooks_theme_options_global' );
-	$book_meta = \Pressbooks\Book::getBookInformation();
-
-	// if they don't want to see it, return
-	// at minimum we need book copyright information set
-	if ( isset( $option['copyright_license'] ) && false === (bool) $option['copyright_license'] || ! isset( $option['copyright_license'] ) || ! isset( $book_meta['pb_book_license'] ) ) {
-		return '';
+	if ( ! empty( $option['copyright_license'] ) ) {
+		$licensing = new \Pressbooks\Licensing();
+		if ( 1 === absint( $option['copyright_license'] ) ) {
+			return _do_license( $licensing );
+		} elseif ( 2 === absint( $option['copyright_license'] ) ) {
+			return _do_license( $licensing );
+		}
 	}
+	return '';
+}
+
+/**
+ * @param \Pressbooks\Licensing $licensing
+ *
+ * @return string
+ */
+function _do_license( $licensing ) {
 
 	global $post;
 	$id = $post->ID;
-	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title ;
-	$post_meta = get_post_meta( $id );
-	$link = get_permalink( $id );
-	$html = $license = $copyright_holder = '';
-	$transient_id = "license-inf-$id";
-	$lang = ( ! empty( $book_meta['pb_language'] ) ) ? $book_meta['pb_language'] : 'en' ;
+	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
+	$section_author = get_post_meta( $id, 'pb_section_author', true );
 
-	// Copyright holder, set in order of precedence
-	if ( isset( $post_meta['pb_section_author'] ) ) {
-		// section author overrides book author, copyrightholder
-		$copyright_holder = $post_meta['pb_section_author'][0] ;
-
-	} elseif ( isset( $book_meta['pb_copyright_holder'] ) ) {
-		// book copyright holder overrides book author
-		$copyright_holder = $book_meta['pb_copyright_holder'];
-
-	} elseif ( isset( $book_meta['pb_author'] ) ) {
-		// book author is the fallback, default
-		$copyright_holder = $book_meta['pb_author'];
+	try {
+		return $licensing->doLicense( \Pressbooks\Book::getBookInformation(), $id, $title, $section_author );
+	} catch ( \Exception $e ) {
+		error_log( $e->getMessage() );
 	}
-
-	// Copyright license, set in order of precedence
-	if ( isset( $post_meta['pb_section_license'] ) ) {
-		// section copyright overrides book
-		$license = $post_meta['pb_section_license'][0];
-
-	} elseif ( isset( $book_meta['pb_book_license'] ) ) {
-		// book is the fallback, default
-		$license = $book_meta['pb_book_license'];
-	}
-
-	// check if the user has changed anything
-	$transient = get_transient( $transient_id );
-	$changed = false;
-	if ( is_array( $transient ) ) {
-		$updated = [ $license, $copyright_holder, $title ];
-		foreach ( $updated as $key => $val ) {
-			if ( ! array_key_exists( $val, $transient ) ) {
-				$changed = true;
-			}
-		}
-	}
-	// if the cache has expired, or the user changed the license
-	if ( false === $transient || true === $changed ) {
-
-		// get xml response from API
-		$response = \Pressbooks\Metadata\get_license_xml( $license, $copyright_holder, $link, $title, $lang );
-
-		try {
-			// convert to object
-			$result = simplexml_load_string( $response );
-
-			// evaluate it for errors
-			if ( ! false === $result || ! isset( $result->html ) ) {
-				throw new \Exception( 'Creative Commons license API not returning expected results at Pressbooks\Metadata::getLicenseXml' );
-			} else {
-				// process the response, return html
-				$html = \Pressbooks\Metadata\get_web_license_html( $result->html );
-			}
-		} catch ( \Exception $e ) {
-			error_log( $e->getMessage() );
-		}
-		// store it with the license as a key
-		$value = [
-			$license => $html,
-			$copyright_holder => '',
-			$title => '',
-		];
-		// expires in 24 hours
-		set_transient( $transient_id, $value, DAY_IN_SECONDS );
-	} else {
-		$html = $transient[ $license ] ;
-	}
-
-	return $html;
+	return '';
 }
 
 /* ------------------------------------------------------------------------ *
