@@ -283,10 +283,9 @@ function _do_license( $licensing ) {
 	global $post;
 	$id = $post->ID;
 	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
-	$section_author = get_post_meta( $id, 'pb_section_author', true );
 
 	try {
-		return $licensing->doLicense( \Pressbooks\Book::getBookInformation(), $id, $title, $section_author );
+		return $licensing->doLicense( \Pressbooks\Book::getBookInformation(), $id, $title );
 	} catch ( \Exception $e ) {
 		error_log( $e->getMessage() );
 	}
