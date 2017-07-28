@@ -261,30 +261,20 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
  * @return string
  */
 function pressbooks_copyright_license() {
-	$option = get_option( 'pressbooks_theme_options_global' );
-	if ( ! empty( $option['copyright_license'] ) ) {
-		$licensing = new \Pressbooks\Licensing();
-		if ( 1 === absint( $option['copyright_license'] ) ) {
-			return _do_license( $licensing );
-		} elseif ( 2 === absint( $option['copyright_license'] ) ) {
-			return _do_license( $licensing );
-		}
-	}
-	return '';
+	return _do_license();
 }
 
 /**
- * @param \Pressbooks\Licensing $licensing
- *
  * @return string
  */
-function _do_license( $licensing ) {
+function _do_license() {
 
 	global $post;
 	$id = $post->ID;
 	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
 
 	try {
+		$licensing = new \Pressbooks\Licensing();
 		return $licensing->doLicense( \Pressbooks\Book::getBookInformation(), $id, $title );
 	} catch ( \Exception $e ) {
 		error_log( $e->getMessage() );
