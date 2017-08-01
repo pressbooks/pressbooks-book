@@ -1,0 +1,15 @@
+// 'Noto Sans Gurmukhi', @import 'NotoSansGurmukhiFont'
+
+@font-face {
+  font-family: 'Noto Sans Gurmukhi';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NotoSansGurmukhi-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Gurmukhi';
+  src: url('fonts/NotoSansGurmukhi-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
