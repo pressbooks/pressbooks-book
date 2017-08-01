@@ -264,13 +264,20 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
  * @return string
  */
 function pressbooks_copyright_license() {
-	return _do_license();
+	$metadata = \Pressbooks\Book::getBookInformation();
+	$html = _do_license( $metadata );
+	if ( ! empty( $metadata['pb_custom_copyright'] ) ) {
+		$html .= '<div class="license-attribution">' . $metadata['pb_custom_copyright'] . '</div>';
+	}
+	return $html;
 }
 
 /**
+ * @param array $metadata
+ *
  * @return string
  */
-function _do_license() {
+function _do_license( $metadata ) {
 
 	global $post;
 	$id = $post->ID;
@@ -278,7 +285,7 @@ function _do_license() {
 
 	try {
 		$licensing = new \Pressbooks\Licensing();
-		return $licensing->doLicense( \Pressbooks\Book::getBookInformation(), $id, $title );
+		return $licensing->doLicense( $metadata, $id, $title );
 	} catch ( \Exception $e ) {
 		error_log( $e->getMessage() );
 	}
