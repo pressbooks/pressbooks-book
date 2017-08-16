@@ -38,3 +38,9 @@ div.index {
     padding-left: $index-sub-entry-padding-left;
   }
 }
+
+// License
+.back-matter .license-attribution {
+  text-align: $section-license-align;
+  margin-top: $section-license-margin-top;
+}

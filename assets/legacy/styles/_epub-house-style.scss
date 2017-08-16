@@ -268,3 +268,13 @@ div.sidebar {
 .clear {
   clear: both;
 }
+
+// Section Licenses
+.front-matter,
+.chapter,
+.back-matter {
+  .license-attribution {
+    text-align: left;
+    margin-top: 2em;
+  }
+}

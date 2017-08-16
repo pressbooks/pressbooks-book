@@ -66,6 +66,12 @@ div.epigraph {
   }
 }
 
+// License
+.front-matter .license-attribution {
+  text-align: $section-license-align;
+  margin-top: $section-license-margin-top;
+}
+
 @if $type == 'epub' {
   @media amzn-mobi {
     #copyright-page {
