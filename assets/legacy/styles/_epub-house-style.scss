@@ -273,8 +273,10 @@ div.sidebar {
 .front-matter,
 .chapter,
 .back-matter {
-  .license-attribution {
-    text-align: left;
+  .license-attribution > p {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
     margin-top: 2em;
   }
 }
