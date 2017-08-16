@@ -8,3 +8,9 @@
 .numberless .chapter-number {
   display: none;
 }
+
+// License
+.chapter .license-attribution {
+  text-align: $section-license-align;
+  margin-top: $section-license-margin-top;
+}
