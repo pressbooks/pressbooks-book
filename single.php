@@ -43,6 +43,11 @@
 							$content = apply_filters( 'the_content', get_the_content() );
 							echo $content;
 						}
+						global $multipage;
+						if ( $multipage ) {
+							$args = [ 'before' => '<p class="pb-nextpage">' . __( 'Continue reading:', 'pressbooks' ) ];
+							wp_link_pages( $args );
+						}
 } else {
 	echo apply_filters( 'the_content', $post->post_content );
 } ?>
