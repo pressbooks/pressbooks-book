@@ -55,6 +55,15 @@ Version:  2.0
     margin-bottom: 1em !important;
     text-align: center !important;
   }
+
+  .chapter,
+  .front-matter,
+  .back-matter {
+    .license-attribution img {
+      width: 88px !important;
+      height: 31px !important;
+    }
+  }
 }
 
 /* toc page styling */

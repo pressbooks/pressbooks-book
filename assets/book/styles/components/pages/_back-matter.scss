@@ -53,3 +53,12 @@ div.index {
     margin-bottom: $section-license-image-margin-bottom;
   }
 }
+
+@if $type == 'epub' {
+  @media amzn-mobi {
+    .back-matter .license-attribution img {
+      width: $section-license-image-width !important;
+      height: $section-license-image-height !important;
+    }
+  }
+}

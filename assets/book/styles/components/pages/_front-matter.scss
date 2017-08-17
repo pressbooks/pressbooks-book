@@ -83,6 +83,15 @@ div.epigraph {
 
 @if $type == 'epub' {
   @media amzn-mobi {
+    .front-matter .license-attribution img {
+      width: $section-license-image-width !important;
+      height: $section-license-image-height !important;
+    }
+  }
+}
+
+@if $type == 'epub' {
+  @media amzn-mobi {
     #copyright-page {
       margin: 10%;
       font-family: normal;
