@@ -1373,6 +1373,7 @@ div.sidebar p + p {
     font-size: 0.8em;
     font-style: italic;
     margin-top: 2em;
+    page-break-inside: avoid;
   }
 
   .license-attribution img {

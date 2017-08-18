@@ -47,6 +47,7 @@ div.index {
     font-size: $section-license-font-size;
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;
+    page-break-inside: avoid;
   }
 
   img {
