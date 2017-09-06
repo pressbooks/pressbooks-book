@@ -7,8 +7,8 @@ The default book theme for Pressbooks.
 ## Requirements
 
 * PHP >= 5.6
-* WordPress >= 4.8.0
-* Pressbooks >= 4.0.0
+* WordPress >= 4.8.1
+* Pressbooks >= 4.2.0
 
 ## Installation
 
