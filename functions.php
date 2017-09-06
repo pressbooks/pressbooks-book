@@ -265,10 +265,29 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
  */
 function pressbooks_copyright_license() {
 	$metadata = \Pressbooks\Book::getBookInformation();
-	$html = _do_license( $metadata );
+
+	if ( empty( $metadata['pb_book_license'] ) ) {
+		$all_rights_reserved = true;
+	} elseif ( $metadata['pb_book_license'] === 'all-rights-reserved' ) {
+		$all_rights_reserved = true;
+	} else {
+		$all_rights_reserved = false;
+	}
 	if ( ! empty( $metadata['pb_custom_copyright'] ) ) {
+		$has_custom_copyright = true;
+	} else {
+		$has_custom_copyright = false;
+	}
+
+	// Custom Copyright must override All Rights Reserved
+	$html = '';
+	if ( ! $has_custom_copyright || ( $has_custom_copyright && ! $all_rights_reserved ) ) {
+		$html .= _do_license( $metadata );
+	}
+	if ( $has_custom_copyright ) {
 		$html .= '<div class="license-attribution">' . $metadata['pb_custom_copyright'] . '</div>';
 	}
+
 	return $html;
 }
 
