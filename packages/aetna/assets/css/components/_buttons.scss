@@ -1,0 +1,53 @@
+.button {
+  display: inline-block;
+  width: rem(250);
+  height: rem(60);
+  padding: rem(19);
+  border: 2px solid var(--primary, $brand-primary);
+  border-radius: 3px;
+  background: var(--primary, $brand-primary);
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-fg, $white);
+  line-height: normal;
+  letter-spacing: rem(2);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    color: var(--primary, $brand-primary);
+  }
+
+  &.button--small {
+    width: rem(150);
+    height: rem(40);
+    padding: rem(6.5);
+  }
+
+  &.button--wide {
+    width: 19.0625rem;
+  }
+
+  &.button--outline {
+    background: $white;
+    color: var(--primary, $brand-primary);
+
+    &:hover,
+    &:focus {
+      color: var(--primary-fg, $white);
+      background: var(--primary, $brand-primary);
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .button {
+    width: 275px;
+  }
+}
