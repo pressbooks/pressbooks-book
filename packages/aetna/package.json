@@ -1,0 +1,29 @@
+{
+  "name": "@pressbooks/styleguide",
+  "version": "0.1.0",
+  "description": "Front-end style guide and pattern library for Pressbooks projects.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "npm run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "laravel-mix": "^1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pressbooks/styleguide.git"
+  },
+  "keywords": [
+    "styleguide",
+    "pattern-library"
+  ],
+  "author": "Pressbooks <code@pressbooks.com> (Book Oven Inc.)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pressbooks/styleguide/issues"
+  },
+  "homepage": "https://github.com/pressbooks/styleguide#readme"
+}
