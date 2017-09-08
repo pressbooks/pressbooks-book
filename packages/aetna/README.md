@@ -8,4 +8,4 @@ Front-end style guide and pattern library for Pressbooks projects.
 <button class="button button--outline">Outline</button>
 
 <button class="button button--small">Small</button>
-<button class="button button--small button--outline">Small + Outline</button>
+<button class="button button--small button--outline">Outline</button>
