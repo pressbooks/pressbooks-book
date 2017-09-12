@@ -33,8 +33,8 @@
 					<?php endif; ?>
 
 
-				<?php if ( ! empty( $metadata['pb_about_140'] ) ) : ?>
-					<p class="sub-title"><?php echo $metadata['pb_about_140']; ?></p>
+				<?php if ( ! empty( $metadata['pb_subtitle'] ) ) : ?>
+					<p class="sub-title"><?php echo $metadata['pb_subtitle']; ?></p>
 					<span class="detail"></span>
 				<?php endif; ?>
 
