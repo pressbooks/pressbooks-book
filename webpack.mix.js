@@ -11,6 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
+const dist = 'dist';
+
 mix.setPublicPath('dist')
 	.scripts('assets/scripts/a11y.js','dist/scripts/a11y.js')
 	.scripts(['node_modules/jquery-columnizer/src/jquery.columnizer.js', 'assets/scripts/columnizer-load.js'], 'dist/scripts/columnizer.js')
@@ -18,6 +20,7 @@ mix.setPublicPath('dist')
 	.scripts('node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js')
 	.scripts('assets/scripts/toc.js','dist/scripts/toc.js')
 	.sass('assets/styles/a11y.scss', 'dist/styles')
+	.sass('assets/styles/cover.scss', 'dist/styles')
   .sass('assets/styles/book-info.scss', 'dist/styles')
   .sass('assets/styles/structure.scss', 'dist/styles')
 	.copyDirectory('assets/fonts', 'dist/fonts')
@@ -26,6 +29,19 @@ mix.setPublicPath('dist')
   .options({
     processCssUrls: false
   });
+
+	// BrowserSync
+	mix.browserSync({
+	  host: 'localhost',
+	  proxy: 'http://pressbooks.dev/standardtest',
+	  port: 3000,
+	  files: [
+	    `*.php`,
+	    ``,
+	    `${dist}/**/*.css`,
+	    `${dist}/**/*.js`,
+	  ],
+	});
 
 // Full API
 // mix.js(src, output);

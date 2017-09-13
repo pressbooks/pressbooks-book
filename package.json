@@ -6,7 +6,10 @@
   "engines": {
     "node": ">= 6.9.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0"
+  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "cross-env": "^5.0.5",
@@ -26,11 +29,14 @@
     "stylelint-webpack-plugin": "^0.7.1"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "node_modules/stylelint/bin/stylelint.js '**/*.scss' --syntax scss"
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "rmdist": "rimraf dist",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint:scripts": "eslint \"assets/scripts\"",
+    "lint:styles": "stylelint \"assets/styles/**/*.scss\"",
+    "test": "npm run -s lint"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",

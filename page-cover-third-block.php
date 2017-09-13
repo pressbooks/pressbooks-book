@@ -1,105 +1,45 @@
-<?php global $blog_id; ?>
-			<section class="third-block-wrap">
-				<div class="third-block clearfix">
-				<h2><?php _e( 'Table of Contents', 'pressbooks-book' ); ?></h2>
-				<?php $book = pb_get_book_structure(); ?>
-					<ul class="table-of-content" id="table-of-content">
-						<li>
-							<ul class="front-matter">
-								<?php foreach ( $book['front-matter'] as $fm ) : ?>
-								<?php if ( $fm['post_status'] !== 'publish' ) {
-									if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
-										if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
-											if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) { continue; // Skip
-											}
-										} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
-											 continue; // Skip
-										}
-									}
-} ?>
-								<li class="front-matter <?php echo pb_get_section_type( get_post( $fm['ID'] ) ) ?>"><a href="<?php echo get_permalink( $fm['ID'] ); ?>"><?php echo pb_strip_br( $fm['post_title'] );?></a>
-					<?php if ( pb_should_parse_subsections() ) {
-						$sections = pb_get_subsections( $fm['ID'] );
-						if ( $sections ) {
-							  $s = 1; ?>
-							  <ul class="sections">
-								<?php foreach ( $sections as $id => $name ) { ?>
-						  <li class="section"><a href="<?php echo get_permalink( $fm['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-						<?php } ?>
-							  </ul>
-							<?php }
-} ?>
-									</li>
-								<?php endforeach; ?>
-							</ul>
-						</li>
-							<?php foreach ( $book['part'] as $part ) :?>
-							<li><h4><?php if ( count( $book['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
-							<?php if ( $part['has_post_content'] ) { ?><a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php } ?>
-							<?php echo $part['post_title']; ?>
-							<?php if ( $part['has_post_content'] ) { ?></a><?php } ?>
-							<?php } ?></h4></li>
-							<li>
-								<ul>
-									<?php foreach ( $part['chapters'] as $chapter ) : ?>
-										<?php if ( $chapter['post_status'] !== 'publish' ) {
-											if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
-												if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
-													if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) { continue; // Skip
-													}
-												} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
-													 continue; // Skip
-												}
-											}
-} ?>
-										<li class="chapter <?php echo pb_get_section_type( get_post( $chapter['ID'] ) ) ?>"><a href="<?php echo get_permalink( $chapter['ID'] ); ?>"><?php echo pb_strip_br( $chapter['post_title'] ); ?></a>
-						<?php if ( pb_should_parse_subsections() ) {
-							$sections = pb_get_subsections( $chapter['ID'] );
-							if ( $sections ) {
-								  $s = 1; ?>
-								  <ul class="sections">
-									<?php foreach ( $sections as $id => $name ) { ?>
-							  <li class="section"><a href="<?php echo get_permalink( $chapter['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-							<?php } ?>
-								  </ul>
-								<?php }
-} ?>
-										</li>
-									<?php endforeach; ?>
-								</ul>
-							</li>
-							<?php endforeach; ?>
-							<li><h4><!-- Back-matter --></h4></li>
-							<li>
-								<ul class="back-matter">
-									<?php foreach ( $book['back-matter'] as $bm ) : ?>
-									<?php if ( $bm['post_status'] !== 'publish' ) {
-										if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
-											if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
-												if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) { continue; // Skip
-												}
-											} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
-												 continue; // Skip
-											}
-										}
-} ?>
-									<li class="back-matter <?php echo pb_get_section_type( get_post( $bm['ID'] ) ) ?>"><a href="<?php echo get_permalink( $bm['ID'] ); ?>"><?php echo pb_strip_br( $bm['post_title'] );?></a>
-					<?php if ( pb_should_parse_subsections() ) {
-						$sections = pb_get_subsections( $bm['ID'] );
-						if ( $sections ) {
-							$s = 1; ?>
-							<ul class="sections">
-								<?php foreach ( $sections as $id => $name ) { ?>
-							<li class="section"><a href="<?php echo get_permalink( $bm['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-							<?php } ?>
-							</ul>
-							<?php }
-} ?>
-									</li>
-									<?php endforeach; ?>
-								</ul>
-							</li>
-					</ul><!-- end #toc -->
+<?php $metadata = pb_get_book_information();?>
+<section class="third-block-wrap">
+	<div class="third-block clearfix">
+			<h2><?php _e( 'Information on this Book', 'pressbooks-book' ); ?></h2>
+		<div class="description-book-info">
+			<h3><?php _e( 'Book Description', 'pressbooks-book' ); ?></h3>
+				<?php if ( ! empty( $metadata['pb_about_unlimited'] ) ) : ?>
+					<p><?php
+						$about_unlimited = pb_decode( $metadata['pb_about_unlimited'] );
+						$about_unlimited = preg_replace( '/<p[^>]*>(.*)<\/p[^>]*>/i', '$1', $about_unlimited ); // Make valid HTML by removing first <p> and last </p>
+						echo $about_unlimited; ?></p>
+				<?php endif; ?>
 
-				</div><!-- end .third-block -->
-			</section> <!-- end .third-block -->
+		</div>
+		<div>
+			<h3><?php _e( 'Lead Author', 'pressbooks-book' ); ?></h3>
+			<?php if ( ! empty( $metadata['pb_author'] ) ) { ?>
+				<p class="book-author vcard author">
+					<span class="fn"><?php echo $metadata['pb_author']; ?></span>
+				</p>
+			<?php } ?>
+		</div>
+		<div>
+			<h3><?php _e( 'Contributing Authors', 'pressbooks-book' ); ?></h3>
+			<?php if ( ! empty( $metadata['pb_contributing_authors'] ) ) { ?>
+				<?php echo $metadata['pb_contributing_authors']; ?>
+			<?php } ?>
+		</div>
+
+		<div>
+			<h3><?php _e( 'Licenses', 'pressbooks-book' ); ?></h3>
+			<?php if ( ! empty( $metadata['pb_book_license'] ) ) { ?>
+				<?php echo $metadata['pb_book_license']; ?>
+			<?php } ?>
+		</div>
+		<div>
+			<h3><?php _e( 'Subject', 'pressbooks-book' ); ?></h3>
+			<?php if ( ! empty( $metadata['pb_keywords_tags'] ) ) {
+				echo $metadata['pb_keywords_tags'];
+} ?>
+		</div>
+
+
+	</div><!-- end .third-block -->
+</section> <!-- end .third-block -->

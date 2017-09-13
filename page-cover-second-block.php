@@ -1,45 +1,111 @@
-			<section class="second-block-wrap">
-				<div class="second-block clearfix">
-						<div class="description-book-info">
-							<?php $metadata = pb_get_book_information();?>
-							<h2><?php _e( 'Book Description', 'pressbooks-book' ); ?></h2>
-								<?php if ( ! empty( $metadata['pb_about_unlimited'] ) ) : ?>
-									<p><?php
-										$about_unlimited = pb_decode( $metadata['pb_about_unlimited'] );
-										$about_unlimited = preg_replace( '/<p[^>]*>(.*)<\/p[^>]*>/i', '$1', $about_unlimited ); // Make valid HTML by removing first <p> and last </p>
-										echo $about_unlimited; ?></p>
-								<?php endif; ?>
+<section class="second-block-wrap">
+	<div class="second-block clearfix">
+		<h2><?php _e( 'Table of Contents', 'pressbooks-book' ); ?></h2>
+		<?php $book = pb_get_book_structure();
+		$pb_should_parse_subsections = pb_should_parse_subsections(); ?>
+		<ul class="table-of-contents" id="toc">
+			<li>
+				<ul class="front-matter">
+				<?php foreach ( $book['front-matter'] as $fm ) :
+					if ( $fm['post_status'] !== 'publish' ) {
+						if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
+							if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
+								if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) {
+									continue; // Skip
+								}
+							} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
+								continue; // Skip
+							}
+						}
+					} ?>
+					<li class="front-matter <?php echo pb_get_section_type( get_post( $fm['ID'] ) ) ?>">
+						<a href="<?php echo get_permalink( $fm['ID'] ); ?>"><?php echo pb_strip_br( $fm['post_title'] );?></a>
+						<?php if ( $pb_should_parse_subsections ) {
+							$sections = pb_get_subsections( $fm['ID'] );
+							if ( $sections ) {
+								$s = 1; ?>
+								<ul class="sections">
+								<?php foreach ( $sections as $id => $name ) { ?>
+									<li class="section"><a href="<?php echo get_permalink( $fm['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
+								<?php } ?>
+								</ul>
+							<?php }
+} ?>
+					</li>
+				<?php endforeach; ?>
+				</ul>
+			</li>
+			<?php foreach ( $book['part'] as $part ) : ?>
+				<li>
+					<?php if ( count( $book['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
+						<h4><?php if ( $part['has_post_content'] ) { ?>
+						<a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php } ?>
+							<?php echo $part['post_title']; ?>
+						<?php if ( $part['has_post_content'] ) { ?></a><?php } ?></h4>
+					<?php } ?>
+					<ul class="chapters">
+					<?php foreach ( $part['chapters'] as $chapter ) :
+						if ( $chapter['post_status'] !== 'publish' ) {
+							if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
+								if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
+									if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) {
+										continue; // Skip
+									}
+								} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
+									continue; // Skip
+								}
+							}
+						} ?>
+						<li class="back-matter <?php echo pb_get_section_type( get_post( $chapter['ID'] ) ); ?>">
+							<a href="<?php echo get_permalink( $chapter['ID'] ); ?>"><?php echo pb_strip_br( $chapter['post_title'] );?></a>
+							<?php if ( $pb_should_parse_subsections ) {
+								$sections = pb_get_subsections( $chapter['ID'] );
+								if ( $sections ) {
+									$s = 1; ?>
+									<ul class="sections">
+									<?php foreach ( $sections as $id => $name ) { ?>
+										<li class="section"><a href="<?php echo get_permalink( $chapter['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
+									<?php } ?>
+									</ul>
+								<?php }
+} ?>
+						</li>
+					<?php endforeach; ?>
+					</ul>
+				</li>
+			<?php endforeach; ?>
+			<li>
+				<ul class="back-matter">
+				<?php foreach ( $book['back-matter'] as $bm ) :
+					if ( $bm['post_status'] !== 'publish' ) {
+						if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
+							if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
+								if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) {
+									continue; // Skip
+								}
+							} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
+								continue; // Skip
+							}
+						}
+					} ?>
+					<li class="back-matter <?php echo pb_get_section_type( get_post( $bm['ID'] ) ); ?>">
+						<a href="<?php echo get_permalink( $bm['ID'] ); ?>"><?php echo pb_strip_br( $bm['post_title'] );?></a>
+						<?php if ( $pb_should_parse_subsections ) {
+							$sections = pb_get_subsections( $bm['ID'] );
+							if ( $sections ) {
+								$s = 1; ?>
+								<ul class="sections">
+								<?php foreach ( $sections as $id => $name ) { ?>
+									<li class="section"><a href="<?php echo get_permalink( $bm['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
+								<?php } ?>
+								</ul>
+							<?php }
+} ?>
+					</li>
+				<?php endforeach; ?>
+				</ul>
+			</li>
+		</ul><!-- end #toc -->
 
-									<div id="share">
-										<?php if ( pb_social_media_enabled() ) { ?>
-											<button id="twitter" class="sharer btn" data-sharer="twitter" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks-book' ); ?>" data-url="<?php the_permalink(); ?>" data-via="pressbooks"><?php _e( 'Tweet', 'pressbooks-book' ); ?></button>
-											<button id="facebook" class="sharer btn" data-sharer="facebook" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks-book' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( 'Like', 'pressbooks-book' ); ?></button>
-											<button id="googleplus" class="sharer btn" data-sharer="googleplus" data-title="<?php _e( 'Check out this great book on Pressbooks.', 'pressbooks-book' ); ?>" data-url="<?php the_permalink(); ?>"><?php _e( '+1', 'pressbooks-book' ); ?></button>
-										<?php } ?>
-									</div>
-						</div>
-
-								<?php	$args = [
-											'post_type' => 'back-matter',
-											'tax_query' => [ // @codingStandardsIgnoreLine
-												[
-													'taxonomy' => 'back-matter-type',
-													'field' => 'slug',
-													'terms' => 'about-the-author',
-												],
-											],
-										]; ?>
-
-
-								<div class="author-book-info">
-
-										<?php $loop = new WP_Query( $args );
-										while ( $loop->have_posts() ) : $loop->the_post(); ?>
-												<h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
-												<?php  echo '<div class="entry-content">';
-												the_excerpt();
-												echo '</div>';
-											endwhile; ?>
-								</div>
-					</div><!-- end .secondary-block -->
-				</section> <!-- end .secondary-block -->
+</div><!-- end .secondary-block -->
+</section> <!-- end .secondary-block -->
