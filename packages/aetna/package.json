@@ -1,7 +1,7 @@
 {
   "name": "@pressbooks/aetna",
   "version": "0.1.0",
-  "description": "Front-end style guide and pattern library for Pressbooks projects.",
+  "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
     "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
