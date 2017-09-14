@@ -38,8 +38,8 @@
     "styleguide",
     "pattern-library"
   ],
-  "author": "Pressbooks <code@pressbooks.com> (Book Oven Inc.)",
-  "license": "MIT",
+  "author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
+  "license": "GPL-2.0+",
   "bugs": {
     "url": "https://github.com/pressbooks/aetna/issues"
   },
