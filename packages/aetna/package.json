@@ -1,5 +1,5 @@
 {
-  "name": "@pressbooks/aetna",
+  "name": "aetna",
   "version": "0.1.0",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
