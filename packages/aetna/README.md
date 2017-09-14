@@ -1,6 +1,6 @@
-# Pressbooks Style Guide
+# Aetna
 
-Front-end style guide and pattern library for Pressbooks projects.
+Front-end style guide and pattern library for [Pressbooks][1].
 
 ## Buttons
 
@@ -9,3 +9,5 @@ Front-end style guide and pattern library for Pressbooks projects.
 
 <button class="button button--small">Small</button>
 <button class="button button--small button--outline">Outline</button>
+
+[1]: https://pressbooks.org

@@ -1,12 +1,15 @@
 {
-  "name": "@pressbooks/styleguide",
+  "name": "@pressbooks/aetna",
   "version": "0.1.0",
   "description": "Front-end style guide and pattern library for Pressbooks projects.",
-  "main": "index.js",
+  "style": "assets/styles/aetna.scss",
   "scripts": {
     "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "test": "npm run lint"
+    "rmdist": "rimraf dist",
+    "lint": "npm run -s lint:styles",
+    "lint:styles": "stylelint \"assets/styles/**/*.scss\"",
+    "test": "npm run -s lint"
   },
   "dependencies": {},
   "devDependencies": {
@@ -14,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pressbooks/styleguide.git"
+    "url": "git+https://github.com/pressbooks/aetna.git"
   },
   "keywords": [
     "styleguide",
@@ -23,7 +26,7 @@
   "author": "Pressbooks <code@pressbooks.com> (Book Oven Inc.)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pressbooks/styleguide/issues"
+    "url": "https://github.com/pressbooks/aetna/issues"
   },
-  "homepage": "https://github.com/pressbooks/styleguide#readme"
+  "homepage": "https://github.com/pressbooks/aetna#readme"
 }
