@@ -1,1 +1,81 @@
-html{-webkit-font-smoothing:antialiased}*{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0;font-family:Spectral,serif;font-size:1.125rem;background:#fff}.button{display:inline-block;width:15.625rem;height:3.75rem;padding:1.1875rem;border:2px solid var(--primary,#b01109);border-radius:3px;background:var(--primary,#b01109);font-family:Karla,sans-serif;font-size:1rem;font-weight:600;color:var(--primary-fg,#fff);line-height:normal;letter-spacing:.125rem;text-align:center;text-decoration:none;text-transform:uppercase;-webkit-transition:all .5s;transition:all .5s;vertical-align:middle}.button:focus,.button:hover{background:#fff;color:var(--primary,#b01109)}.button.button--small{width:9.375rem;height:2.5rem;padding:.40625rem}.button.button--wide{width:19.0625rem}.button.button--outline{background:#fff;color:var(--primary,#b01109)}.button.button--outline:focus,.button.button--outline:hover{color:var(--primary-fg,#fff);background:var(--primary,#b01109)}@media (min-width:60em){.button{width:275px}}
+/** Colors */
+
+/** Fonts */
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Spectral", serif;
+  font-size: 1.125rem;
+  background: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Karla", sans-serif;
+}
+
+.button {
+  display: inline-block;
+  width: 15.625rem;
+  height: 3.75rem;
+  padding: 1.1875rem;
+  border: 2px solid var(--primary, #b01109);
+  border-radius: 3px;
+  background: var(--primary, #b01109);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-fg, #fff);
+  line-height: normal;
+  letter-spacing: 0.125rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:focus {
+  background: #fff;
+  color: var(--primary, #b01109);
+}
+
+.button.button--small {
+  width: 9.375rem;
+  height: 2.5rem;
+  padding: 0.40625rem;
+}
+
+.button.button--wide {
+  width: 19.0625rem;
+}
+
+.button.button--outline {
+  background: #fff;
+  color: var(--primary, #b01109);
+}
+
+.button.button--outline:hover,
+.button.button--outline:focus {
+  color: var(--primary-fg, #fff);
+  background: var(--primary, #b01109);
+}
+
+@media (min-width: 60em) {
+  .button {
+    width: 275px;
+  }
+}
+
