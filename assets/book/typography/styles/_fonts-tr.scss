@@ -1,11 +1,12 @@
 @import 'NotoSansFont';
-@import 'NotoSerifFont';
 
 // Sans-serif stack name
 
 $sans-serif-epub-tr: 'Noto Sans';
 $sans-serif-prince-tr: 'Noto Sans';
 $sans-serif-web-tr: 'Noto Sans';
+
+@import 'NotoSerifFont';
 
 // Serif stack-name
 
