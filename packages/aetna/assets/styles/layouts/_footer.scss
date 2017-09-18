@@ -57,3 +57,59 @@
     }
   }
 }
+
+@media (min-width: $medium) {
+  .content-info {
+    .pressbooks-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 106.76px;
+      padding: 0 38px;
+
+      h1 {
+        font-weight: 600;
+        margin-bottom: 11px;
+      }
+
+      ul {
+        display: block;
+        list-style: none;
+
+        li {
+          display: inline-block;
+
+          &::after {
+            content: "|";
+            color: $white;
+            display: inline-block;
+            margin: 0 0.5em;
+          }
+
+          &:last-child {
+            &::after {
+              content: "";
+              display: none;
+            }
+          }
+        }
+      }
+
+      .pressbooks-icon {
+        display: block;
+        line-height: 1;
+
+        svg path {
+          fill: $white;
+        }
+      }
+
+      .social-media {
+        margin-top: 0;
+
+        a {
+          margin: 0 0 0 0.5em;
+        }
+      }
+    }
+  }
+}
