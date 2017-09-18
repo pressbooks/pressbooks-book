@@ -21,7 +21,7 @@
   h1 {
     font-size: rem(16);
     font-weight: normal;
-    margin-bottom: 0;
+    margin: 0 0 rem(12);
 
     .pressbooks {
       font-weight: 600;
@@ -63,6 +63,10 @@
 
   &__social {
     a {
+      display: inline-block;
+      width: rem(16);
+      height: rem(16);
+      margin: 0 0.125rem;
       border-bottom: none;
 
       &:hover,
@@ -82,7 +86,6 @@
 
     h1 {
       font-weight: 600;
-      margin: 0 0 rem(12);
     }
 
     ul {
@@ -111,23 +114,6 @@
     &__icon {
       display: block;
       line-height: 1;
-    }
-
-    &__social {
-      margin-top: 0;
-
-      a {
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: 0 0.25rem;
-        font-size: rem(32);
-
-        &:hover,
-        &:focus {
-          text-decoration: none;
-        }
-      }
     }
   }
 }
