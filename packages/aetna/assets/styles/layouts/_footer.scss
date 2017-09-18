@@ -34,7 +34,7 @@
 
     &:hover,
     &:focus {
-      border-bottom: solid 1px $white;
+      border-bottom-color: $white;
     }
   }
 
@@ -53,6 +53,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  &__social {
+    a {
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        border-bottom: none;
+      }
+    }
   }
 }
 
