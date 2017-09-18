@@ -37,7 +37,7 @@ script:
 - composer test
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
-- composer install --no-dev
+- composer install --no-dev --optimize-autoloader
 - cd ../
 - zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
   -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
@@ -45,6 +45,7 @@ before_deploy:
 - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: XdchVIQYOB87JkkIdkIfhQUeU6jkATDaAf2MypPNoiSJKmShVyWRxXehl0b8ieZqz8WP0wciZhDXfRSufbBIxeNy+nXh7dSn0L3BMOv7Up+/lYTmBIQUtXJM6UJV1CBALgcmO4K0vFVnUQzEi1TbTQK62QUgfTJ1sQBAKB7Eg7WMhgn3sSVhV0pADRJshsOTsuVMiZ3DuDnWQ3RzGjC0deIlKCr/GO4+R6W5giR7+05WPZOB9o/+ugD2ZbeblBJIk8kt6ZcyQBbhGv1cCEoSPsyXg4B7vA15jZdabDFkMu0ebbnpxgMWCuh2PReoc7jaefyR5/c+Le5mSelFkY/wEB92VBO2TcjgEzXbf5cx7AxWaI9AFyDf7XUrqept/0xXdmpyOzgg6J6SNcOoc9rs6P24q2RGYUCTUGcynd+wTzlsWWpL1pi/ZG2A3mvHaPfCltvyGgXxTBWCI3mTClEebu+rg0GED1LDGKlwlop4wFVvX+5KzBfuo5buULIouud1deav63xBq9Td7HGcAH9N3zwEOaNjTDCc/cw9ZgzjTcOC4sbyLLeFJ6xHpONd7HtvstibSlu5aHuDd6hRD3Kgzs11JUzXMwgo3jiCWTfAZ25lDisEVmIqYS+Ea8lyCoY+BLfDcPlEeyhOtlXfRT4n2xtGPWZmgbndvtOMXDXuDds=
   file: "pressbooks-book-$TRAVIS_TAG.zip"
