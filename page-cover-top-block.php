@@ -1,21 +1,20 @@
-<section class="cover-block cover-block--intro" id="block-intro">
-	<?php $metadata = pb_get_book_information();
-	pb_get_links( false ); ?>
+<section class="cover-top">
+	<?php pb_get_links( false ); ?>
 	<div class="book-info">
 		<h1 class="entry-title">
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		</h1>
-		<?php if ( ! empty( $metadata['pb_subtitle'] ) ) : ?>
-			<p class="subtitle"><?php echo $metadata['pb_subtitle']; ?></p>
+		<?php if ( ! empty( $book_information['pb_subtitle'] ) ) : ?>
+			<p class="subtitle"><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
-		<?php if ( ! empty( $metadata['pb_author'] ) ) { ?>
+		<?php if ( ! empty( $book_information['pb_author'] ) ) { ?>
 			<p class="book-author vcard author">
-				<span class="fn"><?php echo $metadata['pb_author']; ?></span>
+				<span class="fn"><?php echo $book_information['pb_author']; ?></span>
 			</p>
 		<?php } ?>
-		<?php if ( ! empty( $metadata['pb_cover_image'] ) ) { ?>
+		<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
 			<div class="book-cover">
-				<img src="<?php echo $metadata['pb_cover_image']; ?>" alt="book-cover" title="<?php bloginfo( 'name' ); ?> book cover" />
+				<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="book-cover" title="<?php bloginfo( 'name' ); ?> book cover" />
 			</div>
 		<?php }
 
@@ -28,7 +27,7 @@
 		$files = \Pressbooks\Utility\latest_exports();
 		$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
 		$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
-if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
+		if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
 			<div class="downloads">
 				<h3><?php _e( 'Download this book', 'pressbooks-book' ); ?></h3>
 				<ul>
@@ -62,14 +61,14 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			</div>
 		<?php }
 
-if ( ! empty( $metadata['pb_about_50'] ) ) { ?>
-			<p><?php echo pb_decode( $metadata['pb_about_50'] ); ?></p>
+		if ( ! empty( $book_information['pb_about_50'] ) ) { ?>
+			<p><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 		<?php } ?>
 	</div> <!-- end .book-info -->
 
 	<?php global $first_chapter; ?>
 	<p class="license">
-		<?php echo $metadata['pb_book_license']; // TODO ?>
+		<?php echo $book_information['pb_book_license']; // TODO ?>
 	</p>
 	<div class="call-to-action">
 		<a class="button" href="<?php echo $first_chapter; ?>">

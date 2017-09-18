@@ -1,111 +1,28 @@
-<section class="second-block-wrap">
-	<div class="second-block clearfix">
+<section class="cover-toc">
 		<h2><?php _e( 'Table of Contents', 'pressbooks-book' ); ?></h2>
-		<?php $book = pb_get_book_structure();
-		$pb_should_parse_subsections = pb_should_parse_subsections(); ?>
-		<ul class="table-of-contents" id="toc">
+		<ul class="toc">
 			<li>
 				<ul class="front-matter">
-				<?php foreach ( $book['front-matter'] as $fm ) :
-					if ( $fm['post_status'] !== 'publish' ) {
-						if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
-							if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
-								if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) {
-									continue; // Skip
-								}
-							} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
-								continue; // Skip
-							}
-						}
-					} ?>
-					<li class="front-matter <?php echo pb_get_section_type( get_post( $fm['ID'] ) ) ?>">
-						<a href="<?php echo get_permalink( $fm['ID'] ); ?>"><?php echo pb_strip_br( $fm['post_title'] );?></a>
-						<?php if ( $pb_should_parse_subsections ) {
-							$sections = pb_get_subsections( $fm['ID'] );
-							if ( $sections ) {
-								$s = 1; ?>
-								<ul class="sections">
-								<?php foreach ( $sections as $id => $name ) { ?>
-									<li class="section"><a href="<?php echo get_permalink( $fm['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-								<?php } ?>
-								</ul>
-							<?php }
-} ?>
-					</li>
-				<?php endforeach; ?>
+					<?php \PressbooksBook\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 				</ul>
 			</li>
-			<?php foreach ( $book['part'] as $part ) : ?>
-				<li>
-					<?php if ( count( $book['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
+			<?php foreach ( $book_structure['part'] as $part ) : ?>
+				<li class="part">
+					<?php if ( count( $book_structure['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
 						<h4><?php if ( $part['has_post_content'] ) { ?>
 						<a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php } ?>
 							<?php echo $part['post_title']; ?>
 						<?php if ( $part['has_post_content'] ) { ?></a><?php } ?></h4>
 					<?php } ?>
 					<ul class="chapters">
-					<?php foreach ( $part['chapters'] as $chapter ) :
-						if ( $chapter['post_status'] !== 'publish' ) {
-							if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
-								if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
-									if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) {
-										continue; // Skip
-									}
-								} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
-									continue; // Skip
-								}
-							}
-						} ?>
-						<li class="back-matter <?php echo pb_get_section_type( get_post( $chapter['ID'] ) ); ?>">
-							<a href="<?php echo get_permalink( $chapter['ID'] ); ?>"><?php echo pb_strip_br( $chapter['post_title'] );?></a>
-							<?php if ( $pb_should_parse_subsections ) {
-								$sections = pb_get_subsections( $chapter['ID'] );
-								if ( $sections ) {
-									$s = 1; ?>
-									<ul class="sections">
-									<?php foreach ( $sections as $id => $name ) { ?>
-										<li class="section"><a href="<?php echo get_permalink( $chapter['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-									<?php } ?>
-									</ul>
-								<?php }
-} ?>
-						</li>
-					<?php endforeach; ?>
+					<?php \PressbooksBook\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 					</ul>
 				</li>
 			<?php endforeach; ?>
 			<li>
 				<ul class="back-matter">
-				<?php foreach ( $book['back-matter'] as $bm ) :
-					if ( $bm['post_status'] !== 'publish' ) {
-						if ( ! current_user_can_for_blog( $blog_id, 'read_private_posts' ) ) {
-							if ( current_user_can_for_blog( $blog_id, 'read' ) ) {
-								if ( absint( get_option( 'permissive_private_content' ) ) !== 1 ) {
-									continue; // Skip
-								}
-							} elseif ( ! current_user_can_for_blog( $blog_id, 'read' ) ) {
-								continue; // Skip
-							}
-						}
-					} ?>
-					<li class="back-matter <?php echo pb_get_section_type( get_post( $bm['ID'] ) ); ?>">
-						<a href="<?php echo get_permalink( $bm['ID'] ); ?>"><?php echo pb_strip_br( $bm['post_title'] );?></a>
-						<?php if ( $pb_should_parse_subsections ) {
-							$sections = pb_get_subsections( $bm['ID'] );
-							if ( $sections ) {
-								$s = 1; ?>
-								<ul class="sections">
-								<?php foreach ( $sections as $id => $name ) { ?>
-									<li class="section"><a href="<?php echo get_permalink( $bm['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-								<?php } ?>
-								</ul>
-							<?php }
-} ?>
-					</li>
-				<?php endforeach; ?>
+					<?php \PressbooksBook\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 				</ul>
 			</li>
 		</ul><!-- end #toc -->
-
-</div><!-- end .secondary-block -->
-</section> <!-- end .secondary-block -->
+</section>

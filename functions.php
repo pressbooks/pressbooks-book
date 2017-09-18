@@ -6,6 +6,8 @@
 
 use PressbooksMix\Assets;
 
+include_once( dirname( __FILE__ ) . '/src/helpers.php' );
+
 // Turn off admin bar
 add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
 	return false;
@@ -57,7 +59,6 @@ function pressbooks_async_scripts( $tag, $handle, $src ) {
 		'pressbooks/keyboard-nav',
 		'pressbooks/navbar',
 		'pressbooks/toc',
-		'columnizer',
 		'sharer',
 		'jquery-migrate',
 	];

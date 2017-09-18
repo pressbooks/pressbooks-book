@@ -7,11 +7,12 @@
     "node": ">= 6.9.4"
   },
   "dependencies": {
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0"
+    "aetna": "github:pressbooks/aetna"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
     "cross-env": "^5.0.5",
     "eslint": "^3.19.0",
     "eslint-config-humanmade": "^0.1.3",
