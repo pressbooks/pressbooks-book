@@ -7,7 +7,7 @@
     "node": ">= 6.9.4"
   },
   "dependencies": {
-    "aetna": "github:pressbooks/aetna"
+    "aetna": "github:pressbooks/aetna#53ce809"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
