@@ -46,6 +46,12 @@
 
   &__icon {
     display: none;
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: none;
+    }
   }
 
   &__links {
@@ -55,8 +61,7 @@
     justify-content: center;
   }
 
-  &__social,
-  &__icon {
+  &__social {
     a {
       border-bottom: none;
 
