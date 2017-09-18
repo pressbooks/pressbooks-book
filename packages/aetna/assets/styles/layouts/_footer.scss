@@ -112,13 +112,6 @@
           height: 1.5rem;
           margin: 0 0.25rem;
           font-size: rem(32);
-          color: $near-black;
-          transition: all 0.4s;
-
-          &:hover,
-          &:focus {
-            color: $silver;
-          }
         }
       }
     }
