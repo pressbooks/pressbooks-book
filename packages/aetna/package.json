@@ -12,7 +12,9 @@
     "lint:styles": "stylelint \"assets/styles/**/*.scss\"",
     "test": "npm run -s lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tachyons-sass": "~4.8"
+  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "browser-sync": "^2.18.13",
