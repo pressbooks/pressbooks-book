@@ -63,12 +63,12 @@
     .pressbooks-footer {
       flex-direction: row;
       justify-content: space-between;
-      height: 106.76px;
-      padding: 0 38px;
+      height: rem(106);
+      padding: 0 rem(38);
 
       h1 {
         font-weight: 600;
-        margin-bottom: 11px;
+        margin-bottom: rem(11);
       }
 
       ul {
@@ -82,7 +82,7 @@
             content: "|";
             color: $white;
             display: inline-block;
-            margin: 0 0.5em;
+            margin: 0 0.5rem;
           }
 
           &:last-child {
@@ -107,7 +107,16 @@
         margin-top: 0;
 
         a {
-          margin: 0 0 0 0.5em;
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem;
+          margin: 0 0 0 0.5rem;
+          color: $near-black;
+
+          &:hover,
+          &:focus {
+            color: $silver;
+          }
         }
       }
     }
