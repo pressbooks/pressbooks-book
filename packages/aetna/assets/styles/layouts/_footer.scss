@@ -55,7 +55,8 @@
     justify-content: center;
   }
 
-  &__social {
+  &__social,
+  &__icon {
     a {
       border-bottom: none;
 
@@ -105,10 +106,6 @@
     &__icon {
       display: block;
       line-height: 1;
-
-      svg path {
-        fill: $white;
-      }
     }
 
     &__social {
