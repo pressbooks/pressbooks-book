@@ -31,7 +31,7 @@
   }
 
   &--wide {
-    width: 19.0625rem;
+    width: rem(305);
   }
 
   &--outline {
@@ -73,6 +73,14 @@
 
 @media (min-width: 60em) {
   .button {
-    width: 275px;
+    width: rem(275);
+
+    &--small {
+      width: rem(150);
+    }
+
+    &--wide {
+      width: rem(305);
+    }
   }
 }
