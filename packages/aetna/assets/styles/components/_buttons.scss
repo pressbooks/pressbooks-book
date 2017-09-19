@@ -65,6 +65,7 @@
     &:hover,
     &:focus {
       color: $white;
+      border: 2px solid $white;
       background: $black;
     }
   }

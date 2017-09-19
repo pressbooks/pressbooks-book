@@ -10907,6 +10907,7 @@ h3 {
 .button--monochrome-outline:hover,
 .button--monochrome-outline:focus {
   color: #fff;
+  border: 2px solid #fff;
   background: #000;
 }
 
