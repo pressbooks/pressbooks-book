@@ -24,17 +24,17 @@
     color: var(--primary, $brand-primary);
   }
 
-  &.button--small {
+  &--small {
     width: rem(150);
     height: rem(40);
     padding: rem(6.5);
   }
 
-  &.button--wide {
+  &--wide {
     width: 19.0625rem;
   }
 
-  &.button--outline {
+  &--outline {
     background: $white;
     color: var(--primary, $brand-primary);
 
@@ -42,6 +42,30 @@
     &:focus {
       color: var(--primary-fg, $white);
       background: var(--primary, $brand-primary);
+    }
+  }
+
+  &--monochrome {
+    background: $black;
+    border: 2px solid $black;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $black;
+      background: $white;
+    }
+  }
+
+  &--monochrome-outline {
+    background: $white;
+    border: 2px solid $black;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $black;
     }
   }
 }
