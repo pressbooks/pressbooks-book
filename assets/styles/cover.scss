@@ -1,1 +1,225 @@
 @import '~aetna/assets/styles/aetna.scss';
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: rem(24);
+}
+
+.cc-icon {
+  display: block;
+  width: rem(30);
+  height: rem(30);
+  margin: 0 rem(7.5);
+
+  &__cc {
+    background: url('../images/cc.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__by {
+    background: url('../images/by.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__nc {
+    background: url('../images/nc.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__nd {
+    background: url('../images/nd.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__publicdomain {
+    background: url('../images/publicdomain.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__remix {
+    background: url('../images/remix.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__sa {
+    background: url('../images/sa.svg');
+    background-size: rem(30) rem(30);
+  }
+
+  &__share {
+    background: url('../images/share.svg');
+    background-size: rem(30) rem(30);
+  }
+}
+
+.banner {
+  color: $white;
+  background-color: $black;
+
+  a {
+    color: $white;
+  }
+}
+
+.cover-top {
+  padding: 1rem;
+  color: $white;
+  background-color: $black;
+
+  h1 {
+    margin: 0 0 rem(10);
+    line-height: (42/36);
+
+    a {
+      color: $white;
+    }
+  }
+
+  .subtitle {
+    margin: 0;
+    font-size: rem(24);
+    line-height: (36/24);
+  }
+
+  .author {
+    margin: 0 0 rem(30);
+    font-family: $font-family-sans-serif;
+    font-size: rem(16);
+    line-height: (19/16);
+  }
+
+  .description {
+    font-size: rem(18);
+    line-height: (36/18);
+  }
+
+  .downloads {
+    h3 {
+      font-size: rem(18);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 -1rem;
+      padding: 0;
+    }
+
+    li {
+      height: rem(51);
+      display: flex;
+      padding: 0 1rem;
+      align-items: center;
+      font-family: $font-family-sans-serif;
+      font-size: rem(16);
+      font-weight: bold;
+      background-color: $white;
+
+      a {
+        color: $black;
+
+        &:hover,
+        &:focus {
+          color: var(--primary, $brand-primary);
+        }
+      }
+
+      &:hover {
+        background-color: #fafdff;
+      }
+    }
+  }
+
+  .license {
+    margin-bottom: 1.5rem;
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      margin-top: rem(7);
+      font-family: $font-family-sans-serif;
+    }
+  }
+
+  .call-to-action {
+    text-align: center;
+  }
+}
+
+.cover-toc,
+.cover-information,
+.cover-metadata {
+  padding: 1rem;
+
+  a {
+    color: var(--primary, $brand-primary);
+  }
+}
+
+.cover-toc {
+  .toc {
+    margin-bottom: 0;
+  }
+
+  li {
+    font-family: $font-family-sans-serif;
+    font-size: rem(16);
+    font-weight: 600;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .part h4 {
+    color: var(--primary, $brand-primary);
+    text-transform: uppercase;
+  }
+
+  h4,
+  li.front-matter,
+  li.chapter,
+  li.back-matter {
+    border-top: solid rem(3) $white;
+    background-color: #fafdff;
+    margin: 0 -1rem;
+    padding: rem(16) 1rem;
+  }
+}
+
+.cover-information {
+  p {
+    margin-top: 0;
+    line-height: (32/18);
+  }
+
+  &__lead-author,
+  &__contributing-authors,
+  &__license,
+  &__subject {
+    p {
+      font-family: $font-family-sans-serif;
+      line-height: (36/18);
+    }
+  }
+}
+
+.cover-metadata {
+  dl {
+    font-family: $font-family-sans-serif;
+    font-size: rem(18);
+    line-height: (28/18);
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: rem(32);
+  }
+}

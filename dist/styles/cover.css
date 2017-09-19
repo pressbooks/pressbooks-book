@@ -9534,6 +9534,38 @@ h3 {
   font-family: "Karla", sans-serif;
 }
 
+:root {
+  --primary: #b01109;
+  --accent: #015d75;
+  --primary-fg: #fff;
+  --accent-fg: #fff;
+  --header-text: #000;
+}
+
+.primary {
+  color: var(--brand-primary, #b01109);
+}
+
+.bg-primary {
+  background-color: var(--brand-primary, #b01109);
+}
+
+.b--primary {
+  border-color: var(--brand-primary, #b01109);
+}
+
+.accent {
+  color: var(--brand-secondary, #015d75);
+}
+
+.bg-accent {
+  background-color: var(--brand-secondary, #015d75);
+}
+
+.b--accent {
+  border-color: var(--brand-secondary, #015d75);
+}
+
 .button {
   display: inline-block;
   width: 15.625rem;
@@ -9561,24 +9593,47 @@ h3 {
   color: var(--primary, #b01109);
 }
 
-.button.button--small {
+.button--small {
   width: 9.375rem;
   height: 2.5rem;
   padding: 0.40625rem;
 }
 
-.button.button--wide {
+.button--wide {
   width: 19.0625rem;
 }
 
-.button.button--outline {
+.button--outline {
   background: #fff;
   color: var(--primary, #b01109);
 }
 
-.button.button--outline:hover, .button.button--outline:focus {
+.button--outline:hover, .button--outline:focus {
   color: var(--primary-fg, #fff);
   background: var(--primary, #b01109);
+}
+
+.button--monochrome {
+  background: #000;
+  border: 2px solid #000;
+  color: #fff;
+}
+
+.button--monochrome:hover, .button--monochrome:focus {
+  color: #000;
+  background: #fff;
+}
+
+.button--monochrome-outline {
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.button--monochrome-outline:hover, .button--monochrome-outline:focus {
+  color: #fff;
+  border: 2px solid #fff;
+  background: #000;
 }
 
 @media (min-width: 60em) {
@@ -9620,7 +9675,7 @@ h3 {
 .pressbooks-footer h1 {
   font-size: 1rem;
   font-weight: normal;
-  margin-bottom: 0;
+  margin: 0 0 0.75rem;
 }
 
 .pressbooks-footer h1 .pressbooks {
@@ -9645,6 +9700,11 @@ h3 {
 
 .pressbooks-footer__icon {
   display: none;
+  border-bottom: none;
+}
+
+.pressbooks-footer__icon:hover, .pressbooks-footer__icon:focus {
+  border-bottom: none;
 }
 
 .pressbooks-footer__links {
@@ -9664,6 +9724,10 @@ h3 {
 }
 
 .pressbooks-footer__social a {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.25rem;
   border-bottom: none;
 }
 
@@ -9685,7 +9749,6 @@ h3 {
   }
   .pressbooks-footer h1 {
     font-weight: 600;
-    margin: 0 0 0.75rem;
   }
   .pressbooks-footer ul {
     display: block;
@@ -9708,20 +9771,229 @@ h3 {
     display: block;
     line-height: 1;
   }
-  .pressbooks-footer__icon svg path {
-    fill: #fff;
-  }
-  .pressbooks-footer__social {
-    margin-top: 0;
-  }
-  .pressbooks-footer__social a {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.25rem;
-    font-size: 2rem;
-  }
-  .pressbooks-footer__social a:hover, .pressbooks-footer__social a:focus {
-    text-decoration: none;
-  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.cc-icon {
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin: 0 0.46875rem;
+}
+
+.cc-icon__cc {
+  background: url("../images/cc.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__by {
+  background: url("../images/by.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__nc {
+  background: url("../images/nc.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__nd {
+  background: url("../images/nd.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__publicdomain {
+  background: url("../images/publicdomain.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__remix {
+  background: url("../images/remix.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__sa {
+  background: url("../images/sa.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.cc-icon__share {
+  background: url("../images/share.svg");
+  background-size: 1.875rem 1.875rem;
+}
+
+.banner {
+  color: #fff;
+  background-color: #000;
+}
+
+.banner a {
+  color: #fff;
+}
+
+.cover-top {
+  padding: 1rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.cover-top h1 {
+  margin: 0 0 0.625rem;
+  line-height: 1.16666667;
+}
+
+.cover-top h1 a {
+  color: #fff;
+}
+
+.cover-top .subtitle {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.cover-top .author {
+  margin: 0 0 1.875rem;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1875;
+}
+
+.cover-top .description {
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+.cover-top .downloads h3 {
+  font-size: 1.125rem;
+}
+
+.cover-top .downloads ul {
+  list-style: none;
+  margin: 0 -1rem;
+  padding: 0;
+}
+
+.cover-top .downloads li {
+  height: 3.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.cover-top .downloads li a {
+  color: #000;
+}
+
+.cover-top .downloads li a:hover, .cover-top .downloads li a:focus {
+  color: var(--primary, #b01109);
+}
+
+.cover-top .downloads li:hover {
+  background-color: #fafdff;
+}
+
+.cover-top .license {
+  margin-bottom: 1.5rem;
+}
+
+.cover-top .license .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cover-top .license p {
+  margin-top: 0.4375rem;
+  font-family: "Karla", sans-serif;
+}
+
+.cover-top .call-to-action {
+  text-align: center;
+}
+
+.cover-toc,
+.cover-information,
+.cover-metadata {
+  padding: 1rem;
+}
+
+.cover-toc a,
+.cover-information a,
+.cover-metadata a {
+  color: var(--primary, #b01109);
+}
+
+.cover-toc .toc {
+  margin-bottom: 0;
+}
+
+.cover-toc li {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cover-toc li:last-child {
+  margin-bottom: 0;
+}
+
+.cover-toc .part h4 {
+  color: var(--primary, #b01109);
+  text-transform: uppercase;
+}
+
+.cover-toc h4,
+.cover-toc li.front-matter,
+.cover-toc li.chapter,
+.cover-toc li.back-matter {
+  border-top: solid 0.1875rem #fff;
+  background-color: #fafdff;
+  margin: 0 -1rem;
+  padding: 1rem 1rem;
+}
+
+.cover-information p {
+  margin-top: 0;
+  line-height: 1.77777778;
+}
+
+.cover-information__lead-author p, .cover-information__contributing-authors p, .cover-information__license p, .cover-information__subject p {
+  font-family: "Karla", sans-serif;
+  line-height: 2;
+}
+
+.cover-metadata dl {
+  font-family: "Karla", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.55555556;
+}
+
+.cover-metadata dt {
+  font-weight: bold;
+  margin-top: 2rem;
 }

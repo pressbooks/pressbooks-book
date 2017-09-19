@@ -50,7 +50,7 @@
 				?>
 				<li>
 					<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
-						<?php echo $filetype; ?>
+						<?php echo \PressbooksBook\Helpers\get_name_for_filetype( $filetype ); ?>
 						<meta itemprop="price" content="$0.00">
 						<link itemprop="bookFormat" href="http://schema.org/EBook">
 						<link itemprop="availability" href="http://schema.org/InStock">
@@ -62,20 +62,21 @@
 		<?php }
 
 		if ( ! empty( $book_information['pb_about_50'] ) ) { ?>
-			<p><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
+			<p class="description"><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 		<?php } ?>
 	</div> <!-- end .book-info -->
 
 	<?php global $first_chapter; ?>
-	<p class="license">
-		<?php echo $book_information['pb_book_license']; // TODO ?>
-	</p>
+	<div class="license">
+		<?php echo \PressbooksBook\Helpers\license_to_icons( $book_information['pb_book_license'] ); // TODO ?>
+		<p class="tc fw6"><?php echo \PressbooksBook\Helpers\license_to_text( $book_information['pb_book_license'] ); // TODO ?></p>
+	</div>
 	<div class="call-to-action">
-		<a class="button" href="<?php echo $first_chapter; ?>">
+		<a class="button button--monochrome-outline" href="<?php echo $first_chapter; ?>">
 			<?php _e( 'Read the Book', 'pressbooks-book' ); ?>
 		</a>
 		<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) { ?>
-			<a class="button button--outline" href="<?php echo home_url( '/buy' ); ?>">
+			<a class="button button--monochrome" href="<?php echo home_url( '/buy' ); ?>">
 				<?php _e( 'Buy the Book', 'pressbooks-book' ); ?>
 			</a>
 		<?php } ?>
