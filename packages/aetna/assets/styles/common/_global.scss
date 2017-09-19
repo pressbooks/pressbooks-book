@@ -18,3 +18,35 @@ h2,
 h3 {
   font-family: $font-family-sans-serif;
 }
+
+:root {
+  --primary: $brand-primary;
+  --accent: $brand-accent;
+  --primary-fg: $white;
+  --accent-fg: $white;
+  --header-text: $black;
+}
+
+.primary {
+  color: var(--brand-primary, $brand-primary);
+}
+
+.bg-primary {
+  background-color: var(--brand-primary, $brand-primary);
+}
+
+.b--primary {
+  border-color: var(--brand-primary, $brand-primary);
+}
+
+.accent {
+  color: var(--brand-secondary, $brand-accent);
+}
+
+.bg-accent {
+  background-color: var(--brand-secondary, $brand-accent);
+}
+
+.b--accent {
+  border-color: var(--brand-secondary, $brand-accent);
+}
