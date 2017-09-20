@@ -9530,8 +9530,44 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: "Karla", sans-serif;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--primary, #b01109);
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+h2::before {
+  content: "";
+  display: block;
+  margin: 0 auto 1em;
+  width: 46px;
+  height: 5px;
+  background: var(--accent, #015d75);
+}
+
+a {
+  color: var(--primary, #b01109);
+  text-decoration: none;
 }
 
 :root {
@@ -9564,6 +9600,16 @@ h3 {
 
 .b--accent {
   border-color: var(--brand-secondary, #015d75);
+}
+
+@media (min-width: 960px) {
+  h2 {
+    font-size: 3rem;
+    line-height: 1.16666667;
+  }
+  h2::before {
+    width: 74px;
+  }
 }
 
 .button {
@@ -9638,7 +9684,13 @@ h3 {
 
 @media (min-width: 60em) {
   .button {
-    width: 275px;
+    width: 17.1875rem;
+  }
+  .button--small {
+    width: 9.375rem;
+  }
+  .button--wide {
+    width: 19.0625rem;
   }
 }
 
@@ -9996,4 +10048,10 @@ h3 {
 .cover-metadata dt {
   font-weight: bold;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  .cover-toc {
+    padding: 4.6875rem 2.1875rem 0;
+  }
 }

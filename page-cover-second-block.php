@@ -1,5 +1,5 @@
 <section class="cover-toc">
-		<h2 class="ttu tc"><?php _e( 'Table of Contents', 'pressbooks-book' ); ?></h2>
+		<h2 class="ttu tc primary"><?php _e( 'Table of Contents', 'pressbooks-book' ); ?></h2>
 		<ul class="toc list pl0">
 			<li>
 				<ul class="front-matter list pl0">

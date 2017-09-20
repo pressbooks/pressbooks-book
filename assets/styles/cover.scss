@@ -223,3 +223,13 @@ h3 {
     margin-top: rem(32);
   }
 }
+
+@media screen and (min-width: 48em) {
+  .cover-top {
+    // TODO
+  }
+
+  .cover-toc {
+    padding: rem(75) rem(35) 0;
+  }
+}
