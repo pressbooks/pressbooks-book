@@ -44,17 +44,26 @@ div.front-matter {
   &.introduction {
     page: introduction;
     prince-page-group: start;
+    counter-reset: page 1;
   }
 }
 
 div.part {
   page: part;
   prince-page-group: start;
+
+  &.introduction {
+    counter-reset: page 1;
+  }
 }
 
 div.chapter {
   page: chapter;
   prince-page-group: start;
+
+  &.introduction {
+    counter-reset: page 1;
+  }
 }
 
 div.back-matter {
@@ -65,12 +74,6 @@ div.back-matter {
 div.blank-page {
   page: blank-page;
   prince-page-group: start;
-}
-
-// Page 1 Counter Reset
-
-div.introduction {
-  counter-reset: page 1;
 }
 
 // PDF Bookmark levels
