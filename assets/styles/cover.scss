@@ -1,5 +1,205 @@
 @import '~aetna/assets/styles/aetna.scss';
 
+.banner {
+  background-position: bottom;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(80);
+    width: 100%;
+    max-width: 100%;
+    max-width: 1440px;
+  }
+
+  .toggle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 17px;
+    width: 25px;
+    height: 20px;
+    z-index: 99;
+    text-indent: -9999em;
+
+    &__icon {
+      display: block;
+      position: absolute;
+      top: 7px;
+      width: 25px;
+      height: 3px;
+      background: $white;
+
+      &::before,
+      &::after {
+        width: 25px;
+        height: 3px;
+        content: '';
+        background: $white;
+      }
+
+      &::before {
+        position: absolute;
+        top: -7px;
+        right: 0;
+      }
+
+      &::after {
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+    }
+
+    &--active {
+      .toggle__icon {
+        background: var(--primary-fg, $white);
+
+        &::before,
+        &::after {
+          background: var(--primary-fg, $white);
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin: 0 0 0 -100%;
+    padding: 0 17px;
+    background: transparent;
+
+    a {
+      display: none;
+      font-family: $font-family-sans-serif;
+      font-size: rem(24);
+      line-height: (80/24);
+      color: var(--primary-fg, $white);
+      letter-spacing: 0;
+    }
+
+    .sep {
+      display: none;
+    }
+
+    &--visible {
+      margin: 0;
+      padding: 0 52px;
+      z-index: 1;
+      background: var(--primary, $brand-primary);
+
+      a {
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px var(--primary-fg, $white);
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__branding {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 364px;
+    text-align: center;
+
+    p {
+      font-family: $font-family-sans-serif;
+    }
+  }
+}
+
+.page:not(.home) .banner__branding {
+  display: none;
+}
+
+@media #{$breakpoint-large} {
+  .banner {
+    .container {
+      height: 80px;
+      margin: 0 auto;
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    &__brand {
+      align-self: center;
+      width: 16.5625rem;
+      height: auto;
+      margin-top: 40px;
+    }
+
+    &__navigation {
+      top: 40px;
+      height: 40px;
+      max-width: 1440px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+        display: inline-block;
+        font-size: rem(18);
+        color: var(--header-text, $black);
+        line-height: normal;
+
+        &:hover,
+        &:focus {
+          color: var(--primary, $brand-primary);
+        }
+
+        &:nth-child(1) {
+          margin-right: auto;
+        }
+
+        &:nth-child(2) {
+          margin: 0 1em 0 auto;
+        }
+      }
+
+      .sep {
+        display: inline-block;
+        margin: 0 0.5em;
+      }
+    }
+
+    &__branding {
+      height: 576px;
+
+      p {
+        font-size: rem(30);
+        letter-spacing: 0.75px;
+        line-height: (40/30);
+      }
+    }
+
+    h1 {
+      margin-bottom: rem(32);
+      font-size: rem(72);
+      line-height: (40/72);
+      letter-spacing: rem(1.8);
+    }
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -225,11 +425,138 @@ h3 {
 }
 
 @media screen and (min-width: 48em) {
+  .cover-top,
+  .cover-toc,
+  .cover-information {
+    padding-right: rem(35);
+    padding-left: rem(35);
+  }
+
   .cover-top {
-    // TODO
+    display: flex;
+    flex-flow: column wrap;
+    height: 630px;
+
+    .entry-title,
+    .subtitle,
+    .book-author,
+    .description,
+    .license,
+    .call-to-action {
+      width: (396/698) * 100%;
+      padding-right: rem(35);
+    }
+
+    .book-cover,
+    .downloads,
+    .social {
+      width: (275/698) * 100%;
+    }
+
+    .entry-title {
+      order: 1;
+    }
+
+    .subtitle {
+      order: 2;
+    }
+
+    .book-author {
+      order: 3;
+    }
+
+    .description {
+      order: 4;
+    }
+
+    .license {
+      order: 5;
+
+      .icons {
+        justify-content: flex-start;
+      }
+
+      .tc {
+        text-align: left;
+      }
+    }
+
+    .call-to-action {
+      order: 6;
+      text-align: left;
+    }
+
+    .book-cover {
+      order: 7;
+    }
+
+    .downloads {
+      order: 8;
+
+      h3 {
+        padding-bottom: 0.75rem;
+        border-bottom: solid 3px $white;
+      }
+
+      ul {
+        display: none;
+      }
+    }
+
+    .social {
+      order: 9;
+    }
   }
 
   .cover-toc {
-    padding: rem(75) rem(35) 0;
+    padding-top: rem(75);
+    padding-bottom: rem(35);
+
+    h4,
+    li.front-matter,
+    li.chapter,
+    li.back-matter {
+      margin: 0 rem(-35);
+      padding-right: rem(35);
+      padding-left: rem(35);
+    }
+  }
+
+  .cover-information {
+    h2 {
+      margin-bottom: rem(46);
+    }
+  }
+
+  .cover-metadata {
+    padding-right: rem(17.5);
+    padding-left: rem(17.5);
+
+    dl {
+      display: flex;
+      flex-flow: column wrap;
+      font-size: rem(16);
+      max-height: rem(420);
+
+      .meta {
+        flex: 1 0 100%;
+        width: calc(33%);
+        padding-right: rem(17.5);
+        padding-left: rem(17.5);
+        border-right: solid 1px #b7b7b7;
+
+        &--pb_title {
+          order: -2;
+        }
+
+        &--pb_book_license {
+          order: -1;
+
+          dt {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

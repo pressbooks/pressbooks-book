@@ -45,6 +45,7 @@ function pressbooks_book_info_page() {
 
 		// Sharer.js
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
+		wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), ['jquery'], null );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
@@ -58,6 +59,7 @@ function pressbooks_async_scripts( $tag, $handle, $src ) {
 		'pressbooks/a11y',
 		'pressbooks/keyboard-nav',
 		'pressbooks/navbar',
+		'pressbooks/navigation',
 		'pressbooks/toc',
 		'sharer',
 		'jquery-migrate',

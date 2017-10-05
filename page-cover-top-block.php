@@ -1,6 +1,5 @@
 <section class="cover-top">
 	<?php pb_get_links( false ); ?>
-	<div class="book-info">
 		<h1 class="entry-title">
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		</h1>

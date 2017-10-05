@@ -9825,6 +9825,223 @@ a {
   }
 }
 
+.banner {
+  background-position: bottom;
+  background-size: cover;
+}
+
+.banner .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  width: 100%;
+  max-width: 100%;
+  max-width: 1440px;
+}
+
+.banner .toggle {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 17px;
+  width: 25px;
+  height: 20px;
+  z-index: 99;
+  text-indent: -9999em;
+}
+
+.banner .toggle__icon {
+  display: block;
+  position: absolute;
+  top: 7px;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
+.banner .toggle__icon::before, .banner .toggle__icon::after {
+  width: 25px;
+  height: 3px;
+  content: '';
+  background: #fff;
+}
+
+.banner .toggle__icon::before {
+  position: absolute;
+  top: -7px;
+  right: 0;
+}
+
+.banner .toggle__icon::after {
+  position: absolute;
+  top: 7px;
+  right: 0;
+}
+
+.banner .toggle--active .toggle__icon {
+  background: var(--primary-fg, #fff);
+}
+
+.banner .toggle--active .toggle__icon::before, .banner .toggle--active .toggle__icon::after {
+  background: var(--primary-fg, #fff);
+}
+
+.banner__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  top: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 0 0 -100%;
+  padding: 0 17px;
+  background: transparent;
+}
+
+.banner__navigation a {
+  display: none;
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  line-height: 3.33333333;
+  color: var(--primary-fg, #fff);
+  letter-spacing: 0;
+}
+
+.banner__navigation .sep {
+  display: none;
+}
+
+.banner__navigation--visible {
+  margin: 0;
+  padding: 0 52px;
+  z-index: 1;
+  background: var(--primary, #b01109);
+}
+
+.banner__navigation--visible a {
+  display: block;
+  width: 100%;
+  border-bottom: solid 1px var(--primary-fg, #fff);
+}
+
+.banner__navigation--visible a:last-child {
+  border-bottom: 0;
+}
+
+.banner__branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 364px;
+  text-align: center;
+}
+
+.banner__branding p {
+  font-family: "Karla", sans-serif;
+}
+
+.page:not(.home) .banner__branding {
+  display: none;
+}
+
+@media screen and (min-width: 60em) {
+  .banner .container {
+    height: 80px;
+    margin: 0 auto;
+  }
+  .banner .toggle {
+    display: none;
+  }
+  .banner__brand {
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 16.5625rem;
+    height: auto;
+    margin-top: 40px;
+  }
+  .banner__navigation {
+    top: 40px;
+    height: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .banner__navigation a {
+    display: inline-block;
+    font-size: 1.125rem;
+    color: var(--header-text, #000);
+    line-height: normal;
+  }
+  .banner__navigation a:hover, .banner__navigation a:focus {
+    color: var(--primary, #b01109);
+  }
+  .banner__navigation a:nth-child(1) {
+    margin-right: auto;
+  }
+  .banner__navigation a:nth-child(2) {
+    margin: 0 1em 0 auto;
+  }
+  .banner__navigation .sep {
+    display: inline-block;
+    margin: 0 0.5em;
+  }
+  .banner__branding {
+    height: 576px;
+  }
+  .banner__branding p {
+    font-size: 1.875rem;
+    letter-spacing: 0.75px;
+    line-height: 1.33333333;
+  }
+  .banner h1 {
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    line-height: 0.55555556;
+    letter-spacing: 0.1125rem;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -10051,7 +10268,147 @@ h3 {
 }
 
 @media screen and (min-width: 48em) {
+  .cover-top,
+  .cover-toc,
+  .cover-information {
+    padding-right: 2.1875rem;
+    padding-left: 2.1875rem;
+  }
+  .cover-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    height: 630px;
+  }
+  .cover-top .entry-title,
+  .cover-top .subtitle,
+  .cover-top .book-author,
+  .cover-top .description,
+  .cover-top .license,
+  .cover-top .call-to-action {
+    width: 56.73352436%;
+    padding-right: 2.1875rem;
+  }
+  .cover-top .book-cover,
+  .cover-top .downloads,
+  .cover-top .social {
+    width: 39.3982808%;
+  }
+  .cover-top .entry-title {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .cover-top .subtitle {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .cover-top .book-author {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .cover-top .description {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .cover-top .license {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .cover-top .license .icons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .cover-top .license .tc {
+    text-align: left;
+  }
+  .cover-top .call-to-action {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+    text-align: left;
+  }
+  .cover-top .book-cover {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .cover-top .downloads {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  .cover-top .downloads h3 {
+    padding-bottom: 0.75rem;
+    border-bottom: solid 3px #fff;
+  }
+  .cover-top .downloads ul {
+    display: none;
+  }
+  .cover-top .social {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
   .cover-toc {
-    padding: 4.6875rem 2.1875rem 0;
+    padding-top: 4.6875rem;
+    padding-bottom: 2.1875rem;
+  }
+  .cover-toc h4,
+  .cover-toc li.front-matter,
+  .cover-toc li.chapter,
+  .cover-toc li.back-matter {
+    margin: 0 -2.1875rem;
+    padding-right: 2.1875rem;
+    padding-left: 2.1875rem;
+  }
+  .cover-information h2 {
+    margin-bottom: 2.875rem;
+  }
+  .cover-metadata {
+    padding-right: 1.09375rem;
+    padding-left: 1.09375rem;
+  }
+  .cover-metadata dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    font-size: 1rem;
+    max-height: 26.25rem;
+  }
+  .cover-metadata dl .meta {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    width: calc(33%);
+    padding-right: 1.09375rem;
+    padding-left: 1.09375rem;
+    border-right: solid 1px #b7b7b7;
+  }
+  .cover-metadata dl .meta--pb_title {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .cover-metadata dl .meta--pb_book_license {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .cover-metadata dl .meta--pb_book_license dt {
+    display: none;
   }
 }

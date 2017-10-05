@@ -14,6 +14,7 @@ let mix = require('laravel-mix');
 const dist = 'dist';
 
 mix.setPublicPath('dist')
+	.js('assets/scripts/navigation.js','dist/scripts/navigation.js')
 	.scripts('assets/scripts/a11y.js','dist/scripts/a11y.js')
 	.scripts(['node_modules/jquery-columnizer/src/jquery.columnizer.js', 'assets/scripts/columnizer-load.js'], 'dist/scripts/columnizer.js')
   .scripts('assets/scripts/keyboard-nav.js','dist/scripts/keyboard-nav.js')
