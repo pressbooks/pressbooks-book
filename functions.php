@@ -4,6 +4,7 @@
  * @license GPLv2 (or any later version)
  */
 
+use Pressbooks\Container;
 use PressbooksMix\Assets;
 
 // Turn off admin bar
@@ -76,28 +77,37 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
  * ------------------------------------------------------------------------ */
 function pb_enqueue_scripts() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets
+		->setSrcDirectory( 'assets' )
+		->setDistDirectory( 'dist' );
+
 	wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
 	wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
 
-	if ( pb_is_custom_theme() ) { // Custom CSS
-		wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), false, get_option( 'pressbooks_last_custom_css' ), 'screen' );
+	$deps = [ 'pressbooks/structure', 'pressbooks/webfonts' ];
+
+	if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
+		wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), $deps, get_option( 'pressbooks_last_custom_css' ), 'screen' );
 	} else {
-		if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) || \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
+		$styles = Container::get( 'Styles' );
+		if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
+			$sass = Container::get( 'Sass' );
+			// Custom Styles
 			if ( get_stylesheet() === 'pressbooks-book' && ! get_option( 'pressbooks_webbook_structure_version' ) ) {
-				\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
+				$styles->updateWebBookStyleSheet();
 				update_option( 'pressbooks_webbook_structure_version', 1 );
 			}
-			$fullpath = \Pressbooks\Container::get( 'Sass' )->pathToUserGeneratedCss() . '/style.css';
+			$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
 			if ( ! is_file( $fullpath ) ) {
-				\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
+				$styles->updateWebBookStyleSheet();
 			}
-			if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
-				wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', false, null, 'screen, print' );
+			if ( $styles->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
+				wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', $deps, null, 'screen, print' );
 			}
-			wp_enqueue_style( 'pressbooks/theme', \Pressbooks\Container::get( 'Sass' )->urlToUserGeneratedCss() . '/style.css', false, null, 'screen, print' );
+			wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', $deps, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
 		} else {
-			wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
+			// Classic mode (does not use Sass)
+			wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', $deps, null, 'screen, print' );
 		}
 	}
 
@@ -116,17 +126,17 @@ add_action( 'wp_enqueue_scripts', 'pb_enqueue_scripts' );
  * Update web book stylesheet.
  */
 function pressbooks_update_webbook_stylesheet() {
-	if ( false === \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) && false === \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
+	if ( false === Container::get( 'Styles' )->isCurrentThemeCompatible( 1 ) && false === Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) ) {
 		return;
 	}
 
-	if ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 1 ) ) {
+	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 1 ) ) {
 		$inputs = [
 			get_stylesheet_directory() . '/_fonts-web.scss',
 			get_stylesheet_directory() . '/_mixins.scss',
 			get_stylesheet_directory() . '/style.scss',
 		];
-	} elseif ( \Pressbooks\Container::get( 'Sass' )->isCurrentThemeCompatible( 2 ) ) {
+	} elseif ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) ) {
 		$inputs = [
 			get_stylesheet_directory() . '/assets/styles/web/_fonts.scss',
 			get_stylesheet_directory() . '/assets/styles/web/style.scss',
@@ -138,7 +148,7 @@ function pressbooks_update_webbook_stylesheet() {
 		$inputs = [];
 	}
 
-	$output = \Pressbooks\Container::get( 'Sass' )->pathToUserGeneratedCss() . '/style.css';
+	$output = Container::get( 'Sass' )->pathToUserGeneratedCss() . '/style.css';
 
 	$recompile = false;
 
@@ -153,7 +163,7 @@ function pressbooks_update_webbook_stylesheet() {
 		if ( WP_DEBUG ) {
 			error_log( 'Updating web book stylesheet.' );
 		}
-		\Pressbooks\Container::get( 'Sass' )->updateWebBookStyleSheet();
+		Container::get( 'Styles' )->updateWebBookStyleSheet();
 	} else {
 		if ( WP_DEBUG ) {
 			error_log( 'No web book stylesheet update needed.' );
@@ -211,15 +221,17 @@ function pb_private() {
 if ( ! function_exists( 'pressbooks_comment' ) ) {
 
 	/**
- * Template for comments and pingbacks.
- *
- * To override this walker in a child theme without modifying the comments template
- * simply create your own pressbooks_comment(), and that function will be used instead.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- *
- */
-
+	 * Template for comments and pingbacks.
+	 *
+	 * To override this walker in a child theme without modifying the comments template
+	 * simply create your own pressbooks_comment(), and that function will be used instead.
+	 *
+	 * Used as a callback by wp_list_comments() for displaying the comments.
+	 *
+	 * @param \WP_Comment $comment
+	 * @param array $args
+	 * @param int $depth
+	 */
 	function pressbooks_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) {
@@ -376,6 +388,9 @@ add_action( 'pb_cover_promo', 'pressbooks_cover_promo' );
 
 /**
  * Restrict search.
+ *
+ * @param \WP_Query $query
+ * @return \WP_Query
  */
 function pb_filter_search( $query ) {
 	if ( $query->is_search && ! is_admin() ) {
