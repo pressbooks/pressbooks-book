@@ -67,7 +67,7 @@ function license_to_icons( $license ) {
 			$output .= "<span class='icon icon-$part'></span>";
 		}
 	} elseif ( $license === 'public-domain' ) {
-		$output .= "<span class='icon icon-pd'></span>";
+		$output .= "<span class='icon icon-cc-pd'></span>";
   } elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}

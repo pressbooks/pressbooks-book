@@ -47,6 +47,7 @@ function pressbooks_book_info_page() {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 		wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), ['jquery'], null );
 		wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), ['jquery'], null );
+		wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), ['jquery'], null );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
@@ -61,7 +62,9 @@ function pressbooks_async_scripts( $tag, $handle, $src ) {
 		'pressbooks/keyboard-nav',
 		'pressbooks/navbar',
 		'pressbooks/navigation',
+		'pressbooks/dropdown',
 		'pressbooks/toc',
+		'pressbooks/cover-toc',
 		'sharer',
 		'jquery-migrate',
 	];

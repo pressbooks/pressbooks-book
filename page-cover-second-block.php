@@ -7,7 +7,7 @@
 				</ul>
 			</li>
 			<?php foreach ( $book_structure['part'] as $part ) : ?>
-				<li class="section-toc__part">
+				<li class="section-toc__part<?php if ( count( $book_structure['part'] ) == 1 ) : ?> open<?php endif; ?>">
 					<?php if ( count( $book_structure['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
 						<h3 class="section-toc__part__title">
 							<span class="inner-content"><?php
@@ -42,7 +42,7 @@
 			</li>
 		</ul><!-- end #toc -->
 	<div class="section-toc__toggle-all">
-		<button class="button button--primary section-toc__toggle-all__show"><?php _e( 'View complete Table of content', 'pressbooks-book' ); ?></button>
+		<button class="button button--primary section-toc__toggle-all__show"><?php _e( 'View complete table of contents', 'pressbooks-book' ); ?></button>
 		<button class="button button--secondary section-toc__toggle-all__hide"><?php _e( 'View less', 'pressbooks-book' ); ?></button>
 	</div>
 </section>

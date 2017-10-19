@@ -27,12 +27,6 @@
 
 			$files = \Pressbooks\Utility\latest_exports();
 
-$files = ['epub3' => '._3.epub',
-'epub' => '.epub',
-'pdf' => '.pdf',
-'print-pdf' => '._print.pdf',
-'mobi' => '.mobi'];
-
 			$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
 			$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
 			if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
@@ -91,7 +85,7 @@ $files = ['epub3' => '._3.epub',
 			<a class="button button--primary" href="<?php echo $first_chapter; ?>">
 				<?php _e( 'Read the Book', 'pressbooks-book' ); ?>
 			</a><?php
-			if (array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
+			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 				?><a class="button button--secondary" href="<?php echo home_url( '/buy' ); ?>">
 					<?php _e( 'Buy the Book', 'pressbooks-book' ); ?>
 				</a><?php
