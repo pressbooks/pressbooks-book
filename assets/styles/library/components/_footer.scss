@@ -1,0 +1,68 @@
+.footer{
+
+	--brand: --footer-color;
+	--brand-hover: --footer-color;
+
+	background-color: $footer-bg;
+	color: $footer-color;
+	padding: 2rem 1rem 2.25rem;
+
+	@media #{$breakpoint-tablet-and-up}{
+		flex-direction: row;
+		padding-bottom: 2.5rem;
+	}
+}
+	.footer__inner{
+		max-width: $content-max-width;
+		margin:0 auto;
+	}
+	.footer__pressbooks{
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media #{$breakpoint-tablet-and-up}{
+			flex-direction: row;
+		}
+	}
+		.footer__pressbooks__icon{
+			margin: 0 1rem;
+		}
+		.footer__pressbooks__links{
+			margin-bottom: 1.5rem;
+			margin-top: 1.5rem;
+
+			@media #{$breakpoint-tablet-and-up}{
+				margin: 0;
+			}
+		}
+		.footer__pressbooks__links__list{
+			display: flex;
+			flex-wrap: wrap;
+			font-size: .875rem;
+			justify-content: center;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+
+			li{
+				line-height: 1;
+				padding: .125rem 0;
+			}
+
+			li + li>a{
+				border-left: 1px solid var(--footer-color);
+				margin-left: 1rem;
+				padding-left: 1rem;
+			}
+		}
+			.footer__pressbooks__links__title{
+				font-size: 1rem;
+				text-align: center;
+			}
+		.footer__pressbooks__social{
+			align-items: center;
+			display: flex;
+
+		}

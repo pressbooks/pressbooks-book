@@ -1,0 +1,35 @@
+:root{
+	--font-family-sans-serif: $font-family-sans-serif;
+	--font-family-monospace: $font-family-monospace;
+
+	--brand: $brand;
+	--brand-hover: $brand-hover;
+	--brand-accent:  $brand-accent;
+
+	--body-bg: $body-bg;
+	--body-bg-alt: $brand-bg-alt;
+	--body-color: $body-color;
+
+	--button-primary-color: $btn-color;
+	--button-primary-hover-color: $brand-hover;
+
+	--button-secondary-color: $brand;
+	--button-secondary-hover-color: $brand-hover;
+
+	--header-bg: $header-bg;
+	--header-color: $header-color;
+
+	--footer-bg: $footer-bg;
+	--footer-color: $footer-color;
+
+
+
+
+	--primary: $brand;
+	--accent: $brand-accent;
+	--primary-fg: $color-primary-fg;
+	--accent-fg: $color-accent-fg;
+	--header-text: $color-header-text;
+
+	--cover-header-bg: $color-cover-header-bg;
+}

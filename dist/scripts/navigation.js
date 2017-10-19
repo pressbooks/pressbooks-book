@@ -68,11 +68,11 @@
 /***/ "./assets/scripts/navigation.js":
 /***/ (function(module, exports) {
 
-jQuery(document).ready(function ($) {
-   $('.toggle').click(function (event) {
+jQuery(function ($) {
+   $('.js-header-menu-toggle').click(function (event) {
       event.preventDefault();
-      $(event.currentTarget).toggleClass('toggle--active');
-      $('.banner__navigation').toggleClass('banner__navigation--visible');
+      $(event.currentTarget).toggleClass('--active');
+      $('.js-header-nav').toggleClass('--visible');
    });
 });
 

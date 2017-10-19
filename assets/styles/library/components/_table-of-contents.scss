@@ -1,0 +1,147 @@
+.section-toc {
+
+	padding-left:0;
+	padding-right:0;
+
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+
+	.inner-content{
+		@extend .content-max-width;
+	}
+
+
+	li {
+		//font-family: $font-family-sans-serif;
+		//font-size: rem(16);
+		font-weight: 700;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+/*
+	.section-toc__part__title{
+		color: var(--primary);
+
+	}*/
+
+/*	.section-toc__chapter {
+		border-top: solid 3px var(--body-bg);
+		background-color: var(--body-bg-alt);
+		//margin: 0 -1rem;
+		//padding: 1rem;
+	}*/
+}
+	.section-toc__list{
+
+		@media #{$breakpoint-tablet-and-up} {
+			margin-top: 5rem;
+		}
+	}
+
+	.section-toc__front-matter,
+	.section-toc__back-matter {
+
+		font-weight: 700;
+
+		@media #{$breakpoint-tablet-and-up} {
+			font-size: 1.125rem;
+		}
+
+		li{
+			background-color: var(--body-bg-alt);
+			margin-bottom: 1px;
+			padding: 1.25rem 1rem;
+
+			@media #{$breakpoint-tablet-and-up} {
+				padding: 1.875rem 1rem;
+			}
+		}
+	}
+	.section-toc__part{
+
+	}
+		.section-toc__part__title{
+			background-color: var(--body-bg-alt);
+			font-size: 1rem;
+			margin-bottom: 1px;
+			padding: 1.275rem 1rem;
+			text-transform: uppercase;
+
+			@media #{$breakpoint-tablet-and-up} {
+				font-size: 1.5rem;
+				padding: 1.875rem 1rem;
+			}
+
+			.icon{
+				margin-left: auto;
+				font-size: 1rem;
+				height: 1rem;
+				width: 1rem;
+
+				@media #{$breakpoint-tablet-and-up} {
+					font-size: 1.5rem;
+					height: 1.5rem;
+					width: 1.5rem;
+				}
+			}
+
+			.icon-arrow-up{
+				display: none;
+			}
+
+			.open &{
+				background-color: var(--brand);
+				color: var(--button-primary-color);
+
+				.icon-arrow-down{
+					display: none;
+				}
+
+				.icon-arrow-up{
+					display: inline-block;
+				}
+			}
+
+			& > .inner-content{
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		//overwrite general toc ul rule
+		ul.section-toc__chapters{
+			padding: 1rem;
+		}
+		.section-toc__chapters{
+			display: none;
+
+			@media #{$breakpoint-tablet-and-up}{
+				column-count: 2;
+				column-gap: 2rem;
+			}
+
+			.open &{
+				display: block;
+			}
+
+			.chapter{
+				margin-bottom: 1rem;
+			}
+		}
+		.section-toc__toggle-all{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.section-toc__toggle-all__show{
+
+			}
+			.section-toc__toggle-all__hide{
+				display: none;
+			}
+		}
+

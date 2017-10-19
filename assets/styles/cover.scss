@@ -1,5 +1,9 @@
-@import '~aetna/assets/styles/aetna.scss';
+//@import '~aetna/assets/styles/aetna.scss';
+@import 'pressbooks-theme';
+@import 'library/library';
 
+
+/*
 .banner {
   background-position: bottom;
   background-size: cover;
@@ -11,7 +15,6 @@
     align-items: center;
     height: rem(80);
     width: 100%;
-    max-width: 100%;
     max-width: 1440px;
   }
 
@@ -31,14 +34,14 @@
       top: 7px;
       width: 25px;
       height: 3px;
-      background: $white;
+      background: var(--primary-fg);
 
       &::before,
       &::after {
         width: 25px;
         height: 3px;
         content: '';
-        background: $white;
+        background: var(--primary-fg);
       }
 
       &::before {
@@ -56,11 +59,11 @@
 
     &--active {
       .toggle__icon {
-        background: var(--primary-fg, $white);
+        background: var(--primary-fg);
 
         &::before,
         &::after {
-          background: var(--primary-fg, $white);
+          background: var(--primary-fg);
         }
       }
     }
@@ -84,7 +87,7 @@
       font-family: $font-family-sans-serif;
       font-size: rem(24);
       line-height: (80/24);
-      color: var(--primary-fg, $white);
+      color: var(--primary-fg);
       letter-spacing: 0;
     }
 
@@ -96,12 +99,12 @@
       margin: 0;
       padding: 0 52px;
       z-index: 1;
-      background: var(--primary, $brand-primary);
+      background: var(--primary);
 
       a {
         display: block;
         width: 100%;
-        border-bottom: solid 1px var(--primary-fg, $white);
+        border-bottom: solid 1px var(--primary-fg);
 
         &:last-child {
           border-bottom: 0;
@@ -122,12 +125,12 @@
       font-family: $font-family-sans-serif;
     }
   }
-}
+}*/
 
 .page:not(.home) .banner__branding {
   display: none;
 }
-
+/*
 @media #{$breakpoint-large} {
   .banner {
     .container {
@@ -153,17 +156,17 @@
       margin: 0 auto;
       flex-direction: row;
       justify-content: flex-start;
-      align-items: center;
+      align-items: center;*!
 
       a {
         display: inline-block;
         font-size: rem(18);
-        color: var(--header-text, $black);
+        color: var(--header-text);
         line-height: normal;
 
         &:hover,
         &:focus {
-          color: var(--primary, $brand-primary);
+          color: var(--primary);
         }
 
         &:nth-child(1) {
@@ -198,160 +201,10 @@
       letter-spacing: rem(1.8);
     }
   }
-}
+}*/
 
-a {
-  text-decoration: none;
-}
 
-h3 {
-  font-size: rem(24);
-}
-
-.cc-icon {
-  display: block;
-  width: rem(30);
-  height: rem(30);
-  margin: 0 rem(7.5);
-
-  &__cc {
-    background: url('../images/cc.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__by {
-    background: url('../images/by.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__nc {
-    background: url('../images/nc.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__nd {
-    background: url('../images/nd.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__publicdomain {
-    background: url('../images/publicdomain.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__remix {
-    background: url('../images/remix.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__sa {
-    background: url('../images/sa.svg');
-    background-size: rem(30) rem(30);
-  }
-
-  &__share {
-    background: url('../images/share.svg');
-    background-size: rem(30) rem(30);
-  }
-}
-
-.banner {
-  color: $white;
-  background-color: $black;
-
-  a {
-    color: $white;
-  }
-}
-
-.cover-top {
-  padding: 1rem;
-  color: $white;
-  background-color: $black;
-
-  h1 {
-    margin: 0 0 rem(10);
-    line-height: (42/36);
-
-    a {
-      color: $white;
-    }
-  }
-
-  .subtitle {
-    margin: 0;
-    font-size: rem(24);
-    line-height: (36/24);
-  }
-
-  .author {
-    margin: 0 0 rem(30);
-    font-family: $font-family-sans-serif;
-    font-size: rem(16);
-    line-height: (19/16);
-  }
-
-  .description {
-    font-size: rem(18);
-    line-height: (36/18);
-  }
-
-  .downloads {
-    h3 {
-      font-size: rem(18);
-    }
-
-    ul {
-      list-style: none;
-      margin: 0 -1rem;
-      padding: 0;
-    }
-
-    li {
-      height: rem(51);
-      display: flex;
-      padding: 0 1rem;
-      align-items: center;
-      font-family: $font-family-sans-serif;
-      font-size: rem(16);
-      font-weight: bold;
-      background-color: $white;
-
-      a {
-        color: $black;
-
-        &:hover,
-        &:focus {
-          color: var(--primary, $brand-primary);
-        }
-      }
-
-      &:hover {
-        background-color: #fafdff;
-      }
-    }
-  }
-
-  .license {
-    margin-bottom: 1.5rem;
-
-    .icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-
-    p {
-      margin-top: rem(7);
-      font-family: $font-family-sans-serif;
-    }
-  }
-
-  .call-to-action {
-    text-align: center;
-  }
-}
+/*
 
 .cover-toc,
 .cover-information,
@@ -359,10 +212,14 @@ h3 {
   padding: 1rem;
 
   a {
-    color: var(--primary, $brand-primary);
+    color: var(--primary);
   }
 }
+*/
 
+
+
+/*
 .cover-toc {
   .toc {
     margin-bottom: 0;
@@ -379,7 +236,7 @@ h3 {
   }
 
   .part h4 {
-    color: var(--primary, $brand-primary);
+    color: var(--primary);
     text-transform: uppercase;
   }
 
@@ -387,13 +244,16 @@ h3 {
   li.front-matter,
   li.chapter,
   li.back-matter {
-    border-top: solid rem(3) $white;
+    border-top: solid rem(3) var(--primary-fg);
     background-color: #fafdff;
     margin: 0 -1rem;
     padding: rem(16) 1rem;
   }
 }
+*/
 
+
+/*
 .cover-information {
   p {
     margin-top: 0;
@@ -409,7 +269,8 @@ h3 {
       line-height: (36/18);
     }
   }
-}
+}*/
+/*
 
 .cover-metadata {
   dl {
@@ -423,7 +284,8 @@ h3 {
     margin-top: rem(32);
   }
 }
-
+*/
+/*
 @media screen and (min-width: 48em) {
   .cover-top,
   .cover-toc,
@@ -495,7 +357,7 @@ h3 {
 
       h3 {
         padding-bottom: 0.75rem;
-        border-bottom: solid 3px $white;
+        border-bottom: solid 3px var(--primary-fg);
       }
 
       ul {
@@ -533,14 +395,15 @@ h3 {
     padding-left: rem(17.5);
 
     dl {
+
       display: flex;
       flex-flow: column wrap;
       font-size: rem(16);
-      max-height: rem(420);
+      //max-height: rem(420);
 
       .meta {
-        flex: 1 0 100%;
-        width: calc(33%);
+        flex: 1 1 33%;
+        //width: calc(33%);
         padding-right: rem(17.5);
         padding-left: rem(17.5);
         border-right: solid 1px #b7b7b7;
@@ -559,4 +422,4 @@ h3 {
       }
     }
   }
-}
+}*/
