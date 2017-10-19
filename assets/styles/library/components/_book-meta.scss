@@ -1,0 +1,37 @@
+.section-meta{
+	box-shadow: $section-shadow;
+	font-size: 1.125rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+	.section-meta__title{
+		margin-bottom: 1.5rem;
+		@media #{$breakpoint-tablet-and-up} {
+			margin-bottom: 3rem;
+		}
+	}
+	.section-meta__inner{
+		max-width: $content-max-width;
+		margin: 0 auto;
+	}
+	.section-meta__list{
+		column-rule: 1px solid #b7b7b7;
+
+		@media #{$breakpoint-tablet-and-up} {
+			column-count: 3;
+			column-gap: 3rem;
+		}
+	}
+	.section-meta__subsection{
+		margin-bottom: 2.5rem;
+		//try to prevent column breaks inside
+		overflow: hidden; /* fix for Firefox */
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+	.section-meta__subtitle{
+		color: var(--brand);
+		font-size: 1.125rem;
+		margin-bottom: .5rem;
+	}

@@ -1,0 +1,139 @@
+.header{
+	--brand: var(--header-color);
+	--brand-hover: var(--header-color);
+	--brand-accent: var(--header-color);
+
+	background-color: var(--header-bg);
+	color: var(--header-color);
+	padding: 2rem 1rem 0;
+}
+	.header__inner{
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		max-width: $nav-max-width;
+		margin: 0 auto;
+	}
+
+	.header__search{
+		display: none;
+		@media #{$breakpoint-large}{
+			display: block;
+		}
+	}
+	.header__brand{
+		font-size: 1.25rem;
+		max-width: 100%;
+		overflow: hidden;
+
+		@media #{$breakpoint-tablet-to-large}{
+			font-size: 1.5rem;
+		}
+
+		@media #{$breakpoint-large}{
+			font-size: 2.5rem;
+		}
+	}
+	.header__logo{
+		&::before{
+			background-image:url(../images/pressbooks-logo.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			content:"";
+			display: inline-block;
+			height: .65em;
+			margin-right: 2px;
+			width: .65em;
+		}
+	}
+
+	.header__menu-icon {
+		display: block;
+		position: absolute;
+		top: 2rem;
+		right: 1rem;
+		width: 25px;
+		height: 20px;
+		z-index: 99;
+		text-indent: -9999em;
+
+
+		@media #{$breakpoint-large}{
+			display: none;
+		}
+
+		&__icon {
+			display: block;
+			position: absolute;
+			top: 7px;
+			width: 25px;
+			height: 3px;
+			background: var(--header-color);
+
+			&::before,
+			&::after {
+				width: 25px;
+				height: 3px;
+				content: '';
+				background: var(--header-color);
+			}
+
+			&::before {
+				position: absolute;
+				top: -7px;
+				right: 0;
+			}
+
+			&::after {
+				position: absolute;
+				top: 7px;
+				right: 0;
+			}
+		}
+
+	}
+	.header__nav{
+		@media #{$breakpoint-not-large}{
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			left:0;
+			margin: 0 0 0 -100%;
+			padding: 0 17px;
+			position: absolute;
+			top: 0;
+			width: 100%;
+
+			a {
+				display: none;
+				font-family: $font-family-sans-serif;
+				font-size: rem(24);
+				line-height: (80/24);
+				color: var(--primary-fg);
+				letter-spacing: 0;
+			}
+
+			.sep {
+				display: none;
+			}
+
+			&.--visible {
+				margin: 0;
+				padding: 0 52px;
+				z-index: 1;
+				background: var(--primary);
+
+				a {
+					display: block;
+					width: 100%;
+					border-bottom: solid 1px var(--primary-fg);
+
+					&:last-child {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}

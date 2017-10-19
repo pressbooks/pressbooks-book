@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]> <html <?php language_attributes(); ?> class="no-js"> <![endif]-->
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
-	  </script>
-	<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -39,13 +28,18 @@ if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strt
 	}(document, "script", "facebook-jssdk"));</script>
 <?php }
 if ( is_front_page() ) : ?>
-	<section class="banner">
-		<div class="container">
-			<a class="toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="toggle__icon"></span></a>
-			<a class="banner__brand" href="<?php echo network_home_url(); ?>"><span class="clip"><?php switch_to_blog( 1 );
+
+	<section class="header">
+		<div class="header__inner">
+<div class="header__search"><a class="icon icon-search"></a></div>
+
+			<h1 class="header__brand"><a class="header__logo" href="<?php echo network_home_url(); ?>"><span class="clip"><?php switch_to_blog( 1 );
 			echo get_bloginfo( 'name', 'display' );
-			restore_current_blog(); ?></span><?php // TODO ?></a>
-			<nav class="banner__navigation" id="navigation">
+			restore_current_blog(); ?></span><?php // TODO ?></a></h1>
+
+			<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
+
+			<nav class="header__nav js-header-nav" id="navigation">
 					<?php if ( ! is_user_logged_in() ) { ?>
 						<a href="<?php echo wp_login_url( get_permalink() ) ?>"><?php _e( 'Sign in', 'pressbooks-book' ) ?></a>
 					<?php } else { ?>

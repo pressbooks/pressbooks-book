@@ -1,14 +1,1 @@
-jQuery(document).ready(function($){
-	$( document ).keydown( function( e ) {
-		var url = false;
-		if ( e.which == 37 ) {  // Left arrow key code
-			url = $( '.nav-previous a' ).attr( 'href' );
-		}
-		else if ( e.which == 39 ) {  // Right arrow key code
-			url = $( '.nav-next a' ).attr( 'href' );
-		}
-		if ( url && ( !$( 'textarea, input' ).is( ':focus' ) ) ) {
-			window.location = url;
-		}
-	} );
-});
+jQuery(document).ready(function(n){n(document).keydown(function(t){var a=!1;37==t.which?a=n(".nav-previous a").attr("href"):39==t.which&&(a=n(".nav-next a").attr("href")),a&&!n("textarea, input").is(":focus")&&(window.location=a)})});

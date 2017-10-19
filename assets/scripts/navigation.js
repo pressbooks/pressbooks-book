@@ -1,7 +1,7 @@
-jQuery(document).ready(($) => {
-	$('.toggle').click((event) => {
+jQuery(($) => {
+	$('.js-header-menu-toggle').click((event) => {
     event.preventDefault();
-    $(event.currentTarget).toggleClass('toggle--active');
-    $('.banner__navigation').toggleClass('banner__navigation--visible');
+    $(event.currentTarget).toggleClass('--active');
+    $('.js-header-nav').toggleClass('--visible');
   });
 });

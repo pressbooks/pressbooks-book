@@ -18,17 +18,23 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			}
 		} ?>
 		<li class="<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
-			<a href="<?php echo get_permalink( $section['ID'] ); ?>"><?php echo pb_strip_br( $section['post_title'] );?></a>
-			<?php if ( $should_parse_subsections ) {
-				$subsections = pb_get_subsections( $section['ID'] );
-				if ( $subsections ) { ?>
-					<ul class="sections">
-					<?php foreach ( $subsections as $id => $name ) { ?>
-						<li class="section"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-					<?php } ?>
-					</ul>
-				<?php }
-			} ?>
+			<?php if($post_type != 'chapter'){?>
+			<div class="inner-content">
+			<?php } ?>
+				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>"><?php echo pb_strip_br( $section['post_title'] );?></a>
+				<?php if ( $should_parse_subsections ) {
+					$subsections = pb_get_subsections( $section['ID'] );
+					if ( $subsections ) { ?>
+						<ul class="toc__subsections">
+						<?php foreach ( $subsections as $id => $name ) { ?>
+							<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
+						<?php } ?>
+						</ul>
+					<?php }
+				}
+			if($post_type != 'chapter'){?>
+				</div>
+			<?php } ?>
 		</li>
 	<?php }
 }
@@ -55,14 +61,17 @@ function license_to_icons( $license ) {
 	if ( strpos( $license, 'cc' ) !== false ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
-			$output .= "<span class='cc-icon cc-icon__$part'></span>";
+			if($part != 'cc'){
+				$part = 'cc-'.$part;
+			}
+			$output .= "<span class='icon icon-$part'></span>";
 		}
 	} elseif ( $license === 'public-domain' ) {
-		$output .= "<span class='cc-icon cc-icon__publicdomain'></span>";
+		$output .= "<span class='icon icon-cc-pd'></span>";
   } elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
-	return sprintf('<div class="icons">%s</div>', $output);
+	return $output;
 }
 
 function license_to_text( $license ) {
@@ -92,4 +101,12 @@ function license_to_text( $license ) {
 		default:
 			return __( 'All Rights Reserved', 'pressbooks-book' );
 	}
+}
+
+function share_icons( ) {
+	$output = '';
+	$output .= '<a class="icon icon-twitter sharer" data-sharer="twitter" data-title="'.translate( 'Check out this great book on Pressbooks.', 'pressbooks-book' ).'" data-url="'.get_the_permalink().'" data-via="pressbooks"></a>';
+	$output .= '<a class="icon icon-facebook sharer" data-sharer="facebook" data-title="'.translate( 'Check out this great book on Pressbooks.', 'pressbooks-book' ).'" data-url="'.get_the_permalink().'"></a>';
+	$output .= '<a class="icon icon-google-plus sharer" data-sharer="googleplus" data-title="'.translate( 'Check out this great book on Pressbooks.', 'pressbooks-book' ).'" data-url="'.get_the_permalink().'"></a>';
+	return $output;
 }

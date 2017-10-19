@@ -1,12 +1,14 @@
 {
-    "/scripts/navigation.js": "/scripts/navigation.js?id=ff38f8fb53662bc7c9a4",
-    "/styles/a11y.css": "/styles/a11y.css?id=b56b00d6a1cb2df918e5",
-    "/styles/cover.css": "/styles/cover.css?id=5fd96458c904cf119911",
-    "/styles/book-info.css": "/styles/book-info.css?id=92fa639f22f854240c39",
-    "/styles/structure.css": "/styles/structure.css?id=4d6a5286965e997c35b6",
+    "/scripts/navigation.js": "/scripts/navigation.js?id=59022f4554b4e7fc577f",
+    "/styles/a11y.css": "/styles/a11y.css?id=67ce4802af40e4fea4f2",
+    "/styles/cover.css": "/styles/cover.css?id=3fb5346e7633489cba66",
+    "/styles/book-info.css": "/styles/book-info.css?id=bab08346efe18106290e",
+    "/styles/structure.css": "/styles/structure.css?id=73555eac1f448b204588",
     "/scripts/a11y.js": "/scripts/a11y.js?id=3faa829da7a4aa2b976a",
     "/scripts/columnizer.js": "/scripts/columnizer.js?id=465e1b0d7a57022d67ab",
     "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=5530f96084c639f108ac",
     "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343",
-    "/scripts/toc.js": "/scripts/toc.js?id=41dec06e39b599e9d22d"
+    "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=70e8626d11accd8cfe74",
+    "/scripts/toc.js": "/scripts/toc.js?id=41dec06e39b599e9d22d",
+    "/scripts/dropdown.js": "/scripts/dropdown.js?id=910e4b8546bb78437542"
 }
