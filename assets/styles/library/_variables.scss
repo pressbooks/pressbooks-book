@@ -4,15 +4,17 @@ $spacer: 1rem !default;
 $nav-max-width:     1440px;
 $content-max-width: 1330px;
 $content-box-max-width: 1200px;
+$reading-page-max-width: 800px;
 
 /** Colors */
 $brand:        #B01109 !default;
 $brand-hover:  #770600 !default;
 $brand-accent: #015D75 !default;
 
-$brand-bg:     #FFFFFF !default;
-$brand-bg-alt: #F9FDFF !default;
-$brand-text:   #000 !default;
+$brand-bg:      #FFFFFF !default;
+$brand-bg-alt:  #F9FDFF !default;
+$brand-bg-alt2: #ECECEC !default;
+$brand-text:    #000 !default;
 
 $btn-color:    #fff !default;
 
@@ -25,6 +27,7 @@ $header-color: #fff !default;
 $footer-bg: #444444 !default;
 $footer-color: #fff !default;
 
+$book-bg:      #fff !default;
 
 $color-primary:      #b01109 !default;
 $color-accent:       #015d75 !default;

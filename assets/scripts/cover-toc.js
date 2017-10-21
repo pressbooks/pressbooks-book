@@ -1,23 +1,29 @@
 jQuery(
 	function($){
-		$(document.body).on('click', '.section-toc__part__title a', function(e){
+		$(document.body).on('click', '.js-toc-part-toggle', function(e){
 			var $target = $(this);
-			var $dropdown = $target.parent().parent().parent('.section-toc__part');
+			var $dropdown = $target.parents('.js-toc-part');
 			$dropdown.toggleClass('open');
 		});
 
-		$(document.body).on('click', '.section-toc__toggle-all__show', function(e){
+		$(document.body).on('click', '.js-toc-toggle-all-show', function(e){
 			var $target = $(this);
 			$target.hide();
-			$('.section-toc__toggle-all__hide').show();
-			$('.section-toc__part').addClass('open');
+			$('.js-toc-toggle-all-hide').show();
+			$('.js-toc-part').addClass('open');
 		});
 
-		$(document.body).on('click', '.section-toc__toggle-all__hide', function(e){
+		$(document.body).on('click', '.js-toc-toggle-all-hide', function(e){
 			var $target = $(this);
 			$target.hide();
-			$('.section-toc__toggle-all__show').show();
-			$('.section-toc__part').removeClass('open');
+			$('.js-toc-toggle-all-show').show();
+			$('.js-toc-part').removeClass('open');
+		});
+
+		$(document.body).on('click', '.js-toc-toggle', function(e){
+			var $target = $(this);
+			$target.parents('.js-toc-toggle-con').toggleClass('--visible');
+			$('.js-toc').toggleClass('--visible');
 		});
 	}
 );

@@ -59,3 +59,27 @@
 		color: var(--brand-hover);
 	}
 }
+
+
+//TODO refactor button colors; create specific button css variables, overwrite vars above and remove button rules below
+.button--primary.button--header{
+	background-color: var(--header-color);
+	border-color: var(--header-color);
+	color: var(--header-bg);
+	&:hover {
+		background-color: transparent;
+		border-color: var(--header-color);
+		color: var(--header-color);
+	}
+}
+
+.button--secondary.button--header{
+	background-color: transparent;
+	border-color: var(--header-color);
+	color: var(--header-color);
+	&:hover {
+		background-color: var(--header-color);
+		border-color: var(--header-color);
+		color: var(--header-bg);
+	}
+}

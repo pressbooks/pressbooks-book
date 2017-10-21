@@ -12,28 +12,6 @@
 	@media #{$breakpoint-large}{
 		padding: 3.5rem 1rem 7.5rem;
 	}
-
-	.button--primary{
-		background-color: var(--header-color);
-		border-color: var(--header-color);
-		color: var(--header-bg);
-		&:hover {
-			background-color: transparent;
-			border-color: var(--header-color);
-			color: var(--header-color);
-		}
-	}
-
-	.button--secondary{
-		background-color: transparent;
-		border-color: var(--header-color);
-		color: var(--header-color);
-		&:hover {
-			background-color: var(--header-color);
-			border-color: var(--header-color);
-			color: var(--header-bg);
-		}
-	}
 }
 .book-header__inner{
 	display: flex;

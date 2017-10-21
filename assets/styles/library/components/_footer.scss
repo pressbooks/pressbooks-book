@@ -1,15 +1,27 @@
 .footer{
 
-	--brand: --footer-color;
-	--brand-hover: --footer-color;
+	--brand: var(--footer-color);
+	--brand-hover: var(--footer-color);
 
 	background-color: $footer-bg;
 	color: $footer-color;
+	font-family: $font-family-sans-serif;
 	padding: 2rem 1rem 2.25rem;
 
 	@media #{$breakpoint-tablet-and-up}{
 		flex-direction: row;
 		padding-bottom: 2.5rem;
+	}
+
+	//overwrite link colors of potential book theme
+	a {
+		color: $link-color;
+		text-decoration: $link-decoration;
+
+		&:hover {
+			color: $link-hover-color;
+			text-decoration: $link-hover-decoration;
+		}
 	}
 }
 	.footer__inner{

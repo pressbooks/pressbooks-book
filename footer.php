@@ -5,7 +5,7 @@
 <?php } ?>
 <?php if ( ! is_front_page() ) {?>
 
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
 
 	</div><!-- #wrap -->
 	<div class="push"></div>

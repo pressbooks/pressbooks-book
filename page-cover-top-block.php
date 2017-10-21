@@ -82,11 +82,11 @@
 			<span class="book-header__license__text license-text"><?php echo \PressbooksBook\Helpers\license_to_text( $book_information['pb_book_license'] ); // TODO ?></span>
 		</div>
 		<div class="book-header__cta">
-			<a class="button button--primary" href="<?php echo $first_chapter; ?>">
+			<a class="button button--primary button--header" href="<?php echo $first_chapter; ?>">
 				<?php _e( 'Read the Book', 'pressbooks-book' ); ?>
 			</a><?php
 			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
-				?><a class="button button--secondary" href="<?php echo home_url( '/buy' ); ?>">
+				?><a class="button button--secondary button--header" href="<?php echo home_url( '/buy' ); ?>">
 					<?php _e( 'Buy the Book', 'pressbooks-book' ); ?>
 				</a><?php
 			} ?>
