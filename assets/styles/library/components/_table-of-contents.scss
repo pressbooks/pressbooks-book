@@ -130,12 +130,10 @@
 					color: var(--button-primary-color);
 				}
 
-				.icon-arrow-down{
-					display: none;
-				}
-
-				.icon-arrow-up{
-					display: inline-block;
+				.icon-arrow-up-down {
+					&:before{
+						content: $icon-arrow-up;
+					}
 				}
 			}
 

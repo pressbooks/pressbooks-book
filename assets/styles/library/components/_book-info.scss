@@ -12,10 +12,12 @@
 	.section-info__inner{
 		max-width: $content-max-width;
 		margin: 0 auto;
+		padding-bottom: 4rem;
 
 		//two column as of large 960px
 		@media #{$breakpoint-large} {
 			display: flex;
+			padding-bottom: 6rem;
 		}
 	}
 	.section-info__inner__content{

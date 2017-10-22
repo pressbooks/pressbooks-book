@@ -21,7 +21,7 @@
 
 							if( ! empty($part['chapters'] )){
 								?>
-								<a class="icon icon-arrow-down js-toc-part-toggle"></a><a class="icon icon-arrow-up js-toc-part-toggle"></a><?php
+								<a class="icon icon-arrow-up-down js-toc-part-toggle"></a><?php
 							}
 							?></span>
 				</h3>

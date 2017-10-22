@@ -69,8 +69,7 @@ if ( ! is_front_page() ) { ?>
 		<nav class="reading-header__inner">
 			<div class="reading-header__toc js-toc-toggle-con">
 				<span class="reading-header__toc__title">Table of contents</span>
-				<a class="icon icon-arrow-down js-toc-toggle"></a><a class="icon icon-arrow-up js-toc-toggle"></a>
-
+				<a class="icon icon-arrow-up-down js-toc-toggle"></a>
 			</div>
 
 			<h1 class="reading-header__title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

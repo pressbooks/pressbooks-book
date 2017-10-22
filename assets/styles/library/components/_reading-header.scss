@@ -77,18 +77,11 @@
 			}
 		}
 
-		.icon-arrow-up{
-			display: none;
-		}
-
-		&.--visible{
-
-			.icon-arrow-down{
-				display: none;
-			}
-
-			.icon-arrow-up{
-				display: inline-block;
+		&.--visible {
+			.icon-arrow-up-down {
+				&:before{
+					content: $icon-arrow-up;
+				}
 			}
 		}
 	}

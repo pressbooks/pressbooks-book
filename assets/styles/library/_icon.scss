@@ -42,6 +42,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: top;
+  width: 1em;
+  height: 1em;
 }
 
 .icon-arrow-down:before {
@@ -52,6 +54,14 @@
 }
 .icon-arrow-up:before {
   content: "\63";
+}
+.icon-arrow-up-down {
+  &:before {
+    content: "\61";
+  }
+  &.--visible:before {
+    content: "\63";
+  }
 }
 .icon-book:before {
   content: "\64";

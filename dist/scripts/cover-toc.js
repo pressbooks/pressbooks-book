@@ -25,5 +25,11 @@ jQuery(
 			$target.parents('.js-toc-toggle-con').toggleClass('--visible');
 			$('.js-toc').toggleClass('--visible');
 		});
+
+		$(document.body).on('click', '.js-toggle-section', function(e){
+			var $target = $(this);
+			$target.parents('.js-section').toggleClass('section-toggle--visible');
+			$target.toggleClass('--visible');
+		});
 	}
 );

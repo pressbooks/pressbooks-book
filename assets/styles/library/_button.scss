@@ -83,3 +83,21 @@
 		color: var(--header-bg);
 	}
 }
+
+.button--circle--primary{
+	align-items: center;
+	background-color: var(--brand);
+	color: var(--button-primary-color);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	height: 3.75rem;
+	width: 3.75rem;
+
+	&:hover {
+		background-color: var(--brand-hover);
+		border-color: var(--brand-hover);
+		color: var(--button-primary-color);
+		text-decoration: none;
+	}
+}
