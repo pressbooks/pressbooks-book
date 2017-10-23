@@ -199,7 +199,7 @@ function pb_get_links( $echo = true ) {
 	?><nav class="nav-reading" role="navigation">
 		<div class="nav-reading__previous">
 	<?php if ( $prev_chapter !== '/' ) : ?>
-	<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-right"></span><?php _e( 'Previous Chapter', 'pressbooks-book' ); ?></a>
+	<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Chapter', 'pressbooks-book' ); ?></a>
 	<?php endif; ?>
 		</div>
 		<div class="nav-reading__next">

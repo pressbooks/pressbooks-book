@@ -22,10 +22,12 @@ jQuery(
 
 		$(document.body).on('click', '.js-toc-toggle', function(e){
 			var $target = $(this);
+			$target.toggleClass('--visible');
 			$target.parents('.js-toc-toggle-con').toggleClass('--visible');
 			$('.js-toc').toggleClass('--visible');
 		});
 
+		//toggle sections for mobile & tablet
 		$(document.body).on('click', '.js-toggle-section', function(e){
 			var $target = $(this);
 			$target.parents('.js-section').toggleClass('section-toggle--visible');
