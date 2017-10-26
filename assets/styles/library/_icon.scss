@@ -28,6 +28,7 @@
   width: 1.875rem;
   height: 1.875rem;
   margin: 0 .5rem;
+  text-decoration: none !important;
 }
 
 .icon:before{
@@ -41,16 +42,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: top;
+  width: 1em;
+  height: 1em;
 }
 
 .icon-arrow-down:before {
   content: "\61";
+}
+.icon-arrow-left:before {
+  content: "\78";
 }
 .icon-arrow-right:before {
   content: "\62";
 }
 .icon-arrow-up:before {
   content: "\63";
+}
+.icon-arrow-up-down {
+  &:before {
+    content: "\61";
+  }
+  &.--visible:before {
+    content: "\63";
+  }
 }
 .icon-book:before {
   content: "\64";

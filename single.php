@@ -35,7 +35,8 @@
 					   <h2 class="chapter_author"><?php echo $chap_author; ?></h2>
 					<?php endif; ?>
 
-					<?php if ( get_post_type( $post->ID ) !== 'part' ) {
+					<?php
+					if ( get_post_type( $post->ID ) !== 'part' ) {
 						if ( pb_should_parse_subsections() ) {
 							$content = pb_tag_subsections( apply_filters( 'the_content', get_the_content() ), $post->ID );
 							echo $content;
@@ -48,9 +49,9 @@
 							$args = [ 'before' => '<p class="pb-nextpage">' . __( 'Continue reading:', 'pressbooks' ) ];
 							wp_link_pages( $args );
 						}
-} else {
-	echo apply_filters( 'the_content', $post->post_content );
-} ?>
+					} else {
+						echo apply_filters( 'the_content', $post->post_content );
+					} ?>
 
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
@@ -59,8 +60,17 @@
 				</div><!-- #content -->
 
 				<?php
-				if ( pb_social_media_enabled() ) {
-					get_template_part( 'content', 'social-footer' );
+				if ( pb_social_media_enabled() ) {	?>
+					<section class="section section-reading-meta">
+						<div class="section-reading-meta__inner">
+							<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e('Share this book on social medias','pressbooks-book'); ?></h2>
+							<div class="section-reading-meta__share">
+								<?php
+									echo \PressbooksBook\Helpers\share_icons();
+								?>
+							</div>
+						</div>
+					</section><?php
 				} ?>
 
 				<?php comments_template( '', true ); ?>

@@ -39,7 +39,7 @@ function pressbooks_book_info_page() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
-	if ( is_front_page() ) {
+	//if ( is_front_page() ) {
 		wp_enqueue_style( 'book/cover', $assets->getPath( 'styles/cover.css' ), [], null, 'all' );
 		wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700' );
 
@@ -48,7 +48,7 @@ function pressbooks_book_info_page() {
 		wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), ['jquery'], null );
 		wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), ['jquery'], null );
 		wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), ['jquery'], null );
-	}
+	//}
 }
 add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
 
@@ -85,8 +85,8 @@ function pb_enqueue_scripts() {
 	if ( ! is_front_page() ) {
 		$assets = new Assets( 'pressbooks-book', 'theme' );
 		$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-		wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
-		wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
+		//wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
+		//wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
 
 		if ( pb_is_custom_theme() ) { // Custom CSS
 			wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), false, get_option( 'pressbooks_last_custom_css' ), 'screen' );
@@ -196,15 +196,18 @@ function pb_get_links( $echo = true ) {
 	$prev_chapter = pb_get_prev();
 	$next_chapter = pb_get_next();
 	if ( $echo ) :
-	?><nav class="navigation posts-navigation" role="navigation">
-	<div class="nav-links">
+	?><nav class="nav-reading" role="navigation">
+		<div class="nav-reading__previous">
 	<?php if ( $prev_chapter !== '/' ) : ?>
-	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e( 'Previous', 'pressbooks-book' ); ?></a></div>
+	<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Chapter', 'pressbooks-book' ); ?></a>
 	<?php endif; ?>
+		</div>
+		<div class="nav-reading__next">
 	<?php if ( $next_chapter !== '/' ) : ?>
-	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e( 'Next', 'pressbooks-book' ); ?></a></div>
+		<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Chapter', 'pressbooks-book' ); ?><span class="icon icon-arrow-right"></span></a>
 	<?php endif; ?>
 	</div>
+		<div class="nav-reading__up"><a class="icon icon-arrow-up" href="#"></a></div>
 	</nav><?php
   endif;
 }

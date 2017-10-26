@@ -1,6 +1,6 @@
-<div class="section section-info">
+<section class="section section-info section-toggle js-section">
 	<h2 class="section__title section-info__title"><?php _e( 'Information on this Book', 'pressbooks-book' ); ?></h2>
-	<div class="section-info__inner">
+	<div class="section-info__inner section-toggle__content">
 		<div class="section-info__inner__content">
 			<div class="section-info__subsection section-info__description">
 				<h3 class="section__subtitle"><?php _e( 'Book Description', 'pressbooks-book' ); ?></h3>
@@ -43,6 +43,10 @@
 			</div>
 			<?php } ?>
 		</div>
-		</div>
+	</div>
+
+	<div class="section-toggle__cta">
+		<p class="section-toggle__cta__blurb"><?php _e('Click for more information', 'pressbooks-book') ?></p>
+		<a class="section-toggle__cta__button button--circle--primary icon icon-arrow-up-down js-toggle-section"></a>
 	</div>
 </section>

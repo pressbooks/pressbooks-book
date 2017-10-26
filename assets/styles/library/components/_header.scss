@@ -1,12 +1,31 @@
 .header{
-	--brand: var(--header-color);
-	--brand-hover: var(--header-color);
-	--brand-accent: var(--header-color);
+	font-family: $font-family-sans-serif;
+	padding: 1.5rem 1rem;
 
-	background-color: var(--header-bg);
-	color: var(--header-color);
-	padding: 2rem 1rem 0;
+	@media #{$breakpoint-large} {
+		padding: 4rem 1rem 3rem;
+	}
+
+	//overwrite link colors of potential book theme
+	a {
+		color: $link-color;
+		text-decoration: $link-decoration;
+
+		&:hover {
+			color: $link-hover-color;
+			text-decoration: $link-hover-decoration;
+		}
+	}
 }
+	.header--home{
+		--brand: var(--header-color);
+		--brand-hover: var(--header-color);
+		--brand-accent: var(--header-color);
+
+		background-color: var(--header-bg);
+		color: var(--header-color);
+		padding: 2rem 1rem 0;
+	}
 	.header__inner{
 		align-items: center;
 		display: flex;
@@ -14,15 +33,30 @@
 		max-width: $nav-max-width;
 		margin: 0 auto;
 	}
-
-	.header__search{
+	.header__start-container{
+		align-items: center;
 		display: none;
+
 		@media #{$breakpoint-large}{
-			display: block;
+			display: flex;
 		}
 	}
+		.header__home{
+			margin-right: 4.5rem
+		}
+		.header__search{
+
+		}
+			.header:not(.header--home) .icon-search{
+				font-size: 1.5rem;
+			}
+			.header__search__form{
+				position: absolute;
+				display: none;
+			}
 	.header__brand{
 		font-size: 1.25rem;
+		margin-bottom: 0;
 		max-width: 100%;
 		overflow: hidden;
 
@@ -50,9 +84,9 @@
 
 	.header__menu-icon {
 		display: block;
-		position: absolute;
-		top: 2rem;
-		right: 1rem;
+		position: relative;
+		//top: 2rem;
+		//right: 1rem;
 		width: 25px;
 		height: 20px;
 		z-index: 99;
@@ -69,14 +103,14 @@
 			top: 7px;
 			width: 25px;
 			height: 3px;
-			background: var(--header-color);
+			background: var(--brand);
 
 			&::before,
 			&::after {
 				width: 25px;
 				height: 3px;
 				content: '';
-				background: var(--header-color);
+				background: var(--brand);
 			}
 
 			&::before {
@@ -89,6 +123,15 @@
 				position: absolute;
 				top: 7px;
 				right: 0;
+			}
+
+			.--active &{
+				background: var(--header-color);
+
+				&::before,
+				&::after {
+					background: var(--header-color);
+				}
 			}
 		}
 
@@ -111,7 +154,7 @@
 				font-family: $font-family-sans-serif;
 				font-size: rem(24);
 				line-height: (80/24);
-				color: var(--primary-fg);
+				color: var(--header-color);
 				letter-spacing: 0;
 			}
 
@@ -128,12 +171,18 @@
 				a {
 					display: block;
 					width: 100%;
-					border-bottom: solid 1px var(--primary-fg);
+					border-bottom: solid 1px var(--header-color);
+
+					&:hover{
+						color: var(--header-color);
+					}
 
 					&:last-child {
 						border-bottom: 0;
 					}
 				}
+
+
 			}
 		}
 	}

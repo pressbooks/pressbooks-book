@@ -26,63 +26,76 @@ if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strt
 	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, "script", "facebook-jssdk"));</script>
-<?php }
-if ( is_front_page() ) : ?>
+<?php } ?>
 
-	<section class="header">
+	<section class="header <?php echo is_front_page() ? 'header--home' : '' ?>">
 		<div class="header__inner">
-<div class="header__search"><a class="icon icon-search"></a></div>
-
-			<h1 class="header__brand"><a class="header__logo" href="<?php echo network_home_url(); ?>"><span class="clip"><?php switch_to_blog( 1 );
+			<div class="header__start-container">
+				<?php if( ! is_front_page() ){?>
+					<a class="header__home" href="<?php echo home_url( '/' ); ?>">Home</a>
+<?php
+				}?>
+				<div class="header__search">
+					<a class="icon icon-search"></a>
+					<div class="header__search__form">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
+			</div>
+			<h2 class="header__brand"><a class="header__logo" href="<?php echo network_home_url(); ?>"><span class="clip"><?php switch_to_blog( 1 );
 			echo get_bloginfo( 'name', 'display' );
-			restore_current_blog(); ?></span><?php // TODO ?></a></h1>
-
-			<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
-
-			<nav class="header__nav js-header-nav" id="navigation">
-					<?php if ( ! is_user_logged_in() ) { ?>
-						<a href="<?php echo wp_login_url( get_permalink() ) ?>"><?php _e( 'Sign in', 'pressbooks-book' ) ?></a>
-					<?php } else { ?>
-						<?php if ( is_super_admin() || is_user_member_of_blog() ) { ?>
-						<a href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'pressbooks-book' ); ?></a>
-						<span class="sep">/</span>
+			restore_current_blog(); ?></span><?php // TODO ?></a></h2>
+			<div class="header__end-container">
+				<nav class="header__nav js-header-nav" id="navigation">
+						<?php if ( ! is_user_logged_in() ) { ?>
+							<a href="<?php echo wp_login_url( get_permalink() ) ?>"><?php _e( 'Sign in', 'pressbooks-book' ) ?></a>
+						<?php } else { ?>
+							<?php if ( is_super_admin() || is_user_member_of_blog() ) { ?>
+							<a href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'pressbooks-book' ); ?></a>
+							<span class="sep">/</span>
+							<?php } ?>
+							<a href="<?php echo wp_logout_url( get_permalink() ); ?>"><?php _e( 'Sign out', 'pressbooks-book' ); ?></a>
 						<?php } ?>
-						<a href="<?php echo wp_logout_url( get_permalink() ); ?>"><?php _e( 'Sign out', 'pressbooks-book' ); ?></a>
-					<?php } ?>
-			</nav>
+				</nav>
+				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
+			</div>
 		</div>
 	</section>
-<?php else : ?>
-	<div class="nav-container">
-		<nav>
-			<!-- Book Title -->
-			<h1 class="book-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div class="sub-nav-left">
-				<!-- Logo -->
-				<h2 class="pressbooks-logo"><a href="<?php echo esc_url( network_home_url() ); ?>"><?php echo get_site_option( 'site_name' ); ?></a></h2>
-			</div> <!-- end .sub-nav-left -->
-			<div class="sub-nav-right">
+<?php
+//book reading navigation bar
+if ( ! is_front_page() ) { ?>
+
+	<div class="reading-header">
+		<nav class="reading-header__inner">
+			<div class="reading-header__toc js-toc-toggle-con">
+				<span class="reading-header__toc__title">Table of contents</span>
+				<a class="icon icon-arrow-up-down js-toc-toggle"></a>
+			</div>
+
+			<h1 class="reading-header__title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+			<div class="reading-header__end-container">
 				<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
 				<!-- Buy -->
-				<div class="buy">
-					<a href="<?php echo get_option( 'home' ); ?>/buy" class="button-red"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
-				</div>
+				<a class="button button--primary button--header" href="<?php echo get_option( 'home' ); ?>/buy"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
 				<?php endif; ?>
-			</div> <!-- end .sub-nav-right -->
+			</div>
 		</nav>
-		<div class="sub-nav">
-			<?php get_search_form(); ?>
-			<!-- Author Name -->
-			<div class="author-wrap">
-				<?php $metadata = pb_get_book_information(); ?>
-				<?php if ( ! empty( $metadata['pb_author'] ) ) : ?>
-				<h3><?php echo $metadata['pb_author']; ?></h3>
-				<?php endif; ?>
-			</div> <!-- end .author-name -->
-		</div><!-- end .sub-nav -->
-	</div> <!-- end .nav-container -->
+	</div>
+<?php
+global $blog_id;
+$can_read = current_user_can_for_blog( $blog_id, 'read' );
+$can_read_private = current_user_can_for_blog( $blog_id, 'read_private_posts' );
+$book_structure = pb_get_book_structure();
+$book_information = pb_get_book_information();
+$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
+$should_parse_subsections = pb_should_parse_subsections();?>
+<section class="section-reading-toc js-toc">
+<?php include(locate_template('content-toc.php')); ?>
+</section>
+
 
 	<div class="wrapper"> <!-- for sitting footer at the bottom of the page -->
 		<div id="wrap">
 			<div id="content">
-<?php endif;
+<?php }

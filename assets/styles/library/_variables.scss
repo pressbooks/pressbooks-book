@@ -4,15 +4,17 @@ $spacer: 1rem !default;
 $nav-max-width:     1440px;
 $content-max-width: 1330px;
 $content-box-max-width: 1200px;
+$reading-page-max-width: 800px;
 
 /** Colors */
 $brand:        #B01109 !default;
 $brand-hover:  #770600 !default;
 $brand-accent: #015D75 !default;
 
-$brand-bg:     #FFFFFF !default;
-$brand-bg-alt: #F9FDFF !default;
-$brand-text:   #000 !default;
+$brand-bg:      #FFFFFF !default;
+$brand-bg-alt:  #F9FDFF !default;
+$brand-bg-alt2: #ECECEC !default;
+$brand-text:    #000 !default;
 
 $btn-color:    #fff !default;
 
@@ -25,6 +27,7 @@ $header-color: #fff !default;
 $footer-bg: #444444 !default;
 $footer-color: #fff !default;
 
+$book-bg:      #fff !default;
 
 $color-primary:      #b01109 !default;
 $color-accent:       #015d75 !default;
@@ -243,3 +246,28 @@ $zindex-modal-backdrop:     1040 !default;
 $zindex-modal:              1050 !default;
 $zindex-popover:            1060 !default;
 $zindex-tooltip:            1070 !default;
+
+
+$icon-arrow-down: "\61";
+$icon-arrow-right: "\62";
+$icon-arrow-up: "\63";
+$icon-book: "\64";
+$icon-graph: "\67";
+$icon-like: "\68";
+$icon-share-books: "\6a";
+$icon-speach-bubble: "\6b";
+$icon-twitter: "\6c";
+$icon-facebook: "\65";
+$icon-search: "\6d";
+$icon-cc: "\66";
+$icon-cc-by: "\6e";
+$icon-google-plus: "\6f";
+$icon-cc-nc: "\69";
+$icon-cc-share: "\70";
+$icon-cc-sa: "\71";
+$icon-cc-zero: "\72";
+$icon-cc-pd: "\73";
+$icon-cc-nd: "\74";
+$icon-cc-nc-jp: "\75";
+$icon-cc-nc-eu: "\76";
+$icon-cc-remix: "\77";
