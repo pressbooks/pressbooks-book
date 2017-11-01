@@ -63,7 +63,7 @@
 				if ( pb_social_media_enabled() ) {	?>
 					<section class="section section-reading-meta">
 						<div class="section-reading-meta__inner">
-							<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e('Share this book on social medias','pressbooks-book'); ?></h2>
+							<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e('Share This Book','pressbooks-book'); ?></h2>
 							<div class="section-reading-meta__share">
 								<?php
 									echo \PressbooksBook\Helpers\share_icons();

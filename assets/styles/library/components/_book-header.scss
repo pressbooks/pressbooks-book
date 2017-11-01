@@ -151,6 +151,10 @@
 .book-header__license__text{
 	margin-bottom:.5rem;
 	margin-top:.5rem;
+	text-align: center;
+	@media #{$breakpoint-tablet-and-up}{
+		text-align: left;
+	}
 }
 .book-header__cta {
 	align-items: center;

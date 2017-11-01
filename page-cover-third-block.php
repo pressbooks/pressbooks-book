@@ -1,5 +1,5 @@
 <section class="section section-info section-toggle js-section">
-	<h2 class="section__title section-info__title"><?php _e( 'Information on this Book', 'pressbooks-book' ); ?></h2>
+	<h2 class="section__title section-info__title"><?php _e( 'Book Information', 'pressbooks-book' ); ?></h2>
 	<div class="section-info__inner section-toggle__content">
 		<div class="section-info__inner__content">
 			<div class="section-info__subsection section-info__description">

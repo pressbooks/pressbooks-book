@@ -86,7 +86,12 @@
 	.toc__part{
 
 	}
-		.toc__part__title{
+
+	.js-toc-part-toggle {
+		cursor: pointer;
+	}
+
+	.toc__part__title{
 			background-color: var(--body-bg-alt);
 			font-size: 1rem;
 			margin-bottom: 3px;
@@ -100,10 +105,6 @@
 				font-size: 1.5rem;
 				padding: 1.875rem 1rem;
 			}
-
-      a {
-        cursor: pointer;
-      }
 
 			.icon{
 				margin-left: auto;

@@ -6,10 +6,11 @@
 	background-color: $footer-bg;
 	color: $footer-color;
 	font-family: $font-family-sans-serif;
-	padding: 2rem 1rem 2.25rem;
+	padding: 4rem 1rem 2.25rem;
 
 	@media #{$breakpoint-tablet-and-up}{
 		flex-direction: row;
+    padding-top: 2rem;
 		padding-bottom: 2.5rem;
 	}
 

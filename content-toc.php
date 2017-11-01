@@ -7,7 +7,7 @@
 	<?php foreach ( $book_structure['part'] as $part ) : ?>
 		<li class="toc__part js-toc-part<?php if ( count( $book_structure['part'] ) == 1 ) : ?> open<?php endif; ?>">
 			<?php if ( count( $book_structure['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
-				<h3 class="toc__part__title">
+				<h3 class="toc__part__title js-toc-part-toggle">
 							<span class="inner-content"><?php
 								if ( $part['has_post_content'] ) { ?>
 								<a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php
@@ -21,7 +21,7 @@
 
 							if( ! empty($part['chapters'] )){
 								?>
-								<a class="icon icon-arrow-up-down js-toc-part-toggle"></a><?php
+								<a class="icon icon-arrow-up-down"></a><?php
 							}
 							?></span>
 				</h3>

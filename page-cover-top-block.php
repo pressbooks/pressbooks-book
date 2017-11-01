@@ -83,11 +83,11 @@
 		</div>
 		<div class="book-header__cta">
 			<a class="button button--primary button--header" href="<?php echo $first_chapter; ?>">
-				<?php _e( 'Read the Book', 'pressbooks-book' ); ?>
+				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
 			</a><?php
 			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 				?><a class="button button--secondary button--header" href="<?php echo home_url( '/buy' ); ?>">
-					<?php _e( 'Buy the Book', 'pressbooks-book' ); ?>
+					<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
 				</a><?php
 			} ?>
 		</div> <!-- end .call-to-action -->
