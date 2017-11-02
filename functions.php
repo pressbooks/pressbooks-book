@@ -191,23 +191,23 @@ add_filter( 'excerpt_more', 'new_pressbooks_excerpt_more' );
  * @param bool $echo
  */
 function pb_get_links( $echo = true ) {
-	global $first_chapter, $prev_chapter, $next_chapter;
+	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
 	$first_chapter = pb_get_first();
 	$prev_chapter = pb_get_prev();
 	$next_chapter = pb_get_next();
 	if ( $echo ) :
-	?><nav class="nav-reading" role="navigation">
-		<div class="nav-reading__previous">
-	<?php if ( $prev_chapter !== '/' ) : ?>
-	<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Chapter', 'pressbooks-book' ); ?></a>
-	<?php endif; ?>
+	?><nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
+		<div class="nav-reading__previous js-nav-previous">
+	<?php if ( $prev_chapter !== '/' ) { ?>
+		<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Chapter', 'pressbooks-book' ); ?></a>
+	<?php } ?>
 		</div>
-		<div class="nav-reading__next">
+		<div class="nav-reading__next js-nav-next">
 	<?php if ( $next_chapter !== '/' ) : ?>
-		<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Chapter', 'pressbooks-book' ); ?><span class="icon icon-arrow-right"></span></a>
+			<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Chapter', 'pressbooks-book' ); ?><span class="icon icon-arrow-right"></span></a>
 	<?php endif; ?>
 	</div>
-		<div class="nav-reading__up"><a class="icon icon-arrow-up" href="#"></a></div>
+		<div class="nav-reading__up"><a class="icon icon-arrow-up" href="#"></a><a href="#" class=" nav-reading__up__text">Back to top</a></div>
 	</nav><?php
   endif;
 }

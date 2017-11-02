@@ -6,11 +6,28 @@
 	background-color: $footer-bg;
 	color: $footer-color;
 	font-family: $font-family-sans-serif;
-	padding: 4rem 1rem 2.25rem;
+	padding: 2rem 1rem 2.25rem;
+
+	//keeping room for the meta collapse icon
+	&.footer--home{
+		padding-top: 4rem;
+	}
+
+	&.footer--reading{
+		padding-bottom: 7rem;
+
+		&.footer--multipage{
+			padding-bottom: 9.5rem;
+		}
+
+		@media #{$breakpoint-large}{
+			padding-bottom: 2.5rem;
+		}
+	}
 
 	@media #{$breakpoint-tablet-and-up}{
 		flex-direction: row;
-    padding-top: 2rem;
+		padding-top: 2rem;
 		padding-bottom: 2.5rem;
 	}
 
@@ -41,6 +58,11 @@
 	}
 		.footer__pressbooks__icon{
 			margin: 0 1rem;
+
+			> .icon--svg{
+				height: 45px;
+				width: 45px;
+			}
 		}
 		.footer__pressbooks__links{
 			margin-bottom: 1.5rem;
@@ -60,14 +82,12 @@
 			padding-left: 0;
 
 			li{
-				line-height: 1;
 				padding: .125rem 0;
 			}
 
-			li + li>a{
-				border-left: 1px solid var(--footer-color);
-				margin-left: 1rem;
-				padding-left: 1rem;
+			li > a{
+				padding-left: .5rem;
+				padding-right: .5rem;
 			}
 		}
 			.footer__pressbooks__links__title{

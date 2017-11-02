@@ -19,9 +19,17 @@
 	}
 }
 	.section-reading-meta__inner{
+		display: flex;
+		flex-wrap: wrap;
 		max-width: $content-box-max-width;
 		margin:0 auto;
 	}
+
+		.section-reading-meta__subsection{
+			flex: 1;
+			min-width: 300px;
+			padding-right:2rem;
+		}
 
 	.section-reading-meta__subtitle{
 		color: var(--brand);
@@ -29,11 +37,9 @@
 
 	.section-reading-meta__share{
 		align-items: center;
-		justify-content: center;
 		display: flex;
 
 		@media #{$breakpoint-tablet-and-up}{
-			justify-content: flex-start;
 
 			& > :first-child{
 				margin-left: 0;

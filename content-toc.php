@@ -8,22 +8,21 @@
 		<li class="toc__part js-toc-part<?php if ( count( $book_structure['part'] ) == 1 ) : ?> open<?php endif; ?>">
 			<?php if ( count( $book_structure['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
 				<h3 class="toc__part__title js-toc-part-toggle">
-							<span class="inner-content"><?php
-								if ( $part['has_post_content'] ) { ?>
-								<a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php
-									}
+					<span class="inner-content"><?php
+						if ( $part['has_post_content'] ) { ?>
+							<a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php
+						}
 
-									echo $part['post_title'];
+						echo $part['post_title'];
 
-									if ( $part['has_post_content'] ) {
-									?></a><?php
-							}
+						if ( $part['has_post_content'] ) {
+							?></a><?php
+						}
 
-							if( ! empty($part['chapters'] )){
-								?>
-								<a class="icon icon-arrow-up-down"></a><?php
-							}
-							?></span>
+						if( ! empty($part['chapters'] )){	?>
+							<a class="icon icon-arrow-up-down" href="javascript:void()"></a><?php
+						}
+					?></span>
 				</h3>
 			<?php } ?>
 			<div class="inner-content">
