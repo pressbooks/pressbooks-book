@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <?php if ( pb_is_public() ) : ?>
 
-				<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<span class="edit-link">', '</span>', $post->ID, 'button button--primary' ); ?>
 				<?php
 				// add part title to chapters
 				$web_options = get_option( 'pressbooks_theme_options_web' );
