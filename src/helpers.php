@@ -4,7 +4,6 @@ namespace PressbooksBook\Helpers;
 
 function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ) {
 	global $blog_id;
-
 	foreach ( $sections as $section ) {
 		if ( $section['post_status'] !== 'publish' ) {
 			if ( ! $can_read_private ) {
@@ -21,7 +20,13 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			<?php if($post_type != 'chapter'){?>
 			<div class="inner-content">
 			<?php } ?>
-				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>"><?php echo pb_strip_br( $section['post_title'] );?></a>
+				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
+					<?php $chapter_number = pb_get_chapter_number( $section['post_name'] );
+					if ( $chapter_number ) {
+						echo "<span>$chapter_number</span>  ";
+					}
+					echo pb_strip_br( $section['post_title'] );?>
+				</a>
 				<?php if ( $should_parse_subsections ) {
 					$subsections = pb_get_subsections( $section['ID'] );
 					if ( $subsections ) { ?>
