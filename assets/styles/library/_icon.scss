@@ -49,8 +49,11 @@
 .icon-arrow-down:before {
   content: "\61";
 }
+.icon-arrow-left {
+  transform: rotate(180deg);
+}
 .icon-arrow-left:before {
-  content: "\78";
+  content: "\62";
 }
 .icon-arrow-right:before {
   content: "\62";
