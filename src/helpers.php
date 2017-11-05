@@ -57,6 +57,9 @@ function get_name_for_filetype( $filetype ) {
 }
 
 function license_to_icons( $license ) {
+	if ( ! $license ) {
+		return '';
+	}
 	$output = '';
 	if ( strpos( $license, 'cc' ) !== false ) {
 		$parts = explode( '-', $license );
