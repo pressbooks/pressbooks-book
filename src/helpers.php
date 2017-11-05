@@ -41,9 +41,9 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 
 function get_name_for_filetype( $filetype ) {
 	$formats = [
-		'print-pdf' => __( 'Print-Ready PDF', 'pressbooks-book' ),
-		'pdf' => __( 'PDF', 'pressbooks-book' ),
-		'mpdf' => __( 'PDF', 'pressbooks-book' ),
+		'print-pdf' => __( 'Print PDF', 'pressbooks-book' ),
+		'pdf' => __( 'Digital PDF', 'pressbooks-book' ),
+		'mpdf' => __( 'Digital PDF', 'pressbooks-book' ),
 		'epub' => __( 'EPUB', 'pressbooks-book' ),
 		'mobi' => __( 'MOBI', 'pressbooks-book' ),
 		'epub3' => __( 'EPUB3', 'pressbooks-book' ),
