@@ -92,6 +92,8 @@
 	.reading-header__title{
 		//align-self: center;
 		background-color: var(--footer-bg);
+    border-top: solid 2px var(--body-bg);
+    border-bottom: solid 2px var(--body-bg);
 		font-size: 1.5rem;
 		justify-content: center;
 		margin-bottom: 0;
@@ -99,7 +101,6 @@
 		text-transform: uppercase;
 	}
 	.reading-header__end-container{
-		background-color: var(--footer-bg);
 		display: none;
 
 		@media #{$breakpoint-large} {
