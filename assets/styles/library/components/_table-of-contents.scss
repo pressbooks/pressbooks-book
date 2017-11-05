@@ -46,7 +46,7 @@
 			font-weight: 700;
 
 			&:last-child {
-				margin-bottom: 0;
+				//margin-bottom: 0;
 			}
 		}
 
@@ -108,14 +108,13 @@
 
 			.icon{
 				margin-left: auto;
-				font-size: 1rem;
-				height: 1rem;
-				width: 1rem;
+				font-size: 1em;
+				height: 1em;
+				width: 1em;
 
 				@media #{$breakpoint-tablet-and-up} {
-					font-size: 1.5rem;
-					height: 1.5rem;
-					width: 1.5rem;
+					//height: 1.5rem;
+					//width: 1.5rem;
 				}
 			}
 
@@ -188,11 +187,48 @@
 
 	--body-bg-alt: var(--body-bg-alt2);
 
+	--brand: var(--brand-orig);
+	--brand-hover: var(--brand-hover-orig);
+	--brand-accent: var(--brand-accent-orig);
+
+	background-color: var(--body-bg);
 	display: none;
 	font-family: $font-family-sans-serif;
+	font-size: 1rem;
 	width: 100vw;
+
+	left: 0;
+	top: 100%;
+	position: absolute;
+	z-index: 100;
+
+	@media #{$breakpoint-large}{
+		--brand: var(--body-color);
+		--brand-hover: var(--body-color);
+
+
+		width: 100%;
+	}
 
 	&.--visible{
 		display:block;
+	}
+
+	.toc__front-matter,
+	.toc__back-matter,
+	.toc__part__title{
+		font-size: 1rem;
+
+		li{
+			@media #{$breakpoint-tablet-and-up} {
+				padding: 1.25rem 1rem;
+			}
+		}
+	}
+
+	.toc__part__title{
+		@media #{$breakpoint-tablet-and-up} {
+			padding: 1.25rem 1rem;
+		}
 	}
 }

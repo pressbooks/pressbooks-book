@@ -45,16 +45,63 @@
 			margin-right: 4.5rem
 		}
 		.header__search{
-
+			//display: flex;
+			position: relative;
 		}
 			.header:not(.header--home) .icon-search{
 				font-size: 1.5rem;
 			}
 			.header__search__form{
-				position: absolute;
 				display: none;
+				position: absolute;
+				left:100%;
+				top:0;
+
+				.search--visible &{
+					display: block;
+				}
+
+				label{
+					height:0;
+					overflow: hidden;
+					position: absolute;
+					width:0;
+				}
+
+				input[type=text]{
+					background-color: transparent;
+					border:0 none;
+					border-bottom:2px solid var(--body-color);
+					color: var(--body-color);
+
+					&:focus{
+						border-color:var(--brand);
+					}
+
+					.header--home & {
+						color: var(--header-color);
+						border-bottom:1px solid var(--header-color);
+
+						&:focus{
+							border-color:var(--brand-orig);
+						}
+					}
+					.header--reading & {
+					}
+				}
+
+				.header--home & {
+
+				}
+
+				input[type=submit]{
+					display: none;
+				}
+
+
 			}
 	.header__brand{
+		font-family: $font-family-sans-serif;
 		font-size: 1.25rem;
 		margin-bottom: 0;
 		max-width: 100%;
@@ -69,16 +116,16 @@
 		}
 	}
 	.header__logo{
-		&::before{
-			background-image:url(../images/pressbooks-logo.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			content:"";
+		.icon--svg{
 			display: inline-block;
-			height: .65em;
+			height: .7em;
+			margin-bottom: -1px;
 			margin-right: 2px;
-			width: .65em;
+			width: .7em;
+
+			.header--reading &{
+				color: var(--brand);
+			}
 		}
 	}
 

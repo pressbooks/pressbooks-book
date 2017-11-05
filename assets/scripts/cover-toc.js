@@ -33,5 +33,12 @@ jQuery(
 			$target.parents('.js-section').toggleClass('section-toggle--visible');
 			$target.toggleClass('--visible');
 		});
+
+		//toggle search form
+		$(document.body).on('click', '.js-toggle-search', function(e){
+			var $target = $(this);
+			$target.parents('.js-search').toggleClass('search--visible');
+			$target.toggleClass('--visible');
+		});
 	}
 );

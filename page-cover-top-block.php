@@ -78,8 +78,8 @@
 
 		<?php global $first_chapter; ?>
 		<div class="book-header__license">
-			<div class="book-header__license__icons license-icons"><?php echo \PressbooksBook\Helpers\license_to_icons( $book_information['pb_book_license'] ); // TODO ?></div>
-			<span class="book-header__license__text license-text"><?php echo \PressbooksBook\Helpers\license_to_text( $book_information['pb_book_license'] ); // TODO ?></span>
+			<div class="book-header__license__icons license-icons"><?php echo \PressbooksBook\Helpers\license_to_icons( @$book_information['pb_book_license'] ); // TODO ?></div>
+			<span class="book-header__license__text license-text"><?php echo \PressbooksBook\Helpers\license_to_text( @$book_information['pb_book_license'] ); // TODO ?></span>
 		</div>
 		<div class="book-header__cta">
 			<a class="button button--primary button--header" href="<?php echo $first_chapter; ?>">

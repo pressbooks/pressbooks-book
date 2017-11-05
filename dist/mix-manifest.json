@@ -1,14 +1,14 @@
 {
-    "/scripts/navigation.js": "/scripts/navigation.js?id=59022f4554b4e7fc577f",
-    "/styles/a11y.css": "/styles/a11y.css?id=67ce4802af40e4fea4f2",
-    "/styles/cover.css": "/styles/cover.css?id=299cd1c55cf58cd43616",
-    "/styles/book-info.css": "/styles/book-info.css?id=bab08346efe18106290e",
-    "/styles/structure.css": "/styles/structure.css?id=73555eac1f448b204588",
-    "/scripts/a11y.js": "/scripts/a11y.js?id=3faa829da7a4aa2b976a",
-    "/scripts/columnizer.js": "/scripts/columnizer.js?id=465e1b0d7a57022d67ab",
-    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=5530f96084c639f108ac",
+    "/scripts/navigation.js": "/scripts/navigation.js?id=da5a35ecfd5be652cbc3",
+    "/styles/a11y.css": "/styles/a11y.css?id=538d33efa2767a61a14c",
+    "/styles/cover.css": "/styles/cover.css?id=a9af2ad69c7fc2fdfdfa",
+    "/styles/book-info.css": "/styles/book-info.css?id=7dc1ea533ee9fe9abbfc",
+    "/styles/structure.css": "/styles/structure.css?id=4d6a5286965e997c35b6",
+    "/scripts/a11y.js": "/scripts/a11y.js?id=521bd539026f3fd0e5dc",
+    "/scripts/columnizer.js": "/scripts/columnizer.js?id=0e90db68ccbbe09442a5",
+    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=38a5db971bef7959cb56",
     "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343",
-    "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=377f3e7db8792cf3a329",
-    "/scripts/toc.js": "/scripts/toc.js?id=41dec06e39b599e9d22d",
-    "/scripts/dropdown.js": "/scripts/dropdown.js?id=910e4b8546bb78437542"
+    "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=3461c29bbab2da924173",
+    "/scripts/toc.js": "/scripts/toc.js?id=3460b3a40422c5866082",
+    "/scripts/dropdown.js": "/scripts/dropdown.js?id=f8f6c3810f4083a7f59a"
 }

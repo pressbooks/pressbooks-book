@@ -46,8 +46,32 @@
 						}
 						global $multipage;
 						if ( $multipage ) {
-							$args = [ 'before' => '<p class="pb-nextpage">' . __( 'Continue reading:', 'pressbooks' ) ];
-							wp_link_pages( $args );
+//							$args = [
+//								'before' => '<nav class="nav-reading--page">',
+//								'after' => '</nav>',
+//								'next_or_number' => 'next',
+//							];
+//							wp_link_pages( $args );
+
+							?>
+							<div class="nav-reading--page"><?php
+
+								global $page, $numpages;
+								if( $page > 1 ){?>
+									<div class="nav-reading--page__previous">
+										<?php echo _wp_link_page($page-1);?><span class="icon icon-arrow-left"></span><?php
+										echo __( 'Previous Page', 'pressbooks-book' ).'</a>' ?>
+									</div><?php
+								}
+
+								if ( $page < $numpages ) {?>
+									<div class="nav-reading--page__next">
+										<?php echo _wp_link_page($page+1);?><?php
+										echo __( 'Next Page', 'pressbooks-book' ).'<span class="icon icon-arrow-right"></span></a>' ?>
+									</div><?php
+								}	?>
+
+							</div><?php
 						}
 					} else {
 						echo apply_filters( 'the_content', $post->post_content );
@@ -63,11 +87,21 @@
 				if ( pb_social_media_enabled() ) {	?>
 					<section class="section section-reading-meta">
 						<div class="section-reading-meta__inner">
-							<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e('Share This Book','pressbooks-book'); ?></h2>
-							<div class="section-reading-meta__share">
-								<?php
-									echo \PressbooksBook\Helpers\share_icons();
-								?>
+							<div class="section-reading-meta__subsection">
+								<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e('Licenses','pressbooks-book'); ?></h2>
+								<?php if ( pb_is_public() ) { ?>
+									<div class="">
+										<?php echo pressbooks_copyright_license(); ?>
+									</div>
+								<?php } ?>
+							</div>
+							<div class="section-reading-meta__subsection">
+								<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e('Share This Book','pressbooks-book'); ?></h2>
+								<div class="section-reading-meta__share">
+									<?php
+										echo \PressbooksBook\Helpers\share_icons();
+									?>
+								</div>
 							</div>
 						</div>
 					</section><?php
