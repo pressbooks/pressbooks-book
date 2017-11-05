@@ -66,6 +66,7 @@
 	@media #{$breakpoint-large}{
 		bottom: 0;
 		color: var(--body-color);
+		background-color: var(--body-bg);
 		font-size: 1.25rem;
 		height: auto;
 		position: absolute;
