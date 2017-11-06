@@ -273,9 +273,11 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
  * ------------------------------------------------------------------------ */
 
 /**
+ * @param bool $show_custom_copyright (optional, default is true)
+ *
  * @return string
  */
-function pressbooks_copyright_license() {
+function pressbooks_copyright_license( $show_custom_copyright = true ) {
 	$metadata = \Pressbooks\Book::getBookInformation();
 
 	if ( empty( $metadata['pb_book_license'] ) ) {
@@ -285,7 +287,7 @@ function pressbooks_copyright_license() {
 	} else {
 		$all_rights_reserved = false;
 	}
-	if ( ! empty( $metadata['pb_custom_copyright'] ) ) {
+	if ( ! empty( $metadata['pb_custom_copyright'] ) && $show_custom_copyright ) {
 		$has_custom_copyright = true;
 	} else {
 		$has_custom_copyright = false;
