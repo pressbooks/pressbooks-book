@@ -40,17 +40,16 @@ function pressbooks_book_info_page() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
-	//if ( is_front_page() ) {
-		wp_enqueue_style( 'book/cover', $assets->getPath( 'styles/cover.css' ), [], null, 'all' );
-		wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700' );
+	wp_enqueue_style( 'book/cover', $assets->getPath( 'styles/cover.css' ), [], null, 'all' );
+	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700' );
 
-		// Sharer.js
-		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
-		wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), [ 'jquery' ], null );
-		wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), [ 'jquery' ], null );
-		wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), [ 'jquery' ], null );
-	//}
+	// Sharer.js
+	wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
+	wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), [ 'jquery' ], null );
+	wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), [ 'jquery' ], null );
+	wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), [ 'jquery' ], null );
 }
+
 add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
 
 /* ------------------------------------------------------------------------ *
@@ -90,7 +89,8 @@ function pb_enqueue_scripts() {
 		//wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
 		//wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
 
-		$deps = [ 'pressbooks/structure', 'pressbooks/webfonts' ];
+		// $deps = [ 'pressbooks/structure', 'pressbooks/webfonts' ];
+		$deps = [];
 
 		if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
 			wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), $deps, get_option( 'pressbooks_last_custom_css' ), 'screen' );

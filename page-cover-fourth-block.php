@@ -16,21 +16,21 @@
 							<dt class="section__subtitle section-meta__subtitle"><?php echo $val; ?></dt>
 							<dd class=""><?php if ( 'pb_publication_date' === $key ) {
 									$book_information[ $key ] = date_i18n( 'F j, Y', $book_information[ $key ] );
-								} elseif ( 'pb_hashtag' === $key ) {
-									$hashtag = $book_information[ $key ];
-									$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
-								} elseif ( 'pb_book_license' === $key ) {
-									$book_information[ $key ] = pressbooks_copyright_license();
-								}
+} elseif ( 'pb_hashtag' === $key ) {
+	$hashtag = $book_information[ $key ];
+	$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
+} elseif ( 'pb_book_license' === $key ) {
+	$book_information[ $key ] = pressbooks_copyright_license();
+}
 								echo $book_information[ $key ]; ?></dd>
 							</div>
 						<?php }
-					} ?>
+				} ?>
 			</dl>
 		</div>
 	</div>
 	<div class="section-toggle__cta">
-		<p class="section-toggle__cta__blurb"><?php _e('Click for more information', 'pressbooks-book') ?></p>
+		<p class="section-toggle__cta__blurb"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></p>
 		<a class="section-toggle__cta__button button--circle--primary icon icon-arrow-up-down js-toggle-section"></a>
 	</div>
 </section>

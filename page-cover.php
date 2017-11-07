@@ -15,12 +15,12 @@ if ( pb_is_public() ) {
 		the_post();
 	}
 
-	include(locate_template('page-cover-top-block.php'));
-	include(locate_template('page-cover-second-block.php'));
-	include(locate_template('page-cover-third-block.php'));
-	include(locate_template('page-cover-fourth-block.php'));
+	include( locate_template( 'page-cover-top-block.php' ) );
+	include( locate_template( 'page-cover-second-block.php' ) );
+	include( locate_template( 'page-cover-third-block.php' ) );
+	include( locate_template( 'page-cover-fourth-block.php' ) );
 } else {
-	include(locate_template('page-cover-private-block.php'));
+	include( locate_template( 'page-cover-private-block.php' ) );
 }
 
 get_footer();

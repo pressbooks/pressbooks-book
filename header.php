@@ -36,10 +36,10 @@ if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strt
 	<section class="header <?php echo is_front_page() ? 'header--home' : 'header--reading' ?>">
 		<div class="header__inner">
 			<div class="header__start-container">
-				<?php if( ! is_front_page() ){?>
+				<?php if ( ! is_front_page() ) {?>
 					<a class="header__home" href="<?php echo home_url( '/' ); ?>">Home</a>
 <?php
-				}?>
+}?>
 				<div class="header__search js-search">
 					<a class="icon icon-search js-toggle-search"></a>
 					<div class="header__search__form">
@@ -50,8 +50,8 @@ if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strt
 			<h2 class="header__brand"><a class="header__logo" href="<?php echo network_home_url(); ?>"><svg class="icon--svg">
 						<use xlink:href="#icon-pressbooks" />
 					</svg><span class="clip"><?php switch_to_blog( 1 );
-			echo get_bloginfo( 'name', 'display' );
-			restore_current_blog(); ?></span><?php // TODO ?></a></h2>
+					echo get_bloginfo( 'name', 'display' );
+					restore_current_blog(); ?></span><?php // TODO ?></a></h2>
 			<div class="header__end-container">
 				<nav class="header__nav js-header-nav" id="navigation">
 						<?php if ( ! is_user_logged_in() ) { ?>
@@ -86,7 +86,7 @@ if ( ! is_front_page() ) { ?>
 				$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
 				$should_parse_subsections = pb_should_parse_subsections();?>
 				<section class="section-reading-toc js-toc">
-					<?php include(locate_template('content-toc.php')); ?>
+					<?php include( locate_template( 'content-toc.php' ) ); ?>
 				</section>
 			</div>
 

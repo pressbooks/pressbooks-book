@@ -29,7 +29,7 @@
 
 			$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
 			$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
-			if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
+if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
 				<div class="book-header__cover__downloads dropdown">
 
 					<span class="dropdown-toggle dropdown-toggle-block" data-toggle="dropdown"><?php _e( 'Download this book', 'pressbooks-book' ); ?></span>
@@ -66,7 +66,7 @@
 				<div class="book-header__share book-header__cover__share">
 					<?php if ( pb_social_media_enabled() ) {
 						echo \PressbooksBook\Helpers\share_icons();
-					}
+}
 					?>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 		<div class="book-header__share">
 			<?php if ( pb_social_media_enabled() ) {
 				echo \PressbooksBook\Helpers\share_icons();
-			}
+}
 			?>
 		</div>
 	</div>

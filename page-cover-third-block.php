@@ -19,7 +19,7 @@
 					<div class="section-info__lead-author__authors">
 						<?php
 						//TODO add author photo
-						if(0){ ?>
+						if ( 0 ) { ?>
 							<div class="section-info__lead-author__photo"><img src=""></div><?php
 						}?>
 						<span class="section-info__lead-author__name"><?php echo $book_information['pb_author']; ?></span>
@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="section-toggle__cta">
-		<p class="section-toggle__cta__blurb"><?php _e('Click for more information', 'pressbooks-book') ?></p>
+		<p class="section-toggle__cta__blurb"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></p>
 		<a class="section-toggle__cta__button button--circle--primary icon icon-arrow-up-down js-toggle-section"></a>
 	</div>
 </section>
