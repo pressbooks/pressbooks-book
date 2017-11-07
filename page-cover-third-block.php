@@ -34,7 +34,7 @@
 			<?php } ?>
 			<div class="section-info__subsection section-info__license">
 				<h3 class="section__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h3>
-				<?php echo pressbooks_copyright_license(); // TODO ?>
+				<?php echo pressbooks_copyright_license( false ); ?>
 			</div>
 			<?php if ( ! empty( $book_information['pb_keywords_tags'] ) ) { ?>
 			<div class="section-info__subsection section-info__subject">
