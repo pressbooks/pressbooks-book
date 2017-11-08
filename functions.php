@@ -428,6 +428,7 @@ function pb_social_media_enabled() {
 
 function pressbooks_book_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
+	remove_action( 'wp_head', 'wp_generator' );
 }
 
 add_action( 'after_setup_theme', 'pressbooks_book_setup' );
