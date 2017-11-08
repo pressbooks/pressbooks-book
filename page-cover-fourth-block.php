@@ -21,6 +21,15 @@
 	$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
 } elseif ( 'pb_book_license' === $key ) {
 	$book_information[ $key ] = pressbooks_copyright_license();
+} elseif ( 'pb_primary_subject' === $key ) {
+	$book_information[ $key ] = \Pressbooks\Metadata\get_subject_from_thema( $book_information[ $key ] );
+} elseif ( 'pb_additional_subjects' === $key ) {
+	$tmp = explode( ', ', $book_information[ $key ] );
+	$output = [];
+	foreach ( $tmp as $code ) {
+		$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
+	}
+	$book_information[ $key ] = implode( ', ', $output );
 }
 								echo $book_information[ $key ]; ?></dd>
 							</div>

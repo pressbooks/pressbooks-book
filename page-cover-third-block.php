@@ -36,10 +36,10 @@
 				<h3 class="section__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h3>
 				<?php echo pressbooks_copyright_license( false ); ?>
 			</div>
-			<?php if ( ! empty( $book_information['pb_keywords_tags'] ) ) { ?>
+			<?php if ( ! empty( $book_information['pb_primary_subject'] ) ) { ?>
 			<div class="section-info__subsection section-info__subject">
 				<h3 class="section__subtitle"><?php _e( 'Subject', 'pressbooks-book' ); ?></h3>
-				<p><?php echo $book_information['pb_keywords_tags']; ?></p>
+				<p><?php echo Pressbooks\Metadata\get_subject_from_thema( $book_information['pb_primary_subject'] ); ?></p>
 			</div>
 			<?php } ?>
 		</div>
