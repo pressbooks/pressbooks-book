@@ -1,0 +1,145 @@
+//============================================================================//
+//                                   Textboxes                                //
+//============================================================================//
+
+@import '../utilities';
+
+.textbox {
+  padding: $textbox-padding-top $textbox-padding-right $textbox-padding-bottom $textbox-padding-left;
+  margin: $textbox-margin-top $textbox-margin-right $textbox-margin-bottom $textbox-margin-left;
+  font-family: $textbox-font-family;
+  font-size: if-map-get($textbox-font-size, $type);
+  font-style: $textbox-font-style;
+  font-weight: $textbox-font-weight;
+  line-height: if-map-get($textbox-line-height, $type);
+  text-align: $textbox-text-align;
+  border-style: $textbox-border-style;
+  border-width: $textbox-border-width;
+  border-radius: $textbox-border-radius;
+
+  p {
+    margin-top: $textbox-para-margin-top;
+    margin-bottom: $textbox-para-margin-bottom;
+    text-indent: 0;
+  }
+
+  .textbox-caption {
+    display: block;
+    margin: 0;
+    font-family: $textbox-caption-font-family;
+    font-size: if-map-get($textbox-caption-font-size, $type);
+    font-style: $textbox-caption-font-style;
+    font-weight: $textbox-caption-font-weight;
+  }
+
+  &.shaded {
+    background-color: $textbox-shaded-background-color;
+  }
+}
+
+@mixin educational-textbox() {
+  float: none;
+  padding: $edu-textbox-padding-top $edu-textbox-padding-right $edu-textbox-padding-bottom $edu-textbox-padding-left;
+  margin-bottom: $edu-textbox-margin-bottom;
+  border-radius: $edu-textbox-border-radius;
+
+  h3 {
+    padding: $edu-header-padding-top $edu-header-padding-right $edu-header-padding-bottom $edu-header-padding-left;
+    margin: $edu-header-margin-top $edu-header-margin-right $edu-header-margin-bottom $edu-header-margin-left;
+    font-size: if-map-get($edu-header-font-size, $type);
+    font-style: $edu-header-font-style;
+    font-weight: $edu-header-font-weight;
+    color: $edu-header-text-color;
+    text-align: $edu-header-text-align;
+  }
+}
+
+.textbox.learning-objectives {
+  @include educational-textbox();
+
+  background-color: $learning-objectives-background;
+
+  h3 {
+    background-color: $learning-objectives-header-background;
+    border-top-right-radius: $edu-textbox-border-radius;
+    border-top-left-radius: $edu-textbox-border-radius;
+  }
+}
+
+.textbox.key-takeaways {
+  @include educational-textbox();
+
+  background-color: $key-takeaways-background;
+
+  h3 {
+    background-color: $key-takeaways-header-background;
+    border-top-right-radius: $edu-textbox-border-radius;
+    border-top-left-radius: $edu-textbox-border-radius;
+  }
+}
+
+.textbox.exercises {
+  @include educational-textbox();
+
+  background-color: $exercises-background;
+
+  h3 {
+    background-color: $exercises-header-background;
+    border-top-right-radius: $edu-textbox-border-radius;
+    border-top-left-radius: $edu-textbox-border-radius;
+  }
+}
+
+.textbox.examples {
+  @include educational-textbox();
+
+  background-color: $examples-background;
+
+  h3 {
+    background-color: $examples-header-background;
+    border-top-right-radius: $edu-textbox-border-radius;
+    border-top-left-radius: $edu-textbox-border-radius;
+  }
+}
+
+.bcc-box {
+  @extend .textbox;
+}
+
+.bcc-highlight {
+  @extend .textbox.learning-objectives;
+}
+
+.bcc-success {
+  @extend .textbox.key-takeaways;
+}
+
+.bcc-info {
+  @extend .textbox.exercises;
+}
+
+@if $type == 'epub' {
+  @media amzn-mobi {
+    div.textbox {
+      margin: 5%;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+    }
+
+    .ugc.chapter-ugc.textbox {
+      padding-left: 10%;
+      margin: 1.5em 5% 1.5em 10%;
+      font-size: 0.9em;
+      font-style: italic;
+      border-top: 1px solid;
+    }
+
+    .ugc.chapter-ugc.textbox p.nonindent,
+    .ugc.chapter-ugc.textbox p.indent {
+      margin-right: 5%;
+      margin-left: 10%;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+	"name": "@pressbooks/buckram",
+	"version": "0.1.0",
+	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
+	"scripts": {
+		"test": "npm run lint",
+		"lint": "npm run lint:styles",
+		"lint:styles": "node_modules/stylelint/bin/stylelint.js '**/*.scss' --syntax scss"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pressbooks/buckram.git"
+	},
+	"author": "Pressbooks (Book Oven Inc.)",
+	"license": "GPL-2.0+",
+	"bugs": {
+		"url": "https://github.com/pressbooks/buckram/issues"
+	},
+	"homepage": "https://github.com/pressbooks/buckram#readme",
+	"engines": {
+		"node": ">= 6.9.4"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"stylelint": "^7.12.0",
+		"stylelint-config-standard": "^16.0.0"
+	},
+	"stylelint": {
+		"extends": "stylelint-config-standard",
+		"rules": {
+			"indentation": 2,
+			"property-no-unknown": [
+				true,
+				{
+					"ignoreProperties": [
+						"footnote-style-position",
+						"hyphenate-before",
+						"hyphenate-after",
+						"hyphenate-lines",
+						"margin-inside",
+						"margin-outside",
+						"prince-bookmark-level",
+						"prince-footnote-policy",
+						"prince-image-resolution",
+						"prince-page-group"
+					]
+				}
+			],
+			"selector-pseudo-element-no-unknown": [
+				true,
+				{
+					"ignorePseudoElements": [
+						"footnote-call"
+					]
+				}
+			]
+		}
+	}
+}

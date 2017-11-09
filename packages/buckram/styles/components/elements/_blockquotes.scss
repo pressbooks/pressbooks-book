@@ -1,0 +1,48 @@
+//============================================================================//
+//                                Blockquotes                                 //
+//============================================================================//
+
+.blockquote,
+blockquote {
+  margin: $blockquote-margin-top $blockquote-margin-right $blockquote-margin-bottom $blockquote-margin-left;
+  font-family: $blockquote-font-family;
+  font-size: $blockquote-font-size;
+  font-style: $blockquote-font-style;
+  font-weight: $blockquote-font-weight;
+  line-height: $blockquote-line-height;
+  text-align: $blockquote-align;
+}
+
+// Styling below should stay as is for web and mobi7, in theory
+
+@if $type == 'epub' {
+  @media amzn-mobi {
+    blockquote,
+    .blockquote {
+      margin: 1em 5%;
+      font-family: serif;
+      font-size: 0.9em;
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    p.bl_nonindent {
+      margin-left: 5%;
+      font-size: 0.9em;
+      font-style: normal;
+      font-weight: normal;
+      text-indent: 0;
+    }
+
+    p.bl_indent {
+      margin-left: 5%;
+      font-style: normal;
+      font-weight: normal;
+      text-indent: 1.5em;
+    }
+  }
+}
+
+@if $type == 'web' {
+  // TODO
+}

@@ -1,0 +1,65 @@
+//============================================================================//
+//                                Back Matter Pages                           //
+//============================================================================//
+
+// Bibliography
+div.bibliography p {
+  padding-left: $bibliography-padding-left;
+  font-size: $bibliography-font-size;
+  text-indent: $bibliography-text-indent;
+}
+
+// Index
+.index .ugc,
+.index .ugc p {
+  text-align: $index-align;
+}
+
+div.index {
+  .ugc {
+    column-count: $index-column-count;
+    column-gap: $index-column-gap;
+  }
+
+  div {
+    margin-bottom: $index-margin-bottom;
+  }
+
+  p,
+  .indent,
+  .no-indent {
+    padding-left: $index-para-padding-left;
+    font-size: $index-para-font-size;
+    text-align: $index-para-align;
+    text-indent: $index-para-indent;
+  }
+
+  .sub-entry {
+    padding-left: $index-sub-entry-padding-left;
+  }
+}
+
+// License
+.back-matter .license-attribution {
+  > p {
+    text-align: $section-license-align;
+    line-height: $section-license-line-height;
+    font-size: $section-license-font-size;
+    font-style: $section-license-font-style;
+    margin-top: $section-license-margin-top;
+    page-break-inside: avoid;
+  }
+
+  img {
+    margin-bottom: $section-license-image-margin-bottom;
+  }
+}
+
+@if $type == 'epub' {
+  @media amzn-mobi {
+    .back-matter .license-attribution img {
+      width: $section-license-image-width !important;
+      height: $section-license-image-height !important;
+    }
+  }
+}
