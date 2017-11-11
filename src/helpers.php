@@ -16,7 +16,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 				}
 			}
 		} ?>
-		<li class="<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
+		<li class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
 			<?php if($post_type != 'chapter'){?>
 			<div class="inner-content">
 			<?php } ?>

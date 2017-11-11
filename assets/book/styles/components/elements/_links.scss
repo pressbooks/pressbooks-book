@@ -2,6 +2,19 @@
 //                                   Links                                    //
 //============================================================================//
 
-a {
-  text-decoration: $link-text-decoration;
+@if $type != 'web' {
+  a {
+    text-decoration: $link-text-decoration;
+  }
+}
+
+@else {
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter {
+    a {
+      text-decoration: $link-text-decoration;
+    }
+  }
 }
