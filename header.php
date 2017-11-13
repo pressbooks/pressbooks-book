@@ -75,8 +75,10 @@ if ( ! is_front_page() ) { ?>
 	<div class="reading-header">
 		<nav class="reading-header__inner">
 			<div class="reading-header__toc js-toc-toggle-con">
-				<span class="reading-header__toc__title">Table of contents</span>
-				<a class="icon icon-arrow-up-down js-toc-toggle" href="javascript:void()"></a>
+				<a class="js-toc-toggle" href="javascript:void()">
+					<span class="reading-header__toc__title">Table of contents</span>
+					<span class="icon icon-arrow-up-down" ></span>
+				</a>
 				<?php
 				global $blog_id;
 				$can_read = current_user_can_for_blog( $blog_id, 'read' );

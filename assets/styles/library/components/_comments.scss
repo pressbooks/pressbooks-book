@@ -1,123 +1,125 @@
-.section-comments{
+.section-comments {
+  --brand: var(--footer-color);
+  --brand-hover: var(--footer-color);
+  --brand-accent: var(--footer-color);
 
-	--brand: var(--footer-color);
-	--brand-hover: var(--footer-color);
-	--brand-accent: var(--footer-color);
+  background-color: $footer-bg;
+  color: $footer-color;
+  font-family: $font-family-sans-serif;
+  padding: 2rem 1rem 2.25rem;
 
-	background-color: $footer-bg;
-	color: $footer-color;
-	font-family: $font-family-sans-serif;
-	padding: 2rem 1rem 2.25rem;
+  @media #{$breakpoint-tablet-and-up} {
+    padding: 4.5rem 1rem 2.5rem;
+  }
 
-	@media #{$breakpoint-tablet-and-up}{
-		padding: 4.5rem 1rem 2.5rem;
-	}
+  //overwrite link colors of potential book theme
+  a {
+    color: $link-color;
+    text-decoration: $link-decoration;
 
-	//overwrite link colors of potential book theme
-	a {
-		color: $link-color;
-		text-decoration: $link-decoration;
-
-		&:hover {
-			color: $link-hover-color;
-			text-decoration: $link-hover-decoration;
-		}
-	}
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+  }
 }
-	.section-comments__inner{
-		max-width: $reading-page-max-width;
-		margin: 0 auto;
-	}
-	.section__title.section-comments__title{
 
-		font-size: 1.5rem;
+.section-comments__inner {
+  max-width: $reading-page-max-width;
+  margin: 0 auto;
+}
 
-		:before{
-			margin: 0 auto 1rem;
-			width: 46px;
-		}
-	}
-	.section-comments__form{
+.section__title.section-comments__title {
+  font-size: 1.5rem;
 
-		max-width: 400px;
-		margin: 0 auto;
+  &::before {
+    margin: 0 auto 1rem;
+    width: 46px;
+  }
+}
 
-		@media #{$breakpoint-large}{
-			max-width: none;
-		}
-	}
+.section-comments__form {
+  max-width: 400px;
+  margin: 0 auto;
+
+  @media #{$breakpoint-large} {
+    max-width: none;
+  }
+}
 
 //TODO refactor classnames and comment_form( $comment_args )
-.comment-reply-title{
-	display: none;
+.comment-reply-title {
+  display: none;
 }
-.comment-notes{
-	text-align: center;
+
+.comment-notes {
+  text-align: center;
 }
+
 .comment-form-author,
 .comment-form-email,
 .comment-form-url,
 .comment-form-comment {
-	overflow: hidden;
-	margin-bottom: 1.25rem;
-	margin-top: 0;
-	@media #{$breakpoint-large}{
-		margin-bottom: 1.25rem;
-	}
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+
+  @media #{$breakpoint-large} {
+    margin-bottom: 1.25rem;
+  }
 }
 
 .comment-form-author {
+  // TODO
 }
 
 .comment-form-comment {
+  margin-bottom: 1.25rem;
 
-	margin-bottom: 1.25rem;
-
-	@media #{$breakpoint-large}{
-		float: right;
-		margin-bottom: 0;
-	}
+  @media #{$breakpoint-large} {
+    float: right;
+    margin-bottom: 0;
+  }
 }
 
 #commentform label {
-	display: block;
-	font-size: .875rem;
+  display: block;
+  font-size: 0.875rem;
 }
 
 #commentform input,
 #commentform textarea {
-	padding: $input-btn-padding-y $input-btn-padding-x;
-	width: 400px;
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  width: 400px;
 
-	@media #{$breakpoint-large}{
-		width: 350px;
-	}
-
+  @media #{$breakpoint-large} {
+    width: 350px;
+  }
 }
 
 #commentform input {
-	font-size: 0.875em;
+  font-size: 0.875em;
 }
 
 #respond .form-allowed-tags {
-	width: 350px;
-	margin: 10px 0 0 170px;
-	font-size: 0.7em;
-	line-height: 1.2em;
+  width: 350px;
+  margin: 10px 0 0 170px;
+  font-size: 0.7em;
+  line-height: 1.2em;
 }
 
 .form-submit {
-	margin-top: 2rem;
-	text-align: center;
+  margin-top: 2rem;
+  text-align: center;
 
-	@media #{$breakpoint-large}{
-		float: right;
-		//margin-top: 1rem;
-		width: 350px;
-	}
+  @media #{$breakpoint-large} {
+    float: right;
+    //margin-top: 1rem;
+    width: 350px;
+  }
 }
 
 .form-submit input#submit {
-	height: auto;
-	width: auto;
+  height: auto;
+  width: auto;
 }

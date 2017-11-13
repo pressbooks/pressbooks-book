@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "pressbooks-theme";
-  src: url("../fonts/pressbooks-theme.woff") format("woff"),
-    url("../fonts/pressbooks-theme.ttf") format("truetype");
+  font-family: 'pressbooks-theme';
+  src: url('../fonts/pressbooks-theme.woff') format('woff'),
+    url('../fonts/pressbooks-theme.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-[data-icon]:before {
-  font-family: "pressbooks-theme" !important;
+[data-icon]::before {
+  font-family: 'pressbooks-theme' !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -27,12 +27,12 @@
   font-size: 1.875rem;
   width: 1.875rem;
   height: 1.875rem;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   text-decoration: none !important;
 }
 
-.icon:before{
-  font-family: "pressbooks-theme" !important;
+.icon::before {
+  font-family: 'pressbooks-theme' !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -46,83 +46,108 @@
   height: 1em;
 }
 
-.icon-arrow-down:before {
-  content: "\61";
+.icon-arrow-down::before {
+  content: '\61';
 }
-.icon-arrow-left:before {
-  content: "\78";
+
+.icon-arrow-left::before {
+  content: '\78';
 }
-.icon-arrow-right:before {
-  content: "\62";
+
+.icon-arrow-right::before {
+  content: '\62';
 }
-.icon-arrow-up:before {
-  content: "\63";
+
+.icon-arrow-up::before {
+  content: '\63';
 }
+
 .icon-arrow-up-down {
-  &:before {
-    content: "\61";
+  &::before {
+    content: '\61';
   }
-  &.--visible:before {
-    content: "\63";
+
+  &.--visible::before {
+    content: '\63';
   }
 }
-.icon-book:before {
-  content: "\64";
+
+.icon-book::before {
+  content: '\64';
 }
-.icon-graph:before {
-  content: "\67";
+
+.icon-graph::before {
+  content: '\67';
 }
-.icon-like:before {
-  content: "\68";
+
+.icon-like::before {
+  content: '\68';
 }
-.icon-share-books:before {
-  content: "\6a";
+
+.icon-share-books::before {
+  content: '\6a';
 }
-.icon-speach-bubble:before {
-  content: "\6b";
+
+.icon-speach-bubble::before {
+  content: '\6b';
 }
-.icon-twitter:before {
-  content: "\6c";
+
+.icon-twitter::before {
+  content: '\6c';
 }
-.icon-facebook:before {
-  content: "\65";
+
+.icon-facebook::before {
+  content: '\65';
 }
-.icon-search:before {
-  content: "\6d";
+
+.icon-search::before {
+  content: '\6d';
 }
-.icon-cc:before {
-  content: "\66";
+
+.icon-cc::before {
+  content: '\66';
 }
-.icon-cc-by:before {
-  content: "\6e";
+
+.icon-cc-by::before {
+  content: '\6e';
 }
-.icon-google-plus:before {
-  content: "\6f";
+
+.icon-google-plus::before {
+  content: '\6f';
 }
-.icon-cc-nc:before {
-  content: "\69";
+
+.icon-cc-nc::before {
+  content: '\69';
 }
-.icon-cc-share:before {
-  content: "\70";
+
+.icon-cc-share::before {
+  content: '\70';
 }
-.icon-cc-sa:before {
-  content: "\71";
+
+.icon-cc-sa::before {
+  content: '\71';
 }
-.icon-cc-zero:before {
-  content: "\72";
+
+.icon-cc-zero::before {
+  content: '\72';
 }
-.icon-cc-pd:before {
-  content: "\73";
+
+.icon-cc-pd::before {
+  content: '\73';
 }
-.icon-cc-nd:before {
-  content: "\74";
+
+.icon-cc-nd::before {
+  content: '\74';
 }
-.icon-cc-nc-jp:before {
-  content: "\75";
+
+.icon-cc-nc-jp::before {
+  content: '\75';
 }
-.icon-cc-nc-eu:before {
-  content: "\76";
+
+.icon-cc-nc-eu::before {
+  content: '\76';
 }
-.icon-cc-remix:before {
-  content: "\77";
+
+.icon-cc-remix::before {
+  content: '\77';
 }

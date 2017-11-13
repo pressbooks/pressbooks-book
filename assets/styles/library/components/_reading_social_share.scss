@@ -1,48 +1,35 @@
-.section-reading-meta{
-	background-color: $brand-bg-alt2;
-	font-family: $font-family-sans-serif;
-	padding: 2rem 1rem 4rem;
+.section-reading-meta {
+  background-color: $brand-bg-alt2;
+  font-family: $font-family-sans-serif;
+  padding: 2rem 1rem 4rem;
 
-	@media #{$breakpoint-tablet-and-up}{
-		padding: 2rem 1rem 2.25rem;
-	}
-
-	//overwrite link colors of potential book theme
-	a {
-		color: $link-color;
-		text-decoration: $link-decoration;
-
-		&:hover {
-			color: $link-hover-color;
-			text-decoration: $link-hover-decoration;
-		}
-	}
+  @media #{$breakpoint-tablet-and-up} {
+    padding: 2rem 1rem 2.25rem;
+  }
 }
-	.section-reading-meta__inner{
-		display: flex;
-		flex-wrap: wrap;
-		max-width: $content-box-max-width;
-		margin:0 auto;
-	}
 
-		.section-reading-meta__subsection{
-			flex: 1;
-			min-width: 300px;
-			padding-right:2rem;
-		}
+.section-reading-meta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $content-box-max-width;
+  margin: 0 auto;
+}
 
-	.section-reading-meta__subtitle{
-		color: var(--brand);
-	}
+.section-reading-meta__subsection {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 2rem;
+}
 
-	.section-reading-meta__share{
-		align-items: center;
-		display: flex;
+.section-reading-meta__subtitle {
+  color: var(--brand);
+}
 
-		@media #{$breakpoint-tablet-and-up}{
+.section-reading-meta__share {
+  align-items: center;
+  display: flex;
 
-			& > :first-child{
-				margin-left: 0;
-			}
-		}
-	}
+  & > :first-child {
+    margin-left: 0;
+  }
+}

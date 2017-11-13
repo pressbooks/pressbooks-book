@@ -207,15 +207,15 @@ function pb_get_links( $echo = true ) {
 		?><nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
-				<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Chapter', 'pressbooks-book' ); ?></a>
+				<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Section', 'pressbooks-book' ); ?></a>
 			<?php } ?>
 		</div>
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
-				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Chapter', 'pressbooks-book' ); ?><span class="icon icon-arrow-right"></span></a>
+				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Section', 'pressbooks-book' ); ?><span class="icon icon-arrow-right"></span></a>
 			<?php endif; ?>
 		</div>
-		<div class="nav-reading__up"><a class="icon icon-arrow-up" href="#"></a><a href="#" class=" nav-reading__up__text">Back to top</a></div>
+		<a class="nav-reading__up" href="#"><span class="icon icon-arrow-up"></span><span class="nav-reading__up__text">Back to top</span></a>
 		</nav><?php
 	endif;
 }

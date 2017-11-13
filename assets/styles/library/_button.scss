@@ -1,103 +1,107 @@
 .button {
-	border: $btn-border-width solid transparent;
-	border-radius: $btn-border-radius;
-	//cursor: pointer;
-	display: inline-block;
-	font-family: $btn-font-family;
-	font-weight: $btn-font-weight;
-	line-height: $input-btn-line-height;
-	padding: $btn-padding-y $btn-padding-x;
-	vertical-align: middle;
-	//white-space: nowrap;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	user-select: none;
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius;
+  //cursor: pointer;
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $input-btn-line-height;
+  padding: $btn-padding-y $btn-padding-x;
+  vertical-align: middle;
+  //white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
 
-	// Share hover and focus styles
-	&:focus,
-	&:hover {
-		text-decoration: none;
-	}
-	&:focus,
-	&.focus {
-		outline: 0;
-		box-shadow: $btn-focus-box-shadow;
-	}
+  // Share hover and focus styles
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
 
-	// Disabled comes first so active can properly restyle
-	&.disabled,
-	&:disabled {
-		opacity: .65;
-		box-shadow: none;
-	}
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
 
-	&:active,
-	&.active {
-		background-image: none;
-		box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
-	}
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 0.65;
+    box-shadow: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
+  }
 }
 
-.button--primary{
-	background-color: var(--brand);
-	border-color: var(--brand);
-	color: var(--button-primary-color);
-	&:hover {
-		background-color: var(--brand-hover);
-		border-color: var(--brand-hover);
-		color: var(--button-primary-color);
-	}
+.button--primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--button-primary-color);
+
+  &:hover {
+    background-color: var(--brand-hover);
+    border-color: var(--brand-hover);
+    color: var(--button-primary-color);
+  }
 }
 
-.button--secondary{
-	background-color: transparent;
-	border-color: var(--brand);
-	color: var(--brand);
-	&:hover {
-		border-color: var(--brand-hover);
-		color: var(--brand-hover);
-	}
-}
+.button--secondary {
+  background-color: transparent;
+  border-color: var(--brand);
+  color: var(--brand);
 
+  &:hover {
+    border-color: var(--brand-hover);
+    color: var(--brand-hover);
+  }
+}
 
 //TODO refactor button colors; create specific button css variables, overwrite vars above and remove button rules below
-.button--primary.button--header{
-	background-color: var(--header-color);
-	border-color: var(--header-color);
-	color: var(--header-bg);
-	&:hover {
-		background-color: transparent;
-		border-color: var(--header-color);
-		color: var(--header-color);
-	}
+.button--primary.button--header {
+  background-color: var(--header-color);
+  border-color: var(--header-color);
+  color: var(--header-bg);
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--header-color);
+    color: var(--header-color);
+  }
 }
 
-.button--secondary.button--header{
-	background-color: transparent;
-	border-color: var(--header-color);
-	color: var(--header-color);
-	&:hover {
-		background-color: var(--header-color);
-		border-color: var(--header-color);
-		color: var(--header-bg);
-	}
+.button--secondary.button--header {
+  background-color: transparent;
+  border-color: var(--header-color);
+  color: var(--header-color);
+
+  &:hover {
+    background-color: var(--header-color);
+    border-color: var(--header-color);
+    color: var(--header-bg);
+  }
 }
 
-.button--circle--primary{
-	align-items: center;
-	background-color: var(--brand);
-	color: var(--button-primary-color);
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	height: 3.75rem;
-	width: 3.75rem;
+.button--circle--primary {
+  align-items: center;
+  background-color: var(--brand);
+  color: var(--button-primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 3.75rem;
+  width: 3.75rem;
 
-	&:hover {
-		background-color: var(--brand-hover);
-		border-color: var(--brand-hover);
-		color: var(--button-primary-color);
-		text-decoration: none;
-	}
+  &:hover {
+    background-color: var(--brand-hover);
+    border-color: var(--brand-hover);
+    color: var(--button-primary-color);
+    text-decoration: none;
+  }
 }

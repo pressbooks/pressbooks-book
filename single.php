@@ -60,7 +60,7 @@
 } ?>
 			</section>
 			<?php pb_get_links(); ?>
-			<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<span class="edit-link">', '</span>', $post->ID, 'button button--primary' ); ?>
+			<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'button button--primary' ); ?>
 
 		</div><!-- #content -->
 
@@ -72,7 +72,7 @@
 								<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e( 'Licenses','pressbooks-book' ); ?></h2>
 								<?php if ( pb_is_public() ) { ?>
 									<div class="">
-										<?php echo pressbooks_copyright_license(); ?>
+										<?php echo pressbooks_copyright_license( false ); ?>
 									</div>
 								<?php } ?>
 							</div>

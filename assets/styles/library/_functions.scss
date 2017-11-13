@@ -1,7 +1,7 @@
 @function rem($pixels, $context: $base-font-size) {
-	@return #{$pixels / $context}rem;
+  @return #{$pixels / $context}rem;
 }
 
 @function percent($target, $context) {
-	@return ($target / $context) * 100%;
+  @return ($target / $context) * 100%;
 }

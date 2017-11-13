@@ -1,14 +1,14 @@
-.content-max-width{
-	max-width: $content-max-width;
-	margin: 0 auto;
+.content-max-width {
+  max-width: $content-max-width;
+  margin: 0 auto;
 }
 
-img{
-	max-width: 100%;
+img {
+  max-width: 100%;
 }
 
 .clearfix::after {
-	display: block;
-	clear: both;
-	content: "";
+  display: block;
+  clear: both;
+  content: '';
 }
