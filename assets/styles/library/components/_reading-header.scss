@@ -44,17 +44,23 @@
   //display: flex;
   //flex: 1 1 auto;
   border-top: 3px solid var(--header-color);
-  font-size: 1.25rem;
+  font-size: 1rem;
   order: 1;
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 
   @media #{$breakpoint-large} {
     border-top: 0 none;
-    max-width: 24rem;
+    max-width: 18rem;
     order: 0;
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  @media #{$breakpoint-max-content} {
+    max-width: 24rem;
+    padding-left: 3rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -82,7 +88,7 @@
       width: 1em;
 
       @media #{$breakpoint-tablet-and-up} {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
 

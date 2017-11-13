@@ -14,7 +14,7 @@
 		</div>
 		<div class="section-info__inner__content">
 			<div class="section-info__subsection section-info__lead-author">
-				<h3 class="section__subtitle"><?php _e( 'Lead Author', 'pressbooks-book' ); ?></h3>
+				<h3 class="section__subtitle"><?php _e( 'Author(s)', 'pressbooks-book' ); ?></h3>
 				<?php if ( ! empty( $book_information['pb_author'] ) ) { ?>
 					<div class="section-info__lead-author__authors">
 						<?php

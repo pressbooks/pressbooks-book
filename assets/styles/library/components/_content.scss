@@ -41,7 +41,7 @@
   position: fixed;
   width: 100vw;
 
-  @media #{$breakpoint-large} {
+  @media #{$breakpoint-max-content} {
     background-color: transparent;
     display: block;
     bottom: auto;
@@ -63,12 +63,13 @@
     padding: 0 1rem;
   }
 
-  @media #{$breakpoint-large} {
+  @media #{$breakpoint-max-content} {
     bottom: 0;
     color: var(--body-color);
     font-size: 1.25rem;
     height: auto;
     position: absolute;
+    padding: 0 1rem;
   }
 
   a {
@@ -93,7 +94,7 @@
       }
     }
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       color: var(--body-color);
       font-size: 1.25rem;
       height: auto;
@@ -119,7 +120,7 @@
   justify-content: flex-start;
   left: 0;
 
-  @media #{$breakpoint-large} {
+  @media #{$breakpoint-max-content} {
     border: 0 none;
     left: 3rem;
   }
@@ -127,7 +128,7 @@
   .icon {
     margin-right: 0.5rem;
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       margin-right: 1rem;
     }
   }
@@ -138,7 +139,7 @@
   justify-content: flex-end;
   right: 0;
 
-  @media #{$breakpoint-large} {
+  @media #{$breakpoint-max-content} {
     border: 0 none;
     right: 3rem;
   }
@@ -146,7 +147,7 @@
   .icon {
     margin-left: 0.5rem;
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       margin-left: 1rem;
     }
   }
@@ -179,7 +180,7 @@
     }
   }
 
-  @media #{$breakpoint-large} {
+  @media #{$breakpoint-max-content} {
     left: auto;
     right: 3rem;
     top: 4rem;
@@ -192,7 +193,7 @@
     font-family: $font-family-serif;
     font-size: 0.875rem;
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       display: block;
     }
   }
@@ -203,7 +204,7 @@
     margin: 0;
     width: 1em;
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       font-size: 2rem;
     }
   }
@@ -235,11 +236,16 @@
   font-family: $font-family-sans-serif;
   font-size: 0.875rem;
   height: 2.5rem;
+  padding: 0 1rem;
 
   @media #{$breakpoint-large} {
+    padding: 0 1rem;
+  }
+
+  @media #{$breakpoint-max-content} {
     bottom: 0;
-    font-size: 1.25rem;
     height: auto;
+    font-size: 1.25rem;
   }
 
   a {
@@ -264,9 +270,9 @@
       }
     }
 
-    @media #{$breakpoint-large} {
-      font-size: 1.25rem;
+    @media #{$breakpoint-max-content} {
       height: auto;
+      font-size: 1.25rem;
 
       .icon {
         font-size: 1.25rem;

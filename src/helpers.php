@@ -53,7 +53,7 @@ function get_name_for_filetype( $filetype ) {
 		'mobi' => __( 'MOBI', 'pressbooks-book' ),
 		'epub3' => __( 'EPUB3', 'pressbooks-book' ),
 		'xhtml' => __( 'XHTML', 'presbooks-book' ),
-		'odt' => __( 'OpenDocument', 'pressbooks-book' ),
+		'odf' => __( 'OpenDocument', 'pressbooks-book' ),
 		'wxr' => __( 'Pressbooks XML', 'pressbooks-book' ),
 		'vanillawxr' => __( 'WordPress XML', 'pressbooks' )
 	];

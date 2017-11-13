@@ -71,11 +71,7 @@
   li {
     background-color: var(--body-bg-alt);
     margin-bottom: 3px;
-    padding: 1.25rem 1rem;
-
-    @media #{$breakpoint-tablet-and-up} {
-      padding: 1.875rem 1rem;
-    }
+    padding: 1rem;
   }
 }
 
@@ -91,15 +87,11 @@
   background-color: var(--body-bg-alt);
   font-size: 1rem;
   margin-bottom: 3px;
-  padding: 1.275rem 1rem;
+  padding: 1.25rem 1rem;
   text-transform: uppercase;
-  //to prevnt content style overwrites
-  text-align: left;
-  text-indent: 0 !important;
 
   @media #{$breakpoint-tablet-and-up} {
     font-size: 1.5rem;
-    padding: 1.875rem 1rem;
   }
 
   .icon {
@@ -166,6 +158,10 @@ ul.toc__chapters {
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -173,6 +169,7 @@ ul.toc__chapters {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
 
   .section-toc__toggle-all__show {
     // TODO

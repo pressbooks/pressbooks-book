@@ -14,12 +14,24 @@
   &.footer--reading {
     padding-bottom: 7rem;
 
-    &.footer--multipage {
-      padding-bottom: 9.5rem;
+    @media #{$breakpoint-large} {
+      padding-bottom: 5rem;
     }
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       padding-bottom: 2.5rem;
+    }
+
+    &.footer--multipage {
+      padding-bottom: 9.5rem;
+
+      @media #{$breakpoint-large} {
+        padding-bottom: 7rem;
+      }
+
+      @media #{$breakpoint-max-content} {
+        padding-bottom: 2.5rem;
+      }
     }
   }
 

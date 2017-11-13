@@ -19,7 +19,7 @@ add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
  */
 global $metakeys;
 $metakeys = [
-	'pb_author' => __( 'Lead Author', 'pressbooks-book' ),
+	'pb_author' => __( 'Author(s)', 'pressbooks-book' ),
 	'pb_contributing_authors' => __( 'Contributing Author(s)', 'pressbooks-book' ),
 	'pb_editor' => __( 'Editor(s)', 'pressbooks-book' ),
 	'pb_translator' => __( 'Translator(s)', 'pressbooks-book' ),

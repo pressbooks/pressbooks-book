@@ -39,6 +39,7 @@ jQuery(
 			var $target = $(this);
 			$target.parents('.js-search').toggleClass('search--visible');
 			$target.toggleClass('--visible');
+			$('#s').focus();
 		});
 	}
 );

@@ -50,6 +50,10 @@
 
   @media #{$breakpoint-large} {
     display: none;
+
+    .section-meta & {
+      display: block;
+    }
   }
 }
 
@@ -76,6 +80,27 @@
       //padding-bottom: 2.5rem;
       .section-toggle__content {
         display: none;
+      }
+    }
+
+    &.section-toggle--visible {
+      .section-toggle__cta__blurb {
+        display: none;
+      }
+    }
+  }
+
+  &.section-meta {
+    &:not(.section-toggle--visible) {
+      //padding-bottom: 2.5rem;
+      .section-toggle__content {
+        display: none;
+      }
+
+      @media #{$breakpoint-large} {
+        .section-toggle__cta {
+          margin-top: -3.75rem;
+        }
       }
     }
 

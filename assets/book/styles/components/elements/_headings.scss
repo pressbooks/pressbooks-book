@@ -2,6 +2,8 @@
 //                                 Headings                                   //
 //============================================================================//
 
+@import '../utilities';
+
 @if $type != 'web' {
   h1,
   h2,
@@ -18,7 +20,7 @@
 
   h1 {
     font-family: $h1-font-family;
-    font-size: $h1-font-size;
+    font-size: if-map-get($h1-font-size, $type);
     font-style: $h1-font-style;
     font-weight: $h1-font-weight;
     text-align: $h1-align;
@@ -27,7 +29,7 @@
 
   h2 {
     font-family: $h2-font-family;
-    font-size: $h2-font-size;
+    font-size: if-map-get($h2-font-size, $type);
     font-style: $h2-font-style;
     font-weight: $h2-font-weight;
     text-align: $h2-align;
@@ -36,7 +38,7 @@
 
   h3 {
     font-family: $h3-font-family;
-    font-size: $h3-font-size;
+    font-size: if-map-get($h3-font-size, $type);
     font-style: $h3-font-style;
     font-weight: $h3-font-weight;
     text-align: $h3-align;
@@ -45,7 +47,7 @@
 
   h4 {
     font-family: $h4-font-family;
-    font-size: $h4-font-size;
+    font-size: if-map-get($h4-font-size, $type);
     font-style: $h4-font-style;
     font-weight: $h4-font-weight;
     text-align: $h4-align;
@@ -54,7 +56,7 @@
 
   h5 {
     font-family: $h5-font-family;
-    font-size: $h5-font-size;
+    font-size: if-map-get($h5-font-size, $type);
     font-style: $h5-font-style;
     font-weight: $h5-font-weight;
     text-align: $h5-align;
@@ -63,7 +65,7 @@
 
   h6 {
     font-family: $h6-font-family;
-    font-size: $h6-font-size;
+    font-size: if-map-get($h6-font-size, $type);
     font-style: $h6-font-style;
     font-weight: $h6-font-weight;
     text-align: $h6-align;
@@ -163,7 +165,7 @@
 
     h1 {
       font-family: $h1-font-family;
-      font-size: $h1-font-size;
+      font-size: if-map-get($h1-font-size, $type);
       font-style: $h1-font-style;
       font-weight: $h1-font-weight;
       text-align: $h1-align;
@@ -172,7 +174,7 @@
 
     h2 {
       font-family: $h2-font-family;
-      font-size: $h2-font-size;
+      font-size: if-map-get($h2-font-size, $type);
       font-style: $h2-font-style;
       font-weight: $h2-font-weight;
       text-align: $h2-align;
@@ -181,7 +183,7 @@
 
     h3 {
       font-family: $h3-font-family;
-      font-size: $h3-font-size;
+      font-size: if-map-get($h3-font-size, $type);
       font-style: $h3-font-style;
       font-weight: $h3-font-weight;
       text-align: $h3-align;
@@ -190,7 +192,7 @@
 
     h4 {
       font-family: $h4-font-family;
-      font-size: $h4-font-size;
+      font-size: if-map-get($h4-font-size, $type);
       font-style: $h4-font-style;
       font-weight: $h4-font-weight;
       text-align: $h4-align;
@@ -199,7 +201,7 @@
 
     h5 {
       font-family: $h5-font-family;
-      font-size: $h5-font-size;
+      font-size: if-map-get($h5-font-size, $type);
       font-style: $h5-font-style;
       font-weight: $h5-font-weight;
       text-align: $h5-align;
@@ -208,7 +210,7 @@
 
     h6 {
       font-family: $h6-font-family;
-      font-size: $h6-font-size;
+      font-size: if-map-get($h6-font-size, $type);
       font-style: $h6-font-style;
       font-weight: $h6-font-weight;
       text-align: $h6-align;
