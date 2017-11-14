@@ -1,6 +1,6 @@
-/** 
- * Javascript file contents originally from WP Accessibility Plugin v.1.3.10 which is released under GPL v3 
- * original author Chris Rodriguez 
+/**
+ * Javascript file contents originally from WP Accessibility Plugin v.1.3.10 which is released under GPL v3
+ * original author Chris Rodriguez
  * modified by Brad Payne, Ashlee Zhang
  */
 
@@ -37,19 +37,19 @@ jQuery(document).ready(function ($) {
 
 	// Fontsize handler
 	if (readCookie('a11y-larger-fontsize')) {
-		$('body').addClass('fontsize');
-		$('#is_normal_fontsize').attr('id', 'is_large_fontsize').attr('aria-checked', true).addClass('active');
+		$('html').addClass('fontsize');
+		$('#is_normal_fontsize').attr('id', 'is_large_fontsize').attr('aria-checked', true).addClass('active').text(PB_A11y.decrease_label).attr('title', PB_A11y.decrease_label);
 	}
 
 	$('.toggle-fontsize').on('click', function () {
 		if ($(this).attr('id') == "is_normal_fontsize") {
-			$('body').addClass('fontsize');
-			$(this).attr('id', 'is_large_fontsize').attr('aria-checked', true).addClass('active');
+			$('html').addClass('fontsize');
+			$(this).attr('id', 'is_large_fontsize').attr('aria-checked', true).addClass('active').text(PB_A11y.decrease_label).attr('title', PB_A11y.decrease_label);
 			createCookie('a11y-larger-fontsize', '1');
 			return false;
 		} else {
-			$('body').removeClass('fontsize');
-			$(this).attr('id', 'is_normal_fontsize').removeAttr('aria-checked').removeClass('active');
+			$('html').removeClass('fontsize');
+			$(this).attr('id', 'is_normal_fontsize').removeAttr('aria-checked').removeClass('active').text(PB_A11y.increase_label).attr('title', PB_A11y.increase_label);
 			eraseCookie('a11y-larger-fontsize');
 			return false;
 		}

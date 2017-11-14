@@ -50,7 +50,7 @@ global $multipage;
 		</section>
 	</div><!-- .container -->
 </footer><!-- .footer -->
-<?php // get_template_part( 'content', 'accessibility-toolbar' ); ?>
+<?php get_template_part( 'content', 'accessibility-toolbar' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>
