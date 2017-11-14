@@ -1,6 +1,6 @@
 {
     "name": "pressbooks/pressbooks-book",
-    "description": "The default book theme for Pressbooks installations.",
+    "description": "Named for Canadian academic and media theorist Marshall McLuhan, this theme is designed for academic writing but also works well for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
     "type": "wordpress-theme",
     "require": {
         "composer/installers": "~1.3",

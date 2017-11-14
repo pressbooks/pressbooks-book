@@ -1,0 +1,22 @@
+// Section Titles
+
+$section-title-font-size: (
+  epub: large,
+  prince: 24pt,
+  web: (24 / 9) * 1em
+) !default;
+$section-title-align: left !default;
+$chapter-number-display: inline !default;
+$chapter-number-margin-bottom: 0 !default;
+$chapter-number-font-size: (
+  epub: large,
+  prince: 24pt,
+  web: (24 / 9) * 1em
+) !default;
+$chapter-title-display: inline !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/section-titles';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/section-titles';

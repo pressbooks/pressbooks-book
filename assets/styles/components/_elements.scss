@@ -1,0 +1,26 @@
+// Elements
+
+$body-font-size: (
+  epub: medium,
+  prince: 9pt,
+  web: 1em
+) !default;
+
+$body-line-height: (14 / 9) * 1em !default;
+$para-margin-bottom: (20 / 16) * 1em !default;
+$para-indent: 0 !default;
+$hx-line-height: (18 / 15) * 1em !default;
+$h1-font-size: (
+  epub: medium,
+  prince: 15pt,
+  web: (15 / 9) * 1em
+) !default;
+$h1-font-weight: normal !default;
+$h1-align: left !default;
+$h1-text-transform: capitalize !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/elements';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/elements';

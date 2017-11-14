@@ -1,0 +1,42 @@
+// Special Elements
+
+$textbox-border-style: none !default;
+$textbox-font-size: (
+  epub: medium,
+  prince: 9pt,
+  web: 1em
+) !default;
+$textbox-font-style: italic !default;
+$textbox-line-height: (14 / 9) * 1em !default;
+
+$edu-textbox-border-radius: 0 !default;
+$edu-header-font-size: (
+  epub: large,
+  prince: 15pt,
+  web: ( 15 / 9 ) * 1em
+) !default;
+$edu-header-font-style: italic !default;
+$edu-header-font-weight: normal !default;
+$edu-header-text-align: left !default;
+$edu-header-padding-top: 10px !default;
+$edu-header-padding-right: 12px !default;
+$edu-header-padding-bottom: 10px !default;
+$edu-header-padding-left: 12px !default;
+$edu-header-margin-top: -16px !default;
+$edu-header-margin-right: -16px !default;
+$edu-header-margin-left: -16px !default;
+
+$learning-objectives-background: #cbd4b6 !default;
+$learning-objectives-header-background: #76881d !default;
+$key-takeaways-background: #ffdeac !default;
+$key-takeaways-header-background: #f1b434 !default;
+$exercises-background: #6ba4b8 !default;
+$exercises-header-background: #cbdde5 !default;
+$examples-background: #c0bdcd !default;
+$examples-header-background: #4f446d !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/specials';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/specials';

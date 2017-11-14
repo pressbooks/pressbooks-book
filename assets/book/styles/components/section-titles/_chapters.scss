@@ -65,7 +65,7 @@ h2 {
   }
 
   .chapter-title {
-    display: block;
+    display: $chapter-title-display;
     margin-top: $chapter-title-margin-top;
     margin-bottom: if-map-get($chapter-title-margin-bottom, $type);
     font-family: $chapter-title-font-family;
