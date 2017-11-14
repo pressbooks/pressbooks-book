@@ -17,7 +17,7 @@
 			} ?>
 		<section data-type="<?php echo pb_get_section_type( $post ) ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 			<header>
-				<h1>
+				<h1 class="entry-title">
 					<?php if ( $number ) { echo "<span>$number</span> "; }
 					the_title(); ?>
 				</h1>

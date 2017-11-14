@@ -1,4 +1,4 @@
-.section {
+.home .section {
   padding: 5rem 0 4rem;
 
   @media #{$breakpoint-tablet-and-up} {
@@ -74,7 +74,7 @@
   z-index: 10;
 }
 
-.section.section-toggle {
+.home .section.section-toggle {
   @media #{$breakpoint-not-large} {
     &:not(.section-toggle--visible) {
       //padding-bottom: 2.5rem;
