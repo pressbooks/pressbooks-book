@@ -22,6 +22,10 @@
 hr {
   width: $hr-width;
   margin: $hr-margin-top auto $hr-margin-bottom;
+  border-top: none;
+  border-right: none;
+  border-bottom: $hr-border-style $hr-border-width $hr-border-color;
+  border-left: none;
   text-align: center;
 
   &.break-symbols {

@@ -2,6 +2,9 @@
 
 $footnote-font-size: (8 / 9) * 1em !default;
 $footnote-line-height: (14 / 9) * 1em !default;
+$hr-width: 100% !default;
+$hr-margin-top: (20 / 9) * 1em !default;
+$hr-margin-bottom: (20 / 9) * 1em !default;
 $textbox-border-style: none !default;
 $textbox-font-size: (
   epub: medium,
@@ -10,7 +13,10 @@ $textbox-font-size: (
 ) !default;
 $textbox-font-style: italic !default;
 $textbox-line-height: (14 / 9) * 1em !default;
-
+$edu-textbox-padding-top: 16px !default;
+$edu-textbox-padding-right: 16px !default;
+$edu-textbox-padding-bottom: 16px !default;
+$edu-textbox-padding-left: 16px !default;
 $edu-textbox-border-radius: 0 !default;
 $edu-header-font-size: (
   epub: large,
@@ -26,14 +32,15 @@ $edu-header-padding-bottom: 10px !default;
 $edu-header-padding-left: 12px !default;
 $edu-header-margin-top: -16px !default;
 $edu-header-margin-right: -16px !default;
+$edu-header-margin-bottom: 1em !default;
 $edu-header-margin-left: -16px !default;
 
 $learning-objectives-background: #cbd4b6 !default;
 $learning-objectives-header-background: #76881d !default;
 $key-takeaways-background: #ffdeac !default;
 $key-takeaways-header-background: #f1b434 !default;
-$exercises-background: #6ba4b8 !default;
-$exercises-header-background: #cbdde5 !default;
+$exercises-background: #cbdde5 !default;
+$exercises-header-background: #6ba4b8 !default;
 $examples-background: #c0bdcd !default;
 $examples-header-background: #4f446d !default;
 
