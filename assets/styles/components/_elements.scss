@@ -1,23 +1,34 @@
 // Elements
-
+$blockquote-margin-left: 2.5em !default;
+$blockquote-font-size: 1em !default;
+$blockquote-line-height: (14 / 9) * 1em !default;
 $body-font-size: (
-  epub: medium,
+  epub: small,
   prince: 9pt,
   web: 1em
 ) !default;
 
 $body-line-height: (14 / 9) * 1em !default;
-$para-margin-bottom: (20 / 16) * 1em !default;
-$para-indent: 0 !default;
+$hx-margin-top: (30 / 14) * 1em !default;
+$hx-margin-bottom: (20 / 14) * 1em !default;
 $hx-line-height: (18 / 15) * 1em !default;
 $h1-font-size: (
-  epub: medium,
+  epub: large,
   prince: 15pt,
   web: (15 / 9) * 1em
 ) !default;
 $h1-font-weight: normal !default;
 $h1-align: left !default;
 $h1-text-transform: capitalize !default;
+$ol-margin-top: (20 / 14) * 1em !default;
+$ol-margin-bottom: (20 / 14) * 1em !default;
+$ul-margin-top: (20 / 14) * 1em !default;
+$ul-margin-bottom: (20 / 14) * 1em !default;
+$li-li-margin-top: 0 !default;
+$para-margin-bottom: (20 / 16) * 1em !default;
+$para-indent: 0 !default;
+$table-font-size: 1em !default;
+$table-line-height: (14 / 9) * 1em !defaault;
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/elements';

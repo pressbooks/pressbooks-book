@@ -8,12 +8,14 @@
     margin-top: $ol-margin-top;
     margin-bottom: $ol-margin-bottom;
     margin-left: if-map-get($ol-margin-left, $type);
+    padding-left: $ol-padding-left;
   }
 
   ul {
     margin-top: $ul-margin-top;
     margin-bottom: $ul-margin-bottom;
     margin-left: if-map-get($ul-margin-left, $type);
+    padding-left: $ul-padding-left;
   }
 
   li + li {
@@ -66,12 +68,14 @@
       margin-top: $ol-margin-top;
       margin-bottom: $ol-margin-bottom;
       margin-left: if-map-get($ol-margin-left, $type);
+      padding-left: $ol-padding-left;
     }
 
     ul {
       margin-top: $ul-margin-top;
       margin-bottom: $ul-margin-bottom;
       margin-left: if-map-get($ul-margin-left, $type);
+      padding-left: $ul-padding-left;
     }
 
     li + li {
