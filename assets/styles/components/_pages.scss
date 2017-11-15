@@ -1,5 +1,34 @@
 // Pages
 
+$title-title-font-size: (
+  epub: x-large,
+  prince: 24pt,
+  web: (24 / 9) * 1em
+) !default;
+$title-subtitle-font-size: (
+  epub: large,
+  prince: 15pt,
+  web: (15 / 9) * 1em
+) !default;
+$title-author-font-size: (
+  epub: large,
+  prince: 15pt,
+  web: (15 / 9) * 1em
+) !default;
+$title-author-font-style: italic !default;
+$title-author-text-transform: none !default;
+$title-publisher-font-size: (
+  epub: large,
+  prince: 15pt,
+  web: (15 / 9) * 1em
+) !default;
+$title-publisher-font-size: (
+  epub: large,
+  prince: 15pt,
+  web: (15 / 9) * 1em
+) !default;
+$section-license-font-size: (8 / 9) * 1em !default;
+
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/pages';
 
