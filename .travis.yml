@@ -3,10 +3,12 @@ notifications:
   email:
     on_success: never
     on_failure: change
+  slack:
+    secure: heEm2Sr8ceE+kOzdV5anl4pO8g0ibIqT44PzezDQB6jM6sHG7cqsrHM15M8X5tJV+uGpKw8/2k0uCCHgGVj3yeiD1R7cNPKXfO/HT7hknKrwQaahd3qu9diEi/hlNuJSE614iEdtY1zaFoyJViRtsprN9bJNrA0MXsjP8iQHc2kvCBKq/eelf8R56EuWK3WIkamWNIqu/OaKAFBmvvGu9FWRcA25ptpRQATjtY3K1hBZ0eiw0OWx+3XAfEvwS32ZNBLqV0HwAIffBgT/McERO4ZnAs54UcU/dxy/HxNn1wPZGeLZj1+uE8XMeDgUgAUIwxrguaMRzN2znYdigZD3QsMLFM+hvI3kk4dn3SXpktiM8lefIEcyzRBI/tlXq4RKfSyQr8Pzy46JJf9/3n6muImRI3kYggmEMMdLe3YkdiF1jtXuqpe6VQJ3PafQQUHeG2Q9woUZPWH8mngE7jd7m0WxNXuY0DX3E7LteZchLvZpho+P1mYBaHdyi0tdguGAirx7sBdz/VXY/fGKZLklmp3k7pjO+5d4Ry/o/1sSuVJH2P6FoZT5w0YPQxj1eY1dxwA1ZX+aJb2rBJbt9kYQcEBXox7xQ3dSyE9XaOGk/SvKRu0226Uy2V+UQrDMDb94pUdVd9R6QUbVvT6GsaTYwNQ2zGX/kiNi3rNynHudZQc=
 branches:
   only:
   - dev
-  - '/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?$/'
+  - "/^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(\\.(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\\+[0-9a-zA-Z-]+(\\.[0-9a-zA-Z-]+)*)?$/"
 php:
 - 5.6
 - 7.0
@@ -40,15 +42,16 @@ before_deploy:
 - composer install --no-dev --optimize-autoloader
 - cd ../
 - zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
-  -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\* *node_modules/\* *tests/\* *.editorconfig* *.gitattributes*
-  *.github* *.gitignore* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
+  -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\*
+  *node_modules/\* *tests/\* *.editorconfig* *.gitattributes* *.github* *.gitignore*
+  *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
 - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
     secure: XdchVIQYOB87JkkIdkIfhQUeU6jkATDaAf2MypPNoiSJKmShVyWRxXehl0b8ieZqz8WP0wciZhDXfRSufbBIxeNy+nXh7dSn0L3BMOv7Up+/lYTmBIQUtXJM6UJV1CBALgcmO4K0vFVnUQzEi1TbTQK62QUgfTJ1sQBAKB7Eg7WMhgn3sSVhV0pADRJshsOTsuVMiZ3DuDnWQ3RzGjC0deIlKCr/GO4+R6W5giR7+05WPZOB9o/+ugD2ZbeblBJIk8kt6ZcyQBbhGv1cCEoSPsyXg4B7vA15jZdabDFkMu0ebbnpxgMWCuh2PReoc7jaefyR5/c+Le5mSelFkY/wEB92VBO2TcjgEzXbf5cx7AxWaI9AFyDf7XUrqept/0xXdmpyOzgg6J6SNcOoc9rs6P24q2RGYUCTUGcynd+wTzlsWWpL1pi/ZG2A3mvHaPfCltvyGgXxTBWCI3mTClEebu+rg0GED1LDGKlwlop4wFVvX+5KzBfuo5buULIouud1deav63xBq9Td7HGcAH9N3zwEOaNjTDCc/cw9ZgzjTcOC4sbyLLeFJ6xHpONd7HtvstibSlu5aHuDd6hRD3Kgzs11JUzXMwgo3jiCWTfAZ25lDisEVmIqYS+Ea8lyCoY+BLfDcPlEeyhOtlXfRT4n2xtGPWZmgbndvtOMXDXuDds=
-  file: "pressbooks-book-$TRAVIS_TAG.zip"
+  file: pressbooks-book-$TRAVIS_TAG.zip
   on:
     tags: true
     repo: pressbooks/pressbooks-book
