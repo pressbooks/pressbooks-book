@@ -1,5 +1,9 @@
 // Structure
 
+$page-margin-top: 0.9in !default;
+$page-margin-inside: 0.75in !default;
+$page-margin-bottom: 1.05in !default;
+$page-margin-outside: 0.75in !default;
 $numbering-position: 'bottom-inside' !default;
 $first-numbering-position: 'bottom-center' !default;
 $running-content-position: 'bottom-inside' !default;
@@ -9,7 +13,7 @@ $front-matter-page-number-font-family: $font-1 !default;
 $front-matter-page-number-font-size: 8pt !default;
 $page-number-font-family: $font-1 !default;
 $page-number-font-size: 8pt !default;
-$runningfoot-padding-bottom: 0 !default;
+$runningfoot-padding-bottom: 2em !default;
 $runningfoot-left-font-family: $font-1 !default;
 $runningfoot-left-font-size: 8pt !default;
 $runningfoot-left-text-transform: none !default;
