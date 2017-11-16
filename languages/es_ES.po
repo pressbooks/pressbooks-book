@@ -1,8 +1,11 @@
 # Copyright (C) 2017 pressbooks-book
 # This file is distributed under the same license as the pressbooks-book package.
+# Translators:
+# jorge santibañez <info@letrapixel.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
+"Last-Translator: jorge santibañez <info@letrapixel.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/pressbooks/teams/9194/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,11 +37,11 @@ msgstr ""
 
 #: ../comments.php:56
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: ../content-accessibility-toolbar.php:3
 msgid "Toggle Font size"
-msgstr ""
+msgstr "Cambiar tamaño de fuente"
 
 #: ../content-none.php:2
 msgid "Nothing Found"
@@ -56,15 +59,15 @@ msgstr ""
 
 #: ../content-social-footer.php:5
 msgid "Email to a friend"
-msgstr ""
+msgstr "Enviar por email a un amigo"
 
 #: ../content-social-footer.php:5
 msgid "Share via Email"
-msgstr ""
+msgstr "Compartir via email"
 
 #: ../footer.php:23
 msgid "Book Name"
-msgstr ""
+msgstr "Nombre del libro"
 
 #: ../footer.php:38
 msgid "Copyright"
@@ -72,73 +75,73 @@ msgstr ""
 
 #: ../footer.php:41
 msgid "by"
-msgstr ""
+msgstr "por"
 
 #: ../footer.php:51
 msgid "Simple Book Production"
 msgstr ""
 
-#: ../functions.php:19
-msgid "Author"
-msgstr ""
-
 #: ../functions.php:20
+msgid "Author"
+msgstr "Autor"
+
+#: ../functions.php:21
 msgid "Contributing Author"
 msgstr ""
 
-#: ../functions.php:21
-msgid "Publisher"
-msgstr ""
-
 #: ../functions.php:22
+msgid "Publisher"
+msgstr "Editorial"
+
+#: ../functions.php:23
 msgid "Print ISBN"
 msgstr ""
 
-#: ../functions.php:23
+#: ../functions.php:24
 msgid "Keywords/Tags"
 msgstr ""
 
-#: ../functions.php:24
+#: ../functions.php:25
 msgid "Publication Date"
 msgstr ""
 
-#: ../functions.php:25
+#: ../functions.php:26
 msgid "Hashtag"
 msgstr ""
 
-#: ../functions.php:26
+#: ../functions.php:27
 msgid "Ebook ISBN"
 msgstr ""
 
-#: ../functions.php:191
+#: ../functions.php:202
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
-#: ../functions.php:194
+#: ../functions.php:205
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
-#: ../functions.php:231
+#: ../functions.php:244
 msgid "%s on"
 msgstr ""
 
-#: ../functions.php:231
+#: ../functions.php:244
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../functions.php231, ../functions.php:251
+#: ../functions.php244, ../functions.php:264
 msgid "(Edit)"
-msgstr ""
+msgstr "(Editar)"
 
-#: ../functions.php:234
+#: ../functions.php:247
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../functions.php:251
+#: ../functions.php:264
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php406, ../page-cover-private-block.php:2
+#: ../functions.php383, ../page-cover-private-block.php:2
 msgid "Make your own books on Pressbooks"
 msgstr ""
 
@@ -148,7 +151,7 @@ msgstr ""
 
 #: ../header.php87, ../page-cover-top-block.php:63
 msgid "Buy"
-msgstr ""
+msgstr "Comprar"
 
 #: ../index.php13, ../page-cover-third-block.php4, ../sidebar.php:16
 msgid "Table of Contents"
@@ -156,7 +159,7 @@ msgstr ""
 
 #: ../page-about.php:5
 msgid "About The Book"
-msgstr ""
+msgstr "Acerca del libro"
 
 #: ../page-about.php21, ../page-buy.php9, ../page-buy.php:17
 msgid "It's coming!"
@@ -164,11 +167,11 @@ msgstr ""
 
 #: ../page-authors.php:26
 msgid "Authors"
-msgstr ""
+msgstr "Autores"
 
 #: ../page-buy.php:4
 msgid "Buy the Book"
-msgstr ""
+msgstr "Comprar el libro"
 
 #: ../page-buy.php:19
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
@@ -176,23 +179,23 @@ msgstr ""
 
 #: ../page-buy.php:23
 msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
-msgstr ""
+msgstr "Comprar en <a href=\"%1$s\">amazon.com</a>"
 
 #: ../page-buy.php:27
 msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
-msgstr ""
+msgstr "Comprar en <a href=\"%1$s\">oreilly.com</a>"
 
 #: ../page-buy.php:31
 msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
-msgstr ""
+msgstr "Comprar en <a href=\"%1$s\">barnesandnoble.com</a>"
 
 #: ../page-buy.php:35
 msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
-msgstr ""
+msgstr "Comprar en <a href=\"%1$s\">kobobooks.com</a>"
 
 #: ../page-buy.php:39
 msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
-msgstr ""
+msgstr "Comprar en <a href=\"%1$s\">apple.com</a>"
 
 #: ../page-buy.php:43
 msgid "Elsewhere"
@@ -204,11 +207,11 @@ msgstr ""
 
 #: ../page-cover-fourth-block.php:21
 msgid "Other books"
-msgstr ""
+msgstr "Otros libros"
 
 #: ../page-cover-second-block.php:5
 msgid "Book Description"
-msgstr ""
+msgstr "Descripción del libro"
 
 #: ../page-cover-second-block.php15, ../page-cover-second-block.php16,
 #: ../page-cover-second-block.php:17
@@ -225,7 +228,7 @@ msgstr ""
 
 #: ../page-cover-second-block.php:17
 msgid "+1"
-msgstr ""
+msgstr "+1"
 
 #: ../page-cover-top-block.php:8
 msgid "login"
@@ -241,23 +244,23 @@ msgstr ""
 
 #: ../page-cover-top-block.php:59
 msgid "Read"
-msgstr ""
+msgstr "Leer"
 
 #: ../page-cover-top-block.php:82
 msgid "Download in the following formats:"
-msgstr ""
+msgstr "Descargar en los siguientes formatos:"
 
 #: ../page.php12, ../single.php:5
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: ../page.php:14
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: ../private.php:4
 msgid "Access Denied"
-msgstr ""
+msgstr "Acceso Denegado"
 
 #: ../private.php:8
 msgid ""
@@ -283,4 +286,4 @@ msgstr ""
 
 #: ../sidebar.php:23
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"

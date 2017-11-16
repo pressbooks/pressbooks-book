@@ -1,8 +1,11 @@
 # Copyright (C) 2017 pressbooks-book
 # This file is distributed under the same license as the pressbooks-book package.
+# Translators:
+# Antonio Devís <colomet@hotmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
+"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2017\n"
 "Language-Team: Czech (https://www.transifex.com/pressbooks/teams/9194/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,22 +22,23 @@ msgstr ""
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
+"Tento příspěvek je chráněný heslem. Vložte heslo pro zobrazení komentářů."
 
 #: ../comments.php29, ../comments.php:40
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší komentáře"
 
 #: ../comments.php30, ../comments.php:41
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Novější komentáře <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../comments.php:48
 msgid "Comments are closed."
-msgstr ""
+msgstr "Komentáře jsou uzavřené."
 
 #: ../comments.php:56
 msgid "Submit"
-msgstr ""
+msgstr "Vložit"
 
 #: ../content-accessibility-toolbar.php:3
 msgid "Toggle Font size"
@@ -42,13 +46,15 @@ msgstr ""
 
 #: ../content-none.php:2
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nic nenalezeno"
 
 #: ../content-none.php:3
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Je nám líto, ale vámi hledané výrazy ničemu neodpovídají. Zkuste to prosím "
+"znovu s jinými klíčovými slovy. "
 
 #: ../content-social-footer.php:4
 msgid "I wanted to share this post with you from"
@@ -56,119 +62,119 @@ msgstr ""
 
 #: ../content-social-footer.php:5
 msgid "Email to a friend"
-msgstr ""
+msgstr "E-mail příteli"
 
 #: ../content-social-footer.php:5
 msgid "Share via Email"
-msgstr ""
+msgstr "Sdílet e-mailem"
 
 #: ../footer.php:23
 msgid "Book Name"
-msgstr ""
+msgstr "Název knihy"
 
 #: ../footer.php:38
 msgid "Copyright"
-msgstr ""
+msgstr "Autorské právo"
 
 #: ../footer.php:41
 msgid "by"
-msgstr ""
+msgstr "od"
 
 #: ../footer.php:51
 msgid "Simple Book Production"
 msgstr ""
 
-#: ../functions.php:19
-msgid "Author"
-msgstr ""
-
 #: ../functions.php:20
-msgid "Contributing Author"
-msgstr ""
+msgid "Author"
+msgstr "Autor"
 
 #: ../functions.php:21
-msgid "Publisher"
-msgstr ""
+msgid "Contributing Author"
+msgstr "Přispívající autor"
 
 #: ../functions.php:22
-msgid "Print ISBN"
-msgstr ""
+msgid "Publisher"
+msgstr "Vydavatel"
 
 #: ../functions.php:23
-msgid "Keywords/Tags"
-msgstr ""
+msgid "Print ISBN"
+msgstr "Tisknout ISBN"
 
 #: ../functions.php:24
-msgid "Publication Date"
-msgstr ""
+msgid "Keywords/Tags"
+msgstr "Klíčová slova"
 
 #: ../functions.php:25
-msgid "Hashtag"
-msgstr ""
+msgid "Publication Date"
+msgstr "Datum vydání"
 
 #: ../functions.php:26
+msgid "Hashtag"
+msgstr "Hashtag"
+
+#: ../functions.php:27
 msgid "Ebook ISBN"
 msgstr ""
 
-#: ../functions.php:191
+#: ../functions.php:202
 msgid "Previous"
-msgstr ""
+msgstr "Předchozí"
 
-#: ../functions.php:194
+#: ../functions.php:205
 msgid "Next"
-msgstr ""
+msgstr "Další"
 
-#: ../functions.php:231
+#: ../functions.php:244
 msgid "%s on"
 msgstr ""
 
-#: ../functions.php:231
+#: ../functions.php:244
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../functions.php231, ../functions.php:251
+#: ../functions.php244, ../functions.php:264
 msgid "(Edit)"
-msgstr ""
+msgstr "(Upravit)"
 
-#: ../functions.php:234
+#: ../functions.php:247
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Váš komentář čeká na schválení moderátorem."
 
-#: ../functions.php:251
+#: ../functions.php:264
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php406, ../page-cover-private-block.php:2
+#: ../functions.php383, ../page-cover-private-block.php:2
 msgid "Make your own books on Pressbooks"
-msgstr ""
+msgstr "Vytvořte si vlastní knihu na Pressbooks"
 
 #: ../header.php:32
 msgid "Page %s"
-msgstr ""
+msgstr "Strana %s"
 
 #: ../header.php87, ../page-cover-top-block.php:63
 msgid "Buy"
-msgstr ""
+msgstr "Koupit"
 
 #: ../index.php13, ../page-cover-third-block.php4, ../sidebar.php:16
 msgid "Table of Contents"
-msgstr ""
+msgstr "Obsah"
 
 #: ../page-about.php:5
 msgid "About The Book"
-msgstr ""
+msgstr "O knize"
 
 #: ../page-about.php21, ../page-buy.php9, ../page-buy.php:17
 msgid "It's coming!"
-msgstr ""
+msgstr "Už se to blíží!"
 
 #: ../page-authors.php:26
 msgid "Authors"
-msgstr ""
+msgstr "Autoři"
 
 #: ../page-buy.php:4
 msgid "Buy the Book"
-msgstr ""
+msgstr "Koupit knihu"
 
 #: ../page-buy.php:19
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
@@ -200,20 +206,20 @@ msgstr ""
 
 #: ../page-buy.php:43
 msgid "Purchase here:"
-msgstr ""
+msgstr "Zakoupit zde:"
 
 #: ../page-cover-fourth-block.php:21
 msgid "Other books"
-msgstr ""
+msgstr "Další knihy"
 
 #: ../page-cover-second-block.php:5
 msgid "Book Description"
-msgstr ""
+msgstr "Popis knihy"
 
 #: ../page-cover-second-block.php15, ../page-cover-second-block.php16,
 #: ../page-cover-second-block.php:17
 msgid "Check out this great book on Pressbooks."
-msgstr ""
+msgstr "Podívejte se na tuto skvělou knihu na Pressbooks."
 
 #: ../page-cover-second-block.php:15
 msgid "Tweet"
@@ -229,11 +235,11 @@ msgstr ""
 
 #: ../page-cover-top-block.php:8
 msgid "login"
-msgstr ""
+msgstr "Přihlášení"
 
 #: ../page-cover-top-block.php:10
 msgid "logout"
-msgstr ""
+msgstr "Odhlášení"
 
 #: ../page-cover-top-block.php12, ../sidebar.php:10
 msgid "Admin"
@@ -241,33 +247,35 @@ msgstr ""
 
 #: ../page-cover-top-block.php:59
 msgid "Read"
-msgstr ""
+msgstr "Číst"
 
 #: ../page-cover-top-block.php:82
 msgid "Download in the following formats:"
-msgstr ""
+msgstr "Stáhnout v následujících formátech:"
 
 #: ../page.php12, ../single.php:5
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: ../page.php:14
 msgid "Pages:"
-msgstr ""
+msgstr "Strany:"
 
 #: ../private.php:4
 msgid "Access Denied"
-msgstr ""
+msgstr "Přístup odepřen"
 
 #: ../private.php:8
 msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
 msgstr ""
+"Tato kniha je soukromá, přístupná pouze registrovaným uživatelům. Pokud máte"
+" účet, můžete %s."
 
 #: ../private.php:12
 msgid "login here"
-msgstr ""
+msgstr "Přihlášení zde"
 
 #: ../private.php:16
 msgid "You can also set up your own Pressbooks book at %s."
@@ -275,12 +283,12 @@ msgstr ""
 
 #: ../search.php:5
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Hledat výsledky pro: %s"
 
 #: ../sidebar.php:13
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #: ../sidebar.php:23
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
