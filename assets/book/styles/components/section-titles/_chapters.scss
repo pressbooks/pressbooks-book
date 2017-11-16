@@ -84,7 +84,8 @@ h2 {
 
 // Subtitle (outside .chapter-title-wrap)
 h2.chapter-subtitle,
-h2.chapter_subtitle { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
+h2.chapter_subtitle,
+[data-type='subtitle'] { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
   display: block;
 
   @if $type == 'prince' {
@@ -108,7 +109,8 @@ h2.chapter_subtitle { //ned, in web the markup is with a underscore, in xhtml it
 
 // Author (outside .chapter-title-wrap)
 h2.chapter-author,
-h2.chapter_author { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
+h2.chapter_author,
+[data-type='author'] { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
   display: block;
 
   @if $type == 'prince' {
@@ -255,4 +257,8 @@ h2.chapter-subtitle + .aphorism {
       content: '';
     }
   }
+}
+
+@if $type == 'web' {
+
 }

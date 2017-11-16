@@ -4,17 +4,30 @@ $section-title-block-margin-top: 0 !default;
 $section-title-block-margin-bottom: (50 / 20) * 1em !default;
 $section-title-font-size: (
   epub: large,
-  prince: 24pt,
+  prince: (24 / 9) * 1em,
   web: (24 / 9) * 1em
 ) !default;
 $section-title-align: left !default;
+$section-title-margin-bottom: 1em !default;
+$section-subtitle-margin-bottom: 1em !default;
+$section-subtitle-font-size: (
+  epub: large,
+  prince: (15 / 9) * 1em,
+  web: (15 / 9) * 1em
+) !default;
+
+$section-subtitle-font-style: italic !default;
+$section-subtitle-align: left !default;
+$section-author-font-weight: bold !default;
+$section-author-align: left !default;
 $part-number-display: inline !default;
 $part-number-margin-bottom: 0 !default;
+$part-title-align: left !default;
 $chapter-number-display: inline !default;
 $chapter-number-margin-bottom: 0 !default;
 $chapter-number-font-size: (
   epub: large,
-  prince: 24pt,
+  prince: (24 / 9) * 1em,
   web: (24 / 9) * 1rem
 ) !default;
 $chapter-title-display: inline !default;

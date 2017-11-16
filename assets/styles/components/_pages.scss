@@ -16,17 +16,7 @@ $title-author-font-size: (
   web: (15 / 9) * 1em
 ) !default;
 $title-author-font-style: italic !default;
-$title-author-text-transform: none !default;
-$title-publisher-font-size: (
-  epub: large,
-  prince: (15 / 9) * 1em,
-  web: (15 / 9) * 1em
-) !default;
-$title-publisher-font-size: (
-  epub: large,
-  prince: (15 / 9) * 1em,
-  web: (15 / 9) * 1em
-) !default;
+$title-author-text-transform: uppercase !default;
 $copyright-margin-bottom: 1em !default;
 $copyright-font-size: (
   epub: small,

@@ -5,7 +5,7 @@ $footnote-line-height: (14 / 9) * 1em !default;
 $hr-width: 100% !default;
 $hr-margin-top: (20 / 9) * 1em !default;
 $hr-margin-bottom: (20 / 9) * 1em !default;
-$textbox-border-style: none !default;
+$textbox-border-style: solid !default;
 $textbox-font-size: (
   epub: small,
   prince: 9pt,
@@ -18,6 +18,7 @@ $edu-textbox-padding-right: 16px !default;
 $edu-textbox-padding-bottom: 16px !default;
 $edu-textbox-padding-left: 16px !default;
 $edu-textbox-border-radius: 0 !default;
+$edu-textbox-border-style: none !default;
 $edu-header-font-size: (
   epub: large,
   prince: 15pt,
