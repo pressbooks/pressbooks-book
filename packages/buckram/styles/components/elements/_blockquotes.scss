@@ -2,15 +2,17 @@
 //                                Blockquotes                                 //
 //============================================================================//
 
-.blockquote,
-blockquote {
-  margin: $blockquote-margin-top $blockquote-margin-right $blockquote-margin-bottom $blockquote-margin-left;
-  font-family: $blockquote-font-family;
-  font-size: $blockquote-font-size;
-  font-style: $blockquote-font-style;
-  font-weight: $blockquote-font-weight;
-  line-height: $blockquote-line-height;
-  text-align: $blockquote-align;
+@if $type != 'web' {
+  .blockquote,
+  blockquote {
+    margin: $blockquote-margin-top $blockquote-margin-right $blockquote-margin-bottom $blockquote-margin-left;
+    font-family: $blockquote-font-family;
+    font-size: $blockquote-font-size;
+    font-style: $blockquote-font-style;
+    font-weight: $blockquote-font-weight;
+    line-height: $blockquote-line-height;
+    text-align: $blockquote-align;
+  }
 }
 
 // Styling below should stay as is for web and mobi7, in theory
@@ -44,5 +46,17 @@ blockquote {
 }
 
 @if $type == 'web' {
-  // TODO
+  .blockquote,
+  .front-matter blockquote,
+  .part blockquote,
+  .chapter blockquote,
+  .back-matter blockquote {
+    margin: $blockquote-margin-top $blockquote-margin-right $blockquote-margin-bottom $blockquote-margin-left;
+    font-family: $blockquote-font-family;
+    font-size: $blockquote-font-size;
+    font-style: $blockquote-font-style;
+    font-weight: $blockquote-font-weight;
+    line-height: $blockquote-line-height;
+    text-align: $blockquote-align;
+  }
 }

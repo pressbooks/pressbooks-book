@@ -4,14 +4,16 @@
 
 @import '../utilities';
 
-body {
-  font-family: $body-font-family;
-  font-size: if-map-get($body-font-size, $type);
-  font-style: $body-font-style;
-  font-weight: $body-font-weight;
-  line-height: if-map-get($body-line-height, $type);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+@if $type != 'web' {
+  body {
+    font-family: $body-font-family;
+    font-size: if-map-get($body-font-size, $type);
+    font-style: $body-font-style;
+    font-weight: $body-font-weight;
+    line-height: if-map-get($body-line-height, $type);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 }
 
 @if $type == 'epub' {
@@ -23,5 +25,20 @@ body {
       font-weight: normal;
       line-height: 1.4em;
     }
+  }
+}
+
+@if $type == 'web' {
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter {
+    font-family: $body-font-family;
+    font-size: if-map-get($body-font-size, $type);
+    font-style: $body-font-style;
+    font-weight: $body-font-weight;
+    line-height: if-map-get($body-line-height, $type);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }

@@ -4,6 +4,24 @@
 
 @import '../utilities';
 
+@mixin educational-textbox() {
+  float: none;
+  padding: $edu-textbox-padding-top $edu-textbox-padding-right $edu-textbox-padding-bottom $edu-textbox-padding-left;
+  margin-bottom: $edu-textbox-margin-bottom;
+  border-radius: $edu-textbox-border-radius;
+  border-style: $edu-textbox-border-style;
+
+  h3 {
+    padding: $edu-header-padding-top $edu-header-padding-right $edu-header-padding-bottom $edu-header-padding-left;
+    margin: $edu-header-margin-top $edu-header-margin-right $edu-header-margin-bottom $edu-header-margin-left;
+    font-size: if-map-get($edu-header-font-size, $type);
+    font-style: $edu-header-font-style;
+    font-weight: $edu-header-font-weight;
+    color: $edu-header-text-color;
+    text-align: $edu-header-text-align;
+  }
+}
+
 .textbox {
   padding: $textbox-padding-top $textbox-padding-right $textbox-padding-bottom $textbox-padding-left;
   margin: $textbox-margin-top $textbox-margin-right $textbox-margin-bottom $textbox-margin-left;
@@ -35,70 +53,53 @@
   &.shaded {
     background-color: $textbox-shaded-background-color;
   }
-}
 
-@mixin educational-textbox() {
-  float: none;
-  padding: $edu-textbox-padding-top $edu-textbox-padding-right $edu-textbox-padding-bottom $edu-textbox-padding-left;
-  margin-bottom: $edu-textbox-margin-bottom;
-  border-radius: $edu-textbox-border-radius;
+  &.learning-objectives {
+    @include educational-textbox();
 
-  h3 {
-    padding: $edu-header-padding-top $edu-header-padding-right $edu-header-padding-bottom $edu-header-padding-left;
-    margin: $edu-header-margin-top $edu-header-margin-right $edu-header-margin-bottom $edu-header-margin-left;
-    font-size: if-map-get($edu-header-font-size, $type);
-    font-style: $edu-header-font-style;
-    font-weight: $edu-header-font-weight;
-    color: $edu-header-text-color;
-    text-align: $edu-header-text-align;
+    background-color: $learning-objectives-background;
+
+    h3 {
+      background-color: $learning-objectives-header-background;
+      border-top-right-radius: $edu-textbox-border-radius;
+      border-top-left-radius: $edu-textbox-border-radius;
+    }
   }
-}
 
-.textbox.learning-objectives {
-  @include educational-textbox();
+  &.key-takeaways {
+    @include educational-textbox();
 
-  background-color: $learning-objectives-background;
+    background-color: $key-takeaways-background;
 
-  h3 {
-    background-color: $learning-objectives-header-background;
-    border-top-right-radius: $edu-textbox-border-radius;
-    border-top-left-radius: $edu-textbox-border-radius;
+    h3 {
+      background-color: $key-takeaways-header-background;
+      border-top-right-radius: $edu-textbox-border-radius;
+      border-top-left-radius: $edu-textbox-border-radius;
+    }
   }
-}
 
-.textbox.key-takeaways {
-  @include educational-textbox();
+  &.exercises {
+    @include educational-textbox();
 
-  background-color: $key-takeaways-background;
+    background-color: $exercises-background;
 
-  h3 {
-    background-color: $key-takeaways-header-background;
-    border-top-right-radius: $edu-textbox-border-radius;
-    border-top-left-radius: $edu-textbox-border-radius;
+    h3 {
+      background-color: $exercises-header-background;
+      border-top-right-radius: $edu-textbox-border-radius;
+      border-top-left-radius: $edu-textbox-border-radius;
+    }
   }
-}
 
-.textbox.exercises {
-  @include educational-textbox();
+  &.examples {
+    @include educational-textbox();
 
-  background-color: $exercises-background;
+    background-color: $examples-background;
 
-  h3 {
-    background-color: $exercises-header-background;
-    border-top-right-radius: $edu-textbox-border-radius;
-    border-top-left-radius: $edu-textbox-border-radius;
-  }
-}
-
-.textbox.examples {
-  @include educational-textbox();
-
-  background-color: $examples-background;
-
-  h3 {
-    background-color: $examples-header-background;
-    border-top-right-radius: $edu-textbox-border-radius;
-    border-top-left-radius: $edu-textbox-border-radius;
+    h3 {
+      background-color: $examples-header-background;
+      border-top-right-radius: $edu-textbox-border-radius;
+      border-top-left-radius: $edu-textbox-border-radius;
+    }
   }
 }
 

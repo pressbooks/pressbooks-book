@@ -104,6 +104,9 @@ $sidebar-align: left !default;
 $hr-width: 20% !default;
 $hr-margin-top: 0.9em !default;
 $hr-margin-bottom: 0.9em !default;
+$hr-border-style: solid !default;
+$hr-border-width: 1px !default;
+$hr-border-color: if-map-get($color-1, $type) !default;
 $hr-break-symbols-margin-bottom: 1.66em !default;
 $hr-break-symbols-font-size: 1.1em !default;
 $hr-break-symbols-content: '\066D' !default;
@@ -146,6 +149,7 @@ $textbox-caption-font-style: normal !default;
 $textbox-caption-font-weight: bold !default;
 
 // Educational Textboxes
+$edu-textbox-border-style: solid !default;
 $edu-textbox-border-radius: 0.35em !default;
 $edu-textbox-padding-top: 1em !default;
 $edu-textbox-padding-right: 1em !default;
