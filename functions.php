@@ -454,3 +454,7 @@ function pressbooks_book_setup() {
 }
 
 add_action( 'after_setup_theme', 'pressbooks_book_setup' );
+
+add_filter( 'pb_global_components_path', function( $path ) {
+	return dirname( __FILE__ ) . '/node_modules/buckram/styles/';
+} );
