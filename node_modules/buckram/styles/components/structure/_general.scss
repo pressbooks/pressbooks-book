@@ -1,0 +1,20 @@
+//========================
+// Page Structure Basics
+//========================
+
+// Size & Cropmarks
+
+@page {
+  marks: $page-cropmarks;
+  size: $page-width $page-height;
+}
+
+// Margins
+
+@page:left {
+  margin: $page-margin-top $page-margin-inside $page-margin-bottom $page-margin-outside;
+}
+
+@page:right {
+  margin: $page-margin-top $page-margin-outside $page-margin-bottom $page-margin-inside;
+}
