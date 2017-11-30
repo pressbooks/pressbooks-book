@@ -1,25 +1,25 @@
 // 'Ekatra', @import 'EkatraFont'
 
-//EKATRA
+// EKATRA
 // A font for the Gujarati language
 
 @font-face {
   font-family: 'Ekatra';
-  src: url('fonts/EkatraUnicode.ttf') format('truetype');
+  src: url('fonts/Ekatra-Normal.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Ekatra';
-  src: url('fonts/EkatraUnicode-NormalItalic.ttf') format('truetype');
+  src: url('fonts/Ekatra-Italic.ttf') format('truetype');
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Ekatra';
-  src: url('fonts/EkatraUnicode-Bold.ttf') format('truetype');
+  src: url('fonts/Ekatra-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: bold;
 }
