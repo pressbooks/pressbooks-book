@@ -10,9 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/pressbooks/pressbooks-book.git"
   },
-  "dependencies": {
-    "buckram": "^0.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "browser-sync": "^2.18.13",
