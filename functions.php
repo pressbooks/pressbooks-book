@@ -97,11 +97,6 @@ function pb_enqueue_scripts() {
 	if ( ! is_front_page() ) {
 		$assets = new Assets( 'pressbooks-book', 'theme' );
 		$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-
-		//wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
-		//wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
-
-		// $deps = [ 'pressbooks/structure', 'pressbooks/webfonts' ];
 		$deps = [];
 
 		if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
