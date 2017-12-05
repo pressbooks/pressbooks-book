@@ -1,0 +1,274 @@
+/* spacing */
+$spacer: 1rem !default;
+
+$nav-max-width: 1440px;
+$content-max-width: 1330px;
+$content-box-max-width: 1200px;
+$reading-page-max-width: 800px;
+
+/** Colors */
+$brand: #b01109 !default;
+$brand-hover: #770600 !default;
+$brand-accent: #015d75 !default;
+
+$brand-bg: #fff !default;
+$brand-bg-alt: #f9fdff !default;
+$brand-bg-alt2: #ececec !default;
+$brand-text: #000 !default;
+
+$btn-color: #fff !default;
+
+$body-bg: $brand-bg !default;
+$body-color: $brand-text !default;
+
+$header-bg: #000 !default;
+$header-color: #fff !default;
+
+$footer-bg: #444 !default;
+$footer-color: #fff !default;
+
+$book-bg: #fff !default;
+
+$color-primary: #b01109 !default;
+$color-accent: #015d75 !default;
+
+$color-primary-fg: #fff !default;
+$color-accent-fg: #fff !default;
+
+$color-header-text: #000 !default;
+$color-cover-header-bg: #000;
+
+//navigation
+$nav-reading-height-mobile: 2.5rem;
+
+// Style anchor elements.
+$link-color: var(--brand) !default;
+$link-decoration: none !default;
+$link-hover-color: var(--brand-hover) !default;
+$link-hover-decoration: underline !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom: 1rem !default;
+
+/** Fonts */
+$font-family-sans-serif: 'Karla', sans-serif;
+$font-family-serif:      'Spectral', serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol' !default;
+$font-family-monospace: 'SFMono-Regular', Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$base-font-size: 16; //for rem function
+
+$font-size-lg: 1.25rem !default;
+$font-size-sm: 0.875rem !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$h1-font-size: 3rem !default;
+$h2-font-size: 2.5rem !default;
+$h3-font-size: 2.25rem !default;
+$h4-font-size: 1.875rem !default;
+$h5-font-size: 1.5rem !default;
+$h6-font-size: 1.25rem !default;
+
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: var(--brand) !default;
+
+$small-font-size: 80% !default;
+
+$text-muted: #888 !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+/** Breakpoints */
+$smallest: 480px !default;
+$small: 768px !default;
+$medium: 960px !default;
+$large: 1200px !default;
+$extra-large: 1650px !default;
+
+$breakpoint-not-small: 'screen and (min-width: 30em)' !default;
+$breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !default;
+$breakpoint-large: 'screen and (min-width: 60em)' !default;
+$breakpoint-not-large: 'screen and (max-width: 59.975em)' !default;
+$breakpoint-max-content: 'screen and (min-width: #{$content-max-width})' !default;
+
+$breakpoint-small-to-tablet: 'screen and (max-width: 767px)' !default;
+$breakpoint-tablet-and-up: 'screen and (min-width: 768px)' !default;
+$breakpoint-tablet-to-large: 'screen and (min-width: 768px) and (max-width: 60em)' !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$border-width: 2px !default;
+$border-radius: 3px !default;
+
+$component-active-color: var(--brand) !default;
+$component-active-bg: var(--brand-accent) !default;
+
+$section-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding: 0.75rem !default;
+$table-cell-padding-sm: 0.3rem !default;
+
+$table-bg: transparent !default;
+$table-accent-bg: rgba(0, 0, 0, 0.05) !default;
+$table-hover-bg: rgba(0, 0, 0, 0.075) !default;
+$table-active-bg: $table-hover-bg !default;
+
+$table-border-width: $border-width !default;
+$table-border-color: #eee !default;
+
+$table-head-bg: #eee !default;
+$table-head-color: #555 !default;
+
+$table-dark-bg: #222 !default;
+$table-dark-accent-bg: rgba(255, 255, 255, 0.05) !default;
+$table-dark-hover-bg: rgba(255, 255, 255, 0.075) !default;
+$table-dark-border-color: lighten(#222, 7.5%) !default;
+$table-dark-color: $body-bg !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-padding-x: 3.25rem !default;
+$btn-padding-y: 0.875rem !default;
+$btn-line-height: $line-height-base !default;
+$btn-border-width: $border-width !default;
+
+$input-btn-padding-y: 0.375rem !default;
+$input-btn-padding-x: 0.75rem !default;
+$input-btn-line-height: $line-height-base !default;
+
+$btn-font-family: $font-family-sans-serif;
+$btn-font-weight: $font-weight-normal !default;
+$btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+  0 1px 1px rgba(0, 0, 0, 0.075) !default;
+$btn-focus-box-shadow: 0 0 0 3px rgba($brand, 0.25) !default;
+$btn-active-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !default;
+
+$btn-link-disabled-color: $text-muted !default;
+
+$btn-block-spacing-y: 0.5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: $border-radius !default;
+
+$btn-transition: background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+// Forms
+
+$input-bg: #fff !default;
+$input-disabled-bg: #222 !default;
+
+$input-color: #555 !default;
+$input-border-color: #ddd !default;
+$input-btn-border-width: $border-width !default; // For form controls and buttons
+$input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
+
+$input-border-radius: $border-radius !default;
+
+$input-focus-bg: $input-bg !default;
+$input-focus-border-color: lighten($brand, 25%) !default;
+$input-focus-box-shadow: $input-box-shadow, $btn-focus-box-shadow !default;
+$input-focus-color: $input-color !default;
+
+$input-placeholder-color: #888 !default;
+
+$input-height-border: $input-btn-border-width * 2 !default;
+
+$input-height-inner: ($font-size-base * $input-btn-line-height) +
+  (
+    $input-btn-padding-y * 2
+  ) !default;
+$input-height: calc(#{$input-height-inner} + #{$input-height-border}) !default;
+
+$input-transition: border-color ease-in-out 0.15s,
+  box-shadow ease-in-out 0.15s !default;
+
+$caret-width: 0.3em;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width: 10rem !default;
+$dropdown-padding-y: 0.5rem !default;
+$dropdown-spacer: 0.125rem !default;
+$dropdown-bg: var(--body-bg) !default;
+$dropdown-border-color: rgba(0, 0, 0, 0.15) !default;
+$dropdown-border-width: $border-width !default;
+$dropdown-divider-bg: #888 !default;
+$dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !default;
+
+$dropdown-link-color: #222 !default;
+$dropdown-link-hover-color: darken(#222, 5%) !default;
+$dropdown-link-hover-bg: var(--brand-accent) !default;
+
+$dropdown-link-active-color: $component-active-color !default;
+$dropdown-link-active-bg: $component-active-bg !default;
+
+$dropdown-link-disabled-color: #888 !default;
+
+$dropdown-item-padding-y: 0.25rem !default;
+$dropdown-item-padding-x: 1.5rem !default;
+
+$dropdown-header-color: #888 !default;
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+$icon-arrow-down: '\61';
+$icon-arrow-right: '\62';
+$icon-arrow-up: '\63';
+$icon-book: '\64';
+$icon-graph: '\67';
+$icon-like: '\68';
+$icon-share-books: '\6a';
+$icon-speach-bubble: '\6b';
+$icon-twitter: '\6c';
+$icon-facebook: '\65';
+$icon-search: '\6d';
+$icon-cc: '\66';
+$icon-cc-by: '\6e';
+$icon-google-plus: '\6f';
+$icon-cc-nc: '\69';
+$icon-cc-share: '\70';
+$icon-cc-sa: '\71';
+$icon-cc-zero: '\72';
+$icon-cc-pd: '\73';
+$icon-cc-nd: '\74';
+$icon-cc-nc-jp: '\75';
+$icon-cc-nc-eu: '\76';
+$icon-cc-remix: '\77';

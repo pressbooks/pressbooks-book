@@ -9,28 +9,12 @@
     "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:styles",
-    "lint:styles": "stylelint \"assets/styles/**/*.scss\"",
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"resources/assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
-  "dependencies": {
-    "tachyons-sass": "~4.8"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^8.0.3",
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "cross-env": "^5.1.1",
-    "eslint": "^4.12.1",
-    "eslint-config-humanmade": "^0.2.0",
-    "eslint-config-react-app": "^2.0.1",
-    "eslint-loader": "~1.9",
-    "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.5.1",
-    "laravel-mix": "^1.4",
-    "stylelint": "^8.3.1",
-    "stylelint-config-standard": "^18.0.0"
+    "pressbooks-build-tools": "^0.5.0"
   },
   "repository": {
     "type": "git",
@@ -47,9 +31,20 @@
   },
   "homepage": "https://github.com/pressbooks/aetna#readme",
   "stylelint": {
-    "extends": "stylelint-config-standard",
+    "extends": [
+      "stylelint-config-recommended-scss",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
     "rules": {
-      "indentation": 2
+      "media-feature-name-no-unknown": [
+        true,
+        {
+          "ignoreMediaFeatureNames": [
+            "min--moz-device-pixel-ratio"
+          ]
+        }
+      ],
+      "media-query-list-comma-space-after": "always-single-line"
     }
   }
 }
