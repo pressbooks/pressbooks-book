@@ -34,37 +34,6 @@ $metakeys = [
 ];
 
 /* ------------------------------------------------------------------------ *
- * Scripts and styles for Book Info Page (cover page)
- * ------------------------------------------------------------------------ */
-
-function pressbooks_book_info_page() {
-	$assets = new Assets( 'pressbooks-book', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-
-	wp_enqueue_style( 'book/cover', $assets->getPath( 'styles/cover.css' ), [], null, 'all' );
-	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700' );
-
-	// Sharer.js
-	wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
-	wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), [ 'jquery' ], null );
-	wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), [ 'jquery' ], null );
-	wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), [ 'jquery' ], null );
-
-	wp_register_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), [ 'jquery' ], null );
-	wp_localize_script(
-		'pressbooks/a11y',
-		'PB_A11y',
-		[
-			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
-			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
-		]
-	);
-	wp_enqueue_script( 'pressbooks/a11y' );
-}
-
-add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
-
-/* ------------------------------------------------------------------------ *
  * Asyncronous loading to improve speed of page load
  * ------------------------------------------------------------------------ */
 
@@ -93,14 +62,35 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
 /* ------------------------------------------------------------------------ *
  * Register and enqueue scripts and stylesheets.
  * ------------------------------------------------------------------------ */
-function pb_enqueue_scripts() {
+function pb_enqueue_assets() {
+	$assets = new Assets( 'pressbooks-book', 'theme' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+
+	wp_enqueue_style( 'book/common', $assets->getPath( 'styles/common.css' ), false, null );
+	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700', false, null );
+	wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
+	wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), [ 'jquery' ], null );
+	wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), [ 'jquery' ], null );
+	wp_register_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), [ 'jquery' ], null );
+	wp_localize_script(
+		'pressbooks/a11y',
+		'PB_A11y',
+		[
+			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
+			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
+		]
+	);
+	wp_enqueue_script( 'pressbooks/a11y' );
+
+	if ( is_front_page() ) {
+		wp_enqueue_style( 'book/cover', $assets->getPath( 'styles/cover.css' ), false, null );
+		wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), [ 'jquery' ], null );
+	}
 	if ( ! is_front_page() ) {
-		$assets = new Assets( 'pressbooks-book', 'theme' );
-		$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-		$deps = [];
+		wp_enqueue_style( 'book/reading', $assets->getPath( 'styles/reading.css' ), false, null );
 
 		if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
-			wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), $deps, get_option( 'pressbooks_last_custom_css' ), 'screen' );
+			wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), false, get_option( 'pressbooks_last_custom_css' ), 'screen' );
 		} else {
 			$styles = Container::get( 'Styles' );
 			if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
@@ -115,25 +105,20 @@ function pb_enqueue_scripts() {
 					$styles->updateWebBookStyleSheet();
 				}
 				if ( $styles->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
-					wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', $deps, null, 'screen, print' );
+					wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', false, null, 'screen, print' );
 				}
-				wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', $deps, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
+				wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', false, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
 			} else {
 				// Classic mode (does not use Sass)
-				wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', $deps, null, 'screen, print' );
+				wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
 			}
 		}
 
 		wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), [ 'jquery' ], null, true );
-
-		if ( is_single() ) {
-			wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), [ 'jquery' ], null, false );
-		}
-
-		wp_enqueue_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), [ 'jquery' ], null );
+		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), [ 'jquery' ], null, false );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'pb_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'pb_enqueue_assets' );
 
 /**
  * Update web book stylesheet.

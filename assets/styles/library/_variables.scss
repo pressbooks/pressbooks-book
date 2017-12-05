@@ -54,6 +54,8 @@ $link-hover-decoration: underline !default;
 $paragraph-margin-bottom: 1rem !default;
 
 /** Fonts */
+$font-family-sans-serif: 'Karla', sans-serif;
+$font-family-serif:      'Spectral', serif;
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol' !default;
@@ -149,8 +151,8 @@ $table-dark-color: $body-bg !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x: 1.1875rem !default;
-$btn-padding-y: 1.1875rem !default;
+$btn-padding-x: 3.25rem !default;
+$btn-padding-y: 0.875rem !default;
 $btn-line-height: $line-height-base !default;
 $btn-border-width: $border-width !default;
 

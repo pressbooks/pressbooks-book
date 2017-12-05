@@ -1,6 +1,8 @@
 {
-    "/scripts/navigation.js": "/scripts/navigation.js?id=04630002d8a35a1c0707",
-    "/styles/cover.css": "/styles/cover.css?id=62f3ae24c2fc5636ad80",
+    "/scripts/navigation.js": "/scripts/navigation.js?id=36c368e3d8eb73971b32",
+    "/styles/common.css": "/styles/common.css?id=c279c08d1bfc6d90ca5d",
+    "/styles/cover.css": "/styles/cover.css?id=c279c08d1bfc6d90ca5d",
+    "/styles/reading.css": "/styles/reading.css?id=c279c08d1bfc6d90ca5d",
     "/scripts/a11y.js": "/scripts/a11y.js?id=818e74a1bd8b874bb640",
     "/scripts/columnizer.js": "/scripts/columnizer.js?id=465e1b0d7a57022d67ab",
     "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=3d70eb57b90a07835dcc",
