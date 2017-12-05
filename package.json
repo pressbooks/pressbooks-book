@@ -11,6 +11,7 @@
     "url": "git+https://github.com/pressbooks/pressbooks-book.git"
   },
   "dependencies": {
+    "aetna": "^0.1.0",
     "jquery-columnizer": "^1.6.3",
     "sharer.js": "^0.3.1"
   },

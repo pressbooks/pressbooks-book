@@ -1,13 +1,13 @@
 {
     "/scripts/navigation.js": "/scripts/navigation.js?id=36c368e3d8eb73971b32",
-    "/styles/common.css": "/styles/common.css?id=c279c08d1bfc6d90ca5d",
-    "/styles/cover.css": "/styles/cover.css?id=c279c08d1bfc6d90ca5d",
-    "/styles/reading.css": "/styles/reading.css?id=c279c08d1bfc6d90ca5d",
-    "/scripts/a11y.js": "/scripts/a11y.js?id=818e74a1bd8b874bb640",
-    "/scripts/columnizer.js": "/scripts/columnizer.js?id=465e1b0d7a57022d67ab",
-    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=3d70eb57b90a07835dcc",
-    "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343",
-    "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=780fcc8b61e0c196f6ee",
-    "/scripts/toc.js": "/scripts/toc.js?id=41dec06e39b599e9d22d",
-    "/scripts/dropdown.js": "/scripts/dropdown.js?id=910e4b8546bb78437542"
+    "/styles/common.css": "/styles/common.css?id=f380609276ce10da6141",
+    "/styles/cover.css": "/styles/cover.css?id=f380609276ce10da6141",
+    "/styles/reading.css": "/styles/reading.css?id=f380609276ce10da6141",
+    "/scripts/toc.js": "/scripts/toc.js?id=957303203c64eabfd13c",
+    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=7d2471719cb98cbbbd87",
+    "/scripts/dropdown.js": "/scripts/dropdown.js?id=4ea31ec6b414a8d03923",
+    "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=49022eaec661f3de21c5",
+    "/scripts/a11y.js": "/scripts/a11y.js?id=b5c446434f07d9e372dc",
+    "/scripts/columnizer.js": "/scripts/columnizer.js?id=6036d2b265a0651054e2",
+    "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343"
 }
