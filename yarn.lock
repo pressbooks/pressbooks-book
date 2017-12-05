@@ -6034,7 +6034,7 @@ postcss-selector-parser@^2.0.0, postcss-selector-parser@^2.2.2:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-selector-parser@^3.1.0:
+postcss-selector-parser@^3.1.0, postcss-selector-parser@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz#4f875f4afb0c96573d5cf4d74011aee250a7e865"
   dependencies:
@@ -6108,9 +6108,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-pressbooks-build-tools@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/pressbooks-build-tools/-/pressbooks-build-tools-0.3.0.tgz#67436952ff3f811e2d32f7b0b30090e9184f1696"
+pressbooks-build-tools@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/pressbooks-build-tools/-/pressbooks-build-tools-0.5.0.tgz#e5b1f306553a5d517eea1e1c7eafac3708b323d3"
   dependencies:
     babel-eslint "^8.0.3"
     browser-sync "^2.18.13"
@@ -6130,7 +6130,8 @@ pressbooks-build-tools@^0.3.0:
     prettier-stylelint "^0.4.2"
     rimraf "~2.6"
     stylelint "^8.3.1"
-    stylelint-config-standard "^18.0.0"
+    stylelint-config-recommended-scss "^3.0.0"
+    stylelint-scss "^2.2.0"
     stylelint-webpack-plugin "^0.9.0"
     wp-pot-cli "^1.0.1"
 
@@ -7393,15 +7394,25 @@ style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
+stylelint-config-recommended-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-3.0.0.tgz#1604a7c5774acee202bf2cedbcbde8ee5efbdecd"
+  dependencies:
+    stylelint-config-recommended "^2.0.0"
+
 stylelint-config-recommended@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-2.0.0.tgz#560a028e81ea3ca8894b9a8eef4c0e05ac60e090"
 
-stylelint-config-standard@^18.0.0:
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-18.0.0.tgz#0d872b40fafdcddcf4188fb5b64ddb3887e8aefc"
+stylelint-scss@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-2.2.0.tgz#3e324bf13346db7af21cd24ad57fe3202f7c3823"
   dependencies:
-    stylelint-config-recommended "^2.0.0"
+    lodash "^4.17.4"
+    postcss-media-query-parser "^0.2.3"
+    postcss-resolve-nested-selector "^0.1.1"
+    postcss-selector-parser "^3.1.1"
+    postcss-value-parser "^3.3.0"
 
 stylelint-webpack-plugin@^0.9.0:
   version "0.9.0"
