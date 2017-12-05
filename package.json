@@ -23,14 +23,27 @@
     "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint \"assets/scripts\"",
-    "lint:styles": "stylelint \"assets/**/*.scss\"",
+    "lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/scripts/*.js\"",
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
+  "eslintConfig": {
+    "extends": "humanmade",
+    "globals": {
+      "jQuery": true,
+      "PB_A11y": true,
+      "wp": true
+    },
     "rules": {
-      "indentation": 2,
+      "jsx-a11y/href-no-hash": 0
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended-scss",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
+    "rules": {
       "media-feature-name-no-unknown": [
         true,
         {
@@ -39,6 +52,7 @@
           ]
         }
       ],
+      "media-query-list-comma-space-after": "always-single-line",
       "property-no-unknown": [
         true,
         {

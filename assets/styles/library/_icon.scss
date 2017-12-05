@@ -9,7 +9,7 @@
 }
 
 [data-icon]::before {
-  font-family: 'pressbooks-theme' !important;
+  font-family: 'pressbooks-theme', sans-serif !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -32,7 +32,7 @@
 }
 
 .icon::before {
-  font-family: 'pressbooks-theme' !important;
+  font-family: 'pressbooks-theme', sans-serif !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

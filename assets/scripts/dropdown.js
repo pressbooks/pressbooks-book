@@ -1,27 +1,25 @@
 jQuery(
-	function($){
+	function ( $ ){
 
-		$(document.body).on('click',function(e){
-			var $target = $(e.target);
+		$( document.body ).on( 'click', function ( e ){
+			let $target = $( e.target );
 
-			if($target.is('[data-toggle=dropdown]')){
+			if ( $target.is( '[data-toggle=dropdown]' ) ){
 				return;
 			}
 
-			$('.dropdown-menu.show').each(function(){
-				var $dropdown = $(this);
-				console.log($dropdown);
-				$dropdown.removeClass('show');
-			})
-		});
+			$( '.dropdown-menu.show' ).each( function (){
+				let $dropdown = $( this );
+				$dropdown.removeClass( 'show' );
+			} )
+		} );
 
-		$(document.body).on('click', '[data-toggle=dropdown]', function(e){
-			var $target = $(this);
-			var $dropdown = $target.parent('.dropdown').find('.dropdown-menu');
+		$( document.body ).on( 'click', '[data-toggle=dropdown]', function ( e ){
+			let $target = $( this );
+			let $dropdown = $target.parent( '.dropdown' ).find( '.dropdown-menu' );
 
-			$dropdown.toggleClass('show');
+			$dropdown.toggleClass( 'show' );
 
-
-		});
+		} );
 	}
 );

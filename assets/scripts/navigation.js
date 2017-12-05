@@ -1,11 +1,10 @@
-jQuery(($) => {
-	$('.js-header-menu-toggle').click((event) => {
-    event.preventDefault();
-    $(event.currentTarget).toggleClass('--active');
-    $('.js-header-nav').toggleClass('--visible');
-  });
-});
-
+jQuery( $ => {
+	$( '.js-header-menu-toggle' ).click( event => {
+		event.preventDefault();
+		$( event.currentTarget ).toggleClass( '--active' );
+		$( '.js-header-nav' ).toggleClass( '--visible' );
+	} );
+} );
 
 // let navReading, readingMeta, readingFooter, footerHeight;
 // navReading = document.querySelectorAll('.nav-reading')[0];

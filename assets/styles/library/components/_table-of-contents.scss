@@ -28,6 +28,21 @@
   }
 }
 
+.toc__front-matter,
+.toc__back-matter {
+  font-weight: 700;
+
+  @media #{$breakpoint-tablet-and-up} {
+    font-size: 1.125rem;
+  }
+
+  li {
+    background-color: var(--body-bg-alt);
+    margin-bottom: 3px;
+    padding: 1rem;
+  }
+}
+
 .toc__list {
   color: var(--brand);
   margin-bottom: 0;
@@ -57,21 +72,6 @@
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
     }
-  }
-}
-
-.toc__front-matter,
-.toc__back-matter {
-  font-weight: 700;
-
-  @media #{$breakpoint-tablet-and-up} {
-    font-size: 1.125rem;
-  }
-
-  li {
-    background-color: var(--body-bg-alt);
-    margin-bottom: 3px;
-    padding: 1rem;
   }
 }
 
