@@ -2,10 +2,11 @@
 # This file is distributed under the same license as the pressbooks-book package.
 # Translators:
 # Antonio Devís <colomet@hotmail.com>, 2017
+# Gilbert MOISIO <gmoisio@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
-"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2017\n"
+"Last-Translator: Gilbert MOISIO <gmoisio@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,11 +28,11 @@ msgstr ""
 
 #: ../comments.php29, ../comments.php:40
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Commentaires plus anciens"
 
 #: ../comments.php30, ../comments.php:41
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Commentaires récents<span class=\"meta-nav\">&rarr;</span>"
 
 #: ../comments.php:48
 msgid "Comments are closed."
@@ -85,73 +86,73 @@ msgstr "par"
 msgid "Simple Book Production"
 msgstr "Production Simple Livre"
 
-#: ../functions.php:19
+#: ../functions.php:20
 msgid "Author"
 msgstr "Auteur"
 
-#: ../functions.php:20
+#: ../functions.php:21
 msgid "Contributing Author"
 msgstr "Auteur contributeur"
 
-#: ../functions.php:21
+#: ../functions.php:22
 msgid "Publisher"
 msgstr "Editeur"
 
-#: ../functions.php:22
-msgid "Print ISBN"
-msgstr "Imprimer le numéro international normalisé du livre (ISBN)"
-
 #: ../functions.php:23
+msgid "Print ISBN"
+msgstr "ISBN de la version imprimée"
+
+#: ../functions.php:24
 msgid "Keywords/Tags"
 msgstr "Mots clés/étiquettes"
 
-#: ../functions.php:24
+#: ../functions.php:25
 msgid "Publication Date"
 msgstr "Date de publication"
 
-#: ../functions.php:25
+#: ../functions.php:26
 msgid "Hashtag"
 msgstr "Hashtag"
 
-#: ../functions.php:26
+#: ../functions.php:27
 msgid "Ebook ISBN"
 msgstr "ISBN de l'ebook"
 
-#: ../functions.php:191
+#: ../functions.php:202
 msgid "Previous"
 msgstr "Précédent"
 
-#: ../functions.php:194
+#: ../functions.php:205
 msgid "Next"
 msgstr "Suivant"
 
-#: ../functions.php:231
+#: ../functions.php:244
 msgid "%s on"
-msgstr ""
+msgstr "%s sur"
 
-#: ../functions.php:231
+#: ../functions.php:244
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s à %2$s"
 
-#: ../functions.php231, ../functions.php:251
+#: ../functions.php244, ../functions.php:264
 msgid "(Edit)"
 msgstr "(Modifier)"
 
-#: ../functions.php:234
+#: ../functions.php:247
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en cours de modération"
 
-#: ../functions.php:251
+#: ../functions.php:264
 msgid "Pingback:"
-msgstr "PingBack:"
+msgstr "PingBack :"
 
-#: ../functions.php406, ../page-cover-private-block.php:2
+#: ../functions.php383, ../page-cover-private-block.php:2
 msgid "Make your own books on Pressbooks"
 msgstr "Rédigez vos propres livres sur Pressbooks"
 
 #: ../header.php:32
 msgid "Page %s"
-msgstr ""
+msgstr "Page %s"
 
 #: ../header.php87, ../page-cover-top-block.php:63
 msgid "Buy"
@@ -180,26 +181,28 @@ msgstr "Acheter le livre"
 #: ../page-buy.php:19
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
+"Vous pouvez acheter <a href=\"%1$s\">%2$s</a> en suivant l'un des liens ci-"
+"dessous :"
 
 #: ../page-buy.php:23
 msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
-msgstr ""
+msgstr "Achetez sur <a href=\"%1$s\">amazon.com</a>"
 
 #: ../page-buy.php:27
 msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
-msgstr ""
+msgstr "Achetez sur <a href=\"%1$s\">oreilly.com</a>"
 
 #: ../page-buy.php:31
 msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
-msgstr ""
+msgstr "Achetez sur <a href=\"%1$s\">barnesandnoble.com</a>"
 
 #: ../page-buy.php:35
 msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
-msgstr ""
+msgstr "Achetez sur <a href=\"%1$s\">kobobooks.com</a>"
 
 #: ../page-buy.php:39
 msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
-msgstr ""
+msgstr "Achetez sur <a href=\"%1$s\">apple.com</a>"
 
 #: ../page-buy.php:43
 msgid "Elsewhere"
@@ -207,7 +210,7 @@ msgstr "Ailleurs"
 
 #: ../page-buy.php:43
 msgid "Purchase here:"
-msgstr "Continuez votre achat ici :"
+msgstr "Achetez ici :"
 
 #: ../page-cover-fourth-block.php:21
 msgid "Other books"
@@ -220,7 +223,7 @@ msgstr "Description du livre"
 #: ../page-cover-second-block.php15, ../page-cover-second-block.php16,
 #: ../page-cover-second-block.php:17
 msgid "Check out this great book on Pressbooks."
-msgstr "Emprunte ce bon livre sur Pressbooks."
+msgstr "Découvrez ce bon livre sur Pressbooks."
 
 #: ../page-cover-second-block.php:15
 msgid "Tweet"
@@ -271,6 +274,8 @@ msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
 msgstr ""
+"Ce livre est privé et accessible uniquement aux utilisateurs enregistrés. Si"
+" vous avez un compte, vous pouvez %s."
 
 #: ../private.php:12
 msgid "login here"
@@ -278,11 +283,11 @@ msgstr "S'identifier"
 
 #: ../private.php:16
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr ""
+msgstr "Vous pouvez également configurer votre propre livre Pressbooks à %s"
 
 #: ../search.php:5
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Résultats de recherche pour : %s"
 
 #: ../sidebar.php:13
 msgid "Home"

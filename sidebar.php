@@ -53,7 +53,7 @@
 					</ul>
 				</li>
 				<?php foreach ( $book['part'] as $part ) :?>
-				<li><h4><?php if ( count( $book['part'] ) > 1 || get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
+				<li><h4><?php if ( count( $book['part'] ) > 1 && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
 				<?php if ( $part['has_post_content'] ) { ?><a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php } ?>
 				<?php echo $part['post_title']; ?>
 				<?php if ( $part['has_post_content'] ) { ?></a><?php } ?>
