@@ -43,7 +43,7 @@ before_deploy:
 - zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
   -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\*
   *tests/\* *.editorconfig* *.gitattributes* *.github* *.gitignore*
-  *node_modules* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
+  *node_modules/\* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
 - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: releases
