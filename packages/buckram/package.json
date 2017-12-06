@@ -5,8 +5,7 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "npm run lint:styles",
-    "lint:styles":
-      "node_modules/stylelint/bin/stylelint.js '**/*.scss' --syntax scss"
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js '**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -23,15 +22,15 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "prettier": "^1.9.0",
-    "prettier-stylelint": "^0.4.2",
-    "stylelint": "^8.3.1",
-    "stylelint-config-standard": "^18.0.0"
+    "pressbooks-build-tools": "^0.6.0"
   },
   "stylelint": {
-    "extends": "stylelint-config-standard",
+    "extends": [
+      "stylelint-config-recommended-scss",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
     "rules": {
-      "indentation": 2,
+      "media-query-list-comma-space-after": "always-single-line",
       "property-no-unknown": [
         true,
         {
@@ -52,10 +51,11 @@
       "selector-pseudo-element-no-unknown": [
         true,
         {
-          "ignorePseudoElements": ["footnote-call"]
+          "ignorePseudoElements": [
+            "footnote-call"
+          ]
         }
-      ],
-      "string-quotes": "single"
+      ]
     }
   }
 }
