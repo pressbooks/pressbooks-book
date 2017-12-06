@@ -19,55 +19,73 @@
   }
 
   h1 {
+    margin-top: $h1-margin-top;
+    margin-bottom: $h1-margin-bottom;
     font-family: $h1-font-family;
     font-size: if-map-get($h1-font-size, $type);
     font-style: $h1-font-style;
     font-weight: $h1-font-weight;
+    line-height: $h1-line-height;
     text-align: $h1-align;
     text-transform: $h1-text-transform;
   }
 
   h2 {
+    margin-top: $h2-margin-top;
+    margin-bottom: $h2-margin-bottom;
     font-family: $h2-font-family;
     font-size: if-map-get($h2-font-size, $type);
     font-style: $h2-font-style;
     font-weight: $h2-font-weight;
+    line-height: $h2-line-height;
     text-align: $h2-align;
     text-transform: $h2-text-transform;
   }
 
   h3 {
+    margin-top: $h3-margin-top;
+    margin-bottom: $h3-margin-bottom;
     font-family: $h3-font-family;
     font-size: if-map-get($h3-font-size, $type);
     font-style: $h3-font-style;
     font-weight: $h3-font-weight;
+    line-height: $h3-line-height;
     text-align: $h3-align;
     text-transform: $h3-text-transform;
   }
 
   h4 {
+    margin-top: $h4-margin-top;
+    margin-bottom: $h4-margin-bottom;
     font-family: $h4-font-family;
     font-size: if-map-get($h4-font-size, $type);
     font-style: $h4-font-style;
     font-weight: $h4-font-weight;
+    line-height: $h4-line-height;
     text-align: $h4-align;
     text-transform: $h4-text-transform;
   }
 
   h5 {
+    margin-top: $h5-margin-top;
+    margin-bottom: $h5-margin-bottom;
     font-family: $h5-font-family;
     font-size: if-map-get($h5-font-size, $type);
     font-style: $h5-font-style;
     font-weight: $h5-font-weight;
+    line-height: $h5-line-height;
     text-align: $h5-align;
     text-transform: $h5-text-transform;
   }
 
   h6 {
+    margin-top: $h6-margin-top;
+    margin-bottom: $h6-margin-bottom;
     font-family: $h6-font-family;
     font-size: if-map-get($h6-font-size, $type);
     font-style: $h6-font-style;
     font-weight: $h6-font-weight;
+    line-height: $h6-line-height;
     text-align: $h6-align;
     text-transform: $h6-text-transform;
   }
@@ -164,55 +182,73 @@
     }
 
     h1 {
+      margin-top: $h1-margin-top;
+      margin-bottom: $h1-margin-bottom;
       font-family: $h1-font-family;
       font-size: if-map-get($h1-font-size, $type);
       font-style: $h1-font-style;
       font-weight: $h1-font-weight;
+      line-height: $h1-line-height;
       text-align: $h1-align;
       text-transform: $h1-text-transform;
     }
 
     h2 {
+      margin-top: $h2-margin-top;
+      margin-bottom: $h2-margin-bottom;
       font-family: $h2-font-family;
       font-size: if-map-get($h2-font-size, $type);
       font-style: $h2-font-style;
       font-weight: $h2-font-weight;
+      line-height: $h2-line-height;
       text-align: $h2-align;
       text-transform: $h2-text-transform;
     }
 
     h3 {
+      margin-top: $h3-margin-top;
+      margin-bottom: $h3-margin-bottom;
       font-family: $h3-font-family;
       font-size: if-map-get($h3-font-size, $type);
       font-style: $h3-font-style;
       font-weight: $h3-font-weight;
+      line-height: $h3-line-height;
       text-align: $h3-align;
       text-transform: $h3-text-transform;
     }
 
     h4 {
+      margin-top: $h4-margin-top;
+      margin-bottom: $h4-margin-bottom;
       font-family: $h4-font-family;
       font-size: if-map-get($h4-font-size, $type);
       font-style: $h4-font-style;
       font-weight: $h4-font-weight;
+      line-height: $h4-line-height;
       text-align: $h4-align;
       text-transform: $h4-text-transform;
     }
 
     h5 {
+      margin-top: $h5-margin-top;
+      margin-bottom: $h5-margin-bottom;
       font-family: $h5-font-family;
       font-size: if-map-get($h5-font-size, $type);
       font-style: $h5-font-style;
       font-weight: $h5-font-weight;
+      line-height: $h5-line-height;
       text-align: $h5-align;
       text-transform: $h5-text-transform;
     }
 
     h6 {
+      margin-top: $h6-margin-top;
+      margin-bottom: $h6-margin-bottom;
       font-family: $h6-font-family;
       font-size: if-map-get($h6-font-size, $type);
       font-style: $h6-font-style;
       font-weight: $h6-font-weight;
+      line-height: $h6-line-height;
       text-align: $h6-align;
       text-transform: $h6-text-transform;
     }
