@@ -14,7 +14,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "pressbooks-build-tools": "^0.5.0"
+    "pressbooks-build-tools": "^0.6.0"
   },
   "repository": {
     "type": "git",
