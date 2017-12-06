@@ -1,24 +1,45 @@
-<?php
-								$authors = get_posts([
-									'post_type' => 'back-matter',
-														   'suppress_filters' => false,
-														 'orderby' => 'menu_order',
-														 'order' => 'ASC',
-														   'tax_query' => [ // @codingStandardsIgnoreLine
-															 [
-																 'taxonomy' => 'back-matter-type',
-																 'field' => 'slug',
-																 'terms' => 'about-the-author',
-															 ],
-														   ],
-								]);
+<section class="section section-meta section-toggle js-section">
+	<div class="section-meta__content-box">
+		<h2 class="section__title section-meta__title"><?php _e( 'Metadata', 'pressbooks-book' ); ?></h2>
 
-									?>
+		<div class="section-meta__inner section-toggle__content">
+			<dl class="section-meta__list">
+				<div class="section-meta__subsection section-meta__pb_title">
+					<dt class="section__subtitle section-meta__subtitle"><?php _e( 'Book Name', 'pressbooks-book' ); ?></dt>
+					<dd class="ml0"><?php bloginfo( 'name' ); ?></dd>
+				</div>
+				<?php global $metakeys;
 
-
-			<section class="fourth-block-wrap">
-				<div class="fourth-block clearfix">
-						<h2> <?php _e( 'Other books', 'pressbooks-book' ); ?> <?php $autor ?></h2>
-
-					</div><!-- end .fourthary-block -->
-				</section> <!-- end .fourthary-block -->
+				foreach ( $metakeys as $key => $val ) {
+					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) { ?>
+						<div class="section-meta__subsection meta--<?php echo $key; ?>">
+							<dt class="section__subtitle section-meta__subtitle"><?php echo $val; ?></dt>
+							<dd class=""><?php if ( 'pb_publication_date' === $key ) {
+									$book_information[ $key ] = date_i18n( 'F j, Y', $book_information[ $key ] );
+} elseif ( 'pb_hashtag' === $key ) {
+	$hashtag = $book_information[ $key ];
+	$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
+} elseif ( 'pb_book_license' === $key ) {
+	$book_information[ $key ] = pressbooks_copyright_license();
+} elseif ( 'pb_primary_subject' === $key ) {
+	$book_information[ $key ] = \Pressbooks\Metadata\get_subject_from_thema( $book_information[ $key ] );
+} elseif ( 'pb_additional_subjects' === $key ) {
+	$tmp = explode( ', ', $book_information[ $key ] );
+	$output = [];
+	foreach ( $tmp as $code ) {
+		$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
+	}
+	$book_information[ $key ] = implode( ', ', $output );
+}
+								echo $book_information[ $key ]; ?></dd>
+							</div>
+						<?php }
+				} ?>
+			</dl>
+		</div>
+	</div>
+	<div class="section-toggle__cta">
+		<p class="section-toggle__cta__blurb"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></p>
+		<a class="section-toggle__cta__button button--circle--primary icon icon-arrow-up-down js-toggle-section"></a>
+	</div>
+</section>

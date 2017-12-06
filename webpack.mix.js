@@ -11,21 +11,39 @@ let mix = require('laravel-mix');
  |
  */
 
+const dist = 'dist';
+
 mix.setPublicPath('dist')
-	.scripts('assets/scripts/a11y.js','dist/scripts/a11y.js')
 	.scripts(['node_modules/jquery-columnizer/src/jquery.columnizer.js', 'assets/scripts/columnizer-load.js'], 'dist/scripts/columnizer.js')
-  .scripts('assets/scripts/keyboard-nav.js','dist/scripts/keyboard-nav.js')
 	.scripts('node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js')
-	.scripts('assets/scripts/toc.js','dist/scripts/toc.js')
-	.sass('assets/styles/a11y.scss', 'dist/styles')
-  .sass('assets/styles/book-info.scss', 'dist/styles')
-  .sass('assets/styles/structure.scss', 'dist/styles')
+	.js('assets/scripts/navigation.js','dist/scripts/navigation.js')
+	.js('assets/scripts/a11y.js','dist/scripts/a11y.js')
+  .js('assets/scripts/keyboard-nav.js','dist/scripts/keyboard-nav.js')
+	.js('assets/scripts/cover-toc.js','dist/scripts/cover-toc.js')
+	.js('assets/scripts/toc.js','dist/scripts/toc.js')
+	.js('assets/scripts/dropdown.js','dist/scripts/dropdown.js')
+	.sass('assets/styles/common.scss', 'dist/styles')
+	.sass('assets/styles/cover.scss', 'dist/styles')
+	.sass('assets/styles/reading.scss', 'dist/styles')
 	.copyDirectory('assets/fonts', 'dist/fonts')
 	.copyDirectory('assets/images', 'dist/images')
 	.version()
   .options({
     processCssUrls: false
   });
+
+	// BrowserSync
+	mix.browserSync({
+	  host: 'localhost',
+	  proxy: 'http://pressbooks.dev/standardtest',
+	  port: 3000,
+	  files: [
+	    `*.php`,
+	    ``,
+	    `${dist}/**/*.css`,
+	    `${dist}/**/*.js`,
+	  ],
+	});
 
 // Full API
 // mix.js(src, output);

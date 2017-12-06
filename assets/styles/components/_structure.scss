@@ -1,0 +1,42 @@
+// Structure
+
+$page-margin-top: 0.9in !default;
+$page-margin-inside: 0.75in !default;
+$page-margin-bottom: 1.05in !default;
+$page-margin-outside: 0.75in !default;
+$numbering-position: 'bottom-inside' !default;
+$first-numbering-position: 'bottom-center' !default;
+$running-content-position: 'bottom-inside' !default;
+$left-running-separator: '\A0\A0|\A0\A0' !default;
+$right-running-separator: '\A0\A0|\A0\A0' !default;
+$front-matter-page-number-font-family: $font-1 !default;
+$front-matter-page-number-font-size: 8pt !default;
+$page-number-font-family: $font-1 !default;
+$page-number-font-size: 8pt !default;
+$runningfoot-padding-bottom: 2em !default;
+$runningfoot-left-font-family: $font-1 !default;
+$runningfoot-left-font-size: 8pt !default;
+$runningfoot-left-text-transform: none !default;
+$runningfoot-right-font-family: $font-1 !default;
+$runningfoot-right-font-size: 8pt !default;
+$runningfoot-right-text-transform: none !default;
+$front-matter-running-content-left: string(section-title) !default;
+$front-matter-running-content-right: string(section-title) !default;
+$introduction-running-content-left: string(section-title) !default;
+$introduction-running-content-right: string(section-title) !default;
+$part-running-content-left: string(part-title) !default;
+$part-running-content-right: string(part-title) !default;
+$chapter-running-content-left: string(section-title) !default;
+$chapter-running-content-right: string(section-title) !default;
+$back-matter-running-content-left: string(section-title) !default;
+$back-matter-running-content-right: string(section-title) !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/structure';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/structure/general';
+@import 'components/structure/recto-verso';
+@import 'components/structure/numbering';
+@import 'components/structure/content-strings';
+@import 'components/structure/running-content';

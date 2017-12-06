@@ -1,112 +1,102 @@
-<section id="post-<?php the_ID(); ?>" <?php post_class( [ 'top-block', 'clearfix', 'home-post' ] ); ?>>
-
-	<?php pb_get_links( false ); ?>
-	<?php $metadata = pb_get_book_information();?>
-	<div class="log-wrap">	<!-- Login/Logout -->
-		<?php if ( ! is_single() ) : ?>
-			<?php if ( ! is_user_logged_in() ) : ?>
-				<a href="<?php echo wp_login_url( get_permalink() ); ?>" class=""><?php _e( 'login', 'pressbooks-book' ); ?></a>
-				<?php else : ?>
-				<a href="<?php echo  wp_logout_url(); ?>" class=""><?php _e( 'logout', 'pressbooks-book' ); ?></a>
-				<?php if ( is_super_admin() || is_user_member_of_blog() ) : ?>
-				<a href="<?php echo get_option( 'home' ); ?>/wp-admin"><?php _e( 'Admin', 'pressbooks-book' ); ?></a>
-				<?php endif; ?>
-			<?php endif; ?>
+<section class="book-header">
+	<div class="book-header__inner">
+		<?php pb_get_links( false ); ?>
+		<h1 class="section__title book-header__title">
+			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		</h1>
+		<?php if ( ! empty( $book_information['pb_subtitle'] ) ) : ?>
+			<p class="book-header__subtitle"><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
-	</div>
-	<div class="right-block">
-		<?php do_action( 'pb_cover_promo' ); ?>
-	</div>
-
-			<div class="book-info">
-				<!-- Book Title -->
-				<h1 class="entry-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-
-				<?php if ( ! empty( $metadata['pb_author'] ) ) : ?>
-				<p class="book-author vcard author"><span class="fn"><?php echo $metadata['pb_author']; ?></span></p>
-					 <span class="stroke"></span>
-				<?php endif; ?>
-
-				<?php if ( ! empty( $metadata['pb_contributing_authors'] ) ) : ?>
-					<p class="book-author"><?php echo $metadata['pb_contributing_authors']; ?> </p>
-					<?php endif; ?>
-
-
-				<?php if ( ! empty( $metadata['pb_subtitle'] ) ) : ?>
-					<p class="sub-title"><?php echo $metadata['pb_subtitle']; ?></p>
-					<span class="detail"></span>
-				<?php endif; ?>
-
-				<?php if ( ! empty( $metadata['pb_about_50'] ) ) : ?>
-					<p><?php echo pb_decode( $metadata['pb_about_50'] ); ?></p>
-				<?php endif; ?>
-
-			</div> <!-- end .book-info -->
-
-				<?php if ( ! empty( $metadata['pb_cover_image'] ) ) : ?>
-				<div class="book-cover">
-
-						<img src="<?php echo $metadata['pb_cover_image']; ?>" alt="book-cover" title="<?php bloginfo( 'name' ); ?> book cover" />
-
+		<?php if ( ! empty( $book_information['pb_author'] ) ) { ?>
+			<p class="book-header__author">
+				<span class="fn"><?php echo $book_information['pb_author']; ?></span>
+			</p>
+		<?php } ?>
+		<div class="book-header__cover">
+			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
+				<div class="book-header__cover__image">
+					<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="book-cover" title="<?php bloginfo( 'name' ); ?> book cover" />
 				</div>
-				<?php endif; ?>
+			<?php }
 
-				<div class="call-to-action-wrap">
-					<?php global $first_chapter; ?>
-					<div class="call-to-action">
-						<a class="btn red" href="<?php global $first_chapter;
-						echo $first_chapter; ?>"><span class="read-icon"></span><?php _e( 'Read', 'pressbooks-book' ); ?></a>
+			 /**
+				* @author Brad Payne <brad@bradpayne.ca>
+				* @copyright 2014 Brad Payne
+				* @since 1.6.0
+				*/
 
-						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-						 <!-- Buy -->
-							 <a class="btn black" href="<?php echo get_option( 'home' ); ?>/buy"><span class="buy-icon"></span><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
-							<?php endif; ?>
+			$files = \Pressbooks\Utility\latest_exports();
 
+			$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
+			$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
+if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
+				<div class="book-header__cover__downloads dropdown">
 
-					</div> <!-- end .call-to-action -->
-				</div><!--  end .call-to-action-wrap -->
+					<span class="dropdown-toggle dropdown-toggle-block" data-toggle="dropdown"><?php _e( 'Download this book', 'pressbooks-book' ); ?></span>
+					<ul class="dropdown-menu dropdown-menu-block" >
+					<?php foreach ( $files as $filetype => $filename ) :
+						$filename = preg_replace( '/(-\d{10})(.*)/ui', '$1', $filename );
 
-				<?php
-				 /**
-					* @author Brad Payne <brad@bradpayne.ca>
-					* @copyright 2014 Brad Payne
-					* @since 3.8.0
-					*/
+						// Rewrite rule
+						$url = home_url( "/open/download?type={$filetype}" );
 
-					$files = \Pressbooks\Utility\latest_exports();
-					$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
-					$option = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
-				if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
-						<div class="downloads">
-							<h4><?php _e( 'Download in the following formats:', 'pressbooks-book' ); ?></h4>
-							<?php foreach ( $files as $filetype => $filename ) :
-								$filename = preg_replace( '/(-\d{10})(.*)/ui', '$1', $filename );
+						// Tracking event defaults to Google Analytics (Universal). @codingStandardsIgnoreStart
+						// Filter like so (for Piwik):
+						// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
+						//  return "_paq.push(['trackEvent','exportFiles','Downloads','{$filetype}']);";
+						// }, 10, 2);
+						// Or for Google Analytics (Classic):
+						// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
+						//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$file_class}']);";
+						// }, 10, 2); @codingStandardsIgnoreEnd
+						$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$filetype}');", $filetype );
+					?>
+					<li class="dropdown-item">
+						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
+							<?php echo \PressbooksBook\Helpers\get_name_for_filetype( $filetype ); ?>
+							<meta itemprop="price" content="$0.00">
+							<link itemprop="bookFormat" href="http://schema.org/EBook">
+							<link itemprop="availability" href="http://schema.org/InStock">
+						</a>
+					</li>
+					<?php endforeach; ?>
+					<ul>
+				</div>
+			<?php }?>
+				<div class="book-header__share book-header__cover__share">
+					<?php if ( pb_social_media_enabled() ) {
+						echo \PressbooksBook\Helpers\share_icons();
+}
+					?>
+				</div>
+			</div>
+			<?php
 
-								// Rewrite rule
-								$url = home_url( "/open/download?type={$filetype}" );
+			if ( ! empty( $book_information['pb_about_50'] ) ) { ?>
+				<p class="book-header__description"><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
+			<?php } ?>
 
-								// Tracking event defaults to Google Analytics (Universal). @codingStandardsIgnoreStart
-								// Filter like so (for Piwik):
-								// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
-								//  return "_paq.push(['trackEvent','exportFiles','Downloads','{$filetype}']);";
-								// }, 10, 2);
-								// Or for Google Analytics (Classic):
-								// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
-								//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$file_class}']);";
-								// }, 10, 2); @codingStandardsIgnoreEnd
-								$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$filetype}');", $filetype );
-							?>
-								<link itemprop="bookFormat" href="http://schema.org/EBook">
-									<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
-										<span class="export-file-icon small <?php echo $filetype; ?>" title="<?php echo esc_attr( $filename ); ?>"></span>
-										<meta itemprop="price" content="$0.00">
-										<link itemprop="availability" href="http://schema.org/InStock">
-									</a>
-							<?php endforeach; ?>
-						</div>
-					<?php }
-				?>
-
-
-	</section> <!-- end .top-block -->
+		<?php global $first_chapter; ?>
+		<div class="book-header__license">
+			<?php $license = ( isset( $book_information['pb_license'] ) ) ? $book_information['pb_license'] : 'all-rights-reserved'; ?>
+			<div class="book-header__license__icons license-icons"><?php echo \PressbooksBook\Helpers\license_to_icons( $license ); ?></div>
+			<span class="book-header__license__text license-text"><?php echo \PressbooksBook\Helpers\license_to_text( $license ); ?></span>
+		</div>
+		<div class="book-header__cta">
+			<a class="button button--primary button--header" href="<?php echo $first_chapter; ?>">
+				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
+			</a><?php
+			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
+				?><a class="button button--secondary button--header" href="<?php echo home_url( '/buy' ); ?>">
+					<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
+				</a><?php
+			} ?>
+		</div> <!-- end .call-to-action -->
+		<div class="book-header__share">
+			<?php if ( pb_social_media_enabled() ) {
+				echo \PressbooksBook\Helpers\share_icons();
+}
+			?>
+		</div>
+	</div>
+</section>

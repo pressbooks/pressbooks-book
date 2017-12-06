@@ -1,0 +1,41 @@
+// Table of Contents
+
+$toc-display: block !default;
+
+$toc-left-margin-left: 1cm !default;
+$toc-left-page-number-top: 0.2em !default;
+$toc-left-chapter-number-width: 2em !default;
+$toc-left-chapter-number-margin-right: 0.5em !default;
+
+$toc-center-margin-right: 0.5cm !default;
+$toc-center-margin-left: 0.5cm !default;
+
+$toc-block-margin-top: 1.5em !default;
+$toc-section-margin-top: 0.5em !default;
+$toc-subsection-margin-top: 0 !default;
+$toc-chapter-margin-top: 0.3em !default;
+$toc-title-width: 80% !default;
+$toc-sub-width: 75% !default;
+
+$toc-base-line-height: 1.55em !default;
+$toc-front-matter-title-font-size: 1em !default;
+$toc-front-matter-subtitle-font-size: 1em !default;
+$toc-front-matter-author-font-size: 1em !default;
+$toc-part-number-font-size: inherit !default;
+$toc-part-title-font-size: 1.2em !default;
+$toc-chapter-number-font-size: inherit !default;
+$toc-chapter-title-font-size: 1em !default;
+$toc-chapter-subtitle-font-size: 1em !default;
+$toc-chapter-subtitle-font-style: italic !default;
+$toc-chapter-author-font-size: 1em !default;
+$toc-chapter-author-font-weight: bold !default;
+$toc-page-number-font-size: 1em !default;
+$toc-front-matter-page-number-font-size: 1em !default;
+$toc-section-title-font-size: 1em !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/toc';
+
+// Add custom SCSS below these imports and includes.
+// @import 'components/toc/center';
+@import 'components/toc/left';

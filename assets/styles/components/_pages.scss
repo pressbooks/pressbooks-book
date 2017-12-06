@@ -1,0 +1,32 @@
+// Pages
+
+$title-title-font-size: (
+  epub: x-large,
+  prince: (24 / 9) * 1em,
+  web: (24 / 9) * 1em
+) !default;
+$title-subtitle-font-size: (
+  epub: large,
+  prince: (15 / 9) * 1em,
+  web: (15 / 9) * 1em
+) !default;
+$title-author-font-size: (
+  epub: large,
+  prince: (15 / 9) * 1em,
+  web: (15 / 9) * 1em
+) !default;
+$title-author-font-style: italic !default;
+$title-author-text-transform: uppercase !default;
+$copyright-margin-bottom: 1em !default;
+$copyright-font-size: (
+  epub: small,
+  prince: (8 / 9) * 1em,
+  web: (8 / 9) * 1em
+) !default;
+$copyright-line-height: (14 / 9) * 1em;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/pages';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/pages';
