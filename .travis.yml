@@ -34,18 +34,16 @@ install:
 - composer install
 script:
 - yarn run lint
-- yarn run production
+- yarn run build:production
 - composer test
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
-- rm -rf node_modules
-- yarn install --production=true
 - composer install --no-dev --optimize-autoloader
 - cd ../
 - zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
   -x *.git* *assets/fonts/\* *assets/images/\* *assets/scripts/\* *assets/styles/\*
   *tests/\* *.editorconfig* *.gitattributes* *.github* *.gitignore*
-  *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
+  *node_modules* *.travis.yml* *.tx* *phpcs.ruleset.xml* *webpack.mix.js* *yarn.lock*
 - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: releases
