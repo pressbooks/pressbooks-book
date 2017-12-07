@@ -22,7 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "pressbooks-build-tools": "^0.7.0"
+    "pressbooks-build-tools": "^0.8.0"
   },
   "stylelint": {
     "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
