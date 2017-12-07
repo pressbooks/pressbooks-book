@@ -31,20 +31,6 @@
   },
   "homepage": "https://github.com/pressbooks/aetna#readme",
   "stylelint": {
-    "extends": [
-      "stylelint-config-recommended-scss",
-      "./node_modules/prettier-stylelint/config.js"
-    ],
-    "rules": {
-      "media-feature-name-no-unknown": [
-        true,
-        {
-          "ignoreMediaFeatureNames": [
-            "min--moz-device-pixel-ratio"
-          ]
-        }
-      ],
-      "media-query-list-comma-space-after": "always-single-line"
-    }
+    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
   }
 }
