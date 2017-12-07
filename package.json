@@ -29,56 +29,12 @@
     "test": "npm run -s lint"
   },
   "eslintConfig": {
-    "extends": "humanmade",
+    "extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
     "globals": {
-      "jQuery": true,
-      "PB_A11y": true,
-      "wp": true
-    },
-    "rules": {
-      "jsx-a11y/href-no-hash": 0
+      "PB_A11y": true
     }
   },
   "stylelint": {
-    "extends": [
-      "stylelint-config-recommended-scss",
-      "./node_modules/prettier-stylelint/config.js"
-    ],
-    "rules": {
-      "media-feature-name-no-unknown": [
-        true,
-        {
-          "ignoreMediaFeatureNames": [
-            "min--moz-device-pixel-ratio"
-          ]
-        }
-      ],
-      "media-query-list-comma-space-after": "always-single-line",
-      "property-no-unknown": [
-        true,
-        {
-          "ignoreProperties": [
-            "footnote-style-position",
-            "hyphenate-before",
-            "hyphenate-after",
-            "hyphenate-lines",
-            "margin-inside",
-            "margin-outside",
-            "prince-bookmark-level",
-            "prince-footnote-policy",
-            "prince-image-resolution",
-            "prince-page-group"
-          ]
-        }
-      ],
-      "selector-pseudo-element-no-unknown": [
-        true,
-        {
-          "ignorePseudoElements": [
-            "footnote-call"
-          ]
-        }
-      ]
-    }
+    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
   }
 }
