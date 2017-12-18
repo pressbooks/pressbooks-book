@@ -102,7 +102,7 @@ if ( ! is_front_page() ) { ?>
 		<nav class="reading-header__inner">
 			<div class="reading-header__toc js-toc-toggle-con">
 				<a class="js-toc-toggle" href="javascript:void()">
-					<span class="reading-header__toc__title">Table of contents</span>
+					<span class="reading-header__toc__title">Contents</span>
 					<span class="icon icon-arrow-up-down" ></span>
 				</a>
 				<?php

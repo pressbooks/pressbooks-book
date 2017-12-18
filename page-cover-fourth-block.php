@@ -5,7 +5,7 @@
 		<div class="section-meta__inner section-toggle__content">
 			<dl class="section-meta__list">
 				<div class="section-meta__subsection section-meta__pb_title">
-					<dt class="section__subtitle section-meta__subtitle"><?php _e( 'Book Name', 'pressbooks-book' ); ?></dt>
+					<dt class="section__subtitle section-meta__subtitle"><?php _e( 'Title', 'pressbooks-book' ); ?></dt>
 					<dd class="ml0"><?php bloginfo( 'name' ); ?></dd>
 				</div>
 				<?php global $metakeys;
