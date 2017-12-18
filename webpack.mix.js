@@ -35,7 +35,7 @@ mix.setPublicPath('dist')
 	// BrowserSync
 	mix.browserSync({
 	  host: 'localhost',
-	  proxy: 'http://pressbooks.dev/standardtest',
+	  proxy: 'http://pressbooks.test/standardtest',
 	  port: 3000,
 	  files: [
 	    `*.php`,
