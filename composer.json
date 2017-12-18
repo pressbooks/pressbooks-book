@@ -1,33 +1,35 @@
 {
-    "name": "pressbooks/pressbooks-book",
-    "description": "This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
-    "type": "wordpress-theme",
-    "require": {
-        "composer/installers": "~1.3",
-        "pressbooks/mix": "^2.1"
-    },
-    "require-dev": {
-        "humanmade/coding-standards": "^0.2.1"
-    },
-    "archive": {
-        "exclude": [".github", ".tx", "bin"]
-    },
-    "license": "GPL-2.0+",
-    "authors": [
-        {
-            "name": "Pressbooks (Book Oven Inc.)",
-            "email": "code@pressbooks.com"
-        }
-    ],
-    "scripts": {
-      "test": [
-        "@standards"
-      ],
-      "standards": [
-        "vendor/bin/phpcs --standard=phpcs.ruleset.xml *.php"
-      ],
-      "localize": [
-        "wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
-      ]
-    }
+	"name": "pressbooks/pressbooks-book",
+	"description":
+		"This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
+	"type": "wordpress-theme",
+	"require": {
+		"composer/installers": "~1.3",
+		"pressbooks/mix": "^2.1"
+	},
+	"require-dev": {
+		"humanmade/coding-standards": "^0.2.1",
+		"squizlabs/php_codesniffer": "^2.8.0",
+		"wpreadme2markdown/wp2md": "^3.0"
+	},
+	"archive": {
+		"exclude": [".github", ".tx", "bin"]
+	},
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Pressbooks (Book Oven Inc.)",
+			"email": "code@pressbooks.com"
+		}
+	],
+	"scripts": {
+		"test": ["@standards"],
+		"standards": [
+			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
+		],
+		"localize": [
+			"wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
+		],
+		"readme": ["vendor/bin/wp2md -i readme.txt -o README.md"]
+	}
 }

@@ -53,7 +53,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 					?>
 					<li class="dropdown-item">
 						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
-							<?php echo \PressbooksBook\Helpers\get_name_for_filetype( $filetype ); ?>
+							<?php echo \Pressbooks\Book\Helpers\get_name_for_filetype( $filetype ); ?>
 							<meta itemprop="price" content="$0.00">
 							<link itemprop="bookFormat" href="http://schema.org/EBook">
 							<link itemprop="availability" href="http://schema.org/InStock">
@@ -65,7 +65,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			<?php }?>
 				<div class="book-header__share book-header__cover__share">
 					<?php if ( pb_social_media_enabled() ) {
-						echo \PressbooksBook\Helpers\share_icons();
+						echo \Pressbooks\Book\Helpers\share_icons();
 }
 					?>
 				</div>
@@ -79,8 +79,8 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 		<?php global $first_chapter; ?>
 		<div class="book-header__license">
 			<?php $license = ( isset( $book_information['pb_license'] ) ) ? $book_information['pb_license'] : 'all-rights-reserved'; ?>
-			<div class="book-header__license__icons license-icons"><?php echo \PressbooksBook\Helpers\license_to_icons( $license ); ?></div>
-			<span class="book-header__license__text license-text"><?php echo \PressbooksBook\Helpers\license_to_text( $license ); ?></span>
+			<div class="book-header__license__icons license-icons"><?php echo \Pressbooks\Book\Helpers\license_to_icons( $license ); ?></div>
+			<span class="book-header__license__text license-text"><?php echo \Pressbooks\Book\Helpers\license_to_text( $license ); ?></span>
 		</div>
 		<div class="book-header__cta">
 			<a class="button button--primary button--header" href="<?php echo $first_chapter; ?>">
@@ -94,7 +94,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 		</div> <!-- end .call-to-action -->
 		<div class="book-header__share">
 			<?php if ( pb_social_media_enabled() ) {
-				echo \PressbooksBook\Helpers\share_icons();
+				echo \Pressbooks\Book\Helpers\share_icons();
 }
 			?>
 		</div>

@@ -80,7 +80,7 @@
 								<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e( 'Share This Book','pressbooks-book' ); ?></h2>
 								<div class="section-reading-meta__share">
 									<?php
-										echo \PressbooksBook\Helpers\share_icons();
+										echo \Pressbooks\Book\Helpers\share_icons();
 									?>
 								</div>
 							</div>

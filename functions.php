@@ -7,7 +7,13 @@
 use Pressbooks\Container;
 use PressbooksMix\Assets;
 
-include_once( dirname( __FILE__ ) . '/src/helpers.php' );
+$includes = [
+	'helpers',
+];
+
+foreach ( $includes as $include ) {
+	require get_template_directory() . "/inc/$include/namespace.php";
+}
 
 // Turn off admin bar
 add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine

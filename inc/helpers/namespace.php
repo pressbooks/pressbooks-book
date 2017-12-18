@@ -1,6 +1,6 @@
 <?php
 
-namespace PressbooksBook\Helpers;
+namespace Pressbooks\Book\Helpers;
 
 function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ) {
 	global $blog_id;
@@ -17,7 +17,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			}
 		} ?>
 		<li class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
-			<?php if($post_type != 'chapter'){?>
+			<?php if ( $post_type !== 'chapter' ) {?>
 			<div class="inner-content">
 			<?php } ?>
 				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
@@ -36,8 +36,8 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 						<?php } ?>
 						</ul>
 					<?php }
-				}
-			if($post_type != 'chapter'){?>
+}
+if ( $post_type !== 'chapter' ) { ?>
 				</div>
 			<?php } ?>
 		</li>
@@ -55,7 +55,7 @@ function get_name_for_filetype( $filetype ) {
 		'xhtml' => __( 'XHTML', 'presbooks-book' ),
 		'odf' => __( 'OpenDocument', 'pressbooks-book' ),
 		'wxr' => __( 'Pressbooks XML', 'pressbooks-book' ),
-		'vanillawxr' => __( 'WordPress XML', 'pressbooks' )
+		'vanillawxr' => __( 'WordPress XML', 'pressbooks' ),
 	];
 
 	return $formats[ $filetype ];
@@ -69,21 +69,21 @@ function license_to_icons( $license ) {
 	if ( strpos( $license, 'cc' ) !== false ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
-			if($part != 'cc'){
-				$part = 'cc-'.$part;
+			if ( $part !== 'cc' ) {
+				$part = 'cc-' . $part;
 			}
 			$output .= "<span class='icon icon-$part'></span>";
 		}
 	} elseif ( $license === 'public-domain' ) {
 		$output .= "<span class='icon icon-cc-pd'></span>";
-  } elseif ( $license === 'all-rights-reserved' ) {
+	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
 	return $output;
 }
 
 function license_to_text( $license ) {
-	switch( $license ) {
+	switch ( $license ) {
 		case 'public-domain':
 			return __( 'Public Domain', 'pressbooks-book' );
 			break;
@@ -111,10 +111,10 @@ function license_to_text( $license ) {
 	}
 }
 
-function share_icons( ) {
+function share_icons() {
 	$output = '';
-	$output .= '<a class="icon icon-twitter sharer" data-sharer="twitter" data-title="'.translate( 'Check out this great book on Pressbooks.', 'pressbooks-book' ).'" data-url="'.get_the_permalink().'" data-via="pressbooks"></a>';
-	$output .= '<a class="icon icon-facebook sharer" data-sharer="facebook" data-title="'.translate( 'Check out this great book on Pressbooks.', 'pressbooks-book' ).'" data-url="'.get_the_permalink().'"></a>';
-	$output .= '<a class="icon icon-google-plus sharer" data-sharer="googleplus" data-title="'.translate( 'Check out this great book on Pressbooks.', 'pressbooks-book' ).'" data-url="'.get_the_permalink().'"></a>';
+	$output .= '<a class="icon icon-twitter sharer" data-sharer="twitter" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '" data-via="pressbooks"></a>';
+	$output .= '<a class="icon icon-facebook sharer" data-sharer="facebook" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
+	$output .= '<a class="icon icon-google-plus sharer" data-sharer="googleplus" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
 	return $output;
 }

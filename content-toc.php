@@ -1,7 +1,7 @@
 <ul class="toc__list">
 	<li>
 		<ul class="toc__front-matter">
-			<?php \PressbooksBook\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
+			<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 		</ul>
 	</li>
 	<?php $n = 1;
@@ -31,7 +31,7 @@
 			<?php } ?>
 			<div class="inner-content">
 				<ul class="toc__chapters">
-					<?php \PressbooksBook\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
+					<?php \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 				</ul>
 			</div>
 		</li>
@@ -39,7 +39,7 @@
 } endforeach; ?>
 	<li>
 		<ul class="toc__back-matter">
-			<?php \PressbooksBook\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
+			<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 		</ul>
 	</li>
 </ul><!-- end #toc -->
