@@ -1,57 +1,43 @@
+import * as Cookies from 'js-cookie';
+
 /**
  * Javascript file contents originally from WP Accessibility Plugin v.1.3.10 which is released under GPL v3
  * original author Chris Rodriguez
  * modified by Brad Payne, Ashlee Zhang
  */
 
-// Cookie handler, non-$ style
-function createCookie( name, value, days ) {
-	let expires;
-	if ( days ) {
-		let date = new Date();
-		date.setTime( date.getTime() + ( days * 24 * 60 * 60 * 1000 ) );
-		expires = '; expires=' + date.toGMTString();
-	} else
-		expires = '';
-	document.cookie = name + '=' + value + expires + '; path=/';
-}
-
-function readCookie( name ) {
-	let nameEQ = name + '=';
-	let ca = document.cookie.split( ';' );
-	for ( let i = 0; i < ca.length; i++ ) {
-		let c = ca[i];
-		while ( c.charAt( 0 ) === ' ' )
-			c = c.substring( 1, c.length );
-		if ( c.indexOf( nameEQ ) === 0 )
-			return c.substring( nameEQ.length, c.length );
-	}
-	return null;
-}
-
-function eraseCookie( name ) {
-	// createCookie(name, "", -1);
-	createCookie( name, '' );
-}
-
 jQuery( document ).ready( function ( $ ) {
-
 	// Fontsize handler
-	if ( readCookie( 'a11y-larger-fontsize' ) ) {
+	if ( Cookies.get( 'a11y-larger-fontsize' ) === '1' ) {
 		$( 'html' ).addClass( 'fontsize' );
-		$( '#is_normal_fontsize' ).attr( 'id', 'is_large_fontsize' ).attr( 'aria-checked', true ).addClass( 'active' ).text( PB_A11y.decrease_label ).attr( 'title', PB_A11y.decrease_label );
+		$( '#is_normal_fontsize' )
+			.attr( 'id', 'is_large_fontsize' )
+			.attr( 'aria-checked', true )
+			.addClass( 'active' )
+			.text( PB_A11y.decrease_label )
+			.attr( 'title', PB_A11y.decrease_label );
 	}
 
 	$( '.toggle-fontsize' ).on( 'click', function () {
 		if ( $( this ).attr( 'id' ) === 'is_normal_fontsize' ) {
 			$( 'html' ).addClass( 'fontsize' );
-			$( this ).attr( 'id', 'is_large_fontsize' ).attr( 'aria-checked', true ).addClass( 'active' ).text( PB_A11y.decrease_label ).attr( 'title', PB_A11y.decrease_label );
-			createCookie( 'a11y-larger-fontsize', '1' );
+			$( this )
+				.attr( 'id', 'is_large_fontsize' )
+				.attr( 'aria-checked', true )
+				.addClass( 'active' )
+				.text( PB_A11y.decrease_label )
+				.attr( 'title', PB_A11y.decrease_label );
+			Cookies.set( 'a11y-larger-fontsize', '1', { expires: 365, path: '' } );
 			return false;
 		} else {
 			$( 'html' ).removeClass( 'fontsize' );
-			$( this ).attr( 'id', 'is_normal_fontsize' ).removeAttr( 'aria-checked' ).removeClass( 'active' ).text( PB_A11y.increase_label ).attr( 'title', PB_A11y.increase_label );
-			eraseCookie( 'a11y-larger-fontsize' );
+			$( this )
+				.attr( 'id', 'is_normal_fontsize' )
+				.removeAttr( 'aria-checked' )
+				.removeClass( 'active' )
+				.text( PB_A11y.increase_label )
+				.attr( 'title', PB_A11y.increase_label );
+			Cookies.set( 'a11y-larger-fontsize', '0', { expires: 365, path: '' } );
 			return false;
 		}
 	} );
@@ -72,5 +58,4 @@ jQuery( document ).ready( function ( $ ) {
 			$( anchorUponArrival ).focus();
 		}, 100 );
 	}
-
 } );

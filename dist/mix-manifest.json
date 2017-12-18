@@ -1,13 +1,13 @@
 {
     "/scripts/navigation.js": "/scripts/navigation.js?id=36c368e3d8eb73971b32",
-    "/styles/common.css": "/styles/common.css?id=26935145473577eace48",
-    "/styles/cover.css": "/styles/cover.css?id=26935145473577eace48",
-    "/styles/reading.css": "/styles/reading.css?id=26935145473577eace48",
+    "/styles/common.css": "/styles/common.css?id=5ca544803b1e0aa83872",
+    "/styles/cover.css": "/styles/cover.css?id=5ca544803b1e0aa83872",
+    "/styles/reading.css": "/styles/reading.css?id=5ca544803b1e0aa83872",
+    "/scripts/a11y.js": "/scripts/a11y.js?id=ecc287ccd8f9ad727e4e",
     "/scripts/toc.js": "/scripts/toc.js?id=957303203c64eabfd13c",
     "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=7d2471719cb98cbbbd87",
     "/scripts/dropdown.js": "/scripts/dropdown.js?id=4ea31ec6b414a8d03923",
     "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=49022eaec661f3de21c5",
-    "/scripts/a11y.js": "/scripts/a11y.js?id=b5c446434f07d9e372dc",
     "/scripts/columnizer.js": "/scripts/columnizer.js?id=6036d2b265a0651054e2",
     "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343"
 }
