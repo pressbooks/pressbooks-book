@@ -55,16 +55,29 @@
 					</div>
 				</div>
 			</div>
-			<h2 class="header__brand">
-				<a class="header__logo" href="<?php echo network_home_url(); ?>">
-					<svg class="logo--svg">
-						<use xlink:href="#logo-pressbooks" />
-					</svg>
-					<?php /* <span class="clip">
-						<?php switch_to_blog( 1 ); echo get_bloginfo( 'name', 'display' ); restore_current_blog(); ?>
-					</span> */ ?>
-				</a>
-			</h2>
+			<div class="header__brand">
+				<h1>
+					<a class="header__logo" href="<?php echo network_home_url(); ?>">
+						<?php $root_id = get_network()->site_id;
+						if ( has_custom_logo( $root_id ) ) { ?>
+							<?php switch_to_blog( $root_id );
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							printf(
+								'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
+								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+								sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
+							);
+							restore_current_blog(); ?>
+						<?php } else { ?>
+						<svg class="logo--svg">
+							<use xlink:href="#logo-pressbooks" />
+						</svg><?php } ?>
+						<span class="screen-reader-text"><?php echo get_bloginfo( 'name', 'display' ); ?></span>
+					</a>
+				</h1>
+
+			</div>
 			<div class="header__end-container">
 				<nav class="header__nav js-header-nav" id="navigation">
 						<?php if ( ! is_user_logged_in() ) { ?>
