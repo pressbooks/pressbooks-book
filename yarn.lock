@@ -106,9 +106,9 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.1"
 
-aetna@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/aetna/-/aetna-0.1.0.tgz#571bb3985f624581c550e875a598b410feeb33d2"
+aetna@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/aetna/-/aetna-0.2.0.tgz#d927f2ed9db96754343d8b1eec4f0762aa1a2e85"
 
 after@0.8.1:
   version "0.8.1"
