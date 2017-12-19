@@ -124,10 +124,10 @@
 .header__logo {
   .icon--svg {
     display: inline-block;
-    height: 0.7em;
+    height: auto;
     margin-bottom: -1px;
     margin-right: 2px;
-    width: 0.7em;
+    width: 265px;
 
     .header--reading & {
       color: var(--brand);
