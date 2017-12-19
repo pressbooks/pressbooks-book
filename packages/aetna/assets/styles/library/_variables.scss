@@ -21,8 +21,8 @@ $btn-color: #fff !default;
 $body-bg: $brand-bg !default;
 $body-color: $brand-text !default;
 
-$header-bg: #000 !default;
-$header-color: #fff !default;
+$header-bg: $brand-bg !default;
+$header-color: $brand-text !default;
 
 $footer-bg: #444 !default;
 $footer-color: #fff !default;
