@@ -43,52 +43,30 @@
 
 	<header class="header <?php echo is_front_page() ? 'header--home' : 'header--reading' ?>">
 		<div class="header__inner">
-			<div class="header__start-container">
-				<?php if ( ! is_front_page() ) {?>
-					<a class="header__home" href="<?php echo home_url( '/' ); ?>">Home</a>
-<?php
-}?>
-				<div class="header__search js-search">
-					<a class="icon icon-search js-toggle-search"></a>
-					<div class="header__search__form">
-						<?php get_search_form(); ?>
-					</div>
-				</div>
-			</div>
 			<div class="header__brand">
-				<h1>
-					<a class="header__logo" href="<?php echo network_home_url(); ?>">
-						<?php $root_id = get_network()->site_id;
-						if ( has_custom_logo( $root_id ) ) { ?>
-							<?php switch_to_blog( $root_id );
-							$custom_logo_id = get_theme_mod( 'custom_logo' );
-							printf(
-								'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
-								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-								sprintf( __( 'Logo for %s', 'pressbooks-aldine' ), get_bloginfo( 'name', 'display' ) )
-							);
-							restore_current_blog(); ?>
-						<?php } else { ?>
-						<svg class="logo--svg">
-							<use xlink:href="#logo-pressbooks" />
-						</svg><?php } ?>
-						<span class="screen-reader-text"><?php echo get_bloginfo( 'name', 'display' ); ?></span>
-					</a>
-				</h1>
-
+				<a class="header__logo" href="<?php echo network_home_url(); ?>">
+					<?php $root_id = get_network()->site_id;
+					if ( has_custom_logo( $root_id ) ) { ?>
+						<?php switch_to_blog( $root_id );
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						printf(
+							'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
+							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+							sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
+						);
+						restore_current_blog(); ?>
+					<?php } else { ?>
+					<svg class="logo--svg">
+						<use xlink:href="#logo-pressbooks" />
+					</svg><?php } ?>
+				</a>
 			</div>
-			<div class="header__end-container">
-				<nav class="header__nav js-header-nav" id="navigation">
-						<?php if ( ! is_user_logged_in() ) { ?>
-							<a href="<?php echo wp_login_url( get_permalink() ) ?>"><?php _e( 'Sign in', 'pressbooks-book' ) ?></a>
-						<?php } else { ?>
-							<?php if ( is_super_admin() || is_user_member_of_blog() ) { ?>
-							<a href="<?php echo admin_url(); ?>"><?php _e( 'Admin', 'pressbooks-book' ); ?></a>
-							<span class="sep">/</span>
-							<?php } ?>
-							<a href="<?php echo wp_logout_url( get_permalink() ); ?>"><?php _e( 'Sign out', 'pressbooks-book' ); ?></a>
-						<?php } ?>
+			<div class="header__nav">
+				<nav class="js-header-nav" id="navigation">
+					<ul id="menu-primary-menu" class="menu--primary">
+						<?php echo \Pressbooks\Book\Helpers\display_menu(); ?>
+					</ul>
 				</nav>
 				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 			</div>
@@ -101,7 +79,7 @@ if ( ! is_front_page() ) { ?>
 	<div class="reading-header">
 		<nav class="reading-header__inner">
 			<div class="reading-header__toc js-toc-toggle-con">
-				<a class="js-toc-toggle" href="javascript:void()">
+				<a class="js-toc-toggle" href="javascript:void(0)">
 					<span class="reading-header__toc__title">Contents</span>
 					<span class="icon icon-arrow-up-down" ></span>
 				</a>
@@ -113,7 +91,7 @@ if ( ! is_front_page() ) { ?>
 				$book_information = pb_get_book_information();
 				$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
 				$should_parse_subsections = pb_should_parse_subsections();?>
-				<section class="section-reading-toc js-toc">
+				<section class="block-reading-toc js-toc">
 					<?php include( locate_template( 'content-toc.php' ) ); ?>
 				</section>
 			</div>

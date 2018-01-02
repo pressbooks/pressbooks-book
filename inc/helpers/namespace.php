@@ -118,3 +118,47 @@ function share_icons() {
 	$output .= '<a class="icon icon-google-plus sharer" data-sharer="googleplus" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
 	return $output;
 }
+
+function display_menu() {
+
+	if ( ! is_front_page() ) {
+		$items = sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			get_home_url(),
+			__( 'Home', 'pressbooks-aldine' )
+		);
+	} else {
+		global $first_chapter;
+		$items = sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			$first_chapter,
+			__( 'Read', 'pressbooks-aldine' )
+		);
+	}
+	if ( ! is_user_logged_in() ) {
+		$items .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			wp_login_url( get_permalink() ),
+			__( 'Sign in', 'pressbooks-book' )
+		);
+	} else {
+		if ( is_super_admin() || is_user_member_of_blog() ) {
+			$items .= sprintf(
+				'<li><a href="%1$s">%2$s</a></li>',
+				admin_url(),
+				__( 'Admin', 'pressbooks-book' )
+			);
+		}
+		$items .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			wp_logout_url( get_permalink() ),
+			__( 'Sign out', 'pressbooks-book' )
+		);
+	}
+	$items .= sprintf(
+		'<li class="header__search js-search"><a class="icon icon-search js-toggle-search"></a><div class="header__search__form">%s</div></li>',
+		get_search_form( false )
+	);
+
+	return $items;
+}

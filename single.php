@@ -66,19 +66,19 @@
 
 				<?php
 				if ( pb_social_media_enabled() ) {	?>
-					<section class="section section-reading-meta">
-						<div class="section-reading-meta__inner">
-							<div class="section-reading-meta__subsection">
-								<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e( 'Licenses','pressbooks-book' ); ?></h2>
+					<section class="block block-reading-meta">
+						<div class="block-reading-meta__inner">
+							<div class="block-reading-meta__subsection">
+								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Licenses','pressbooks-book' ); ?></h2>
 								<?php if ( pb_is_public() ) { ?>
 									<div class="">
 										<?php echo pressbooks_copyright_license( false ); ?>
 									</div>
 								<?php } ?>
 							</div>
-							<div class="section-reading-meta__subsection">
-								<h2 class="section__subtitle section-reading-meta__subtitle"><?php _e( 'Share This Book','pressbooks-book' ); ?></h2>
-								<div class="section-reading-meta__share">
+							<div class="block-reading-meta__subsection">
+								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Share This Book','pressbooks-book' ); ?></h2>
+								<div class="block-reading-meta__share">
 									<?php
 										echo \Pressbooks\Book\Helpers\share_icons();
 									?>
