@@ -1,4 +1,4 @@
-.section-comments {
+.block-comments {
   --brand: var(--footer-color);
   --brand-hover: var(--footer-color);
   --brand-accent: var(--footer-color);
@@ -24,12 +24,12 @@
   }
 }
 
-.section-comments__inner {
+.block-comments__inner {
   max-width: $reading-page-max-width;
   margin: 0 auto;
 }
 
-.section__title.section-comments__title {
+.section__title.block-comments__title {
   font-size: 1.5rem;
 
   &::before {
@@ -38,7 +38,7 @@
   }
 }
 
-.section-comments__form {
+.block-comments__form {
   max-width: 400px;
   margin: 0 auto;
 

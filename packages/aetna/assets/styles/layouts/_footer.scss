@@ -1,3 +1,5 @@
+// stylelint-disable no-descending-specificity
+
 .pressbooks-footer {
   display: flex;
   position: relative;
@@ -7,6 +9,8 @@
   width: 100%;
   height: 125px;
   background-color: $dark-grey;
+// @stylelint-ignore
+
 
   h1,
   li,

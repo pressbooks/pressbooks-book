@@ -9,7 +9,7 @@
     "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:styles",
-    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"resources/assets/styles/**/*.scss\" --syntax scss",
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
   "dependencies": {},

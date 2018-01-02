@@ -1,4 +1,4 @@
-.section-reading-meta {
+.block-reading-meta {
   background-color: $brand-bg-alt2;
   font-family: $font-family-sans-serif;
   padding: 2rem 1rem 4rem;
@@ -8,24 +8,24 @@
   }
 }
 
-.section-reading-meta__inner {
+.block-reading-meta__inner {
   display: flex;
   flex-wrap: wrap;
   max-width: $content-box-max-width;
   margin: 0 auto;
 }
 
-.section-reading-meta__subsection {
+.block-reading-meta__subsection {
   flex: 1;
   min-width: 300px;
   padding-right: 2rem;
 }
 
-.section-reading-meta__subtitle {
+.block-reading-meta__subtitle {
   color: var(--brand);
 }
 
-.section-reading-meta__share {
+.block-reading-meta__share {
   align-items: center;
   display: flex;
 

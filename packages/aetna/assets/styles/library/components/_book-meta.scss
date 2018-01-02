@@ -1,4 +1,4 @@
-.section-meta {
+.block-meta {
   box-shadow: $section-shadow;
   font-size: 1.125rem;
 
@@ -8,14 +8,14 @@
     padding-left: 2rem;
     padding-right: 2rem;
 
-    //overwrite .section.section--toggle
+    //overwrite .section.block--toggle
     &.section {
       padding-bottom: 6rem;
     }
   }
 }
 
-.section-meta__content-box {
+.block-meta__content-box {
   background-color: var(--body-bg);
   margin: 0 auto;
   max-width: $content-box-max-width;
@@ -28,7 +28,7 @@
   }
 }
 
-.section-meta__title {
+.block-meta__title {
   margin-bottom: 1.5rem;
 
   @media #{$breakpoint-tablet-and-up} {
@@ -36,7 +36,7 @@
   }
 }
 
-.section-meta__inner {
+.block-meta__inner {
   padding-bottom: 2rem;
 
   @media #{$breakpoint-tablet-and-up} {
@@ -49,7 +49,7 @@
   }
 }
 
-.section-meta__list {
+.block-meta__list {
   column-rule: 1px solid #b7b7b7;
 
   @media #{$breakpoint-tablet-and-up} {
@@ -58,7 +58,7 @@
   }
 }
 
-.section-meta__subsection {
+.block-meta__subsection {
   margin-bottom: 2.5rem;
   //try to prevent column breaks inside
   overflow: hidden; /* fix for Firefox */
@@ -67,7 +67,7 @@
   break-inside: avoid;
 }
 
-.section-meta__subtitle {
+.block-meta__subtitle {
   color: var(--brand);
   font-size: 1.125rem;
   margin-bottom: 0.5rem;

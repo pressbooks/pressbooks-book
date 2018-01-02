@@ -1,4 +1,4 @@
-.section-info {
+.block-info {
   box-shadow: $section-shadow;
   font-size: 1.125rem;
   padding-left: 0;
@@ -10,7 +10,7 @@
   }
 }
 
-.section-info__inner {
+.block-info__inner {
   max-width: $content-max-width;
   margin: 0 auto;
   padding-bottom: 4rem;
@@ -22,7 +22,7 @@
   }
 }
 
-.section-info__inner__content {
+.block-info__inner__content {
   @media #{$breakpoint-large} {
     flex: 1 1 0;
 
@@ -32,7 +32,7 @@
   }
 }
 
-.section-info__title {
+.block-info__title {
   margin-bottom: 1.5rem;
 
   @media #{$breakpoint-tablet-and-up} {
@@ -40,12 +40,12 @@
   }
 }
 
-.section-info__description {
+.block-info__description {
   font-family: $font-family-serif;
   font-size: 1.125rem;
 }
 
-.section-info__subsection {
+.block-info__subsection {
   padding-left: 1rem;
   padding-right: 1rem;
 
@@ -55,14 +55,14 @@
   }
 }
 
-.section-info__subject {
+.block-info__subject {
   margin-bottom: 0;
 }
 
-.section-info__lead-author,
-.section-info__contributing-authors,
-.section-info__license,
-.section-info__subject {
+.block-info__lead-author,
+.block-info__contributing-authors,
+.block-info__license,
+.block-info__subject {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ececec;
@@ -74,13 +74,13 @@
   }
 }
 
-.section-info__lead-author__authors {
+.block-info__lead-author__authors {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.section-info__lead-author__photo {
+.block-info__lead-author__photo {
   border-radius: 58px;
   border: 3px solid var(--brand-accent);
   overflow: hidden;
@@ -94,6 +94,6 @@
   }
 }
 
-.section-info__lead-author__name {
+.block-info__lead-author__name {
   margin-right: 2rem;
 }
