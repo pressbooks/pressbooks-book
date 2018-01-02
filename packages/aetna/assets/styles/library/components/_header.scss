@@ -135,6 +135,7 @@
     width: auto;
     max-width: 100px;
     height: auto;
+    max-height: 1.5rem;
     margin-bottom: -1px;
     margin-right: 2px;
 
@@ -197,6 +198,7 @@
     }
 
     .--active & {
+      --header-color: var(--primary-fg);
       background: var(--header-color);
 
       &::before,
@@ -246,6 +248,7 @@
       }
 
       &.--visible {
+        --header-color: var(--primary-fg);
         margin: 0;
         padding: 0 52px;
         z-index: 99;
