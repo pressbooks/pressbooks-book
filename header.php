@@ -63,12 +63,12 @@
 				</a>
 			</div>
 			<div class="header__nav">
+				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 				<nav class="js-header-nav" id="navigation">
 					<ul id="menu-primary-menu" class="menu--primary">
 						<?php echo \Pressbooks\Book\Helpers\display_menu(); ?>
 					</ul>
 				</nav>
-				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
 			</div>
 		</div>
 	</header>
