@@ -162,7 +162,7 @@
   //right: 1rem;
   width: 25px;
   height: 20px;
-  z-index: 99;
+  z-index: 999;
   text-indent: -9999em;
 
   @media #{$breakpoint-large} {
@@ -234,6 +234,13 @@
       top: 0;
       width: 100%;
 
+      ul {
+        li {
+          display: block;
+          padding-left: 0;
+        }
+      }
+
       a {
         display: none;
         font-family: $font-family-sans-serif;
@@ -250,21 +257,24 @@
       &.--visible {
         --header-color: var(--primary-fg);
         margin: 0;
-        padding: 0 52px;
+        padding: 6rem 52px;
         z-index: 99;
         background: var(--primary);
+
+        li {
+          border-bottom: solid 1px var(--header-color);
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
 
         a {
           display: block;
           width: 100%;
-          border-bottom: solid 1px var(--header-color);
 
           &:hover {
             color: var(--header-color);
-          }
-
-          &:last-child {
-            border-bottom: 0;
           }
         }
       }
