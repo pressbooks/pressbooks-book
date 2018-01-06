@@ -12,9 +12,3 @@ img {
   clear: both;
   content: '';
 }
-
-@mixin debug {
-  * {
-    border: solid 1px silver;
-  }
-}

@@ -1,99 +1,130 @@
-html {
-  -webkit-font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: $font-family-serif;
-  font-size: rem(18);
-  background: $white;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-sans-serif;
-}
-
-h1 {
-  font-size: rem(30);
-  font-weight: 600;
-  letter-spacing: rem(2);
-  line-height: (36/30);
-  margin: 0;
-}
-
-h2 {
-  font-size: rem(30);
-  font-weight: 600;
-  color: var(--primary, $brand-primary);
-  letter-spacing: 2px;
-  line-height: (36/30);
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-
-  &::before {
-    content: "";
-    display: block;
-    margin: 0 auto 1em;
-    width: 46px;
-    height: 5px;
-    background: var(--accent, $brand-accent);
-  }
-}
-
-a {
-  color: var(--primary, $brand-primary);
-  text-decoration: none;
-}
-
 :root {
-  --primary: $brand-primary;
+  --font-family-sans-serif: $font-family-sans-serif;
+  --font-family-monospace: $font-family-monospace;
+  --brand: $brand;
+  --brand-hover: $brand-hover;
+  --brand-accent: $brand-accent;
+  --body-bg: $body-bg;
+  --body-bg-alt: $brand-bg-alt;
+  --body-bg-alt2: $brand-bg-alt2;
+  --body-color: $body-color;
+  --button-primary-color: $btn-color;
+  --button-primary-hover-color: $brand-hover;
+  --button-secondary-color: $brand;
+  --button-secondary-hover-color: $brand-hover;
+  --header-bg: $header-bg;
+  --header-color: $header-color;
+  --footer-bg: $footer-bg;
+  --footer-color: $footer-color;
+  --book-bg: $book-bg;
+  --brand-orig: $brand;
+  --brand-hover-orig: $brand-hover;
+  --brand-accent-orig: $brand-accent;
+  --primary: $brand;
   --accent: $brand-accent;
-  --primary-fg: $white;
-  --accent-fg: $white;
-  --header-text: $black;
+  --primary-fg: $color-primary-fg;
+  --accent-fg: $color-accent-fg;
+  --header-text: $color-header-text;
+  --cover-header-bg: $color-cover-header-bg;
 }
 
-.primary {
-  color: var(--brand-primary, $brand-primary);
-}
 
-.bg-primary {
-  background-color: var(--brand-primary, $brand-primary);
-}
+// html {
+//   -webkit-font-smoothing: antialiased;
+// }
 
-.b--primary {
-  border-color: var(--brand-primary, $brand-primary);
-}
+// * {
+//   box-sizing: border-box;
+// }
 
-.accent {
-  color: var(--brand-secondary, $brand-accent);
-}
+// body {
+//   margin: 0;
+//   font-family: $font-family-serif;
+//   font-size: rem(18);
+//   background: $white;
+// }
 
-.bg-accent {
-  background-color: var(--brand-secondary, $brand-accent);
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: $font-family-sans-serif;
+// }
 
-.b--accent {
-  border-color: var(--brand-secondary, $brand-accent);
-}
+// h1 {
+//   font-size: rem(30);
+//   font-weight: 600;
+//   letter-spacing: rem(2);
+//   line-height: (36/30);
+//   margin: 0;
+// }
 
-@media (min-width: $medium) {
-  h2 {
-    font-size: rem(48);
-    line-height: (56/48);
+// h2 {
+//   font-size: rem(30);
+//   font-weight: 600;
+//   color: var(--primary, $brand-primary);
+//   letter-spacing: 2px;
+//   line-height: (36/30);
+//   text-transform: uppercase;
+//   text-align: center;
+//   margin: 0;
 
-    &::before {
-      width: 74px;
-    }
-  }
-}
+//   &::before {
+//     content: "";
+//     display: block;
+//     margin: 0 auto 1em;
+//     width: 46px;
+//     height: 5px;
+//     background: var(--accent, $brand-accent);
+//   }
+// }
+
+// a {
+//   color: var(--primary, $brand-primary);
+//   text-decoration: none;
+// }
+
+// :root {
+//   --primary: $brand-primary;
+//   --accent: $brand-accent;
+//   --primary-fg: $white;
+//   --accent-fg: $white;
+//   --header-text: $black;
+// }
+
+// .primary {
+//   color: var(--brand-primary, $brand-primary);
+// }
+
+// .bg-primary {
+//   background-color: var(--brand-primary, $brand-primary);
+// }
+
+// .b--primary {
+//   border-color: var(--brand-primary, $brand-primary);
+// }
+
+// .accent {
+//   color: var(--brand-secondary, $brand-accent);
+// }
+
+// .bg-accent {
+//   background-color: var(--brand-secondary, $brand-accent);
+// }
+
+// .b--accent {
+//   border-color: var(--brand-secondary, $brand-accent);
+// }
+
+// @media (min-width: $medium) {
+//   h2 {
+//     font-size: rem(48);
+//     line-height: (56/48);
+
+//     &::before {
+//       width: 74px;
+//     }
+//   }
+// }

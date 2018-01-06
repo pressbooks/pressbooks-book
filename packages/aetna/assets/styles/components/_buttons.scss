@@ -1,86 +1,108 @@
+
 .button {
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius;
+  //cursor: pointer;
   display: inline-block;
-  width: rem(250);
-  height: rem(60);
-  padding: rem(19);
-  border: 2px solid var(--primary, $brand-primary);
-  border-radius: 3px;
-  background: var(--primary, $brand-primary);
-  font-family: $font-family-sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-fg, $white);
-  line-height: normal;
-  letter-spacing: rem(2);
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $input-btn-line-height;
+  padding: $btn-padding-y $btn-padding-x;
+  vertical-align: middle;
+  //white-space: nowrap;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.5s;
-  vertical-align: middle;
+  user-select: none;
 
-  &:hover,
-  &:focus {
-    background: $white;
-    color: var(--primary, $brand-primary);
+  // Share hover and focus styles
+  &:focus,
+  &:hover {
+    text-decoration: none;
   }
 
-  &--small {
-    width: rem(150);
-    height: rem(40);
-    padding: rem(6.5);
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
   }
 
-  &--wide {
-    width: rem(305);
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 0.65;
+    box-shadow: none;
   }
 
-  &--outline {
-    background: $white;
-    color: var(--primary, $brand-primary);
-
-    &:hover,
-    &:focus {
-      color: var(--primary-fg, $white);
-      background: var(--primary, $brand-primary);
-    }
-  }
-
-  &--monochrome {
-    background: $black;
-    border: 2px solid $black;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      color: $black;
-      background: $white;
-    }
-  }
-
-  &--monochrome-outline {
-    background: $white;
-    border: 2px solid $black;
-    color: $black;
-
-    &:hover,
-    &:focus {
-      color: $white;
-      border: 2px solid $white;
-      background: $black;
-    }
+  &:active,
+  &.active {
+    background-image: none;
+    box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
   }
 }
 
-@media (min-width: 60em) {
-  .button {
-    width: rem(275);
+.button--primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--button-primary-color);
 
-    &--small {
-      width: rem(150);
-    }
+  &:hover {
+    background-color: var(--brand-hover);
+    border-color: var(--brand-hover);
+    color: var(--button-primary-color);
+  }
+}
 
-    &--wide {
-      width: rem(305);
-    }
+.button--secondary {
+  background-color: transparent;
+  border-color: var(--brand);
+  color: var(--brand);
+
+  &:hover {
+    border-color: var(--brand-hover);
+    color: var(--brand-hover);
+  }
+}
+
+//TODO refactor button colors; create specific button css variables, overwrite vars above and remove button rules below
+.button--primary.button--header {
+  background-color: var(--header-color);
+  border-color: var(--header-color);
+  color: var(--header-bg);
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--header-color);
+    color: var(--header-color);
+  }
+}
+
+.button--secondary.button--header {
+  background-color: transparent;
+  border-color: var(--header-color);
+  color: var(--header-color);
+
+  &:hover {
+    background-color: var(--header-color);
+    border-color: var(--header-color);
+    color: var(--header-bg);
+  }
+}
+
+.button--circle--primary {
+  align-items: center;
+  background-color: var(--brand);
+  color: var(--button-primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 3.75rem;
+  width: 3.75rem;
+
+  &:hover {
+    background-color: var(--brand-hover);
+    border-color: var(--brand-hover);
+    color: var(--button-primary-color);
+    text-decoration: none;
   }
 }
