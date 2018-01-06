@@ -1,8 +1,8 @@
 jQuery( $ => {
-	$( '.js-header-menu-toggle' ).click( event => {
+	$( '.js-header-nav-toggle' ).click( event => {
 		event.preventDefault();
-		$( event.currentTarget ).toggleClass( '--active' );
-		$( '.js-header-nav' ).toggleClass( '--visible' );
+		$( event.currentTarget ).toggleClass( 'js-header-nav--active' );
+		$( '.js-header-nav' ).toggleClass( 'js-header-nav--visible' );
 	} );
 } );
 

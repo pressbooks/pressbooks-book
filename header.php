@@ -28,88 +28,72 @@
 	</defs>
 </svg>
 
+<?php if ( pb_social_media_enabled() ) { get_template_part( 'partials/content', 'facebook-js' ); } ?>
 
-<?php if ( pb_social_media_enabled() ) { ?>
-	<!-- Facebook share JS SDK -->
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, "script", "facebook-jssdk"));</script>
-<?php } ?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>
 
-	<header class="header <?php echo is_front_page() ? 'header--home' : 'header--reading' ?>">
-		<div class="header__inner">
+	<header class="header" role="banner">
+		<div class="header__inside">
 			<div class="header__brand">
-				<a class="header__logo" href="<?php echo network_home_url(); ?>">
+				<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
 					<?php $root_id = get_network()->site_id;
 					if ( has_custom_logo( $root_id ) ) { ?>
 						<?php switch_to_blog( $root_id );
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
 						printf(
-							'<img src="%1$s" srcset="%2$s" alt="%3$s" />',
+							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
 							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
 							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
 							sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
 						);
 						restore_current_blog(); ?>
 					<?php } else { ?>
-					<svg class="logo--svg">
+					<svg class="header__logo--svg">
 						<use xlink:href="#logo-pressbooks" />
 					</svg><?php } ?>
 				</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__menu-icon js-header-menu-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__menu-icon__icon"></span></a>
+				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
 				<nav class="js-header-nav" id="navigation">
-					<ul id="menu-primary-menu" class="menu--primary">
+					<ul id="nav-primary-menu" class="nav--primary">
 						<?php echo \Pressbooks\Book\Helpers\display_menu(); ?>
 					</ul>
 				</nav>
 			</div>
 		</div>
+		<?php if ( ! is_front_page() ) { ?>
+			<div class="reading-header">
+				<nav class="reading-header__inside">
+					<div class="reading-header__toc js-toc-toggle-contents">
+						<a class="js-toc-toggle" href="javascript:void(0)">
+							<span class="reading-header__toc__title">Contents</span>
+							<span class="icon icon-arrow-up-down" ></span>
+						</a>
+						<?php
+						global $blog_id;
+						$can_read = current_user_can_for_blog( $blog_id, 'read' );
+						$can_read_private = current_user_can_for_blog( $blog_id, 'read_private_posts' );
+						$book_structure = pb_get_book_structure();
+						$book_information = pb_get_book_information();
+						$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
+						$should_parse_subsections = pb_should_parse_subsections();?>
+						<div class="block-reading-toc js-toc">
+							<?php include( locate_template( 'content-toc.php' ) ); ?>
+						</div>
+					</div>
+
+					<h1 class="reading-header__title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+					<div class="reading-header__end-container">
+						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
+						<a class="button button--primary button--header" href="<?php echo home_url( '/buy/' ); ?>"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
+						<?php endif; ?>
+					</div>
+				</nav>
+			</div>
+		<?php } ?>
 	</header>
-<?php
-//book reading navigation bar
-if ( ! is_front_page() ) { ?>
 
-	<div class="reading-header">
-		<nav class="reading-header__inner">
-			<div class="reading-header__toc js-toc-toggle-con">
-				<a class="js-toc-toggle" href="javascript:void(0)">
-					<span class="reading-header__toc__title">Contents</span>
-					<span class="icon icon-arrow-up-down" ></span>
-				</a>
-				<?php
-				global $blog_id;
-				$can_read = current_user_can_for_blog( $blog_id, 'read' );
-				$can_read_private = current_user_can_for_blog( $blog_id, 'read_private_posts' );
-				$book_structure = pb_get_book_structure();
-				$book_information = pb_get_book_information();
-				$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
-				$should_parse_subsections = pb_should_parse_subsections();?>
-				<section class="block-reading-toc js-toc">
-					<?php include( locate_template( 'content-toc.php' ) ); ?>
-				</section>
-			</div>
-
-			<h1 class="reading-header__title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-			<div class="reading-header__end-container">
-				<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-				<!-- Buy -->
-				<a class="button button--primary button--header" href="<?php echo get_option( 'home' ); ?>/buy"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
-				<?php endif; ?>
-			</div>
-		</nav>
-	</div>
-
-
-
-	<div class="wrapper"> <!-- for sitting footer at the bottom of the page -->
-		<div id="wrap">
-			<div id="content">
-<?php }
+	<div id="content" class="site-content">

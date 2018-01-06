@@ -1,13 +1,5 @@
 {
-    "/scripts/navigation.js": "/scripts/navigation.js?id=36c368e3d8eb73971b32",
-    "/styles/common.css": "/styles/common.css?id=46ea514ccb2de7d9c777",
-    "/styles/cover.css": "/styles/cover.css?id=46ea514ccb2de7d9c777",
-    "/styles/reading.css": "/styles/reading.css?id=46ea514ccb2de7d9c777",
-    "/scripts/a11y.js": "/scripts/a11y.js?id=ecc287ccd8f9ad727e4e",
-    "/scripts/toc.js": "/scripts/toc.js?id=957303203c64eabfd13c",
-    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=7d2471719cb98cbbbd87",
-    "/scripts/dropdown.js": "/scripts/dropdown.js?id=4ea31ec6b414a8d03923",
-    "/scripts/cover-toc.js": "/scripts/cover-toc.js?id=1e51d1387869f1063b59",
-    "/scripts/columnizer.js": "/scripts/columnizer.js?id=6036d2b265a0651054e2",
+    "/scripts/book.js": "/scripts/book.js?id=3e3449e4105f68d81a5a",
+    "/styles/book.css": "/styles/book.css?id=de76c785728826a2e78a",
     "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343"
 }

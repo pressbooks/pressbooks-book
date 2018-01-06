@@ -45,15 +45,8 @@ $metakeys = [
 
 function pressbooks_async_scripts( $tag, $handle, $src ) {
 	$async = [
-		'pressbooks/a11y',
-		'pressbooks/keyboard-nav',
-		'pressbooks/navbar',
-		'pressbooks/navigation',
-		'pressbooks/dropdown',
-		'pressbooks/toc',
-		'pressbooks/cover-toc',
+		'pressbooks/book',
 		'sharer',
-		'jquery-migrate',
 	];
 
 	if ( in_array( $handle, $async, true ) ) {
@@ -72,28 +65,20 @@ function pb_enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
-	wp_enqueue_style( 'book/common', $assets->getPath( 'styles/common.css' ), false, null );
+	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700', false, null );
 	wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
-	wp_enqueue_script( 'pressbooks/navigation', $assets->getPath( 'scripts/navigation.js' ), [ 'jquery' ], null );
-	wp_enqueue_script( 'pressbooks/dropdown', $assets->getPath( 'scripts/dropdown.js' ), [ 'jquery' ], null );
-	wp_register_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), [ 'jquery' ], null );
+	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
 	wp_localize_script(
-		'pressbooks/a11y',
+		'pressbooks/book',
 		'PB_A11y',
 		[
 			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
 			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
 		]
 	);
-	wp_enqueue_script( 'pressbooks/a11y' );
 
-	if ( is_front_page() ) {
-		wp_enqueue_style( 'book/cover', $assets->getPath( 'styles/cover.css' ), false, null );
-		wp_enqueue_script( 'pressbooks/cover-toc', $assets->getPath( 'scripts/cover-toc.js' ), [ 'jquery' ], null );
-	}
 	if ( ! is_front_page() ) {
-		wp_enqueue_style( 'book/reading', $assets->getPath( 'styles/reading.css' ), false, null );
 
 		if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
 			wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), false, get_option( 'pressbooks_last_custom_css' ), 'screen' );
@@ -119,9 +104,6 @@ function pb_enqueue_assets() {
 				wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
 			}
 		}
-
-		wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), [ 'jquery' ], null, true );
-		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), [ 'jquery' ], null, false );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pb_enqueue_assets' );
