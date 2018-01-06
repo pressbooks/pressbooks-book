@@ -1,13 +1,6 @@
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
-@import "~reboot.css/dist/reboot.css";
-
 /** Import theme styles */
 @import "common/variables";
+@import "common/reboot";
 @import "common/functions";
 @import "common/mixins";
 @import "common/global";

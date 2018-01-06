@@ -1,6 +1,6 @@
 {
   "name": "aetna",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
@@ -16,9 +16,7 @@
       "node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
-  "dependencies": {
-    "reboot.css": "^1.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "pressbooks-build-tools": "^0.9.0"
   },
