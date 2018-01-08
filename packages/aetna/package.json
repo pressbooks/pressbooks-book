@@ -1,19 +1,15 @@
 {
   "name": "aetna",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
-    "build":
-      "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build:production":
-      "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "start":
-      "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:styles",
-    "lint:styles":
-      "node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
   "dependencies": {},
@@ -24,7 +20,10 @@
     "type": "git",
     "url": "git+https://github.com/pressbooks/aetna.git"
   },
-  "keywords": ["styleguide", "pattern-library"],
+  "keywords": [
+    "styleguide",
+    "pattern-library"
+  ],
   "author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
   "license": "GPL-2.0+",
   "bugs": {
