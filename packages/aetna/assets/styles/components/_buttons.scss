@@ -2,18 +2,16 @@
 .button {
   border: $btn-border-width solid transparent;
   border-radius: $btn-border-radius;
-  //cursor: pointer;
+  cursor: pointer;
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $input-btn-line-height;
   padding: $btn-padding-y $btn-padding-x;
   vertical-align: middle;
-  //white-space: nowrap;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  user-select: none;
 
   // Share hover and focus styles
   &:focus,
@@ -24,7 +22,7 @@
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: $btn-focus-box-shadow;
+    // box-shadow: $btn-focus-box-shadow;
   }
 
   // Disabled comes first so active can properly restyle
@@ -41,11 +39,26 @@
   }
 }
 
+
+.button--outline {
+  background-color: var(--button-primary-color);
+  border-color: var(--brand);
+  color: var(--brand);
+
+  &:focus,
+  &:hover {
+    background-color: var(--brand-hover);
+    border-color: var(--brand-hover);
+    color: var(--button-primary-color);
+  }
+}
+
 .button--primary {
   background-color: var(--brand);
   border-color: var(--brand);
   color: var(--button-primary-color);
 
+  &:focus,
   &:hover {
     background-color: var(--brand-hover);
     border-color: var(--brand-hover);
@@ -58,6 +71,7 @@
   border-color: var(--brand);
   color: var(--brand);
 
+  &:focus,
   &:hover {
     border-color: var(--brand-hover);
     color: var(--brand-hover);
@@ -70,6 +84,7 @@
   border-color: var(--header-color);
   color: var(--header-bg);
 
+  &:focus,
   &:hover {
     background-color: transparent;
     border-color: var(--header-color);
@@ -82,6 +97,7 @@
   border-color: var(--header-color);
   color: var(--header-color);
 
+  &:focus,
   &:hover {
     background-color: var(--header-color);
     border-color: var(--header-color);
@@ -99,6 +115,7 @@
   height: 3.75rem;
   width: 3.75rem;
 
+  &:focus,
   &:hover {
     background-color: var(--brand-hover);
     border-color: var(--brand-hover);

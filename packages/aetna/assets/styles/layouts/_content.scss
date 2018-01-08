@@ -3,21 +3,16 @@
 #content {
   position: relative;
   z-index: 10;
-  min-height: 420px;
-  padding: 2rem;
+  //min-height: 420px;
+  //padding: 2rem;
   margin: 0 auto;
-  background-color: var(--book-bg);
+  background-color: var(--body-bg);
   width: auto;
 
   @media #{$breakpoint-large} {
     width: $reading-page-max-width;
   }
 }
-
-#content ul {
-  list-style: disc;
-}
-
 #content img {
   height: auto;
   max-width: 100%;
