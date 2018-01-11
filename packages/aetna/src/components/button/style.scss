@@ -1,0 +1,39 @@
+.button {
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $input-btn-line-height;
+  padding: $btn-padding-y $btn-padding-x;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  // Share hover and focus styles
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    // box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 0.65;
+    box-shadow: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
+  }
+}
