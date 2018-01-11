@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: 'pressbooks-theme';
-  src: url('../fonts/pressbooks-theme.woff') format('woff'),
-    url('../fonts/pressbooks-theme.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'pressbooks-theme';
+//   src: url('../fonts/pressbooks-theme.woff') format('woff'),
+//     url('../fonts/pressbooks-theme.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 [data-icon]::before {
   font-family: 'pressbooks-theme', sans-serif !important;

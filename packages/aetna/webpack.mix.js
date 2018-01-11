@@ -11,7 +11,7 @@ let mix = require("laravel-mix");
  |
  */
 
-mix.sass("src/components/button/style.scss", "src/components/button/");
+mix.sass("assets/styles/aetna.scss", "public/styles");
 
 // Full API
 // mix.js(src, output);
