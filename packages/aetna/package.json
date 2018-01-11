@@ -12,7 +12,9 @@
       "cross-env NODE_ENV=production webpack --progress --profile --json --config=node_modules/laravel-mix/setup/webpack.config.js",
     "start":
       "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "rmdist": "rimraf dist",
+    "fractal:build": "fractal build",
+    "fractal:start": "fractal start --sync",
+    "rmdist": "rimraf public",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts":
       "node_modules/eslint/bin/eslint.js \"src/components/**/*.js\"",
