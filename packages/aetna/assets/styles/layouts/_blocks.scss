@@ -28,17 +28,8 @@
     list-style-position: inside;
   }
 
-  .button {
+  a.call-to-action {
     margin-top: 2rem;
-    color: var(--primary-fg);
-    border-color: var(--primary);
-    background: var(--primary);
-
-    &:hover,
-    &:focus {
-      color: var(--primary);
-      background: var(--primary-fg);
-    }
   }
 
   @media #{$breakpoint-large} {
@@ -58,18 +49,6 @@
       color: var(--accent-fg);
 
       &::before {
-        background: var(--accent-fg);
-      }
-    }
-
-    .button {
-      color: var(--accent-fg);
-      border-color: var(--accent-fg);
-      background: var(--accent);
-
-      &:hover,
-      &:focus {
-        color: var(--accent);
         background: var(--accent-fg);
       }
     }

@@ -1,8 +1,9 @@
-
-.button {
-  border: $btn-border-width solid transparent;
+button,
+input[type="submit"],
+a.call-to-action {
+  border-style: solid;
+  border-width: $btn-border-width;
   border-radius: $btn-border-radius;
-  cursor: pointer;
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -39,21 +40,8 @@
   }
 }
 
-
-.button--outline {
-  background-color: var(--button-primary-color);
-  border-color: var(--brand);
-  color: var(--brand);
-
-  &:focus,
-  &:hover {
-    background-color: var(--brand-hover);
-    border-color: var(--brand-hover);
-    color: var(--button-primary-color);
-  }
-}
-
-.button--primary {
+button,
+input[type="submit"] {
   background-color: var(--brand);
   border-color: var(--brand);
   color: var(--button-primary-color);
@@ -66,6 +54,32 @@
   }
 }
 
+a.call-to-action {
+  background-color: var(--button-primary-color);
+  border-color: var(--brand);
+  color: var(--brand);
+
+  &:focus,
+  &:hover {
+    background-color: var(--brand);
+    border-color: var(--brand);
+    color: var(--button-primary-color);
+  }
+}
+
+[class$='--alternate'] .call-to-action {
+  background-color: var(--accent);
+  border-color: var(--button-primary-color);
+  color: var(--button-primary-color);
+
+  &:focus,
+  &:hover {
+    background-color: var(--button-primary-color);
+    border-color: var(--button-primary-color);
+    color: var(--accent);
+  }
+}
+
 .button--secondary {
   background-color: transparent;
   border-color: var(--brand);
@@ -75,33 +89,6 @@
   &:hover {
     border-color: var(--brand-hover);
     color: var(--brand-hover);
-  }
-}
-
-//TODO refactor button colors; create specific button css variables, overwrite vars above and remove button rules below
-.button--primary.button--header {
-  background-color: var(--header-color);
-  border-color: var(--header-color);
-  color: var(--header-bg);
-
-  &:focus,
-  &:hover {
-    background-color: transparent;
-    border-color: var(--header-color);
-    color: var(--header-color);
-  }
-}
-
-.button--secondary.button--header {
-  background-color: transparent;
-  border-color: var(--header-color);
-  color: var(--header-color);
-
-  &:focus,
-  &:hover {
-    background-color: var(--header-color);
-    border-color: var(--header-color);
-    color: var(--header-bg);
   }
 }
 
