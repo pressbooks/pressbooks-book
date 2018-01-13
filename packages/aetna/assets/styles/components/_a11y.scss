@@ -20,7 +20,7 @@
   position: fixed;
   z-index: 99999;
   top: 0;
-  padding: 0;
+  padding: 0 1rem;
   width: 100vw;
   margin: 0 auto;
   font-family: $font-family-sans-serif;
@@ -33,11 +33,6 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding-right: 1rem;
-
-    @media #{$breakpoint-not-small} {
-      padding-right: 0;
-    }
   }
 
   ul {

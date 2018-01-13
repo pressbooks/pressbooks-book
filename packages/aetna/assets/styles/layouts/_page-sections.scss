@@ -1,26 +1,12 @@
-.blocks {
-  @media #{$breakpoint-large} {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+.has-sections .entry-content {
+  // TODO
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.page-section {
   width: 100%;
   padding: 4rem 1rem;
   background: var(--body-bg);
   text-align: center;
-
-  p,
-  ul,
-  ol {
-    font-size: rem(18);
-  }
 
   ul,
   ol {
@@ -28,23 +14,10 @@
     list-style-position: inside;
   }
 
-  a.call-to-action {
-    margin-top: 2rem;
-  }
-
-  @media #{$breakpoint-large} {
-    width: calc(50% - 4rem);
-    min-height: rem(495);
-    margin-bottom: rem(129);
-    padding: rem(64) rem(90);
-    box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
-}
-
-  &.block--alternate {
+  &--accent {
     color: var(--accent-fg);
     background: var(--accent);
 
-    &__header,
     h2 {
       color: var(--accent-fg);
 
@@ -54,24 +27,14 @@
     }
   }
 
-  &.block--bordered {
+  &--bordered {
     width: calc(100% - 2rem);
-    margin-top: 5rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin: 5rem auto 0;
     border: solid 4px var(--accent);
-
-    @media #{$breakpoint-large} {
-      margin-top: 0;
-      margin-right: 0;
-      margin-left: 0;
-      width: calc(50% - 4rem);
-      box-shadow: none;
-    }
   }
 
-  &.block--borderless {
-
+  &--borderless {
+    box-shadow: none;
   }
 }
 
@@ -83,10 +46,6 @@
   @media #{$breakpoint-tablet-and-up} {
     margin-bottom: 1.5rem;
   }
-}
-
-.block__subsection {
-  // TODO
 }
 
 .block-toggle__cta {
@@ -135,5 +94,50 @@
 
   &.block-meta {
     padding-bottom: 6rem;
+  }
+}
+
+@media #{$breakpoint-large} {
+  .has-sections .entry-content {
+    display: flex;
+    width: 100%;
+    max-width: 90rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .page-section {
+    width: 100%;
+    max-width: 50rem;
+    margin: 4rem auto;
+    padding: 4rem 5.625rem;
+    box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      width: calc(50% - 4rem);
+    }
+
+    &:only-of-type {
+      width: 100%;
+      max-width: 50rem;
+    }
+
+    &--bordered {
+      margin: 4rem auto;
+      width: 100%;
+      max-width: 50rem;
+      box-shadow: none;
+
+      &:first-of-type,
+      &:nth-of-type(2) {
+        width: calc(50% - 4rem);
+      }
+
+      &:only-of-type {
+        width: 100%;
+        max-width: 50rem;
+      }
+    }
   }
 }

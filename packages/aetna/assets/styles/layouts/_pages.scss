@@ -1,0 +1,30 @@
+.home {
+  h1 {
+    text-transform: none;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.page:not(.has-sections) {
+  article {
+    width: 100%;
+    padding: 4rem 1rem;
+    background: var(--body-bg);
+    text-align: center;
+
+    @media #{$breakpoint-large} {
+      width: 100%;
+      max-width: 50rem;
+      margin: calc(-80%) auto 4rem;
+      padding: 4rem 5.625rem;
+      box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+    }
+  }
+
+  .entry-header {
+    margin-bottom: 2rem;
+  }
+}
