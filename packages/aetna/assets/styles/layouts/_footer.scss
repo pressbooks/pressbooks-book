@@ -7,6 +7,21 @@
   font-family: $font-family-sans-serif;
   padding: 0 0 2.25rem;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    &:before {
+      display: none;
+    }
+  }
+
   &.footer--home {
     padding-top: 4rem;
   }
