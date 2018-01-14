@@ -1,19 +1,25 @@
 {
   "name": "aetna",
-  "version": "0.8.0",
+  "version": "1.0.0-alpha1",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
-    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build:profile": "cross-env NODE_ENV=production webpack --progress --profile --json --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build":
+      "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:production":
+      "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:profile":
+      "cross-env NODE_ENV=production webpack --progress --profile --json --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start":
+      "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "fractal:build": "fractal build",
     "fractal:start": "fractal start --sync",
     "rmdist": "rimraf public",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "node_modules/eslint/bin/eslint.js \"src/components/**/*.js\"",
-    "lint:styles": "node_modules/stylelint/bin/stylelint.js \"src/components/**/*.scss\" --syntax scss",
+    "lint:scripts":
+      "node_modules/eslint/bin/eslint.js \"src/components/**/*.js\"",
+    "lint:styles":
+      "node_modules/stylelint/bin/stylelint.js \"src/components/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
   "dependencies": {
@@ -26,10 +32,7 @@
     "type": "git",
     "url": "git+https://github.com/pressbooks/aetna.git"
   },
-  "keywords": [
-    "styleguide",
-    "pattern-library"
-  ],
+  "keywords": ["styleguide", "pattern-library"],
   "author": "Pressbooks (Book Oven Inc.) <code@pressbooks.com>",
   "license": "GPL-2.0+",
   "bugs": {
