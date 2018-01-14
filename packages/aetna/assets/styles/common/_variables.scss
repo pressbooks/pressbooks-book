@@ -86,7 +86,7 @@ $h6-font-size: 1.25rem !default;
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family: $font-family-sans-serif !default;
 $headings-font-weight: 700 !default;
-$headings-line-height: 1.1 !default;
+$headings-line-height: $line-height-base !default;
 $headings-color: var(--brand) !default;
 
 $small-font-size: 80% !default;

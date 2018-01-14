@@ -4,18 +4,16 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+main * + p {
+  margin-top: 1.5em;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h6 {
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -35,19 +33,12 @@ h6,
   h3,
   h4,
   h5,
-  h6,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
+  h6 {
     color: $headings-color;
   }
 }
 
-h1,
-.h1 {
+h1 {
   font-size: 2.25rem;
   text-align: center;
   text-transform: uppercase;
@@ -55,14 +46,14 @@ h1,
   &::before {
     content: '';
     display: block;
-    margin: 0.5rem auto 2rem;
+    margin: 0.5rem auto 1rem;
     width: rem(45);
     height: rem(5);
     background: var(--brand-accent);
 
     @media #{$breakpoint-large} {
       margin-bottom: 2rem;
-      width: 75px;
+      width: rem(75);
     }
   }
 
@@ -71,8 +62,7 @@ h1,
   }
 }
 
-h2,
-.h2 {
+h2 {
   margin-bottom: 2rem;
   font-size: 1.875rem;
   font-weight: 600;
@@ -82,14 +72,14 @@ h2,
   &::before {
     content: '';
     display: block;
-    margin: 0.5rem auto 2rem;
+    margin: 0.5rem auto 1rem;
     width: rem(45);
     height: rem(5);
     background: var(--brand-accent);
 
     @media #{$breakpoint-large} {
       margin-bottom: 2rem;
-      width: 75px;
+      width: rem(75);
     }
   }
 
@@ -98,23 +88,19 @@ h2,
   }
 }
 
-h3,
-.h3 {
+h3 {
   font-size: $h3-font-size;
 }
 
-h4,
-.h4 {
+h4 {
   font-size: $h4-font-size;
 }
 
-h5,
-.h5 {
+h5 {
   font-size: $h5-font-size;
 }
 
-h6,
-.h6 {
+h6 {
   font-size: $h6-font-size;
 }
 
@@ -122,5 +108,5 @@ p,
 ul,
 ol {
   font-size: rem(18);
-  line-height: 1.5;
+  line-height: $line-height-base;
 }
