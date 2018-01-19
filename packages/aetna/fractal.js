@@ -16,4 +16,4 @@ fractal.docs.set("path", __dirname + "/src/docs");
 fractal.web.set("static.path", __dirname + "/public");
 
 /* Set the static HTML build destination */
-fractal.web.set("builder.dest", __dirname + "/docs");
+fractal.web.set("builder.dest", __dirname + "/_site");
