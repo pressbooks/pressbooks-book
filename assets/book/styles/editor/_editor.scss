@@ -13,7 +13,6 @@ $type: 'web';
 @import '../components/section-titles';
 @import '../components/structure';
 @import '../components/toc';
-@import 'fonts';
 
 @if variable-exists(font-1) {
   body#tinymce.wp-editor {

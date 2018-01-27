@@ -23,7 +23,7 @@
     @return false;
   }
 
-  @elseif $position == 'top-outside-corner' {
+  @else if $position == 'top-outside-corner' {
     @if $page-position != 'first' {
       @return '@top-#{$page-position}-corner';
     }
@@ -33,7 +33,7 @@
     }
   }
 
-  @elseif $position == 'top-outside' {
+  @else if $position == 'top-outside' {
     @if $page-position != 'first' {
       @return '@top-#{$page-position}';
     }
@@ -43,16 +43,16 @@
     }
   }
 
-  @elseif $position == 'top-center' {
+  @else if $position == 'top-center' {
     @return '@top-center';
   }
 
-  @elseif $position == 'top-inside' {
+  @else if $position == 'top-inside' {
     @if $page-position == 'left' {
       @return '@top-right';
     }
 
-    @elseif $page-position == 'right' {
+    @else if $page-position == 'right' {
       @return '@top-left';
     }
 
@@ -61,7 +61,7 @@
     }
   }
 
-  @elseif $position == 'outside-top' {
+  @else if $position == 'outside-top' {
     @if $page-position != 'first' {
       @return '@#{$page-position}-top';
     }
@@ -71,7 +71,7 @@
     }
   }
 
-  @elseif $position == 'outside-middle' {
+  @else if $position == 'outside-middle' {
     @if $page-position != 'first' {
       @return '@#{$page-position}-middle';
     }
@@ -81,7 +81,7 @@
     }
   }
 
-  @elseif $position == 'outside-bottom' {
+  @else if $position == 'outside-bottom' {
     @if $page-position != 'first' {
       @return '@#{$page-position}-bottom';
     }
@@ -91,7 +91,7 @@
     }
   }
 
-  @elseif $position == 'bottom-outside-corner' {
+  @else if $position == 'bottom-outside-corner' {
     @if $page-position != 'first' {
       @return '@bottom-#{$page-position}-corner';
     }
@@ -101,7 +101,7 @@
     }
   }
 
-  @elseif $position == 'bottom-outside' {
+  @else if $position == 'bottom-outside' {
     @if $page-position != 'first' {
       @return '@bottom-#{$page-position}';
     }
@@ -111,16 +111,16 @@
     }
   }
 
-  @elseif $position == 'bottom-center' {
+  @else if $position == 'bottom-center' {
     @return '@bottom-center';
   }
 
-  @elseif $position == 'bottom-inside' {
+  @else if $position == 'bottom-inside' {
     @if $page-position == 'left' {
       @return '@bottom-right';
     }
 
-    @elseif $page-position == 'right' {
+    @else if $page-position == 'right' {
       @return '@bottom-left';
     }
 
@@ -151,7 +151,7 @@
     @return 'head';
   }
 
-  @elseif $position == 'outside-bottom'
+  @else if $position == 'outside-bottom'
     or $position == 'bottom-outside-corner'
     or $position == '@bottom-left-corner'
     or $position == '@bottom-right-corner'

@@ -20,7 +20,7 @@
             padding-top: $runninghead-padding-top;
           }
 
-          @elseif head-or-foot($content-position) == 'foot' {
+          @else if head-or-foot($content-position) == 'foot' {
             padding-bottom: $runningfoot-padding-bottom;
           }
 
@@ -39,7 +39,7 @@
             padding-top: $runninghead-padding-top;
           }
 
-          @elseif head-or-foot($content-position) == 'foot' {
+          @else if head-or-foot($content-position) == 'foot' {
             padding-bottom: $runningfoot-padding-bottom;
           }
 
@@ -93,7 +93,7 @@
           text-transform: $runninghead-left-text-transform;
         }
 
-        @elseif $page-position == 'right' {
+        @else if $page-position == 'right' {
           font-family: $runninghead-right-font-family;
           font-size: $runninghead-right-font-size;
           font-style: $runninghead-right-font-style;
@@ -132,7 +132,7 @@
           text-transform: $runningfoot-left-text-transform;
         }
 
-        @elseif $page-position == 'right' {
+        @else if $page-position == 'right' {
           font-family: $runningfoot-right-font-family;
           font-size: $runningfoot-right-font-size;
           font-style: $runningfoot-right-font-style;
@@ -166,7 +166,7 @@
           }
         }
 
-        @elseif $page-position == 'right' {
+        @else if $page-position == 'right' {
           @if $running-content-position == '@top-left'
             or $running-content-position == '@top-left-corner'
             or $running-content-position == '@bottom-left'
@@ -191,11 +191,11 @@
             content: if-map-get($right-page-number, $page-type);
           }
 
-          @elseif $page-position == 'left' {
+          @else if $page-position == 'left' {
             content: if-map-get($left-page-number, $page-type);
           }
 
-          @elseif $page-position == 'right' {
+          @else if $page-position == 'right' {
             content: if-map-get($right-page-number, $page-type);
           }
         }
@@ -209,7 +209,7 @@
             content: if-map-get($left-running-content, $page-type);
           }
 
-          @elseif $page-position == 'right' {
+          @else if $page-position == 'right' {
             content: if-map-get($right-running-content, $page-type);
           }
         }
