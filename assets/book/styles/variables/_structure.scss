@@ -1,4 +1,6 @@
-// VARS - GLOBAL PAGE STRUCTURE
+////
+/// @group structure
+////
 
 // Running content is made of three kinds of content:
 // -page number
@@ -6,28 +8,32 @@
 // -running content
 // First, choose page number position options (choose one!)
 
-//$numbering-position: 'top-outside-corner' !default;
+/// Page numbering position.
+/// @type String
 $numbering-position: 'top-outside' !default;
-//$numbering-position: 'top-center' !default;
-//$numbering-position: 'top-inside' !default;
-//$numbering-position: 'outside-top' !default;
-//$numbering-position: 'outside-middle' !default;
-//$numbering-position: 'outside-bottom' !default;
-//$numbering-position: 'bottom-outside-corner' !default;
-//$numbering-position: 'bottom-outside' !default;
-//$numbering-position: 'bottom-center' !default;
-//$numbering-position: 'bottom-inside' !default;
+// $numbering-position: 'top-outside-corner' !default;
+// $numbering-position: 'top-center' !default;
+// $numbering-position: 'top-inside' !default;
+// $numbering-position: 'outside-top' !default;
+// $numbering-position: 'outside-middle' !default;
+// $numbering-position: 'outside-bottom' !default;
+// $numbering-position: 'bottom-outside-corner' !default;
+// $numbering-position: 'bottom-outside' !default;
+// $numbering-position: 'bottom-center' !default;
+// $numbering-position: 'bottom-inside' !default;
 
+/// First page numbering position.
+/// @type Null | String
 $first-numbering-position: null !default;
 // $first-numbering-position: 'top-center' !default;
 // $first-numbering-position: 'bottom-center' !default;
 // TODO: Handle other positions based on recto-verso
 
-// Next, running content position options (choose one!)
-
+/// Running content position.
+/// @type String
+$running-content-position: 'top-center' !default;
 //$running-content-position: 'top-outside-corner' !default;
 //$running-content-position: 'top-outside' !default;
-$running-content-position: 'top-center' !default;
 //$running-content-position: 'top-inside' !default;
 //$running-content-position: 'outside-top' !default;
 //$running-content-position: 'outside-middle' !default;

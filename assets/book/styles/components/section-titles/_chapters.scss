@@ -1,6 +1,6 @@
-//============================================================================//
-//                          Chapter Section Titles                            //
-//============================================================================//
+////
+/// @group section-titles
+////
 
 @import '../utilities';
 
@@ -64,10 +64,16 @@ h2 {
     content: $chapter-number-after-content;
   }
 
+  .numberless & {
+    .chapter-number::after {
+      content: '';
+    }
+  }
+
   .chapter-title {
     display: $chapter-title-display;
-    margin-top: $chapter-title-margin-top;
-    margin-bottom: if-map-get($chapter-title-margin-bottom, $type);
+    margin-top: if-map-get($chapter-title-margin-top, $type);
+    margin-bottom: 0;
     font-family: $chapter-title-font-family;
     font-size: if-map-get($section-title-font-size, $type);
     font-style: $chapter-title-font-style;
@@ -78,25 +84,21 @@ h2 {
   }
 }
 
-.numberless .chapter-title-wrap .chapter-number::after {
-  content: '';
+// Any element immediately following chapter title
+.chapter-title + * {
+  margin-top: if-map-get($section-title-margin-bottom, $type);
 }
 
-// Subtitle (outside .chapter-title-wrap)
+// Subtitle
 h2.chapter-subtitle,
 h2.chapter_subtitle,
-[data-type='subtitle'] { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
+[data-type='subtitle'] {
+  & + * {
+    margin-top: if-map-get($section-subtitle-margin-bottom, $type);
+  }
+
   display: block;
-
-  @if $type == 'prince' {
-    margin-top: if-map-get($section-title-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-top: 1em;
-  }
-
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
+  margin-bottom: 0;
   font-family: $section-subtitle-font-family;
   font-size: if-map-get($section-subtitle-font-size, $type);
   font-style: $section-subtitle-font-style;
@@ -107,20 +109,12 @@ h2.chapter_subtitle,
   column-span: all;
 }
 
-// Author (outside .chapter-title-wrap)
-h2.chapter-author,
-h2.chapter_author,
+// Author
+* + h2.chapter-author,
+* + h2.chapter_author,
 [data-type='author'] { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
   display: block;
-
-  @if $type == 'prince' {
-    margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-bottom: if-map-get($section-author-margin-bottom, $type);
-  }
-
+  margin-bottom: if-map-get($section-author-margin-bottom, $type);
   font-family: $section-author-font-family;
   font-size: if-map-get($section-author-font-size, $type);
   font-style: $section-author-font-style;
@@ -130,31 +124,11 @@ h2.chapter_author,
   text-transform: $section-author-text-transform;
 }
 
-h2.chapter-subtitle + h2.chapter-author {
-  @if $type == 'prince' {
-    margin-top: if-map-get($section-subtitle-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-top: 0;
-  }
-}
-
-h2.chapter-title-wrap + h2.chapter-author,
-h2.chapter-author:first-child {
-  @if $type == 'prince' {
-    margin-top: if-map-get($section-title-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-top: 0;
-  }
-}
-
 // Aphorism (outside .chapter-title-wrap)
-blockquote.aphorism,
-.aphorism {
-  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
+.aphorism,
+blockquote.aphorism {
+  margin-top: if-map-get($aphorism-margin-top, $type);
+  margin-bottom: if-map-get($aphorism-margin-bottom, $type);
   font-family: $aphorism-font-family;
   font-size: if-map-get($aphorism-font-size, $type);
   line-height: if-map-get($body-line-height, $type);
@@ -168,39 +142,6 @@ blockquote.aphorism,
     &::before {
       content: '–';
     }
-  }
-}
-
-h2.chapter-author + blockquote.aphorism,
-h2.chapter-author + .aphorism {
-  @if $type == 'prince' {
-    margin-top: if-map-get($section-author-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-top: 0;
-  }
-}
-
-h2.chapter-subtitle + blockquote.aphorism,
-h2.chapter-subtitle + .aphorism {
-  @if $type == 'prince' {
-    margin-top: if-map-get($section-subtitle-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-top: 0;
-  }
-}
-
-.chapter-title-wrap + blockquote.aphorism,
-.aphorism:first-child {
-  @if $type == 'prince' {
-    margin-top: if-map-get($section-title-margin-bottom, $type) - if-map-get($section-title-block-margin-bottom, $type);
-  }
-
-  @else if $type == 'epub' {
-    margin-top: 0;
   }
 }
 

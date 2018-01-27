@@ -1,3 +1,7 @@
+////
+/// @group toc
+////
+
 @if $type == 'epub' {
   @import 'left-epub';
   @import 'mobi';
