@@ -64,7 +64,7 @@ $right-page-number: (
   @include runninghead('right', convert-position('right', $running-content-position));
 }
 
-@elseif head-or-foot($running-content-position) == 'foot' {
+@else if head-or-foot($running-content-position) == 'foot' {
   @include runningfoot('left', convert-position('left', $running-content-position));
   @include runningfoot('right', convert-position('right', $running-content-position));
 }

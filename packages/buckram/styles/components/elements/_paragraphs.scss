@@ -162,6 +162,10 @@
       text-align: if-map-get($para-align, $type);
       widows: $widows;
       orphans: $orphans;
+      hyphens: $para-hyphens;
+      hyphenate-before: $para-hyphenate-before;
+      hyphenate-after: $para-hyphenate-after;
+      hyphenate-lines: $para-hyphenate-lines;
     }
 
     p + p,
@@ -181,13 +185,6 @@
     hyphenate-before: $para-hyphenate-before;
     hyphenate-after: $para-hyphenate-after;
     hyphenate-lines: $para-hyphenate-lines;
-
-    p {
-      hyphens: $para-hyphens;
-      hyphenate-before: $para-hyphenate-before;
-      hyphenate-after: $para-hyphenate-after;
-      hyphenate-lines: $para-hyphenate-lines;
-    }
 
     .dedication p,
     .epigraph p {

@@ -17,28 +17,22 @@ h2 {
     hyphens: none;
     text-align: $chapter-title-align;
     text-transform: $section-title-text-transform;
-  }
-}
 
-h1,
-h2 {
-  &.entry-title span {
-    display: $chapter-number-display;
-    margin-bottom: if-map-get($chapter-number-margin-bottom, $type);
-    font-family: $chapter-number-font-family;
-    font-size: if-map-get($chapter-number-font-size, $type);
-    font-style: $chapter-number-font-style;
-    font-weight: $chapter-number-font-weight;
-    line-height: $chapter-number-line-height;
-    text-align: $chapter-number-align;
-    text-transform: $chapter-number-text-transform;
-  }
-}
+    span {
+      display: $chapter-number-display;
+      margin-bottom: if-map-get($chapter-number-margin-bottom, $type);
+      font-family: $chapter-number-font-family;
+      font-size: if-map-get($chapter-number-font-size, $type);
+      font-style: $chapter-number-font-style;
+      font-weight: $chapter-number-font-weight;
+      line-height: $chapter-number-line-height;
+      text-align: $chapter-number-align;
+      text-transform: $chapter-number-text-transform;
 
-h1,
-h2 {
-  &.entry-title span::after {
-    content: $chapter-number-after-content;
+      &::after {
+        content: $chapter-number-after-content;
+      }
+    }
   }
 }
 
@@ -198,8 +192,4 @@ blockquote.aphorism {
       content: '';
     }
   }
-}
-
-@if $type == 'web' {
-
 }

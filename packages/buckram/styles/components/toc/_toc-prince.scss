@@ -44,10 +44,6 @@
 
   // Spacing
 
-  .part {
-    margin-top: $toc-block-margin-top;
-  }
-
   .front-matter,
   .back-matter {
     margin-top: $toc-section-margin-top;
@@ -65,8 +61,8 @@
   }
 
   // Parts
-
   .part {
+    margin-top: $toc-block-margin-top;
     page-break-after: avoid;
   }
 
