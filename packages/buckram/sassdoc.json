@@ -1,0 +1,17 @@
+{
+  "dest": "docs",
+  "descriptionPath": "README.md",
+  "groups": {
+    "accessibility": "Acessibility",
+    "elements": "Elements",
+    "editor": "Editor Styles",
+    "media": "Media",
+    "pages": "Pages",
+    "section-titles": "Section Headers",
+    "specials": "Special Elements",
+    "structure": "Page Structure",
+    "toc": "Table of Contents",
+    "utilities": "Utilities"
+  },
+  "googleAnalytics": "UA-108691726-5"
+}

@@ -1,6 +1,6 @@
-//============================================================================//
-//                      Variables | Section Titles                            //
-//============================================================================//
+////
+/// @group section-titles
+////
 
 // $section-title-block margins control the vertical spacing of the section
 // title, subtitle, author and aphorism with respect to the top of the page and
@@ -28,24 +28,37 @@
 // SECTIONS TITLES
 // default styling for front matter, chapter, back matter
 
-// Section title wrap
 
+// Section Header
+/// Defines spacing between section header and top border of page content area.
+/// @type String
 $section-title-block-margin-top:(
   epub: 3em,
   prince: 3cm,
   web: 3em
 ) !default;
+/// Defines spacing between section header and content.
+/// @type String
 $section-title-block-margin-bottom:(
   epub: 2em,
   prince: 2cm,
   web: 2em
 ) !default;
+/// Left margin for section header element.
+/// @type String
 $section-title-block-margin-left: 0 !default;
+/// Right margin for section header element.
+/// @type String
 $section-title-block-margin-right: 0 !default;
-
-// Section title
-
-$section-title-margin-top: 0;
+/// Defines spacing between section title and the bottom border of the section header.
+/// @type String
+$section-title-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+/// Defines spacing between section title and any subsequent element in the section header.
+/// @type String
 $section-title-margin-bottom:(
   epub: 2em,
   prince: 1.5cm,
@@ -62,8 +75,8 @@ $section-title-font-weight: normal !default;
 $section-title-align: center !default;
 $section-title-text-transform: none !default;
 
-// Section subtitle
-
+/// Defines spacing between section subtitle and any subsequent element in the section header.
+/// @type String
 $section-subtitle-margin-bottom: (
   epub: 0.5em,
   prince: 0.375cm,
@@ -76,12 +89,12 @@ $section-subtitle-font-weight: normal !default;
 $section-subtitle-align: center !default;
 $section-subtitle-text-transform: none !default;
 
-// Section author
-
+/// Defines spacing between section author and the bottom border of the section header.
+/// @type String
 $section-author-margin-bottom: (
-  epub: 0.5em,
-  prince: 0.375cm,
-  web: 0.5em
+  epub: 0,
+  prince: 0,
+  web: 0
 ) !default;
 $section-author-font-family: $font-2 !default;
 $section-author-font-size: 1em !default;
@@ -90,11 +103,23 @@ $section-author-font-weight: normal !default;
 $section-author-align: center !default;
 $section-author-text-transform: uppercase !default;
 
-// Section Aphorism
-
+/// Aphorism top margin
+/// @type Map | String
+$aphorism-margin-top: 0 !default;
+/// Aphorism bottom margin
+/// @type Map | String
+$aphorism-margin-bottom: 0 !default;
+/// Aphorism font family
+/// @type String
 $aphorism-font-family: $body-font-family !default;
+/// Aphorism font size
+/// @type String
 $aphorism-font-size: 0.9em; // TODO
+/// Aphorism text alignment
+/// @type String
 $aphorism-align: left !default;
+/// Aphorism `<cite>` font size.
+/// @type String
 $aphorism-cite-font-size: 0.9em !default;
 
 // PARTS
