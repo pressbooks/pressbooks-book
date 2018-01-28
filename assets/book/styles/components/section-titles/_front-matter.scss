@@ -4,40 +4,84 @@
 
 @import '../utilities';
 
-.front-matter-title-wrap {
-  margin: if-map-get($section-title-block-margin-top, $type)  $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
+@if $type != 'web' {
+  .front-matter-title-wrap {
+    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
-  .front-matter-number {
-    display: none;
-    visibility: hidden;
+    .front-matter-number {
+      display: none;
+    }
+
+    h1.front-matter-title {
+      display: block;
+      margin-top: if-map-get($front-matter-title-margin-top, $type);
+      margin-bottom: 0;
+      font-family: $front-matter-title-font-family;
+      font-size: if-map-get($front-matter-title-font-size, $type);
+      font-style: $front-matter-title-font-style;
+      font-weight: $front-matter-title-font-weight;
+      hyphens: none;
+      text-align: $front-matter-title-align;
+      text-transform: $front-matter-title-text-transform;
+    }
+
+    h2.chapter-subtitle {
+      display: block;
+      margin-bottom: 0;
+      font-family: $section-subtitle-font-family;
+      font-size: if-map-get($section-subtitle-font-size, $type);
+      font-style: $section-subtitle-font-style;
+      font-weight: $section-subtitle-font-weight;
+      hyphens: none;
+      text-align: $section-subtitle-align;
+      text-transform: $section-subtitle-text-transform;
+      column-span: all;
+    }
+
+    h2.chapter-author {
+      display: block;
+      margin-bottom: if-map-get($section-author-margin-bottom, $type);
+      font-family: $section-author-font-family;
+      font-size: if-map-get($section-author-font-size, $type);
+      font-style: $section-author-font-style;
+      font-weight: $section-author-font-weight;
+      hyphens: none;
+      text-align: $section-author-align;
+      text-transform: $section-author-text-transform;
+    }
+
+    h1.front-matter-title + h2.chapter-subtitle {
+      margin-top: if-map-get($section-title-subtitle-spacing, $type);
+    }
+
+    h1.front-matter-title + h2.chapter-author {
+      margin-top: if-map-get($section-title-author-spacing, $type);
+    }
+
+    h2.chapter-subtitle + h2.chapter-author {
+      margin-top: if-map-get($section-subtitle-author-spacing, $type);
+    }
+
+    h1.front-matter-title:last-child {
+      margin-bottom: if-map-get($front-matter-title-margin-bottom, $type);
+    }
+
+    h2.chapter-subtitle:last-child {
+      margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+    }
   }
 
-  .front-matter-title {
+  #toc h1 {
     display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: $front-matter-title-font-family;
-    font-size: if-map-get($section-title-font-size, $type);
-    font-style: $front-matter-title-font-style;
-    font-weight: $front-matter-title-font-weight;
+    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+    font-family: $toc-title-font-family;
+    font-size: if-map-get($toc-title-font-size, $type);
+    font-style: $toc-title-font-style;
+    font-weight: $toc-title-font-weight;
     hyphens: none;
-    text-align: $front-matter-title-align;
-    text-transform: $front-matter-title-text-transform;
+    text-align: $toc-title-align;
+    text-transform: $toc-title-text-transform;
   }
-}
-
-// New TOC title
-
-#toc h1 {
-  display: block;
-  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
-  font-family: $toc-title-font-family;
-  font-size: if-map-get($toc-title-font-size, $type);
-  font-style: $toc-title-font-style;
-  font-weight: $toc-title-font-weight;
-  hyphens: none;
-  text-align: $toc-title-align;
-  text-transform: $toc-title-text-transform;
 }
 
 @if $type == 'epub' {

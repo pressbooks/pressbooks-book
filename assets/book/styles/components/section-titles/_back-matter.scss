@@ -4,31 +4,77 @@
 
 @import '../utilities';
 
-.back-matter-title-wrap {
-  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
+@if $type != 'web' {
+  .back-matter-title-wrap {
+    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
-  .back-matter-number {
-    display: none;
-    visibility: hidden;
-  }
+    .back-matter-number {
+      display: none;
+    }
 
-  .back-matter-title {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: $back-matter-title-font-family;
-    font-size: if-map-get($section-title-font-size, $type);
-    font-style: $section-title-font-style;
-    font-weight: $section-title-font-weight;
-    hyphens: none;
-    text-align: $back-matter-title-align;
-    text-transform: $section-title-text-transform;
+    h1.back-matter-title {
+      display: block;
+      margin-top: if-map-get($back-matter-title-margin-top, $type);
+      margin-bottom: 0;
+      font-family: $back-matter-title-font-family;
+      font-size: if-map-get($back-matter-title-font-size, $type);
+      font-style: $back-matter-title-font-style;
+      font-weight: $back-matter-title-font-weight;
+      hyphens: none;
+      text-align: $back-matter-title-align;
+      text-transform: $back-matter-title-text-transform;
+    }
+
+    h2.chapter-subtitle {
+      display: block;
+      margin-bottom: 0;
+      font-family: $section-subtitle-font-family;
+      font-size: if-map-get($section-subtitle-font-size, $type);
+      font-style: $section-subtitle-font-style;
+      font-weight: $section-subtitle-font-weight;
+      hyphens: none;
+      text-align: $section-subtitle-align;
+      text-transform: $section-subtitle-text-transform;
+      column-span: all;
+    }
+
+    h2.chapter-author {
+      display: block;
+      margin-bottom: if-map-get($section-author-margin-bottom, $type);
+      font-family: $section-author-font-family;
+      font-size: if-map-get($section-author-font-size, $type);
+      font-style: $section-author-font-style;
+      font-weight: $section-author-font-weight;
+      hyphens: none;
+      text-align: $section-author-align;
+      text-transform: $section-author-text-transform;
+    }
+
+    h1.back-matter-title + h2.chapter-subtitle {
+      margin-top: if-map-get($section-title-subtitle-spacing, $type);
+    }
+
+    h1.back-matter-title + h2.chapter-author {
+      margin-top: if-map-get($section-title-author-spacing, $type);
+    }
+
+    h2.chapter-subtitle + h2.chapter-author {
+      margin-top: if-map-get($section-subtitle-author-spacing, $type);
+    }
+
+    h1.back-matter-title:last-child {
+      margin-bottom: if-map-get($back-matter-title-margin-bottom, $type);
+    }
+
+    h2.chapter-subtitle:last-child {
+      margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+    }
   }
 }
 
 @if $type == 'epub' {
   @media amzn-mobi {
-    h1.back-matter-title {
+    h2.back-matter-title {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.3em;
