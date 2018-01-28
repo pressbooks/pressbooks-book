@@ -43,7 +43,7 @@ if ( $output !== false ) {
 				</div>
 			</li>
 		<?php if ( ! empty( $part['chapters'] ) || $part['has_post_content'] ) { $n++;
-	} endforeach; ?>
+} endforeach; ?>
 		<li>
 			<ul class="toc__back-matter">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
