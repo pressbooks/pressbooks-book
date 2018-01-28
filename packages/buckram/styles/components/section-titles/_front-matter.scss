@@ -73,7 +73,8 @@
 
   #toc h1 {
     display: block;
-    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+    margin-top: if-map-get($toc-title-margin-top, $type);
+    margin-bottom: if-map-get($toc-title-margin-bottom, $type);
     font-family: $toc-title-font-family;
     font-size: if-map-get($toc-title-font-size, $type);
     font-style: $toc-title-font-style;
