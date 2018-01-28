@@ -485,12 +485,12 @@ $toc-title-display: $section-title-display !default;
 /// Defines the table of contents title top margin.
 /// @type String | Map
 /// @since 0.3.0
-$toc-title-margin-top: $front-matter-title-margin-top !default;
+$toc-title-margin-top: $section-header-margin-top !default;
 
 /// Defines the table of contents title bottom margin.
 /// @type String | Map
 /// @since 0.3.0
-$toc-title-margin-top: $front-matter-title-margin-bottom !default;
+$toc-title-margin-bottom: $section-header-margin-bottom !default;
 
 /// Defines the table of contents title font family.
 /// @type String
