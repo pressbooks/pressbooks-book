@@ -1,9 +1,10 @@
-//============================================================================//
-//                           VARIABLES | SPECIAL PAGES                        //
-//============================================================================//
+////
+/// @group pages
+////
 
 // HALF TITLE PAGE
-
+/// Half Title page display.
+/// @type String
 $title-half-title-display:(
   epub: none,
   prince: initial,

@@ -6,5 +6,5 @@
 			<button class="button button--secondary block-toc__toggle-all__hide js-toc-toggle-all-hide"><?php _e( 'View less', 'pressbooks-book' ); ?></button>
 		</div>
 		<?php } ?>
-		<?php include( locate_template( 'content-toc.php' ) ); ?>
+		<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 </section>

@@ -1,6 +1,6 @@
-//============================================================================//
-//                           Variables | Specials                             //
-//============================================================================//
+////
+/// @group specials
+////
 
 // Columns
 $column-margin-top: 1em !default;
@@ -70,6 +70,8 @@ $aside-border-bottom: 1px solid !default; // TODO
 $aside-border-left: 0 !default;
 
 // Pullquotes
+/// Pullquote font family.
+/// @type String
 $pullquote-font-family: $font-3 !default;
 $pullquote-font-size: 1.25em !default;
 $pullquote-font-style: normal !default;

@@ -8,12 +8,15 @@ use Pressbooks\Container;
 use PressbooksMix\Assets;
 
 $includes = [
+	'actions',
 	'helpers',
 ];
 
 foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
+
+add_action( 'pb_delete_cache', '\Pressbooks\Book\Actions\delete_cached_contents' );
 
 // Turn off admin bar
 add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
@@ -80,9 +83,7 @@ function pb_enqueue_assets() {
 
 	if ( ! is_front_page() ) {
 
-		if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
-			wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), false, get_option( 'pressbooks_last_custom_css' ), 'screen' );
-		} else {
+		if ( ! pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 			$styles = Container::get( 'Styles' );
 			if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
 				$sass = Container::get( 'Sass' );
