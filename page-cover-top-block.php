@@ -100,22 +100,4 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 	if ( ! empty( $book_information['pb_about_50'] ) ) { ?>
 				<p class="book-header__description"><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 			<?php } ?>
-
-			<?php $source_url = \Pressbooks\Book\Helpers\get_source_book( home_url() );
-			if ( $source_url !== home_url() ) { ?>
-				<p class="source-book">
-				<?php $source_book = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' )['body'], true );
-				$authors = [];
-				foreach ( $source_book['author'] as $author ) {
-					$authors[] = $author['name'];
-				};
-				printf(
-					__( 'This book is a cloned version of %1$s by %2$s, published using Pressbooks%3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
-					sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_book['name'] ),
-					\Pressbooks\Utility\oxford_comma( $authors ),
-					( isset( $source_book['publisher'] ) ) ? $source_book['publisher']['name'] : '',
-					sprintf( '<a href="%1$s">%2$s</a>', $source_book['license']['url'], $source_book['license']['name'] )
-				); ?>
-				</p>
-			<?php } ?>
 </section>

@@ -2,6 +2,28 @@
 	<h2 class="block__title block-info__title"><?php _e( 'Book Information', 'pressbooks-book' ); ?></h2>
 	<div class="block-info__inner block-toggle__content">
 		<div class="block-info__inner__content">
+			<?php $source_url = \Pressbooks\Book\Helpers\get_source_book( home_url() );
+			if ( $source_url !== home_url() ) { ?>
+				<p class="source-book">
+				<?php
+				$args = [];
+				if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
+					$args['sslverify'] = false;
+				}
+				$source_book = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/', $args )['body'], true );
+				$authors = [];
+				foreach ( $source_book['author'] as $author ) {
+					$authors[] = $author['name'];
+				};
+				printf(
+					__( 'This book is a cloned version of %1$s by %2$s, published using Pressbooks%3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
+					sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_book['name'] ),
+					\Pressbooks\Utility\oxford_comma( $authors ),
+					( isset( $source_book['publisher'] ) ) ? $source_book['publisher']['name'] : '',
+					sprintf( '<a href="%1$s">%2$s</a>', $source_book['license']['url'], $source_book['license']['name'] )
+				); ?>
+				</p>
+			<?php } ?>
 			<div class="block-info__subsection block-info__description">
 				<h3 class="block__subtitle"><?php _e( 'Book Description', 'pressbooks-book' ); ?></h3>
 					<?php if ( ! empty( $book_information['pb_about_unlimited'] ) ) : ?>

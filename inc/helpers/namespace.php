@@ -176,7 +176,11 @@ function display_menu() {
  */
 function get_source_book( $book_url, $checked = [] ) {
 	$output = $book_url;
-	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/' );
+	$args = [];
+	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
+		$args['sslverify'] = false;
+	}
+	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
 	$result = json_decode( $response['body'], true );
 	if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
 		$checked[] = $result['isBasedOn'];
