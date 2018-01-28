@@ -7,6 +7,9 @@
 //============================================================================//
 @import '../utilities';
 
+@import 'lists-ordered-harvard';
+@import 'lists-ordered-legal';
+
 @if $type != 'web' {
   ol {
     margin-top: $ol-margin-top;
@@ -41,9 +44,6 @@
   ol.lower-roman {
     list-style-type: lower-roman;
   }
-
-  @import 'lists-ordered-harvard';
-  @import 'lists-ordered-legal';
 
   // Definition Lists
 
@@ -101,9 +101,6 @@
     ol.lower-roman {
       list-style-type: lower-roman;
     }
-
-    @import 'lists-ordered-harvard';
-    @import 'lists-ordered-legal';
 
     // Definition Lists
 

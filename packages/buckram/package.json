@@ -1,9 +1,11 @@
 {
   "name": "buckram",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && npm run build",
+    "build":
+      "cross-env webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint": "npm run lint:styles",
     "lint:styles": "node_modules/stylelint/bin/stylelint.js '**/*.scss'",
     "docs": "node_modules/sassdoc/bin/sassdoc styles --config sassdoc.json"
