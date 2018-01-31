@@ -19,7 +19,6 @@ mix
 	.js( 'assets/scripts/book.js', 'dist/scripts/book.js' )
 	.sass( 'assets/styles/book.scss', 'dist/styles' )
 	.copyDirectory( 'node_modules/buckram/styles', 'assets/book/styles' )
-	.copyDirectory( 'assets/fonts', 'dist/fonts' )
 	.copyDirectory( 'assets/images', 'dist/images' )
 	.version()
 	.options( { processCssUrls: false } );
