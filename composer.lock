@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e51b36e9b28da492eddfc07c949db21",
+    "content-hash": "64d3023d329b91c7eb495a515532ba83",
     "packages": [
         {
             "name": "composer/installers",
@@ -157,6 +157,55 @@
                 }
             ],
             "time": "2017-09-06T21:35:04+00:00"
+        },
+        {
+            "name": "soberwp/intervention",
+            "version": "1.2.0-p",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soberwp/intervention.git",
+                "reference": "1698e51efe696c5867fb78ef7c5d2efff9b79260"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soberwp/intervention/zipball/1698e51efe696c5867fb78ef7c5d2efff9b79260",
+                "reference": "1698e51efe696c5867fb78ef7c5d2efff9b79260",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Sober\\Intervention\\": "src/",
+                    "Sober\\Intervention\\Module\\": "src/modules/"
+                },
+                "files": [
+                    "intervention.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darren Jacoby",
+                    "email": "darren@jacoby.co.za",
+                    "homepage": "https://twitter.com/withjacoby"
+                }
+            ],
+            "description": "WordPress plugin containing modules to cleanup and customize wp-admin.",
+            "homepage": "https://github.com/soberwp",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-08-26T12:21:27+00:00"
         }
     ],
     "packages-dev": [
@@ -678,6 +727,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7"
+    },
     "platform-dev": []
 }

@@ -15,6 +15,7 @@ $includes = [
 foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
+require get_template_directory() . '/inc/intervention.php';
 
 add_action( 'pb_delete_cache', '\Pressbooks\Book\Actions\delete_cached_contents' );
 
