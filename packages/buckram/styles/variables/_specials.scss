@@ -3,179 +3,631 @@
 ////
 
 // Columns
+
+/// Top margin for elements with class `.twocolumn`.
+/// @type String
 $column-margin-top: 1em !default;
+
+/// Margin bottom for elements with class `.twocolumn`.
+/// @type String
 $column-margin-bottom: 1em !default;
+
+/// Line height for elements with class `.twocolumn`.
+/// @type String
 $column-line-height: 1.2em !default;
+
+/// Column gap for elements with class `.twocolumn`.
+/// @type String
 $column-twocolumn-column-gap: 1.5em !default;
+
+/// Font size for elements with class `.twocolumn`.
+/// @type String
 $column-twocolumn-font-size: 0.85em !default;
+
+/// Column gap for elements with class `.threecolumn`.
+/// @type String
 $column-threecolumn-column-gap: 1em !default;
+
+/// Font size for elements with class `.threecolumn`.
+/// @type String
 $column-threecolumn-font-size: 0.8em !default;
 
 // Dropcaps
+
+/// Font stack for elements with class `.first-character`.
+/// @type String
 $first-character-font-family: $font-2 !default;
+
+/// Font size for elements with class `.first-character`.
+/// @type String
 $first-character-font-size: 300% !default;
+
+/// Font style for elements with class `.first-character`.
+/// @type String
 $first-character-font-style: normal !default;
+
+/// Font weight for elements with class `.first-character`.
+/// @type String
 $first-character-font-weight: bold !default;
+
+/// Line height for elements with class `.first-character`.
+/// @type String
 $first-character-line-height: 0.7em !default;
 
 // Footnotes
+
+/// Margin top for footnote display.
+/// @type String
 $footnote-block-margin-top: 0.5em !default;
+
+/// Border top for footnote display.
+/// @type String
 $footnote-block-border-top: 0 !default;
+
+/// Top padding for footnote.
+/// @type String
 $footnote-padding-top: 1em !default;
+
+/// Padding left for footnote display.
+/// @type String
 $footnote-padding-left: 0 !default;
+
+/// Font size for footnote for elements with a class of `footnote`.
+/// @type String | map
 $footnote-font-size: (
   epub: 0.9em,
   prince: 0.8em,
   web: 0.9em
 ) !default;
+
+/// Font style for footnote.
+/// @type String 
 $footnote-font-style: normal !default;
+
+/// Font weight for footnote.
+/// @type String 
 $footnote-font-weight: normal !default;
+
+/// Line height for footnote.
+/// @type String 
 $footnote-line-height: 1.15em !default;
+
+/// Indentation for footnote for elements with a class of `footnote`.
+/// @type String 
 $footnote-indent: 0 !default;
+
+/// Top Margin for footnote blockquote for elements with a class of `fn-blockquote`.
+/// @type String 
 $footnote-blockquote-margin-top: 0.5em !default;
+
+/// Bottom Margin for footnote blockquote for elements with a class of `fn-blockquote`.
+/// @type String 
 $footnote-blockquote-margin-bottom: 0.5em !default;
+
+/// Left Margin for footnote blockquote for elements with a class of `fn-blockquote`.
+/// @type String 
 $footnote-blockquote-margin-left: 1.5em !default;
+
+/// Font-size Margin for footnote blockquote for elements with a class of `fn-blockquote`.
+/// @type String 
 $footnote-blockquote-font-size: 0.95em !default;
+
+
 $footnote-number-marker-font-size: $sup-sub-font-size !default;
 $footnote-number-marker-line-height: $sup-sub-line-height !default;
 
 // Endnotes
+
+/// Left margin for endnotes on elements with a class of `endnotes`.
+/// @type String
 $endnote-margin-left: 1.5em !default;
+
+/// Line height for endnotes on elements with a class of `endnotes`.
+/// @type String
 $endnote-line-height: 1.1em !default;
+
+/// Bottom padding for endnotes on `<h3>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-header-padding-bottom: 1em !default;
+
+/// Bottom margin for endnotes on `<h3>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-header-margin-bottom: 1em !default;
+
+/// Left margin for endnotes on `<h3>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-header-margin-left: -1.5em !default;
+
+/// Top margin for endnotes on `<hr>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-hr-margin-top: 2em !default;
+
+/// Border for endnotes on `<hr>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-hr-border: 0 !default;
+
+/// Top margin on ordered lists within endnotes on `<ol>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-ol-margin-top: 0.4em !default;
+
+/// Left margin on ordered lists within endnotes on `<ol>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-ol-margin-left: 0 !default;
+
+/// Font size on ordered lists within endnotes on `<ol>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-ol-font-size: 0.85em !default;
+
+/// Left padding on lists within endnotes on `<li>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-li-padding-left: 0 !default;
+
+/// Top margin on lists within endnotes on `<li>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-li-margin-top: 0.4em !default;
+
+/// Indentation on lists within endnotes on `<li>` elements that are children of elements with a class of `endnotes`.
+/// @type String
 $endnote-li-indent: 0 !default;
 
 // Asides
+
+/// Padding top for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-padding-top: 0.9em !default;
+
+/// Padding right for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-padding-right: 0 !default;
+
+/// Padding bottom for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-padding-bottom: 0.9em !default;
+
+/// Padding left for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-padding-left: 0 !default;
+
+/// Margin top for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-margin-top: 2em !default;
+
+/// Right margin for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-margin-right: 10% !default;
+
+/// Bottom margin for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-margin-bottom: 2em !default;
+
+/// Left margin for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-margin-left: 10% !default;
+
+/// Line height for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-line-height: 1.2em !default;
+
+/// Top border for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-border-top: 1px solid !default; // TODO
+
+/// Border right for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-border-right: 0 !default;
+
+/// Bottom border for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-border-bottom: 1px solid !default; // TODO
+
+/// Left border for asides on `<aside>` elements and elements with a class of `aside`.
+/// @type String
 $aside-border-left: 0 !default;
 
 // Pullquotes
 /// Pullquote font family.
 /// @type String
+
+/// Font stack for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-font-family: $font-3 !default;
+
+/// Font size for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-font-size: 1.25em !default;
+
+/// Font style for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-font-style: normal !default;
+
+/// Font weight for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-font-weight: bold !default;
+
+/// Line height for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-line-height: 1.2em !default;
+
+/// Text transformation for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-text-transform: none !default;
+
+/// Alignment for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
 $pullquote-align: center !default;
+
+/// Top margin for pullquotes on elements with a class of `pullquote`.
+/// @type String
 $pullquote-margin-top: 1em !default;
+
+/// Bottom margin for pullquotes on elements with a class of `pullquote`.
+/// @type String
 $pullquote-margin-bottom: 1em !default;
+
+/// Left width for left pullquotes on elements with a class of `pullquote-left`.
+/// @type String
 $pullquote-left-width: 45% !default;
+
+/// Right margin for left pullquotes on elements with a class of `pullquote-left`.
+/// @type String
 $pullquote-left-margin-right: 1em !default;
+
+/// Left margin for left pullquotes on elements with a class of `pullquote-left`.
+/// @type String
 $pullquote-left-margin-left: 1em !default;
+
+/// Width for right pullquotes on elements with a class of `pullquote-right`.
+/// @type String
 $pullquote-right-width: 45% !default;
+
+/// Right margin for right pullquotes on elements with a class of `pullquote-right`.
+/// @type String
 $pullquote-right-margin-right: 1em !default;
+
+/// Left margin for right pullquotes on elements with a class of `pullquote-right`.
+/// @type String
 $pullquote-right-margin-left: 1em !default;
 
 // Sidebars
+
+/// Width for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-width: 35% !default;
+
+/// Top padding for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-padding-top: 1em !default;
+
+/// Right padding for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-padding-right: 1em !default;
+
+/// Bottom padding for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-padding-bottom: 1em !default;
+
+/// Left padding for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-padding-left: 1em !default;
+
+/// Top margin for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-margin-top: 0.5em !default;
+
+/// Right margin for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-margin-right: 0 !default;
+
+/// Left margin for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-margin-left: 1em !default;
+
+/// Font size for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-font-size: 0.9em !default;
+
+/// Font style for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-font-style: italic !default;
+
+/// Font weight for Sidebar on elements with a class of `sidebar`.
+/// @type String
 $sidebar-font-weight: normal !default;
+
+/// Alignment for Sidebar on `<p>` elements that are children of elements with a class of `sidebar`.
+/// @type String
 $sidebar-align: left !default;
 
+
 // Separators
+
+/// Seperator width on `<hr>` elements.
+/// @type String
 $hr-width: 20% !default;
+
+/// Seperator Top margin on `<hr>` elements.
+/// @type String
 $hr-margin-top: 0.9em !default;
+
+/// Seperator Bottom margin on `<hr>` elements.
+/// @type String
 $hr-margin-bottom: 0.9em !default;
+
+/// Seperator border style on `<hr>` elements.
+/// @type String
 $hr-border-style: solid !default;
+
+/// Seperator border width on `<hr>` elements.
+/// @type String
 $hr-border-width: 1px !default;
+
+/// Seperator border color on `<hr>` elements.
+/// @type String | Map 
 $hr-border-color: if-map-get($color-1, $type) !default;
+
+/// Bottom margin on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String
 $hr-break-symbols-margin-bottom: 1.66em !default;
+
+/// Font size on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String
 $hr-break-symbols-font-size: 1.1em !default;
+
+/// Content on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String
 $hr-break-symbols-content: '\066D' !default;
+
+/// Top margin on section break on elements with a class of `.section-break`.
+/// @type String
 $section-break-margin-top: 1em !default;
+
+/// Bottom margin on section break on elements with a class of `.section-break`.
+/// @type String
 $section-break-margin-bottom: 1em !default;
+
+/// Top margin on section break space on elements with a class of `.section-break-space`.
+/// @type String
 $section-break-space-margin-top: 1em !default;
+
+/// Bottom margin on section break space on elements with a class of `.section-break-space`.
+/// @type String
 $section-break-space-margin-bottom: 0 !default;
+
+/// Line height on section break space on elements with a class of `.section-break-space`.
+/// @type String
 $section-break-space-line-height: 1em !default;
+
+/// Top margin on section break page on elements with a class of `.section-break-page`.
+/// @type String
 $section-break-page-margin-top: 1em !default;
+
+/// Bottom margin on section break page on elements with a class of `.section-break-page`.
+/// @type String
 $section-break-page-margin-bottom: 1em !default;
+
+/// Invisible top margin on section break page on elements with a class of `.section-break-page-invisible`.
+/// @type String
 $section-break-page-invisible-margin-top: 1em !default;
+
+/// Invisible bottom margin on section break page on elements with a class of `.section-break-page-invisible`.
+/// @type String
 $section-break-page-invisible-margin-bottom: 1em !default;
 
 // Textboxes
+
+/// Textbox font stack on elements with a class of `textbox`.
+/// @type String
 $textbox-font-family: $font-1 !default;
+
+/// Textbox font size on elements with a class of `textbox`.
+/// @type String
 $textbox-font-size: 0.9em !default;
+
+/// Textbox font style on elements with a class of `textbox`.
+/// @type String
 $textbox-font-style: normal !default;
+
+/// Textbox font weight on elements with a class of `textbox`.
+/// @type String
 $textbox-font-weight: normal !default;
+
+/// Textbox line height on elements with a class of `textbox`.
+/// @type String
 $textbox-line-height: 1.2em !default;
+
+/// Alignment on elements with a class of `textbox`.
+/// @type String
 $textbox-text-align: left !default;
+
+/// Textbox background color on elements with a class of `textbox`.
+/// @type String
 $textbox-background-color: initial !default;
+
+/// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
+/// @type String
 $textbox-shaded-background-color: #eee !default;
+
+/// Textbox top padding on elements with a class of `textbox`.
+/// @type String
 $textbox-padding-top: 2.5em !default;
+
+/// Textbox right padding on elements with a class of `textbox`.
+/// @type String
 $textbox-padding-right: 2.5em !default;
+
+/// Textbox bottom padding on elements with a class of `textbox`.
+/// @type String
 $textbox-padding-bottom: 2.5em !default;
+
+/// Textbox left padding on elements with a class of `textbox`.
+/// @type String
 $textbox-padding-left: 2.5em !default;
+
+/// Textbox top margin on elements with a class of `textbox`.
+/// @type String
 $textbox-margin-top: 0.9em !default;
+
+/// Textbox margin right on elements with a class of `textbox`.
+/// @type String
 $textbox-margin-right: 0 !default;
+
+/// Textbox bottom margin on elements with a class of `textbox`.
+/// @type String
 $textbox-margin-bottom: 0.9em !default;
+
+/// Textbox left margin on elements with a class of `textbox`.
+/// @type String
 $textbox-margin-left: 0 !default;
+
+/// Textbox border style on elements with a class of `textbox`.
+/// @type String
 $textbox-border-style: solid !default;
+
+/// Textbox border color on elements with a class of `textbox`.
+/// @type String
 $textbox-border-color: #000 !default;
+
+/// Textbox border width on elements with a class of `textbox`.
+/// @type String
 $textbox-border-width: 0.05em !default; // TODO
+
+/// Textbox border radius on elements with a class of `textbox`.
+/// @type String
 $textbox-border-radius: 0 !default;
+
+/// Textbox paragraph top margin on `<p>` elements that are children of elements with a class of `textbox`.
+/// @type String
 $textbox-para-margin-top: 0 !default;
+
+/// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
+/// @type String
 $textbox-para-margin-bottom: 0.5em !default;
+
+/// Textbox paragraph font stack on `<p>` elements that are children of elements with a class of `textbox`.
+/// @type String
 $textbox-caption-font-family: $font-2 !default;
+
+/// Textbox caption font size on elements with a class of `.textbox-caption` that are children of elements with a class of `textbox`.
+/// @type String
 $textbox-caption-font-size: 0.875em !default;
+
+/// Textbox caption font style on elements with a class of `.textbox-caption` that are children of elements with a class of `textbox`.
+/// @type String
 $textbox-caption-font-style: normal !default;
+
+/// Textbox caption font weight on elements with a class of `.textbox-caption` that are children of elements with a class of `textbox`.
+/// @type String
 $textbox-caption-font-weight: bold !default;
 
 // Educational Textboxes
+
+/// Educational Textbox border style.
+/// @type String
 $edu-textbox-border-style: solid !default;
+
+/// Educational Textbox border radius.
+/// @type String
 $edu-textbox-border-radius: 0.35em !default;
+
+/// Educational Textbox top padding.
+/// @type String
 $edu-textbox-padding-top: 1em !default;
+
+/// Educational Textbox right padding.
+/// @type String
 $edu-textbox-padding-right: 1em !default;
+
+/// Educational Textbox bottom padding.
+/// @type String
 $edu-textbox-padding-bottom: 1em !default;
+
+/// Educational Textbox left padding.
+/// @type String
 $edu-textbox-padding-left: 1em !default;
+
+/// Educational Textbox bottom margin.
+/// @type String
 $edu-textbox-margin-bottom: 1.35em !default;
+
+/// Educational Textbox header top padding.
+/// @type String
 $edu-header-padding-top: 1.35em !default;
+
+/// Educational Textbox header right padding.
+/// @type String
 $edu-header-padding-right: 0 !default;
+
+/// Educational Textbox header bottom padding.
+/// @type String
 $edu-header-padding-bottom: 1.35em !default;
+
+/// Educational Textbox header left padding.
+/// @type String
 $edu-header-padding-left: 0 !default;
+
+/// Educational Textbox header top margin.
+/// @type String
 $edu-header-margin-top: -1.2em !default;
+
+/// Educational Textbox header right margin.
+/// @type String
 $edu-header-margin-right: -1.2em !default;
+
+/// Educational Textbox header bottom margin. 
+/// @type String
 $edu-header-margin-bottom: 1.35em !default;
+
+/// Educational Textbox header left margin.
+/// @type String
 $edu-header-margin-left: -1.2em !default;
+
+/// Educational Textbox header text color.
+/// @type String
 $edu-header-text-color: #fff !default;
+
+/// Educational Textbox header font size.
+/// @type String
 $edu-header-font-size: 0.9em !default;
+
+/// Educational Textbox header font style.
 $edu-header-font-style: normal !default;
+
+/// Educational Textbox header font weight. 
+/// @type String
 $edu-header-font-weight: bold !default;
+
+/// Educational Textbox header text align.
+/// @type String
 $edu-header-text-align: center !default;
+
+/// Educational Textbox learning objectives background color.
+/// @type String
 $learning-objectives-background: #f7f7f9 !default;
+
+/// Educational Textbox learning objectives header background color.
+/// @type String
 $learning-objectives-header-background: #111 !default;
+
+/// Educational Textbox key takeaways background color.
+/// @type String
 $key-takeaways-background: #eaf5ea !default;
+
+/// Educational Textbox learning objectives header background color.
+/// @type String
 $key-takeaways-header-background: #3a7a33 !default;
+
+/// Educational Textbox exercises background color.
+/// @type String
 $exercises-background: #e3eff6 !default;
+
+/// Educational Textbox exercises header background color.
+/// @type String
 $exercises-header-background: #0b6396 !default;
+
+/// Educational Textbox examples background color.
+/// @type String
 $examples-background: #f3e1e3 !default;
+
+/// Educational Textbox examples header background color.
+/// @type String
 $examples-header-background: #7a333a !default;
