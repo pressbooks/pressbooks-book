@@ -3,6 +3,7 @@
   "descriptionPath": "README.md",
   "groups": {
     "accessibility": "Acessibility",
+    "colors": "Colors",
     "elements": "Elements",
     "editor": "Editor Styles",
     "media": "Media",
