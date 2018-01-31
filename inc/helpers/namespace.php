@@ -113,9 +113,8 @@ function license_to_text( $license ) {
 
 function share_icons() {
 	$output = '';
-	$output .= '<a class="icon icon-twitter sharer" data-sharer="twitter" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '" data-via="pressbooks"></a>';
-	$output .= '<a class="icon icon-facebook sharer" data-sharer="facebook" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
-	$output .= '<a class="icon icon-google-plus sharer" data-sharer="googleplus" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
+	$output .= '<a class="sharer" data-sharer="twitter" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '" data-via="pressbooks"><svg class="icon--svg"><use xlink:href="#twitter" /></svg></a>';
+	$output .= '<a class="sharer" data-sharer="facebook" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"><svg class="icon--svg"><use xlink:href="#facebook" /></svg></a>';
 	return $output;
 }
 
