@@ -22,7 +22,6 @@ $body-font-weight: normal !default;
 /// @type String | Map
 $body-line-height: (epub: 1.4em, prince: 1.4em, web: 1.8em) !default;
 
-// Headings
 /// Top margin for all heading elements.
 /// @type String
 $hx-margin-top: 1.5em !default;
@@ -35,7 +34,6 @@ $hx-margin-bottom: 1em !default;
 /// @type String
 $hx-line-height: 1.5em !default;
 
-// Heading 1
 /// Top margin for `<h1>` elements.
 /// @type String
 $h1-margin-top: $hx-margin-top !default;
@@ -72,7 +70,6 @@ $h1-text-transform: uppercase !default;
 /// @type String
 $h1-align: center !default;
 
-// Heading 2
 /// Top margin for `<h2>` elements.
 /// @type String
 $h2-margin-top: $hx-margin-top !default;
@@ -109,7 +106,6 @@ $h2-text-transform: uppercase !default;
 /// @type String
 $h2-align: center !default;
 
-// Heading 3
 /// Top margin for `<h3>` elements.
 /// @type String
 $h3-margin-top: $hx-margin-top !default;
@@ -146,7 +142,6 @@ $h3-text-transform: none !default;
 /// @type String
 $h3-align: center !default;
 
-// Heading 4
 /// Top margin for `<h4>` elements.
 /// @type String
 $h4-margin-top: $hx-margin-top !default;
@@ -183,7 +178,6 @@ $h4-text-transform: none !default;
 /// @type String
 $h4-align: center !default;
 
-// Heading 5
 /// Top Margin for `<h5>` elements.
 /// @type String
 $h5-margin-top: $hx-margin-top !default;
@@ -212,7 +206,7 @@ $h5-font-weight: normal !default;
 /// @type String
 $h5-line-height: $hx-line-height !default;
 
-/// Text Transform for `<h5>` elements.
+/// Text transform for `<h5>` elements.
 /// @type String
 $h5-text-transform: none !default;
 
@@ -220,8 +214,7 @@ $h5-text-transform: none !default;
 /// @type String
 $h5-align: left !default;
 
-// Heading 6
-/// Top marginfor `<h6>` elements.
+/// Top margin for `<h6>` elements.
 /// @type String
 $h6-margin-top: $hx-margin-top !default;
 
@@ -257,8 +250,7 @@ $h6-text-transform: none !default;
 /// @type String
 $h6-align: left !default;
 
-// Paragraphs
-/// Bottom Margin for `<p>` elements.
+/// Bottom margin for `<p>` elements.
 /// @type String
 $para-margin-bottom: 0 !default;
 
@@ -321,7 +313,7 @@ $para-very-tight-word-spacing: -0.09em !default;
 /// @type String
 $para-loose-letter-spacing: 0.25px !default; // TODO
 
-/// Amount of word spacing for `<p>` elements with a class of `loose` (loose word spacing).
+/// Amount of word spacing for `<p>` elements with a class of `loose` (loose letter tracking).
 /// @type String
 $para-loose-word-spacing: 0.075em !default;
 
@@ -333,7 +325,6 @@ $para-very-loose-letter-spacing: 0.5px !default; // TODO
 /// @type String
 $para-very-loose-word-spacing: 0.09em !default;
 
-// Blockquotes
 /// Font stack for `<blockquote>` elements.
 /// @type String
 $blockquote-font-family: $font-1 !default;
@@ -374,7 +365,6 @@ $blockquote-margin-left: 1em !default;
 /// @type String
 $blockquote-align: justify !default;
 
-// Lists
 /// Top margin for `<ol>` elements.
 /// @type String
 $ol-margin-top: 1em !default;
@@ -411,7 +401,6 @@ $ul-padding-left: 2em !default;
 /// @type String
 $li-li-margin-top: 0.5em !default;
 
-// Definition Lists
 /// Top margin for `<dt>` elements.
 /// @type String
 $dt-margin-top: 0 !default;
@@ -460,7 +449,6 @@ $dd-font-style: italic !default;
 /// @type String
 $dd-font-weight: normal !default;
 
-// Tables
 /// Top margin for `<table>` elements.
 /// @type String
 $table-margin-top: 1.5em !default;
@@ -553,7 +541,6 @@ $table-td-line-height: 1.1em !default;
 /// @type String
 $table-td-align: left !default;
 
-// Cite
 /// Font size for `<cite>` elements.
 /// @type String
 $cite-font-size: 0.9em !default;
@@ -574,12 +561,10 @@ $cite-text-transform: uppercase !default;
 /// @type String
 $cite-font-variant: small-caps !default;
 
-// Code & Pre
 /// Font stack of `<code>`elements.
 /// @type String
 $code-font-family: monospace !default;
 
-// Superscript & Subscript
 /// Font size for `<sup>` and `<sub>` elements.
 /// @type String
 $sup-sub-font-size: 0.8em !default;
@@ -588,7 +573,6 @@ $sup-sub-font-size: 0.8em !default;
 /// @type String
 $sup-sub-line-height: 0.5em !default;
 
-// Links
 /// Text decoration for `<a>` elements.
 /// @type String
 $link-text-decoration: none !default;

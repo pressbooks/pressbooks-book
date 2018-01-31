@@ -17,6 +17,9 @@ $color-6: $color-1 !default;
 //HTML ELEMENTS COLOR
 
 //A-LINK COLOR
+
+/// Color for `<a>` elements.
+/// @type String | Map
 $link-color: (
   epub: initial,
   prince: initial,
@@ -24,77 +27,177 @@ $link-color: (
 ) !default;
 
 //BODY COLOR
+
+/// Color for `<body>` elements.
+/// @type String
 $body-color: $color-1 !default;
 
 //BLOCKQUOTE COLOR
+
+/// Color for all `<blockquote>` elements.
+/// @type String
 $blockquote-color: $color-1 !default;
 
 //BODY HEADER COLORS
+
+/// Color for `<h1>` elements.
+/// @type String
 $h1-color: $color-2 !default;
+/// Color for `<h2>` elements.
+/// @type String
 $h2-color: $color-2 !default;
+/// Color for `<h3>` elements.
+/// @type String
 $h3-color: $color-2 !default;
+/// Color for `<h4>` elements.
+/// @type String
 $h4-color: $color-3 !default;
+/// Color for `<h5>` elements.
+/// @type String
 $h5-color: $color-3 !default;
+/// Color for `<h6>` elements.
+/// @type String
 $h6-color: $color-3 !default;
 
 //TABLE COLORS
+
+/// Color for `<table>` elements.
+/// @type String
 $table-color: $color-1 !default;
+/// Color for `<p>` elements within `<table>` elements.
+/// @type String
 $table-para-color: $color-1 !default;
+/// Shade color for `<table>` elements.
+/// @type String
 $shade-color-1: $color-4 !default;
+/// Line color for `<table>` elements.
+/// @type String
 $line-color-1: $color-3 !default; //FIX
 
 //INDEX PARA COLOR
-$index-para-color: $color-1 !default;
+
+/// Color for `<p>` elements with the class `index`.
+/// @type String
+$index-para-color: $color-1 !default; // <------
 
 //SPECIAL ELEMENTS COLOR
+
+/// Text color for image captions for `<p>` elements with class `wp-caption-text`
+/// @type String
 $image-caption-text-color: $color-3 !default;
+/// Color for elements with classes `first-character` and `firstcharacter`.
+/// @type String
 $first-character-color: $color-2 !default;
+/// Pullquote color for elements with class `pullquote`.
+/// @type String
 $pullquote-color: $color-2 !default;
+/// Sidebar color for `<div>` elements with class `.sidebar`.
+/// @type String
 $sidebar-color: $color-4 !default;
+/// Textbox color for `<div>` elements with class `.textbox`.
+/// @type String
 $textbox-background-color: initial !default;
+/// Textbox border color for `<div>` elements with class `.sidebar`.
+/// @type String
 $textbox-border-color: $color-1 !default;
+/// Shading color for `<div>` elements with class `.sidebar.shaded`.
+/// @type String
 $shaded-color: $color-4 !default;
 
 //TITLE PAGE(S) COLOR
+
+/// Title color for Half Title pages. Targets elements `<h1>` with a class of `title` with a parent of ID `half-title-page`
+/// @type String
 $half-title-title-color: $color-2 !default;
+/// Title color for Title page for elements with class `title` of parent element with ID `title-page`
+/// @type String
 $title-page-title-color: $color-2 !default;
+/// Subtitle color for Title page for elements with class `subtitle` of parent element with ID `title-page`
+/// @type String
 $title-page-subtitle-color: $color-3 !default;
+/// Author color for Title page for elements with class `author` of parent element with ID `title-page`
+/// @type String
 $title-page-author-color: $color-2 !default;
+/// Publisher color for Title page for elements with class `publisher` of parent element with ID `title-page`
+/// @type String
 $title-page-publisher-color: $color-3 !default;
+/// Publisher city color for Title page for elements with class `publisher-city` of parent element with ID `title-page`
+/// @type String
 $title-page-publisher-city-color: $color-3 !default;
 
 //SECTION OPENING COLOR
+/// Front matter title color for elements `<h1>` with a class `front-matter-title`.
+/// @type String
 $front-matter-title-color: $color-2 !default;
+/// Copyright disclaimer color for elements `<p>` with an ID of `copyright-page`.
+/// @type String
 $copyright-para-color: $color-1 !default;
+/// Dedication color for elements `<p>` with a class of `dedication`.
+/// @type String
 $dedication-para-color: $color-3 !default;
+/// Epigraph color for elements `<p>` with a class of `epigraph`.
+/// @type String
 $epigraph-para-color: $color-3 !default;
 
+/// Part number color for elements `<h3>` with a class of `part-number`.
+/// @type String
 $part-number-color: $color-3 !default;
+/// Part title color for elements `<h2>` with a class of `part-title`.
+/// @type String
 $part-title-color: $color-2 !default;
 
+/// Chapter number color for elements `<>` with a class of ``.
+/// @type String
 $chapter-number-color: $color-3 !default;
+/// Chapter number bottom border color for elements `<>` with a class of ``.
+/// @type String
 $chapter-number-border-bottom-color: $color-3 !default;
+/// Chapter Title color for elements `<>` with a class of ``.
+/// @type String
 $chapter-title-color: $color-2 !default;
+/// Chapter subtitle color for elements `<>` with a class of ``.
+/// @type String
 $chapter-subtitle-color: $color-3 !default;
+/// Chapter author color for elements `<>` with a class of ``.
+/// @type String
 $chapter-author-color: $color-3 !default;
+/// Chapter aphorism color for elements `<>` with a class of ``.
+/// @type String
 $chapter-aphorism-color: $color-3 !default;
-
+/// Back matter title color for elements `<>` with a class of ``.
+/// @type String
 $back-matter-title-color: $color-2 !default;
 
 //RUNNING HEAD/FEET COLOR
+/// @type String | Map
 $runninghead-color: $color-3 !default;
+/// @type String | Map
 $runningfoot-color: $color-3 !default;
+/// @type String | Map
 $page-number-color: $color-3 !default;
 
 //TOC COLOR
+
+/// @type String | Map
 $toc-front-matter-title-color: $color-1 !default;
+/// @type String | Map
 $toc-front-matter-subtitle-color: $color-1 !default;
+/// @type String | Map
 $toc-front-matter-author-color: $color-1 !default;
+/// @type String | Map
 $toc-part-number-color: $color-3 !default;
+/// @type String | Map
 $toc-part-title-color: $color-3 !default;
+/// @type String | Map
 $toc-chapter-number-color: $color-1 !default;
+/// @type String | Map
 $toc-chapter-title-color: $color-1 !default;
+/// @type String | Map
 $toc-chapter-subtitle-color: $color-1 !default;
+/// @type String | Map
 $toc-chapter-author-color: $color-1 !default;
+/// @type String | Map
 $toc-page-number-color: $color-1 !default;
+/// @type String | Map
 $toc-front-matter-page-number-color: $color-1 !default;
+
