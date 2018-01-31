@@ -46,6 +46,7 @@ $running-content-position: 'top-center' !default;
 // Finally, for the running separator, it either exists or it doesn't,
 //so choose between two options (null, or defined content):
 
+
 $left-running-separator: '' !default;
 $right-running-separator: '' !default;
 //$left-running-separator: '\A0\A0|\A0\A0' !default;
@@ -53,56 +54,175 @@ $right-running-separator: '' !default;
 
 // Page Numbers
 
+/// Front matter page numbers font stack.
+/// @type String
 $front-matter-page-number-font-family: $font-2 !default;
+
+/// Front matter page numbers font size.
+/// @type String
 $front-matter-page-number-font-size: 0.8em !default;
+
+/// Front matter page numbers font style.
+/// @type String
 $front-matter-page-number-font-style: normal !default;
+
+/// Front matter page numbers font weight.
+/// @type String
 $front-matter-page-number-font-weight: normal !default;
+
+/// Front matter page numbers text-transform.
+/// @type String
 $front-matter-page-number-text-transform: none !default;
 
+
+/// Page number font stack.
+/// @type String
 $page-number-font-family: $font-2 !default;
+
+/// Page number font size.
+/// @type String
 $page-number-font-size: 0.9em !default;
+
+/// Page number font style.
+/// @type String
 $page-number-font-style: normal !default;
+
+/// Page number font weight.
+/// @type String
 $page-number-font-weight: normal !default;
+
+/// Page number text transform.
+/// @type String
 $page-number-text-transform: none !default;
 
 // Running Head Styling
 
+/// Running Head top padding.
+/// @type String
 $runninghead-padding-top: 0.4in !default;
 
 // Running head left
+
+/// Running header font stack if page position is left. 
+/// @type String
 $runninghead-left-font-family: $font-3 !default;
+
+/// Running header font size if page position is left. 
+/// @type String
 $runninghead-left-font-size: 0.7em !default;
+
+/// Running header font style if page position is left. 
+/// @type String
 $runninghead-left-font-style: normal !default;
+
+/// Running header font weight if page position is left. 
+/// @type String
 $runninghead-left-font-weight: normal !default;
+
+/// Running header text transformation if page position is left. 
+/// @type String
 $runninghead-left-text-transform: uppercase !default;
+
+/// Running header letter spacing if page position is left. 
+/// @type String
 $runninghead-left-letter-spacing: 1px !default;
+
+/// Running header word spacing if page position is left.
+/// @type String 
 $runninghead-left-word-spacing: 2px !default;
 
 // Running head right
+
+/// Running header font stack if page position is right. 
+/// @type String
 $runninghead-right-font-family: $font-3 !default;
+
+/// Running header font size if page position is right. 
+/// @type String
 $runninghead-right-font-size: 0.7em !default;
+
+/// Running header font style if page position is right. 
+/// @type String
 $runninghead-right-font-style: normal !default;
+
+/// Running header font weight if page position is right. 
+/// @type String
 $runninghead-right-font-weight: normal !default;
+
+/// Running header text transformation if page position is right. 
+/// @type String
 $runninghead-right-text-transform: uppercase !default;
+
+/// Running header letter spacing if page position is right. 
+/// @type String
 $runninghead-right-letter-spacing: 1px !default;
+
+/// Running header word spacing if page position is right. 
+/// @type String
 $runninghead-right-word-spacing: 2px !default;
+
+
 
 // Running Feet Styling
 
+/// Running feet bottom padding. 
+/// @type String
 $runningfoot-padding-bottom: 0.4in !default;
+
+/// Running feet font stack if page position is left. 
+/// @type String
 $runningfoot-left-font-family: $font-2 !default;
+
+/// Running feet font size if page position is left. 
+/// @type String
 $runningfoot-left-font-size: 0.7em !default;
+
+/// Running feet font style if page position is left. 
+/// @type String
 $runningfoot-left-font-style: normal !default;
+
+/// Running feet font weight if page position is left. 
+/// @type String
 $runningfoot-left-font-weight: normal !default;
+
+/// Running feet text transformation if page position is left. 
+/// @type String
 $runningfoot-left-text-transform: uppercase !default;
+
+/// Running feet letter spacing if page position is left. 
+/// @type String
 $runningfoot-left-letter-spacing: normal !default;
+
+/// Running feet word spacing if page position is left. 
+/// @type String
 $runningfoot-left-word-spacing: normal !default;
+
+/// Running feet font stack if page position is right. 
+/// @type String
 $runningfoot-right-font-family: $font-2 !default;
+
+/// Running feet font size if page position is right. 
+/// @type String
 $runningfoot-right-font-size: 0.7em !default;
+
+/// Running feet font style if page position is right. 
+/// @type String
 $runningfoot-right-font-style: normal !default;
+
+/// Running feet font weight if page position is right. 
+/// @type String
 $runningfoot-right-font-weight: normal !default;
+
+/// Running feet text transformation if page position is right. 
+/// @type String
 $runningfoot-right-text-transform: uppercase !default;
+
+/// Running feet letter spacing if page position is right. 
+/// @type String
 $runningfoot-right-letter-spacing: normal !default;
+
+/// Running feet word spacing if page position is right. 
+/// @type String
 $runningfoot-right-word-spacing: normal !default;
 
 // Running Head & Foot Content
@@ -120,56 +240,135 @@ $runningfoot-right-word-spacing: normal !default;
 // - chapter-author
 // - chapter-subtitle
 
+/// 
+/// @type String
+
+/// Author on front matter running content.
+/// @type String
 $front-matter-running-content-left: string(book-author) !default;
+
+/// Book title on front matter running content. 
+/// @type String
 $front-matter-running-content-right: string(book-title) !default;
+
+/// Author on introduction running content.
+/// @type String
 $introduction-running-content-left: string(book-author) !default;
+
+/// Book title on introduction running content.
+/// @type String
 $introduction-running-content-right: string(book-title) !default;
+
+/// Author on part running content.
+/// @type String
 $part-running-content-left: string(book-author) !default;
+
+/// Book title on part running content.
+/// @type String
 $part-running-content-right: string(book-title) !default;
+
+/// Author on chapter running content.
+/// @type String
 $chapter-running-content-left: string(book-author) !default;
+
+/// Book title on chapter running content.
+/// @type String
 $chapter-running-content-right: string(book-title) !default;
+
+/// Author on back matter running content.
+/// @type String
 $back-matter-running-content-left: string(book-author) !default;
+
+/// Book title on back matter running content.
+/// @type String
 $back-matter-running-content-right: string(book-title) !default;
 
 // Page number style
 
+/// Front matter page number style on left page. 
 $front-matter-page-number-left: counter(page, lower-roman);
+
+/// Front matter page number style on right page. 
 $front-matter-page-number-right: counter(page, lower-roman);
 
+
+/// Introduction page number style on left page. 
 $introduction-page-number-left: counter(page);
+
+/// Introduction page number style on right page. 
 $introduction-page-number-right: counter(page);
 
+/// Part page number style on left page. 
 $part-page-number-left: counter(page);
+
+/// Part page number style on right page. 
 $part-page-number-right: counter(page);
 
+/// Chapter page number style on left page.
 $chapter-page-number-left: counter(page);
+
+/// Chapter page number style on right page.
 $chapter-page-number-right: counter(page);
 
+/// Back matter page number style on left page.
 $back-matter-page-number-left: counter(page);
+
+/// Back matter page number style on right page.
 $back-matter-page-number-right: counter(page);
 
 // Crop Marks (none | crop | cross)
 
+/// Page cropmarks.
 $page-cropmarks: none !default;
 
 // Page Size (in | cm)
 
+/// Width of page.
+/// @type String
 $page-width: 5.5in !default;
+
+/// Height of page.
+/// @type String
 $page-height: 8.5in !default;
 
 // Page Margins (in | cm | % | px | &c)
 
+/// Top margin of page.
+/// @type String
 $page-margin-top: 2cm !default;
+
+/// Inside margin of page.
+/// @type String
 $page-margin-inside: 2cm !default;
+
+/// Bottom margin of page.
+/// @type String
 $page-margin-bottom: 2cm !default;
+
+/// Outside margin of page.
+/// @type String
 $page-margin-outside: 2cm !default;
 
 // Recto-Verso Openings (right | auto)
 
+/// Recto-Verso settings on opening.
+/// @type String
 $recto-verso-standard-opening: right !default;
+
+/// Recto-Verso settings on opening of first section.
+/// @type String
 $recto-verso-first-section-opening: right !default;
+
+/// Recto-Verso settings on Section Opening
+/// @type String
 $recto-verso-section-opening: auto !default;
+
+/// Recto-Verso settings on copyright page.
+/// @type String
 $recto-verso-copyright-page-opening: left !default;
 
 // Index
+
+/// Index Alignment
+/// @type String
 $index-align: left !default;
