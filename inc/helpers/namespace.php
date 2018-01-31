@@ -72,10 +72,10 @@ function license_to_icons( $license ) {
 			if ( $part !== 'cc' ) {
 				$part = 'cc-' . $part;
 			}
-			$output .= "<span class='icon icon-$part'></span>";
+			$output .= sprintf( '<svg class="icon" style="fill: #000"><use xlink:href="#%s" /></svg>', $part );
 		}
 	} elseif ( $license === 'public-domain' ) {
-		$output .= "<span class='icon icon-cc-pd'></span>";
+		$output .= "<svg class='icon'></svg><use xlink:href='cc-pd' /></svg>";
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
@@ -155,7 +155,9 @@ function display_menu() {
 		);
 	}
 	$items .= sprintf(
-		'<li class="header__search js-search"><a class="icon icon-search js-toggle-search"></a><div class="header__search__form">%s</div></li>',
+		'<li class="header__search js-search"><svg class="icon--svg">
+		<use xlink:href="#search" />
+	</svg><div class="header__search__form">%s</div></li>',
 		get_search_form( false )
 	);
 
