@@ -304,6 +304,7 @@ $para-hanging-indent-text-indent: -1em !default;
 /// Amount of letter spacing for `<p>` elements with a class of `tight` (tight letter tracking).
 /// @type String
 $para-tight-letter-spacing: -0.25px !default; // TODO
+
 /// Amount of word spacing for `<p>` elements with a class of `tight` (tight letter tracking).
 /// @type String
 $para-tight-word-spacing: -0.075em !default;
@@ -311,6 +312,7 @@ $para-tight-word-spacing: -0.075em !default;
 /// Amount of letter spacing for `<p>` elements with a class of `very-tight` (very tight letter tracking).
 /// @type String
 $para-very-tight-letter-spacing: -0.5px !default; // TODO
+
 /// Amount of word spacing for `<p>` elements with a class of `very-tight` (very tight letter tracking).
 /// @type String
 $para-very-tight-word-spacing: -0.09em !default;
@@ -318,13 +320,15 @@ $para-very-tight-word-spacing: -0.09em !default;
 /// Amount of letter spacing for `<p>` elements with a class of `loose` (loose letter tracking).
 /// @type String
 $para-loose-letter-spacing: 0.25px !default; // TODO
-/// Amount of word spacing for `<p>` elements with a class of `loose` (loose letter tracking).
+
+/// Amount of word spacing for `<p>` elements with a class of `loose` (loose word spacing).
 /// @type String
 $para-loose-word-spacing: 0.075em !default;
 
 /// Amount of letter spacing for `<p>` elements with a class of `very-loose` (very loose letter tracking).
 /// @type String
 $para-very-loose-letter-spacing: 0.5px !default; // TODO
+
 /// Amount of word spacing for `<p>` elements with a class of `very-loose` (very loose letter tracking).
 /// @type String
 $para-very-loose-word-spacing: 0.09em !default;
