@@ -2,204 +2,589 @@
 /// @group elements
 ////
 
+/// Font Stack for `<body>` element.
+/// @type String
 $body-font-family: $font-1 !default;
+
+/// Font Size for `<body>` element.
+/// @type String | Map
 $body-font-size: (epub: medium, prince: 11pt, web: 14pt) !default;
+
+///  Font style for `<body>` element.
+/// @type String
 $body-font-style: normal !default;
+
+/// Font weight for `<body>` element.
+/// @type String
 $body-font-weight: normal !default;
+
+/// Line height for `<body>` element.
+/// @type String | Map
 $body-line-height: (epub: 1.4em, prince: 1.4em, web: 1.8em) !default;
 
 // Headings
+/// Top margin for all heading elements.
+/// @type String
 $hx-margin-top: 1.5em !default;
+
+/// Bottom margin for all heading elements.
+/// @type String
 $hx-margin-bottom: 1em !default;
+
+/// Line height for all heading elements.
+/// @type String
 $hx-line-height: 1.5em !default;
 
 // Heading 1
 /// Top margin for `<h1>` elements.
 /// @type String
 $h1-margin-top: $hx-margin-top !default;
+
 /// Bottom margin for `<h1>` elements.
 /// @type String
 $h1-margin-bottom: $hx-margin-bottom !default;
+
 /// Font stack for `<h1>` elements.
 /// @type String
 $h1-font-family: $font-3 !default;
+
 /// Font size for `<h1>` elements.
 /// @type String
 $h1-font-size: 1em !default;
+
 /// Font style for `<h1>` elements.
 /// @type String
 $h1-font-style: normal !default;
+
 /// Font weight for `<h1>` elements.
 /// @type String
 $h1-font-weight: bold !default;
+
 /// Line height for `<h1>` elements.
 /// @type String
 $h1-line-height: $hx-line-height !default;
+
 /// Text transform for `<h1>` elements.
 /// @type String
 $h1-text-transform: uppercase !default;
+
 /// Alignment for `<h1>` elements.
 /// @type String
 $h1-align: center !default;
 
 // Heading 2
+/// Top margin for `<h2>` elements.
+/// @type String
 $h2-margin-top: $hx-margin-top !default;
+
+/// Bottom margin for `<h2>` elements.
+/// @type String
 $h2-margin-bottom: $hx-margin-bottom !default;
+
+/// Font Stack for `<h2>` elements.
+/// @type String
 $h2-font-family: $font-3 !default;
+
+/// Font size for `<h2>` elements.
+/// @type String
 $h2-font-size: 1em !default;
+
+/// Font style for `<h2>` elements.
+/// @type String
 $h2-font-style: normal !default;
+
+/// Font weight for `<h2>` elements.
+/// @type String
 $h2-font-weight: normal !default;
+
+/// Line Height for `<h2>` elements.
+/// @type String
 $h2-line-height: $hx-line-height !default;
+
+/// Text Transform for `<h2>` elements.
+/// @type String
 $h2-text-transform: uppercase !default;
+
+/// Alignment for `<h2>` elements.
+/// @type String
 $h2-align: center !default;
 
 // Heading 3
+/// Top margin for `<h3>` elements.
+/// @type String
 $h3-margin-top: $hx-margin-top !default;
+
+/// Bottom margin for `<h3>` elements.
+/// @type String
 $h3-margin-bottom: $hx-margin-bottom !default;
+
+/// Font Family for `<h3>` elements.
+/// @type String
 $h3-font-family: $font-3 !default;
+
+/// Font size for `<h3>` elements.
+/// @type String
 $h3-font-size: 1em !default;
+
+/// Font Style for `<h3>` elements.
+/// @type String
 $h3-font-style: normal !default;
+
+/// Font Weight for `<h3>` elements.
+/// @type String
 $h3-font-weight: bold !default;
+
+/// Line Height for `<h3>` elements.
+/// @type String
 $h3-line-height: $hx-line-height !default;
+
+/// Text Transform for `<h3>` elements.
+/// @type String
 $h3-text-transform: none !default;
+
+/// Alignment for `<h3>` elements.
+/// @type String
 $h3-align: center !default;
 
 // Heading 4
+/// Top margin for `<h4>` elements.
+/// @type String
 $h4-margin-top: $hx-margin-top !default;
+
+/// Bottom Margin for `<h4>` elements.
+/// @type String
 $h4-margin-bottom: $hx-margin-bottom !default;
+
+/// Font Stack for `<h4>` elements.
+/// @type String
 $h4-font-family: $font-3 !default;
+
+/// Font size for `<h4>` elements.
+/// @type String
 $h4-font-size: 1em !default;
+
+/// Font Style for `<h4>` elements.
+/// @type String
 $h4-font-style: normal !default;
+
+/// Font Weight for `<h4>` elements.
+/// @type String
 $h4-font-weight: bold !default;
+
+/// Line Height for `<h4>` elements.
+/// @type String
 $h4-line-height: $hx-line-height !default;
+
+/// Text Transform for `<h4>` elements.
+/// @type String
 $h4-text-transform: none !default;
+
+/// Alignment for `<h4>` elements.
+/// @type String
 $h4-align: center !default;
 
 // Heading 5
+/// Top Margin for `<h5>` elements.
+/// @type String
 $h5-margin-top: $hx-margin-top !default;
+
+/// Bottom margin for `<h5>` elements.
+/// @type String
 $h5-margin-bottom: $hx-margin-bottom !default;
+
+/// Font Stack for `<h5>` elements.
+/// @type String
 $h5-font-family: $font-3 !default;
+
+/// Font size for `<h5>` elements.
+/// @type String
 $h5-font-size: 1em !default;
+
+/// Font Style for `<h5>` elements.
+/// @type String
 $h5-font-style: italic !default;
+
+/// Font weight for `<h5>` elements.
+/// @type String
 $h5-font-weight: normal !default;
+
+/// Line height for `<h5>` elements.
+/// @type String
 $h5-line-height: $hx-line-height !default;
+
+/// Text Transform for `<h5>` elements.
+/// @type String
 $h5-text-transform: none !default;
+
+/// Alignment for `<h5>` elements.
+/// @type String
 $h5-align: left !default;
 
 // Heading 6
+/// Top marginfor `<h6>` elements.
+/// @type String
 $h6-margin-top: $hx-margin-top !default;
+
+/// Bottom margin for `<h6>` elements.
+/// @type String
 $h6-margin-bottom: $hx-margin-bottom !default;
+
+/// Font stack for `<h6>` elements.
+/// @type String
 $h6-font-family: $font-3 !default;
+
+/// Font size for `<h6>` elements.
+/// @type String
 $h6-font-size: 1em !default;
+
+/// Font style for `<h6>` elements.
+/// @type String
 $h6-font-style: normal !default;
+
+/// Font weight for `<h6>` elements.
+/// @type String
 $h6-font-weight: normal !default;
+
+/// Line height for `<h6>` elements.
+/// @type String
 $h6-line-height: $hx-line-height !default;
+
+/// Tex transform for `<h6>` elements.
+/// @type String
 $h6-text-transform: none !default;
+
+/// Alignment for `<h6>` elements.
+/// @type String
 $h6-align: left !default;
 
 // Paragraphs
+/// Bottom Margin for `<p>` elements.
+/// @type String
 $para-margin-bottom: 0 !default;
+
+/// Alignment for `<p>` elements.
+/// @type String | Map
 $para-align: (epub: initial, prince: justify, web: initial) !default;
+
+/// Amount of of lines a paragraph must have if it ends on the top of a page.
+/// @type String
 $widows: 2 !default;
+
+/// Amount of lines tolerated if a paragraph begins at the bottom of a page.
+/// @type String
 $orphans: 1 !default;
 
+/// Top margin for `<p>` elements.
+/// @type String
 $para-margin-top: 0 !default;
+
+/// Text indentation size for `<p>` elements with class `indent`.
+/// @type String
 $para-indent: 1em !default;
 
+/// Top margin for `<p>` elements with class `no-indent`.
+/// @type String
 $para-no-indent-margin-top: 1em !default;
 
+/// Hyphenation for `<p>` elements.
+/// @type String
 $para-hyphens: auto !default;
 $para-hyphenate-before: 3 !default;
 $para-hyphenate-after: 3 !default;
 $para-hyphenate-lines: 2 !default;
 
+/// Amount of hanging indentation for `<p>` elements with class `hanging-indent`.
+/// @type String
 $para-hanging-indent-padding-left: 1em !default;
+
+/// Amount of indentation on first line of hanging indentation format for `<p>` elements with class `hanging-indent`.
+/// @type String
 $para-hanging-indent-text-indent: -1em !default;
 
+/// Amount of letter spacing for `<p>` elements with a class of `tight` (tight letter tracking).
+/// @type String
 $para-tight-letter-spacing: -0.25px !default; // TODO
+/// Amount of word spacing for `<p>` elements with a class of `tight` (tight letter tracking).
+/// @type String
 $para-tight-word-spacing: -0.075em !default;
+
+/// Amount of letter spacing for `<p>` elements with a class of `very-tight` (very tight letter tracking).
+/// @type String
 $para-very-tight-letter-spacing: -0.5px !default; // TODO
+/// Amount of word spacing for `<p>` elements with a class of `very-tight` (very tight letter tracking).
+/// @type String
 $para-very-tight-word-spacing: -0.09em !default;
+
+/// Amount of letter spacing for `<p>` elements with a class of `loose` (loose letter tracking).
+/// @type String
 $para-loose-letter-spacing: 0.25px !default; // TODO
+/// Amount of word spacing for `<p>` elements with a class of `loose` (loose letter tracking).
+/// @type String
 $para-loose-word-spacing: 0.075em !default;
+
+/// Amount of letter spacing for `<p>` elements with a class of `very-loose` (very loose letter tracking).
+/// @type String
 $para-very-loose-letter-spacing: 0.5px !default; // TODO
+/// Amount of word spacing for `<p>` elements with a class of `very-loose` (very loose letter tracking).
+/// @type String
 $para-very-loose-word-spacing: 0.09em !default;
 
 // Blockquotes
+/// Font stack for `<blockquote>` elements.
+/// @type String
 $blockquote-font-family: $font-1 !default;
+
+/// Font size for `<blockquote>` elements.
+/// @type String
 $blockquote-font-size: 0.9em !default;
+
+/// Font style for `<blockquote>` elements.
+/// @type String
 $blockquote-font-style: normal !default;
+
+/// Font weight for `<blockquote>` elements.
+/// @type String
 $blockquote-font-weight: normal !default;
+
+/// Line height for `<blockquote>` elements.
+/// @type String
 $blockquote-line-height: 1.2em !default;
+
+/// Top margin for `<blockquote>` elements.
+/// @type String
 $blockquote-margin-top: 1em !default;
+
+/// Right margin for `<blockquote>` elements.
+/// @type String
 $blockquote-margin-right: 1em !default;
+
+/// Bottom margin for `<blockquote>` elements.
+/// @type String
 $blockquote-margin-bottom: 1em !default;
+
+/// Left margin for `<blockquote>` elements.
+/// @type String
 $blockquote-margin-left: 1em !default;
+
+/// Alignment for `<blockquote>` elements.
+/// @type String
 $blockquote-align: justify !default;
 
 // Lists
+/// Top margin for `<ol>` elements.
+/// @type String
 $ol-margin-top: 1em !default;
+
+/// Bottom margin for `<ol>` elements.
+/// @type String
 $ol-margin-bottom: 1em !default;
+
+/// Left margin for `<ol>` elements.
+/// @type String
 $ol-margin-left: (epub: 2em, prince: 2em, web: 0) !default;
+
+/// Padding left for `<ol>` elements.
+/// @type String | Map
 $ol-padding-left: 2em !default;
+
+/// Top margin for `<ul>` elements.
+/// @type String
 $ul-margin-top: 1em !default;
+
+/// Bottom Margin for `<ul>` elements.
+/// @type String
 $ul-margin-bottom: 1em !default;
+
+/// Margin left for `<ul>` elements.
+/// @type String
 $ul-margin-left: (epub: 2em, prince: 2em, web: 0) !default;
+
+/// Padding left for `<ul>` elements.
+/// @type String | Map
 $ul-padding-left: 2em !default;
+
+/// Top margin for multiple `<li>` elements.
+/// @type String
 $li-li-margin-top: 0.5em !default;
 
 // Definition Lists
+/// Top margin for `<dt>` elements.
+/// @type String
 $dt-margin-top: 0 !default;
+
+/// Right margin for `<dt>` elements.
+/// @type String
 $dt-margin-right: 0 !default;
+
+/// Bottom margin for `<dt>` elements.
+/// @type String
 $dt-margin-bottom: 0 !default;
+
+/// Left margin for `<dt>` elements.
+/// @type String
 $dt-margin-left: 0 !default;
+
+/// Font style for `<dt>` elements.
+/// @type String
 $dt-font-style: normal !default;
+
+/// Font weight for `<dt>` elements.
+/// @type String
 $dt-font-weight: bold !default;
+
+/// Top margin for `<dd>` elements.
+/// @type String
 $dd-margin-top: 0 !default;
+
+/// Right margin for `<dd>` elements.
+/// @type String
 $dd-margin-right: 0 !default;
+
+/// Bottom margin for `<dd>` elements.
+/// @type String
 $dd-margin-bottom: 0 !default;
+
+/// Left margin for `<dd>` elements.
+/// @type String
 $dd-margin-left: 0 !default;
+
+/// Font style for `<dd>` elements.
+/// @type String
 $dd-font-style: italic !default;
+
+/// Font weight for `<dd>` elements.
+/// @type String
 $dd-font-weight: normal !default;
 
 // Tables
+/// Top margin for `<table>` elements.
+/// @type String
 $table-margin-top: 1.5em !default;
+
+/// Bottom margin for `<table>` elements.
+/// @type String
 $table-margin-bottom: 1.5em !default;
+
+/// Font stack for `<table>` elements.
+/// @type String
 $table-font-family: $font-1 !default;
+
+/// Font size for `<table>` elements.
+/// @type String
 $table-font-size: 0.8em !default;
+
+/// Hyphens for `<table>` elements.
+/// @type String
 $table-hyphens: none !default;
+
+/// Line height for `<table>` elements.
+/// @type String
 $table-line-height: 1.1em;
+
+/// Alignment for `<table>` elements.
+/// @type String
 $table-align: left !default;
+
+/// Border width for `<table>` elements.
+/// @type String
 $table-border-width: 1px !default;
+
+/// Margin Bottom for `<caption>` elements.
+/// @type String
 $table-caption-margin-bottom: 0.5em !default;
+
+/// Font weight for `<caption>` elements.
+/// @type String
 $table-caption-font-weight: bold !default;
+
+/// Line height for `<caption>` elements.
+/// @type String
 $table-caption-line-height: 1.1em !default;
+
+/// Top padding for `<th>` elements.
+/// @type String
 $table-th-padding-top: 0.45em !default;
+
+/// Right padding for `<th>` elements.
+/// @type String
 $table-th-padding-right: 0.45em !default;
+
+/// Bottom padding for `<th>` elements.
+/// @type String
 $table-th-padding-bottom: 0.45em !default;
+
+/// Left padding for `<th>` elements.
+/// @type String
 $table-th-padding-left: 0.45em !default;
+
+/// Line height for `<th>` elements.
+/// @type String
 $table-th-line-height: 1.1em !default;
+
+/// Alignment for `<th>` elements.
+/// @type String
 $table-th-align: left !default;
+
+/// Top padding for `<td>` elements.
+/// @type String
 $table-td-padding-top: 0.45em !default;
+
+/// Right padding for `<td>` elements.
+/// @type String
 $table-td-padding-right: 0.45em !default;
+
+/// Bottom padding for `<td>` elements.
+/// @type String
 $table-td-padding-bottom: 0.45em !default;
+
+/// Left padding for `<td>` elements.
+/// @type String
 $table-td-padding-left: 0.45em !default;
+
+/// Line height for `<td>` elements.
+/// @type String
 $table-td-line-height: 1.1em !default;
+
+/// Alignment for `<td>` elements.
+/// @type String
 $table-td-align: left !default;
 
 // Cite
+/// Font size for `<cite>` elements.
+/// @type String
 $cite-font-size: 0.9em !default;
+
+/// Font style for `<cite>` elements.
+/// @type String
 $cite-font-style: normal !default;
+
+/// Font weight for `<cite>` elements.
+/// @type String
 $cite-font-weight: normal !default;
+
+/// Text transform for `<cite>` elements.
+/// @type String
 $cite-text-transform: uppercase !default;
+
+/// Font variant for `<cite>` elements.
+/// @type String
 $cite-font-variant: small-caps !default;
 
 // Code & Pre
+/// Font stack of `<code>`elements.
+/// @type String
 $code-font-family: monospace !default;
 
 // Superscript & Subscript
+/// Font size for `<sup>` and `<sub>` elements.
+/// @type String
 $sup-sub-font-size: 0.8em !default;
+
+/// Line height for `<sup>` and `<sub` elements.
+/// @type String
 $sup-sub-line-height: 0.5em !default;
 
 // Links
+/// Text decoration for `<a>` elements.
+/// @type String
 $link-text-decoration: none !default;
