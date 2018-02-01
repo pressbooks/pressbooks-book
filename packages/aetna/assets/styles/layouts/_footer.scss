@@ -5,7 +5,7 @@
   background-color: $footer-bg;
   color: $footer-color;
   font-family: $font-family-sans-serif;
-  padding: 0 0 2.25rem;
+  padding: 0 0 2.5rem;
 
   h1,
   h2,
@@ -51,8 +51,8 @@
   }
 
   @media #{$breakpoint-tablet-and-up} {
+    padding-bottom: 0.5rem;
     flex-direction: row;
-    padding-bottom: 2.5rem;
   }
 }
 
