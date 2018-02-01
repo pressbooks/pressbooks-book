@@ -5,7 +5,7 @@
   background-color: $footer-bg;
   color: $footer-color;
   font-family: $font-family-sans-serif;
-  padding: 0 0 2.5rem;
+  padding: 0 0 2rem;
 
   h1,
   h2,
@@ -62,7 +62,7 @@
 
 .footer__pressbooks {
   max-width: $content-max-width;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -70,6 +70,7 @@
 
   @media #{$breakpoint-tablet-and-up} {
     flex-direction: row;
+    margin: 2rem auto;
   }
 }
 
