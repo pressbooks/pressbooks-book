@@ -36,7 +36,7 @@ a.call-to-action {
   &:active,
   &.active {
     background-image: none;
-    box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
+    @include btn-active-box-shadow();
   }
 }
 
@@ -77,6 +77,12 @@ a.call-to-action {
     background-color: var(--accent-dark);
     border-color: var(--accent-fg);
     color: var(--accent-fg);
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    @include btn-active-box-shadow( "accent" );
   }
 }
 
