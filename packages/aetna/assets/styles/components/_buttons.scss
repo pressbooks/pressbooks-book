@@ -42,8 +42,8 @@ a.call-to-action {
 
 button,
 input[type="submit"] {
-  background-color: var(--brand);
-  border-color: var(--brand);
+  background-color: var(--primary);
+  border-color: var(--primary);
   color: var(--button-primary-color);
 
   &:focus,
@@ -56,18 +56,18 @@ input[type="submit"] {
 
 a.call-to-action {
   background-color: var(--button-primary-color);
-  border-color: var(--brand);
-  color: var(--brand);
+  border-color: var(--primary);
+  color: var(--primary);
 
   &:focus,
   &:hover {
-    background-color: var(--brand);
-    border-color: var(--brand);
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: var(--button-primary-color);
   }
 }
 
-[class$='--alternate'] .call-to-action {
+[class$="--alternate"] .call-to-action {
   background-color: var(--accent);
   border-color: var(--button-primary-color);
   color: var(--button-primary-color);
@@ -82,8 +82,8 @@ a.call-to-action {
 
 .button--secondary {
   background-color: transparent;
-  border-color: var(--brand);
-  color: var(--brand);
+  border-color: var(--primary);
+  color: var(--primary);
 
   &:focus,
   &:hover {
@@ -94,7 +94,7 @@ a.call-to-action {
 
 .button--circle--primary {
   align-items: center;
-  background-color: var(--brand);
+  background-color: var(--primary);
   color: var(--button-primary-color);
   border-radius: 50%;
   display: flex;

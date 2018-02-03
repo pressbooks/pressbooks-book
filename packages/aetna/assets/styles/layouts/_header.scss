@@ -53,14 +53,14 @@
     top: 7px;
     width: 25px;
     height: 3px;
-    background: var(--brand);
+    background: var(--primary);
 
     &::before,
     &::after {
       width: 25px;
       height: 3px;
-      content: '';
-      background: var(--brand);
+      content: "";
+      background: var(--primary);
     }
 
     &::before {
@@ -152,7 +152,6 @@
   }
 }
 
-
 .header--home {
   --brand: var(--header-color);
   --brand-hover: var(--header-color);
@@ -200,10 +199,10 @@
     }
   }
 
-  input[type='search'] {
+  input[type="search"] {
     background-color: transparent;
     border: 0 none;
-    border-bottom: 2px solid var(--brand);
+    border-bottom: 2px solid var(--primary);
     color: var(--body-color);
     width: 12rem;
 
@@ -225,7 +224,7 @@
     }
   }
 
-  input[type='submit'] {
+  input[type="submit"] {
     display: none;
   }
 }

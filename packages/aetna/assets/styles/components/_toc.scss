@@ -44,7 +44,7 @@
 }
 
 .toc__list {
-  color: var(--brand);
+  color: var(--primary);
   margin-bottom: 0;
 
   &,
@@ -111,7 +111,7 @@
   }
 
   .open & {
-    background-color: var(--brand);
+    background-color: var(--primary);
     color: var(--button-primary-color);
 
     .icon {

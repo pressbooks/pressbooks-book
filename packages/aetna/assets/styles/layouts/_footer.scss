@@ -107,7 +107,7 @@
     padding: 0.125rem 0;
   }
 
- a {
+  a {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
@@ -148,7 +148,7 @@
   font-family: $font-family-sans-serif;
   font-size: rem(16);
   color: var(--accent-fg);
-  background-color: var(--accent, $brand-accent);
+  background-color: var(--accent, $accent);
   text-align: center;
 
   .social-media {
@@ -175,7 +175,6 @@
     font-weight: 600;
     line-height: (36/16);
   }
-
 
   &__block {
     border-top: solid 1px var(--accent-fg);

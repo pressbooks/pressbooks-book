@@ -7,9 +7,11 @@ $content-box-max-width: 1200px;
 $reading-page-max-width: 800px;
 
 /** Colors */
-$brand: #b01109 !default;
-$brand-hover: #770600 !default;
-$brand-accent: #015d75 !default;
+$primary: #b01109 !default;
+$primary-dark: darken($primary, 10%) !default;
+$primary-alpha: rgba($primary, 0.25) !default;
+$accent: #015d75 !default;
+$accent-dark: darken($accent, 10%) !default;
 
 $brand-bg: #fff !default;
 $brand-bg-alt: #f9fdff !default;
@@ -29,9 +31,6 @@ $footer-color: #fff !default;
 
 $book-bg: #fff !default;
 
-$color-primary: #b01109 !default;
-$color-accent: #015d75 !default;
-
 $color-primary-fg: #fff !default;
 $color-accent-fg: #fff !default;
 
@@ -42,7 +41,7 @@ $color-cover-header-bg: #000;
 $nav-reading-height-mobile: 2.5rem;
 
 // Style anchor elements.
-$link-color: var(--brand) !default;
+$link-color: var(--primary) !default;
 $link-decoration: none !default;
 $link-hover-color: var(--brand-hover) !default;
 $link-hover-decoration: underline !default;
@@ -54,13 +53,13 @@ $link-hover-decoration: underline !default;
 $paragraph-margin-bottom: 1rem !default;
 
 /** Fonts */
-$font-family-sans-serif: 'Karla', sans-serif;
-$font-family-serif:      'Spectral', serif;
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol' !default;
-$font-family-monospace: 'SFMono-Regular', Menlo, Monaco, Consolas,
-  'Liberation Mono', 'Courier New', monospace !default;
+$font-family-sans-serif: "Karla", sans-serif;
+$font-family-serif: "Spectral", serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
+$font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-serif !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
@@ -87,7 +86,7 @@ $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family: $font-family-sans-serif !default;
 $headings-font-weight: 700 !default;
 $headings-line-height: $line-height-base !default;
-$headings-color: var(--brand) !default;
+$headings-color: var(--primary) !default;
 
 $small-font-size: 80% !default;
 
@@ -102,16 +101,19 @@ $medium: 960px !default;
 $large: 1200px !default;
 $extra-large: 1650px !default;
 
-$breakpoint-not-small: 'screen and (min-width: 30rem)' !default;
-$breakpoint-medium: 'screen and (min-width: 30rem) and (max-width: 60rem)' !default;
-$breakpoint-large: 'screen and (min-width: 60rem)' !default;
-$breakpoint-extra-large: 'screen and (min-width: 90rem)' !default;
-$breakpoint-not-large: 'screen and (max-width: 59.975rem)' !default;
-$breakpoint-max-content: 'screen and (min-width: #{$content-max-width})' !default;
+$breakpoint-not-small: "screen and (min-width: 30rem)" !default;
+$breakpoint-medium: "screen and (min-width: 30rem) and (max-width: 60rem)"
+  !default;
+$breakpoint-large: "screen and (min-width: 60rem)" !default;
+$breakpoint-extra-large: "screen and (min-width: 90rem)" !default;
+$breakpoint-not-large: "screen and (max-width: 59.975rem)" !default;
+$breakpoint-max-content: "screen and (min-width: #{$content-max-width})"
+  !default;
 
-$breakpoint-small-to-tablet: 'screen and (max-width: 767px)' !default;
-$breakpoint-tablet-and-up: 'screen and (min-width: 768px)' !default;
-$breakpoint-tablet-to-large: 'screen and (min-width: 768px) and (max-width: 60em)' !default;
+$breakpoint-small-to-tablet: "screen and (max-width: 767px)" !default;
+$breakpoint-tablet-and-up: "screen and (min-width: 768px)" !default;
+$breakpoint-tablet-to-large: "screen and (min-width: 768px) and (max-width: 60em)"
+  !default;
 
 // Components
 //
@@ -119,8 +121,8 @@ $breakpoint-tablet-to-large: 'screen and (min-width: 768px) and (max-width: 60em
 $border-width: 2px !default;
 $border-radius: 3px !default;
 
-$component-active-color: var(--brand) !default;
-$component-active-bg: var(--brand-accent) !default;
+$component-active-color: var(--primary) !default;
+$component-active-bg: var(--accent) !default;
 
 $section-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
@@ -165,7 +167,7 @@ $btn-font-family: $font-family-sans-serif;
 $btn-font-weight: $font-weight-bold !default;
 $btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
   0 1px 1px rgba(0, 0, 0, 0.075) !default;
-$btn-focus-box-shadow: 0 0 0 3px rgba($brand, 0.25) !default;
+$btn-focus-box-shadow: 0 0 0 3px var(--primary-alpha) !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !default;
 
 $btn-link-disabled-color: $text-muted !default;
@@ -191,7 +193,7 @@ $input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
 $input-border-radius: $border-radius !default;
 
 $input-focus-bg: $input-bg !default;
-$input-focus-border-color: lighten($brand, 25%) !default;
+$input-focus-border-color: var(--primary-alpha) !default;
 $input-focus-box-shadow: $input-box-shadow, $btn-focus-box-shadow !default;
 $input-focus-color: $input-color !default;
 
@@ -225,7 +227,7 @@ $dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175) !default;
 
 $dropdown-link-color: #222 !default;
 $dropdown-link-hover-color: darken(#222, 5%) !default;
-$dropdown-link-hover-bg: var(--brand-accent) !default;
+$dropdown-link-hover-bg: var(--accent) !default;
 
 $dropdown-link-active-color: $component-active-color !default;
 $dropdown-link-active-bg: $component-active-bg !default;
@@ -250,26 +252,26 @@ $zindex-modal: 1050 !default;
 $zindex-popover: 1060 !default;
 $zindex-tooltip: 1070 !default;
 
-$icon-arrow-down: '\61';
-$icon-arrow-right: '\62';
-$icon-arrow-up: '\63';
-$icon-book: '\64';
-$icon-graph: '\67';
-$icon-like: '\68';
-$icon-share-books: '\6a';
-$icon-speach-bubble: '\6b';
-$icon-twitter: '\6c';
-$icon-facebook: '\65';
-$icon-search: '\6d';
-$icon-cc: '\66';
-$icon-cc-by: '\6e';
-$icon-google-plus: '\6f';
-$icon-cc-nc: '\69';
-$icon-cc-share: '\70';
-$icon-cc-sa: '\71';
-$icon-cc-zero: '\72';
-$icon-cc-pd: '\73';
-$icon-cc-nd: '\74';
-$icon-cc-nc-jp: '\75';
-$icon-cc-nc-eu: '\76';
-$icon-cc-remix: '\77';
+$icon-arrow-down: "\61";
+$icon-arrow-right: "\62";
+$icon-arrow-up: "\63";
+$icon-book: "\64";
+$icon-graph: "\67";
+$icon-like: "\68";
+$icon-share-books: "\6a";
+$icon-speach-bubble: "\6b";
+$icon-twitter: "\6c";
+$icon-facebook: "\65";
+$icon-search: "\6d";
+$icon-cc: "\66";
+$icon-cc-by: "\6e";
+$icon-google-plus: "\6f";
+$icon-cc-nc: "\69";
+$icon-cc-share: "\70";
+$icon-cc-sa: "\71";
+$icon-cc-zero: "\72";
+$icon-cc-pd: "\73";
+$icon-cc-nd: "\74";
+$icon-cc-nc-jp: "\75";
+$icon-cc-nc-eu: "\76";
+$icon-cc-remix: "\77";

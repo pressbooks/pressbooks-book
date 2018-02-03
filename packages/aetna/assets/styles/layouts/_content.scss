@@ -31,7 +31,7 @@
 
 // Navigation
 .nav-reading {
-  background-color: var(--brand);
+  background-color: var(--primary);
   bottom: 0;
   display: flex;
   left: 0;
@@ -101,7 +101,7 @@
       }
 
       .icon {
-        color: var(--brand);
+        color: var(--primary);
         font-size: 1.25rem;
 
         &:hover {
@@ -152,7 +152,7 @@
 
 .nav-reading__up {
   align-items: center;
-  background-color: var(--brand);
+  background-color: var(--primary);
   border-radius: 50%;
   color: var(--button-primary-color);
   display: flex;
@@ -257,7 +257,7 @@
     }
 
     .icon {
-      color: var(--brand);
+      color: var(--primary);
       font-size: 0.75rem;
       height: 1em;
       width: 1em;

@@ -44,12 +44,12 @@ h1 {
   text-transform: uppercase;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     margin: 0.5rem auto 1rem;
     width: rem(45);
     height: rem(5);
-    background: var(--brand-accent);
+    background: var(--accent);
 
     @media #{$breakpoint-large} {
       margin-bottom: 2rem;
@@ -70,12 +70,12 @@ h2 {
   text-transform: uppercase;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     margin: 0.5rem auto 1rem;
     width: rem(45);
     height: rem(5);
-    background: var(--brand-accent);
+    background: var(--accent);
 
     @media #{$breakpoint-large} {
       margin-bottom: 2rem;
