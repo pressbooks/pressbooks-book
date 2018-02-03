@@ -72,6 +72,38 @@ export default {
 				$( '.header__nav' ).toggleClass( 'header__nav--active' );
 			} );
 		} );
+
+		( function () {
+			// Get all the <h3> headings
+			const headings = document.querySelectorAll( '.dropdown h3, .dropdown p' );
+
+			Array.prototype.forEach.call( headings, heading => {
+				// Give each <h3> a toggle button child
+				heading.innerHTML = `
+				<button type="button" aria-expanded="false">
+					${heading.innerHTML}
+					<svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
+				</button>
+			  `;
+
+				// Collapse (hide) the content following the heading
+				let content = heading.nextElementSibling;
+				content.hidden = true;
+
+				// Assign the button
+				let btn = heading.querySelector( 'button' );
+
+				btn.onclick = () => {
+					// Cast the state as a boolean
+					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
+
+					// Switch the state
+					btn.setAttribute( 'aria-expanded', ! expanded );
+					// Switch the content's visibility
+					content.hidden = expanded;
+				};
+			} );
+		} )();
 	},
 	finalize() {
 		// JavaScript to be fired on all pages, after page specific JS is fired

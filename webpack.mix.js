@@ -26,8 +26,8 @@ mix
 // BrowserSync
 mix.browserSync( {
 	host:  'localhost',
-	proxy: 'http://pressbooks.test/standardtest',
-	port:  3000,
+	proxy: 'https://pressbooks.test/standardtest',
+	port:  3200,
 	files: [ '*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js` ],
 } );
 

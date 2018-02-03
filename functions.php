@@ -29,10 +29,12 @@ add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
  */
 global $metakeys;
 $metakeys = [
-	'pb_author' => __( 'Author(s)', 'pressbooks-book' ),
-	'pb_contributing_authors' => __( 'Contributing Author(s)', 'pressbooks-book' ),
-	'pb_editor' => __( 'Editor(s)', 'pressbooks-book' ),
-	'pb_translator' => __( 'Translator(s)', 'pressbooks-book' ),
+	'pb_authors' => __( 'Authors', 'pressbooks-book' ),
+	'pb_editors' => __( 'Editors', 'pressbooks-book' ),
+	'pb_translators' => __( 'Translators', 'pressbooks-book' ),
+	'pb_reviewers' => __( 'Reviewers', 'pressbooks-book' ),
+	'pb_illustrators' => __( 'Illustrators', 'pressbooks-book' ),
+	'pb_contributors' => __( 'Contributors', 'pressbooks-book' ),
 	'pb_book_license' => __( 'License', 'pressbooks-book' ),
 	'pb_primary_subject'  => __( 'Primary Subject', 'pressbooks-book' ),
 	'pb_additional_subjects'  => __( 'Additional Subject(s)', 'pressbooks-book' ),
@@ -94,7 +96,7 @@ function pb_enqueue_assets() {
 					update_option( 'pressbooks_webbook_structure_version', 1 );
 				}
 				$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
-				if ( ! is_file( $fullpath ) ) {
+				if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
 					$styles->updateWebBookStyleSheet();
 				}
 				if ( $styles->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
@@ -430,3 +432,7 @@ function pressbooks_book_setup() {
 }
 
 add_action( 'after_setup_theme', 'pressbooks_book_setup' );
+
+add_action('wp_head', function() {
+	echo \Pressbooks\Admin\Branding\get_customizer_colors();
+});

@@ -1,9 +1,9 @@
 // stylelint-disable no-descending-specificity
 
 .reading-header {
-  --brand: var(--header-color);
-  --brand-hover: var(--header-color);
-  --brand-accent: var(--header-color);
+  --primary: var(--header-color);
+  --primary-hover: var(--header-color);
+  --primary-accent: var(--header-color);
 
   color: var(--header-color);
   font-family: $font-family-sans-serif;
@@ -13,7 +13,8 @@
     color: $link-color;
     text-decoration: $link-decoration;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
     }
@@ -94,7 +95,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }

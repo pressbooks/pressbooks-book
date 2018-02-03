@@ -89,13 +89,8 @@
 		<?php if ( ! is_front_page() ) { ?>
 			<div class="reading-header">
 				<nav class="reading-header__inside">
-					<div class="reading-header__toc js-toc-toggle-contents">
-						<a class="js-toc-toggle" href="javascript:void(0)">
-							<span class="reading-header__toc__title">Contents</span>
-							<svg class="icon--svg">
-								<use xlink:href="#arrow-down" />
-							</svg>
-						</a>
+					<div class="reading-header__toc dropdown">
+							<h3 class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h3>
 						<?php
 						global $blog_id;
 						$can_read = current_user_can_for_blog( $blog_id, 'read' );
@@ -104,8 +99,8 @@
 						$book_information = pb_get_book_information();
 						$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
 						$should_parse_subsections = pb_should_parse_subsections();?>
-						<div class="block-reading-toc js-toc">
-							<?php include( locate_template( 'content-toc.php' ) ); ?>
+						<div class="block-reading-toc">
+							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 						</div>
 					</div>
 

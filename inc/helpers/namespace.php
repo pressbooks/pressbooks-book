@@ -23,7 +23,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
 					<?php $chapter_number = pb_get_chapter_number( $section['post_name'] );
 					if ( $chapter_number ) {
-						echo "<span>$chapter_number</span>  ";
+						echo "<span>$chapter_number</span>. ";
 					}
 					echo pb_strip_br( $section['post_title'] );?>
 				</a>
@@ -155,9 +155,7 @@ function display_menu() {
 		);
 	}
 	$items .= sprintf(
-		'<li class="header__search js-search"><svg class="icon--svg">
-		<use xlink:href="#search" />
-	</svg><div class="header__search__form">%s</div></li>',
+		'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
 		get_search_form( false )
 	);
 

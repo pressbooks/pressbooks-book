@@ -7,9 +7,9 @@
 		<?php if ( ! empty( $book_information['pb_subtitle'] ) ) : ?>
 			<p class="book-header__subtitle"><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
-		<?php if ( ! empty( $book_information['pb_author'] ) ) { ?>
+		<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
 			<p class="book-header__author">
-				<span class="fn"><?php echo $book_information['pb_author']; ?></span>
+				<span class="fn"><?php echo $book_information['pb_authors']; ?></span>
 			</p>
 		<?php } ?>
 		<div class="book-header__cover">
@@ -32,8 +32,8 @@
 if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) { ?>
 				<div class="book-header__cover__downloads dropdown">
 
-					<span class="dropdown-toggle dropdown-toggle-block" data-toggle="dropdown"><?php _e( 'Download this book', 'pressbooks-book' ); ?></span>
-					<ul class="dropdown-menu dropdown-menu-block" >
+					<p><?php _e( 'Download this book', 'pressbooks-book' ); ?></p>
+					<ul>
 					<?php foreach ( $files as $filetype => $filename ) :
 						$filename = preg_replace( '/(-\d{10})(.*)/ui', '$1', $filename );
 
