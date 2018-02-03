@@ -1,16 +1,11 @@
 .home #content {
   width: 100%;
 
-  .book-header,
   .block {
     width: 100%;
     max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .block.block-meta {
-    max-width: 100%;
   }
 }
 
@@ -19,6 +14,11 @@
   --primary-dark: var(--header-color);
   --accent: var(--header-color);
 
+  width: 100%;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--header-bg);
   color: var(--header-color);
   padding: 1.5rem 1rem 7.5rem;
@@ -26,6 +26,10 @@
   @media #{$breakpoint-large} {
     padding: 3.5rem 1rem 7.5rem;
   }
+}
+
+.block.block-meta {
+  max-width: 100%;
 }
 
 .book-header__inner {
