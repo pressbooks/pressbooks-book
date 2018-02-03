@@ -42,7 +42,9 @@
 							<?php global $page, $numpages;
 							if ( $page > 1 ) { ?>
 									<div class="nav-reading--page__previous">
-										<?php echo _wp_link_page( $page -1 );?><span class="icon icon-arrow-left"></span><?php
+										<?php echo _wp_link_page( $page -1 );?><svg class="icon--svg">
+								<use xlink:href="#arrow-left" />
+							</svg><?php
 										echo __( 'Previous Page', 'pressbooks-book' ) . '</a>' ?>
 									</div><?php
 							}
@@ -50,7 +52,9 @@
 							if ( $page < $numpages ) {?>
 									<div class="nav-reading--page__next">
 										<?php echo _wp_link_page( $page + 1 );?><?php
-										echo __( 'Next Page', 'pressbooks-book' ) . '<span class="icon icon-arrow-right"></span></a>' ?>
+										echo __( 'Next Page', 'pressbooks-book' ) . '<svg class="icon--svg">
+										<use xlink:href="#arrow-right" />
+									</svg></a>' ?>
 									</div><?php
 							}	?>
 						</div>

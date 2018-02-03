@@ -23,7 +23,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
 					<?php $chapter_number = pb_get_chapter_number( $section['post_name'] );
 					if ( $chapter_number ) {
-						echo "<span>$chapter_number</span>  ";
+						echo "<span>$chapter_number</span>. ";
 					}
 					echo pb_strip_br( $section['post_title'] );?>
 				</a>
@@ -73,10 +73,10 @@ function license_to_icons( $license ) {
 			if ( $part !== 'cc' ) {
 				$part = 'cc-' . $part;
 			}
-			$output .= "<span class='icon icon-$part'></span>";
+			$output .= sprintf( '<svg class="icon" style="fill: #000"><use xlink:href="#%s" /></svg>', $part );
 		}
 	} elseif ( $license === 'public-domain' ) {
-		$output .= "<span class='icon icon-cc-pd'></span>";
+		$output .= "<svg class='icon'></svg><use xlink:href='cc-pd' /></svg>";
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
@@ -114,9 +114,8 @@ function license_to_text( $license ) {
 
 function share_icons() {
 	$output = '';
-	$output .= '<a class="icon icon-twitter sharer" data-sharer="twitter" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '" data-via="pressbooks"></a>';
-	$output .= '<a class="icon icon-facebook sharer" data-sharer="facebook" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
-	$output .= '<a class="icon icon-google-plus sharer" data-sharer="googleplus" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"></a>';
+	$output .= '<a class="sharer" data-sharer="twitter" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '" data-via="pressbooks"><svg class="icon--svg"><use xlink:href="#twitter" /></svg></a>';
+	$output .= '<a class="sharer" data-sharer="facebook" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"><svg class="icon--svg"><use xlink:href="#facebook" /></svg></a>';
 	return $output;
 }
 
@@ -157,7 +156,7 @@ function display_menu() {
 		);
 	}
 	$items .= sprintf(
-		'<li class="header__search js-search"><a class="icon icon-search js-toggle-search"></a><div class="header__search__form">%s</div></li>',
+		'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
 		get_search_form( false )
 	);
 

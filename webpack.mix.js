@@ -15,17 +15,10 @@ const dist = 'dist';
 
 mix
 	.setPublicPath( 'dist' )
-	// .scripts(
-	// 	[
-	// 		'node_modules/jquery-columnizer/src/jquery.columnizer.js',
-	// 		'assets/scripts/columnizer-load.js',
-	// 	],
-	// 	'dist/scripts/columnizer.js'
-	// )
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
 	.js( 'assets/scripts/book.js', 'dist/scripts/book.js' )
 	.sass( 'assets/styles/book.scss', 'dist/styles' )
-	.copyDirectory( 'assets/fonts', 'dist/fonts' )
+	.copyDirectory( 'node_modules/buckram/styles', 'assets/book/styles' )
 	.copyDirectory( 'assets/images', 'dist/images' )
 	.version()
 	.options( { processCssUrls: false } );
@@ -33,8 +26,8 @@ mix
 // BrowserSync
 mix.browserSync( {
 	host:  'localhost',
-	proxy: 'http://pressbooks.test/standardtest',
-	port:  3000,
+	proxy: 'https://pressbooks.test/standardtest',
+	port:  3200,
 	files: [ '*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js` ],
 } );
 

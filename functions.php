@@ -15,6 +15,7 @@ $includes = [
 foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
+require get_template_directory() . '/inc/intervention.php';
 
 add_action( 'pb_delete_cache', '\Pressbooks\Book\Actions\delete_cached_contents' );
 
@@ -28,10 +29,12 @@ add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
  */
 global $metakeys;
 $metakeys = [
-	'pb_author' => __( 'Author(s)', 'pressbooks-book' ),
-	'pb_contributing_authors' => __( 'Contributing Author(s)', 'pressbooks-book' ),
-	'pb_editor' => __( 'Editor(s)', 'pressbooks-book' ),
-	'pb_translator' => __( 'Translator(s)', 'pressbooks-book' ),
+	'pb_authors' => __( 'Authors', 'pressbooks-book' ),
+	'pb_editors' => __( 'Editors', 'pressbooks-book' ),
+	'pb_translators' => __( 'Translators', 'pressbooks-book' ),
+	'pb_reviewers' => __( 'Reviewers', 'pressbooks-book' ),
+	'pb_illustrators' => __( 'Illustrators', 'pressbooks-book' ),
+	'pb_contributors' => __( 'Contributors', 'pressbooks-book' ),
 	'pb_book_license' => __( 'License', 'pressbooks-book' ),
 	'pb_primary_subject'  => __( 'Primary Subject', 'pressbooks-book' ),
 	'pb_additional_subjects'  => __( 'Additional Subject(s)', 'pressbooks-book' ),
@@ -93,7 +96,7 @@ function pb_enqueue_assets() {
 					update_option( 'pressbooks_webbook_structure_version', 1 );
 				}
 				$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
-				if ( ! is_file( $fullpath ) ) {
+				if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
 					$styles->updateWebBookStyleSheet();
 				}
 				if ( $styles->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
@@ -186,15 +189,21 @@ function pb_get_links( $echo = true ) {
 		?><nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
-				<a href="<?php echo $prev_chapter; ?>"><span class="icon icon-arrow-left"></span><?php _e( 'Previous Section', 'pressbooks-book' ); ?></a>
+				<a href="<?php echo $prev_chapter; ?>"><svg class="icon--svg">
+								<use xlink:href="#arrow-left" />
+							</svg><?php _e( 'Previous Section', 'pressbooks-book' ); ?></a>
 			<?php } ?>
 		</div>
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
-				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Section', 'pressbooks-book' ); ?><span class="icon icon-arrow-right"></span></a>
+				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Section', 'pressbooks-book' ); ?><svg class="icon--svg">
+								<use xlink:href="#arrow-right" />
+							</svg></a>
 			<?php endif; ?>
 		</div>
-		<a class="nav-reading__up" href="#"><span class="icon icon-arrow-up"></span><span class="nav-reading__up__text">Back to top</span></a>
+		<a class="nav-reading__up" href="#"><svg class="icon--svg">
+								<use xlink:href="#arrow-up" />
+							</svg><span class="nav-reading__up__text">Back to top</span></a>
 		</nav><?php
 	endif;
 }
@@ -423,3 +432,7 @@ function pressbooks_book_setup() {
 }
 
 add_action( 'after_setup_theme', 'pressbooks_book_setup' );
+
+add_action('wp_head', function() {
+	echo \Pressbooks\Admin\Branding\get_customizer_colors();
+});

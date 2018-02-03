@@ -40,6 +40,6 @@
 	</div>
 	<div class="block-toggle__cta">
 		<p class="block-toggle__cta__blurb"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></p>
-		<a class="block-toggle__cta__button button--circle--primary icon icon-arrow-up-down js-toggle-block"></a>
+		<a class="block-toggle__cta__button button--circle--primary js-toggle-block"><svg><use xlink:href="#arrow-down"></svg></a>
 	</div>
 </section>

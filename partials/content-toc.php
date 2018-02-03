@@ -5,16 +5,18 @@ if ( $output !== false ) {
 } else {
 	ob_start(); ?>
 
-	<ul class="toc__list">
-		<li>
-			<ul class="toc__front-matter">
+	<ol class="toc toc__list">
+		<li class="dropdown">
+			<h3><?php _e( 'Front Matter', 'pressbooks' ); ?></h3>
+			<ol class="toc__front-matter">
+
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
-			</ul>
+			</ol>
 		</li>
 		<?php $n = 1;
 		foreach ( $book_structure['part'] as $key => $part ) :
 			?>
-			<li class="toc__part js-toc-part<?php if ( count( $book_structure['part'] ) === 1 ) : ?> open<?php endif; ?>">
+			<li class="js-toc-part<?php if ( ! empty( $part['chapters'] ) ) { ?> dropdown<?php } ?>">
 				<?php if ( count( $book_structure['part'] ) > 1  && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) { ?>
 					<h3 class="toc__part__title js-toc-part-toggle">
 						<span class="inner-content"><?php
@@ -44,15 +46,16 @@ if ( $output !== false ) {
 			</li>
 		<?php if ( ! empty( $part['chapters'] ) || $part['has_post_content'] ) { $n++;
 } endforeach; ?>
-		<li>
-			<ul class="toc__back-matter">
+		<li class="dropdown">
+		<h3><?php _e( 'Back Matter', 'pressbooks' ); ?></h3>
+		<ol class="toc__back-matter">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
-			</ul>
+			</ol>
 		</li>
-	</ul><!-- end #toc -->
+	</ol><!-- end #toc -->
 
 	<?php $output = ob_get_clean();
+	echo $output;
 	set_transient( 'pb_book_contents', $output );
 }
 
-echo $output;
