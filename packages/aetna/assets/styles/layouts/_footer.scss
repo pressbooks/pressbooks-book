@@ -1,6 +1,6 @@
 .footer {
   --brand: var(--footer-color);
-  --brand-hover: var(--footer-color);
+  --primary-dark: var(--footer-color);
 
   background-color: $footer-background-color;
   color: $footer-text-color;
@@ -71,6 +71,10 @@
   @media #{$breakpoint-tablet-and-up} {
     flex-direction: row;
     margin: 2rem auto;
+  }
+
+  a {
+    color: var(--footer-text);
   }
 }
 

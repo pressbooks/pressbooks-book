@@ -97,7 +97,7 @@
       height: auto;
 
       &:hover {
-        color: var(--brand-hover);
+        color: var(--primary-dark);
       }
 
       .icon {
@@ -105,7 +105,7 @@
         font-size: 1.25rem;
 
         &:hover {
-          color: var(--brand-hover);
+          color: var(--primary-dark);
         }
       }
     }
@@ -166,7 +166,7 @@
   width: 2.5rem;
 
   &:hover {
-    background-color: var(--brand-hover);
+    background-color: var(--primary-dark);
     color: var(--button-primary-color);
     text-decoration: none;
   }
@@ -252,7 +252,7 @@
     white-space: nowrap;
 
     &:hover {
-      color: var(--brand-hover);
+      color: var(--primary-dark);
       text-decoration: none;
     }
 
@@ -263,7 +263,7 @@
       width: 1em;
 
       &:hover {
-        color: var(--brand-hover);
+        color: var(--primary-dark);
       }
     }
 
