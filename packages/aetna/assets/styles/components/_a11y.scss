@@ -16,7 +16,6 @@
 }
 
 .a11y-toolbar {
-  --header-color: $color-primary-fg;
   position: fixed;
   z-index: 99999;
   top: 0;
@@ -57,7 +56,7 @@
 
         &:hover,
         &:focus {
-          color: var(--header-color);
+          color: var(--primary-fg);
           background: var(--primary);
           text-decoration: none;
         }
@@ -102,7 +101,7 @@
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     clip-path: none;
-    color: var(--body-color);
+    color: var(--body-text);
     display: block;
     font-size: $font-size-sm;
     font-weight: bold;

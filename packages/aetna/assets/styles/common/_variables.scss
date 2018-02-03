@@ -10,32 +10,29 @@ $reading-page-max-width: 800px;
 $primary: #b01109 !default;
 $primary-dark: darken($primary, 10%) !default;
 $primary-alpha: rgba($primary, 0.25) !default;
+$primary-foreground: #fff !default;
+
 $accent: #015d75 !default;
 $accent-dark: darken($accent, 10%) !default;
+$accent-alpha: rgba($accent, 0.25) !default;
+$accent-foreground: #fff !default;
 
-$brand-bg: #fff !default;
-$brand-bg-alt: #f9fdff !default;
-$brand-bg-alt2: #ececec !default;
-$brand-text: #000 !default;
+$success-color: #070 !default;
+$error-color: #d00 !default;
+$warning-color: #e90 !default;
 
-$btn-color: #fff !default;
+$text-color: #222222 !default;
+$background-color: #fff !default;
+$background-alt-color: #f6f6f6 !default;
 
-$body-bg: $brand-bg !default;
-$body-color: $brand-text !default;
+$header-background-color: $background-color !default;
+$header-text-color: $text-color !default;
 
-$header-bg: $brand-bg !default;
-$header-color: $brand-text !default;
+$body-background-color: $background-color !default;
+$body-text-color: $text-color !default;
 
-$footer-bg: #444 !default;
-$footer-color: #fff !default;
-
-$book-bg: #fff !default;
-
-$color-primary-fg: #fff !default;
-$color-accent-fg: #fff !default;
-
-$color-header-text: #000 !default;
-$color-cover-header-bg: #000;
+$footer-background-color: #444 !default;
+$footer-text-color: #fff !default;
 
 //navigation
 $nav-reading-height-mobile: 2.5rem;
@@ -43,7 +40,7 @@ $nav-reading-height-mobile: 2.5rem;
 // Style anchor elements.
 $link-color: var(--primary) !default;
 $link-decoration: none !default;
-$link-hover-color: var(--brand-hover) !default;
+$link-hover-color: var(--primary-dark) !default;
 $link-hover-decoration: underline !default;
 
 // Paragraphs
@@ -148,7 +145,7 @@ $table-dark-bg: #222 !default;
 $table-dark-accent-bg: rgba(255, 255, 255, 0.05) !default;
 $table-dark-hover-bg: rgba(255, 255, 255, 0.075) !default;
 $table-dark-border-color: lighten(#222, 7.5%) !default;
-$table-dark-color: $body-bg !default;
+$table-dark-color: $background-color !default;
 
 // Buttons
 //

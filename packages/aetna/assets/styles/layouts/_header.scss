@@ -76,12 +76,14 @@
     }
 
     .header__nav--active & {
-      --header-color: var(--primary-fg);
-      background: var(--header-color);
+      --header-bg: var(--primary);
+      --header-text: var(--primary-fg);
+      color: var(--header-text);
+      background: var(--header-bg);
 
       &::before,
       &::after {
-        background: var(--header-color);
+        background: var(--header-bg);
       }
     }
   }

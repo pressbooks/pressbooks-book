@@ -44,39 +44,39 @@ button,
 input[type="submit"] {
   background-color: var(--primary);
   border-color: var(--primary);
-  color: var(--button-primary-color);
+  color: var(--primary-fg);
 
   &:focus,
   &:hover {
-    background-color: var(--brand-hover);
+    background-color: var(--primary-dark);
     border-color: var(--brand-hover);
-    color: var(--button-primary-color);
+    color: var(--primary-fg);
   }
 }
 
 a.call-to-action {
-  background-color: var(--button-primary-color);
+  background-color: var(--primary-fg);
   border-color: var(--primary);
   color: var(--primary);
 
   &:focus,
   &:hover {
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
     color: var(--button-primary-color);
   }
 }
 
 [class$="--alternate"] .call-to-action {
   background-color: var(--accent);
-  border-color: var(--button-primary-color);
-  color: var(--button-primary-color);
+  border-color: var(--accent-fg);
+  color: var(--accent-fg);
 
   &:focus,
   &:hover {
-    background-color: var(--button-primary-color);
-    border-color: var(--button-primary-color);
-    color: var(--accent);
+    background-color: var(--accent-dark);
+    border-color: var(--accent-fg);
+    color: var(--accent-fg);
   }
 }
 
@@ -87,15 +87,15 @@ a.call-to-action {
 
   &:focus,
   &:hover {
-    border-color: var(--brand-hover);
-    color: var(--brand-hover);
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
   }
 }
 
 .button--circle--primary {
   align-items: center;
   background-color: var(--primary);
-  color: var(--button-primary-color);
+  color: var(--primary-fg);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -104,9 +104,9 @@ a.call-to-action {
 
   &:focus,
   &:hover {
-    background-color: var(--brand-hover);
-    border-color: var(--brand-hover);
-    color: var(--button-primary-color);
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--primary-fg);
     text-decoration: none;
   }
 }

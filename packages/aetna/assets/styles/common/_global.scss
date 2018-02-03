@@ -1,126 +1,19 @@
 :root {
-  --font-family-sans-serif: $font-family-sans-serif;
-  --font-family-monospace: $font-family-monospace;
-  --body-bg: $body-bg;
-  --body-bg-alt: $brand-bg-alt;
-  --body-bg-alt2: $brand-bg-alt2;
-  --body-color: $body-color;
-  --button-primary-color: $btn-color;
-  --button-primary-hover-color: $primary-dark;
-  --button-secondary-color: $primary;
-  --button-secondary-hover-color: $primary-dark;
-  --header-bg: $header-bg;
-  --header-color: $header-color;
-  --footer-bg: $footer-bg;
-  --footer-color: $footer-color;
-  --book-bg: $book-bg;
   --primary: $primary;
   --primary-dark: $primary-dark;
   --primary-alpha: $primary-alpha;
+  --primary-fg: $primary-foreground;
   --accent: $accent;
   --accent-dark: $accent-dark;
-  --primary-fg: $color-primary-fg;
-  --accent-fg: $color-accent-fg;
-  --header-text: $color-header-text;
-  --cover-header-bg: $color-cover-header-bg;
+  --accent-fg: $accent-foreground;
+  --success: $success-color;
+  --error: $error-color;
+  --warning: $warning-color;
+  --body-bg: $background-color;
+  --body-bg-alt: $background-alt-color;
+  --body-text: $text-color;
+  --header-bg: $header-background-color;
+  --header-text: $header-text-color;
+  --footer-bg: $footer-background-color;
+  --footer-text: $footer-text-color;
 }
-
-// html {
-//   -webkit-font-smoothing: antialiased;
-// }
-
-// * {
-//   box-sizing: border-box;
-// }
-
-// body {
-//   margin: 0;
-//   font-family: $font-family-serif;
-//   font-size: rem(18);
-//   background: $white;
-// }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: $font-family-sans-serif;
-// }
-
-// h1 {
-//   font-size: rem(30);
-//   font-weight: 600;
-//   letter-spacing: rem(2);
-//   line-height: (36/30);
-//   margin: 0;
-// }
-
-// h2 {
-//   font-size: rem(30);
-//   font-weight: 600;
-//   color: var(--primary, $brand-primary);
-//   letter-spacing: 2px;
-//   line-height: (36/30);
-//   text-transform: uppercase;
-//   text-align: center;
-//   margin: 0;
-
-//   &::before {
-//     content: "";
-//     display: block;
-//     margin: 0 auto 1em;
-//     width: 46px;
-//     height: 5px;
-//     background: var(--accent, $accent);
-//   }
-// }
-
-// a {
-//   color: var(--primary, $brand-primary);
-//   text-decoration: none;
-// }
-
-// :root {
-//   --primary: $brand-primary;
-//   --accent: $accent;
-//   --primary-fg: $white;
-//   --accent-fg: $white;
-//   --header-text: $black;
-// }
-
-// .primary {
-//   color: var(--brand-primary, $brand-primary);
-// }
-
-// .bg-primary {
-//   background-color: var(--brand-primary, $brand-primary);
-// }
-
-// .b--primary {
-//   border-color: var(--brand-primary, $brand-primary);
-// }
-
-// .accent {
-//   color: var(--brand-secondary, $accent);
-// }
-
-// .bg-accent {
-//   background-color: var(--brand-secondary, $accent);
-// }
-
-// .b--accent {
-//   border-color: var(--brand-secondary, $accent);
-// }
-
-// @media (min-width: $medium) {
-//   h2 {
-//     font-size: rem(48);
-//     line-height: (56/48);
-
-//     &::before {
-//       width: 74px;
-//     }
-//   }
-// }

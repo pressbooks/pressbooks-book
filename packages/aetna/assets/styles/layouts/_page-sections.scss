@@ -77,7 +77,6 @@
 .block.block-toggle {
   @media #{$breakpoint-not-large} {
     &:not(.block-toggle--visible) {
-      //padding-bottom: 2.5rem;
       .block-toggle__content {
         display: none;
       }
