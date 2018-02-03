@@ -72,6 +72,18 @@
   position: absolute;
   transform: translate(-50%, 50%);
   z-index: 10;
+  color: var(--primary-fg);
+
+  svg {
+    width: 1.5rem;
+    height: 2rem;
+  }
+
+  &.--visible {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .block.block-toggle {

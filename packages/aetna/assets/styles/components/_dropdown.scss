@@ -1,35 +1,39 @@
 // The dropdown wrapper (`<div>`)
-.dropup,
-.dropdown {
-  position: relative;
+
+.dropdown > p {
+  margin-bottom: 0;
 }
 
-.dropdown-toggle {
-  // Generate the caret automatically
-  &::after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 1rem;
-    vertical-align: $caret-width * 0.85;
-    content: '';
-    border-top: $caret-width solid;
-    border-right: $caret-width solid transparent;
-    border-left: $caret-width solid transparent;
+.dropdown button {
+  border: 0;
+  border-bottom: 3px solid var(--header-text);
+  border-radius: 0;
+  background: transparent;
+  color: $text-color;
+  text-transform: none;
+  text-align: left;
+  padding: 0 0 0.5rem;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-dark, $primary-dark);
+    border-bottom-color: var(--primary-dark, $primary-dark);
   }
 
-  &.dropdown-toggle-block {
-    align-items: center;
-    display: flex;
-
-    &::after {
-      margin-left: auto;
-    }
+  &:active {
+    box-shadow: unset;
   }
 
-  &:empty::after {
-    margin-left: 0;
+  .arrow {
+    display: block;
+    float: right;
+    margin-top: 0.5rem;
   }
+}
+
+.dropdown [aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
 }
 
 // The dropdown menu
@@ -44,7 +48,7 @@
   padding: $dropdown-padding-y 0;
   margin: $dropdown-spacer 0 0; // override default ul
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
-  color: $body-color;
+  color: $body-text-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
@@ -86,7 +90,7 @@
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
-  background: none; // For `<button>`s
+  background: var(--body-bg-alt); // For `<button>`s
   border: 0; // For `<button>`s
 
   &:focus,
