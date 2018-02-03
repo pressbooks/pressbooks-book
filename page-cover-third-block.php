@@ -9,7 +9,45 @@
 						$about_unlimited = preg_replace( '/<p[^>]*>(.*)<\/p[^>]*>/i', '$1', $about_unlimited ); // Make valid HTML by removing first <p> and last </p>
 						echo $about_unlimited; ?></p>
 			</div>
-		<?php endif; ?></div>
+		<?php endif;
+		$output = get_transient( 'pb_book_source' );
+if ( $output !== false ) {
+	echo $output;
+} else {
+	ob_start();
+	$source_url = \Pressbooks\Book\Helpers\get_source_book( home_url() );
+	if ( $source_url !== home_url() ) { ?>
+		<div class="block-info__subsection block-info__source">
+		<h3 class="block__subtitle"><?php _e( 'Book Source', 'pressbooks-book' ); ?></h3>
+		<p>
+			<?php
+			$args = [];
+			if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
+				$args['sslverify'] = false;
+			}
+			$source_book = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/', $args )['body'], true );
+			$authors = [];
+			if ( array_key_exists( 'name', $source_book['author'] ) ) {
+				$authors[] = $source_book['author']['name'];
+			} else {
+				foreach ( $source_book['author'] as $author ) {
+					$authors[] = $author['name'];
+				}
+			};
+			printf(
+				__( 'This book is a cloned version of %1$s by %2$s, published using Pressbooks by %3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
+				sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_book['name'] ),
+				\Pressbooks\Utility\oxford_comma( $authors ),
+				( isset( $source_book['publisher'] ) ) ? $source_book['publisher']['name'] : '',
+				sprintf( '<a href="%1$s">%2$s</a>', $source_book['license']['url'], $source_book['license']['name'] )
+			); ?>
+		</p>
+		</div>
+	<?php }
+	$output = ob_get_clean();
+	echo $output;
+	set_transient( 'pb_book_source', $output );
+} ?></div>
 		<div class="block-info__inner__content">
 			<div class="block-info__subsection block-info__lead-author">
 				<h3 class="block__subtitle"><?php _e( 'Author(s)', 'pressbooks-book' ); ?></h3>

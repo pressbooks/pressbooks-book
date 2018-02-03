@@ -49,6 +49,7 @@ function get_name_for_filetype( $filetype ) {
 		'print-pdf' => __( 'Print PDF', 'pressbooks-book' ),
 		'pdf' => __( 'Digital PDF', 'pressbooks-book' ),
 		'mpdf' => __( 'Digital PDF', 'pressbooks-book' ),
+		'htmlbook' => __( 'HTMLBook', 'pressbooks-book' ),
 		'epub' => __( 'EPUB', 'pressbooks-book' ),
 		'mobi' => __( 'MOBI', 'pressbooks-book' ),
 		'epub3' => __( 'EPUB3', 'pressbooks-book' ),
@@ -160,4 +161,29 @@ function display_menu() {
 	);
 
 	return $items;
+}
+
+/**
+ * Get the original source of a cloned book.
+ *
+ * @since 2.0.0
+ *
+ * @param string $book_url The URL of the book to trace.
+ * @param array $checked An array of book URLs which have already been checked.
+ *
+ * @return string The URL of the original book.
+ */
+function get_source_book( $book_url, $checked = [] ) {
+	$output = $book_url;
+	$args = [];
+	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
+		$args['sslverify'] = false;
+	}
+	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
+	$result = json_decode( $response['body'], true );
+	if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
+		$checked[] = $result['isBasedOn'];
+		$output = get_source_book( $result['isBasedOn'], $checked );
+	}
+	return $output;
 }

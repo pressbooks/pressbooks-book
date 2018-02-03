@@ -70,12 +70,12 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 					?>
 				</div>
 			</div>
+
 			<?php
 
 			if ( ! empty( $book_information['pb_about_50'] ) ) { ?>
 				<p class="book-header__description"><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 			<?php } ?>
-
 		<?php global $first_chapter; ?>
 		<div class="book-header__license">
 			<?php $license = ( isset( $book_information['pb_book_license'] ) ) ? $book_information['pb_book_license'] : 'all-rights-reserved'; ?>
