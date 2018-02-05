@@ -79,11 +79,11 @@
       --header-bg: var(--primary);
       --header-text: var(--primary-fg);
       color: var(--header-text);
-      background: var(--header-bg);
+      background: var(--header-text);
 
       &::before,
       &::after {
-        background: var(--header-bg);
+        background: var(--header-text);
       }
     }
   }
