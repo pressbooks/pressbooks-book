@@ -1,8 +1,5 @@
 // stylelint-disable no-descending-specificity
-.single-front-matter,
-.single-part,
-.single-chapter,
-.single-back-matter {
+body:not(.home) {
   .header {
     padding-left: 0;
     padding-right: 0;
@@ -24,7 +21,8 @@
   margin-top: 3rem;
 
   //overwrite link colors of potential book theme
-  .reading-header__title a {
+  .reading-header__title a,
+  .reading-header__end-container a {
     color: var(--header-color);
     text-decoration: $link-decoration;
 
@@ -146,15 +144,10 @@
   @media #{$breakpoint-large} {
     display: flex;
     justify-content: flex-end;
-  }
-}
 
-#content .entry-content a.call-to-action,
-.edit-link .call-to-action {
-  color: var(--primary);
-
-  &:hover,
-  &:focus {
-    color: var(--primary-dark);
+    a {
+      font-size: 1.125rem;
+      text-transform: uppercase;
+    }
   }
 }

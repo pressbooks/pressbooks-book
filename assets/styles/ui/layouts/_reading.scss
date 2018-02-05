@@ -39,3 +39,13 @@ h1.reading-header__title {
 .part-title {
   text-align: right;
 }
+
+#content .entry-content a.call-to-action,
+.edit-link .call-to-action {
+  color: var(--primary);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-dark);
+  }
+}

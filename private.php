@@ -2,14 +2,13 @@
 
 	<div <?php post_class(); ?>>
 		<h2 class="entry-title denied-title"><?php _e( 'Access Denied', 'pressbooks-book' ); ?></h2>
-		<!-- Table of content loop goes here. -->
 		<div class="entry-content denied-text">
 			<p><?php printf(
 				__( 'This book is private, and accessible only to registered users. If you have an account you can %s.', 'pressbooks-book' ),
 				sprintf(
 					'<a href="%1$s">%2$s</a>',
 					get_bloginfo( 'url' ) . '/wp-login.php',
-					__( 'login here', 'pressbooks-book' )
+					__( 'sign in here', 'pressbooks-book' )
 				)
 			); ?></p>
 			<p><?php printf(

@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  #page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content {
+    flex-grow: 1;
+  }
+}
+
+.page .hentry {
+  padding: 0 1rem;
+  margin-bottom: 4rem;
+
+  @media #{$breakpoint-large} {
+    padding: 0;
+  }
+}
+
+#content h2.page-title,
+body:not(.home) #content h2.denied-title {
+  font-family: $font-family-sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem 0 4rem;
+
+  &:before {
+    display: none;
+  }
+}
+
+#content .denied-text {
+  p {
+    font-family: $font-family-serif;
+    font-size: rem(18);
+
+    a {
+      color: var(--primary);
+
+      &:hover,
+      &:focus {
+        color: var(--primary-dark);
+      }
+    }
+  }
+}
+
+.posts-navigation {
+  margin: 2rem 0;
+}
+
+.nav-previous,
+.nav-next {
+  a {
+    display: flex;
+    align-items: center;
+    font-family: $font-family-sans-serif;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.nav-previous svg {
+  margin-right: 0.5rem;
+}
+
+.nav-next svg {
+  margin-left: 0.5rem;
+}
+
+.private-block {
+  margin-bottom: 4rem;
+}
+
+.footer.footer--home {
+  padding-top: 1rem;
+}
+
+.buy-book {
+  li + li {
+    margin-top: 1rem;
+  }
+}
+
+.bookstore-logo-link {
+  margin-right: 0.5rem;
+}

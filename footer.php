@@ -15,7 +15,12 @@ global $multipage;
 ?>
 
 
-<footer class="footer<?php echo is_front_page() ? ' footer--home' : ' footer--reading' ?><?php echo $multipage ? ' footer--multipage' : '' ?>">
+<footer class="footer<?php
+if ( is_front_page() ) : echo ' footer--home';
+elseif ( is_single() ) : echo ' footer--reading';
+else : echo ' footer--page';
+endif;
+echo $multipage ? ' footer--multipage' : ''; ?>">
 	<div class="footer__inner">
 		<section class="footer__pressbooks">
 			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">

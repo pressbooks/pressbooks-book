@@ -11,8 +11,10 @@
 </head>
 <?php if ( is_front_page() ) {
 	$schema = 'itemscope itemtype="http://schema.org/Book" itemref="about alternativeHeadline author copyrightHolder copyrightYear datePublished description editor image inLanguage keywords publisher" ';
-} else {
+} elseif ( is_single() ) {
 	$schema = 'itemscope itemtype="http://bib.schema.org/Chapter" itemref="about copyrightHolder copyrightYear inLanguage publisher" ';
+} else {
+	$schema = '';
 } ?>
 <body <?php body_class(); ?> <?php echo $schema; ?>>
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +110,7 @@
 
 					<div class="reading-header__end-container">
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-						<a class="button button--primary button--header" href="<?php echo home_url( '/buy/' ); ?>"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
+						<a href="<?php echo home_url( '/buy/' ); ?>"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
 						<?php endif; ?>
 					</div>
 				</nav>
