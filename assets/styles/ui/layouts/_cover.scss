@@ -13,11 +13,14 @@
   --primary: var(--header-color);
   --primary-dark: var(--header-color);
   --accent: var(--header-color);
+  --header-color: var(--body-bg);
+  --header-bg: var(--body-text);
 
   width: 100%;
   max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 4rem;
 
   background-color: var(--header-bg);
   color: var(--header-color);
@@ -28,7 +31,8 @@
   }
 }
 
-.home #content .block.block-meta {
+.block.block-meta,
+.book-header {
   max-width: 100%;
 }
 
@@ -37,8 +41,8 @@
   flex-direction: column;
   //align-items: center;
   margin: 0 auto;
-  max-width: $content-max-width;
-  min-height: 560px;
+  max-width: 60rem;
+  min-height: rem(560);
   position: relative;
 
   @media #{$breakpoint-tablet-and-up} {
@@ -101,7 +105,6 @@
 }
 
 .book-header__cover__downloads {
-  border-bottom: 3px solid var(--header-color);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 
@@ -129,10 +132,6 @@
 
   a {
     color: var(--cover-header-bg);
-  }
-
-  .dropdown-menu {
-    border-color: var(--header-color);
   }
 }
 //nested selector to overwrite general display rule from .book-header__share
@@ -246,12 +245,22 @@
     flex-direction: row;
   }
 
-  .button {
+  .call-to-action {
     margin-bottom: 0.875rem;
     min-width: 15rem;
 
     @media #{$breakpoint-tablet-and-up} {
       margin-right: 1.375rem;
+    }
+
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    border-color: var(--header-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--header-color);
+      color: var(--header-bg);
     }
   }
 }

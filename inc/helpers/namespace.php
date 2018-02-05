@@ -128,10 +128,9 @@ function display_menu() {
 			__( 'Home', 'pressbooks-aldine' )
 		);
 	} else {
-		global $first_chapter;
 		$items = sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
-			$first_chapter,
+			pb_get_first(),
 			__( 'Read', 'pressbooks-aldine' )
 		);
 	}

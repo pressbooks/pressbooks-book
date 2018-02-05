@@ -1,0 +1,17 @@
+h1.reading-header__title {
+  &::before {
+    display: none;
+  }
+}
+
+.single-front-matter,
+.single-part,
+.single-chapter,
+.single-back-matter {
+  #content h1,
+  #content h2 {
+    &::before {
+      display: none;
+    }
+  }
+}

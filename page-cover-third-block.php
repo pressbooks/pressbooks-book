@@ -78,7 +78,6 @@ if ( $output !== false ) {
 	</div>
 
 	<div class="block-toggle__cta">
-		<p class="block-toggle__cta__blurb"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></p>
-		<a class="block-toggle__cta__button button--circle--primary js-toggle-block"><svg><use xlink:href="#arrow-down"></svg></a>
+		<a class="block-toggle__cta__button button--circle--primary js-toggle-block"><svg><use xlink:href="#arrow-down"></svg><span class="screen-reader-text"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></span></a>
 	</div>
 </section>

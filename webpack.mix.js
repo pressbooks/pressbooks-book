@@ -31,6 +31,11 @@ mix.browserSync( {
 	files: [ '*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js` ],
 } );
 
+// Source maps when not in production.
+if ( ! mix.inProduction() ) {
+	mix.sourceMaps();
+}
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

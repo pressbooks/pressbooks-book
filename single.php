@@ -4,7 +4,7 @@
 		get_header();
 		if ( pb_is_public() ) :
 			$web_options = get_option( 'pressbooks_theme_options_web' );
-			$number = pb_get_chapter_number( $post->post_name );
+			$number = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->post_name ) : false;
 			$subtitle = get_post_meta( $post->ID, 'pb_subtitle', true );
 			$author = get_post_meta( $post->ID, 'pb_section_author', true );
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
