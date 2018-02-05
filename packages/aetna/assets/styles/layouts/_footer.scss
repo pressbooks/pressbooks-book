@@ -27,25 +27,24 @@
   }
 
   &.footer--reading {
+    padding-top: 1rem;
     padding-bottom: 7rem;
 
-    @media #{$breakpoint-large} {
-      padding-bottom: 7rem;
+    @media #{$breakpoint-tablet-and-up} {
+      padding-bottom: 4rem;
     }
 
-    @media #{$breakpoint-max-content} {
-      padding-bottom: 2.5rem;
+    @media #{$breakpoint-large} {
+      padding-bottom: 1rem;
     }
 
     &.footer--multipage {
-      padding-bottom: 9.5rem;
-
       @media #{$breakpoint-large} {
-        padding-bottom: 7rem;
+        padding-bottom: 4rem;
       }
 
       @media #{$breakpoint-max-content} {
-        padding-bottom: 2.5rem;
+        padding-bottom: 1rem;
       }
     }
   }

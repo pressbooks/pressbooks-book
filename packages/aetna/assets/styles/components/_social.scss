@@ -1,10 +1,18 @@
 .block-reading-meta {
-  background-color: var(--background);
+  background-color: var(--body-bg-alt);
   font-family: $font-family-sans-serif;
   padding: 2rem 1rem 4rem;
 
   @media #{$breakpoint-tablet-and-up} {
     padding: 2rem 1rem 2.25rem;
+  }
+
+  .license-attribution {
+    font-size: 1rem;
+
+    img {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -22,7 +30,14 @@
 }
 
 .block-reading-meta__subtitle {
+  &:before {
+    display: none;
+  }
+
+  font-size: 1.25rem;
+  text-align: left;
   color: var(--primary);
+  margin-bottom: 1rem;
 }
 
 .block-reading-meta__share {
@@ -31,5 +46,10 @@
 
   & > :first-child {
     margin-left: 0;
+  }
+
+  svg {
+    width: 3rem;
+    height: 2rem;
   }
 }
