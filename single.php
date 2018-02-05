@@ -8,11 +8,8 @@
 			$subtitle = get_post_meta( $post->ID, 'pb_subtitle', true );
 			$author = get_post_meta( $post->ID, 'pb_section_author', true );
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
-				if ( pb_get_section_type( $post ) === 'chapter' ) {
-					$part_title = get_post_field( 'post_title', $post->post_parent );
-					if ( ! is_wp_error( $part_title ) ) {
-						echo "<div class='part-title'><small>" . $part_title . '</small></div>';
-					}
+				if ( $post->post_type === 'chapter' ) {
+					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
 		<section data-type="<?php echo pb_get_section_type( $post ) ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>

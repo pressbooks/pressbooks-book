@@ -8,10 +8,22 @@ h1.reading-header__title {
 .single-part,
 .single-chapter,
 .single-back-matter {
-  #content h1,
-  #content h2 {
-    &::before {
-      display: none;
+  #content {
+    padding: 0 1rem;
+
+    @media #{$breakpoint-large} {
+      padding: 0;
+    }
+
+    h1,
+    h2 {
+      &::before {
+        display: none;
+      }
     }
   }
+}
+
+.part-title {
+  text-align: right;
 }

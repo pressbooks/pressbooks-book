@@ -134,7 +134,20 @@ ol.toc__chapters {
     &:last-child {
       margin-bottom: 0;
     }
+
+    .toc__chapter-title {
+      span {
+        //display: inline-block;
+        //width: 2rem;
+        //text-align: right;
+      }
+    }
   }
+}
+
+.toc__subsection {
+  font-size: 1rem;
+  padding: 1rem 0 0 1rem;
 }
 
 //reading
@@ -170,6 +183,11 @@ ol.toc__chapters {
     width: 15.5rem;
     margin-right: -1rem;
     z-index: 100;
+  }
+
+  .toc__subsection {
+    font-size: 1rem;
+    padding: 1rem 0 0 1rem;
   }
 
   li {
