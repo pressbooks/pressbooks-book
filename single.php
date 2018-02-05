@@ -7,63 +7,20 @@
 			$number = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->post_name ) : false;
 			$subtitle = get_post_meta( $post->ID, 'pb_subtitle', true );
 			$author = get_post_meta( $post->ID, 'pb_section_author', true );
+			$datatype = ( in_array( $post->post_type, [ 'front-matter', 'back-matter' ], true ) ) ? pb_get_section_type( $post ) : $post->post_type;
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
 				if ( $post->post_type === 'chapter' ) {
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
-		<section data-type="<?php echo pb_get_section_type( $post ) ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
-			<header>
-				<h1 class="entry-title">
-					<?php if ( $number ) { echo "<span>$number</span> "; }
-					the_title(); ?>
-				</h1>
-				<?php if ( $subtitle ) { ?>
-				<p data-type="subtitle"><?php echo $subtitle; ?></p>
-				<?php } ?>
-				<?php if ( $author ) { ?>
-				<p data-type="author"><?php echo $author; ?></p>
-				<?php } ?>
-			</header>
-				<?php if ( get_post_type( $post->ID ) !== 'part' ) {
-					if ( pb_should_parse_subsections() ) {
-						$content = pb_tag_subsections( apply_filters( 'the_content', get_the_content() ), $post->ID );
-						echo $content;
-					} else {
-						$content = apply_filters( 'the_content', get_the_content() );
-						echo $content;
-					}
-					global $multipage;
-					if ( $multipage ) { ?>
-						<div class="nav-reading--page">
-							<?php global $page, $numpages;
-							if ( $page > 1 ) { ?>
-									<div class="nav-reading--page__previous">
-										<?php echo _wp_link_page( $page -1 );?><svg class="icon--svg">
-								<use xlink:href="#arrow-left" />
-							</svg><?php
-										echo __( 'Previous Page', 'pressbooks-book' ) . '</a>' ?>
-									</div><?php
-							}
-
-							if ( $page < $numpages ) {?>
-									<div class="nav-reading--page__next">
-										<?php echo _wp_link_page( $page + 1 );?><?php
-										echo __( 'Next Page', 'pressbooks-book' ) . '<svg class="icon--svg">
-										<use xlink:href="#arrow-right" />
-									</svg></a>' ?>
-									</div><?php
-							}	?>
-						</div>
-					<?php }
+<?php if ( pb_use_htmlbook() ) {
+	include( locate_template( 'partials/content-single.php' ) );
 } else {
-	echo apply_filters( 'the_content', $post->post_content );
+	include( locate_template( 'partials/content-single-legacy.php' ) );
 } ?>
-			</section>
-			<?php pb_get_links(); ?>
-			<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'button button--primary' ); ?>
+<?php pb_get_links(); ?>
 
-		</div><!-- #content -->
+</div><!-- #content -->
 
 				<?php
 				if ( pb_social_media_enabled() ) {	?>

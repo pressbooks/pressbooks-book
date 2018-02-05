@@ -148,3 +148,13 @@
     justify-content: flex-end;
   }
 }
+
+#content .entry-content a.call-to-action,
+.edit-link .call-to-action {
+  color: var(--primary);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-dark);
+  }
+}

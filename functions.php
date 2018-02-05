@@ -436,3 +436,10 @@ add_action( 'after_setup_theme', 'pressbooks_book_setup' );
 add_action('wp_head', function() {
 	echo \Pressbooks\Admin\Branding\get_customizer_colors();
 });
+
+function pb_use_htmlbook() {
+	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {
+		return true;
+	}
+	return false;
+}
