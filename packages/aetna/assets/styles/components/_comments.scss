@@ -1,9 +1,8 @@
-.block-comments {
-  --brand: var(--footer-color);
+.section-comments {
   --primary-dark: var(--footer-color);
-  --brand-accent: var(--footer-color);
+  --accent: var(--footer-color);
 
-  background-color: $footer-background-color;
+  background-color: var(--footer-bg);
   color: $footer-text-color;
   font-family: $font-family-sans-serif;
   padding: 2rem 1rem 2.25rem;
@@ -14,31 +13,33 @@
 
   //overwrite link colors of potential book theme
   a {
-    color: $link-color;
-    text-decoration: $link-decoration;
+    color: var(--footer-color);
+    text-decoration: underline;
 
-    &:hover {
-      color: $link-hover-color;
-      text-decoration: $link-hover-decoration;
+    &:hover,
+    &:focus {
+      color: var(--primary);
+      text-decoration: underline;
     }
   }
 }
 
-.block-comments__inner {
+.section-comments__inner {
   max-width: $reading-page-max-width;
   margin: 0 auto;
 }
 
-.section__title.block-comments__title {
+.section__title.section-comments__title {
   font-size: 1.5rem;
 
   &::before {
     margin: 0 auto 1rem;
     width: 46px;
+    background: var(--footer-color);
   }
 }
 
-.block-comments__form {
+.section-comments__form {
   max-width: 400px;
   margin: 0 auto;
 
@@ -113,10 +114,18 @@
   text-align: center;
 
   @media #{$breakpoint-large} {
-    float: right;
-    //margin-top: 1rem;
+    text-align: right;
     width: 350px;
   }
+}
+
+#comments-title {
+  font-size: 1.125rem;
+}
+
+.commentlist {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .form-submit input#submit {

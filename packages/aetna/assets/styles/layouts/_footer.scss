@@ -30,22 +30,12 @@
     padding-top: 1rem;
     padding-bottom: 7rem;
 
-    @media #{$breakpoint-tablet-and-up} {
+    @media screen and (min-width: rem(768)) {
       padding-bottom: 4rem;
     }
 
-    @media #{$breakpoint-large} {
+    @media #{$breakpoint-max-content} {
       padding-bottom: 1rem;
-    }
-
-    &.footer--multipage {
-      @media #{$breakpoint-large} {
-        padding-bottom: 4rem;
-      }
-
-      @media #{$breakpoint-max-content} {
-        padding-bottom: 1rem;
-      }
     }
   }
 
