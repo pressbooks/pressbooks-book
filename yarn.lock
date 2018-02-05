@@ -178,9 +178,9 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.1"
 
-aetna@^1.0.0-alpha.10:
-  version "1.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/aetna/-/aetna-1.0.0-alpha.10.tgz#3a8b05b579c0ed88a32bc525e9cc037438c35fe1"
+aetna@^1.0.0-alpha.11:
+  version "1.0.0-alpha.11"
+  resolved "https://registry.yarnpkg.com/aetna/-/aetna-1.0.0-alpha.11.tgz#98b722e141013d01a6212235bd62e2a5dec5c160"
   dependencies:
     "@frctl/fractal" "^1.1.7"
 
