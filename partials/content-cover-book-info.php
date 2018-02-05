@@ -75,6 +75,12 @@ if ( $output !== false ) {
 			</div>
 			<?php } ?>
 		</div>
+		<?php
+		/**	Append content to cover book info block.
+		 * @since 2.0.0
+		 */
+		do_action( 'pb_book_cover_after_book_info' );
+		?>
 	</div>
 
 	<div class="block-toggle__cta">

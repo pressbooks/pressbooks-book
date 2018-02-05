@@ -98,5 +98,11 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 }
 			?>
 		</div>
+		<?php
+		/**	Append content to cover book header block.
+		 * @since 2.0.0
+		 */
+		do_action( 'pb_book_cover_after_book_header' );
+		?>
 	</div>
 </section>

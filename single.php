@@ -50,6 +50,11 @@
 <?php else : ?>
 <?php pb_private(); ?>
 <?php endif; ?>
-<?php get_footer(); ?>
+<?php
+/**	Insert content before content footer.
+ * @since 2.0.0
+ */
+do_action( 'pb_book_content_before_footer' );
+get_footer(); ?>
 <?php endwhile;
 };?>
