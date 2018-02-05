@@ -25,7 +25,7 @@
 }
 
 .section-comments__inner {
-  max-width: $reading-page-max-width;
+  max-width: var(--reading-width, $reading-page-max-width);
   margin: 0 auto;
 }
 
