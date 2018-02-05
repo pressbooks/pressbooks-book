@@ -425,6 +425,11 @@ function pb_social_media_enabled() {
 	return false;
 }
 
+function pb_webbook_width() {
+	$options = get_option( 'pressbooks_theme_options_web' );
+	return $options['webbook_width'] ?? '40em';
+}
+
 function pressbooks_book_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
@@ -436,6 +441,11 @@ add_action( 'after_setup_theme', 'pressbooks_book_setup' );
 add_action('wp_head', function() {
 	echo \Pressbooks\Admin\Branding\get_customizer_colors();
 });
+
+add_action('wp_head', function() {
+	printf( '<style type="text/css">:root{--reading-width:%s;}</style>', pb_webbook_width() );
+});
+
 
 function pb_use_htmlbook() {
 	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {

@@ -133,8 +133,8 @@ body:not(.home) {
   width: 100%;
 
   @media #{$breakpoint-large} {
-    flex: 1 1 var(--reading-width, rem(800));
-    max-width: var(--reading-width, rem(800));
+    flex: 1 1 var(--reading-width, 40em);
+    max-width: var(--reading-width, 40em);
   }
 }
 
