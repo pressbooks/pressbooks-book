@@ -8,8 +8,20 @@ h1.reading-header__title {
 .single-part,
 .single-chapter,
 .single-back-matter {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  #page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
   #content {
+    flex-grow: 1;
     padding: 0 1rem;
+    margin-bottom: 2rem;
 
     @media #{$breakpoint-large} {
       padding: 0;

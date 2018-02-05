@@ -70,7 +70,7 @@
 					<section class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
 							<div class="block-reading-meta__subsection">
-								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Licenses','pressbooks-book' ); ?></h2>
+								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License','pressbooks-book' ); ?></h2>
 								<?php if ( pb_is_public() ) { ?>
 									<div class="">
 										<?php echo pressbooks_copyright_license( false ); ?>
