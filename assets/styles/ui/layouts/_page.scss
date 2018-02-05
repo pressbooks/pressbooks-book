@@ -24,6 +24,7 @@ body {
 }
 
 #content h2.page-title,
+body:not(.home) #content h2,
 body:not(.home) #content h2.denied-title {
   font-family: $font-family-sans-serif;
   font-size: 1.5rem;
@@ -33,6 +34,10 @@ body:not(.home) #content h2.denied-title {
   &:before {
     display: none;
   }
+}
+
+.blog #content h3 {
+  text-indent: 0;
 }
 
 #content .denied-text {
