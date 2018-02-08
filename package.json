@@ -30,9 +30,9 @@
 			"cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"rmdist": "rimraf dist",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/scripts/*.js\"",
+		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
 		"lint:styles":
-			"node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
+			"node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
 		"test": "npm run -s lint"
 	},
 	"eslintConfig": {

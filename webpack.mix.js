@@ -16,10 +16,10 @@ const dist = 'dist';
 mix
 	.setPublicPath( 'dist' )
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
-	.js( 'assets/scripts/book.js', 'dist/scripts/book.js' )
-	.sass( 'assets/styles/book.scss', 'dist/styles' )
+	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
+	.sass( 'assets/src/styles/book.scss', 'dist/styles' )
 	.copyDirectory( 'node_modules/buckram/styles', 'assets/book/styles' )
-	.copyDirectory( 'assets/images', 'dist/images' )
+	.copyDirectory( 'assets/src/images', 'dist/images' )
 	.version()
 	.options( { processCssUrls: false } );
 
