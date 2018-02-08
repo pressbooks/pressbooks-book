@@ -34,7 +34,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 						<?php foreach ( $subsections as $id => $name ) { ?>
 							<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
 						<?php } ?>
-						</ul>
+						</ol>
 					<?php }
 }
 if ( $post_type !== 'chapter' ) { ?>

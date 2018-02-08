@@ -201,9 +201,10 @@ function pb_get_links( $echo = true ) {
 							</svg></a>
 			<?php endif; ?>
 		</div>
-		<button class="nav-reading__up" ><svg class="icon--svg">
-								<use xlink:href="#arrow-up" />
-							</svg><span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span></a>
+		<button class="nav-reading__up" >
+			<svg class="icon--svg"><use xlink:href="#arrow-up" /></svg>
+			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span>
+		</button>
 		</nav><?php
 	endif;
 }
