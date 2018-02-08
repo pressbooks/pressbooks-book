@@ -17,7 +17,7 @@ foreach ( $includes as $include ) {
 }
 require get_template_directory() . '/inc/intervention.php';
 
-add_action( 'pb_delete_cache', '\Pressbooks\Book\Actions\delete_cached_contents' );
+add_action( 'pb_cache_delete', '\Pressbooks\Book\Actions\delete_cached_contents' );
 
 // Turn off admin bar
 add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine

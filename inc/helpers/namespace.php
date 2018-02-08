@@ -5,7 +5,7 @@ namespace Pressbooks\Book\Helpers;
 function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ) {
 	global $blog_id;
 	foreach ( $sections as $section ) {
-		if ( $section['post_status'] !== 'publish' ) {
+		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
 			if ( ! $can_read_private ) {
 				if ( $can_read ) {
 					if ( $permissive_private_content !== 1 ) {
