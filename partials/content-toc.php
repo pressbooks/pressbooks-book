@@ -37,14 +37,14 @@ if ( $output !== false ) {
 				<div class="inner-content">
 					<ol class="toc__chapters">
 						<?php \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
-						</ol>
+					</ol>
 				</div>
 			</li>
 		<?php if ( ! empty( $part['chapters'] ) || $part['has_post_content'] ) {
 } endforeach; ?>
 		<li class="dropdown">
-		<h3 class="toc__back-matter__title"><?php _e( 'Back Matter', 'pressbooks' ); ?></h3>
-		<ol class="toc__back-matter">
+			<h3 class="toc__back-matter__title"><?php _e( 'Back Matter', 'pressbooks' ); ?></h3>
+			<ol class="toc__back-matter">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 			</ol>
 		</li>
