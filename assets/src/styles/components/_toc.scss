@@ -11,7 +11,7 @@
 
   .dropdown h3 {
     font-size: 1.5rem;
-    margin-bottom: 3px;
+    margin-bottom: rem(3);
     text-transform: uppercase;
   }
 
@@ -90,8 +90,8 @@
   // TODO
 }
 
-.js-toc-part-toggle {
-  cursor: pointer;
+.toc__part__title {
+  margin-bottom: rem(3);
 }
 
 .toc__front-matter__title,
@@ -108,6 +108,10 @@
     display: flex;
     align-items: center;
   }
+}
+
+.toc__part__title > span {
+  padding: 1rem;
 }
 
 //overwrite general toc ul rule
@@ -197,17 +201,17 @@ ol.toc__chapters {
 
   li {
     padding: 0;
-    margin-bottom: 3px;
+    margin-bottom: rem(3);
 
     ol {
-      margin-top: 3px;
+      margin-top: rem(4);
       padding: 0;
 
       li.toc__chapter,
       li.toc__front-matter,
       li.toc__back-matter {
         background: var(--body-bg-alt);
-        margin-bottom: 3px;
+        margin-bottom: rem(3);
         padding: 1rem;
         font-size: 1rem;
 
