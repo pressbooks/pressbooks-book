@@ -101,7 +101,15 @@ function pb_enqueue_assets() {
 
 	if ( ! is_front_page() ) {
 
-		if ( ! pb_is_custom_theme() ) { // Custom CSS is no longer supported.
+		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
+			$styles = Container::get( 'Styles' );
+			$sass = Container::get( 'Sass' );
+			$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
+			if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
+				$styles->updateWebBookStyleSheet( 'pressbooks-book' );
+			}
+			wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', false, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
+		} else {
 			$styles = Container::get( 'Styles' );
 			if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
 				$sass = Container::get( 'Sass' );

@@ -13,7 +13,7 @@
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
-<?php if ( pb_use_htmlbook() ) {
+<?php if ( pb_use_htmlbook() || pb_is_custom_theme() ) {
 	include( locate_template( 'partials/content-single.php' ) );
 } else {
 	include( locate_template( 'partials/content-single-legacy.php' ) );
