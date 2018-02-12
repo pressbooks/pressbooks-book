@@ -75,7 +75,7 @@ export default {
 
 		( function () {
 			// Get all the <h3> headings
-			const headings = document.querySelectorAll( '.dropdown h3, .dropdown p' );
+			const headings = document.querySelectorAll( '.dropdown > h3, .dropdown > p' );
 
 			Array.prototype.forEach.call( headings, heading => {
 				// Give each <h3> a toggle button child

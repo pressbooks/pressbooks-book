@@ -160,6 +160,13 @@ ol.toc__chapters {
 }
 
 //reading
+.block-reading-toc {
+  @media #{$breakpoint-large} {
+    width: inherit;
+    z-index: 100;
+  }
+}
+
 .block-reading-toc .toc__list {
   // --primary: var(--primary);
   // --primary-dark: var(--primary-dark);
@@ -189,9 +196,7 @@ ol.toc__chapters {
   }
 
   @media #{$breakpoint-large} {
-    width: 15.5rem;
-    margin-right: -1rem;
-    z-index: 100;
+    width: 100%;
   }
 
   .toc__subsection {
@@ -211,12 +216,12 @@ ol.toc__chapters {
       li.toc__front-matter,
       li.toc__back-matter {
         background: var(--body-bg-alt);
-        margin-bottom: rem(3);
-        padding: 1rem;
+        margin-bottom: 0;
+        padding: 0.65rem;
         font-size: 1rem;
 
         @media #{$breakpoint-tablet-and-up} {
-          padding: 1.25rem 1rem;
+          padding: 0.65rem;
           font-size: 1rem;
         }
       }
@@ -229,16 +234,20 @@ ol.toc__chapters {
     margin-top: 0;
   }
 
+  .toc__part__title > span {
+    padding: 0;
+  }
+
   .toc__front-matter__title,
   .toc__part__title,
   .toc__back-matter__title {
     font-size: 1rem;
     margin-bottom: 0;
-    padding: 1rem;
+    padding: 0.65rem;
     background: var(--body-bg-alt);
 
     @media #{$breakpoint-tablet-and-up} {
-      padding: 1.25rem 1rem;
+      padding: 0.65rem;
     }
   }
 }

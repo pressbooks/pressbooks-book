@@ -40,7 +40,7 @@ body:not(.home) {
 
   @media #{$breakpoint-large} {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
@@ -67,7 +67,7 @@ body:not(.home) {
 
   @media #{$breakpoint-large} {
     flex: 1 0 rem(280);
-    max-width: rem(280);
+    // max-width: rem(280);
     border-top: 0 none;
     order: 0;
     padding-left: 2rem;
@@ -125,7 +125,7 @@ body:not(.home) {
   background-color: var(--footer-bg);
   border-top: solid 2px var(--body-bg);
   border-bottom: solid 2px var(--body-bg);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   justify-content: center;
   margin-bottom: 0;
   text-align: center;
