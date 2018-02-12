@@ -8,7 +8,7 @@ if ( $output !== false ) {
 	<ol class="toc toc__list">
 		<li class="dropdown">
 			<h3 class="toc__front-matter__title"><?php _e( 'Front Matter', 'pressbooks' ); ?></h3>
-			<ol class="toc__front-matter">
+			<ol class="toc__front-matter-list">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 			</ol>
 		</li>
@@ -44,7 +44,7 @@ if ( $output !== false ) {
 } endforeach; ?>
 		<li class="dropdown">
 			<h3 class="toc__back-matter__title"><?php _e( 'Back Matter', 'pressbooks' ); ?></h3>
-			<ol class="toc__back-matter">
+			<ol class="toc__back-matter-list">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
 			</ol>
 		</li>
