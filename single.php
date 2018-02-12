@@ -18,13 +18,12 @@
 } else {
 	include( locate_template( 'partials/content-single-legacy.php' ) );
 } ?>
-<?php pb_get_links(); ?>
-
 </div><!-- #content -->
+<?php pb_get_links(); ?>
 
 				<?php
 				if ( pb_social_media_enabled() ) {	?>
-					<section class="block block-reading-meta">
+					<aside class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License','pressbooks-book' ); ?></h2>
@@ -43,7 +42,7 @@
 								</div>
 							</div>
 						</div>
-					</section><?php
+								</aside><?php
 				} ?>
 
 				<?php comments_template( '', true ); ?>

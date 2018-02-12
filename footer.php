@@ -1,16 +1,8 @@
-<?php if ( ! is_single() ) {?>
-
+<?php if ( ! is_single() ) { ?>
 	</div><!-- #content -->
-
 <?php } ?>
-<?php if ( ! is_front_page() ) {?>
-
-	</div><!-- #wrap -->
-	<div class="push"></div>
-
-	</div><!-- .wrapper for sitting footer at the bottom of the page -->
-<?php }
-
+</main>
+<?php
 global $multipage;
 ?>
 

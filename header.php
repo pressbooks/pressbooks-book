@@ -118,4 +118,5 @@
 		<?php } ?>
 	</header>
 
+	<main id="main">
 	<div id="content" class="site-content">

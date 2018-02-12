@@ -120,18 +120,21 @@ function share_icons() {
 }
 
 function display_menu() {
-
-	if ( ! is_front_page() ) {
-		$items = sprintf(
+	$items = sprintf(
+		'<li><a href="%1$s">%2$s</a></li>',
+		( is_front_page() ) ? '#main' : get_home_url(),
+		__( 'Home', 'pressbooks-aldine' )
+	);
+	$items .= sprintf(
+		'<li><a href="%1$s">%2$s</a></li>',
+		( get_permalink() === pb_get_first() ) ? '#main' : pb_get_first(),
+		__( 'Read', 'pressbooks-aldine' )
+	);
+	if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
+		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
-			get_home_url(),
-			__( 'Home', 'pressbooks-aldine' )
-		);
-	} else {
-		$items = sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
-			pb_get_first(),
-			__( 'Read', 'pressbooks-aldine' )
+			( get_page_link() === home_url( '/buy/' ) ) ? '#main' : home_url( '/buy/' ),
+			__( 'Buy', 'pressbooks-aldine' )
 		);
 	}
 	if ( ! is_user_logged_in() ) {
