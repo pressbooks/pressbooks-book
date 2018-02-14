@@ -46,5 +46,5 @@
 } else {
 	echo apply_filters( 'the_content', $post->post_content );
 } ?>
-<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' ); ?>
 </section>
+<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' ); ?>
