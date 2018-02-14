@@ -6,13 +6,27 @@
 /// @type String
 $toc-display: block !default;
 
+/// Left side of Table of Contents left margin.
+/// @type String
 $toc-left-margin-left: 1cm !default;
+/// Position of page numbers on Table of Contents.
+/// @type String
 $toc-left-page-number-top: 0.2em !default;
+/// Chapter number width in Table of Contents.
+/// @type String
 $toc-left-chapter-number-width: 2em !default;
+/// Chapter number margin in Table of Contents.
+/// @type String
 $toc-left-chapter-number-margin-right: 0.5em !default;
 
+/// Center of Table of Contents margin right.
+/// @type String
 $toc-center-margin-right: 0.5cm !default;
+
+/// Center of Table of Contents margin left.
+/// @type String
 $toc-center-margin-left: 0.5cm !default;
+
 
 $toc-block-margin-top: 1.5em !default;
 $toc-section-margin-top: 0.5em !default;
@@ -23,6 +37,8 @@ $toc-sub-width: 75% !default;
 
 $toc-base-line-height: 1.2em !default;
 
+/// 
+/// @type String
 $toc-front-matter-title-font-family: $font-1 !default;
 $toc-front-matter-title-font-size: 0.9em !default;
 $toc-front-matter-title-font-style: normal !default;
