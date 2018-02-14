@@ -114,6 +114,10 @@
   @media #{$breakpoint-max-content} {
     border: 0 none;
     left: 3rem;
+
+    .fontsize & {
+      left: 0;
+    }
   }
 
   svg {
@@ -133,6 +137,10 @@
   @media #{$breakpoint-max-content} {
     border: 0 none;
     right: 3rem;
+
+    .fontsize & {
+      right: 0;
+    }
   }
 
   svg {
