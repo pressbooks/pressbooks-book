@@ -2,9 +2,6 @@
 
 #content {
   position: relative;
-  z-index: 10;
-  //min-height: 420px;
-  //padding: 2rem;
   margin: 0 auto;
   background-color: var(--body-bg);
   width: auto;
@@ -13,6 +10,7 @@
     width: var(--reading-width, $reading-page-max-width);
   }
 }
+
 #content img {
   height: auto;
   max-width: 100%;
@@ -305,7 +303,7 @@
 }
 
 .edit-link {
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 // Print
