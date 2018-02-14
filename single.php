@@ -23,7 +23,7 @@
 
 				<?php
 				if ( pb_social_media_enabled() ) {	?>
-					<aside class="block block-reading-meta">
+					<div class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License','pressbooks-book' ); ?></h2>
@@ -42,7 +42,7 @@
 								</div>
 							</div>
 						</div>
-								</aside><?php
+								</div><?php
 				} ?>
 
 				<?php comments_template( '', true ); ?>
