@@ -5,12 +5,12 @@
 //============================================================================//
 //                                   Lists                                    //
 //============================================================================//
-@import '../utilities';
+@import "../utilities";
 
-@import 'lists-ordered-harvard';
-@import 'lists-ordered-legal';
+@import "lists-ordered-harvard";
+@import "lists-ordered-legal";
 
-@if $type != 'web' {
+@if $type != "web" {
   ol {
     margin-top: $ol-margin-top;
     margin-bottom: $ol-margin-bottom;
@@ -61,45 +61,45 @@
       font-weight: $dd-font-weight;
     }
   }
-}
-
-@else {
+} @else {
   .front-matter,
   .part,
   .chapter,
   .back-matter {
-    ol {
-      margin-top: $ol-margin-top;
-      margin-bottom: $ol-margin-bottom;
-      margin-left: if-map-get($ol-margin-left, $type);
-      padding-left: $ol-padding-left;
-    }
+    #content {
+      ol {
+        margin-top: $ol-margin-top;
+        margin-bottom: $ol-margin-bottom;
+        margin-left: if-map-get($ol-margin-left, $type);
+        padding-left: $ol-padding-left;
+      }
 
-    ul {
-      margin-top: $ul-margin-top;
-      margin-bottom: $ul-margin-bottom;
-      margin-left: if-map-get($ul-margin-left, $type);
-      padding-left: $ul-padding-left;
-    }
+      ul {
+        margin-top: $ul-margin-top;
+        margin-bottom: $ul-margin-bottom;
+        margin-left: if-map-get($ul-margin-left, $type);
+        padding-left: $ul-padding-left;
+      }
 
-    li + li {
-      margin-top: $li-li-margin-top;
-    }
+      li + li {
+        margin-top: $li-li-margin-top;
+      }
 
-    ol.upper-alpha {
-      list-style-type: upper-alpha;
-    }
+      ol.upper-alpha {
+        list-style-type: upper-alpha;
+      }
 
-    ol.lower-alpha {
-      list-style-type: lower-alpha;
-    }
+      ol.lower-alpha {
+        list-style-type: lower-alpha;
+      }
 
-    ol.upper-roman {
-      list-style-type: upper-roman;
-    }
+      ol.upper-roman {
+        list-style-type: upper-roman;
+      }
 
-    ol.lower-roman {
-      list-style-type: lower-roman;
+      ol.lower-roman {
+        list-style-type: lower-roman;
+      }
     }
 
     // Definition Lists
@@ -107,13 +107,15 @@
     dl {
       dt {
         display: block;
-        margin: $dt-margin-top $dt-margin-right $dt-margin-bottom $dt-margin-left;
+        margin: $dt-margin-top $dt-margin-right $dt-margin-bottom
+          $dt-margin-left;
         font-style: $dt-font-style;
         font-weight: $dt-font-weight;
       }
 
       dd {
-        margin: $dd-margin-top $dd-margin-right $dd-margin-bottom $dd-margin-left;
+        margin: $dd-margin-top $dd-margin-right $dd-margin-bottom
+          $dd-margin-left;
         font-style: $dd-font-style;
         font-weight: $dd-font-weight;
       }
@@ -121,7 +123,7 @@
   }
 }
 
-@if $type == 'epub' {
+@if $type == "epub" {
   // scss-lint:disable ImportantRule
   @media amzn-mobi {
     ul,
