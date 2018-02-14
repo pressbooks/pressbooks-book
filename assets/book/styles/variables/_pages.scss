@@ -4,187 +4,508 @@
 
 // HALF TITLE PAGE
 /// Half Title page display.
-/// @type String
+/// @type String | Map
 $title-half-title-display:(
   epub: none,
   prince: initial,
   web: none
 ) !default;
+
+/// Top margin for half title page Title from elements `<h1>` with a class of `title` that are children of elements with ID `half-title-page`
+/// @type String | Map
 $title-half-title-block-margin-top: (
   epub: 2em,
   prince: 3cm,
   web: 3em
 ) !default;
+
+/// Font stack for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-font-family: $font-2 !default;
+
+/// Font size for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-font-size: 1.5em !default;
+
+/// Font style for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-font-style: normal !default;
+
+/// Font weight for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-font-weight: normal !default;
+
+/// Letter spacing for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-letter-spacing: normal !default;
+
+/// Word spacing for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-word-spacing: normal !default;
+
+/// Text alignment for half title page Title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-align: center !default;
+
+/// Text transform for half title page title from elements `<h1>` with a class of `title` that are immediate children of elements with ID `half-title-page`
+/// @type String
 $title-half-title-text-transform: none !default;
 
 // TITLE PAGE
 
 // Title
 
+/// Top margin for title page title for elements `<h1>` with a class of `title`.
+/// @type String | Map
 $title-title-block-margin-top: (
   epub: 2em,
   prince: 3cm,
   web: 3em
 ) !default;
+
+/// Top margin for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-font-family: $font-2 !default;
+
+/// Font size for title page title on elements `<h1>` with a class of `title`.
+/// @type String | Map 
 $title-title-font-size:(
   epub: 1.75em,
   prince: 2em,
   web: 1.75em
 ) !default;
+
+/// Font style for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-font-style: normal !default;
+
+/// Font weight for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-font-weight: normal !default;
+
+/// Letter spacing for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-letter-spacing: normal !default;
+
+/// Word spacing for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-word-spacing: normal !default;
+
+/// Text align for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-align: center !default;
+
+/// Text transform for title page title on elements `<h1>` with a class of `title`.
+/// @type String
 $title-title-text-transform: none !default;
 
 // Subtitle
 
+/// Top margin for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-margin-top: 0 !default;
+
+/// Font stack for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-font-family: $font-3 !default;
+
+/// Font size for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String | Map 
 $title-subtitle-font-size:(
   epub: 1.25em,
   prince: 1.5em,
   web: 1.25em
 ) !default;
+
+/// Font style for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-font-style: italic !default;
+
+/// Font weight for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-font-weight: normal !default;
+
+/// Letter spacing for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-letter-spacing: normal !default;
+
+/// Word spacing for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-word-spacing: normal !default;
+
+/// Text alignment for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-align: center !default;
+
+/// Text transform for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
 $title-subtitle-text-transform: none !default;
 
 // Author
 
+/// Top margin for title page author on elements `<h3>` with a class of `author`.
+/// @type String | Map
 $title-author-margin-top:(
   epub: 2em,
   prince: 2cm,
   web: 2em
 ) !default;
+
+/// Font stack for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-font-family: $font-2 !default;
+
+/// Font size for title page author on elements `<h3>` with a class of `author`.
+/// @type String | Map
 $title-author-font-size:(
   epub: 1em,
   prince: 1.5em,
   web: 1em
 ) !default;
+
+/// Font style for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-font-style: normal !default;
+
+/// Font weight for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-font-weight: normal !default;
+
+/// Letter spacing for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-letter-spacing: 1px !default;
+
+/// Word spacing for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-word-spacing: 2px !default;
+
+/// Text alignment for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-align: center !default;
+
+/// Text transform for title page author on elements `<h3>` with a class of `author`.
+/// @type String
 $title-author-text-transform: uppercase !default;
 
 // Publisher logo
 
+/// Display for title page Publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-display: block !default;
+
+/// Logo width for title page publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-width: 20% !default;
+
+/// Top padding for title page publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-padding-top: 0.75em !default;
+
+/// Bottom padding for title page publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-padding-bottom: 0.75em !default;
+
+/// Alignment for title page publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-text-align: center !default;
+
+/// Right margin for title page publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-margin-right: auto !default;
+
+/// Left margin for title page publisher logo on elements `<div>` with a class of `publisher-logo`.
+/// @type String
 $title-publisher-logo-margin-left: auto !default;
 
 // Publisher
 
+/// Bottom margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-margin-bottom: 0.5em !default;
+
+/// Font stack for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-font-family: $font-3 !default;
+
+/// Font size for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-font-size: 0.9em !default;
+
+/// Font style for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-font-style: normal !default;
+
+/// Font weight for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-font-weight: normal !default;
+
+/// Line height for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-line-height: 1em !default;
+
+/// Letter spacing for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-letter-spacing: 1px !default;
+
+/// Word spacing for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-word-spacing: 2px !default;
+
+/// Text transform for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-align: center !default;
+
+/// Text transform for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String
 $title-publisher-text-transform: uppercase !default;
 
 // Publisher city
 
+/// Font stack for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-font-family: $font-3 !default;
+
+/// Font size for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-font-size: 0.9em !default;
+
+/// Font style for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-font-style: normal !default;
+
+/// Font weight for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-font-weight: normal !default;
+
+/// Line height for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-line-height: 1em !default;
+
+/// Letter spacing for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-letter-spacing: 1px !default;
+
+/// Word spacing for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-word-spacing: 2px !default;
+
+/// Alignment for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-align: center !default;
+
+/// Text transform for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String
 $title-publisher-city-text-transform: uppercase !default;
 
 // --- FRONT MATTER --- //
 
 // Before Title
 
+/// Top margin for Before Title elements with classes `before-title` and `front-matter-title-wrap`.
+/// @type String | Map
 $before-title-title-block-margin-top: 0 !default;
+
+/// Bottom margin for Before Title elements with classes `before-title` and `front-matter-title-wrap`.
+/// @type String
 $before-title-title-block-margin-bottom: 0.5em !default;
 
 // Copyright
 
+/// Float for Copyright on elements with a class `ugc` that are children of elements with an ID of `copyright-page`.
+/// @type String
 $copyright-float: none !default;
+
+/// Bottom margin for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String | Map
 $copyright-margin-bottom: initial !default;
+
+/// Font family for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-font-family: $font-1 !default;
+
+/// Font size for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-font-size: 0.8em !default;
+
+/// Font style for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-font-style: normal !default;
+
+/// Font weight for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-font-weight: normal !default;
+
+/// Line height for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-line-height: 1.2em !default;
+
+/// Align for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-align: left !default;
+
+/// Indentation for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
 $copyright-indent: 0 !default;
 
 // Dedication
 
+/// Right margin for Dedication on `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-margin-right: 10% !default;
+/// Left margin for Dedication on `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-margin-left: 10% !default;
+
+/// Bottom margin for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-margin-bottom: 1em !default;
+
+/// Font stack for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-font-family: $font-2 !default;
+
+/// Font size for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-font-size: 1em !default;
+
+/// Font style for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-font-style: italic !default;
+
+/// Font weight for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-font-weight: normal !default;
+
+/// Line height for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-line-height: 1.4em !default;
+
+/// Text Alignment for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
+/// @type String
 $dedication-align: center !default;
 
 // Epigraph
 
+/// Right margin for epigraph on `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-margin-right: 10% !default;
+
+/// Left margin for epigraph on `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-margin-left: 10% !default;
+
+/// Bottom margin for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-margin-bottom: 1em !default;
+
+/// Font stack for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-font-family: $font-1 !default;
+
+/// Font size for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-font-size: 1em !default;
+
+/// Font style for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-font-style: italic !default;
+
+/// Font weight for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-font-weight: normal !default;
+
+/// Line height for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-line-height: 1.4em !default;
+
+/// Alignment for Epigraph on `<p>` elements that are children of `<div>` elements with a class of `epigraph`.
+/// @type String
 $epigraph-align: center !default;
 
 // BACK MATTER
 
 // Bibliography
 
+/// Left Padding for Bibliography on `<p>` elements that are children of `<div>` elements with a class of `bibliography`.
+/// @type String
 $bibliography-padding-left: 2em !default;
+
+/// Font size for Bibliography on `<p>` elements that are children of `<div>` elements with a class of `bibliography`.
+/// @type String
 $bibliography-font-size: 0.9em !default;
+
+/// Text indent for Bibliography on `<p>` elements that are children of `<div>` elements with a class of `bibliography`.
+/// @type String
 $bibliography-text-indent: -2em !default;
 
 // Index
+
+/// Alignment for Index on elements with classes `index` and `ugc`, as well as `<p>` children of these elements
+/// @type String
 $index-align: left !default;
+
+/// Column count for Index on elements with a class `ugc` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-column-count: 2 !default;
+
+/// Column gap for Index on elements with a class `ugc` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-column-gap: 2.5em !default;
+
+/// Bottom margin for Index on `<div>` elements that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-margin-bottom: 4em !default;
+
+/// Left padding for Index on `<p>` elements and elements with classes `indent` and `no-indent` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-para-padding-left: 2em !default;
+
+/// Font size for Index on `<p>` elements and elements with classes `indent` and `no-indent` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-para-font-size: 0.9em !default;
+
+/// Alignment for Index on `<p>` elements and elements with classes `indent` and `no-indent` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-para-align: left !default;
+
+/// Indentation for Index on `<p>` elements and elements with classes `indent` and `no-indent` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-para-indent: -2em !default;
+
+/// Bottom margin for Index on elements with a class `sub-entry` that are children of `<div>` elements with a class of `index`.
+/// @type String
 $index-sub-entry-padding-left: 4em !default;
 
 // Section License
+
+/// Alignment for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-align: left !default;
+
+/// Line height for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-line-height: 1.4em !default;
+
+/// Font size for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-font-size: 0.8em !default;
+
+/// Font style for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-font-style: italic !default;
+
+/// Top margin for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-margin-top: 2em !default;
+
+/// Bottom margin for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-image-margin-bottom: 0.2em !default;
+
+/// Image width for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-image-width: 88px !default;
+
+/// Image Height for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String
 $section-license-image-height: 31px !default;
