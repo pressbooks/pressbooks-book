@@ -146,58 +146,72 @@ $part-number-color: $color-3 !default;
 /// @type String
 $part-title-color: $color-2 !default;
 
-/// Chapter number color for elements `<>` with a class of ``.
+/// Chapter number color for elements with a class of `chapter-number`.
 /// @type String
 $chapter-number-color: $color-3 !default;
-/// Chapter number bottom border color for elements `<>` with a class of ``.
+/// Chapter number bottom border color for elements with a class of `chapter-number`.
 /// @type String
 $chapter-number-border-bottom-color: $color-3 !default;
-/// Chapter Title color for elements `<>` with a class of ``.
+/// Chapter Title color for elements `<h2>` with a class of `chapter-title`.
 /// @type String
 $chapter-title-color: $color-2 !default;
-/// Chapter subtitle color for elements `<>` with a class of ``.
+/// Chapter subtitle color for elements `<h2>` with a class of `chapter-subtitle`.
 /// @type String
 $chapter-subtitle-color: $color-3 !default;
-/// Chapter author color for elements `<>` with a class of ``.
+/// Chapter author color for elements `<h2>` with a class of `chapter-author`.
 /// @type String
 $chapter-author-color: $color-3 !default;
-/// Chapter aphorism color for elements `<>` with a class of ``.
+/// Chapter aphorism color for elements with a class of `aphorism`.
 /// @type String
 $chapter-aphorism-color: $color-3 !default;
-/// Back matter title color for elements `<>` with a class of ``.
+/// Back matter title color for elements `<h1>` with a class of `back-matter-title`.
 /// @type String
 $back-matter-title-color: $color-2 !default;
 
 //RUNNING HEAD/FEET COLOR
+
+/// Running head color.
 /// @type String | Map
 $runninghead-color: $color-3 !default;
+/// Running foot color.
 /// @type String | Map
 $runningfoot-color: $color-3 !default;
+/// Page number color
 /// @type String | Map
 $page-number-color: $color-3 !default;
 
 //TOC COLOR
-
+/// Table of contents front matter title color.
 /// @type String | Map
 $toc-front-matter-title-color: $color-1 !default;
+/// Table of contents front matter subtitle color.
 /// @type String | Map
 $toc-front-matter-subtitle-color: $color-1 !default;
+/// Table of contents front matter author color.
 /// @type String | Map
 $toc-front-matter-author-color: $color-1 !default;
+/// Table of contents part number color.
 /// @type String | Map
 $toc-part-number-color: $color-3 !default;
+/// Table of contents part title color.
 /// @type String | Map
 $toc-part-title-color: $color-3 !default;
+/// Table of contents Chapter number color.
 /// @type String | Map
 $toc-chapter-number-color: $color-1 !default;
+/// Table of Contents Chapter title color.
 /// @type String | Map
 $toc-chapter-title-color: $color-1 !default;
+/// Table of contents Chapter subtitle color.
 /// @type String | Map
 $toc-chapter-subtitle-color: $color-1 !default;
+/// Table of contents Chapter author color.
 /// @type String | Map
 $toc-chapter-author-color: $color-1 !default;
+/// Table of contents page number color.
 /// @type String | Map
 $toc-page-number-color: $color-1 !default;
+/// Table of contents front matter page number color.
 /// @type String | Map
 $toc-front-matter-page-number-color: $color-1 !default;
 
