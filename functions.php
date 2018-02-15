@@ -166,7 +166,7 @@ function pressbooks_update_webbook_stylesheet() {
 	$recompile = false;
 
 	foreach ( $inputs as $input ) {
-		if ( filemtime( $input ) > filemtime( $output ) ) {
+		if ( @filemtime( $input ) > @filemtime( $output ) ) { // @codingStandardsIgnoreLine
 			$recompile = true;
 			break;
 		}
