@@ -50,3 +50,9 @@ h1.reading-header__title {
     color: var(--primary-dark);
   }
 }
+
+.nav-reading {
+  &.absolute {
+    position: absolute;
+  }
+}
