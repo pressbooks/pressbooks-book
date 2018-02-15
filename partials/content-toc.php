@@ -1,4 +1,7 @@
-<?php $output = get_transient( 'pb_book_contents' );
+<?php
+$toc_chmod = ( $can_read ? 'x' : 'o' ) . ( $can_read_private ? 'x' : 'o' ) . ( $permissive_private_content ? 'x' : 'o' );
+$toc_transient = 'pb_book_contents_' . $toc_chmod;
+$output = get_transient( $toc_transient );
 if ( $output !== false ) {
 	echo $output;
 } else {
@@ -45,6 +48,6 @@ if ( $output !== false ) {
 
 	<?php $output = ob_get_clean();
 	echo $output;
-	set_transient( 'pb_book_contents', $output );
+	set_transient( $toc_transient, $output );
 }
 
