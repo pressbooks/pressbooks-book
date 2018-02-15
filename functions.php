@@ -24,6 +24,7 @@ if ( ! class_exists( 'PressbooksMix\Assets' ) || ! function_exists( 'Sober\Inter
 
 $includes = [
 	'actions',
+	'filters',
 	'helpers',
 ];
 
@@ -477,3 +478,5 @@ function pb_use_htmlbook() {
 	}
 	return false;
 }
+
+add_filter( 'the_title', 'Pressbooks\Book\Filters\add_private_to_title', 10, 2 );
