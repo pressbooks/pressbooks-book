@@ -30,8 +30,8 @@ $ul-margin-left: 0 !default;
 $li-li-margin-top: 0 !default;
 $para-margin-top: (20 / 16) * 1em !default;
 $para-indent: 0 !default;
-$table-font-size: 1em !default;
-$table-line-height: 0.9em !defaault;
+$table-font-size: 0.9em !default;
+$table-line-height: 1.1 !defaault;
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/elements';

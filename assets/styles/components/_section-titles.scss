@@ -29,7 +29,7 @@ $chapter-number-margin-bottom: 0 !default;
 $chapter-number-font-size: (
   epub: large,
   prince: (24 / 9) * 1em,
-  web: (24 / 9) * 1rem
+  web: 1em
 ) !default;
 $chapter-title-display: inline !default;
 
