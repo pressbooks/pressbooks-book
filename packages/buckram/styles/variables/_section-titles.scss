@@ -293,6 +293,11 @@ $aphorism-cite-font-style: italic !default;
 /// @since 0.3.0
 $aphorism-cite-font-variant: normal !default;
 
+/// Defines aphorism citation text transform.
+/// @type String
+/// @since 0.3.4
+$aphorism-cite-text-transform: none !default;
+
 /// Defines aphorism citation alignment.
 /// @type String
 $aphorism-cite-align: left !default;

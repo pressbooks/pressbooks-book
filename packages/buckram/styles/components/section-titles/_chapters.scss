@@ -109,6 +109,7 @@ blockquote.aphorism {
     font-size: if-map-get($aphorism-cite-font-size, $type);
     font-style: $aphorism-cite-font-style;
     font-variant: $aphorism-cite-font-variant;
+    text-transform: $aphorism-cite-text-transform;
     text-align: $aphorism-cite-align;
 
     &::before {
