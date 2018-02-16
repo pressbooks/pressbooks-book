@@ -517,6 +517,11 @@ $table-th-line-height: 1.1em !default;
 /// @type String
 $table-th-align: left !default;
 
+/// Vertical alignment for `<th>` elements.
+/// @since 0.5.0
+/// @type String
+$table-th-vertical-align: middle !default;
+
 /// Top padding for `<td>` elements.
 /// @type String
 $table-td-padding-top: 0.45em !default;
@@ -540,6 +545,11 @@ $table-td-line-height: 1.1em !default;
 /// Alignment for `<td>` elements.
 /// @type String
 $table-td-align: left !default;
+
+/// Vertical alignment for `<td>` elements.
+/// @since 0.5.0
+/// @type String
+$table-td-vertical-align: middle !default;
 
 /// Font size for `<cite>` elements.
 /// @type String
