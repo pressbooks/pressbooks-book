@@ -63,19 +63,19 @@ meta[name="pb-publisher-city"] {
 // If the 'short-title' property is available, this will override the section
 // title for use in the running head.
 
-.front-matter > .ugc .short-title,
-.chapter > .ugc .short-title,
-.back-matter > .ugc .short-title {
+.front-matter > .short-title,
+.chapter > .short-title,
+.back-matter > .short-title {
   width: 0;
   height: 0;
   visibility: hidden; // display: none causes issues with string-set
   string-set: section-title content();
 }
 
-.ugc .chapter-author {
+.chapter-title-wrap > .chapter-author {
   string-set: chapter-author content();
 }
 
-.ugc .chapter-subtitle {
+.chapter-title-wrap > .chapter-subtitle {
   string-set: chapter-subtitle content();
 }
