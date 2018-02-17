@@ -1,6 +1,6 @@
 {
   "name": "buckram",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "test": "npm run lint && npm run build",
