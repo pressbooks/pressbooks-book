@@ -6,39 +6,25 @@ $hr-width: 100% !default;
 $hr-margin-top: (20 / 9) * 1em !default;
 $hr-margin-bottom: (20 / 9) * 1em !default;
 $textbox-border-style: solid !default;
-$textbox-font-size: (
-  epub: small,
-  prince: 9pt,
-  web: 1em
-) !default;
-$textbox-line-height: (14 / 9) * 1em !default;
-$edu-textbox-padding-top: 16px !default;
-$edu-textbox-padding-right: 16px !default;
-$edu-textbox-padding-bottom: 16px !default;
-$edu-textbox-padding-left: 16px !default;
+$textbox-font-size: (epub: 0.8125em, prince: 9pt, web: 1em) !default;
+$textbox-line-height: (14 / 9) !default;
+$edu-textbox-padding-top: (16 / 9) * 1em !default;
+$edu-textbox-padding-right: (16 / 9) * 1em !default;
+$edu-textbox-padding-bottom: (16 / 9) * 1em !default;
+$edu-textbox-padding-left: (16 / 9) * 1em !default;
 $edu-textbox-border-radius: 0 !default;
 $edu-textbox-border-style: none !default;
-$edu-header-font-size: (
-  epub: large,
-  prince: 15pt,
-  web: ( 15 / 9 ) * 1em
-) !default;
+$edu-textbox-border-width: 0 !default;
+$edu-header-font-size-multiplier: 1.555555556 !default;
 $edu-header-font-style: italic !default;
 $edu-header-font-weight: normal !default;
 $edu-header-text-align: left !default;
-$edu-header-padding-top: 10px !default;
-$edu-header-padding-right: 12px !default;
-$edu-header-padding-bottom: 10px !default;
-$edu-header-padding-left: 12px !default;
-$edu-header-margin-top: -16px !default;
-$edu-header-margin-right: -16px !default;
-$edu-header-margin-bottom: 1em !default;
-$edu-header-margin-left: -16px !default;
 
 $learning-objectives-background: #cbd4b6 !default;
 $learning-objectives-header-background: #5A7613 !default;
-$key-takeaways-background: #E8C1A2 !default;
-$key-takeaways-header-background: #C25700 !default;
+$key-takeaways-background: #ffdeac !default;
+$key-takeaways-header-color: #000 !default;
+$key-takeaways-header-background: #f1b434 !default;
 $exercises-background: #cbdde5 !default;
 $exercises-header-background: #387685 !default;
 $examples-background: #c0bdcd !default;
