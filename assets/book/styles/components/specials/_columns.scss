@@ -2,10 +2,6 @@
 /// @group specials
 ////
 
-//============================================================================//
-//                                  Columns                                   //
-//============================================================================//
-
 @import '../utilities';
 
 .twocolumn {
@@ -18,12 +14,15 @@
   column-count: 2;
   column-fill: balance;
 
-  p,
-  p + p {
-    margin-top: $para-margin-top;
+  p {
+    font-size: inherit;
     line-height: $column-line-height;
     text-align: if-map-get($para-align, $type);
     text-indent: $para-indent;
+  }
+
+  p + p {
+    margin-top: $para-margin-top;
   }
 }
 
@@ -36,11 +35,14 @@
   column-count: 3;
   column-fill: balance;
 
-  p,
-  p + p {
-    margin-top: $para-margin-top;
+  p {
+    font-size: inherit;
     line-height: $column-line-height;
     text-align: left;
     text-indent: $para-indent;
+  }
+
+  p + p {
+    margin-top: $para-margin-top;
   }
 }

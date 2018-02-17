@@ -81,35 +81,35 @@ $footnote-font-size: (
 ) !default;
 
 /// Font style for footnote.
-/// @type String 
+/// @type String
 $footnote-font-style: normal !default;
 
 /// Font weight for footnote.
-/// @type String 
+/// @type String
 $footnote-font-weight: normal !default;
 
 /// Line height for footnote.
-/// @type String 
+/// @type String
 $footnote-line-height: 1.15em !default;
 
 /// Indentation for footnote for elements with a class of `footnote`.
-/// @type String 
+/// @type String
 $footnote-indent: 0 !default;
 
 /// Top Margin for footnote blockquote for elements with a class of `fn-blockquote`.
-/// @type String 
+/// @type String
 $footnote-blockquote-margin-top: 0.5em !default;
 
 /// Bottom Margin for footnote blockquote for elements with a class of `fn-blockquote`.
-/// @type String 
+/// @type String
 $footnote-blockquote-margin-bottom: 0.5em !default;
 
 /// Left Margin for footnote blockquote for elements with a class of `fn-blockquote`.
-/// @type String 
+/// @type String
 $footnote-blockquote-margin-left: 1.5em !default;
 
 /// Font-size Margin for footnote blockquote for elements with a class of `fn-blockquote`.
-/// @type String 
+/// @type String
 $footnote-blockquote-font-size: 0.95em !default;
 
 
@@ -362,7 +362,7 @@ $hr-border-style: solid !default;
 $hr-border-width: 1px !default;
 
 /// Seperator border color on `<hr>` elements.
-/// @type String | Map 
+/// @type String | Map
 $hr-border-color: if-map-get($color-1, $type) !default;
 
 /// Bottom margin on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
@@ -448,35 +448,35 @@ $textbox-background-color: initial !default;
 $textbox-shaded-background-color: #eee !default;
 
 /// Textbox top padding on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-padding-top: 2.5em !default;
 
 /// Textbox right padding on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-padding-right: 2.5em !default;
 
 /// Textbox bottom padding on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-padding-bottom: 2.5em !default;
 
 /// Textbox left padding on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-padding-left: 2.5em !default;
 
 /// Textbox top margin on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-margin-top: 0.9em !default;
 
 /// Textbox margin right on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-margin-right: 0 !default;
 
 /// Textbox bottom margin on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-margin-bottom: 0.9em !default;
 
 /// Textbox left margin on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-margin-left: 0 !default;
 
 /// Textbox border style on elements with a class of `textbox`.
@@ -488,19 +488,19 @@ $textbox-border-style: solid !default;
 $textbox-border-color: #000 !default;
 
 /// Textbox border width on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-border-width: 0.05em !default; // TODO
 
 /// Textbox border radius on elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-border-radius: 0 !default;
 
 /// Textbox paragraph top margin on `<p>` elements that are children of elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-para-margin-top: 0 !default;
 
 /// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
-/// @type String
+/// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
 
 /// Textbox paragraph font stack on `<p>` elements that are children of elements with a class of `textbox`.
@@ -519,14 +519,16 @@ $textbox-caption-font-style: normal !default;
 /// @type String
 $textbox-caption-font-weight: bold !default;
 
-// Educational Textboxes
-
 /// Educational Textbox border style.
 /// @type String
 $edu-textbox-border-style: solid !default;
 
+/// Educational Textbox border width.
+/// @type String | Map
+$edu-textbox-border-radius: $textbox-border-width !default;
+
 /// Educational Textbox border radius.
-/// @type String
+/// @type String | Map
 $edu-textbox-border-radius: 0.35em !default;
 
 /// Educational Textbox top padding.
@@ -550,55 +552,80 @@ $edu-textbox-padding-left: 1em !default;
 $edu-textbox-margin-bottom: 1.35em !default;
 
 /// Educational Textbox header top padding.
+/// @deprecated
 /// @type String
 $edu-header-padding-top: 1.35em !default;
 
 /// Educational Textbox header right padding.
+/// @deprecated
 /// @type String
 $edu-header-padding-right: 0 !default;
 
 /// Educational Textbox header bottom padding.
+/// @deprecated
 /// @type String
 $edu-header-padding-bottom: 1.35em !default;
 
 /// Educational Textbox header left padding.
+/// @deprecated
 /// @type String
 $edu-header-padding-left: 0 !default;
 
 /// Educational Textbox header top margin.
+/// @deprecated
 /// @type String
 $edu-header-margin-top: -1.2em !default;
 
 /// Educational Textbox header right margin.
+/// @deprecated
 /// @type String
 $edu-header-margin-right: -1.2em !default;
 
-/// Educational Textbox header bottom margin. 
+/// Educational Textbox header bottom margin.
+/// @deprecated
 /// @type String
 $edu-header-margin-bottom: 1.35em !default;
 
 /// Educational Textbox header left margin.
+/// @deprecated
 /// @type String
 $edu-header-margin-left: -1.2em !default;
 
 /// Educational Textbox header text color.
+/// @deprecated
 /// @type String
 $edu-header-text-color: #fff !default;
 
 /// Educational Textbox header font size.
+/// @deprecated
 /// @type String
 $edu-header-font-size: 0.9em !default;
+
+/// Educational Textbox header font size multiplier, relative to $textbox-font-size.
+/// @since 0.6.0
+/// @type String
+$edu-header-font-size-multiplier: 0.9 !default;
 
 /// Educational Textbox header font style.
 $edu-header-font-style: normal !default;
 
-/// Educational Textbox header font weight. 
+/// Educational Textbox header font weight.
 /// @type String
 $edu-header-font-weight: bold !default;
 
 /// Educational Textbox header text align.
 /// @type String
 $edu-header-text-align: center !default;
+
+/// Educational Textbox learning objectives text color.
+/// @since 0.6.0
+/// @type String
+$learning-objectives-color: #000 !default;
+
+/// Educational Textbox learning objectives header text color.
+/// @since 0.6.0
+/// @type String
+$learning-objectives-header-color: #fff !default;
 
 /// Educational Textbox learning objectives background color.
 /// @type String
@@ -608,6 +635,16 @@ $learning-objectives-background: #f7f7f9 !default;
 /// @type String
 $learning-objectives-header-background: #111 !default;
 
+/// Educational Textbox key takeaways text color.
+/// @since 0.6.0
+/// @type String
+$key-takeaways-color: #000 !default;
+
+/// Educational Textbox key takeaways header text color.
+/// @since 0.6.0
+/// @type String
+$key-takeaways-header-color: #fff !default;
+
 /// Educational Textbox key takeaways background color.
 /// @type String
 $key-takeaways-background: #eaf5ea !default;
@@ -616,6 +653,16 @@ $key-takeaways-background: #eaf5ea !default;
 /// @type String
 $key-takeaways-header-background: #3a7a33 !default;
 
+/// Educational Textbox exercises text color.
+/// @since 0.6.0
+/// @type String
+$exercises-color: #000 !default;
+
+/// Educational Textbox exercises header text color.
+/// @since 0.6.0
+/// @type String
+$exercises-header-color: #fff !default;
+
 /// Educational Textbox exercises background color.
 /// @type String
 $exercises-background: #e3eff6 !default;
@@ -623,6 +670,16 @@ $exercises-background: #e3eff6 !default;
 /// Educational Textbox exercises header background color.
 /// @type String
 $exercises-header-background: #0b6396 !default;
+
+/// Educational Textbox examples text color.
+/// @since 0.6.0
+/// @type String
+$examples-color: #000 !default;
+
+/// Educational Textbox examples header text color.
+/// @since 0.6.0
+/// @type String
+$examples-header-color: #fff !default;
 
 /// Educational Textbox examples background color.
 /// @type String

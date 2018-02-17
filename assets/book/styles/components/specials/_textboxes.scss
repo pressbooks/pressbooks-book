@@ -8,27 +8,44 @@
 
 @import '../utilities';
 
-@mixin educational-textbox() {
-  float: none;
-  padding: $edu-textbox-padding-top $edu-textbox-padding-right $edu-textbox-padding-bottom $edu-textbox-padding-left;
-  margin-bottom: $edu-textbox-margin-bottom;
-  border-radius: $edu-textbox-border-radius;
+@mixin educational-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
+  padding:
+    if-map-get($edu-textbox-padding-top, $type)
+    if-map-get($edu-textbox-padding-right, $type)
+    if-map-get($edu-textbox-padding-bottom, $type)
+    if-map-get($edu-textbox-padding-left, $type);
+  margin-bottom: if-map-get($edu-textbox-margin-bottom, $type);
+  border-radius: if-map-get($edu-textbox-border-radius, $type);
   border-style: $edu-textbox-border-style;
+  border-width: if-map-get($edu-textbox-border-width, $type);
+  color: $color;
+  background: $background;
 
   h3 {
-    padding: $edu-header-padding-top $edu-header-padding-right $edu-header-padding-bottom $edu-header-padding-left;
-    margin: $edu-header-margin-top $edu-header-margin-right $edu-header-margin-bottom $edu-header-margin-left;
-    font-size: if-map-get($edu-header-font-size, $type);
+    padding:
+      if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-right, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-bottom, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-left, $type) * (1 / $edu-header-font-size-multiplier);
+    margin:
+      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier);
+    border-top-right-radius: if-map-get($edu-textbox-border-radius, $type) * (1 / $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
+    border-top-left-radius: if-map-get($edu-textbox-border-radius, $type) * (1 / $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
+    font-size: $edu-header-font-size-multiplier * if-map-get($textbox-font-size, $type);
     font-style: $edu-header-font-style;
     font-weight: $edu-header-font-weight;
-    color: $edu-header-text-color;
+    color: $header-color;
+    background: $header-background;
     text-align: $edu-header-text-align;
   }
 }
 
 .textbox {
-  padding: $textbox-padding-top $textbox-padding-right $textbox-padding-bottom $textbox-padding-left;
-  margin: $textbox-margin-top $textbox-margin-right $textbox-margin-bottom $textbox-margin-left;
+  padding: if-map-get($textbox-padding-top, $type) if-map-get($textbox-padding-right, $type) if-map-get($textbox-padding-bottom, $type) if-map-get($textbox-padding-left, $type);
+  margin: if-map-get($textbox-margin-top, $type) if-map-get($textbox-margin-right, $type) if-map-get($textbox-margin-bottom, $type) if-map-get($textbox-margin-left, $type);
   font-family: $textbox-font-family;
   font-size: if-map-get($textbox-font-size, $type);
   font-style: $textbox-font-style;
@@ -36,12 +53,13 @@
   line-height: if-map-get($textbox-line-height, $type);
   text-align: $textbox-text-align;
   border-style: $textbox-border-style;
-  border-width: $textbox-border-width;
-  border-radius: $textbox-border-radius;
+  border-width: if-map-get($textbox-border-width, $type);
+  border-radius: if-map-get($textbox-border-radius, $type);
+  page-break-inside: avoid;
 
   p {
-    margin-top: $textbox-para-margin-top;
-    margin-bottom: $textbox-para-margin-bottom;
+    margin-top: if-map-get($textbox-para-margin-top, $type);
+    margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
     text-indent: 0;
   }
 
@@ -59,51 +77,19 @@
   }
 
   &.learning-objectives {
-    @include educational-textbox();
-
-    background-color: $learning-objectives-background;
-
-    h3 {
-      background-color: $learning-objectives-header-background;
-      border-top-right-radius: $edu-textbox-border-radius;
-      border-top-left-radius: $edu-textbox-border-radius;
-    }
+    @include educational-textbox($learning-objectives-header-color, $learning-objectives-header-background, $learning-objectives-color, $learning-objectives-background);
   }
 
   &.key-takeaways {
-    @include educational-textbox();
-
-    background-color: $key-takeaways-background;
-
-    h3 {
-      background-color: $key-takeaways-header-background;
-      border-top-right-radius: $edu-textbox-border-radius;
-      border-top-left-radius: $edu-textbox-border-radius;
-    }
+    @include educational-textbox($key-takeaways-header-color, $key-takeaways-header-background, $key-takeaways-color, $key-takeaways-background);
   }
 
   &.exercises {
-    @include educational-textbox();
-
-    background-color: $exercises-background;
-
-    h3 {
-      background-color: $exercises-header-background;
-      border-top-right-radius: $edu-textbox-border-radius;
-      border-top-left-radius: $edu-textbox-border-radius;
-    }
+    @include educational-textbox($exercises-header-color, $exercises-header-background, $exercises-color, $exercises-background);
   }
 
   &.examples {
-    @include educational-textbox();
-
-    background-color: $examples-background;
-
-    h3 {
-      background-color: $examples-header-background;
-      border-top-right-radius: $edu-textbox-border-radius;
-      border-top-left-radius: $edu-textbox-border-radius;
-    }
+    @include educational-textbox($examples-header-color, $examples-header-background, $examples-color, $examples-background);
   }
 }
 

@@ -82,14 +82,14 @@
     padding: $table-th-padding-top $table-th-padding-right $table-th-padding-bottom $table-th-padding-left;
     line-height: $table-th-line-height;
     text-align: $table-th-align;
-    vertical-align: middle;
+    vertical-align: $table-th-vertical-align;
   }
 
   td {
     padding: $table-td-padding-top $table-td-padding-right $table-td-padding-bottom $table-td-padding-left;
     line-height: $table-td-line-height;
     text-align: $table-td-align;
-    vertical-align: middle;
+    vertical-align: $table-td-vertical-align;
   }
 }
 
