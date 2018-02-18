@@ -5,88 +5,93 @@
 @import '../utilities';
 
 @if $type == 'web' {
-  section header {
-    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+  section.front-matter,
+  section.part,
+  section.chapter,
+  section.back-matter {
+    header {
+      margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
-    h1 {
-      display: $chapter-title-display;
-      margin-top: if-map-get($chapter-title-margin-top, $type);
-      margin-bottom: 0;
-      font-family: $chapter-title-font-family;
-      font-size: if-map-get($section-title-font-size, $type);
-      font-style: $chapter-title-font-style;
-      font-weight: $chapter-title-font-weight;
-      hyphens: none;
-      text-align: $chapter-title-align;
-      text-transform: $chapter-title-text-transform;
+      h1 {
+        display: $chapter-title-display;
+        margin-top: if-map-get($chapter-title-margin-top, $type);
+        margin-bottom: 0;
+        font-family: $chapter-title-font-family;
+        font-size: if-map-get($section-title-font-size, $type);
+        font-style: $chapter-title-font-style;
+        font-weight: $chapter-title-font-weight;
+        hyphens: none;
+        text-align: $chapter-title-align;
+        text-transform: $chapter-title-text-transform;
 
-      span {
-        display: $chapter-number-display;
-        margin-top: if-map-get($chapter-number-margin-top, $type);
-        margin-bottom: if-map-get($chapter-number-margin-bottom, $type);
-        font-family: $chapter-number-font-family;
-        font-size: if-map-get($chapter-number-font-size, $type);
-        font-style: $chapter-number-font-style;
-        font-weight: $chapter-number-font-weight;
-        line-height: if-map-get($chapter-number-line-height, $type);
-        text-align: $chapter-number-align;
-        text-transform: $chapter-number-text-transform;
+        span {
+          display: $chapter-number-display;
+          margin-top: if-map-get($chapter-number-margin-top, $type);
+          margin-bottom: if-map-get($chapter-number-margin-bottom, $type);
+          font-family: $chapter-number-font-family;
+          font-size: if-map-get($chapter-number-font-size, $type);
+          font-style: $chapter-number-font-style;
+          font-weight: $chapter-number-font-weight;
+          line-height: if-map-get($chapter-number-line-height, $type);
+          text-align: $chapter-number-align;
+          text-transform: $chapter-number-text-transform;
 
-        &::after {
-          content: $chapter-number-after-content;
+          &::after {
+            content: $chapter-number-after-content;
+          }
         }
       }
-    }
 
-    .numberless & {
-      h1 span {
-        content: '';
+      .numberless & {
+        h1 span {
+          content: '';
+        }
       }
-    }
 
-    [data-type='subtitle'] {
-      display: block;
-      margin-bottom: 0;
-      font-family: $section-subtitle-font-family;
-      font-size: if-map-get($section-subtitle-font-size, $type);
-      font-style: $section-subtitle-font-style;
-      font-weight: $section-subtitle-font-weight;
-      hyphens: none;
-      text-align: $section-subtitle-align;
-      text-transform: $section-subtitle-text-transform;
-      column-span: all;
-    }
+      [data-type='subtitle'] {
+        display: block;
+        margin-bottom: 0;
+        font-family: $section-subtitle-font-family;
+        font-size: if-map-get($section-subtitle-font-size, $type);
+        font-style: $section-subtitle-font-style;
+        font-weight: $section-subtitle-font-weight;
+        hyphens: none;
+        text-align: $section-subtitle-align;
+        text-transform: $section-subtitle-text-transform;
+        column-span: all;
+      }
 
-    [data-type='author'] {
-      display: block;
-      margin-bottom: if-map-get($section-author-margin-bottom, $type);
-      font-family: $section-author-font-family;
-      font-size: if-map-get($section-author-font-size, $type);
-      font-style: $section-author-font-style;
-      font-weight: $section-author-font-weight;
-      hyphens: none;
-      text-align: $section-author-align;
-      text-transform: $section-author-text-transform;
-    }
+      [data-type='author'] {
+        display: block;
+        margin-bottom: if-map-get($section-author-margin-bottom, $type);
+        font-family: $section-author-font-family;
+        font-size: if-map-get($section-author-font-size, $type);
+        font-style: $section-author-font-style;
+        font-weight: $section-author-font-weight;
+        hyphens: none;
+        text-align: $section-author-align;
+        text-transform: $section-author-text-transform;
+      }
 
-    h1 + [data-type='subtitle'] {
-      margin-top: if-map-get($section-title-subtitle-spacing, $type);
-    }
+      h1 + [data-type='subtitle'] {
+        margin-top: if-map-get($section-title-subtitle-spacing, $type);
+      }
 
-    h1 + [data-type='author'] {
-      margin-top: if-map-get($section-title-author-spacing, $type);
-    }
+      h1 + [data-type='author'] {
+        margin-top: if-map-get($section-title-author-spacing, $type);
+      }
 
-    [data-type='subtitle'] + [data-type='author']  {
-      margin-top: if-map-get($section-subtitle-author-spacing, $type);
-    }
+      [data-type='subtitle'] + [data-type='author']  {
+        margin-top: if-map-get($section-subtitle-author-spacing, $type);
+      }
 
-    h1:last-child {
-      margin-bottom: if-map-get($section-title-margin-bottom, $type);
-    }
+      h1:last-child {
+        margin-bottom: if-map-get($section-title-margin-bottom, $type);
+      }
 
-    [data-type='subtitle']:last-child {
-      margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+      [data-type='subtitle']:last-child {
+        margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+      }
     }
   }
 }
