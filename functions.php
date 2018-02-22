@@ -22,6 +22,23 @@ if ( ! class_exists( 'PressbooksMix\Assets' ) || ! function_exists( 'Sober\Inter
 	require_once $composer;
 }
 
+/**
+ * Ensure Pressbooks is working
+ */
+if ( ! function_exists( 'pb_meets_minimum_requirements' ) && ! @include_once( WP_PLUGIN_DIR . '/pressbooks/compatibility.php' ) ) { // @codingStandardsIgnoreLine
+	wp_die( __( 'Cannot find Pressbooks install.', 'pressbooks-book' ) );
+}
+if ( ! pb_meets_minimum_requirements() ) {
+	ob_start();
+	do_action( 'admin_notices' );
+	$buffer = ob_get_clean();
+	wp_die( $buffer );
+}
+
+/* ------------------------------------------------------------------------ *
+ * Pressbooks Book
+ * ------------------------------------------------------------------------ */
+
 $includes = [
 	'actions',
 	'filters',
