@@ -2,7 +2,7 @@
 	<div class="book-header__inner">
 		<?php pb_get_links( false ); ?>
 		<h1 class="section__title book-header__title">
-			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			<?php bloginfo( 'name' ); ?>
 		</h1>
 		<?php if ( ! empty( $book_information['pb_subtitle'] ) ) : ?>
 			<p class="book-header__subtitle"><?php echo $book_information['pb_subtitle']; ?></p>
