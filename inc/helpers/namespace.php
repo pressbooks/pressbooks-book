@@ -45,7 +45,11 @@ if ( $post_type !== 'chapter' ) { ?>
 }
 
 function get_name_for_filetype( $filetype ) {
-	$formats = [
+	/**
+	 * Add custom export file types to the array of human-readable file types.
+	 * @since 2.0.0
+	 */
+	$formats = apply_filters( 'pb_export_filetype_names', [
 		'print-pdf' => __( 'Print PDF', 'pressbooks-book' ),
 		'pdf' => __( 'Digital PDF', 'pressbooks-book' ),
 		'mpdf' => __( 'Digital PDF', 'pressbooks-book' ),
@@ -57,7 +61,7 @@ function get_name_for_filetype( $filetype ) {
 		'odf' => __( 'OpenDocument', 'pressbooks-book' ),
 		'wxr' => __( 'Pressbooks XML', 'pressbooks-book' ),
 		'vanillawxr' => __( 'WordPress XML', 'pressbooks' ),
-	];
+	] );
 
 	return $formats[ $filetype ];
 }
