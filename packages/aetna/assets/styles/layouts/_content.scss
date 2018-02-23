@@ -4,7 +4,7 @@
   position: relative;
   margin: 0 auto;
   background-color: var(--body-bg);
-  width: auto;
+  width: 100%;
 
   @media #{$breakpoint-large} {
     width: var(--reading-width, $reading-page-max-width);
