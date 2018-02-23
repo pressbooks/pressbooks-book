@@ -28,6 +28,7 @@ export default {
 							.addClass( 'active' )
 							.text( PB_A11y.decrease_label )
 							.attr( 'title', PB_A11y.decrease_label );
+						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '1', {
 							expires: 365,
 							path:    '',
@@ -41,6 +42,7 @@ export default {
 							.removeClass( 'active' )
 							.text( PB_A11y.increase_label )
 							.attr( 'title', PB_A11y.increase_label );
+						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '0', {
 							expires: 365,
 							path:    '',
@@ -75,7 +77,9 @@ export default {
 
 		( function () {
 			// Get all the <h3> headings
-			const headings = document.querySelectorAll( '.dropdown > h3, .dropdown > p' );
+			const headings = document.querySelectorAll(
+				'.dropdown > h3, .dropdown > p'
+			);
 
 			Array.prototype.forEach.call( headings, heading => {
 				// Give each <h3> a toggle button child

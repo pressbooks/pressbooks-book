@@ -7,10 +7,11 @@ export default {
 				const duration = 300;
 				const nav = $( '.nav-reading' );
 				const readingMeta = $( '.block-reading-meta' );
-				const comments = $( '.section-comments' );
-				const footer = $( '.footer--reading' );
+				// const comments = $( '.section-comments' );
+				// const footer = $( '.footer--reading' );
 
 				$( window ).scroll( function () {
+					const fontsize = $( 'html' ).hasClass( 'fontsize' );
 					if ( $( window ).scrollTop() > offset ) {
 						$( '.nav-reading__up' ).animate( { opacity: 1 }, duration );
 					}
@@ -18,28 +19,33 @@ export default {
 						$( '.nav-reading__up' ).animate( { opacity: 0 }, duration );
 					}
 
-					if ( $( window ).width() > 1330 ) {
-						if (
-							nav.offset().top + nav.height() >=
-							readingMeta.offset().top - 18
-						) {
-							nav.addClass( 'absolute' );
-							nav.css( 'top', readingMeta.offset().top - 36 );
-						}
-						if (
-							$( document ).scrollTop() <
-							readingMeta.offset().top - window.innerHeight * 0.58
-						) {
-							nav.removeClass( 'absolute' );
-							nav.css( 'top', '58%' );
+					if ( fontsize === false ) {
+						if ( $( window ).width() > 1330 ) {
+							if (
+								nav.offset().top + nav.height() >=
+								readingMeta.offset().top - 18
+							) {
+								nav.addClass( 'absolute' );
+								nav.css( 'top', readingMeta.offset().top - 36 );
+							}
+							if (
+								$( document ).scrollTop() <
+								readingMeta.offset().top - window.innerHeight * 0.58
+							) {
+								nav.removeClass( 'absolute' );
+								nav.css( 'top', '58%' );
+							}
 						}
 					}
 				} );
 
 				$( window ).resize( function () {
-					if ( $( window ).width() < 1330 ) {
-						nav.removeClass( 'absolute' );
-						nav.removeAttr( 'style' );
+					const fontsize = $( 'html' ).hasClass( 'fontsize' );
+					if ( fontsize === false ) {
+						if ( $( window ).width() < 1330 ) {
+							nav.removeClass( 'absolute' );
+							nav.removeAttr( 'style' );
+						}
 					}
 				} );
 
