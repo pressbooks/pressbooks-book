@@ -7,7 +7,6 @@ $body-font-size: (
   prince: 9pt,
   web: 1em
 ) !default;
-
 $body-line-height: (14 / 9) * 1em !default;
 $hx-margin-top: (30 / 14) * 1em !default;
 $hx-margin-bottom: (20 / 14) * 1em !default;
@@ -34,7 +33,7 @@ $ul-margin-bottom: (20 / 14) * 1em !default;
 $ul-margin-left: 0 !default;
 $li-li-margin-top: 0 !default;
 $table-font-size: 0.9em !default;
-$table-line-height: 1.1 !defaault;
+$table-line-height: 1.1 !default;
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/elements';

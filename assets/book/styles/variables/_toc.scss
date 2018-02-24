@@ -26,92 +26,223 @@ $toc-center-margin-right: 0.5cm !default;
 /// Center of Table of Contents margin left.
 /// @type String
 $toc-center-margin-left: 0.5cm !default;
-
-
+/// Top margin for Table of contents block.
+/// @type String
 $toc-block-margin-top: 1.5em !default;
+/// Top margin for Table of contents section.
+/// @type String
 $toc-section-margin-top: 0.5em !default;
+/// Top margin for Table of contents subsection.
+/// @type String
 $toc-subsection-margin-top: 0 !default;
+/// Top margin for chapters in Table of contents.
+/// @type String
 $toc-chapter-margin-top: 0.3em !default;
+/// Title width for Table of contents.
+/// @type String
 $toc-title-width: 80% !default;
+/// Subsection width for Table of contents.
+/// @type String
 $toc-sub-width: 75% !default;
-
+/// Line height for Table of contents.
+/// @type String
 $toc-base-line-height: 1.2em !default;
 
-/// 
+/// Front matter title font stack for table of contents.
 /// @type String
 $toc-front-matter-title-font-family: $font-1 !default;
+/// Front matter title font size for table of contents.
+/// @type String
 $toc-front-matter-title-font-size: 0.9em !default;
+/// Front matter title font style for table of contents.
+/// @type String
 $toc-front-matter-title-font-style: normal !default;
+/// Front matter title font weight for table of contents.
+/// @type String
 $toc-front-matter-title-font-weight: normal !default;
+/// Front matter title text transform for table of contents.
+/// @type String
 $toc-front-matter-title-text-transform: none !default;
 
+/// Front matter subtitle font stack for table of contents.
+/// @type String
 $toc-front-matter-subtitle-font-family: $font-1 !default;
+/// Front matter subtitle font size for table of contents.
+/// @type String
 $toc-front-matter-subtitle-font-size: 0.9em !default;
+/// Front matter subtitle font style for table of contents.
+/// @type String
 $toc-front-matter-subtitle-font-style: italic !default;
+/// Front matter subtitle font weight for table of contents.
+/// @type String
 $toc-front-matter-subtitle-font-weight: normal !default;
+/// Front matter subtitle text transform for table of contents.
+/// @type String
 $toc-front-matter-subtitle-text-transform: none !default;
 
+/// Front matter author font stack for table of contents.
+/// @type String
 $toc-front-matter-author-font-family: $font-1 !default;
+/// Front matter author font size for table of contents.
+/// @type String
 $toc-front-matter-author-font-size: 0.9em !default;
+/// Front matter author font style for table of contents.
+/// @type String
 $toc-front-matter-author-font-style: normal !default;
+/// Front matter author font weight for table of contents.
+/// @type String
 $toc-front-matter-author-font-weight: normal !default;
+/// Front matter author text transform for table of contents.
+/// @type String
 $toc-front-matter-author-text-transform: none !default;
 
+/// Part number display for Table of Contents
+/// @type String
 $toc-part-number-display: inline-block !default;
+/// Part number font stack for Table of Contents
+/// @type String
 $toc-part-number-font-family: $font-3 !default;
+/// Part number font size for Table of Contents
+/// @type String
 $toc-part-number-font-size: 1em !default;
+/// Part number font style for Table of Contents
+/// @type String
 $toc-part-number-font-style: normal !default;
+/// Part number font weight for Table of Contents
+/// @type String
 $toc-part-number-font-weight: normal !default;
+/// Part number text transform for Table of Contents
+/// @type String
 $toc-part-number-text-transform: none !default;
 
+/// Part title font stack for Table of Contents
+/// @type String
 $toc-part-title-font-family: $font-3 !default;
+/// Part title font size for Table of Contents
+/// @type String | Map
 $toc-part-title-font-size: (
   epub: 1.2em,
   prince: 1em,
   web: 1em
 ) !default;
+/// Part title font style for Table of Contents
+/// @type String
 $toc-part-title-font-style: normal !default;
+/// Part title font weight for Table of Contents
+/// @type String
 $toc-part-title-font-weight: normal !default;
+/// Part title text transform for Table of Contents
+/// @type String
 $toc-part-title-text-transform: none !default;
 
+/// Chapter number display for Table of Contents
+/// @type String
 $toc-chapter-number-display: inline-block !default;
+/// Chapter number font stack for Table of Contents
+/// @type String
 $toc-chapter-number-font-family: $font-1 !default;
+/// Chapter number font size for Table of Contents
+/// @type String
 $toc-chapter-number-font-size: 1em !default;
+/// Chapter number font style for Table of Contents
+/// @type String
 $toc-chapter-number-font-style: normal !default;
+/// Chapter number font weight for Table of Contents
+/// @type String
 $toc-chapter-number-font-weight: normal !default;
+/// Chapter number text transform for Table of Contents
+/// @type String
 $toc-chapter-number-text-transform: none !default;
 
+/// Chapter title font stack for Table of Contents
+/// @type String
 $toc-chapter-title-font-family: $font-1 !default;
+/// Chapter title font size for Table of Contents
+/// @type String
 $toc-chapter-title-font-size: 1em !default;
+/// Chapter title font style for Table of Contents
+/// @type String
 $toc-chapter-title-font-style: normal !default;
+/// Chapter title font weight for Table of Contents
+/// @type String
 $toc-chapter-title-font-weight: normal !default;
+/// Chapter title text transform for Table of Contents
+/// @type String
 $toc-chapter-title-text-transform: none !default;
 
+/// Chapter subtitle font stack for Table of Contents
+/// @type String
 $toc-chapter-subtitle-font-family: $font-1 !default;
+/// Chapter subtitle font size for Table of Contents
+/// @type String
 $toc-chapter-subtitle-font-size: 0.9em !default;
+/// Chapter subtitle font style for Table of Contents
+/// @type String
 $toc-chapter-subtitle-font-style: normal !default;
+/// Chapter subtitle font weight for Table of Contents
+/// @type String
 $toc-chapter-subtitle-font-weight: normal !default;
+/// Chapter subtitle text transform for Table of Contents
+/// @type String
 $toc-chapter-subtitle-text-transform: none !default;
 
+/// Chapter author font stack for Table of Contents
+/// @type String
 $toc-chapter-author-font-family: $font-1 !default;
+/// Chapter author font size for Table of Contents
+/// @type String
 $toc-chapter-author-font-size: 0.9em !default;
+/// Chapter author font style for Table of Contents
+/// @type String
 $toc-chapter-author-font-style: normal !default;
+/// Chapter author font weight for Table of Contents
+/// @type String
 $toc-chapter-author-font-weight: normal !default;
+/// Chapter author text transform for Table of Contents
+/// @type String
 $toc-chapter-author-text-transform: none !default;
 
+/// Page number font family for Table of Contents
+/// @type String
 $toc-page-number-font-family: $font-1 !default;
+/// Page number font size for Table of Contents
+/// @type String
 $toc-page-number-font-size: 1em !default;
+/// Page number font style for Table of Contents
+/// @type String
 $toc-page-number-font-style: normal !default;
+/// Page number font weight for Table of Contents
+/// @type String
 $toc-page-number-font-weight: normal !default;
+/// Page number text transform for Table of Contents
+/// @type String
 $toc-page-number-text-transform: none !default;
+/// Page number text decoration for Table of Contents
+/// @type String
 $toc-page-number-text-decoration: none !default;
 
+/// Front matter page number font size for Table of Contents
+/// @type String
 $toc-front-matter-page-number-font-size: 0.9em !default;
+/// Front matter page number font style for Table of Contents
+/// @type String
 $toc-front-matter-page-number-font-style: normal !default;
+/// Front matter page number font weight for Table of Contents
+/// @type String
 $toc-front-matter-page-number-font-weight: normal !default;
+/// Front matter page number text transform for Table of Contents
+/// @type String
 $toc-front-matter-page-number-text-transform: none !default;
 
+/// Section title font size for Table of Contents
+/// @type String
 $toc-section-title-font-size: 1em !default;
+/// Section title font style for Table of Contents
+/// @type String
 $toc-section-title-font-style: italic !default;
+/// Section title font weight for Table of Contents
+/// @type String
 $toc-section-title-font-weight: normal !default;
+/// Section title text transform for Table of Contents
+/// @type String
 $toc-section-title-text-transform: none !default;

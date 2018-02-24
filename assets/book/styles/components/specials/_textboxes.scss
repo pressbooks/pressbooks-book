@@ -55,7 +55,6 @@
   border-style: $textbox-border-style;
   border-width: if-map-get($textbox-border-width, $type);
   border-radius: if-map-get($textbox-border-radius, $type);
-  page-break-inside: avoid;
 
   p {
     margin-top: if-map-get($textbox-para-margin-top, $type);
