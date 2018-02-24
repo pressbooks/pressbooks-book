@@ -54,28 +54,30 @@ meta[name="pb-publisher-city"] {
   string-set: chapter-number content();
 }
 
-.front-matter .front-matter-title-wrap > h1,
-.chapter .chapter-title-wrap > h2,
-.back-matter .back-matter-title-wrap > h1 {
+.front-matter .front-matter-title-wrap .front-matter-title,
+.chapter .chapter-title-wrap .chapter-title,
+.back-matter .back-matter-title-wrap .back-matter-title {
   string-set: section-title content();
 }
 
 // If the 'short-title' property is available, this will override the section
 // title for use in the running head.
 
-.front-matter > .short-title,
-.chapter > .short-title,
-.back-matter > .short-title {
+.front-matter .front-matter-title-wrap .short-title,
+.chapter .chapter-title-wrap .short-title,
+.back-matter .back-matter-title-wrap .short-title {
   width: 0;
   height: 0;
   visibility: hidden; // display: none causes issues with string-set
   string-set: section-title content();
 }
 
-.chapter-title-wrap > .chapter-author {
-  string-set: chapter-author content();
-}
+.chapter-title-wrap {
+  .chapter-author {
+    string-set: chapter-author content();
+  }
 
-.chapter-title-wrap > .chapter-subtitle {
-  string-set: chapter-subtitle content();
+  .chapter-subtitle {
+    string-set: chapter-subtitle content();
+  }
 }
