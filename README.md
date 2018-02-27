@@ -1,8 +1,8 @@
-# Pressbooks Book
+# McLuhan
 
 [![Travis](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book/) [![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/vpre/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
 
-The default book theme for Pressbooks.
+This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora. McLuhan is the default book theme for Pressbooks.
 
 ## Requirements
 

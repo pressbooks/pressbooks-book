@@ -1,4 +1,4 @@
-# Copyright (C) 2017 pressbooks-book
+# Copyright (C) 2018 pressbooks-book
 # This file is distributed under the same license as the pressbooks-book package.
 # Translators:
 # fish free <winofchina@hotmail.com>, 2017
@@ -19,239 +19,228 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../comments.php:3
+#: ../comments.php:2
+msgid "Feedback/Errata"
+msgstr ""
+
+#: ../comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr "该文章有密码保护。请输入密码以查看评论。"
 
-#: ../comments.php29, ../comments.php:40
+#: ../comments.php33, ../comments.php:44
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span>较早的评论"
 
-#: ../comments.php30, ../comments.php:41
+#: ../comments.php34, ../comments.php:45
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "较新的评论<span class=\"meta-nav\">&larr;</span>"
 
-#: ../comments.php:48
+#: ../comments.php:52
 msgid "Comments are closed."
 msgstr "已禁用评论。"
 
-#: ../comments.php:56
+#: ../comments.php:60
 msgid "Submit"
 msgstr "提交"
 
-#: ../content-accessibility-toolbar.php:3
-msgid "Toggle Font size"
-msgstr "切换字号"
+#: ../footer.php:25
+msgid "Powered by %s"
+msgstr ""
 
-#: ../content-none.php:2
-msgid "Nothing Found"
-msgstr "未找到"
+#: ../footer.php:27
+msgid "Open Source"
+msgstr ""
 
-#: ../content-none.php:3
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr "对不起，没找到您要搜索的。请换用别的字词搜索。"
+#: ../footer.php:28
+msgid "Open Textbooks"
+msgstr ""
 
-#: ../content-social-footer.php:4
-msgid "I wanted to share this post with you from"
-msgstr "我想分享这篇文章给您，来自于"
+#: ../footer.php:29
+msgid "Open Book Publishing"
+msgstr ""
 
-#: ../content-social-footer.php:5
-msgid "Email to a friend"
-msgstr "Email给朋友"
+#: ../footer.php:30
+msgid "Learn More"
+msgstr ""
 
-#: ../content-social-footer.php:5
-msgid "Share via Email"
-msgstr "通过Email分享"
+#: ../footer.php34, ../footer.php:38
+msgid "Pressbooks on Facebook"
+msgstr ""
 
-#: ../footer.php:23
-msgid "Book Name"
-msgstr "书籍名"
+#: ../footer.php40, ../footer.php:44
+msgid "Pressbooks on Twitter"
+msgstr ""
 
-#: ../footer.php:38
-msgid "Copyright"
-msgstr "版权"
+#: ../functions.php:18
+msgid "Dependencies Missing"
+msgstr ""
 
-#: ../footer.php:41
-msgid "by"
-msgstr "由"
+#: ../functions.php:19
+msgid "You must run <code>composer install</code> from the McLuhan directory."
+msgstr ""
 
-#: ../footer.php:51
-msgid "Simple Book Production"
-msgstr "简易书籍生产"
+#: ../functions.php:29
+msgid "Cannot find Pressbooks install."
+msgstr ""
 
-#: ../functions.php:20
-msgid "Author"
+#: ../functions.php65, ../page-authors.php:26
+msgid "Authors"
 msgstr "作者"
 
-#: ../functions.php:21
-msgid "Contributing Author"
-msgstr "非第一作者"
+#: ../functions.php:66
+msgid "Editors"
+msgstr ""
 
-#: ../functions.php:22
+#: ../functions.php:67
+msgid "Translators"
+msgstr ""
+
+#: ../functions.php:68
+msgid "Reviewers"
+msgstr ""
+
+#: ../functions.php:69
+msgid "Illustrators"
+msgstr ""
+
+#: ../functions.php:70
+msgid "Contributors"
+msgstr ""
+
+#: ../functions.php71, ../single.php:29
+msgid "License"
+msgstr ""
+
+#: ../functions.php:72
+msgid "Primary Subject"
+msgstr ""
+
+#: ../functions.php:73
+msgid "Additional Subject(s)"
+msgstr ""
+
+#: ../functions.php:74
 msgid "Publisher"
 msgstr "出版商"
 
-#: ../functions.php:23
-msgid "Print ISBN"
-msgstr "印刷ISBN"
-
-#: ../functions.php:24
-msgid "Keywords/Tags"
-msgstr "关键字/标签"
-
-#: ../functions.php:25
+#: ../functions.php:75
 msgid "Publication Date"
 msgstr "出版日期"
 
-#: ../functions.php:26
-msgid "Hashtag"
-msgstr "井号标签"
-
-#: ../functions.php:27
+#: ../functions.php:76
 msgid "Ebook ISBN"
 msgstr "电子书ISBN"
 
-#: ../functions.php:202
-msgid "Previous"
-msgstr "上一页"
+#: ../functions.php:77
+msgid "Print ISBN"
+msgstr "印刷ISBN"
 
-#: ../functions.php:205
-msgid "Next"
-msgstr "下一页"
+#: ../functions.php:78
+msgid "Hashtag"
+msgstr "井号标签"
 
-#: ../functions.php:244
+#: ../functions.php:115
+msgid "Increase Font Size"
+msgstr ""
+
+#: ../functions.php:116
+msgid "Decrease Font Size"
+msgstr ""
+
+#: ../functions.php:235
+msgid "Previous Section"
+msgstr ""
+
+#: ../functions.php:240
+msgid "Next Section"
+msgstr ""
+
+#: ../functions.php:285
 msgid "%s on"
 msgstr "%s on"
 
-#: ../functions.php:244
+#: ../functions.php:285
 msgid "%1$s at %2$s"
 msgstr "%1$s %2$s"
 
-#: ../functions.php244, ../functions.php:264
+#: ../functions.php285, ../functions.php:305
 msgid "(Edit)"
 msgstr "（编辑）"
 
-#: ../functions.php:247
+#: ../functions.php:288
 msgid "Your comment is awaiting moderation."
 msgstr "您的评论正在等待审核。"
 
-#: ../functions.php:264
+#: ../functions.php:305
 msgid "Pingback:"
 msgstr "参照通告："
 
-#: ../functions.php383, ../page-cover-private-block.php:2
-msgid "Make your own books on Pressbooks"
-msgstr "在Pressbooks上创建自己的书籍"
+#: ../header.php:59
+msgid "Skip to content"
+msgstr ""
 
-#: ../header.php:32
-msgid "Page %s"
-msgstr "第%s页"
+#: ../header.php:73
+msgid "Logo for %s"
+msgstr ""
 
-#: ../header.php87, ../page-cover-top-block.php:63
+#: ../header.php:83
+msgid "Toggle Menu"
+msgstr ""
+
+#: ../header.php95, ../index.php:11
+msgid "Contents"
+msgstr ""
+
+#: ../header.php:113
 msgid "Buy"
 msgstr "购买"
-
-#: ../index.php13, ../page-cover-third-block.php4, ../sidebar.php:16
-msgid "Table of Contents"
-msgstr "目录"
 
 #: ../page-about.php:5
 msgid "About The Book"
 msgstr "关于该书"
 
-#: ../page-about.php21, ../page-buy.php9, ../page-buy.php:17
+#: ../page-about.php21, ../page-buy.php10, ../page-buy.php:18
 msgid "It's coming!"
 msgstr "快来了！"
 
-#: ../page-authors.php:26
-msgid "Authors"
-msgstr "作者"
-
-#: ../page-buy.php:4
+#: ../page-buy.php:5
 msgid "Buy the Book"
 msgstr "购买此书"
 
-#: ../page-buy.php:19
+#: ../page-buy.php:20
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr "您可以通过下面任一链接购买<a href=\"%1$s\">%2$s</a>："
 
-#: ../page-buy.php:23
+#: ../page-buy.php:24
 msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
 msgstr "在<a href=\"%1$s\">amazon.com</a>上购买"
 
-#: ../page-buy.php:27
+#: ../page-buy.php:28
 msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
 msgstr "在<a href=\"%1$s\">oreilly.com</a>上购买"
 
-#: ../page-buy.php:31
+#: ../page-buy.php:32
 msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
 msgstr "在<a href=\"%1$s\">barnesandnoble.com</a>上购买"
 
-#: ../page-buy.php:35
+#: ../page-buy.php:36
 msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
 msgstr "在<a href=\"%1$s\">kobobooks.com</a>上购买"
 
-#: ../page-buy.php:39
+#: ../page-buy.php:40
 msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
 msgstr "在<a href=\"%1$s\">apple.com</a>上购买"
 
-#: ../page-buy.php:43
+#: ../page-buy.php:44
 msgid "Elsewhere"
 msgstr "其他地方"
 
-#: ../page-buy.php:43
+#: ../page-buy.php:44
 msgid "Purchase here:"
 msgstr "在此购买："
 
-#: ../page-cover-fourth-block.php:21
-msgid "Other books"
-msgstr "其他书籍"
-
-#: ../page-cover-second-block.php:5
-msgid "Book Description"
-msgstr "书籍描述"
-
-#: ../page-cover-second-block.php15, ../page-cover-second-block.php16,
-#: ../page-cover-second-block.php:17
-msgid "Check out this great book on Pressbooks."
-msgstr "到Pressbooks上阅读这本好书。"
-
-#: ../page-cover-second-block.php:15
-msgid "Tweet"
-msgstr "Tweet"
-
-#: ../page-cover-second-block.php:16
-msgid "Like"
-msgstr "喜欢"
-
-#: ../page-cover-second-block.php:17
-msgid "+1"
-msgstr "+1"
-
-#: ../page-cover-top-block.php:8
-msgid "login"
-msgstr "登入"
-
-#: ../page-cover-top-block.php:10
-msgid "logout"
-msgstr "登出"
-
-#: ../page-cover-top-block.php12, ../sidebar.php:10
-msgid "Admin"
-msgstr "管理"
-
-#: ../page-cover-top-block.php:59
-msgid "Read"
-msgstr "阅读"
-
-#: ../page-cover-top-block.php:82
-msgid "Download in the following formats:"
-msgstr "以下列格式下载本书："
-
-#: ../page.php12, ../single.php:5
+#: ../page.php:12
 msgid "Edit"
 msgstr "编辑"
 
@@ -263,17 +252,17 @@ msgstr "页面："
 msgid "Access Denied"
 msgstr "拒绝访问"
 
-#: ../private.php:8
+#: ../private.php:7
 msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
 msgstr "本书不公开，只有注册用户才能查看。若您有账户，可以%s。"
 
-#: ../private.php:12
-msgid "login here"
-msgstr "在此登入"
+#: ../private.php:11
+msgid "sign in here"
+msgstr ""
 
-#: ../private.php:16
+#: ../private.php:15
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "您可在此%s创建自己的书籍。"
 
@@ -281,10 +270,32 @@ msgstr "您可在此%s创建自己的书籍。"
 msgid "Search Results for: %s"
 msgstr "对“%s”的搜索结果："
 
-#: ../sidebar.php:13
-msgid "Home"
-msgstr "首页"
+#: ../search.php:12
+msgid "Previous page"
+msgstr ""
 
-#: ../sidebar.php:23
-msgid "Close"
-msgstr "关闭"
+#: ../search.php:13
+msgid "Next page"
+msgstr ""
+
+#: ../search.php:14
+msgid "Paged navigation"
+msgstr ""
+
+#: ../searchform.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../searchform.php:4
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../searchform.php:8
+msgid "Search"
+msgstr ""
+
+#: ../single.php:37
+msgid "Share This Book"
+msgstr ""
