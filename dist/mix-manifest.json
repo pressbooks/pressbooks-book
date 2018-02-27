@@ -1,10 +1,5 @@
 {
-    "/styles/a11y.css": "/styles/a11y.css?id=67ce4802af40e4fea4f2",
-    "/styles/book-info.css": "/styles/book-info.css?id=bab08346efe18106290e",
-    "/styles/structure.css": "/styles/structure.css?id=73555eac1f448b204588",
-    "/scripts/a11y.js": "/scripts/a11y.js?id=3faa829da7a4aa2b976a",
-    "/scripts/columnizer.js": "/scripts/columnizer.js?id=465e1b0d7a57022d67ab",
-    "/scripts/keyboard-nav.js": "/scripts/keyboard-nav.js?id=5530f96084c639f108ac",
-    "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343",
-    "/scripts/toc.js": "/scripts/toc.js?id=41dec06e39b599e9d22d"
+    "/scripts/book.js": "/scripts/book.js?id=381e51a7b9fe98cb0219",
+    "/styles/book.css": "/styles/book.css?id=74ffd8568c3d78c76631",
+    "/scripts/sharer.js": "/scripts/sharer.js?id=b257fe1ee31a1838f343"
 }

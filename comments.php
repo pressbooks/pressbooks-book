@@ -1,7 +1,11 @@
-<div id="comments">
+<section class="section section-comments" id="comments">
+	<h2 class="section__title section-comments__title"><?php _e( 'Feedback/Errata', 'pressbooks-book' ); ?></h2>
+<div class="section-comments__inner">
+
 <?php if ( post_password_required() ) : ?>
 				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'pressbooks-book' ); ?></p>
-			</div><!-- #comments -->
+			<div><!-- #comments -->
+		</section>
 <?php
 		return;
 	endif;
@@ -54,8 +58,12 @@
 /* Comment form submit text*/
 $comments_args = [
 		'label_submit' => __( 'Submit', 'pressbooks-book' ),
+	'class_form' => 'section-comments__form comment-form clearfix',
+	'class_submit' => 'button button--primary button--header button--submit',
+	'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
 ];
 
 comment_form( $comments_args ); ?>
 
-</div><!-- #comments -->
+</div>
+</section><!-- #comments -->

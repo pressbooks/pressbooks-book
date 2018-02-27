@@ -1,0 +1,142 @@
+.nocomments {
+  text-align: center;
+}
+
+.section-comments {
+  --primary-dark: var(--footer-color);
+  --accent: var(--footer-color);
+
+  background-color: var(--footer-bg);
+  color: $footer-text-color;
+  font-family: $font-family-sans-serif;
+  padding: 2rem 1rem 2.25rem;
+
+  @media #{$breakpoint-tablet-and-up} {
+    padding: 4.5rem 1rem 2.5rem;
+  }
+
+  //overwrite link colors of potential book theme
+  a {
+    color: var(--footer-color);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+}
+
+.section-comments__inner {
+  max-width: var(--reading-width, $reading-page-max-width);
+  margin: 0 auto;
+}
+
+.section__title.section-comments__title {
+  font-size: 1.5rem;
+
+  &::before {
+    margin: 0 auto 1rem;
+    width: rem(46);
+    background: var(--footer-color);
+  }
+}
+
+.section-comments__form {
+  max-width: rem(400);
+  margin: 0 auto;
+
+  @media #{$breakpoint-large} {
+    max-width: none;
+  }
+}
+
+//TODO refactor classnames and comment_form( $comment_args )
+.comment-reply-title {
+  display: none;
+}
+
+.comment-notes {
+  text-align: center;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-comment {
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+
+  @media #{$breakpoint-large} {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.comment-form-author {
+  // TODO
+}
+
+.comment-form-comment {
+  margin-bottom: 1.25rem;
+
+  @media #{$breakpoint-large} {
+    float: right;
+    margin-bottom: 0;
+  }
+}
+
+#commentform label {
+  display: block;
+  font-size: 0.875rem;
+}
+
+#commentform input,
+#commentform textarea {
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  width: rem(400);
+
+  @media #{$breakpoint-large} {
+    width: rem(300);
+  }
+}
+
+#commentform input {
+  font-size: 0.875em;
+}
+
+#respond .form-allowed-tags {
+  width: 350px;
+  margin: 10px 0 0 170px;
+  font-size: 0.7em;
+  line-height: 1.2em;
+}
+
+.form-submit {
+  margin-top: 2rem;
+  text-align: center;
+
+  @media #{$breakpoint-large} {
+    text-align: right;
+    width: rem(300);
+  }
+}
+
+.comment-form-comment + .form-submit {
+  margin-top: 2.8rem;
+}
+
+#comments-title {
+  font-size: 1.125rem;
+}
+
+.commentlist {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.form-submit input#submit {
+  height: auto;
+  width: auto;
+}

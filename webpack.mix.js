@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+let mix = require( 'laravel-mix' );
 
 /*
  |--------------------------------------------------------------------------
@@ -11,21 +11,30 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath('dist')
-	.scripts('assets/scripts/a11y.js','dist/scripts/a11y.js')
-	.scripts(['node_modules/jquery-columnizer/src/jquery.columnizer.js', 'assets/scripts/columnizer-load.js'], 'dist/scripts/columnizer.js')
-  .scripts('assets/scripts/keyboard-nav.js','dist/scripts/keyboard-nav.js')
-	.scripts('node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js')
-	.scripts('assets/scripts/toc.js','dist/scripts/toc.js')
-	.sass('assets/styles/a11y.scss', 'dist/styles')
-  .sass('assets/styles/book-info.scss', 'dist/styles')
-  .sass('assets/styles/structure.scss', 'dist/styles')
-	.copyDirectory('assets/fonts', 'dist/fonts')
-	.copyDirectory('assets/images', 'dist/images')
+const dist = 'dist';
+
+mix
+	.setPublicPath( 'dist' )
+	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
+	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
+	.sass( 'assets/src/styles/book.scss', 'dist/styles' )
+	.copyDirectory( 'node_modules/buckram/styles', 'assets/book/styles' )
+	.copyDirectory( 'assets/src/images', 'dist/images' )
 	.version()
-  .options({
-    processCssUrls: false
-  });
+	.options( { processCssUrls: false } );
+
+// BrowserSync
+mix.browserSync( {
+	host:  'localhost',
+	proxy: 'https://pressbooks.test/standardtest',
+	port:  3200,
+	files: [ '*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js` ],
+} );
+
+// Source maps when not in production.
+if ( ! mix.inProduction() ) {
+	mix.sourceMaps();
+}
 
 // Full API
 // mix.js(src, output);

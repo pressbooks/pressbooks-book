@@ -9,6 +9,9 @@
     <!-- Show progress -->
     <arg value="p"/>
 
+	 <!-- Be quiet -->
+    <arg value="q"/>
+
     <!-- Use HM Coding Standards -->
     <rule ref="vendor/humanmade/coding-standards">
         <!-- Disable all ESLint checks -->
@@ -28,11 +31,11 @@
 
     <!-- Disable Side Effects rule for functions.php -->
     <rule ref="PSR1.Files.SideEffects">
-				<exclude-pattern>functions.php</exclude-pattern>
+		<exclude-pattern>functions.php</exclude-pattern>
     </rule>
 
     <!-- Disable Namespaced Functions for functions.php -->
     <rule ref="HM.Functions.NamespacedFunctions">
-				<exclude-pattern>functions.php</exclude-pattern>
+		<exclude-pattern>functions.php</exclude-pattern>
     </rule>
 </ruleset>

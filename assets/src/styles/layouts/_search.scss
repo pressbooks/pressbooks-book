@@ -1,0 +1,9 @@
+.search-results {
+  padding-left: 0;
+
+  h2 {
+    &:before {
+      display: none;
+    }
+  }
+}

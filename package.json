@@ -1,74 +1,51 @@
 {
-  "name": "@pressbooks/pressbooks-book",
-  "description": "Named after Martin Luther, this is a traditional book theme, good for novels, and text-heavy non-fiction. An earlier version of this theme was commissioned by Fortress Press.",
-  "author": "Pressbooks (Book Oven Inc.)",
-  "license": "GPL-2.0+",
-  "engines": {
-    "node": ">= 6.9.4"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "cross-env": "^5.0.5",
-    "eslint": "^3.19.0",
-    "eslint-config-humanmade": "^0.1.3",
-    "eslint-config-react-app": "^0.5.2",
-    "eslint-loader": "~1.8",
-    "eslint-plugin-flowtype": "^2.34.1",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.10.3",
-    "jquery-columnizer": "^1.6.3",
-    "laravel-mix": "^1.4.2",
-    "sharer.js": "^0.3.1",
-    "stylelint": "^7.12.0",
-    "stylelint-config-standard": "^16.0.0",
-    "stylelint-webpack-plugin": "^0.7.1"
-  },
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "node_modules/stylelint/bin/stylelint.js '**/*.scss' --syntax scss"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "indentation": 2,
-      "media-feature-name-no-unknown": [
-        true,
-        {
-          "ignoreMediaFeatureNames": [
-            "min--moz-device-pixel-ratio"
-          ]
-        }
-      ],
-      "property-no-unknown": [
-        true,
-        {
-          "ignoreProperties": [
-            "footnote-style-position",
-            "hyphenate-before",
-            "hyphenate-after",
-            "hyphenate-lines",
-            "margin-inside",
-            "margin-outside",
-            "prince-bookmark-level",
-            "prince-footnote-policy",
-            "prince-image-resolution",
-            "prince-page-group"
-          ]
-        }
-      ],
-      "selector-pseudo-element-no-unknown": [
-        true,
-        {
-          "ignorePseudoElements": [
-            "footnote-call"
-          ]
-        }
-      ]
-    }
-  }
+	"name": "@pressbooks/pressbooks-book",
+	"description":
+		"This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
+	"author": "Pressbooks (Book Oven Inc.)",
+	"license": "GPL-2.0+",
+	"engines": {
+		"node": ">= 6.9.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pressbooks/pressbooks-book.git"
+	},
+	"dependencies": {
+		"aetna": "^1.0.0-alpha.17",
+		"buckram": "^0.6.3",
+		"js-cookie": "^2.2.0",
+		"sharer.js": "^0.3.1"
+	},
+	"devDependencies": {
+		"pressbooks-build-tools": "^0.11.0"
+	},
+	"scripts": {
+		"build":
+			"cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"build:production":
+			"cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"start":
+			"cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"rmdist": "rimraf dist",
+		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
+		"lint:scripts":
+			"node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
+		"lint:styles":
+			"node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
+		"test": "npm run -s lint"
+	},
+	"eslintConfig": {
+		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
+		"globals": {
+			"$": true,
+			"PB_A11y": true
+		}
+	},
+	"stylelint": {
+		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
+		"rules": {
+			"no-descending-specificity": null
+		}
+	}
 }

@@ -1,56 +1,53 @@
-<?php if ( ! is_single() ) {?>
-
+<?php if ( ! is_single() ) { ?>
 	</div><!-- #content -->
-
 <?php } ?>
-<?php if ( ! is_front_page() ) {?>
-
-	<?php get_sidebar(); ?>
-
-	</div><!-- #wrap -->
-	<div class="push"></div>
-
-	</div><!-- .wrapper for sitting footer at the bottom of the page -->
-<?php } ?>
+</main>
+<?php
+global $multipage;
+?>
 
 
-<div class="footer">
-	<div class="inner">
-		<?php if ( pb_is_public() ) : ?>
-			<?php if ( is_page() || is_home() ) : ?>
+<footer class="footer<?php
+if ( is_front_page() ) : echo ' footer--home';
+elseif ( is_single() ) : echo ' footer--reading';
+else : echo ' footer--page';
+endif;
+echo $multipage ? ' footer--multipage' : ''; ?>">
+	<div class="footer__inner">
+		<section class="footer__pressbooks">
+			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
+				<?php // TODO ?>
+				<svg class="icon--svg">
+					<use xlink:href="#icon-pressbooks" />
+				</svg>
+			</a>
+			<div class="footer__pressbooks__links">
+				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
+				<ul class="footer__pressbooks__links__list">
+					<li><a href="https://pressbooks.org"><?php _e( 'Open Source', 'pressbooks-book' ); ?></a> |</li>
+					<li><a href="https://pressbooks.com/for-academia"><?php _e( 'Open Textbooks', 'pressbooks-book' ); ?></a> |</li>
+					<li><a href="https://pressbooks.com"><?php _e( 'Open Book Publishing', 'pressbooks-book' ); ?></a> |</li>
+					<li><a href="https://pressbooks.com/about"><?php _e( 'Learn More', 'pressbooks-book' ); ?></a> </li>
+				</ul>
+			</div>
+			<div class="footer__pressbooks__social">
+				<a class="facebook" href="https://facebook.com/pressbooks2" title="<?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?>">
+					<svg class="icon--svg">
+						<use xlink:href="#facebook" />
+					</svg>
+					<span class="screen-reader-text"><?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?></span>
+				</a>
+				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>">
+					<svg class="icon--svg">
+						<use xlink:href="#twitter" />
+					</svg>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
+			</div>
 
-			<dl>
-				<dt><?php _e( 'Book Name', 'pressbooks-book' ); ?>:</dt>
-				<dd><?php bloginfo( 'name' ); ?></dd>
-				<?php global $metakeys;
-				$metadata = pb_get_book_information();
-				foreach ( $metadata as $key => $val ) :
-					if ( isset( $metakeys[ $key ] ) && ! empty( $val ) ) : ?>
-						<dt><?php echo $metakeys[ $key ]; ?>:</dt>
-						<dd><?php if ( 'pb_publication_date' === $key ) {
-							$val = date_i18n( 'F j, Y', absint( $val ) );
-}
-						echo $val; ?></dd>
-				<?php endif;
-				endforeach; ?>
-				<?php
-				// Copyright
-				echo '<dt>' . __( 'Copyright', 'pressbooks-book' ) . ':</dt><dd>';
-				echo ( ! empty( $metadata['pb_copyright_year'] ) ) ? $metadata['pb_copyright_year'] : date( 'Y' );
-				if ( ! empty( $metadata['pb_copyright_holder'] ) ) {
-					echo ' ' . __( 'by', 'pressbooks-book' ) . ' ' . $metadata['pb_copyright_holder'];
-				}
-				echo "</dd>\n"; ?>
-
-			</dl>
-			<?php endif; ?>
-
-			<?php echo pressbooks_copyright_license(); ?>
-
-		<?php endif; ?>
-		<p class="cie-name"><a href="https://pressbooks.com">Pressbooks: <?php _e( 'Simple Book Production', 'pressbooks-book' ); ?></a></p>
-	</div><!-- #inner -->
-</div><!-- #footer -->
+		</section>
+	</div><!-- .container -->
+</footer><!-- .footer -->
+<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

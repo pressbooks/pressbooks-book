@@ -7,6 +7,51 @@
 use Pressbooks\Container;
 use PressbooksMix\Assets;
 
+/**
+ * Ensure dependencies are loaded
+ */
+if ( ! class_exists( 'PressbooksMix\Assets' ) || ! function_exists( 'Sober\Intervention\intervention' ) ) {
+	$composer = get_template_directory() . '/vendor/autoload.php';
+	if ( ! file_exists( $composer ) ) {
+		wp_die( sprintf(
+			'<h1>%1$s</h1><p>%2$s</p>',
+			__( 'Dependencies Missing', 'pressbooks-book' ),
+			__( 'You must run <code>composer install</code> from the McLuhan directory.', 'pressbooks-book' )
+		) );
+	}
+	require_once $composer;
+}
+
+/**
+ * Ensure Pressbooks is working
+ */
+if ( ! function_exists( 'pb_meets_minimum_requirements' ) && ! @include_once( WP_PLUGIN_DIR . '/pressbooks/compatibility.php' ) ) { // @codingStandardsIgnoreLine
+	wp_die( __( 'Cannot find Pressbooks install.', 'pressbooks-book' ) );
+}
+if ( ! pb_meets_minimum_requirements() ) {
+	ob_start();
+	do_action( 'admin_notices' );
+	$buffer = ob_get_clean();
+	wp_die( $buffer );
+}
+
+/* ------------------------------------------------------------------------ *
+ * Pressbooks Book
+ * ------------------------------------------------------------------------ */
+
+$includes = [
+	'actions',
+	'filters',
+	'helpers',
+];
+
+foreach ( $includes as $include ) {
+	require get_template_directory() . "/inc/$include/namespace.php";
+}
+require get_template_directory() . '/inc/intervention.php';
+
+add_action( 'pb_cache_delete', '\Pressbooks\Book\Actions\delete_cached_contents' );
+
 // Turn off admin bar
 add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
 	return false;
@@ -17,36 +62,21 @@ add_filter( 'show_admin_bar', function () { // @codingStandardsIgnoreLine
  */
 global $metakeys;
 $metakeys = [
-	'pb_author' => __( 'Author', 'pressbooks-book' ),
-	'pb_contributing_authors' => __( 'Contributing Author', 'pressbooks-book' ),
+	'pb_authors' => __( 'Authors', 'pressbooks-book' ),
+	'pb_editors' => __( 'Editors', 'pressbooks-book' ),
+	'pb_translators' => __( 'Translators', 'pressbooks-book' ),
+	'pb_reviewers' => __( 'Reviewers', 'pressbooks-book' ),
+	'pb_illustrators' => __( 'Illustrators', 'pressbooks-book' ),
+	'pb_contributors' => __( 'Contributors', 'pressbooks-book' ),
+	'pb_book_license' => __( 'License', 'pressbooks-book' ),
+	'pb_primary_subject'  => __( 'Primary Subject', 'pressbooks-book' ),
+	'pb_additional_subjects'  => __( 'Additional Subject(s)', 'pressbooks-book' ),
 	'pb_publisher'  => __( 'Publisher', 'pressbooks-book' ),
-	'pb_print_isbn'  => __( 'Print ISBN', 'pressbooks-book' ),
-	'pb_keywords_tags'  => __( 'Keywords/Tags', 'pressbooks-book' ),
 	'pb_publication_date'  => __( 'Publication Date', 'pressbooks-book' ),
-	'pb_hashtag'  => __( 'Hashtag', 'pressbooks-book' ),
 	'pb_ebook_isbn'  => __( 'Ebook ISBN', 'pressbooks-book' ),
+	'pb_print_isbn'  => __( 'Print ISBN', 'pressbooks-book' ),
+	'pb_hashtag'  => __( 'Hashtag', 'pressbooks-book' ),
 ];
-
-/* ------------------------------------------------------------------------ *
- * Scripts and styles for Book Info Page (cover page)
- * ------------------------------------------------------------------------ */
-
-function pressbooks_book_info_page() {
-	$assets = new Assets( 'pressbooks-book', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
-
-	if ( is_front_page() ) {
-		wp_enqueue_style( 'pressbooks-book-info', $assets->getPath( 'styles/book-info.css' ), [], null, 'all' );
-		wp_enqueue_style( 'book-info-fonts', 'https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Oswald:300,400,700' );
-
-		// Book info page Table of Content columns
-		wp_enqueue_script( 'columnizer',  $assets->getPath( 'scripts/columnizer.js' ), [ 'jquery' ], null );
-
-		// Sharer.js
-		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
 
 /* ------------------------------------------------------------------------ *
  * Asyncronous loading to improve speed of page load
@@ -54,13 +84,8 @@ add_action( 'wp_enqueue_scripts', 'pressbooks_book_info_page' );
 
 function pressbooks_async_scripts( $tag, $handle, $src ) {
 	$async = [
-		'pressbooks/a11y',
-		'pressbooks/keyboard-nav',
-		'pressbooks/navbar',
-		'pressbooks/toc',
-		'columnizer',
+		'pressbooks/book',
 		'sharer',
-		'jquery-migrate',
 	];
 
 	if ( in_array( $handle, $async, true ) ) {
@@ -75,52 +100,58 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
 /* ------------------------------------------------------------------------ *
  * Register and enqueue scripts and stylesheets.
  * ------------------------------------------------------------------------ */
-function pb_enqueue_scripts() {
+function pb_enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
-	$assets
-		->setSrcDirectory( 'assets' )
-		->setDistDirectory( 'dist' );
+	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 
-	wp_enqueue_style( 'pressbooks/structure', $assets->getPath( 'styles/structure.css' ), false, null, 'screen, print' );
-	wp_enqueue_style( 'pressbooks/webfonts', 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&subset=latin,cyrillic,greek,cyrillic-ext,greek-ext', false, null );
+	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
+	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700', false, null );
+	wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
+	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
+	wp_localize_script(
+		'pressbooks/book',
+		'PB_A11y',
+		[
+			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
+			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
+		]
+	);
 
-	$deps = [ 'pressbooks/structure', 'pressbooks/webfonts' ];
+	if ( ! is_front_page() ) {
 
-	if ( pb_is_custom_theme() ) { // Custom CSS (deprecated)
-		wp_enqueue_style( 'pressbooks/custom-css', pb_get_custom_stylesheet_url(), $deps, get_option( 'pressbooks_last_custom_css' ), 'screen' );
-	} else {
-		$styles = Container::get( 'Styles' );
-		if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
+		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
+			$styles = Container::get( 'Styles' );
 			$sass = Container::get( 'Sass' );
-			// Custom Styles
-			if ( get_stylesheet() === 'pressbooks-book' && ! get_option( 'pressbooks_webbook_structure_version' ) ) {
-				$styles->updateWebBookStyleSheet();
-				update_option( 'pressbooks_webbook_structure_version', 1 );
-			}
 			$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
-			if ( ! is_file( $fullpath ) ) {
-				$styles->updateWebBookStyleSheet();
+			if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
+				$styles->updateWebBookStyleSheet( 'pressbooks-book' );
 			}
-			if ( $styles->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
-				wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', $deps, null, 'screen, print' );
-			}
-			wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', $deps, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
+			wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', false, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
 		} else {
-			// Classic mode (does not use Sass)
-			wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', $deps, null, 'screen, print' );
+			$styles = Container::get( 'Styles' );
+			if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
+				$sass = Container::get( 'Sass' );
+				// Custom Styles
+				if ( get_stylesheet() === 'pressbooks-book' && ! get_option( 'pressbooks_webbook_structure_version' ) ) {
+					$styles->updateWebBookStyleSheet();
+					update_option( 'pressbooks_webbook_structure_version', 1 );
+				}
+				$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
+				if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
+					$styles->updateWebBookStyleSheet();
+				}
+				if ( $styles->isCurrentThemeCompatible( 1 ) && get_stylesheet() !== 'pressbooks-book' ) {
+					wp_enqueue_style( 'pressbooks/book', get_template_directory_uri() . '/style.css', false, null, 'screen, print' );
+				}
+				wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', false, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
+			} else {
+				// Classic mode (does not use Sass)
+				wp_enqueue_style( 'pressbooks/theme', get_stylesheet_directory_uri() . '/style.css', false, null, 'screen, print' );
+			}
 		}
 	}
-
-	wp_enqueue_script( 'pressbooks/keyboard-nav', $assets->getPath( 'scripts/keyboard-nav.js' ), [ 'jquery' ], null, true );
-
-	if ( is_single() ) {
-		wp_enqueue_script( 'pressbooks/toc', $assets->getPath( 'scripts/toc.js' ), [ 'jquery' ], null, false );
-	}
-
-	wp_enqueue_script( 'pressbooks/a11y', $assets->getPath( 'scripts/a11y.js' ), [ 'jquery' ], null );
-	wp_enqueue_style( 'pressbooks/a11y', $assets->getPath( 'styles/a11y.css' ), [ 'dashicons' ], null, 'screen' );
 }
-add_action( 'wp_enqueue_scripts', 'pb_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'pb_enqueue_assets' );
 
 /**
  * Update web book stylesheet.
@@ -153,7 +184,7 @@ function pressbooks_update_webbook_stylesheet() {
 	$recompile = false;
 
 	foreach ( $inputs as $input ) {
-		if ( filemtime( $input ) > filemtime( $output ) ) {
+		if ( @filemtime( $input ) > @filemtime( $output ) ) { // @codingStandardsIgnoreLine
 			$recompile = true;
 			break;
 		}
@@ -163,7 +194,7 @@ function pressbooks_update_webbook_stylesheet() {
 		if ( WP_DEBUG ) {
 			error_log( 'Updating web book stylesheet.' );
 		}
-		Container::get( 'Styles' )->updateWebBookStyleSheet();
+		Container::get( 'Sass' )->updateWebBookStyleSheet();
 	} else {
 		if ( WP_DEBUG ) {
 			error_log( 'No web book stylesheet update needed.' );
@@ -180,7 +211,7 @@ if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
  * ------------------------------------------------------------------------ */
 
 function new_pressbooks_excerpt_more( $more ) {
-	   global $post;
+	global $post;
 	return '<a class="more-tag" href="' . get_permalink( $post->ID ) . '"> Read more &raquo;</a>';
 }
 add_filter( 'excerpt_more', 'new_pressbooks_excerpt_more' );
@@ -191,22 +222,32 @@ add_filter( 'excerpt_more', 'new_pressbooks_excerpt_more' );
  * @param bool $echo
  */
 function pb_get_links( $echo = true ) {
-	global $first_chapter, $prev_chapter, $next_chapter;
+	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
 	$first_chapter = pb_get_first();
 	$prev_chapter = pb_get_prev();
 	$next_chapter = pb_get_next();
 	if ( $echo ) :
-	?><nav class="navigation posts-navigation" role="navigation">
-	<div class="nav-links">
-	<?php if ( $prev_chapter !== '/' ) : ?>
-	<div class="nav-previous"><a href="<?php echo $prev_chapter; ?>"><?php _e( 'Previous', 'pressbooks-book' ); ?></a></div>
-	<?php endif; ?>
-	<?php if ( $next_chapter !== '/' ) : ?>
-	<div class="nav-next"><a href="<?php echo $next_chapter ?>"><?php _e( 'Next', 'pressbooks-book' ); ?></a></div>
-	<?php endif; ?>
-	</div>
-	</nav><?php
-  endif;
+		?><nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
+		<div class="nav-reading__previous js-nav-previous">
+			<?php if ( $prev_chapter !== '/' ) { ?>
+				<a href="<?php echo $prev_chapter; ?>"><svg class="icon--svg">
+								<use xlink:href="#arrow-left" />
+							</svg><?php _e( 'Previous Section', 'pressbooks-book' ); ?></a>
+			<?php } ?>
+		</div>
+		<div class="nav-reading__next js-nav-next">
+			<?php if ( $next_chapter !== '/' ) : ?>
+				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Section', 'pressbooks-book' ); ?><svg class="icon--svg">
+								<use xlink:href="#arrow-right" />
+							</svg></a>
+			<?php endif; ?>
+		</div>
+		<button class="nav-reading__up" >
+			<svg class="icon--svg"><use xlink:href="#arrow-up" /></svg>
+			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span>
+		</button>
+		</nav><?php
+	endif;
 }
 
 
@@ -236,34 +277,34 @@ if ( ! function_exists( 'pressbooks_comment' ) ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) {
 			case '' :
-		?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<div id="comment-<?php comment_ID(); ?>">
-		<div class="comment-author vcard">
-			<?php echo get_avatar( $comment, 40 ); ?>
-			<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
-		</div><!-- .comment-author .vcard -->
-		<?php if ( empty( $comment->comment_approved ) ) : ?>
-			<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks-book' ); ?></em>
-			<br />
-		<?php endif; ?>
+				?>
+				<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+				<div id="comment-<?php comment_ID(); ?>">
+					<div class="comment-author vcard">
+						<?php echo get_avatar( $comment, 40 ); ?>
+						<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
+					</div><!-- .comment-author .vcard -->
+					<?php if ( empty( $comment->comment_approved ) ) : ?>
+						<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks-book' ); ?></em>
+						<br />
+					<?php endif; ?>
 
-		<div class="comment-body"><?php comment_text(); ?></div>
+					<div class="comment-body"><?php comment_text(); ?></div>
 
-		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, [ 'depth' => $depth, 'max_depth' => $args['max_depth'] ] ) ); ?>
-		</div><!-- .reply -->
-	</div><!-- #comment-##  -->
+					<div class="reply">
+						<?php comment_reply_link( array_merge( $args, [ 'depth' => $depth, 'max_depth' => $args['max_depth'] ] ) ); ?>
+					</div><!-- .reply -->
+				</div><!-- #comment-##  -->
 
-	<?php
-			break;
+				<?php
+				break;
 			case 'pingback'  :
 			case 'trackback' :
-		?>
-		<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'pressbooks-book' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?></p>
-	<?php
-			break;
+				?>
+				<li class="post pingback">
+				<p><?php _e( 'Pingback:', 'pressbooks-book' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?></p>
+				<?php
+				break;
 		}
 	}
 };
@@ -377,17 +418,6 @@ function pressbooks_theme_add_metadata() {
 
 add_action( 'wp_head', 'pressbooks_theme_add_metadata' );
 
-function pressbooks_cover_promo() {
-	?>
-	<?php if ( ! defined( 'PB_HIDE_COVER_PROMO' ) || PB_HIDE_COVER_PROMO === false ) : ?>
-	<a href="https://pressbooks.com" class="pressbooks-brand"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/pressbooks-branding-2x.png" alt="pressbooks-branding" width="186" height="123" /> <span><?php _e( 'Make your own books on Pressbooks', 'pressbooks-book' ); ?></span></a>
-	<?php else : ?>
-	<div class="spacer"></div>
-	<?php endif;
-}
-
-add_action( 'pb_cover_promo', 'pressbooks_cover_promo' );
-
 /**
  * Restrict search.
  *
@@ -426,9 +456,33 @@ function pb_social_media_enabled() {
 	return false;
 }
 
+function pb_webbook_width() {
+	$options = get_option( 'pressbooks_theme_options_web' );
+	return $options['webbook_width'] ?? '40em';
+}
+
 function pressbooks_book_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
+	add_theme_support( 'title-tag' );
 	remove_action( 'wp_head', 'wp_generator' );
 }
 
 add_action( 'after_setup_theme', 'pressbooks_book_setup' );
+
+add_action('wp_head', function() {
+	echo \Pressbooks\Admin\Branding\get_customizer_colors();
+});
+
+add_action('wp_head', function() {
+	printf( '<style type="text/css">:root{--reading-width:%s;}</style>', pb_webbook_width() );
+});
+
+
+function pb_use_htmlbook() {
+	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {
+		return true;
+	}
+	return false;
+}
+
+add_filter( 'the_title', 'Pressbooks\Book\Filters\add_private_to_title', 10, 2 );

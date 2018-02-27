@@ -8,7 +8,7 @@ This file must validate as CSS 2.01 with absolutely no errors
 in development
 copyright 2013-2014 Book Oven Inc. */
 
-@import 'tables', 'textboxes';
+@import "tables", "textboxes";
 
 /* HEADERS */
 
@@ -275,7 +275,7 @@ div.sidebar {
 .back-matter {
   .license-attribution > p {
     text-align: left;
-    line-height: 1.4em;
+    line-height: 1.4;
     font-size: 0.8em;
     font-style: italic;
     margin-top: 2em;
