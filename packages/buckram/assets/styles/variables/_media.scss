@@ -1,0 +1,131 @@
+////
+/// @group media
+////
+
+/// Bottom padding for image captions.
+/// @type String
+$image-caption-padding-bottom: 0.5em !default;
+
+/// Font stack for image captions.
+/// @type String
+$image-caption-font-family: $font-1 !default;
+
+/// Font size for image captions.
+/// @type String
+$image-caption-font-size: 0.8em !default;
+
+/// Font style for image captions.
+/// @type String
+$image-caption-font-style: normal !default;
+
+/// Font weight for image captions.
+/// @type String
+$image-caption-font-weight: normal !default;
+
+/// Line height for image captions.
+/// @type String
+$image-caption-line-height: 1.2em !default;
+
+/// Text alignment for image captions.
+/// @type String
+$image-caption-text-align: left !default;
+
+/// Text transform for image captions.
+/// @type String
+$image-caption-text-transform: none !default;
+
+/// Top margin for image wrappers.
+/// @type String
+$image-wrapper-margin-top: 0.5em !default;
+
+/// Bottom margin for image wrappers.
+/// @type String
+$image-wrapper-margin-bottom: 0.5em !default;
+
+/// Right margin for left-aligned images.
+/// @type String
+$image-alignleft-margin-right: 1em !default;
+
+/// Left margin for right-aligned images.
+/// @type String
+$image-alignright-margin-left: 1em !default;
+
+/// Image resolution for PrinceXML PDF outputs.
+/// @type String
+$prince-image-resolution: auto,normal !default;
+
+/// Icon image URL for generic interactive content
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-url: (
+  prince: "pressbooks-book/assets/book/images/icon-interactive.svg",
+  epub: "pressbooks-book/assets/book/images/icon-interactive.png",
+  web: "pressbooks-book/assets/book/images/icon-interactive.svg"
+) !default;
+
+/// Icon image URL for audio content
+/// @type String | Map
+/// @since 0.7.0
+$audio-icon-url: (
+  prince: "pressbooks-book/assets/book/images/icon-audio.svg",
+  epub: "pressbooks-book/assets/book/images/icon-audio.png",
+  web: "pressbooks-book/assets/book/images/icon-audio.svg"
+) !default;
+
+/// Icon image URL for video content
+/// @type String | Map
+/// @since 0.7.0
+$video-icon-url: (
+  prince: "pressbooks-book/assets/book/images/icon-video.svg",
+  epub: "pressbooks-book/assets/book/images/icon-video.png",
+  web: "pressbooks-book/assets/book/images/icon-video.svg"
+) !default;
+
+/// Display property for interactive content icon
+/// @type String
+/// @since 0.7.0
+$interactive-icon-display: block !default;
+
+/// Float property for interactive content icon
+/// @type String
+/// @since 0.7.0
+$interactive-icon-float: left !default;
+
+/// Width for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-width: 3em !default;
+
+/// Height for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-height: 3em !default;
+
+/// Top margin for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-margin-top: 0 !default;
+
+/// Right margin for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-margin-right: 0.5em !default;
+
+/// Bottom margin for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-margin-bottom: 0 !default;
+
+/// Left margin for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-margin-left: 0 !default;
+
+/// Background size property for interactive content icon
+/// @type String | Map
+/// @since 0.7.0
+$interactive-icon-background-size: (
+  prince: cover,
+  epub: $interactive-icon-width $interactive-icon-height,
+  web: cover
+) !default;
