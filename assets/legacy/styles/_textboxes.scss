@@ -92,6 +92,16 @@ $examples-header-background: #7a333a !default;
     font: bold 0.875em Helvetica, Arial;
     margin: 0;
   }
+
+  .interactive-content {
+    &__icon {
+      display: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .bcc-box {
