@@ -8,8 +8,8 @@
 	<?php if ( $subtitle ) { ?>
 	<p data-type="subtitle"><?php echo $subtitle; ?></p>
 	<?php } ?>
-	<?php if ( $author ) { ?>
-	<p data-type="author"><?php echo $author; ?></p>
+	<?php if ( $authors ) { ?>
+	<p data-type="author"><?php echo $authors; ?></p>
 	<?php } ?>
 </header>
 <?php if ( get_post_type( $post->ID ) !== 'part' ) {
