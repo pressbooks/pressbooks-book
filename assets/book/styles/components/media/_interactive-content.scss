@@ -1,0 +1,27 @@
+////
+/// @group media
+////
+
+@import '../utilities';
+
+.interactive-content {
+  &__icon {
+    display: $interactive-icon-display;
+    float: $interactive-icon-float;
+    width: if-map-get($interactive-icon-width, $type);
+    height: if-map-get($interactive-icon-height, $type);
+    margin:
+      if-map-get($interactive-icon-margin-top, $type)
+      if-map-get($interactive-icon-margin-right, $type)
+      if-map-get($interactive-icon-margin-bottom, $type)
+      if-map-get($interactive-icon-margin-left, $type);
+    background-image: url(if-map-get($interactive-icon-url, $type));
+    background-repeat: no-repeat;
+    background-size: if-map-get($interactive-icon-background-size, $type);
+  }
+
+  p {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
