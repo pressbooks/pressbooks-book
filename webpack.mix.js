@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+let mix = require( 'laravel-mix' );
 
 /*
  |--------------------------------------------------------------------------
@@ -14,26 +14,26 @@ let mix = require('laravel-mix');
 const dist = 'dist';
 
 mix
-	.setPublicPath('dist')
-	.scripts('node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js')
-	.js('assets/src/scripts/book.js', 'dist/scripts/book.js')
-	.sass('assets/src/styles/book.scss', 'dist/styles')
-	.copyDirectory('node_modules/buckram/assets/styles', 'assets/book/styles')
-	.copyDirectory('node_modules/buckram/assets/images', 'assets/book/images')
-	.copyDirectory('assets/src/images', 'dist/images')
+	.setPublicPath( 'dist' )
+	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
+	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
+	.sass( 'assets/src/styles/book.scss', 'dist/styles' )
+	.copyDirectory( 'node_modules/buckram/assets/styles', 'assets/book/styles' )
+	.copyDirectory( 'node_modules/buckram/assets/images', 'assets/book/images' )
+	.copyDirectory( 'assets/src/images', 'dist/images' )
 	.version()
-	.options({ processCssUrls: false });
+	.options( { processCssUrls: false } );
 
 // BrowserSync
-mix.browserSync({
-	host: 'localhost',
+mix.browserSync( {
+	host:  'localhost',
 	proxy: 'https://pressbooks.test/standardtest',
-	port: 3200,
-	files: ['*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js`],
-});
+	port:  3200,
+	files: [ '*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js` ],
+} );
 
 // Source maps when not in production.
-if (!mix.inProduction()) {
+if ( ! mix.inProduction() ) {
 	mix.sourceMaps();
 }
 
