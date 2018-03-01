@@ -15,7 +15,7 @@
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
 							<dt class="block__subtitle block-meta__subtitle"><?php echo $val; ?></dt>
 							<dd class=""><?php if ( 'pb_publication_date' === $key ) {
-									$book_information[ $key ] = date_i18n( 'F j, Y', $book_information[ $key ] );
+									$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
 } elseif ( 'pb_hashtag' === $key ) {
 	$hashtag = $book_information[ $key ];
 	$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
