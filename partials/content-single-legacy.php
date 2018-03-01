@@ -6,7 +6,7 @@ the_title(); ?></h2>
 <div id="post-<?php the_ID(); ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 <div class="entry-content">
 <?php if ( $subtitle ) : ?><h2 class="chapter_subtitle"><?php echo $subtitle; ?></h2><?php endif; ?>
-<?php if ( $author ) : ?><h2 class="chapter_author"><?php echo $author; ?></h2><?php endif; ?>
+<?php if ( $authors ) : ?><h2 class="chapter_author"><?php echo $authors; ?></h2><?php endif; ?>
 <?php if ( get_post_type( $post->ID ) !== 'part' ) {
 	if ( pb_should_parse_subsections() ) {
 		$content = pb_tag_subsections( apply_filters( 'the_content', get_the_content() ), $post->ID );

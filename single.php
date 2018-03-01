@@ -6,7 +6,8 @@
 			$web_options = get_option( 'pressbooks_theme_options_web' );
 			$number = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->post_name ) : false;
 			$subtitle = get_post_meta( $post->ID, 'pb_subtitle', true );
-			$author = get_post_meta( $post->ID, 'pb_section_author', true );
+			$contributors = new \Pressbooks\Contributors();
+			$authors = $contributors->get( $post->ID, 'authors' );
 			$datatype = ( in_array( $post->post_type, [ 'front-matter', 'back-matter' ], true ) ) ? pb_get_section_type( $post ) : $post->post_type;
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
 				if ( $post->post_type === 'chapter' ) {
