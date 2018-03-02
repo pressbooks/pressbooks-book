@@ -31,7 +31,7 @@ export default {
 						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '1', {
 							expires: 365,
-							path:    '',
+							path:    PB_A11y.home_path,
 						} );
 						return false;
 					} else {
@@ -45,7 +45,7 @@ export default {
 						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '0', {
 							expires: 365,
-							path:    '',
+							path:    PB_A11y.home_path,
 						} );
 						return false;
 					}
