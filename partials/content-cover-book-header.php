@@ -63,12 +63,11 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 					<ul>
 				</div>
 			<?php }?>
+				<?php if ( pb_social_media_enabled() ) { ?>
 				<div class="book-header__share book-header__cover__share">
-					<?php if ( pb_social_media_enabled() ) {
-						echo \Pressbooks\Book\Helpers\share_icons();
-}
-					?>
+					<?php echo \Pressbooks\Book\Helpers\share_icons(); ?>
 				</div>
+				<?php } ?>
 			</div>
 
 			<?php
@@ -92,12 +91,11 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 				</a><?php
 			} ?>
 		</div> <!-- end .call-to-action -->
+		<?php if ( pb_social_media_enabled() ) { ?>
 		<div class="book-header__share">
-			<?php if ( pb_social_media_enabled() ) {
-				echo \Pressbooks\Book\Helpers\share_icons();
-}
-			?>
+			<?php echo \Pressbooks\Book\Helpers\share_icons(); ?>
 		</div>
+		<?php } ?>
 		<?php
 		/**	Append content to cover book header block.
 		 * @since 2.0.0
