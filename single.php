@@ -22,8 +22,6 @@
 </div><!-- #content -->
 <?php pb_get_links(); ?>
 
-				<?php
-				if ( pb_social_media_enabled() ) {	?>
 					<div class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
 							<div class="block-reading-meta__subsection">
@@ -34,6 +32,7 @@
 									</div>
 								<?php } ?>
 							</div>
+							<?php if ( pb_social_media_enabled() ) { ?>
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Share This Book','pressbooks-book' ); ?></h2>
 								<div class="block-reading-meta__share">
@@ -42,10 +41,9 @@
 									?>
 								</div>
 							</div>
+							<?php } ?>
 						</div>
-								</div><?php
-				} ?>
-
+					</div>
 				<?php comments_template( '', true ); ?>
 <?php else : ?>
 <?php pb_private(); ?>
