@@ -102,7 +102,7 @@ msgstr ""
 msgid "Contributors"
 msgstr ""
 
-#: ../functions.php:71, ../single.php:29
+#: ../functions.php:71, ../single.php:28
 msgid "License"
 msgstr ""
 
@@ -142,31 +142,31 @@ msgstr ""
 msgid "Decrease Font Size"
 msgstr ""
 
-#: ../functions.php:235
+#: ../functions.php:236
 msgid "Previous Section"
 msgstr ""
 
-#: ../functions.php:240
+#: ../functions.php:241
 msgid "Next Section"
 msgstr ""
 
-#: ../functions.php:285
+#: ../functions.php:286
 msgid "%s on"
 msgstr ""
 
-#: ../functions.php:285
+#: ../functions.php:286
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../functions.php:285, ../functions.php:305
+#: ../functions.php:286, ../functions.php:306
 msgid "(Edit)"
 msgstr ""
 
-#: ../functions.php:288
+#: ../functions.php:289
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../functions.php:305
+#: ../functions.php:306
 msgid "Pingback:"
 msgstr ""
 
