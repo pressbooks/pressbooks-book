@@ -2,6 +2,10 @@
 /// @group media
 ////
 
-//============================================================================//
-//                                   Video                                    //
-//============================================================================//
+@import '../utilities';
+
+.interactive-content--video {
+  .interactive-content__icon {
+    background-image: url(if-map-get($video-icon-url, $type));
+  }
+}
