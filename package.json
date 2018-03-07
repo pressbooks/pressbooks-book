@@ -1,7 +1,6 @@
 {
 	"name": "@pressbooks/pressbooks-book",
-	"description":
-		"This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
+	"description": "This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
 	"author": "Pressbooks (Book Oven Inc.)",
 	"license": "GPL-3.0-or-later",
 	"engines": {
@@ -13,7 +12,7 @@
 	},
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.17",
-		"buckram": "^0.7.0",
+		"buckram": "^0.7.1",
 		"js-cookie": "^2.2.0",
 		"sharer.js": "^0.3.1"
 	},
@@ -21,18 +20,13 @@
 		"pressbooks-build-tools": "^0.11.0"
 	},
 	"scripts": {
-		"build":
-			"cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"build:production":
-			"cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"start":
-			"cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"rmdist": "rimraf dist",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts":
-			"node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
-		"lint:styles":
-			"node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
+		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
+		"lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
 		"test": "npm run -s lint"
 	},
 	"eslintConfig": {
