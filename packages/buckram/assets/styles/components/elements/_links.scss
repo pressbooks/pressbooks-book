@@ -6,9 +6,11 @@
 //                                   Links                                    //
 //============================================================================//
 
+@import "../utilities";
+
 @if $type != 'web' {
   a {
-    text-decoration: $link-text-decoration;
+    text-decoration: if-map-get($link-text-decoration, $type);
   }
 }
 
@@ -18,7 +20,7 @@
   .chapter,
   .back-matter {
     a {
-      text-decoration: $link-text-decoration;
+      text-decoration: if-map-get($link-text-decoration, $type);
     }
   }
 }
