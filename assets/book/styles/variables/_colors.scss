@@ -23,7 +23,8 @@ $color-6: $color-1 !default;
 $link-color: (
   epub: initial,
   prince: initial,
-  web: initial
+  web: var(--primary, #b01109)
+  ;)
 ) !default;
 
 //BODY COLOR

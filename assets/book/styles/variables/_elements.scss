@@ -585,4 +585,8 @@ $sup-sub-line-height: 0.5em !default;
 
 /// Text decoration for `<a>` elements.
 /// @type String
-$link-text-decoration: none !default;
+$link-text-decoration: (
+  epub: none,
+  prince: none,
+  web: underline
+) !default;
