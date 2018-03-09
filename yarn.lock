@@ -1383,9 +1383,9 @@ bs-recipes@1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/bs-recipes/-/bs-recipes-1.3.4.tgz#0d2d4d48a718c8c044769fdc4f89592dc8b69585"
 
-buckram@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/buckram/-/buckram-0.7.2.tgz#9ec54f0e2b76093a5d1735b2cc23be22d838bd44"
+buckram@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/buckram/-/buckram-0.7.3.tgz#5fc99756c579fae6eb3dcc5360acc852e17332de"
 
 buffer-crc32@~0.2.3:
   version "0.2.13"
