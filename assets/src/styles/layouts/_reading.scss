@@ -44,6 +44,34 @@ h1.reading-header__title {
   }
 }
 
+.front-matter,
+.part,
+.chapter,
+.back-matter {
+  .post-password-form {
+    margin-top: 1rem;
+
+    p + p {
+      margin-top: 1rem;
+      text-indent: 0;
+    }
+
+    label {
+      width: 100%;
+      &::after {
+        clear: both;
+        content: "";
+        display: block;
+        width: 100%;
+      }
+    }
+
+    [type="submit"] {
+      margin-top: 1rem;
+    }
+  }
+}
+
 .part-title {
   text-align: right;
 }
