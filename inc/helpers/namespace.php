@@ -80,7 +80,7 @@ function license_to_icons( $license ) {
 			$output .= sprintf( '<svg class="icon" style="fill: #000"><use xlink:href="#%s" /></svg>', $part );
 		}
 	} elseif ( $license === 'public-domain' ) {
-		$output .= "<svg class='icon'></svg><use xlink:href='cc-pd' /></svg>";
+		$output .= '<svg class="icon" style="fill: #000"><use xlink:href="#cc-zero" /></svg>';
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
