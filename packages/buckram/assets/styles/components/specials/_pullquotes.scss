@@ -34,6 +34,10 @@ aside,
   line-height: $pullquote-line-height;
   text-align: $pullquote-align;
   text-indent: 0;
+  border-top: $pullquote-border-top;
+  border-bottom: $pullquote-border-bottom;
+  padding-top: $pullquote-padding-top;
+  padding-bottom: $pullquote-padding-bottom;
 }
 
 .pullquote {

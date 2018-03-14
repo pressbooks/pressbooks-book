@@ -228,6 +228,26 @@ $aside-border-left: 0 !default;
 /// Pullquote font family.
 /// @type String
 
+/// Border top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 0.8.0
+$pullquote-border-top: 1px solid black !default;
+
+/// Border bottom for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 0.8.0
+$pullquote-border-bottom: 1px solid black !default;
+
+/// Padding top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 0.8.0
+$pullquote-padding-top: .4em !default;
+
+/// Padding bottom for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 0.8.0
+$pullquote-padding-bottom: .4em !default;
+
 /// Font stack for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
 /// @type String
 $pullquote-font-family: $font-3 !default;
@@ -502,6 +522,36 @@ $textbox-para-margin-top: 0 !default;
 /// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
+
+/// Textbox header font size on `<h2>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 0.8.0
+$textbox-header-font-size: 1.425em !default;
+
+/// Textbox header top margin on `<h2>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 0.8.0
+$textbox-header-margin-top: 1.25em !default;
+
+/// Textbox header bottom margin on `<h2>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 0.8.0
+$textbox-header-margin-bottom: 1em !default;
+
+/// Textbox header top margin on `<ul>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 0.8.0
+$textbox-ul-margin-top: 1em !default;
+
+/// Textbox header bottom margin on `<ul>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 0.8.0
+$textbox-ul-margin-bottom: 0.75em !default;
+
+/// Textbox header left margin on `<li>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 0.8.0
+$textbox-li-margin-left: 0.75em !default;
 
 /// Textbox paragraph font stack on `<p>` elements that are children of elements with a class of `textbox`.
 /// @type String
