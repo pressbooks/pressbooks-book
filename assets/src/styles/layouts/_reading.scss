@@ -7,7 +7,8 @@ h1.reading-header__title {
 .single-front-matter,
 .single-part,
 .single-chapter,
-.single-back-matter {
+.single-back-matter,
+.error404 {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
