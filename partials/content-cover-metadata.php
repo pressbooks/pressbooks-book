@@ -9,11 +9,10 @@
 					<dd class="ml0"><?php bloginfo( 'name' ); ?></dd>
 				</div>
 				<?php global $metakeys;
-
 				foreach ( $metakeys as $key => $val ) {
 					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) { ?>
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
-							<dt class="block__subtitle block-meta__subtitle"><?php echo $val; ?></dt>
+							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, pb_count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
 							<dd class=""><?php if ( 'pb_publication_date' === $key ) {
 									$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
 } elseif ( 'pb_hashtag' === $key ) {
