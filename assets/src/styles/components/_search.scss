@@ -1,80 +1,81 @@
-.header__search {
-  .header__search__form {
+.header__search .header__search__form {
+  width: 100%;
+
+  @media #{$breakpoint-large} {
+    width: 12rem;
+  }
+}
+
+.header__search .header__search__form form,
+.error404 form.search-form {
+  width: 100%;
+  border-bottom: 1px solid var(--primary-fg);
+
+  label {
+    position: relative;
+    width: calc(100% - 2rem);
+    margin-bottom: 0;
+  }
+
+  input {
+    color: white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     width: 100%;
-    > form {
-      width: 100%;
-      border-bottom: 1px solid var(--primary-fg);
+    font-size: 1.5rem;
+    line-height: 3.33333333;
 
-      label {
-        position: relative;
-        width: calc(100% - 2rem);
-        margin-bottom: 0;
+    &::placeholder {
+      color: var(--primary-fg);
+    }
+  }
+
+  button {
+    border: 0;
+    padding: 0;
+    width: 1.5rem;
+    background: transparent;
+    color: var(--primary-fg);
+    display: inline-block;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.25rem;
+      height: 1.5rem;
+    }
+  }
+
+  @media #{$breakpoint-large} {
+    border-bottom: none;
+
+    label {
+      width: 10rem;
+    }
+
+    input {
+      font-size: 1.125rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      line-height: 1.5;
+
+      &::placeholder {
+        color: #666;
       }
 
-      input {
-        color: white;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        width: 100%;
-        font-size: 1.5rem;
-        line-height: 3.33333333;
-
-        &::placeholder {
-          color: var(--primary-fg);
-        }
-      }
-
-      button {
-        border: 0;
-        padding: 0;
-        width: 1.5rem;
-        background: transparent;
-        color: var(--primary-fg);
-        display: inline-block;
-
-        svg {
-          display: inline-block;
-          vertical-align: middle;
-          width: 1.25rem;
-          height: 1.5rem;
-        }
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid var(--primary-dark);
       }
     }
-    @media #{$breakpoint-large} {
-      width: 12rem;
 
-      > form {
-        border-bottom: none;
+    button {
+      color: var(--primary);
 
-        label {
-          width: 10rem;
-        }
-
-        input {
-          font-size: 1.125rem;
-          color: var(--primary);
-          border-bottom: 2px solid var(--primary);
-          line-height: 1.5;
-
-          &::placeholder {
-            color: #666;
-          }
-
-          &:focus {
-            outline: none;
-            border-bottom: 2px solid var(--primary-dark);
-          }
-        }
-
-        button {
-          color: var(--primary);
-
-          &:focus {
-            color: var(--primary-dark);
-            outline: solid 2px var(--primary-dark);
-          }
-        }
+      &:focus {
+        color: var(--primary-dark);
+        outline: solid 2px var(--primary-dark);
       }
     }
   }
