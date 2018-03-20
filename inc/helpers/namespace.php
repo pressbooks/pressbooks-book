@@ -127,18 +127,18 @@ function display_menu() {
 	$items = sprintf(
 		'<li><a href="%1$s">%2$s</a></li>',
 		( is_front_page() ) ? '#main' : get_home_url(),
-		__( 'Home', 'pressbooks-aldine' )
+		__( 'Home', 'pressbooks-book' )
 	);
 	$items .= sprintf(
 		'<li><a href="%1$s">%2$s</a></li>',
 		( get_permalink() === pb_get_first() ) ? '#main' : pb_get_first(),
-		__( 'Read', 'pressbooks-aldine' )
+		__( 'Read', 'pressbooks-book' )
 	);
 	if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',
 			( get_page_link() === home_url( '/buy/' ) ) ? '#main' : home_url( '/buy/' ),
-			__( 'Buy', 'pressbooks-aldine' )
+			__( 'Buy', 'pressbooks-book' )
 		);
 	}
 	if ( ! is_user_logged_in() ) {

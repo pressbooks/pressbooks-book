@@ -8,4 +8,4 @@
 use function \Sober\Intervention\intervention;
 
 intervention( 'remove-emoji' );
-intervention( 'remove-howdy', __( 'Hello,', 'pressbooks-aldine' ) );
+intervention( 'remove-howdy', __( 'Hello,', 'pressbooks-book' ) );
