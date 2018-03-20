@@ -108,6 +108,13 @@
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 
+  button {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
   ul {
     list-style: none;
     margin: 0;
