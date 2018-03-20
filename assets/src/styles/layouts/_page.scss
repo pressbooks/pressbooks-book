@@ -64,6 +64,8 @@ body:not(.home) #content h2.denied-title {
 
 .nav-previous,
 .nav-next {
+  margin-bottom: 2rem;
+
   a {
     display: flex;
     align-items: center;
@@ -74,6 +76,14 @@ body:not(.home) #content h2.denied-title {
     width: 1rem;
     height: 1rem;
   }
+}
+
+.nav-previous {
+  float: left;
+}
+
+.nav-next {
+  float: right;
 }
 
 .nav-previous svg {
