@@ -1,4 +1,4 @@
-let mix = require("laravel-mix");
+let mix = require( 'laravel-mix' );
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,10 +12,11 @@ let mix = require("laravel-mix");
 
 mix
 	.disableNotifications()
-	.setPublicPath("tests/output")
-	.fastSass("tests/epub.scss", "tests/output")
-	.fastSass("tests/prince.scss", "tests/output")
-	.fastSass("tests/web.scss", "tests/output");
+	.setPublicPath( 'tests/output' )
+	.fastSass( 'tests/epub.scss', 'tests/output' )
+	.fastSass( 'tests/prince.scss', 'tests/output' )
+	.fastSass( 'tests/web.scss', 'tests/output' )
+	.js( 'assets/scripts/toc.js', 'tests/output' );
 
 // Full API
 // mix.js(src, output);

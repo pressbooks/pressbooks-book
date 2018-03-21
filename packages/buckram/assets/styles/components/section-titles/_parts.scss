@@ -25,8 +25,8 @@
       page-break-after: avoid;
 
       &::before {
-        text-transform: $part-number-prefix-text-transform;
-        content: $part-number-prefix-content;
+        text-transform: $part-number-before-content-text-transform;
+        content: $part-number-before-content;
       }
     }
 

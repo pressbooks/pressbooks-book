@@ -36,6 +36,10 @@
           text-align: $chapter-number-align;
           text-transform: $chapter-number-text-transform;
 
+          &:before {
+            content: $chapter-number-before-content;
+          }
+
           &::after {
             content: $chapter-number-after-content;
           }

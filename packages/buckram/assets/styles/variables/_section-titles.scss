@@ -385,11 +385,25 @@ $part-number-text-transform: none !default;
 /// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
 /// @type String
 /// @since 0.3.0
+/// @since 0.8.0 Use $part-number-before-content instead.
+/// @deprecated
 $part-number-prefix-content: $part + '\00A0' !default;
 
-/// Defines the part number prefix's text transform.
+/// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
 /// @type String
-$part-number-prefix-text-transform: uppercase !default; // The text before the part number, e.g. 'Part '
+/// @since 0.8.0
+$part-number-before-content: $part-number-prefix-content !default;
+
+/// Defines the content that appears before the part number's text transform.
+/// @type String
+/// @since 0.8.0 Use $part-number-before-content-text-transform instead.
+/// @deprecated
+$part-number-prefix-text-transform: uppercase !default;
+
+/// Defines the content that appears before the part number's text transform.
+/// @type String
+/// @since 0.8.0
+$part-number-before-content-text-transform: $part-number-prefix-text-transform !default;
 
 /// Defines the part title display property.
 /// @type String
@@ -576,6 +590,11 @@ $chapter-number-align: center !default;
 /// Defines the chapter number text transform.
 /// @type String
 $chapter-number-text-transform: none !default;
+
+/// Defines the content that precedes the chapter number. Defaults to an empty string.
+/// @type String
+/// @since 0.8.0
+$chapter-number-before-content: '' !default;
 
 /// Defines the content that follows the chapter number. Defaults to a period and a non-breaking space.
 /// @type String

@@ -11,20 +11,20 @@
     // General
 
     ul {
-      padding: 0;
+      counter-reset: chapter;
       line-height: $toc-base-line-height;
       list-style: none;
-      counter-reset: chapter;
+      padding: 0;
     }
 
     li {
-      position: relative;
+      list-style: none;
       padding: 0;
-      margin-right: 0;
+      page-break-inside: avoid;
+      position: relative;
       margin-bottom: 0;
       margin-left: 0;
-      list-style: none;
-      page-break-inside: avoid;
+      margin-right: 0;
     }
 
     a {
@@ -44,7 +44,6 @@
     }
 
     // Spacing
-
     .front-matter,
     .back-matter {
       margin-top: $toc-section-margin-top;
@@ -72,17 +71,13 @@
     }
 
     // Chapters
-
     .chapter.numberless a::before {
-      left: 0;
-      width: 0;
-      margin-right: 0;
       content: '';
       counter-increment: none;
+      display: none;
     }
 
     // Sections (Multilevel TOC)
-
     .sections {
       margin-top: $toc-subsection-margin-top;
     }
@@ -97,6 +92,7 @@
     .section a::before {
       content: '';
       counter-increment: none;
+      display: none;
     }
   }
 }

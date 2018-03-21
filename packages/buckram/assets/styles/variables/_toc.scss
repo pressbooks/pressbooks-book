@@ -99,6 +99,22 @@ $toc-front-matter-author-text-transform: none !default;
 /// Part number display for Table of Contents
 /// @type String
 $toc-part-number-display: inline-block !default;
+
+/// Content that appears before the part number for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-part-number-before-content: $part '\A0' !default;
+
+/// Content of the part number (part title ::before pseudo-element) for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-part-number-content: counter(part, upper-roman) !default;
+
+/// Content that appears after the part number for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-part-number-after-content:  '.\A0' !default;
+
 /// Part number font stack for Table of Contents
 /// @type String
 $toc-part-number-font-family: $font-3 !default;
@@ -154,6 +170,21 @@ $toc-chapter-number-font-weight: normal !default;
 /// @type String
 $toc-chapter-number-text-transform: none !default;
 
+/// Content that appears before the chapter number for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-chapter-number-before-content: '' !default;
+
+/// Content of the chapter number (chapter title ::before pseudo-element) for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-chapter-number-content: counter(chapter) !default;
+
+/// Content that appears after the chapter number for the Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-chapter-number-after-content: '.\A0\A0\A0' !default;
+
 /// Chapter title font stack for Table of Contents
 /// @type String
 $toc-chapter-title-font-family: $font-1 !default;
@@ -169,6 +200,12 @@ $toc-chapter-title-font-weight: normal !default;
 /// Chapter title text transform for Table of Contents
 /// @type String
 $toc-chapter-title-text-transform: none !default;
+/// Chapter number text align for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-chapter-title-align: left !default;
+
+$toc-chapter-title-display: inline !default;
 
 /// Chapter subtitle font stack for Table of Contents
 /// @type String
@@ -202,6 +239,13 @@ $toc-chapter-author-font-weight: normal !default;
 /// @type String
 $toc-chapter-author-text-transform: none !default;
 
+$toc-page-number-before-content: '\A0\A0\A0' !default;
+
+/// Page number display property for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-page-number-display: inline !default;
+
 /// Page number font family for Table of Contents
 /// @type String
 $toc-page-number-font-family: $font-1 !default;
@@ -220,6 +264,13 @@ $toc-page-number-text-transform: none !default;
 /// Page number text decoration for Table of Contents
 /// @type String
 $toc-page-number-text-decoration: none !default;
+
+/// Page number display property for Table of Contents
+/// @type String
+/// @since 0.8.0
+$toc-front-matter-page-number-display: inline !default;
+
+$toc-front-matter-page-number-before-content: '\A0\A0\A0' !default;
 
 /// Front matter page number font size for Table of Contents
 /// @type String

@@ -9,17 +9,12 @@
 }
 
 @else if $type == 'prince' {
+  $toc-part-number-display: block !default;
+
   #toc {
-
     // General
-
     margin-right: $toc-center-margin-right;
     margin-left: $toc-center-margin-left;
-
-    a::after {
-      display: inline;
-      content: '\A0\A0\A0' target-counter(attr(href), page);
-    }
 
     ul {
       margin: 0;
@@ -31,20 +26,12 @@
     }
 
     // Parts
-
     .part {
-      @include toc-part-title;
-
-      text-align: center;
-      page-break-after: avoid;
+      @include toc-part-title($text-align: center);
     }
 
     .part a::before {
-      display: block;
-      text-align: center;
-      content: $part '\A0' counter(part, upper-roman) '.\A0';
-      counter-increment: part;
-      page-break-after: avoid;
+      @include toc-part-number($text-align: center);
     }
 
     .part a::after {
@@ -52,66 +39,49 @@
     }
 
     // Front Matter
-
     .front-matter .toc-chapter-title {
-      @include toc-front-matter-title;
-
-      text-align: center;
+      @include toc-front-matter-title($text-align: center);
     }
 
     .introduction .toc-chapter-title {
-      @include toc-front-matter-title;
-
-      text-align: center;
+      @include toc-front-matter-title($text-align: center);
     }
 
     .front-matter a::after {
-      content: '\A0\A0\A0' target-counter(attr(href), page, lower-roman);
+      @include toc-front-matter-page-number;
     }
 
     .introduction a::after {
-      content: '\A0\A0\A0' target-counter(attr(href), page);
+      @include toc-page-number;
     }
 
     // Chapters
 
     .chapter a::before {
-      @include toc-chapter-number;
-
-      display: $toc-chapter-number-display;
-      content: counter(chapter) '.\A0\A0\A0';
-      counter-increment: chapter;
-      page-break-after: avoid;
+      @include toc-chapter-number($text-align: center);
     }
 
     .toc-chapter-title {
-      @include toc-chapter-title;
-
-      display: inline;
-      text-align: center;
-      page-break-after: avoid;
+      @include toc-chapter-title($text-align: center);
     }
 
     .chapter-subtitle,
     .chapter-author {
       display: none;
-      text-align: center;
     }
 
     .chapter-subtitle {
-      @include toc-chapter-subtitle;
+      @include toc-chapter-subtitle($text-align: center);
     }
 
     .chapter-author {
-      @include toc-chapter-author;
+      @include toc-chapter-author($text-align: center);
     }
 
     // Back Matter
 
     .back-matter .toc-chapter-title {
-      @include toc-back-matter-title;
-
-      text-align: center;
+      @include toc-back-matter-title($text-align: center);
     }
   }
 }

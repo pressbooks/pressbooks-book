@@ -1,37 +1,44 @@
 {
-  "name": "buckram",
-  "version": "0.7.3",
-  "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
-  "scripts": {
-    "test": "npm run lint && npm run build",
-    "build": "cross-env webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "npm run lint:styles",
-    "lint:styles": "node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
-    "docs": "node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pressbooks/buckram.git"
-  },
-  "author": "Pressbooks (Book Oven Inc.)",
-  "license": "GPL-2.0-or-later",
-  "bugs": {
-    "url": "https://github.com/pressbooks/buckram/issues"
-  },
-  "homepage": "https://github.com/pressbooks/buckram#readme",
-  "engines": {
-    "node": ">= 6.9.4"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "pressbooks-build-tools": "^0.11.0",
-    "sassdoc": "^2.5.0"
-  },
-  "stylelint": {
-    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
-    "rules": {
-      "no-descending-specificity": null,
-      "no-duplicate-at-import-rules": null
-    }
-  }
+	"name": "buckram",
+	"version": "0.8.0",
+	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
+	"scripts": {
+		"test": "npm run lint && npm run build",
+		"build":
+			"cross-env webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"lint": "npm run lint:scripts && npm run lint:styles",
+		"lint:scripts": "node_modules/eslint/bin/eslint.js 'assets/scripts/*.js'",
+		"lint:styles":
+			"node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
+		"docs":
+			"node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pressbooks/buckram.git"
+	},
+	"author": "Pressbooks (Book Oven Inc.)",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/pressbooks/buckram/issues"
+	},
+	"homepage": "https://github.com/pressbooks/buckram#readme",
+	"engines": {
+		"node": ">= 6.9.4"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"pressbooks-build-tools": "^0.11.0",
+		"sassdoc": "^2.5.0"
+	},
+	"eslintConfig": {
+		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js"
+	},
+	"stylelint": {
+		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
+		"rules": {
+			"no-descending-specificity": null,
+			"no-duplicate-at-import-rules": null
+		}
+	}
 }

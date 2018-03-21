@@ -67,7 +67,6 @@
       @include toc-part-title;
 
       margin-top: $toc-block-margin-top;
-      text-align: left;
     }
 
     .toc-chapter-title {
@@ -115,18 +114,18 @@
   #toc {
 
     // General
-
     a {
       margin-left: 0;
     }
 
     a::after {
+      @include toc-page-number;
+
       position: absolute;
       top: $toc-left-page-number-top;
       right: 0;
       line-height: $toc-base-line-height;
       vertical-align: top;
-      content: target-counter(attr(href), page);
     }
 
     ul {
@@ -142,17 +141,11 @@
 
     .part {
       @include toc-part-title;
-
       width: $toc-title-width;
-      page-break-after: avoid;
     }
 
     .part a::before {
       @include toc-part-number;
-
-      text-align: left;
-      content: $part '\A0' counter(part, upper-roman) '.\A0';
-      counter-increment: part;
     }
 
     .part a::after {
@@ -163,19 +156,14 @@
 
     .front-matter .toc-chapter-title {
       @include toc-front-matter-title;
-
-      position: relative;
-      display: block;
     }
 
     .front-matter a::after {
       @include toc-front-matter-page-number;
-
-      content: leader(' ') target-counter(attr(href), page, lower-roman);
     }
 
     .introduction a::after {
-      content: leader(' ') target-counter(attr(href), page);
+      @include toc-page-number;
     }
 
     // Chapters
@@ -189,10 +177,7 @@
       width: $toc-left-chapter-number-width;
       margin-right: -1 * $toc-left-chapter-number-width;
       line-height: $toc-base-line-height;
-      text-align: right;
       vertical-align: top;
-      content: counter(chapter) '. ';
-      counter-increment: chapter;
     }
 
     .toc-chapter-title {
