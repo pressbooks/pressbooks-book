@@ -129,11 +129,13 @@ function display_menu() {
 		( is_front_page() ) ? '#main' : get_home_url(),
 		__( 'Home', 'pressbooks-book' )
 	);
-	$items .= sprintf(
-		'<li><a href="%1$s">%2$s</a></li>',
-		( get_permalink() === pb_get_first() ) ? '#main' : pb_get_first(),
-		__( 'Read', 'pressbooks-book' )
-	);
+	if ( pb_get_first_post_id() ) {
+		$items .= sprintf(
+			'<li><a href="%1$s">%2$s</a></li>',
+			pb_get_first(),
+			__( 'Read', 'pressbooks-book' )
+		);
+	}
 	if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 		$items .= sprintf(
 			'<li><a href="%1$s">%2$s</a></li>',

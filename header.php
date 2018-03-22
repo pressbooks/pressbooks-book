@@ -88,7 +88,7 @@
 				</nav>
 			</div>
 		</div>
-		<?php if ( ! is_front_page() ) { ?>
+		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav class="reading-header__inside">
 					<div class="reading-header__toc dropdown">
