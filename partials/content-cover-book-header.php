@@ -82,9 +82,11 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			<span class="book-header__license__text license-text"><?php echo \Pressbooks\Book\Helpers\license_to_text( $license ); ?></span>
 		</div>
 		<div class="book-header__cta">
+			<?php if ( pb_get_first_post_id() ) { ?>
 			<a class="call-to-action" href="<?php echo $first_chapter; ?>">
 				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
 			</a><?php
+			}
 			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 				?><a class="call-to-action" href="<?php echo home_url( '/buy' ); ?>">
 					<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
