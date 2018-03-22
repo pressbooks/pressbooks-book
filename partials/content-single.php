@@ -1,10 +1,10 @@
 <section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 <header>
 	<h1 class="entry-title"><?php
+	if ( $number ) {
+		echo "<span>$number</span> ";
+	}
 	if ( get_post_meta( $post->ID, 'pb_show_title', true ) ) {
-		if ( $number ) {
-			echo "<span>$number</span> ";
-		}
 		the_title();
 	}
 	?></h1>
