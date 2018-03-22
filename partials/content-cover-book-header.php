@@ -86,12 +86,12 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			<a class="call-to-action" href="<?php echo $first_chapter; ?>">
 				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
 			</a><?php
-			}
-			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
-				?><a class="call-to-action" href="<?php echo home_url( '/buy' ); ?>">
-					<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
-				</a><?php
-			} ?>
+}
+if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
+	?><a class="call-to-action" href="<?php echo home_url( '/buy' ); ?>">
+<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
+	</a><?php
+} ?>
 		</div> <!-- end .call-to-action -->
 		<?php if ( pb_social_media_enabled() ) { ?>
 		<div class="book-header__share">
