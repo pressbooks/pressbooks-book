@@ -60,13 +60,13 @@
 @mixin toc-part-title($text-align: left) {
   color: if-map-get($toc-part-title-color, $type);
   font-family: $toc-part-title-font-family;
-  text-align: $text-align;
   font-size: if-map-get($toc-part-title-font-size, $type);
   font-style: $toc-part-title-font-style;
   font-weight: $toc-part-title-font-weight;
-  text-transform: $toc-part-title-text-transform;
   hyphens: none;
   page-break-after: avoid;
+  text-align: $text-align;
+  text-transform: $toc-part-title-text-transform;
 }
 
 @mixin toc-chapter-number($text-align: right) {

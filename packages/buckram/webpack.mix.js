@@ -15,8 +15,7 @@ mix
 	.setPublicPath( 'tests/output' )
 	.fastSass( 'tests/epub.scss', 'tests/output' )
 	.fastSass( 'tests/prince.scss', 'tests/output' )
-	.fastSass( 'tests/web.scss', 'tests/output' )
-	.js( 'assets/scripts/toc.js', 'tests/output' );
+	.fastSass( 'tests/web.scss', 'tests/output' );
 
 // Full API
 // mix.js(src, output);
