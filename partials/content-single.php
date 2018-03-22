@@ -4,7 +4,10 @@
 	if ( $number ) {
 		echo "<span>$number</span> ";
 	}
-	the_title(); ?></h1>
+	if ( get_post_meta( $post->ID, 'pb_show_title', true ) ) {
+		the_title();
+	}
+	?></h1>
 	<?php if ( $subtitle ) { ?>
 	<p data-type="subtitle"><?php echo $subtitle; ?></p>
 	<?php } ?>
