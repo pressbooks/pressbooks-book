@@ -1,8 +1,11 @@
 <h2 class="entry-title"><?php
-if ( $number ) {
-	echo "<span>$number</span>  ";
+if ( get_post_meta( $post->ID, 'pb_show_title', true ) ) {
+	if ( $number ) {
+		echo "<span>$number</span>  ";
+	}
+	the_title();
 }
-the_title(); ?></h2>
+?></h2>
 <div id="post-<?php the_ID(); ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 <div class="entry-content">
 <?php if ( $subtitle ) : ?><h2 class="chapter_subtitle"><?php echo $subtitle; ?></h2><?php endif; ?>
