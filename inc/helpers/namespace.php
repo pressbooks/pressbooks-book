@@ -21,7 +21,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			<div class="inner-content">
 			<?php } ?>
 				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
-					<?php $chapter_number = pb_get_chapter_number( $section['post_name'] );
+					<?php $chapter_number = pb_get_chapter_number( $section['ID'] );
 					if ( $chapter_number ) {
 						echo "<span>$chapter_number.&nbsp;</span>";
 					}

@@ -4,7 +4,7 @@
 		get_header();
 		if ( pb_is_public() ) :
 			$web_options = get_option( 'pressbooks_theme_options_web' );
-			$number = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->post_name ) : false;
+			$number = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
 			$subtitle = get_post_meta( $post->ID, 'pb_subtitle', true );
 			$contributors = new \Pressbooks\Contributors();
 			$authors = $contributors->get( $post->ID, 'authors' );
