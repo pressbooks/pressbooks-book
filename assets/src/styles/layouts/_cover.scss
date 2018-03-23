@@ -109,8 +109,12 @@
   padding-bottom: 0.5rem;
 
   button {
-    &:hover,
+    &:hover {
+      text-decoration: underline;
+    }
+
     &:focus {
+      outline: auto;
       text-decoration: underline;
     }
   }
