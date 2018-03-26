@@ -67,5 +67,11 @@ if ( isset( $post ) ) {
 	$toc_search = "id=\"toc-{$post->post_type}-{$post->ID}\" class=\"";
 	$toc_replace = "{$toc_search}toc__selected ";
 	$toc_output = \Pressbooks\Utility\str_lreplace( $toc_search, $toc_replace, $toc_output );
+	if ( $post->post_type !== 'part' ) {
+		// There are no parent selectors in CSS, not even in CSS3
+		$toc_search = "id=\"toc-part-{$post->post_parent}\" class=\"";
+		$toc_replace = "{$toc_search}toc__parent ";
+		$toc_output = \Pressbooks\Utility\str_lreplace( $toc_search, $toc_replace, $toc_output );
+	}
 }
 echo $toc_output;
