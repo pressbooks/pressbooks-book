@@ -92,7 +92,9 @@ export default {
 
 				// Collapse (hide) the content following the heading
 				let content = heading.nextElementSibling;
-				content.hidden = true;
+				if ( ! heading.parentNode.classList.contains( 'toc__parent' ) ) {
+					content.hidden = true;
+				}
 
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
