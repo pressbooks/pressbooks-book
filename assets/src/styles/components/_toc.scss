@@ -40,6 +40,10 @@
 .toc__back-matter-list {
   font-weight: 700;
 
+  &:empty {
+    display: none;
+  }
+
   @media #{$breakpoint-tablet-and-up} {
     font-size: 1.125rem;
   }
@@ -125,6 +129,10 @@ ol.toc__chapters {
 
 .toc__chapters {
   // display: none;
+
+  &:empty {
+    display: none;
+  }
 
   .home & {
     @media #{$breakpoint-tablet-and-up} {
