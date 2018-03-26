@@ -35,8 +35,8 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 							<?php } ?>
 						</ol>
 					<?php }
-				}
-				if ( $post_type !== 'chapter' ) { ?>
+}
+if ( $post_type !== 'chapter' ) { ?>
 			</div>
 		<?php } ?>
 		</li>

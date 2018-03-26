@@ -34,10 +34,10 @@ if ( ! $toc_output ) {
 					$n++; ?>
 					<h3 class="toc__part__title">
 					<span class="inner-content"><?php
-						if ( $part['has_post_content'] ) { ?><a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php }
-							if ( $part_numbers ) { ?><span><?php echo \Pressbooks\L10n\romanize( $n ); ?>. </span><?php }
+					if ( $part['has_post_content'] ) { ?><a href="<?php echo get_permalink( $part['ID'] ); ?>"><?php }
+					if ( $part_numbers ) { ?><span><?php echo \Pressbooks\L10n\romanize( $n ); ?>. </span><?php }
 							echo $part['post_title'];
-							if ( $part['has_post_content'] ) { ?></a><?php }
+					if ( $part['has_post_content'] ) { ?></a><?php }
 					?></span>
 					</h3><?php }
 				if ( ! empty( $part['chapters'] ) ) { ?>
