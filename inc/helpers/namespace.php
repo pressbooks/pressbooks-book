@@ -3,7 +3,6 @@
 namespace Pressbooks\Book\Helpers;
 
 function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ) {
-	global $blog_id;
 	foreach ( $sections as $section ) {
 		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
 			if ( ! $can_read_private ) {
@@ -16,30 +15,30 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 				}
 			}
 		} ?>
-		<li class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
-			<?php if ( $post_type !== 'chapter' ) {?>
+		<li id="<?php echo "toc-{$post_type}-{$section['ID']}"; ?>" class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
+			<?php if ( $post_type !== 'chapter' ) { ?>
 			<div class="inner-content">
-			<?php } ?>
+				<?php } ?>
 				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
 					<?php $chapter_number = pb_get_chapter_number( $section['ID'] );
 					if ( $chapter_number ) {
 						echo "<span>$chapter_number.&nbsp;</span>";
 					}
-					echo pb_strip_br( $section['post_title'] );?>
+					echo pb_strip_br( $section['post_title'] ); ?>
 				</a>
 				<?php if ( $should_parse_subsections ) {
 					$subsections = pb_get_subsections( $section['ID'] );
 					if ( $subsections ) { ?>
 						<ol class="toc__subsections">
-						<?php foreach ( $subsections as $id => $name ) { ?>
-							<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-						<?php } ?>
+							<?php foreach ( $subsections as $id => $name ) { ?>
+								<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
+							<?php } ?>
 						</ol>
 					<?php }
 }
 if ( $post_type !== 'chapter' ) { ?>
-				</div>
-			<?php } ?>
+			</div>
+		<?php } ?>
 		</li>
 	<?php }
 }
