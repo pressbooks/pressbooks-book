@@ -62,6 +62,7 @@ if ( ! $toc_output ) {
 }
 
 // Search for [ id="toc-chapter-123" class=" ] and replace (once!) with [ id="toc-chapter-123" class="toc__selected  ]
+// where chapter is any post type (front-matter, part, chapter, back-matter, ...)
 if ( isset( $post ) ) {
 	$toc_search = "id=\"toc-{$post->post_type}-{$post->ID}\" class=\"";
 	$toc_replace = "{$toc_search}toc__selected ";
