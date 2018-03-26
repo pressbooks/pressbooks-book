@@ -19,7 +19,7 @@ if ( ! $toc_output ) {
 	$options = get_option( 'pressbooks_theme_options_global' );
 	$part_numbers = $options['chapter_numbers'] ?? false; ?>
 	<ol class="toc toc__list">
-		<li class="dropdown">
+		<li id="toc-front-matter" class="dropdown">
 			<h3 class="toc__front-matter__title"><?php _e( 'Front Matter', 'pressbooks' ); ?></h3>
 			<ol class="toc__front-matter-list">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
@@ -48,7 +48,7 @@ if ( ! $toc_output ) {
 					</div>
 				<?php } ?></li><?php }
 		endforeach; ?>
-		<li class="dropdown">
+		<li id="toc-back-matter" class="dropdown">
 			<h3 class="toc__back-matter__title"><?php _e( 'Back Matter', 'pressbooks' ); ?></h3>
 			<ol class="toc__back-matter-list">
 				<?php \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ); ?>
@@ -67,9 +67,14 @@ if ( isset( $post ) ) {
 	$toc_search = "id=\"toc-{$post->post_type}-{$post->ID}\" class=\"";
 	$toc_replace = "{$toc_search}toc__selected ";
 	$toc_output = \Pressbooks\Utility\str_lreplace( $toc_search, $toc_replace, $toc_output );
-	if ( $post->post_type !== 'part' ) {
-		// There are no parent selectors in CSS, not even in CSS3
+	// There are no parent selectors in CSS, not even in CSS3
+	if ( $post->post_type === 'chapter' ) {
 		$toc_search = "id=\"toc-part-{$post->post_parent}\" class=\"";
+		$toc_replace = "{$toc_search}toc__parent ";
+		$toc_output = \Pressbooks\Utility\str_lreplace( $toc_search, $toc_replace, $toc_output );
+	}
+	if ( in_array( $post->post_type, [ 'front-matter', 'back-matter' ], true ) ) {
+		$toc_search = "id=\"toc-{$post->post_type}\" class=\"";
 		$toc_replace = "{$toc_search}toc__parent ";
 		$toc_output = \Pressbooks\Utility\str_lreplace( $toc_search, $toc_replace, $toc_output );
 	}
