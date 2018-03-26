@@ -92,15 +92,7 @@
 			<div class="reading-header">
 				<nav class="reading-header__inside">
 					<div class="reading-header__toc dropdown">
-							<h3 class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h3>
-						<?php
-						global $blog_id;
-						$can_read = current_user_can_for_blog( $blog_id, 'read' );
-						$can_read_private = current_user_can_for_blog( $blog_id, 'read_private_posts' );
-						$book_structure = pb_get_book_structure();
-						$book_information = pb_get_book_information();
-						$permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
-						$should_parse_subsections = pb_should_parse_subsections();?>
+						<h3 class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h3>
 						<div class="block-reading-toc">
 							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 						</div>
