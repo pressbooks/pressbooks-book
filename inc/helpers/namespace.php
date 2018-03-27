@@ -2,7 +2,7 @@
 
 namespace Pressbooks\Book\Helpers;
 
-function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $should_parse_subsections ) {
+function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content ) {
 	foreach ( $sections as $section ) {
 		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
 			if ( ! $can_read_private ) {
@@ -26,7 +26,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 					}
 					echo pb_strip_br( $section['post_title'] ); ?>
 				</a>
-				<?php if ( $should_parse_subsections ) {
+				<?php if ( pb_should_parse_subsections() ) {
 					$subsections = pb_get_subsections( $section['ID'] );
 					if ( $subsections ) { ?>
 						<ol class="toc__subsections">
