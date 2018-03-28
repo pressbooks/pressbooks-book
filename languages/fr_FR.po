@@ -19,6 +19,14 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+#: ../404.php:2
+msgid "Oops! That content can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:3
+msgid "It looks like nothing was found at this location. Try a search?"
+msgstr ""
+
 #: ../comments.php:2
 msgid "Feedback/Errata"
 msgstr ""
@@ -86,31 +94,43 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr ""
 
-#: ../functions.php65, ../page-authors.php:26
-msgid "Authors"
-msgstr "Auteurs"
+#: ../functions.php:65
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:66
-msgid "Editors"
-msgstr ""
+msgid "Editor"
+msgid_plural "Editors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:67
-msgid "Translators"
-msgstr ""
+msgid "Translator"
+msgid_plural "Translators"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:68
-msgid "Reviewers"
-msgstr ""
+msgid "Reviewer"
+msgid_plural "Reviewers"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:69
-msgid "Illustrators"
-msgstr ""
+msgid "Illustrator"
+msgid_plural "Illustrators"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:70
-msgid "Contributors"
-msgstr ""
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../functions.php71, ../single.php:29
+#: ../functions.php71, ../single.php:28
 msgid "License"
 msgstr ""
 
@@ -150,31 +170,31 @@ msgstr ""
 msgid "Decrease Font Size"
 msgstr ""
 
-#: ../functions.php:235
+#: ../functions.php:236
 msgid "Previous Section"
 msgstr ""
 
-#: ../functions.php:240
+#: ../functions.php:241
 msgid "Next Section"
 msgstr ""
 
-#: ../functions.php:285
+#: ../functions.php:286
 msgid "%s on"
 msgstr "%s sur"
 
-#: ../functions.php:285
+#: ../functions.php:286
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: ../functions.php285, ../functions.php:305
+#: ../functions.php286, ../functions.php:306
 msgid "(Edit)"
 msgstr "(Modifier)"
 
-#: ../functions.php:288
+#: ../functions.php:289
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en cours de modération"
 
-#: ../functions.php:305
+#: ../functions.php:306
 msgid "Pingback:"
 msgstr "PingBack :"
 
@@ -190,13 +210,17 @@ msgstr ""
 msgid "Toggle Menu"
 msgstr ""
 
-#: ../header.php95, ../index.php:11
+#: ../header.php95, ../index.php:13
 msgid "Contents"
 msgstr ""
 
-#: ../header.php:113
+#: ../header.php:105
 msgid "Buy"
 msgstr "Acheter"
+
+#: ../index.php:16
+msgid "This book does not contain any public content."
+msgstr ""
 
 #: ../page-about.php:5
 msgid "About The Book"
@@ -205,6 +229,10 @@ msgstr "A propos du livre"
 #: ../page-about.php21, ../page-buy.php10, ../page-buy.php:18
 msgid "It's coming!"
 msgstr "Ça arrive !"
+
+#: ../page-authors.php:26
+msgid "Authors"
+msgstr "Auteurs"
 
 #: ../page-buy.php:5
 msgid "Buy the Book"

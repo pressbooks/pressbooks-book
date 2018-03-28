@@ -14,6 +14,14 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../404.php:2
+msgid "Oops! That content can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:3
+msgid "It looks like nothing was found at this location. Try a search?"
+msgstr ""
+
 #: ../comments.php:2
 msgid "Feedback/Errata"
 msgstr ""
@@ -78,29 +86,41 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr ""
 
-#: ../functions.php:65, ../page-authors.php:26
-msgid "Authors"
-msgstr ""
+#: ../functions.php:65
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:66
-msgid "Editors"
-msgstr ""
+msgid "Editor"
+msgid_plural "Editors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:67
-msgid "Translators"
-msgstr ""
+msgid "Translator"
+msgid_plural "Translators"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:68
-msgid "Reviewers"
-msgstr ""
+msgid "Reviewer"
+msgid_plural "Reviewers"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:69
-msgid "Illustrators"
-msgstr ""
+msgid "Illustrator"
+msgid_plural "Illustrators"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:70
-msgid "Contributors"
-msgstr ""
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../functions.php:71, ../single.php:28
 msgid "License"
@@ -182,12 +202,16 @@ msgstr ""
 msgid "Toggle Menu"
 msgstr ""
 
-#: ../header.php:95, ../index.php:11
+#: ../header.php:95, ../index.php:13
 msgid "Contents"
 msgstr ""
 
-#: ../header.php:113
+#: ../header.php:105
 msgid "Buy"
+msgstr ""
+
+#: ../index.php:16
+msgid "This book does not contain any public content."
 msgstr ""
 
 #: ../page-about.php:5
@@ -196,6 +220,10 @@ msgstr ""
 
 #: ../page-about.php:21, ../page-buy.php:10, ../page-buy.php:18
 msgid "It's coming!"
+msgstr ""
+
+#: ../page-authors.php:26
+msgid "Authors"
 msgstr ""
 
 #: ../page-buy.php:5

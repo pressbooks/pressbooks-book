@@ -1,6 +1,17 @@
 # McLuhan
 
-[![Travis](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book/) [![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book) [![Packagist](https://img.shields.io/packagist/vpre/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
+[![Packagist](https://img.shields.io/packagist/l/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
+[![Current Release](https://img.shields.io/github/release/pressbooks/pressbooks-book.svg)](https://github.com/pressbooks/pressbooks/releases/latest/)
+[![Packagist](https://img.shields.io/packagist/v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
+
+[![Build Status](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book)
+[![Translate McLuhan](https://img.shields.io/badge/translated-6.95%25-red.svg)](https://www.transifex.com/pressbooks/pressbooks-book/translate/)
+
+[![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
+[![Slack](https://pressbooks-slack.now.sh/badge.svg)](https://pressbooks-slack.now.sh)
+[![Open Collective](https://opencollective.com/pressbooks/tiers/backer/badge.svg?label=backers&color=brightgreen)](https://opencollective.com/pressbooks/)
+[![Open Collective](https://opencollective.com/pressbooks/tiers/sponsor/badge.svg?label=sponsors&color=brightgreen)](https://opencollective.com/pressbooks/)
 
 This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora. McLuhan is the default book theme for Pressbooks.
 
