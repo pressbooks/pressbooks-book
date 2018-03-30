@@ -18,6 +18,7 @@ mix
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
 	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
 	.sass( 'assets/src/styles/book.scss', 'dist/styles' )
+	.sass( 'assets/legacy/styles/web-house-style.scss', 'dist/styles' )
 	.copyDirectory( 'node_modules/buckram/assets/styles', 'assets/book/styles' )
 	.copyDirectory( 'node_modules/buckram/assets/images', 'assets/book/images' )
 	.copyDirectory( 'assets/src/images', 'dist/images' )
