@@ -6,7 +6,7 @@
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
 
 [![Build Status](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book)
-[![Translate McLuhan](https://img.shields.io/badge/translated-6.95%25-red.svg)](https://www.transifex.com/pressbooks/pressbooks-book/translate/)
+[![Translate McLuhan](https://img.shields.io/badge/dynamic/json.svg?label=translated&url=https%3A%2F%2Feighteenpercent.now.sh%2F%3Forganization%3Dpressbooks%26project%3Dpressbooks-book&query=%24.translated&colorB=e05d44)](https://www.transifex.com/pressbooks/pressbooks-book/translate/)
 
 [![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
 [![Slack](https://pressbooks-slack.now.sh/badge.svg)](https://pressbooks-slack.now.sh)
