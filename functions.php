@@ -131,6 +131,7 @@ function pb_enqueue_assets() {
 		} else {
 			$styles = Container::get( 'Styles' );
 			if ( $styles->isCurrentThemeCompatible( 1 ) ) {
+				// Supplementary webbook styles for older themes.
 				wp_enqueue_style( 'pressbooks/web-house-style', $assets->getPath( 'styles/web-house-style.css' ), false, null );
 			}
 			if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
