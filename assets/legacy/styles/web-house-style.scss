@@ -1,32 +1,59 @@
-// Paragraphs
-
 // Blockquotes
 
-#content {
-  .blockquote,
-  blockquote {
-    margin: 1em;
-    font-family: inherit;
-    font-size: 0.9em;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.2em;
-    text-align: left;
-
-    p {
-      font-size: inherit;
-      font-style: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      text-align: inherit;
-    }
-  }
+#content .blockquote,
+#content blockquote {
+  margin: 1em;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2em;
+  text-align: left;
 }
 
-// Tables
-
-// Columns
+#content .blockquote p,
+#content blockquote p {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
 
 // Pullquotes
 
+#content .pullquote,
+#content .pullquote-left,
+#content .pullquote-right {
+  display: block;
+  font-family: inherit;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: bold;
+  hyphens: none;
+  line-height: 1.2em;
+  text-align: center;
+  text-indent: 0;
+}
+
+#content .pullquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#content .pullquote-left {
+  float: left;
+  width: 45%;
+  margin: 1em;
+}
+
+#content .pullquote-right {
+  float: right;
+  width: 45%;
+  margin: 1em;
+  border-top: 0;
+  border-bottom: 0;
+}
+
 // Images
+
