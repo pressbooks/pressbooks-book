@@ -130,6 +130,9 @@ function pb_enqueue_assets() {
 			wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', false, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
 		} else {
 			$styles = Container::get( 'Styles' );
+			if ( $styles->isCurrentThemeCompatible( 1 ) ) {
+				wp_enqueue_style( 'pressbooks/web-house-style', $assets->getPath( 'styles/web-house-style.css' ), false, null );
+			}
 			if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
 				$sass = Container::get( 'Sass' );
 				// Custom Styles

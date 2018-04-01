@@ -2,6 +2,27 @@
 
 // Blockquotes
 
+#content {
+  .blockquote,
+  blockquote {
+    margin: 1em;
+    font-family: inherit;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2em;
+    text-align: left;
+
+    p {
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-align: inherit;
+    }
+  }
+}
+
 // Tables
 
 // Columns
