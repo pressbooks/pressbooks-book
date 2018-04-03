@@ -3,10 +3,11 @@
 # Translators:
 # Antonio Devís <colomet@hotmail.com>, 2017
 # Gilbert MOISIO <gmoisio@gmail.com>, 2017
+# Hugh McGuire <hugh@pressbooks.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
-"Last-Translator: Gilbert MOISIO <gmoisio@gmail.com>, 2017\n"
+"Last-Translator: Hugh McGuire <hugh@pressbooks.com>, 2018\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,15 +22,16 @@ msgstr ""
 
 #: ../404.php:2
 msgid "Oops! That content can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! Ce contenu ne peut pas être trouvé."
 
 #: ../404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
 msgstr ""
+"Il semble que rien n'a été trouvé à cet endroit. Essayez une recherche?"
 
 #: ../comments.php:2
 msgid "Feedback/Errata"
-msgstr ""
+msgstr "Commentaires/Errata"
 
 #: ../comments.php:6
 msgid ""
@@ -56,91 +58,93 @@ msgstr "Soumettre"
 
 #: ../footer.php:25
 msgid "Powered by %s"
-msgstr ""
+msgstr "Alimenté par %s"
 
 #: ../footer.php:27
 msgid "Open Source"
-msgstr ""
+msgstr "Open source"
 
 #: ../footer.php:28
 msgid "Open Textbooks"
-msgstr ""
+msgstr "Manuels scolaires ouverts"
 
 #: ../footer.php:29
 msgid "Open Book Publishing"
-msgstr ""
+msgstr "Édition ouverte"
 
 #: ../footer.php:30
 msgid "Learn More"
-msgstr ""
+msgstr "En savoir plus"
 
 #: ../footer.php34, ../footer.php:38
 msgid "Pressbooks on Facebook"
-msgstr ""
+msgstr "Pressbooks sur Facebook"
 
 #: ../footer.php40, ../footer.php:44
 msgid "Pressbooks on Twitter"
-msgstr ""
+msgstr "Pressbooks sur Twitter"
 
 #: ../functions.php:18
 msgid "Dependencies Missing"
-msgstr ""
+msgstr "Dépendances manquantes"
 
 #: ../functions.php:19
 msgid "You must run <code>composer install</code> from the McLuhan directory."
 msgstr ""
+"Vous devez exécuter <code>composer install</code> à partir du répertoire des"
+" fichiers McLuhan."
 
 #: ../functions.php:29
 msgid "Cannot find Pressbooks install."
-msgstr ""
+msgstr "L'installation Pressbooks ne peut pas être trouvée."
 
 #: ../functions.php:65
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Auteur"
+msgstr[1] "Auteurs"
 
 #: ../functions.php:66
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Éditeur"
+msgstr[1] "Éditeurs"
 
 #: ../functions.php:67
 msgid "Translator"
 msgid_plural "Translators"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Traducteur"
+msgstr[1] "Traducteurs"
 
 #: ../functions.php:68
 msgid "Reviewer"
 msgid_plural "Reviewers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Critique"
+msgstr[1] "Critiques"
 
 #: ../functions.php:69
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Illustrateur"
+msgstr[1] "Illustrateurs"
 
 #: ../functions.php:70
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Contributeur"
+msgstr[1] "Contributeurs"
 
 #: ../functions.php71, ../single.php:28
 msgid "License"
-msgstr ""
+msgstr "License"
 
 #: ../functions.php:72
 msgid "Primary Subject"
-msgstr ""
+msgstr "Sujet principal"
 
 #: ../functions.php:73
 msgid "Additional Subject(s)"
-msgstr ""
+msgstr "Sujet(s) supplémentaire(s)"
 
 #: ../functions.php:74
 msgid "Publisher"
@@ -164,19 +168,19 @@ msgstr "Hashtag"
 
 #: ../functions.php:115
 msgid "Increase Font Size"
-msgstr ""
+msgstr "Augmenter la taille de la police"
 
 #: ../functions.php:116
 msgid "Decrease Font Size"
-msgstr ""
+msgstr "Diminuer la taille de la police"
 
 #: ../functions.php:236
 msgid "Previous Section"
-msgstr ""
+msgstr "Section précédente"
 
 #: ../functions.php:241
 msgid "Next Section"
-msgstr ""
+msgstr "Section suivante"
 
 #: ../functions.php:286
 msgid "%s on"
@@ -200,19 +204,19 @@ msgstr "PingBack :"
 
 #: ../header.php:59
 msgid "Skip to content"
-msgstr ""
+msgstr "Aller au contenu"
 
 #: ../header.php:73
 msgid "Logo for %s"
-msgstr ""
+msgstr "Logo pour %s"
 
 #: ../header.php:83
 msgid "Toggle Menu"
-msgstr ""
+msgstr "Basculer le menu"
 
 #: ../header.php95, ../index.php:13
 msgid "Contents"
-msgstr ""
+msgstr "Table des matières"
 
 #: ../header.php:105
 msgid "Buy"
@@ -220,7 +224,7 @@ msgstr "Acheter"
 
 #: ../index.php:16
 msgid "This book does not contain any public content."
-msgstr ""
+msgstr "Ce livre ne contient aucun contenu public."
 
 #: ../page-about.php:5
 msgid "About The Book"
@@ -294,7 +298,7 @@ msgstr ""
 
 #: ../private.php:11
 msgid "sign in here"
-msgstr ""
+msgstr "se connecter ici"
 
 #: ../private.php:15
 msgid "You can also set up your own Pressbooks book at %s."
@@ -306,30 +310,30 @@ msgstr "Résultats de recherche pour : %s"
 
 #: ../search.php:12
 msgid "Previous page"
-msgstr ""
+msgstr "Page précédente"
 
 #: ../search.php:13
 msgid "Next page"
-msgstr ""
+msgstr "Page suivante"
 
 #: ../search.php:14
 msgid "Paged navigation"
-msgstr ""
+msgstr "Navigation paginée"
 
 #: ../searchform.php:3
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Rechercher:"
 
 #: ../searchform.php:4
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Chercher &hellip;"
 
 #: ../searchform.php:8
 msgid "Search"
-msgstr ""
+msgstr "Chercher"
 
 #: ../single.php:37
 msgid "Share This Book"
-msgstr ""
+msgstr "Partagez ce livre"
