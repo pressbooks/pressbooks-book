@@ -1,3 +1,15 @@
+// Paragraphs
+
+#content p.no-indent {
+  margin-top: 1em;
+  text-indent: 0;
+}
+
+#content p.hanging-indent {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
 // Blockquotes
 
 #content .blockquote,
