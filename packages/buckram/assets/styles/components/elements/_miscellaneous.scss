@@ -12,9 +12,11 @@
   cite {
     font-size: if-map-get($cite-font-size, $type);
     font-style: $cite-font-style;
-    font-weight: $cite-font-weight;
-    text-transform: $cite-text-transform;
     font-variant: $cite-font-variant;
+    font-weight: $cite-font-weight;
+    letter-spacing: if-map-get($cite-letter-spacing, $type);
+    text-transform: $cite-text-transform;
+    word-spacing: if-map-get($cite-word-spacing, $type);
   }
 
   // Code & Pre
@@ -55,9 +57,11 @@
     cite {
       font-size: if-map-get($cite-font-size, $type);
       font-style: $cite-font-style;
-      font-weight: $cite-font-weight;
-      text-transform: $cite-text-transform;
       font-variant: $cite-font-variant;
+      font-weight: $cite-font-weight;
+      letter-spacing: if-map-get($cite-letter-spacing, $type);
+      text-transform: $cite-text-transform;
+      word-spacing: if-map-get($cite-word-spacing, $type);
     }
 
     // Code & Pre

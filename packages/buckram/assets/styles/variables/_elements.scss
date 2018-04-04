@@ -567,6 +567,16 @@ $cite-font-weight: normal !default;
 /// @type String
 $cite-text-transform: uppercase !default;
 
+/// Letter spacing for `<cite>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$cite-letter-spacing: normal !default;
+
+/// Word spacing for `<cite>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$cite-word-spacing: normal !default;
+
 /// Font variant for `<cite>` elements.
 /// @type String
 $cite-font-variant: small-caps !default;
