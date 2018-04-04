@@ -68,7 +68,7 @@ $title-title-block-margin-top: (
 $title-title-font-family: $font-2 !default;
 
 /// Font size for title page title on elements `<h1>` with a class of `title`.
-/// @type String | Map 
+/// @type String | Map
 $title-title-font-size:(
   epub: 1.75em,
   prince: 2em,
@@ -110,7 +110,7 @@ $title-subtitle-margin-top: 0 !default;
 $title-subtitle-font-family: $font-3 !default;
 
 /// Font size for title page subtitle on elements `<h2>` with a class of `subtitle`.
-/// @type String | Map 
+/// @type String | Map
 $title-subtitle-font-size:(
   epub: 1.25em,
   prince: 1.5em,
@@ -334,6 +334,11 @@ $copyright-font-style: normal !default;
 /// Font weight for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String
 $copyright-font-weight: normal !default;
+
+/// Hyphenation for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
+/// @type String
+/// @since 1.0.0
+$copyright-hyphens: none !default;
 
 /// Line height for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String
