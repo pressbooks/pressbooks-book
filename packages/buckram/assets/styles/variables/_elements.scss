@@ -552,7 +552,7 @@ $table-td-align: left !default;
 $table-td-vertical-align: middle !default;
 
 /// Font size for `<cite>` elements.
-/// @type String
+/// @type String | Map
 $cite-font-size: 0.9em !default;
 
 /// Font style for `<cite>` elements.
@@ -571,27 +571,81 @@ $cite-text-transform: uppercase !default;
 /// @type String
 $cite-font-variant: small-caps !default;
 
-/// Font stack of `<code>`elements.
+/// Font stack of `<code>` elements.
 /// @type String
 $code-font-family: monospace !default;
 
+/// Font size of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-font-size: $body-font-size !default;
+
+/// Line height of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-line-height: $body-line-height !default;
+
+/// Font stack of `<pre>` elements.
+/// @type String
+$pre-font-family: $code-font-family !default;
+
+/// Font size of `<pre>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-font-size: $code-font-size !default;
+
+/// Line height of `<pre>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-line-height: $code-line-height !default;
+
 /// Font size for `<sup>` and `<sub>` elements.
 /// @type String
+/// @deprecated 1.0.0
 $sup-sub-font-size: 0.8em !default;
 
 /// Line height for `<sup>` and `<sub>` elements.
-/// @type String
+/// @type String | Map
+/// @deprecated 1.0.0
 $sup-sub-line-height: 0.5em !default;
 
-/// Font style for `<sup>` and `<sub>` elements.
+/// Font style for `<sub>` elements.
 /// @type String
 /// @since 1.0.0
-$sup-sub-font-style: normal !default;
+$sub-font-style: normal !default;
 
-/// Text transform for `<sup>` and `<sub>` elements.
+/// Text transform for `<sub>` elements.
 /// @type String
 /// @since 1.0.0
-$sup-sub-text-transform: none !default;
+$sub-text-transform: none !default;
+
+/// Font size for `<sub>` elements.
+/// @type String | Map
+$sub-font-size: $sup-sub-font-size !default;
+
+/// Line height for `<sub>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$sub-line-height: $sup-sub-line-height !default;
+
+/// Font style for `<sup>` elements.
+/// @type String
+/// @since 1.0.0
+$sup-font-style: normal !default;
+
+/// Text transform for `<sup>` elements.
+/// @type String
+/// @since 1.0.0
+$sup-text-transform: none !default;
+
+/// Font size for `<sup>` elements.
+/// @type String | Map
+$sup-font-size: $sup-sub-font-size !default;
+
+/// Line height for `<sup>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$sup-line-height: $sup-sub-line-height !default;
 
 /// Text decoration for `<a>` elements.
 /// @type String

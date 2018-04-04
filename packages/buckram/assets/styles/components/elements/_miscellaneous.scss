@@ -5,11 +5,12 @@
 //============================================================================//
 //                               Miscellaneous                                //
 //============================================================================//
+@import "../utilities";
 
 @if $type != 'web' {
   // Cite
   cite {
-    font-size: $cite-font-size;
+    font-size: if-map-get($cite-font-size, $type);
     font-style: $cite-font-style;
     font-weight: $cite-font-weight;
     text-transform: $cite-text-transform;
@@ -17,18 +18,31 @@
   }
 
   // Code & Pre
-  code,
-  pre {
+  code {
     font-family: $code-font-family;
+    font-size: if-map-get($code-font-size, $type);
+    line-height: if-map-get($code-line-height, $type);
+  }
+
+  pre {
+    font-family: $pre-font-family;
+    font-size: if-map-get($pre-font-size, $type);
+    line-height: if-map-get($pre-line-height, $type);
   }
 
   // Superscript & Subscript
-  sup,
   sub {
-    font-size: $sup-sub-font-size;
-    font-style: $sup-sub-font-style;
-    line-height: $sup-sub-line-height;
-    text-transform: $sup-sub-text-transform;
+    font-size: if-map-get($sub-font-size, $type);
+    font-style: $sub-font-style;
+    line-height: if-map-get($sub-line-height, $type);
+    text-transform: $sub-text-transform;
+  }
+
+  sup {
+    font-size: if-map-get($sup-font-size, $type);
+    font-style: $sup-font-style;
+    line-height: if-map-get($sup-line-height, $type);
+    text-transform: $sup-text-transform;
   }
 }
 
@@ -39,7 +53,7 @@
   .back-matter {
     // Cite
     cite {
-      font-size: $cite-font-size;
+      font-size: if-map-get($cite-font-size, $type);
       font-style: $cite-font-style;
       font-weight: $cite-font-weight;
       text-transform: $cite-text-transform;
@@ -47,18 +61,31 @@
     }
 
     // Code & Pre
-    code,
-    pre {
+    code {
       font-family: $code-font-family;
+      font-size: if-map-get($code-font-size, $type);
+      line-height: if-map-get($code-line-height, $type);
+    }
+
+    pre {
+      font-family: $pre-font-family;
+      font-size: if-map-get($pre-font-size, $type);
+      line-height: if-map-get($pre-line-height, $type);
     }
 
     // Superscript & Subscript
-    sup,
     sub {
-      font-size: $sup-sub-font-size;
-      font-style: $sup-sub-font-style;
-      line-height: $sup-sub-line-height;
-      text-transform: $sup-sub-text-transform;
+      font-size: if-map-get($sub-font-size, $type);
+      font-style: $sub-font-style;
+      line-height: if-map-get($sub-line-height, $type);
+      text-transform: $sub-text-transform;
+    }
+
+    sup {
+      font-size: if-map-get($sup-font-size, $type);
+      font-style: $sup-font-style;
+      line-height: if-map-get($sup-line-height, $type);
+      text-transform: $sup-text-transform;
     }
   }
 }
