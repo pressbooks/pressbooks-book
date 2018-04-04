@@ -581,6 +581,21 @@ $cite-word-spacing: normal !default;
 /// @type String
 $cite-font-variant: small-caps !default;
 
+/// Border property of `<code>` elements.
+/// @type String
+/// @since 1.0.0
+$code-border: none !default;
+
+/// Border radius property of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-border-radius: 0 !default;
+
+/// Background property of `<code>` elements.
+/// @type String
+/// @since 1.0.0
+$code-background: transparent !default;
+
 /// Font stack of `<code>` elements.
 /// @type String
 $code-font-family: monospace !default;
@@ -590,10 +605,65 @@ $code-font-family: monospace !default;
 /// @since 1.0.0
 $code-font-size: $body-font-size !default;
 
+/// Bottom margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-margin-bottom: 0 !default;
+
+/// Left margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-margin-left: 0 !default;
+
+/// Right margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-margin-right: 0 !default;
+
+/// Top margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-margin-top: 0 !default;
+
+/// Bottom padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-padding-bottom: 0 !default;
+
+/// Left padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-padding-left: 0 !default;
+
+/// Right padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-padding-right: 0 !default;
+
+/// Top padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$code-padding-top: 0 !default;
+
 /// Line height of `<code>` elements.
 /// @type String | Map
 /// @since 1.0.0
 $code-line-height: $body-line-height !default;
+
+/// Border property of `<code>` elements.
+/// @type String
+/// @since 1.0.0
+$pre-border: none !default;
+
+/// Border radius property of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-border-radius: 0 !default;
+
+/// Background property of `<code>` elements.
+/// @type String
+/// @since 1.0.0
+$pre-background: transparent !default;
 
 /// Font stack of `<pre>` elements.
 /// @type String
@@ -608,6 +678,46 @@ $pre-font-size: $code-font-size !default;
 /// @type String | Map
 /// @since 1.0.0
 $pre-line-height: $code-line-height !default;
+
+/// Bottom margin of `<pre>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-margin-bottom: 0 !default;
+
+/// Left margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-margin-left: 0 !default;
+
+/// Right margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-margin-right: 0 !default;
+
+/// Top margin of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-margin-top: 0 !default;
+
+/// Bottom padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-padding-bottom: 0 !default;
+
+/// Left padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-padding-left: 0 !default;
+
+/// Right padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-padding-right: 0 !default;
+
+/// Top padding of `<code>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$pre-padding-top: 0 !default;
 
 /// Font size for `<sup>` and `<sub>` elements.
 /// @type String
