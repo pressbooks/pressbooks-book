@@ -579,9 +579,19 @@ $code-font-family: monospace !default;
 /// @type String
 $sup-sub-font-size: 0.8em !default;
 
-/// Line height for `<sup>` and `<sub` elements.
+/// Line height for `<sup>` and `<sub>` elements.
 /// @type String
 $sup-sub-line-height: 0.5em !default;
+
+/// Font style for `<sup>` and `<sub>` elements.
+/// @type String
+/// @since 1.0.0
+$sup-sub-font-style: normal !default;
+
+/// Text transform for `<sup>` and `<sub>` elements.
+/// @type String
+/// @since 1.0.0
+$sup-sub-text-transform: none !default;
 
 /// Text decoration for `<a>` elements.
 /// @type String

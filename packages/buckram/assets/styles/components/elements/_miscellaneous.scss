@@ -26,7 +26,9 @@
   sup,
   sub {
     font-size: $sup-sub-font-size;
+    font-style: $sup-sub-font-style;
     line-height: $sup-sub-line-height;
+    text-transform: $sup-sub-text-transform;
   }
 }
 
@@ -54,7 +56,9 @@
     sup,
     sub {
       font-size: $sup-sub-font-size;
+      font-style: $sup-sub-font-style;
       line-height: $sup-sub-line-height;
+      text-transform: $sup-sub-text-transform;
     }
   }
 }
