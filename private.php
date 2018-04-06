@@ -7,7 +7,7 @@
 				__( 'This book is private, and accessible only to registered users. If you have an account you can %s.', 'pressbooks-book' ),
 				sprintf(
 					'<a href="%1$s">%2$s</a>',
-					get_bloginfo( 'url' ) . '/wp-login.php',
+					wp_login_url(),
 					__( 'sign in here', 'pressbooks-book' )
 				)
 			); ?></p>
