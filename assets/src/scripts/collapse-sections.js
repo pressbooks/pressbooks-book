@@ -1,3 +1,7 @@
+/**
+ * @see https://inclusive-components.design/collapsible-sections/
+ */
+
 document.addEventListener( 'DOMContentLoaded', function () {
 	// Get all the headings
 	const sectionHeadingEl = 'h1';
