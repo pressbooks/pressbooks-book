@@ -103,10 +103,13 @@ add_filter( 'script_loader_tag', 'pressbooks_async_scripts', 10, 3 );
 function pb_enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$options = get_option( 'pressbooks_theme_options_web' );
 
 	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700', false, null );
-	wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
+	if ( pb_social_media_enabled() ) {
+		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
+	}
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
 	wp_localize_script(
 		'pressbooks/book',
@@ -119,6 +122,9 @@ function pb_enqueue_assets() {
 	);
 
 	if ( ! is_front_page() ) {
+		if ( isset( $options['collapse_sections'] ) && absint( $options['collapse_sections'] ) === 1 ) {
+			wp_enqueue_script( 'pressbooks/collapse-sections', $assets->getPath( 'scripts/collapse-sections.js' ), false, null );
+		}
 
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 			$styles = Container::get( 'Styles' );
@@ -455,7 +461,7 @@ function pb_social_media_enabled() {
 	$options = get_option( 'pressbooks_theme_options_web' );
 	if ( ! isset( $options['social_media'] ) ) {
 		return true;
-	} elseif ( isset( $options['social_media'] ) && absint( $options['social_media'] === 1 ) ) {
+	} elseif ( isset( $options['social_media'] ) && absint( $options['social_media'] ) === 1 ) {
 		return true;
 	}
 	return false;
