@@ -1,6 +1,6 @@
 {
 	"name": "buckram",
-	"version": "0.8.0",
+	"version": "1.0.0-dev",
 	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
 	"scripts": {
 		"test": "npm run lint && npm run build",
@@ -18,7 +18,7 @@
 		"url": "git+https://github.com/pressbooks/buckram.git"
 	},
 	"author": "Pressbooks (Book Oven Inc.)",
-	"license": "GPL-2.0-or-later",
+	"license": "GPL-3.0-or-later",
 	"bugs": {
 		"url": "https://github.com/pressbooks/buckram/issues"
 	},

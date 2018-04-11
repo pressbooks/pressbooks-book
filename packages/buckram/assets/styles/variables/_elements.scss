@@ -23,31 +23,55 @@ $body-font-weight: normal !default;
 $body-line-height: (epub: 1.4em, prince: 1.4em, web: 1.8em) !default;
 
 /// Top margin for all heading elements.
-/// @type String
+/// @type String | Map
 $hx-margin-top: 1.5em !default;
 
 /// Bottom margin for all heading elements.
-/// @type String
+/// @type String | Map
 $hx-margin-bottom: 1em !default;
 
+/// Bottom padding for all heading elements.
+/// @type String | Map
+/// @since 1.0.0
+$hx-padding-bottom: 0 !default;
+
 /// Line height for all heading elements.
-/// @type String
+/// @type String | Map
 $hx-line-height: 1.5em !default;
 
-/// Top margin for `<h1>` elements.
+/// Bottom border style for all heading elements.
 /// @type String
+/// @since 1.0.0
+$hx-border-bottom-style: none !default;
+
+/// Bottom border width for all heading elements.
+/// @type String | Map
+/// @since 1.0.0
+$hx-border-bottom-width: 0 !default;
+
+/// Bottom border color for all heading elements.
+/// @type String | Map
+/// @since 1.0.0
+$hx-border-bottom-color: initial !default;
+
+/// Top margin for `<h1>` elements.
+/// @type String | Map
 $h1-margin-top: $hx-margin-top !default;
 
 /// Bottom margin for `<h1>` elements.
-/// @type String
+/// @type String | Map
 $h1-margin-bottom: $hx-margin-bottom !default;
+
+/// Bottom padding for `<h1>` elements.
+/// @type String | Map
+$h1-padding-bottom: $hx-padding-bottom !default;
 
 /// Font stack for `<h1>` elements.
 /// @type String
 $h1-font-family: $font-3 !default;
 
 /// Font size for `<h1>` elements.
-/// @type String
+/// @type String | Map
 $h1-font-size: 1em !default;
 
 /// Font style for `<h1>` elements.
@@ -59,7 +83,7 @@ $h1-font-style: normal !default;
 $h1-font-weight: bold !default;
 
 /// Line height for `<h1>` elements.
-/// @type String
+/// @type String | Map
 $h1-line-height: $hx-line-height !default;
 
 /// Text transform for `<h1>` elements.
@@ -70,20 +94,40 @@ $h1-text-transform: none !default;
 /// @type String
 $h1-align: center !default;
 
-/// Top margin for `<h2>` elements.
+/// Bottom border style for `<h1>` elements.
 /// @type String
+/// @since 1.0.0
+$h1-border-bottom-style: $hx-border-bottom-style !default;
+
+/// Bottom border width for `<h1>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h1-border-bottom-width: $hx-border-bottom-width !default;
+
+/// Bottom border color for `<h1>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h1-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Top margin for `<h2>` elements.
+/// @type String | Map
 $h2-margin-top: $hx-margin-top !default;
 
 /// Bottom margin for `<h2>` elements.
-/// @type String
+/// @type String | Map
 $h2-margin-bottom: $hx-margin-bottom !default;
+
+/// Bottom padding for `<h2>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h2-padding-bottom: $hx-padding-bottom !default;
 
 /// Font Stack for `<h2>` elements.
 /// @type String
 $h2-font-family: $font-3 !default;
 
 /// Font size for `<h2>` elements.
-/// @type String
+/// @type String | Map
 $h2-font-size: 1em !default;
 
 /// Font style for `<h2>` elements.
@@ -95,7 +139,7 @@ $h2-font-style: normal !default;
 $h2-font-weight: normal !default;
 
 /// Line Height for `<h2>` elements.
-/// @type String
+/// @type String | Map
 $h2-line-height: $hx-line-height !default;
 
 /// Text Transform for `<h2>` elements.
@@ -106,20 +150,40 @@ $h2-text-transform: none !default;
 /// @type String
 $h2-align: center !default;
 
-/// Top margin for `<h3>` elements.
+/// Bottom border style for `<h2>` elements.
 /// @type String
+/// @since 1.0.0
+$h2-border-bottom-style: $hx-border-bottom-style !default;
+
+/// Bottom border width for `<h2>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h2-border-bottom-width: $hx-border-bottom-width !default;
+
+/// Bottom border color for `<h2>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h2-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Top margin for `<h3>` elements.
+/// @type String | Map
 $h3-margin-top: $hx-margin-top !default;
 
 /// Bottom margin for `<h3>` elements.
-/// @type String
+/// @type String | Map
 $h3-margin-bottom: $hx-margin-bottom !default;
+
+/// Bottom padding for `<h3>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h3-padding-bottom: $hx-padding-bottom !default;
 
 /// Font Family for `<h3>` elements.
 /// @type String
 $h3-font-family: $font-3 !default;
 
 /// Font size for `<h3>` elements.
-/// @type String
+/// @type String | Map
 $h3-font-size: 1em !default;
 
 /// Font Style for `<h3>` elements.
@@ -131,7 +195,7 @@ $h3-font-style: normal !default;
 $h3-font-weight: bold !default;
 
 /// Line Height for `<h3>` elements.
-/// @type String
+/// @type String | Map
 $h3-line-height: $hx-line-height !default;
 
 /// Text Transform for `<h3>` elements.
@@ -142,20 +206,40 @@ $h3-text-transform: none !default;
 /// @type String
 $h3-align: center !default;
 
-/// Top margin for `<h4>` elements.
+/// Bottom border style for `<h3>` elements.
 /// @type String
+/// @since 1.0.0
+$h3-border-bottom-style: $hx-border-bottom-style !default;
+
+/// Bottom border width for `<h3>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h3-border-bottom-width: $hx-border-bottom-width !default;
+
+/// Bottom border color for `<h3>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h3-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Top margin for `<h4>` elements.
+/// @type String | Map
 $h4-margin-top: $hx-margin-top !default;
 
 /// Bottom Margin for `<h4>` elements.
-/// @type String
+/// @type String | Map
 $h4-margin-bottom: $hx-margin-bottom !default;
+
+/// Bottom padding for `<h4>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h4-padding-bottom: $hx-padding-bottom !default;
 
 /// Font Stack for `<h4>` elements.
 /// @type String
 $h4-font-family: $font-3 !default;
 
 /// Font size for `<h4>` elements.
-/// @type String
+/// @type String | Map
 $h4-font-size: 1em !default;
 
 /// Font Style for `<h4>` elements.
@@ -167,7 +251,7 @@ $h4-font-style: normal !default;
 $h4-font-weight: bold !default;
 
 /// Line Height for `<h4>` elements.
-/// @type String
+/// @type String | Map
 $h4-line-height: $hx-line-height !default;
 
 /// Text Transform for `<h4>` elements.
@@ -178,20 +262,40 @@ $h4-text-transform: none !default;
 /// @type String
 $h4-align: center !default;
 
-/// Top Margin for `<h5>` elements.
+/// Bottom border style for `<h4>` elements.
 /// @type String
+/// @since 1.0.0
+$h4-border-bottom-style: $hx-border-bottom-style !default;
+
+/// Bottom border width for `<h4>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h4-border-bottom-width: $hx-border-bottom-width !default;
+
+/// Bottom border color for `<h4>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h4-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Top Margin for `<h5>` elements.
+/// @type String | Map
 $h5-margin-top: $hx-margin-top !default;
 
 /// Bottom margin for `<h5>` elements.
-/// @type String
+/// @type String | Map
 $h5-margin-bottom: $hx-margin-bottom !default;
+
+/// Bottom padding for `<h5>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h5-padding-bottom: $hx-padding-bottom !default;
 
 /// Font Stack for `<h5>` elements.
 /// @type String
 $h5-font-family: $font-3 !default;
 
 /// Font size for `<h5>` elements.
-/// @type String
+/// @type String | Map
 $h5-font-size: 1em !default;
 
 /// Font Style for `<h5>` elements.
@@ -203,7 +307,7 @@ $h5-font-style: italic !default;
 $h5-font-weight: normal !default;
 
 /// Line height for `<h5>` elements.
-/// @type String
+/// @type String | Map
 $h5-line-height: $hx-line-height !default;
 
 /// Text transform for `<h5>` elements.
@@ -214,20 +318,40 @@ $h5-text-transform: none !default;
 /// @type String
 $h5-align: left !default;
 
-/// Top margin for `<h6>` elements.
+/// Bottom border style for `<h5>` elements.
 /// @type String
+/// @since 1.0.0
+$h5-border-bottom-style: $hx-border-bottom-style !default;
+
+/// Bottom border width for `<h5>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h5-border-bottom-width: $hx-border-bottom-width !default;
+
+/// Bottom border color for `<h5>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h5-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Top margin for `<h6>` elements.
+/// @type String | Map
 $h6-margin-top: $hx-margin-top !default;
 
 /// Bottom margin for `<h6>` elements.
-/// @type String
+/// @type String | Map
 $h6-margin-bottom: $hx-margin-bottom !default;
+
+/// Bottom padding for `<h6>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h6-padding-bottom: $hx-padding-bottom !default;
 
 /// Font stack for `<h6>` elements.
 /// @type String
 $h6-font-family: $font-3 !default;
 
 /// Font size for `<h6>` elements.
-/// @type String
+/// @type String | Map
 $h6-font-size: 1em !default;
 
 /// Font style for `<h6>` elements.
@@ -239,7 +363,7 @@ $h6-font-style: normal !default;
 $h6-font-weight: normal !default;
 
 /// Line height for `<h6>` elements.
-/// @type String
+/// @type String | Map
 $h6-line-height: $hx-line-height !default;
 
 /// Tex transform for `<h6>` elements.
@@ -249,6 +373,138 @@ $h6-text-transform: none !default;
 /// Alignment for `<h6>` elements.
 /// @type String
 $h6-align: left !default;
+
+/// Bottom border style for `<h6>` elements.
+/// @type String
+/// @since 1.0.0
+$h6-border-bottom-style: $hx-border-bottom-style !default;
+
+/// Bottom border width for `<h6>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h6-border-bottom-width: $hx-border-bottom-width !default;
+
+/// Bottom border color for `<h6>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$h6-border-bottom-color: $hx-border-bottom-color !default;
+
+$heading-border-bottom-style: (
+  1: $h1-border-bottom-style,
+  2: $h2-border-bottom-style,
+  3: $h3-border-bottom-style,
+  4: $h4-border-bottom-style,
+  5: $h5-border-bottom-style,
+  6: $h6-border-bottom-style
+);
+
+$heading-border-bottom-width: (
+  1: $h1-border-bottom-width,
+  2: $h2-border-bottom-width,
+  3: $h3-border-bottom-width,
+  4: $h4-border-bottom-width,
+  5: $h5-border-bottom-width,
+  6: $h6-border-bottom-width
+);
+
+$heading-border-bottom-color: (
+  1: $h1-border-bottom-color,
+  2: $h2-border-bottom-color,
+  3: $h3-border-bottom-color,
+  4: $h4-border-bottom-color,
+  5: $h5-border-bottom-color,
+  6: $h6-border-bottom-color
+);
+
+$heading-margin-top: (
+  1: $h1-margin-top,
+  2: $h2-margin-top,
+  3: $h3-margin-top,
+  4: $h4-margin-top,
+  5: $h5-margin-top,
+  6: $h6-margin-top
+);
+
+$heading-margin-bottom: (
+  1: $h1-margin-bottom,
+  2: $h2-margin-bottom,
+  3: $h3-margin-bottom,
+  4: $h4-margin-bottom,
+  5: $h5-margin-bottom,
+  6: $h6-margin-bottom
+);
+
+$heading-padding-bottom: (
+  1: $h1-padding-bottom,
+  2: $h2-padding-bottom,
+  3: $h3-padding-bottom,
+  4: $h4-padding-bottom,
+  5: $h5-padding-bottom,
+  6: $h6-padding-bottom
+);
+
+$heading-font-family: (
+  1: $h1-font-family,
+  2: $h2-font-family,
+  3: $h3-font-family,
+  4: $h4-font-family,
+  5: $h5-font-family,
+  6: $h6-font-family
+);
+
+$heading-font-size: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+
+$heading-font-style: (
+  1: $h1-font-style,
+  2: $h2-font-style,
+  3: $h3-font-style,
+  4: $h4-font-style,
+  5: $h5-font-style,
+  6: $h6-font-style
+);
+
+$heading-font-weight: (
+  1: $h1-font-weight,
+  2: $h2-font-weight,
+  3: $h3-font-weight,
+  4: $h4-font-weight,
+  5: $h5-font-weight,
+  6: $h6-font-weight
+);
+
+$heading-line-height: (
+  1: $h1-line-height,
+  2: $h2-line-height,
+  3: $h3-line-height,
+  4: $h4-line-height,
+  5: $h5-line-height,
+  6: $h6-line-height
+);
+
+$heading-align: (
+  1: $h1-align,
+  2: $h2-align,
+  3: $h3-align,
+  4: $h4-align,
+  5: $h5-align,
+  6: $h6-align
+);
+
+$heading-text-transform: (
+  1: $h1-text-transform,
+  2: $h2-text-transform,
+  3: $h3-text-transform,
+  4: $h4-text-transform,
+  5: $h5-text-transform,
+  6: $h6-text-transform
+);
 
 /// Bottom margin for `<p>` elements.
 /// @type String
