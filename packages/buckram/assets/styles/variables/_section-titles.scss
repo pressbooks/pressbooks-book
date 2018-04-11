@@ -387,6 +387,15 @@ $part-number-align: center !default;
 /// @type String
 $part-number-text-transform: none !default;
 
+/// Defines part number line height.
+/// @since 1.0.0
+/// @type String | Map
+$part-number-line-height: (
+  epub: 1,
+  prince: 1,
+  web: 1
+ ) !default;
+
 /// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
 /// @type String
 /// @since 0.3.0

@@ -6,12 +6,57 @@
 
 @if $type == 'web' {
   section.front-matter,
+  section.back-matter,
   section.part,
-  section.chapter,
-  section.back-matter {
+  section.chapter {
     header {
       margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+    }
+  }
 
+  section.part {
+    header {
+      h1 {
+        display: $part-title-display;
+        margin-top: if-map-get($part-title-margin-top, $type);
+        margin-bottom: 0;
+        font-family: $part-title-font-family;
+        font-size: if-map-get($part-title-font-size, $type);
+        font-style: $part-title-font-style;
+        font-weight: $part-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($part-title-line-height, $type);
+        text-align: $part-title-align;
+        text-transform: $part-title-text-transform;
+
+        span {
+          display: $part-number-display;
+          margin-top: if-map-get($part-number-margin-top, $type);
+          margin-bottom: if-map-get($part-number-margin-bottom, $type);
+          font-family: $part-number-font-family;
+          font-size: if-map-get($part-number-font-size, $type);
+          font-style: $part-number-font-style;
+          font-weight: $part-number-font-weight;
+          line-height: if-map-get($part-number-line-height, $type);
+          text-align: $part-number-align;
+          text-transform: $part-number-text-transform;
+
+          &:before {
+            content: $chapter-number-before-content;
+          }
+
+          &::after {
+            content: $chapter-number-after-content;
+          }
+        }
+      }
+    }
+  }
+
+  section.front-matter,
+  section.back-matter,
+  section.chapter {
+    header {
       h1 {
         display: $section-title-display;
         margin-top: if-map-get($section-title-margin-top, $type);
