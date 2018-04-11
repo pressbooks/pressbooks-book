@@ -11,7 +11,7 @@
     margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
     .part-number {
-      border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) $part-number-border-bottom-color;
+      border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) if-map-get($part-number-border-bottom-color, $type);
       display: $part-number-display;
       margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
       padding-bottom: if-map-get($part-number-padding-bottom, $type);

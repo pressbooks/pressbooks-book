@@ -87,7 +87,7 @@
   }
 
   &.shaded {
-    background-color: $textbox-shaded-background-color;
+    background-color: if-map-get($textbox-shaded-background-color, $type);
   }
 
   &.learning-objectives {

@@ -79,6 +79,24 @@ $section-title-margin-bottom: (
   web: 2em
 ) !default;
 
+/// Defines left margin for the section title.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines right margin for the section title.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 /// Defines spacing between section title and section subtitle, when present.
 /// @type String | Map
 /// @since 0.3.0
@@ -393,9 +411,9 @@ $part-number-border-bottom-width: (
 $part-number-border-bottom-style: none !default;
 
 /// Defines the bottom border colour for the part number.
-/// @type String
+/// @type String | Map
 /// @since 1.0.0
-$part-number-border-bottom-color: initial !default;
+$part-number-border-bottom-color: $color-3 !default;
 
 /// Defines part number font family.
 /// @type String
@@ -577,6 +595,16 @@ $front-matter-title-margin-top: $section-title-margin-top !default;
 /// @since 0.3.0
 $front-matter-title-margin-bottom: $section-title-margin-bottom !default;
 
+/// Defines the front matter title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the front matter title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-margin-left: $section-title-margin-left !default;
+
 /// Defines the front matter title font family.
 /// @type String
 $front-matter-title-font-family: $section-title-font-family !default;
@@ -621,6 +649,16 @@ $toc-title-margin-top: $section-header-margin-top !default;
 /// @type String | Map
 /// @since 0.3.0
 $toc-title-margin-bottom: $section-header-margin-bottom !default;
+
+/// Defines the table of contents title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the table of contents title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-margin-left: $section-title-margin-left !default;
 
 /// Defines the table of contents title font family.
 /// @type String
@@ -671,6 +709,52 @@ $chapter-number-margin-bottom: (
   web: 1em
 ) !default;
 
+/// Defines the chapter number right margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the chapter number left margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the chapter number bottom padding.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-padding-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom border width for the chapter number.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-border-bottom-width: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom border style for the chapter number.
+/// @type String
+/// @since 1.0.0
+$chapter-number-border-bottom-style: none !default;
+
+/// Defines the bottom border colour for the chapter number.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-border-bottom-color: $color-3 !default;
+
 /// Defines the chapter number font family.
 /// @type String
 $chapter-number-font-family: $font-3 !default;
@@ -709,8 +793,13 @@ $chapter-number-text-transform: none !default;
 
 /// Defines the content that precedes the chapter number. Defaults to an empty string.
 /// @type String
-/// @since 0.8.0
+/// @since 1.0.0
 $chapter-number-before-content: '' !default;
+
+/// Defines the chapter number before content text transform.
+/// @type String
+/// @since 1.0.0
+$chapter-number-before-content-text-transform: none !default;
 
 /// Defines the content that follows the chapter number. Defaults to a period and a non-breaking space.
 /// @type String
@@ -745,6 +834,16 @@ $chapter-title-margin-top: $section-title-margin-top !default;
 /// Defines the chapter title bottom margin.
 /// @type String | Map
 $chapter-title-margin-bottom: $section-title-margin-bottom !default;
+
+/// Defines the chapter title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the chapter title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-margin-left: $section-title-margin-left !default;
 
 /// Defines the chapter title font family.
 /// @type String
@@ -799,15 +898,25 @@ $chapter-title-word-spacing: (
 /// @since 0.3.0
 $back-matter-title-display: $section-title-display !default;
 
-/// Defines the front matter title top margin.
+/// Defines the back matter title top margin.
 /// @type String | Map
 /// @since 0.3.0
 $back-matter-title-margin-top: $section-title-margin-top !default;
 
-/// Defines the front matter title bottom margin.
+/// Defines the back matter title bottom margin.
 /// @type String | Map
 /// @since 0.3.0
 $back-matter-title-margin-bottom: $section-title-margin-bottom !default;
+
+/// Defines the back matter title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the back matter title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-margin-left: $section-title-margin-left !default;
 
 /// Defines the back matter title font family.
 /// @type String

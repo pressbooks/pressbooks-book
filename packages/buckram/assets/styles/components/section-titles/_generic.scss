@@ -29,7 +29,7 @@
         text-transform: $part-title-text-transform;
 
         span {
-          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) $part-number-border-bottom-color;
+          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) if-map-get($part-number-border-bottom-color, $type);
           display: $part-number-display;
           margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
           padding-bottom: if-map-get($part-number-padding-bottom, $type);
@@ -58,47 +58,6 @@
   section.back-matter,
   section.chapter {
     header {
-      h1 {
-        display: $section-title-display;
-        margin-top: if-map-get($section-title-margin-top, $type);
-        margin-bottom: 0;
-        font-family: $section-title-font-family;
-        font-size: if-map-get($section-title-font-size, $type);
-        font-style: $section-title-font-style;
-        font-weight: $section-title-font-weight;
-        hyphens: none;
-        line-height: if-map-get($section-title-line-height, $type);
-        text-align: $section-title-align;
-        text-transform: $section-title-text-transform;
-
-        span {
-          display: $chapter-number-display;
-          margin-top: if-map-get($chapter-number-margin-top, $type);
-          margin-bottom: if-map-get($chapter-number-margin-bottom, $type);
-          font-family: $chapter-number-font-family;
-          font-size: if-map-get($chapter-number-font-size, $type);
-          font-style: $chapter-number-font-style;
-          font-weight: $chapter-number-font-weight;
-          line-height: if-map-get($chapter-number-line-height, $type);
-          text-align: $chapter-number-align;
-          text-transform: $chapter-number-text-transform;
-
-          &:before {
-            content: $chapter-number-before-content;
-          }
-
-          &::after {
-            content: $chapter-number-after-content;
-          }
-        }
-      }
-
-      .numberless & {
-        h1 span {
-          content: '';
-        }
-      }
-
       [data-type='subtitle'] {
         display: block;
         margin-bottom: 0;
@@ -142,6 +101,85 @@
 
       [data-type='subtitle']:last-child {
         margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+      }
+    }
+  }
+
+  section.chapter {
+    header {
+      h1 {
+        display: $chapter-title-display;
+        margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
+        font-family: $chapter-title-font-family;
+        font-size: if-map-get($chapter-title-font-size, $type);
+        font-style: $chapter-title-font-style;
+        font-weight: $chapter-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($chapter-title-line-height, $type);
+        text-align: $chapter-title-align;
+        text-transform: $chapter-title-text-transform;
+
+        span {
+          border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
+          display: $chapter-number-display;
+          margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
+          padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
+          font-family: $chapter-number-font-family;
+          font-size: if-map-get($chapter-number-font-size, $type);
+          font-style: $chapter-number-font-style;
+          font-weight: $chapter-number-font-weight;
+          line-height: if-map-get($chapter-number-line-height, $type);
+          text-align: $chapter-number-align;
+          text-transform: $chapter-number-text-transform;
+
+          &:before {
+            content: $chapter-number-before-content;
+            text-transform: $chapter-number-before-content-text-transform;
+          }
+
+          &::after {
+            content: $chapter-number-after-content;
+          }
+        }
+      }
+      .numberless & {
+        h1 span {
+          content: '';
+        }
+      }
+    }
+  }
+
+  section.front-matter {
+    header {
+      h1 {
+        display: $front-matter-title-display;
+        margin: if-map-get($front-matter-title-margin-top, $type) if-map-get($front-matter-title-margin-right, $type) 0 if-map-get($front-matter-title-margin-left, $type);
+        font-family: $front-matter-title-font-family;
+        font-size: if-map-get($front-matter-title-font-size, $type);
+        font-style: $front-matter-title-font-style;
+        font-weight: $front-matter-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($front-matter-title-line-height, $type);
+        text-align: $front-matter-title-align;
+        text-transform: $front-matter-title-text-transform;
+      }
+    }
+  }
+
+  section.back-matter {
+    header {
+      h1 {
+        display: $back-matter-title-display;
+        margin: if-map-get($back-matter-title-margin-top, $type) if-map-get($back-matter-title-margin-right, $type) 0 if-map-get($back-matter-title-margin-left, $type);
+        font-family: $back-matter-title-font-family;
+        font-size: if-map-get($back-matter-title-font-size, $type);
+        font-style: $back-matter-title-font-style;
+        font-weight: $back-matter-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($back-matter-title-line-height, $type);
+        text-align: $back-matter-title-align;
+        text-transform: $back-matter-title-text-transform;
       }
     }
   }

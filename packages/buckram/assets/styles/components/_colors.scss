@@ -174,7 +174,6 @@ h1.part-title {
 .chapter-number,
 .entry-title span {
   color: if-map-get($chapter-number-color, $type);
-  border-bottom-color: if-map-get($chapter-number-border-bottom-color, $type);
 }
 
 h2.chapter-title {

@@ -10,8 +10,7 @@
 
     h2.chapter-title {
       display: $chapter-title-display;
-      margin-top: if-map-get($chapter-title-margin-top, $type);
-      margin-bottom: 0;
+      margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
       font-family: $chapter-title-font-family;
       font-size: if-map-get($section-title-font-size, $type);
       font-style: $chapter-title-font-style;
@@ -26,9 +25,10 @@
     }
 
     .chapter-number {
+      border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
       display: $chapter-number-display;
-      margin-top: if-map-get($chapter-number-margin-top, $type);
-      margin-bottom: if-map-get($chapter-number-margin-bottom, $type);
+      margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
+      padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
       font-family: $chapter-number-font-family;
       font-size: if-map-get($chapter-number-font-size, $type);
       font-style: $chapter-number-font-style;
@@ -41,6 +41,7 @@
 
       &:before {
         content: $chapter-number-before-content;
+        text-transform: $chapter-number-before-content-text-transform;
       }
 
       &::after {

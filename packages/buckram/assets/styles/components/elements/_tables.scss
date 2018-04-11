@@ -50,7 +50,7 @@
     }
 
     &.shaded {
-      background-color: $shade-color-1;
+      background-color: if-map-get($shade-color-1, $type);
     }
 
     &.border {
