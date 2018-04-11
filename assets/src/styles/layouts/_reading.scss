@@ -50,6 +50,14 @@ h1.reading-header__title {
 .part,
 .chapter,
 .back-matter {
+  div[hidden] + h1[data-collapsed="true"]:not(:first-of-type) {
+     margin-top: 0;
+  }
+
+  h1[data-collapsed="true"] {
+    margin-bottom: 0;
+  }
+
   .post-password-form {
     margin-top: 1rem;
 
@@ -413,8 +421,20 @@ h1.reading-header__title {
   width: 100%;
   padding: 0.5em 0;
 
-  &:focus svg {
-    outline: 2px solid;
+  &:hover,
+  &:active {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+  }
+
+  &:focus {
+    background: transparent;
+    color: inherit;
+    svg {
+      outline: 2px solid;
+    }
   }
 
   svg {

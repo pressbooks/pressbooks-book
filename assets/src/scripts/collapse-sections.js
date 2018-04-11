@@ -19,8 +19,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			<rect class="vert" height="8" width="2" y="1" x="4"/>
 			<rect height="2" width="8" y="4" x="1"/>
 		  </svg>
-		</button>
-	  `;
+		</button>`;
+		heading.setAttribute( 'data-collapsed', 'true' );
 
 		// Function to create a node list
 		// of the content between this <h2> and the next
@@ -67,6 +67,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 			// Switch the state
 			btn.setAttribute( 'aria-expanded', ! expanded );
+			heading.setAttribute( 'data-collapsed', expanded );
 			// Switch the content's visibility
 			wrapper.hidden = expanded;
 		};
