@@ -17,6 +17,7 @@
       font-style: $chapter-title-font-style;
       font-weight: $chapter-title-font-weight;
       hyphens: none;
+      line-height: if-map-get($chapter-title-line-height, $type);
       text-align: $chapter-title-align;
       text-transform: $chapter-title-text-transform;
       letter-spacing: if-map-get($chapter-title-letter-spacing, $type);

@@ -13,16 +13,17 @@
       margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
       h1 {
-        display: $chapter-title-display;
-        margin-top: if-map-get($chapter-title-margin-top, $type);
+        display: $section-title-display;
+        margin-top: if-map-get($section-title-margin-top, $type);
         margin-bottom: 0;
-        font-family: $chapter-title-font-family;
+        font-family: $section-title-font-family;
         font-size: if-map-get($section-title-font-size, $type);
-        font-style: $chapter-title-font-style;
-        font-weight: $chapter-title-font-weight;
+        font-style: $section-title-font-style;
+        font-weight: $section-title-font-weight;
         hyphens: none;
-        text-align: $chapter-title-align;
-        text-transform: $chapter-title-text-transform;
+        line-height: if-map-get($section-title-line-height, $type);
+        text-align: $section-title-align;
+        text-transform: $section-title-text-transform;
 
         span {
           display: $chapter-number-display;

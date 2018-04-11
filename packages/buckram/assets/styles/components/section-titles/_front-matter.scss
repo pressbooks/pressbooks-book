@@ -21,6 +21,7 @@
       font-style: $front-matter-title-font-style;
       font-weight: $front-matter-title-font-weight;
       hyphens: none;
+      line-height: if-map-get($front-matter-title-line-height, $type);
       text-align: $front-matter-title-align;
       text-transform: $front-matter-title-text-transform;
     }
@@ -80,6 +81,7 @@
     font-style: $toc-title-font-style;
     font-weight: $toc-title-font-weight;
     hyphens: none;
+    line-height: $toc-title-line-height;
     text-align: $toc-title-align;
     text-transform: $toc-title-text-transform;
   }

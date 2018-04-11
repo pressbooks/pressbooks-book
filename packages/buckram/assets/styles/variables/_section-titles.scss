@@ -117,6 +117,11 @@ $section-title-align: center !default;
 /// @type String
 $section-title-text-transform: none !default;
 
+/// Defines the section title line height.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-line-height: $h1-line-height !default;
+
 /// Defines spacing between section subtitle and the bottom of the section header when the section does not have an author.
 /// @type String | Map
 $section-subtitle-margin-bottom: (
@@ -456,6 +461,11 @@ $part-title-align: center !default;
 /// @type String
 $part-title-text-transform: uppercase !default;
 
+/// Defines the part title line height.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-line-height: $h1-line-height !default;
+
 /// Defines letter spacing property on part titles
 /// @type String | Map
 /// @since 1.0.0
@@ -514,6 +524,11 @@ $front-matter-title-align: $section-title-align !default;
 /// @type String
 $front-matter-title-text-transform: $section-title-text-transform !default;
 
+/// Defines the front matter title line height.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-line-height: $section-title-line-height !default;
+
 /// Defines the table of contents title display property.
 /// @type String
 /// @since 0.3.0
@@ -552,6 +567,11 @@ $toc-title-align: $section-title-align !default;
 /// Defines the table of contents title text transform.
 /// @type String
 $toc-title-text-transform: $section-title-text-transform !default;
+
+/// Defines the table of contents title line height.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-line-height: $section-title-line-height !default;
 
 /// Defines the chapter number display property.
 /// @type String
@@ -673,6 +693,11 @@ $chapter-title-align: $section-title-align !default;
 /// @type String
 $chapter-title-text-transform: $section-title-text-transform !default;
 
+/// Defines the chapter title line height.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-line-height: $section-title-line-height !default;
+
 /// Defines letter spacing property on chapter titles
 /// @type String | Map
 /// @since 1.0.0
@@ -730,3 +755,8 @@ $back-matter-title-align: $section-title-align !default;
 /// Defines the back matter title text transform.
 /// @type String
 $back-matter-title-text-transform: $section-title-text-transform !default;
+
+/// Defines the back matter title line height.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-line-height: $section-title-line-height !default;

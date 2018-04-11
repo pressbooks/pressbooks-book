@@ -38,6 +38,7 @@
       font-style: $part-title-font-style;
       font-weight: $part-title-font-weight;
       hyphens: none;
+      line-height: if-map-get($part-title-line-height, $type);
       text-align: $part-title-align;
       text-transform: $part-title-text-transform;
       page-break-after: avoid;
