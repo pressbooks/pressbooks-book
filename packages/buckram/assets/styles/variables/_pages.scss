@@ -57,11 +57,28 @@ $title-half-title-text-transform: none !default;
 
 /// Top margin for title page title for elements `<h1>` with a class of `title`.
 /// @type String | Map
+/// @since 1.0.0 Use $title-title-margin-top
+/// @deprecated
 $title-title-block-margin-top: (
   epub: 2em,
   prince: 3cm,
   web: 3em
 ) !default;
+
+/// Top margin for title page title for elements `<h1>` with a class of `title`.
+/// @type String | Map
+/// @since 1.0.0
+$title-title-margin-top: $title-title-block-margin-top !default;
+
+/// Right margin for title page title for elements `<h1>` with a class of `title`.
+/// @type String | Map
+/// @since 1.0.0
+$title-title-margin-right: 0 !default;
+
+/// Left margin for title page title for elements `<h1>` with a class of `title`.
+/// @type String | Map
+/// @since 1.0.0
+$title-title-margin-left: 0 !default;
 
 /// Top margin for title page title on elements `<h1>` with a class of `title`.
 /// @type String
@@ -105,6 +122,14 @@ $title-title-text-transform: none !default;
 /// @type String
 $title-subtitle-margin-top: 0 !default;
 
+/// Right margin for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
+$title-subtitle-margin-right: 0 !default;
+
+/// Left margin for title page subtitle on elements `<h2>` with a class of `subtitle`.
+/// @type String
+$title-subtitle-margin-left: 0 !default;
+
 /// Font stack for title page subtitle on elements `<h2>` with a class of `subtitle`.
 /// @type String
 $title-subtitle-font-family: $font-3 !default;
@@ -145,11 +170,21 @@ $title-subtitle-text-transform: none !default;
 
 /// Top margin for title page author on elements `<h3>` with a class of `author`.
 /// @type String | Map
-$title-author-margin-top:(
+$title-author-margin-top: (
   epub: 2em,
   prince: 2cm,
   web: 2em
 ) !default;
+
+/// Right margin for title page author on elements `<h3>` with a class of `author`.
+/// @type String | Map
+/// @since 1.0.0
+$title-author-margin-right: 0 !default;
+
+/// Left margin for title page author on elements `<h3>` with a class of `author`.
+/// @type String | Map
+/// @since 1.0.0
+$title-author-margin-left: 0 !default;
 
 /// Font stack for title page author on elements `<h3>` with a class of `author`.
 /// @type String
