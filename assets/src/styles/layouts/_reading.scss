@@ -50,7 +50,7 @@ h1.reading-header__title {
 .part,
 .chapter,
 .back-matter {
-  div[hidden] + h1[data-collapsed="true"]:not(:first-of-type) {
+  div[hidden] + h1:not(:first-of-type) {
      margin-top: 0;
   }
 
