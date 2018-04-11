@@ -493,6 +493,24 @@ $part-title-margin-bottom: (
   web: 0
 ) !default;
 
+/// Defines the part title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the part title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 /// Defines the part title font family.
 /// @type String
 $part-title-font-family: $font-2 !default;

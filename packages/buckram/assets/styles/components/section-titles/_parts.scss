@@ -36,8 +36,7 @@
     }
 
     .part-title {
-      margin-top: if-map-get($part-title-margin-top, $type);
-      margin-bottom: if-map-get($part-title-margin-bottom, $type);
+      margin: if-map-get($part-title-margin-top, $type) if-map-get($part-title-margin-right, $type) if-map-get($part-title-margin-bottom, $type) if-map-get($part-title-margin-left, $type);
       font-family: $part-title-font-family;
       font-size: if-map-get($part-title-font-size, $type);
       font-style: $part-title-font-style;
