@@ -30,9 +30,10 @@
         text-transform: $part-title-text-transform;
 
         span {
+          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) $part-number-border-bottom-color;
           display: $part-number-display;
-          margin-top: if-map-get($part-number-margin-top, $type);
-          margin-bottom: if-map-get($part-number-margin-bottom, $type);
+          margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
+          padding-bottom: if-map-get($part-number-padding-bottom, $type);
           font-family: $part-number-font-family;
           font-size: if-map-get($part-number-font-size, $type);
           font-style: $part-number-font-style;
@@ -42,11 +43,12 @@
           text-transform: $part-number-text-transform;
 
           &:before {
-            content: $chapter-number-before-content;
+            content: $part-number-before-content;
+            text-transform: $part-number-before-content-text-transform;
           }
 
           &::after {
-            content: $chapter-number-after-content;
+            content: $part-number-after-content;
           }
         }
       }

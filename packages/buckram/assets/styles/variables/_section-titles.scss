@@ -343,6 +343,15 @@ $part-number-margin-top: (
   web: 0
 ) !default;
 
+/// Defines the right margin for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 /// Defines the bottom margin for the part number.
 /// @type String | Map
 $part-number-margin-bottom: (
@@ -350,6 +359,43 @@ $part-number-margin-bottom: (
   prince: 0.5cm,
   web: 1em
 ) !default;
+
+/// Defines the left margin for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom padding for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-padding-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom border width for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-border-bottom-width: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom border style for the part number.
+/// @type String
+/// @since 1.0.0
+$part-number-border-bottom-style: none !default;
+
+/// Defines the bottom border colour for the part number.
+/// @type String
+/// @since 1.0.0
+$part-number-border-bottom-color: initial !default;
 
 /// Defines part number font family.
 /// @type String
@@ -399,25 +445,30 @@ $part-number-line-height: (
 /// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
 /// @type String
 /// @since 0.3.0
-/// @since 0.8.0 Use $part-number-before-content instead.
+/// @since 1.0.0 Use $part-number-before-content instead.
 /// @deprecated
 $part-number-prefix-content: $part + '\00A0' !default;
 
 /// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
 /// @type String
-/// @since 0.8.0
+/// @since 1.0.0
 $part-number-before-content: $part-number-prefix-content !default;
 
 /// Defines the content that appears before the part number's text transform.
 /// @type String
-/// @since 0.8.0 Use $part-number-before-content-text-transform instead.
+/// @since 1.0.0 Use $part-number-before-content-text-transform instead.
 /// @deprecated
 $part-number-prefix-text-transform: uppercase !default;
 
 /// Defines the content that appears before the part number's text transform.
 /// @type String
-/// @since 0.8.0
+/// @since 1.0.0
 $part-number-before-content-text-transform: $part-number-prefix-text-transform !default;
+
+/// Content that appears after the part number. Defaults to an empty string.
+/// @type String
+/// @since 1.0.0
+$part-number-after-content: '' !default;
 
 /// Defines the part title display property.
 /// @type String
