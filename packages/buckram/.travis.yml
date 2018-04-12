@@ -1,8 +1,4 @@
-language: node_js
-node_js:
-  - "8"
-cache: yarn
-script: yarn run test
+language: php
 notifications:
   email:
     on_success: never
@@ -12,3 +8,24 @@ notifications:
 branches:
   only:
   - dev
+php:
+- 7.1
+env:
+- TRAVIS_NODE_VERSION="8"
+matrix:
+  fast_finish: true
+cache:
+  apt: true
+  directories:
+  - "$HOME/.composer/cache"
+  - node_modules
+  - vendor
+before_install:
+- source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
+install:
+- node -v
+- npm install -g yarn
+- yarn
+- composer install
+script:
+- yarn run test

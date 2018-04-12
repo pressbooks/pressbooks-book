@@ -1,0 +1,8 @@
+{
+	"name": "pressbooks/buckram",
+	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
+	"license": "GPL-3.0-or-later",
+	"require-dev": {
+		"leafo/scssphp": "^0.7.5"
+	}
+}

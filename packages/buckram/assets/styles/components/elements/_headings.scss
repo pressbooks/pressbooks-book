@@ -8,19 +8,19 @@
 
 @import '../utilities';
 
-@mixin heading($level) {
-  h#{$level} {
-    border-bottom: map-get($heading-border-bottom-style, $level) if-map-get(map-get($heading-border-bottom-width, $level), $type) if-map-get(map-get($heading-border-bottom-color, $level), $type);
-    margin-top: if-map-get(map-get($heading-margin-top, $level), $type);
-    margin-bottom: if-map-get(map-get($heading-margin-bottom, $level), $type);
-    padding-bottom: if-map-get(map-get($heading-padding-bottom, $level), $type);
-    font-family: if-map-get(map-get($heading-font-family, $level), $type);
-    font-size: if-map-get(map-get($heading-font-size, $level), $type);
-    font-style: map-get($heading-font-style, $level);
-    font-weight: map-get($heading-font-weight, $level);
-    line-height: if-map-get(map-get($heading-line-height, $level), $type);
-    text-align: map-get($heading-align, $level);
-    text-transform: map-get($heading-text-transform, $level);
+@mixin heading($heading) {
+  #{$heading} {
+    border-bottom: map-get($heading-border-bottom-style, $heading) if-map-get(map-get($heading-border-bottom-width, $heading), $type) if-map-get(map-get($heading-border-bottom-color, $heading), $type);
+    margin-top: if-map-get(map-get($heading-margin-top, $heading), $type);
+    margin-bottom: if-map-get(map-get($heading-margin-bottom, $heading), $type);
+    padding-bottom: if-map-get(map-get($heading-padding-bottom, $heading), $type);
+    font-family: if-map-get(map-get($heading-font-family, $heading), $type);
+    font-size: if-map-get(map-get($heading-font-size, $heading), $type);
+    font-style: map-get($heading-font-style, $heading);
+    font-weight: map-get($heading-font-weight, $heading);
+    line-height: if-map-get(map-get($heading-line-height, $heading), $type);
+    text-align: map-get($heading-align, $heading);
+    text-transform: map-get($heading-text-transform, $heading);
   }
 }
 
@@ -35,9 +35,12 @@
     page-break-after: avoid;
   }
 
-  @for $i from 1 through 6 {
-    @include heading($i);
-  }
+  @include heading(h1);
+  @include heading(h2);
+  @include heading(h3);
+  @include heading(h4);
+  @include heading(h5);
+  @include heading(h6);
 }
 
 // This means that your PDF TOC won't list your subheadings, but in case of
@@ -126,8 +129,11 @@
       hyphens: none;
     }
 
-    @for $i from 1 through 6 {
-      @include heading($i);
-    }
+    @include heading(h1);
+    @include heading(h2);
+    @include heading(h3);
+    @include heading(h4);
+    @include heading(h5);
+    @include heading(h6);
   }
 }

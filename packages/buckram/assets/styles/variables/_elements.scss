@@ -390,120 +390,120 @@ $h6-border-bottom-width: $hx-border-bottom-width !default;
 $h6-border-bottom-color: $hx-border-bottom-color !default;
 
 $heading-border-bottom-style: (
-  1: $h1-border-bottom-style,
-  2: $h2-border-bottom-style,
-  3: $h3-border-bottom-style,
-  4: $h4-border-bottom-style,
-  5: $h5-border-bottom-style,
-  6: $h6-border-bottom-style
+  h1: $h1-border-bottom-style,
+  h2: $h2-border-bottom-style,
+  h3: $h3-border-bottom-style,
+  h4: $h4-border-bottom-style,
+  h5: $h5-border-bottom-style,
+  h6: $h6-border-bottom-style
 );
 
 $heading-border-bottom-width: (
-  1: $h1-border-bottom-width,
-  2: $h2-border-bottom-width,
-  3: $h3-border-bottom-width,
-  4: $h4-border-bottom-width,
-  5: $h5-border-bottom-width,
-  6: $h6-border-bottom-width
+  h1: $h1-border-bottom-width,
+  h2: $h2-border-bottom-width,
+  h3: $h3-border-bottom-width,
+  h4: $h4-border-bottom-width,
+  h5: $h5-border-bottom-width,
+  h6: $h6-border-bottom-width
 );
 
 $heading-border-bottom-color: (
-  1: $h1-border-bottom-color,
-  2: $h2-border-bottom-color,
-  3: $h3-border-bottom-color,
-  4: $h4-border-bottom-color,
-  5: $h5-border-bottom-color,
-  6: $h6-border-bottom-color
+  h1: $h1-border-bottom-color,
+  h2: $h2-border-bottom-color,
+  h3: $h3-border-bottom-color,
+  h4: $h4-border-bottom-color,
+  h5: $h5-border-bottom-color,
+  h6: $h6-border-bottom-color
 );
 
 $heading-margin-top: (
-  1: $h1-margin-top,
-  2: $h2-margin-top,
-  3: $h3-margin-top,
-  4: $h4-margin-top,
-  5: $h5-margin-top,
-  6: $h6-margin-top
+  h1: $h1-margin-top,
+  h2: $h2-margin-top,
+  h3: $h3-margin-top,
+  h4: $h4-margin-top,
+  h5: $h5-margin-top,
+  h6: $h6-margin-top
 );
 
 $heading-margin-bottom: (
-  1: $h1-margin-bottom,
-  2: $h2-margin-bottom,
-  3: $h3-margin-bottom,
-  4: $h4-margin-bottom,
-  5: $h5-margin-bottom,
-  6: $h6-margin-bottom
+  h1: $h1-margin-bottom,
+  h2: $h2-margin-bottom,
+  h3: $h3-margin-bottom,
+  h4: $h4-margin-bottom,
+  h5: $h5-margin-bottom,
+  h6: $h6-margin-bottom
 );
 
 $heading-padding-bottom: (
-  1: $h1-padding-bottom,
-  2: $h2-padding-bottom,
-  3: $h3-padding-bottom,
-  4: $h4-padding-bottom,
-  5: $h5-padding-bottom,
-  6: $h6-padding-bottom
+  h1: $h1-padding-bottom,
+  h2: $h2-padding-bottom,
+  h3: $h3-padding-bottom,
+  h4: $h4-padding-bottom,
+  h5: $h5-padding-bottom,
+  h6: $h6-padding-bottom
 );
 
 $heading-font-family: (
-  1: $h1-font-family,
-  2: $h2-font-family,
-  3: $h3-font-family,
-  4: $h4-font-family,
-  5: $h5-font-family,
-  6: $h6-font-family
+  h1: $h1-font-family,
+  h2: $h2-font-family,
+  h3: $h3-font-family,
+  h4: $h4-font-family,
+  h5: $h5-font-family,
+  h6: $h6-font-family
 );
 
 $heading-font-size: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  h1: $h1-font-size,
+  h2: $h2-font-size,
+  h3: $h3-font-size,
+  h4: $h4-font-size,
+  h5: $h5-font-size,
+  h6: $h6-font-size
 );
 
 $heading-font-style: (
-  1: $h1-font-style,
-  2: $h2-font-style,
-  3: $h3-font-style,
-  4: $h4-font-style,
-  5: $h5-font-style,
-  6: $h6-font-style
+  h1: $h1-font-style,
+  h2: $h2-font-style,
+  h3: $h3-font-style,
+  h4: $h4-font-style,
+  h5: $h5-font-style,
+  h6: $h6-font-style
 );
 
 $heading-font-weight: (
-  1: $h1-font-weight,
-  2: $h2-font-weight,
-  3: $h3-font-weight,
-  4: $h4-font-weight,
-  5: $h5-font-weight,
-  6: $h6-font-weight
+  h1: $h1-font-weight,
+  h2: $h2-font-weight,
+  h3: $h3-font-weight,
+  h4: $h4-font-weight,
+  h5: $h5-font-weight,
+  h6: $h6-font-weight
 );
 
 $heading-line-height: (
-  1: $h1-line-height,
-  2: $h2-line-height,
-  3: $h3-line-height,
-  4: $h4-line-height,
-  5: $h5-line-height,
-  6: $h6-line-height
+  h1: $h1-line-height,
+  h2: $h2-line-height,
+  h3: $h3-line-height,
+  h4: $h4-line-height,
+  h5: $h5-line-height,
+  h6: $h6-line-height
 );
 
 $heading-align: (
-  1: $h1-align,
-  2: $h2-align,
-  3: $h3-align,
-  4: $h4-align,
-  5: $h5-align,
-  6: $h6-align
+  h1: $h1-align,
+  h2: $h2-align,
+  h3: $h3-align,
+  h4: $h4-align,
+  h5: $h5-align,
+  h6: $h6-align
 );
 
 $heading-text-transform: (
-  1: $h1-text-transform,
-  2: $h2-text-transform,
-  3: $h3-text-transform,
-  4: $h4-text-transform,
-  5: $h5-text-transform,
-  6: $h6-text-transform
+  h1: $h1-text-transform,
+  h2: $h2-text-transform,
+  h3: $h3-text-transform,
+  h4: $h4-text-transform,
+  h5: $h5-text-transform,
+  h6: $h6-text-transform
 );
 
 /// Bottom margin for `<p>` elements.

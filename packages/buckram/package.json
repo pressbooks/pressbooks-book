@@ -3,9 +3,11 @@
 	"version": "1.0.0-dev",
 	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
 	"scripts": {
-		"test": "npm run lint && npm run build",
+		"test": "npm run lint && npm run build && npm run build:php",
 		"build":
 			"cross-env webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"build:php":
+			"vendor/bin/pscss tests/epub.scss >> tests/output/php/epub.css && vendor/bin/pscss tests/prince.scss >> tests/output/php/prince.css && vendor/bin/pscss tests/web.scss >> tests/output/php/web.css",
 		"lint": "npm run lint:scripts && npm run lint:styles",
 		"lint:scripts": "node_modules/eslint/bin/eslint.js 'assets/scripts/*.js'",
 		"lint:styles":

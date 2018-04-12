@@ -12,10 +12,10 @@ let mix = require( 'laravel-mix' );
 
 mix
 	.disableNotifications()
-	.setPublicPath( 'tests/output' )
-	.fastSass( 'tests/epub.scss', 'tests/output' )
-	.fastSass( 'tests/prince.scss', 'tests/output' )
-	.fastSass( 'tests/web.scss', 'tests/output' );
+	.setPublicPath( 'tests/output/node' )
+	.fastSass( 'tests/epub.scss', 'tests/output/node' )
+	.fastSass( 'tests/prince.scss', 'tests/output/node' )
+	.fastSass( 'tests/web.scss', 'tests/output/node' );
 
 // Full API
 // mix.js(src, output);
