@@ -44,10 +44,6 @@
   }
 }
 
-@if $type == 'epub' {
-
-}
-
 @if $type == 'prince' {
   #toc {
     a::after {

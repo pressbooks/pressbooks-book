@@ -39,7 +39,7 @@ $toc-sub-width: 75% !default;
 /// Left gutter width for left-aligned Table of Contents (chapter numbers go here in PDF).
 /// @type String | Map
 /// @since 1.0.0
-$toc-left-left-gutter: (epub: 20%, prince: 1cm) !default;
+$toc-left-left-gutter: (epub: 0, prince: 1cm) !default;
 
 /// Right gutter width for left-aligned Table of Contents (page numbers go here in PDF).
 /// @type String | Map
