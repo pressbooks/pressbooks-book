@@ -12,23 +12,22 @@
 
     .toc-chapter-title {
       display: $toc-left-chapter-title-display;
-      width: if-map-get($toc-title-width, $type);
+      width: if-map-get($toc-left-title-width, $type);
     }
 
     .chapter-subtitle {
       display: $toc-left-subtitle-display;
-      width: if-map-get($toc-title-width, $type);
+      width: if-map-get($toc-left-subtitle-width, $type);
     }
 
     .chapter-author {
       display: $toc-left-author-display;
-      width: if-map-get($toc-title-width, $type);
+      width: if-map-get($toc-left-author-width, $type);
     }
 
-    .front-matter,
-    .part,
-    .back-matter {
-      margin-left: if-map-get($toc-left-left-gutter, $type);
+    .toc-subsection-title {
+      display: $toc-left-subsection-display;
+      width: if-map-get($toc-left-subsection-width, $type);
     }
 
     .chapter .chapter-subtitle,
@@ -36,10 +35,15 @@
     .chapter .sections {
       margin-left: if-map-get($toc-left-left-gutter, $type);
     }
+  }
+}
 
-    .toc-subsection-title {
-      display: $toc-left-subsection-display;
-      width: if-map-get($toc-left-subsection-width, $type);
+@if $type == 'epub' {
+  #toc {
+    .chapter-subtitle,
+    .chapter-author,
+    .sections {
+      margin-left: if-map-get($toc-left-left-gutter, $type);
     }
   }
 }
@@ -53,6 +57,12 @@
       text-align: $toc-left-page-number-align;
       top: 0;
       width: if-map-get($toc-left-right-gutter, $type);
+    }
+
+    .front-matter,
+    .part,
+    .back-matter {
+      margin-left: if-map-get($toc-left-left-gutter, $type);
     }
 
     .part a::before {

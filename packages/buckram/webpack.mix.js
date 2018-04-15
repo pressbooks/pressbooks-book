@@ -13,8 +13,10 @@ let mix = require( 'laravel-mix' );
 mix
 	.disableNotifications()
 	.setPublicPath( 'tests/output/node' )
-	.fastSass( 'tests/epub.scss', 'tests/output/node' )
-	.fastSass( 'tests/prince.scss', 'tests/output/node' )
+	.fastSass( 'tests/epub-toc-left.scss', 'tests/output/node' )
+	.fastSass( 'tests/epub-toc-center.scss', 'tests/output/node' )
+	.fastSass( 'tests/prince-toc-left.scss', 'tests/output/node' )
+	.fastSass( 'tests/prince-toc-center.scss', 'tests/output/node' )
 	.fastSass( 'tests/web.scss', 'tests/output/node' );
 
 // Full API

@@ -36,34 +36,27 @@ $toc-subsection-margin-top: 0 !default;
 /// @since 1.0.0
 $toc-sub-width: 75% !default;
 
+/// Chapter number width in Table of Contents.
+/// @type String
+/// @deprecated No longer used.
+/// @since 1.0.0
+$toc-left-chapter-number-width: 1cm !default;
+
+/// Subtitle width for Table of contents.
+/// @type String
+/// @deprecated No longer used.
+/// @since 1.0.0
+$toc-title-width: 80% !default;
+
 /// Left gutter width for left-aligned Table of Contents (chapter numbers go here in PDF).
 /// @type String | Map
 /// @since 1.0.0
-$toc-left-left-gutter: (epub: 0, prince: 1cm) !default;
+$toc-left-left-gutter: (epub: 2.5em, prince: 1cm) !default;
 
 /// Right gutter width for left-aligned Table of Contents (page numbers go here in PDF).
 /// @type String | Map
 /// @since 1.0.0
 $toc-left-right-gutter: (epub: 0, prince: 1.5cm) !default;
-
-/// Chapter number width in Table of Contents.
-/// @type String | Map
-$toc-left-chapter-number-width: $toc-left-left-gutter !default;
-
-/// Center of Table of Contents margin right.
-/// @type String | Map
-$toc-center-margin-right: (
-  epub: 0,
-  prince: 0.5cm
-) !default;
-
-/// Center of Table of Contents margin left.
-/// @type String
-/// @type String | Map
-$toc-center-margin-left: (
-  epub: 0,
-  prince: 0.5cm
-) !default;
 
 /// Top margin for a Table of contents block.
 /// @type String | Map
@@ -92,19 +85,66 @@ $toc-back-matter-margin-top: (
   prince: 0.5em
 ) !default;
 
-// A hack to set page size variables in EPUB where they aren't actually used.
+// Hack: set page size variables in EPUB where they aren't actually used so compile succeeds.
 @if $type == 'epub' {
-  $page-width: 100%;
-  $page-margin-outside: 10%;
-  $page-margin-inside: 10%;
+  $page-width: 11in;
+  $page-margin-outside: 1in;
+  $page-margin-inside: 1in;
 }
 
-/// Title width for Table of contents.
+/// Title width for left-aligned Table of contents.
 /// @type String | Map
-$toc-title-width: (
-  epub: 100% - (if-map-get($toc-left-left-gutter, 'epub') + if-map-get($toc-left-right-gutter, 'epub')),
+$toc-left-title-width: (
+  epub: 100%,
   prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
 ) !default;
+
+/// Title width for center-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-center-title-width: (
+  epub: 100%,
+  prince: 100%
+) !default;
+
+/// Subtitle width for left-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-left-subtitle-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+
+/// Subtitle width for center-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-center-subtitle-width: 100% !default;
+
+/// Author width for left-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-left-author-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+
+/// Author width for center-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-center-author-width: 100% !default;
+
+/// Subsection width for left-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-left-subsection-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+
+/// Subsection width for center-aligned Table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-center-subsection-width: 100% !default;
 
 /// Top margin for a Table of Contents subsection.
 /// @type String | Map
@@ -512,12 +552,12 @@ $toc-section-title-font-weight: normal !default;
 $toc-section-title-text-transform: none !default;
 
 /// Display property for chapter title in left-aligned Table of Contents
-/// @type String
+/// @type Map
 /// @since 1.0.0
 $toc-left-chapter-title-display: inline-block !default;
 
 /// Display property for subtitle in left-aligned Table of Contents
-/// @type String
+/// @type Map
 /// @since 1.0.0
 $toc-left-subtitle-display: inline-block !default;
 
@@ -577,18 +617,53 @@ $toc-back-matter-line-height: $toc-base-line-height !default;
 /// @since 1.0.0
 $toc-section-line-height: $toc-base-line-height !default;
 
+/// Display property for subsections in left-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-left-subsection-display: inline-block !default;
 
-$toc-left-subsection-width: $toc-title-width !default;
-
+/// Display property for titles in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-chapter-title-display: block !default;
+
+/// Display property for subtitles in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-subtitle-display: block !default;
+
+/// Display property for authors in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-author-display: block !default;
+
+/// Display property for subsections in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-subsection-display: block !default;
-$toc-center-title-width: 100% !default;
-$toc-center-subsection-width: 100% !default;
+
+/// Left gutter width in center-aligned TOC.
+/// @type String | Map
+/// @since 1.0.0
 $toc-center-left-gutter: auto !default;
+
+/// Right gutter width in center-aligned TOC.
+/// @type String | Map
+/// @since 1.0.0
 $toc-center-right-gutter: auto !default;
+
+/// Page number display in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-page-number-display: block !default;
+
+/// Part number display in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-part-number-display: block !default;
+
+/// Chapter number display in center-aligned TOC.
+/// @type String
+/// @since 1.0.0
 $toc-center-chapter-number-display: block !default;
+

@@ -7,8 +7,10 @@
 	},
 	"scripts": {
 		"test": [
-			"vendor/bin/pscss tests/epub.scss > tests/output/php/epub.css",
-			"vendor/bin/pscss tests/prince.scss > tests/output/php/prince.css",
+			"vendor/bin/pscss tests/epub-toc-left.scss > tests/output/php/epub-toc-left.css",
+			"vendor/bin/pscss tests/epub-toc-center.scss > tests/output/php/epub-toc-center.css",
+			"vendor/bin/pscss tests/prince-toc-left.scss > tests/output/php/prince-toc-left.css",
+			"vendor/bin/pscss tests/prince-toc-center.scss > tests/output/php/prince-toc-center.css",
 			"vendor/bin/pscss tests/web.scss > tests/output/php/web.css"
 		]
 	}
