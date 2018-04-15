@@ -28,7 +28,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"pressbooks-build-tools": "^0.11.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0",
+    "puppeteer": "^1.0.0",
+    "pixelmatch": "^4.0.2",
+    "polyserve": "^0.23.0",
+    "pressbooks-build-tools": "^0.11.0",
 		"sassdoc": "^2.5.0"
 	},
 	"eslintConfig": {

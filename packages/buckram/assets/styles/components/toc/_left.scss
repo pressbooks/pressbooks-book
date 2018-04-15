@@ -2,233 +2,75 @@
 /// @group toc
 ////
 
-@import 'mixins', 'toc-prince';
+@import 'generic';
 
-@if $type == 'epub' {
+@if $type != 'web' {
   #toc {
-    margin: 5%;
-
-    h1 {
-      display: block;
-      padding-bottom: 1.5em;
-      margin-bottom: 2em;
-    }
-
-    a {
-      color: inherit;
-      border: 0;
-    }
-
-    a::after {
-      font-style: normal;
-      text-decoration: none;
-    }
-
-    ul,
     li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
+      text-align: left;
     }
 
-    ul {
-      line-height: $toc-base-line-height;
+    .toc-chapter-title {
+      display: $toc-left-chapter-title-display;
+      width: if-map-get($toc-title-width, $type);
     }
 
-    li {
-      margin-bottom: 0.25em;
+    .chapter-subtitle {
+      display: $toc-left-subtitle-display;
+      width: if-map-get($toc-title-width, $type);
+    }
+
+    .chapter-author {
+      display: $toc-left-author-display;
+      width: if-map-get($toc-title-width, $type);
     }
 
     .front-matter,
+    .part,
     .back-matter {
-      margin-bottom: 0.25em;
+      margin-left: if-map-get($toc-left-left-gutter, $type);
     }
 
-    .front-matter {
-      @include toc-front-matter-title;
+    .chapter .chapter-subtitle,
+    .chapter .chapter-author,
+    .chapter .sections {
+      margin-left: if-map-get($toc-left-left-gutter, $type);
     }
 
-    .front-matter.introduction .toc-chapter-title {
-      font-style: normal;
-    }
-
-    .back-matter {
-      @include toc-back-matter-title;
-    }
-
-    .front-matter + .part,
-    .front-matter + .chapter,
-    .chapter + .back-matter,
-    .part + .back-matter {
-      margin-top: $toc-block-margin-top;
-    }
-
-    .part .toc-chapter-title {
-      @include toc-part-title;
-
-      margin-top: $toc-block-margin-top;
-    }
-
-    .toc-chapter-title {
-      @include toc-chapter-title;
-
-      display: block;
-      margin-top: 0.5em;
-    }
-
-    .chapter-author {
-      @include toc-chapter-author;
-
-      display: block;
-      padding-left: 2em;
-      margin-bottom: 0.3em;
-    }
-
-    .chapter-subtitle {
-      @include toc-chapter-subtitle;
-
-      display: block;
-      padding-left: 2em;
-      margin-bottom: 0.3em;
-    }
-
-    .chapter-subtitle + .chapter-author {
-      margin-top: -0.5em;
-      margin-bottom: 0.5em;
-    }
-
-    ul.sections {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      margin-left: 2em;
-      font-size: 0.9em;
-    }
-
-    .section {
-      font-style: italic;
+    .toc-subsection-title {
+      display: $toc-left-subsection-display;
+      width: if-map-get($toc-left-subsection-width, $type);
     }
   }
 }
 
-@else if $type == 'prince' {
+@if $type == 'epub' {
+
+}
+
+@if $type == 'prince' {
   #toc {
-
-    // General
-    a {
-      margin-left: 0;
-    }
-
     a::after {
-      @include toc-page-number;
-
+      display: $toc-left-page-number-display;
       position: absolute;
-      top: $toc-left-page-number-top;
       right: 0;
-      line-height: $toc-base-line-height;
-      vertical-align: top;
-    }
-
-    ul {
-      margin: 0 0 0 $toc-left-margin-left;
-      text-align: left;
-    }
-
-    li {
-      text-align: left;
-    }
-
-    // Parts
-
-    .part {
-      @include toc-part-title;
-      width: $toc-title-width;
+      text-align: $toc-left-page-number-align;
+      top: 0;
+      width: if-map-get($toc-left-right-gutter, $type);
     }
 
     .part a::before {
-      @include toc-part-number;
+      content: $toc-part-number-before-content $toc-part-number-content $toc-left-part-number-after-content;
+      display: $toc-left-part-number-display;
+      text-align: $toc-left-part-number-align;
     }
-
-    .part a::after {
-      content: '';
-    }
-
-    // Front Matter
-
-    .front-matter .toc-chapter-title {
-      @include toc-front-matter-title;
-    }
-
-    .front-matter a::after {
-      @include toc-front-matter-page-number;
-    }
-
-    .introduction a::after {
-      @include toc-page-number;
-    }
-
-    // Chapters
 
     .chapter a::before {
-      @include toc-chapter-number;
-
-      position: relative;
-      left: -1 * $toc-left-chapter-number-width + $toc-left-chapter-number-margin-right;
-      display: $toc-chapter-number-display;
-      width: $toc-left-chapter-number-width;
-      margin-right: -1 * $toc-left-chapter-number-width;
-      line-height: $toc-base-line-height;
-      vertical-align: top;
-    }
-
-    .toc-chapter-title {
-      @include toc-chapter-title;
-
-      position: relative;
-      top: 0;
-      display: inline-block;
-      width: $toc-title-width;
-      text-indent: 0;
-      vertical-align: top;
-    }
-
-    .chapter-subtitle,
-    .chapter-author {
-      display: inline-block;
-      width: $toc-sub-width;
-      text-indent: 0;
-    }
-
-    .chapter-subtitle {
-      @include toc-chapter-subtitle;
-    }
-
-    .chapter-author {
-      @include toc-chapter-author;
-    }
-
-    // Back Matter
-
-    .back-matter .toc-chapter-title {
-      @include toc-back-matter-title;
-
-      position: relative;
-      display: block;
-    }
-
-    // Subsections (Multilevel TOC)
-
-    .section {
-      left: -1 * $toc-left-margin-left;
-    }
-
-    .section a::after {
-      margin-right: -1 * $toc-left-margin-left;
-    }
-
-    .section a::before {
-      display: none;
+      content: $toc-chapter-number-before-content counter(chapter) $toc-left-chapter-number-after-content;
+      display: $toc-left-chapter-number-display;
+      float: $toc-left-chapter-number-float; // TODO
+      text-align: $toc-left-chapter-number-align; // $toc-chapter-number-align;
+      width: if-map-get($toc-left-left-gutter, $type);
     }
   }
 }
-
-@import 'mobi';

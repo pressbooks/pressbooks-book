@@ -1,0 +1,282 @@
+@import '../utilities';
+
+@if $type != 'web' {
+  #toc {
+    ul {
+      line-height: if-map-get($toc-base-line-height, $type);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      border: 0;
+    }
+
+    .toc-chapter-title {
+      page-break-after: avoid;
+      position: relative;
+      text-indent: 0;
+    }
+
+    .chapter-subtitle {
+      hyphens: none;
+      text-indent: 0;
+     //width: $toc-sub-width;
+    }
+
+    .chapter-author {
+      hyphens: none;
+      text-indent: 0;
+      //width: $toc-sub-width;
+    }
+
+    .front-matter {
+      color: if-map-get($toc-front-matter-title-color, $type);
+      font-family: $toc-front-matter-title-font-family;
+      font-size: if-map-get($toc-front-matter-title-font-size, $type);
+      font-style: $toc-front-matter-title-font-style;
+      font-weight: $toc-front-matter-title-font-weight;
+      hyphens: none;
+      line-height: if-map-get($toc-front-matter-line-height, $type);
+      text-transform: $toc-front-matter-title-text-transform;
+    }
+
+    .front-matter .chapter-subtitle {
+      color: if-map-get($toc-front-matter-subtitle-color, $type);
+      font-family: $toc-front-matter-subtitle-font-family;
+      font-size: if-map-get($toc-front-matter-subtitle-font-size, $type);
+      font-style: $toc-front-matter-subtitle-font-style;
+      font-weight: $toc-front-matter-subtitle-font-weight;
+      text-transform: $toc-front-matter-subtitle-text-transform;
+    }
+
+    .front-matter .chapter-author {
+      color: if-map-get($toc-front-matter-author-color, $type);
+      font-family: $toc-front-matter-author-font-family;
+      font-size: if-map-get($toc-front-matter-author-font-size, $type);
+      font-style: $toc-front-matter-author-font-style;
+      font-weight: $toc-front-matter-author-font-weight;
+      text-transform: $toc-front-matter-author-text-transform;
+    }
+
+    .part {
+      color: if-map-get($toc-part-title-color, $type);
+      font-family: $toc-part-title-font-family;
+      font-size: if-map-get($toc-part-title-font-size, $type);
+      font-style: $toc-part-title-font-style;
+      font-weight: $toc-part-title-font-weight;
+      hyphens: none;
+      line-height: if-map-get($toc-part-line-height, $type);
+      margin-top: if-map-get($toc-block-margin-top, $type);
+      text-transform: $toc-part-title-text-transform;
+    }
+
+    .part.invisible {
+      display: none;
+    }
+
+    .chapter {
+      color: if-map-get($toc-chapter-title-color, $type);
+      font-family: $toc-chapter-title-font-family;
+      font-size: if-map-get($toc-chapter-title-font-size, $type);
+      font-style: $toc-chapter-title-font-style;
+      font-weight: $toc-chapter-title-font-weight;
+      line-height: if-map-get($toc-chapter-line-height, $type);
+      text-transform: $toc-chapter-title-text-transform;
+    }
+
+    .chapter .toc-chapter-title {
+      // TODO
+    }
+
+    .chapter .chapter-subtitle {
+      color: if-map-get($toc-chapter-subtitle-color, $type);
+      font-family: $toc-chapter-subtitle-font-family;
+      font-size: if-map-get($toc-chapter-subtitle-font-size, $type);
+      font-style: $toc-chapter-subtitle-font-style;
+      font-weight: $toc-chapter-subtitle-font-weight;
+      text-transform: $toc-chapter-subtitle-text-transform;
+    }
+
+    .chapter .chapter-author {
+      color: if-map-get($toc-chapter-author-color, $type);
+      font-family: $toc-chapter-author-font-family;
+      font-size: if-map-get($toc-chapter-author-font-size, $type);
+      font-style: $toc-chapter-author-font-style;
+      font-weight: $toc-chapter-author-font-weight;
+      text-transform: $toc-chapter-author-text-transform;
+    }
+
+    .back-matter {
+      color: if-map-get($toc-back-matter-title-color, $type);
+      font-family: $toc-back-matter-title-font-family;
+      font-size: if-map-get($toc-back-matter-title-font-size, $type);
+      font-style: $toc-back-matter-title-font-style;
+      font-weight: $toc-back-matter-title-font-weight;
+      hyphens: none;
+      line-height: if-map-get($toc-front-matter-line-height, $type);
+      text-transform: $toc-back-matter-title-text-transform;
+    }
+
+    .back-matter .chapter-subtitle {
+      color: if-map-get($toc-back-matter-subtitle-color, $type);
+      font-family: $toc-back-matter-subtitle-font-family;
+      font-size: if-map-get($toc-back-matter-subtitle-font-size, $type);
+      font-style: $toc-back-matter-subtitle-font-style;
+      font-weight: $toc-back-matter-subtitle-font-weight;
+      text-transform: $toc-back-matter-subtitle-text-transform;
+    }
+
+    .back-matter .chapter-author {
+      color: if-map-get($toc-back-matter-author-color, $type);
+      font-family: $toc-back-matter-author-font-family;
+      font-size: if-map-get($toc-back-matter-author-font-size, $type);
+      font-style: $toc-back-matter-author-font-style;
+      font-weight: $toc-back-matter-author-font-weight;
+      text-transform: $toc-back-matter-author-text-transform;
+    }
+
+    .front-matter + .front-matter {
+      margin-top: if-map-get($toc-front-matter-margin-top, $type);
+    }
+
+    .chapter + .chapter {
+      margin-top: if-map-get($toc-chapter-margin-top, $type);
+    }
+
+    .back-matter + .back-matter {
+      margin-top: if-map-get($toc-back-matter-margin-top, $type);
+    }
+
+    .part,
+    .front-matter + .chapter,
+    .chapter + .back-matter,
+    .part + .back-matter {
+      margin-top: if-map-get($toc-block-margin-top, $type);
+    }
+
+    .sections {
+      margin-top: if-map-get($toc-section-margin-top, $type);
+    }
+
+    .section {
+      font-size: if-map-get($toc-section-title-font-size, $type);
+      font-style: $toc-section-title-font-style;
+      font-weight: $toc-section-title-font-weight;
+      line-height: if-map-get($toc-front-matter-line-height, $type);
+      margin-top: if-map-get($toc-section-margin-top, $type);
+    }
+  }
+}
+
+@if $type == 'prince' {
+  h3.front-matter-number,
+  h3.part-number,
+  h3.chapter-number,
+  h3.back-matter-number {
+    bookmark-level: none;
+  }
+
+  #toc {
+    display: $toc-display;
+    counter-reset: part;
+    page-break-before: right;
+
+    a::after {
+      color: if-map-get($toc-page-number-color, $type);
+      content: target-counter(attr(href), page);
+      font-family: $toc-page-number-font-family;
+      font-size: $toc-page-number-font-size;
+      font-style: $toc-page-number-font-style;
+      font-weight: $toc-page-number-font-weight;
+      text-transform: $toc-page-number-text-transform;
+      text-decoration: $toc-page-number-text-decoration;
+      hyphens: none;
+    }
+
+    ul {
+      counter-reset: chapter;
+    }
+
+    li {
+      page-break-inside: avoid;
+      position: relative;
+    }
+
+    .front-matter a::after {
+      color: if-map-get($toc-front-matter-page-number-color, $type);
+      content: target-counter(attr(href), page, lower-roman);
+      font-family: $toc-page-number-font-family;
+      font-size: $toc-front-matter-page-number-font-size;
+      font-style: $toc-front-matter-page-number-font-style;
+      font-weight: $toc-front-matter-page-number-font-weight;
+      text-transform: $toc-front-matter-page-number-text-transform;
+      hyphens: none;
+    }
+
+    .chapter a::before {
+      color: if-map-get($toc-chapter-number-color, $type);
+      content: target-counter(attr(href), page);
+      font-family: $toc-chapter-number-font-family;
+      font-size: if-map-get($toc-chapter-number-font-size, $type);
+      font-style: $toc-chapter-number-font-style;
+      font-weight: $toc-chapter-number-font-weight;
+      text-transform: $toc-chapter-number-text-transform;
+      hyphens: none;
+      counter-increment: chapter;
+      page-break-after: avoid;
+    }
+
+    .part {
+      page-break-after: avoid;
+    }
+
+    .part a::before {
+      color: if-map-get($toc-part-number-color, $type);
+      counter-increment: part;
+      font-family: $toc-part-number-font-family;
+      font-size: if-map-get($toc-part-number-font-size, $type);
+      font-style: $toc-part-number-font-style;
+      font-weight: $toc-part-number-font-weight;
+      hyphens: none;
+      page-break-after: avoid;
+      text-transform: $toc-part-number-text-transform;
+    }
+
+    .part a::after {
+      content: '';
+    }
+
+    .chapter.numberless a::before {
+      content: '';
+      counter-increment: none;
+      display: none;
+    }
+
+    .front-matter .section a::before,
+    .part .section a::before,
+    .chapter .section a::before,
+    .back-matter .section a::before {
+      content: '';
+      counter-increment: none;
+      display: none;
+    }
+  }
+}
+
+@import 'mobi';
+

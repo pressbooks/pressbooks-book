@@ -213,3 +213,15 @@ $toc-page-number-color: $color-1 !default;
 /// @type String | Map
 $toc-front-matter-page-number-color: $color-1 !default;
 
+/// Table of contents back matter title color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-title-color: $toc-front-matter-title-color !default;
+/// Table of contents back matter subtitle color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-subtitle-color: $toc-front-matter-subtitle-color !default;
+/// Table of contents back matter author color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-author-color: $toc-front-matter-author-color !default;

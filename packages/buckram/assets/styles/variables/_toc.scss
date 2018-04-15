@@ -6,60 +6,137 @@
 /// @type String
 $toc-display: block !default;
 
-/// Left side of Table of Contents left margin.
+/// Left margin for left-aligned Table of Contents.
 /// @type String
+/// @deprecated No longer used.
+/// @since 1.0.0
 $toc-left-margin-left: 1cm !default;
-/// Position of page numbers on Table of Contents.
+
+/// Top position of page numbers for left-aligned Table of Contents.
 /// @type String
+/// @deprecated No longer used.
+/// @since 1.0.0
 $toc-left-page-number-top: 0.2em !default;
-/// Chapter number width in Table of Contents.
+
+/// Chapter number right margin in left-aligned Table of Contents.
 /// @type String
-$toc-left-chapter-number-width: 2em !default;
-/// Chapter number margin in Table of Contents.
-/// @type String
+/// @deprecated No longer used.
+/// @since 1.0.0
 $toc-left-chapter-number-margin-right: 0.5em !default;
 
-/// Center of Table of Contents margin right.
+/// Top margin for Table of contents subsection.
 /// @type String
-$toc-center-margin-right: 0.5cm !default;
+/// @deprecated No longer used.
+/// @since 1.0.0
+$toc-subsection-margin-top: 0 !default;
+
+/// Subsection width for Table of contents.
+/// @type String
+/// @deprecated No longer used.
+/// @since 1.0.0
+$toc-sub-width: 75% !default;
+
+/// Left gutter width for left-aligned Table of Contents (chapter numbers go here in PDF).
+/// @type String | Map
+/// @since 1.0.0
+$toc-left-left-gutter: (epub: 20%, prince: 1cm) !default;
+
+/// Right gutter width for left-aligned Table of Contents (page numbers go here in PDF).
+/// @type String | Map
+/// @since 1.0.0
+$toc-left-right-gutter: (epub: 0, prince: 1.5cm) !default;
+
+/// Chapter number width in Table of Contents.
+/// @type String | Map
+$toc-left-chapter-number-width: $toc-left-left-gutter !default;
+
+/// Center of Table of Contents margin right.
+/// @type String | Map
+$toc-center-margin-right: (
+  epub: 0,
+  prince: 0.5cm
+) !default;
 
 /// Center of Table of Contents margin left.
 /// @type String
-$toc-center-margin-left: 0.5cm !default;
-/// Top margin for Table of contents block.
-/// @type String
+/// @type String | Map
+$toc-center-margin-left: (
+  epub: 0,
+  prince: 0.5cm
+) !default;
+
+/// Top margin for a Table of contents block.
+/// @type String | Map
 $toc-block-margin-top: 1.5em !default;
-/// Top margin for Table of contents section.
-/// @type String
-$toc-section-margin-top: 0.5em !default;
-/// Top margin for Table of contents subsection.
-/// @type String
-$toc-subsection-margin-top: 0 !default;
+
+/// Top margin for front matter in Table of Contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-front-matter-margin-top: (
+  epub: 0.25em,
+  prince: 0.5em
+) !default;
+
 /// Top margin for chapters in Table of contents.
-/// @type String
-$toc-chapter-margin-top: 0.3em !default;
+/// @type String | Map
+$toc-chapter-margin-top: (
+  epub: 0.25em,
+  prince: 0.3em
+) !default;
+
+/// Top margin for back matter in Table of Contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-margin-top: (
+  epub: 0.25em,
+  prince: 0.5em
+) !default;
+
+// A hack to set page size variables in EPUB where they aren't actually used.
+@if $type == 'epub' {
+  $page-width: 100%;
+  $page-margin-outside: 10%;
+  $page-margin-inside: 10%;
+}
+
 /// Title width for Table of contents.
-/// @type String
-$toc-title-width: 80% !default;
-/// Subsection width for Table of contents.
-/// @type String
-$toc-sub-width: 75% !default;
+/// @type String | Map
+$toc-title-width: (
+  epub: 100% - (if-map-get($toc-left-left-gutter, 'epub') + if-map-get($toc-left-right-gutter, 'epub')),
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+
+/// Top margin for a Table of Contents subsection.
+/// @type String | Map
+/// @since 1.0.0
+$toc-section-margin-top: (
+  epub: 0.25em,
+  prince: 0.5em
+) !default;
+
 /// Line height for Table of contents.
-/// @type String
-$toc-base-line-height: 1.2em !default;
+/// @type String | Map
+$toc-base-line-height: (
+  epub: 1.2,
+  prince: 1.2em
+) !default;
 
 /// Front matter title font stack for table of contents.
 /// @type String
 $toc-front-matter-title-font-family: $font-1 !default;
+
 /// Front matter title font size for table of contents.
-/// @type String
+/// @type String | Map
 $toc-front-matter-title-font-size: 0.9em !default;
+
 /// Front matter title font style for table of contents.
 /// @type String
 $toc-front-matter-title-font-style: normal !default;
+
 /// Front matter title font weight for table of contents.
 /// @type String
 $toc-front-matter-title-font-weight: normal !default;
+
 /// Front matter title text transform for table of contents.
 /// @type String
 $toc-front-matter-title-text-transform: none !default;
@@ -67,15 +144,19 @@ $toc-front-matter-title-text-transform: none !default;
 /// Front matter subtitle font stack for table of contents.
 /// @type String
 $toc-front-matter-subtitle-font-family: $font-1 !default;
+
 /// Front matter subtitle font size for table of contents.
-/// @type String
+/// @type String | Map
 $toc-front-matter-subtitle-font-size: 0.9em !default;
+
 /// Front matter subtitle font style for table of contents.
 /// @type String
 $toc-front-matter-subtitle-font-style: italic !default;
+
 /// Front matter subtitle font weight for table of contents.
 /// @type String
 $toc-front-matter-subtitle-font-weight: normal !default;
+
 /// Front matter subtitle text transform for table of contents.
 /// @type String
 $toc-front-matter-subtitle-text-transform: none !default;
@@ -83,15 +164,19 @@ $toc-front-matter-subtitle-text-transform: none !default;
 /// Front matter author font stack for table of contents.
 /// @type String
 $toc-front-matter-author-font-family: $font-1 !default;
+
 /// Front matter author font size for table of contents.
-/// @type String
+/// @type String | Map
 $toc-front-matter-author-font-size: 0.9em !default;
+
 /// Front matter author font style for table of contents.
 /// @type String
 $toc-front-matter-author-font-style: normal !default;
+
 /// Front matter author font weight for table of contents.
 /// @type String
 $toc-front-matter-author-font-weight: normal !default;
+
 /// Front matter author text transform for table of contents.
 /// @type String
 $toc-front-matter-author-text-transform: none !default;
@@ -114,19 +199,25 @@ $toc-part-number-content: counter(part, upper-roman) !default;
 /// @type String
 /// @since 1.0.0
 $toc-part-number-after-content:  '.\A0' !default;
+$toc-left-part-number-after-content:  '.\A0' !default;
+$toc-center-part-number-after-content:  '.' !default;
 
 /// Part number font stack for Table of Contents
 /// @type String
 $toc-part-number-font-family: $font-3 !default;
+
 /// Part number font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-part-number-font-size: 1em !default;
+
 /// Part number font style for Table of Contents
 /// @type String
 $toc-part-number-font-style: normal !default;
+
 /// Part number font weight for Table of Contents
 /// @type String
 $toc-part-number-font-weight: normal !default;
+
 /// Part number text transform for Table of Contents
 /// @type String
 $toc-part-number-text-transform: none !default;
@@ -134,6 +225,7 @@ $toc-part-number-text-transform: none !default;
 /// Part title font stack for Table of Contents
 /// @type String
 $toc-part-title-font-family: $font-3 !default;
+
 /// Part title font size for Table of Contents
 /// @type String | Map
 $toc-part-title-font-size: (
@@ -144,9 +236,11 @@ $toc-part-title-font-size: (
 /// Part title font style for Table of Contents
 /// @type String
 $toc-part-title-font-style: normal !default;
+
 /// Part title font weight for Table of Contents
 /// @type String
 $toc-part-title-font-weight: normal !default;
+
 /// Part title text transform for Table of Contents
 /// @type String
 $toc-part-title-text-transform: none !default;
@@ -154,18 +248,23 @@ $toc-part-title-text-transform: none !default;
 /// Chapter number display for Table of Contents
 /// @type String
 $toc-chapter-number-display: inline-block !default;
+
 /// Chapter number font stack for Table of Contents
 /// @type String
 $toc-chapter-number-font-family: $font-1 !default;
+
 /// Chapter number font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-chapter-number-font-size: 1em !default;
+
 /// Chapter number font style for Table of Contents
 /// @type String
 $toc-chapter-number-font-style: normal !default;
+
 /// Chapter number font weight for Table of Contents
 /// @type String
 $toc-chapter-number-font-weight: normal !default;
+
 /// Chapter number text transform for Table of Contents
 /// @type String
 $toc-chapter-number-text-transform: none !default;
@@ -184,22 +283,29 @@ $toc-chapter-number-content: counter(chapter) !default;
 /// @type String
 /// @since 1.0.0
 $toc-chapter-number-after-content: '.\A0\A0\A0' !default;
+$toc-left-chapter-number-after-content: '.\A0\A0\A0' !default;
+$toc-center-chapter-number-after-content: '.' !default;
 
 /// Chapter title font stack for Table of Contents
 /// @type String
 $toc-chapter-title-font-family: $font-1 !default;
+
 /// Chapter title font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-chapter-title-font-size: 1em !default;
+
 /// Chapter title font style for Table of Contents
 /// @type String
 $toc-chapter-title-font-style: normal !default;
+
 /// Chapter title font weight for Table of Contents
 /// @type String
 $toc-chapter-title-font-weight: normal !default;
+
 /// Chapter title text transform for Table of Contents
 /// @type String
 $toc-chapter-title-text-transform: none !default;
+
 /// Chapter number text align for Table of Contents
 /// @type String
 /// @since 1.0.0
@@ -210,15 +316,19 @@ $toc-chapter-title-display: inline !default;
 /// Chapter subtitle font stack for Table of Contents
 /// @type String
 $toc-chapter-subtitle-font-family: $font-1 !default;
+
 /// Chapter subtitle font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-chapter-subtitle-font-size: 0.9em !default;
+
 /// Chapter subtitle font style for Table of Contents
 /// @type String
 $toc-chapter-subtitle-font-style: normal !default;
+
 /// Chapter subtitle font weight for Table of Contents
 /// @type String
 $toc-chapter-subtitle-font-weight: normal !default;
+
 /// Chapter subtitle text transform for Table of Contents
 /// @type String
 $toc-chapter-subtitle-text-transform: none !default;
@@ -226,41 +336,138 @@ $toc-chapter-subtitle-text-transform: none !default;
 /// Chapter author font stack for Table of Contents
 /// @type String
 $toc-chapter-author-font-family: $font-1 !default;
+
 /// Chapter author font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-chapter-author-font-size: 0.9em !default;
+
 /// Chapter author font style for Table of Contents
 /// @type String
 $toc-chapter-author-font-style: normal !default;
+
 /// Chapter author font weight for Table of Contents
 /// @type String
 $toc-chapter-author-font-weight: normal !default;
+
 /// Chapter author text transform for Table of Contents
 /// @type String
 $toc-chapter-author-text-transform: none !default;
 
-$toc-page-number-before-content: '\A0\A0\A0' !default;
-
-/// Page number display property for Table of Contents
+/// Back matter title font stack for table of contents.
 /// @type String
 /// @since 1.0.0
-$toc-page-number-display: inline !default;
+$toc-back-matter-title-font-family: $toc-front-matter-title-font-family !default;
+
+/// Back matter title font size for table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-title-font-size: $toc-front-matter-title-font-size !default;
+
+/// Back matter title font style for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-title-font-style: $toc-front-matter-title-font-style !default;
+
+/// Back matter title font weight for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-title-font-weight: $toc-front-matter-title-font-weight !default;
+
+/// Back matter title text transform for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-title-text-transform: $toc-front-matter-title-text-transform !default;
+
+/// Back matter subtitle font stack for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-subtitle-font-family: $toc-front-matter-subtitle-font-family !default;
+
+/// Back matter subtitle font size for table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-subtitle-font-size: $toc-front-matter-subtitle-font-size !default;
+
+/// Back matter subtitle font style for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-subtitle-font-style: $toc-front-matter-subtitle-font-style !default;
+
+/// Back matter subtitle font weight for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-subtitle-font-weight: $toc-front-matter-subtitle-font-weight !default;
+
+/// Back matter subtitle text transform for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-subtitle-text-transform: $toc-front-matter-subtitle-text-transform !default;
+
+/// Back matter author font stack for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-author-font-family: $toc-front-matter-author-font-family !default;
+
+/// Back matter author font size for table of contents.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-author-font-size: $toc-front-matter-author-font-size !default;
+
+/// Back matter author font style for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-author-font-style: $toc-front-matter-author-font-style !default;
+
+/// Back matter author font weight for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-author-font-weight: $toc-front-matter-author-font-weight !default;
+
+/// Back matter author text transform for table of contents.
+/// @type String
+/// @since 1.0.0
+$toc-back-matter-author-text-transform: $toc-front-matter-author-text-transform !default;
+
+/// Page number display property for left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-page-number-display: inline-block !default;
+
+/// Page number width property for left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-page-number-width: auto !default;
+
+/// Page number float property for left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-page-number-float: right !default;
+
+/// Page number text-align property for left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-page-number-align: right !default;
 
 /// Page number font family for Table of Contents
 /// @type String
 $toc-page-number-font-family: $font-1 !default;
+
 /// Page number font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-page-number-font-size: 1em !default;
+
 /// Page number font style for Table of Contents
 /// @type String
 $toc-page-number-font-style: normal !default;
+
 /// Page number font weight for Table of Contents
 /// @type String
 $toc-page-number-font-weight: normal !default;
+
 /// Page number text transform for Table of Contents
 /// @type String
 $toc-page-number-text-transform: none !default;
+
 /// Page number text decoration for Table of Contents
 /// @type String
 $toc-page-number-text-decoration: none !default;
@@ -273,27 +480,115 @@ $toc-front-matter-page-number-display: inline !default;
 $toc-front-matter-page-number-before-content: '\A0\A0\A0' !default;
 
 /// Front matter page number font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-front-matter-page-number-font-size: 0.9em !default;
+
 /// Front matter page number font style for Table of Contents
 /// @type String
 $toc-front-matter-page-number-font-style: normal !default;
+
 /// Front matter page number font weight for Table of Contents
 /// @type String
 $toc-front-matter-page-number-font-weight: normal !default;
+
 /// Front matter page number text transform for Table of Contents
 /// @type String
 $toc-front-matter-page-number-text-transform: none !default;
 
 /// Section title font size for Table of Contents
-/// @type String
+/// @type String | Map
 $toc-section-title-font-size: 1em !default;
+
 /// Section title font style for Table of Contents
 /// @type String
 $toc-section-title-font-style: italic !default;
+
 /// Section title font weight for Table of Contents
 /// @type String
 $toc-section-title-font-weight: normal !default;
+
 /// Section title text transform for Table of Contents
 /// @type String
 $toc-section-title-text-transform: none !default;
+
+/// Display property for chapter title in left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-chapter-title-display: inline-block !default;
+
+/// Display property for subtitle in left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-subtitle-display: inline-block !default;
+
+/// Display property for author in left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-author-display: inline-block !default;
+
+/// Text-align property for part number in left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-part-number-align: left !default;
+
+/// Part number display for Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-part-number-display: inline-block !default;
+
+
+/// Text-align property for chapter number in left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-chapter-number-align: right !default;
+
+/// Chapter number float for left-aligned Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-chapter-number-float: left !default;
+
+/// Chapter number display for Table of Contents
+/// @type String
+/// @since 1.0.0
+$toc-left-chapter-number-display: inline-block !default;
+
+/// Line height for front matter in TOC.
+/// @type String | Map
+/// @since 1.0.0
+$toc-front-matter-line-height: $toc-base-line-height !default;
+
+/// Line height for parts in TOC.
+/// @type String | Map
+/// @since 1.0.0
+$toc-part-line-height: $toc-base-line-height !default;
+
+/// Line height for chapters in TOC.
+/// @type String | Map
+/// @since 1.0.0
+$toc-chapter-line-height: $toc-base-line-height !default;
+
+/// Line height for back matter in TOC.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-line-height: $toc-base-line-height !default;
+
+/// Line height for subsections in TOC.
+/// @type String | Map
+/// @since 1.0.0
+$toc-section-line-height: $toc-base-line-height !default;
+
+$toc-left-subsection-display: inline-block !default;
+
+$toc-left-subsection-width: $toc-title-width !default;
+
+$toc-center-chapter-title-display: block !default;
+$toc-center-subtitle-display: block !default;
+$toc-center-author-display: block !default;
+$toc-center-subsection-display: block !default;
+$toc-center-title-width: 100% !default;
+$toc-center-subsection-width: 100% !default;
+$toc-center-left-gutter: auto !default;
+$toc-center-right-gutter: auto !default;
+$toc-center-page-number-display: block !default;
+$toc-center-part-number-display: block !default;
+$toc-center-chapter-number-display: block !default;
