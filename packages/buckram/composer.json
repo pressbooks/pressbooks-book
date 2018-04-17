@@ -7,11 +7,11 @@
 	},
 	"scripts": {
 		"test": [
-			"vendor/bin/pscss tests/epub-toc-left.scss > tests/output/php/epub-toc-left.css",
-			"vendor/bin/pscss tests/epub-toc-center.scss > tests/output/php/epub-toc-center.css",
-			"vendor/bin/pscss tests/prince-toc-left.scss > tests/output/php/prince-toc-left.css",
-			"vendor/bin/pscss tests/prince-toc-center.scss > tests/output/php/prince-toc-center.css",
-			"vendor/bin/pscss tests/web.scss > tests/output/php/web.css"
+			"vendor/bin/pscss tests/source/styles/epub-toc-left.scss > tests/output/css/epub-toc-left.css",
+			"vendor/bin/pscss tests/source/styles/epub-toc-center.scss > tests/output/css/epub-toc-center.css",
+			"vendor/bin/pscss tests/source/styles/prince-toc-left.scss > tests/output/css/prince-toc-left.css",
+			"vendor/bin/pscss tests/source/styles/prince-toc-center.scss > tests/output/css/prince-toc-center.css",
+			"vendor/bin/pscss tests/source/styles/web.scss > tests/output/css/web.css"
 		]
 	}
 }

@@ -6,9 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Tests
-tests/output/node/*.css
-tests/output/node/*.json
-tests/output/php/*.css
+tests/output/css/*.css
+tests/output/images/*/*.png
 
 # Runtime data
 pids
