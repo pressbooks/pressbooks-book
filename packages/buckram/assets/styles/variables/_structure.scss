@@ -27,6 +27,8 @@ $numbering-position: 'top-outside' !default;
 $first-numbering-position: null !default;
 // $first-numbering-position: 'top-center' !default;
 // $first-numbering-position: 'bottom-center' !default;
+// $first-numbering-position: 'bottom-inside' !default;
+// $first-numbering-position: 'bottom-outside' !default;
 // TODO: Handle other positions based on recto-verso
 
 /// Running content position.
@@ -43,9 +45,17 @@ $running-content-position: 'top-center' !default;
 //$running-content-position: 'bottom-center' !default;
 //$running-content-position: 'bottom-inside' !default;
 
+/// First page running content position.
+/// @type Null | String
+/// @since 1.0.0
+$first-running-content-position: null !default;
+// $first-running-content-position: 'bottom-center' !default;
+// $first-running-content-position: 'bottom-inside' !default;
+// $first-running-content-position: 'bottom-outside' !default;
+// TODO: Handle other positions based on recto-verso
+
 // Finally, for the running separator, it either exists or it doesn't,
 //so choose between two options (null, or defined content):
-
 
 $left-running-separator: '' !default;
 $right-running-separator: '' !default;
