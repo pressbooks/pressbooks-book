@@ -475,6 +475,7 @@ function pb_webbook_width() {
 function pressbooks_book_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
+	// add_theme_support( 'html5', [ 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ] ); // @codingStandardsIgnoreLine
 	remove_action( 'wp_head', 'wp_generator' );
 }
 
@@ -490,7 +491,7 @@ add_action('wp_head', function() {
 
 
 function pb_use_htmlbook() {
-	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {
+	if ( Container::get( 'Styles' )->hasBuckram( '0.3.0' ) ) {
 		return true;
 	}
 	return false;
