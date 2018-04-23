@@ -308,6 +308,12 @@ $introduction-page-number-left: counter(page) !default;
 /// Introduction page number style on right page.
 $introduction-page-number-right: counter(page) !default;
 
+/// Introduction page number style on left page.
+$post-introduction-page-number-left: counter(page) !default;
+
+/// Introduction page number style on right page.
+$post-introduction-page-number-right: counter(page) !default;
+
 /// Part page number style on left page.
 $part-page-number-left: counter(page) !default;
 

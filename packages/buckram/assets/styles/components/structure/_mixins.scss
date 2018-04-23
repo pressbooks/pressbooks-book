@@ -13,7 +13,8 @@
   @if $content-position {
     @each $page-type in
       'front-matter:#{$page-position}',
-      'introduction:#{$page-position}' {
+      'introduction:#{$page-position}',
+      'post-introduction:#{$page-position}' {
       @page #{$page-type} {
         @if $page-position == 'first:left' {
           @if (if-map-get($content-position, left)) {
@@ -140,6 +141,7 @@
   @each $page-type in
     'front-matter:#{$page-position}',
     'introduction:#{$page-position}',
+    'post-introduction:#{$page-position}',
     'part:#{$page-position}',
     'chapter:#{$page-position}',
     'back-matter:#{$page-position}' {
@@ -214,6 +216,7 @@
   @each $page-type in
     'front-matter:#{$page-position}',
     'introduction:#{$page-position}',
+    'post-introduction:#{$page-position}',
     'part:#{$page-position}',
     'chapter:#{$page-position}',
     'back-matter:#{$page-position}' {

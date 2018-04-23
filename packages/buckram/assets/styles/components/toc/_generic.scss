@@ -35,13 +35,11 @@
     .chapter-subtitle {
       hyphens: none;
       text-indent: 0;
-     //width: $toc-sub-width;
     }
 
     .chapter-author {
       hyphens: none;
       text-indent: 0;
-      //width: $toc-sub-width;
     }
 
     .front-matter {
@@ -97,10 +95,6 @@
       font-weight: $toc-chapter-title-font-weight;
       line-height: if-map-get($toc-chapter-line-height, $type);
       text-transform: $toc-chapter-title-text-transform;
-    }
-
-    .chapter .toc-chapter-title {
-      // TODO
     }
 
     .chapter .chapter-subtitle {
@@ -226,6 +220,11 @@
       font-weight: $toc-front-matter-page-number-font-weight;
       text-transform: $toc-front-matter-page-number-text-transform;
       hyphens: none;
+    }
+
+    .front-matter.introduction a::after,
+    .front-matter.post-introduction a::after {
+      content: target-counter(attr(href), page);
     }
 
     .chapter a::before {

@@ -16,6 +16,7 @@
 $left-running-content: (
   front-matter: $front-matter-running-content-left,
   introduction: $introduction-running-content-left,
+  post-introduction: $introduction-running-content-left,
   part: $part-running-content-left,
   chapter: $chapter-running-content-left,
   back-matter: $back-matter-running-content-left
@@ -24,6 +25,7 @@ $left-running-content: (
 $right-running-content: (
   front-matter: $front-matter-running-content-right,
   introduction: $introduction-running-content-right,
+  post-introduction: $introduction-running-content-right,
   part: $part-running-content-right,
   chapter: $chapter-running-content-right,
   back-matter: $back-matter-running-content-right
@@ -32,6 +34,7 @@ $right-running-content: (
 $left-page-number: (
   front-matter: $front-matter-page-number-left,
   introduction: $introduction-page-number-left,
+  post-introduction: $introduction-page-number-left,
   part: $part-page-number-left,
   chapter: $chapter-page-number-left,
   back-matter: $back-matter-page-number-left
@@ -40,6 +43,7 @@ $left-page-number: (
 $right-page-number: (
   front-matter: $front-matter-page-number-right,
   introduction: $introduction-page-number-right,
+  post-introduction: $introduction-page-number-right,
   part: $part-page-number-right,
   chapter: $chapter-page-number-right,
   back-matter: $back-matter-page-number-right
@@ -97,6 +101,16 @@ $right-page-number: (
 @include page-structure('introduction', 'first', convert-position('first', $first-numbering-position), convert-position('first', $first-running-content-position));
 @include page-structure('introduction', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
 @include page-structure('introduction', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));
+
+// Post-introduction
+@page post-introduction:first {
+  @include blank-head-and-foot;
+}
+
+@include page-structure('post-introduction', 'first', convert-position('first', $first-numbering-position), convert-position('first', $first-running-content-position));
+@include page-structure('post-introduction', 'left', convert-position('left', $numbering-position), convert-position('left', $running-content-position));
+@include page-structure('post-introduction', 'right', convert-position('right', $numbering-position), convert-position('right', $running-content-position));
+
 
 // Parts
 @page part:first {
