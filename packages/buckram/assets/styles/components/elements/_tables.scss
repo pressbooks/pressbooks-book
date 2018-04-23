@@ -97,7 +97,8 @@
   .front-matter,
   .part,
   .chapter,
-  .back-matter {
+  .back-matter,
+  body#tinymce.wp-editor {
     table {
       display: table;
       max-width: 100%;

@@ -289,7 +289,8 @@
   .front-matter,
   .part,
   .chapter,
-  .back-matter {
+  .back-matter,
+  body#tinymce.wp-editor {
     ol {
       @extend %ol;
     }

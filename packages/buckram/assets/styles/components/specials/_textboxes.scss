@@ -43,6 +43,42 @@
   }
 }
 
+@mixin edu-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
+  margin-bottom: if-map-get($edu-textbox-margin-bottom, $type);
+  padding: 0;
+  border-radius: if-map-get($edu-textbox-border-radius, $type);
+  border-style: $edu-textbox-border-style;
+  border-width: if-map-get($edu-textbox-border-width, $type);
+  color: $color;
+  background: $background;
+
+  .textbox__header {
+    background: $header-background;
+    border-top-left-radius: if-map-get($edu-textbox-border-radius, $type);
+    border-top-right-radius: if-map-get($edu-textbox-border-radius, $type);
+    color: $header-color;
+    font-size: $edu-header-font-size;
+    font-style: $edu-header-font-style;
+    font-weight: $edu-header-font-weight;
+    margin: 0;
+    padding:
+      if-map-get($edu-textbox-padding-top, $type)
+      if-map-get($edu-textbox-padding-right, $type)
+      if-map-get($edu-textbox-padding-bottom, $type)
+      if-map-get($edu-textbox-padding-left, $type);
+    text-align: $edu-header-text-align;
+  }
+
+  .textbox__content {
+    margin: 0;
+    padding:
+      if-map-get($edu-textbox-padding-top, $type)
+      if-map-get($edu-textbox-padding-right, $type)
+      if-map-get($edu-textbox-padding-bottom, $type)
+      if-map-get($edu-textbox-padding-left, $type);
+  }
+}
+
 .textbox {
   padding: if-map-get($textbox-padding-top, $type) if-map-get($textbox-padding-right, $type) if-map-get($textbox-padding-bottom, $type) if-map-get($textbox-padding-left, $type);
   margin: if-map-get($textbox-margin-top, $type) if-map-get($textbox-margin-right, $type) if-map-get($textbox-margin-bottom, $type) if-map-get($textbox-margin-left, $type);
@@ -94,16 +130,32 @@
     @include educational-textbox($learning-objectives-header-color, $learning-objectives-header-background, $learning-objectives-color, $learning-objectives-background);
   }
 
+  &.textbox--learning-objectives {
+    @include edu-textbox($learning-objectives-header-color, $learning-objectives-header-background, $learning-objectives-color, $learning-objectives-background);
+  }
+
   &.key-takeaways {
     @include educational-textbox($key-takeaways-header-color, $key-takeaways-header-background, $key-takeaways-color, $key-takeaways-background);
+  }
+
+  &.textbox--key-takeaways {
+    @include edu-textbox($key-takeaways-header-color, $key-takeaways-header-background, $key-takeaways-color, $key-takeaways-background);
   }
 
   &.exercises {
     @include educational-textbox($exercises-header-color, $exercises-header-background, $exercises-color, $exercises-background);
   }
 
+  &.textbox--exercises {
+    @include edu-textbox($exercises-header-color, $exercises-header-background, $exercises-color, $exercises-background);
+  }
+
   &.examples {
     @include educational-textbox($examples-header-color, $examples-header-background, $examples-color, $examples-background);
+  }
+
+  &.textbox--examples {
+    @include edu-textbox($examples-header-color, $examples-header-background, $examples-color, $examples-background);
   }
 }
 
@@ -121,6 +173,15 @@
 
 .bcc-info {
   @extend .textbox.exercises;
+}
+
+.textbox--sidebar {
+  float: if-map-get($textbox-sidebar-float, $type);
+  margin: if-map-get($textbox-sidebar-margin-top, $type) if-map-get($textbox-sidebar-margin-right, $type) if-map-get($textbox-sidebar-margin-bottom, $type) if-map-get($textbox-sidebar-margin-left, $type);
+  @if $type == 'prince' {
+    margin-inside: $textbox-sidebar-margin-inside;
+  }
+  max-width: 25%;
 }
 
 @if $type == 'epub' {

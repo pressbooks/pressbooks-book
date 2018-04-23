@@ -571,6 +571,61 @@ $textbox-caption-font-style: normal !default;
 /// @type String
 $textbox-caption-font-weight: bold !default;
 
+/// Float property for sidebar textboxes.
+/// @param String | Map
+/// @since 1.0.0
+$textbox-sidebar-float: (
+  prince: outside,
+  epub: right,
+  web: right
+) !default;
+
+/// Top margin property for sidebar textboxes.
+/// @param String | Map
+/// @since 1.0.0
+$textbox-sidebar-margin-top: (
+  prince: 1em,
+  epub: 1em,
+  web: 1em
+) !default;
+
+/// Right margin property for sidebar textboxes.
+/// @param String | Map
+/// @since 1.0.0
+$textbox-sidebar-margin-right: (
+  prince: 0,
+  epub: 0,
+  web: 0
+) !default;
+
+/// Bottom margin property for sidebar textboxes.
+/// @param String | Map
+/// @since 1.0.0
+$textbox-sidebar-margin-bottom: (
+  prince: 1em,
+  epub: 1em,
+  web: 1em
+) !default;
+
+/// Left margin property for sidebar textboxes.
+/// @param String | Map
+/// @since 1.0.0
+$textbox-sidebar-margin-left: (
+  prince: 0,
+  epub: 1em,
+  web: 1em
+) !default;
+
+/// Inside margin property for sidebar textboxes.
+/// @param String
+/// @since 1.0.0
+$textbox-sidebar-margin-inside: 1em !default;
+
+/// Max width property for sidebar textboxes.
+/// @param String
+/// @since 1.0.0
+$textbox-sidebar-max-width: 25% !default;
+
 /// Educational Textbox border style.
 /// @type String
 $edu-textbox-border-style: solid !default;
@@ -650,12 +705,13 @@ $edu-header-margin-left: -1.2em !default;
 $edu-header-text-color: #fff !default;
 
 /// Educational Textbox header font size.
-/// @deprecated
 /// @type String
 $edu-header-font-size: 0.9em !default;
 
 /// Educational Textbox header font size multiplier, relative to $textbox-font-size.
 /// @since 0.6.0
+/// @since 1.0.0
+/// @deprecated
 /// @type String
 $edu-header-font-size-multiplier: 0.9 !default;
 

@@ -62,7 +62,8 @@
   .front-matter,
   .part,
   .chapter,
-  .back-matter {
+  .back-matter,
+  body#tinymce.wp-editor {
     // Cite
     cite {
       font-size: if-map-get($cite-font-size, $type);

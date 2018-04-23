@@ -36,7 +36,8 @@
   .front-matter,
   .part,
   .chapter,
-  .back-matter {
+  .back-matter,
+  body#tinymce.wp-editor {
     font-family: $body-font-family;
     font-size: if-map-get($body-font-size, $type);
     font-style: $body-font-style;
