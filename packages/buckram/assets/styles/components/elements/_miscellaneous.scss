@@ -26,7 +26,9 @@
     border-radius: if-map-get($code-border-radius, $type);
     font-family: $code-font-family;
     font-size: if-map-get($code-font-size, $type);
-    line-height: if-map-get($code-line-height, $type);
+    @if $type == 'prince' {
+      line-height: if-map-get($code-line-height, $type);
+    }
     margin: if-map-get($code-margin-top, $type) if-map-get($code-margin-right, $type) if-map-get($code-margin-bottom, $type) if-map-get($code-margin-left, $type);
     padding: if-map-get($code-padding-top, $type) if-map-get($code-padding-right, $type) if-map-get($code-padding-bottom, $type) if-map-get($code-padding-left, $type);
   }
@@ -37,7 +39,9 @@
     border-radius: if-map-get($pre-border-radius, $type);
     font-family: $pre-font-family;
     font-size: if-map-get($pre-font-size, $type);
-    line-height: if-map-get($pre-line-height, $type);
+    @if $type == 'prince' {
+      line-height: if-map-get($pre-line-height, $type);
+    }
     margin: if-map-get($pre-margin-top, $type) if-map-get($pre-margin-right, $type) if-map-get($pre-margin-bottom, $type) if-map-get($pre-margin-left, $type);
     padding: if-map-get($pre-padding-top, $type) if-map-get($pre-padding-right, $type) if-map-get($pre-padding-bottom, $type) if-map-get($pre-padding-left, $type);
 }
@@ -46,14 +50,18 @@
   sub {
     font-size: if-map-get($sub-font-size, $type);
     font-style: $sub-font-style;
-    line-height: if-map-get($sub-line-height, $type);
+    @if $type == 'prince' {
+      line-height: if-map-get($sub-line-height, $type);
+    }
     text-transform: $sub-text-transform;
   }
 
   sup {
     font-size: if-map-get($sup-font-size, $type);
     font-style: $sup-font-style;
-    line-height: if-map-get($sup-line-height, $type);
+    @if $type == 'prince' {
+      line-height: if-map-get($sup-line-height, $type);
+    }
     text-transform: $sup-text-transform;
   }
 }

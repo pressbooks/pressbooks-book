@@ -43,7 +43,9 @@ div.index {
 .back-matter .license-attribution {
   > p {
     text-align: $section-license-align;
-    line-height: $section-license-line-height;
+    @if $type != 'epub' {
+      line-height: $section-license-line-height;
+    }
     font-size: $section-license-font-size;
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;

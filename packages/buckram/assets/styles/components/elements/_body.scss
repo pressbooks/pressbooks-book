@@ -21,6 +21,10 @@
 }
 
 @if $type == 'epub' {
+  body * {
+    line-height: inherit;
+  }
+
   @media amzn-mobi {
     body {
       font-family: serif;

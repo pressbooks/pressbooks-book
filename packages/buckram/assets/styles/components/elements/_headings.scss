@@ -18,7 +18,9 @@
     font-size: if-map-get(map-get($_heading-font-size, $heading), $type);
     font-style: map-get($_heading-font-style, $heading);
     font-weight: map-get($_heading-font-weight, $heading);
-    line-height: if-map-get(map-get($_heading-line-height, $heading), $type);
+    @if $type != 'epub' {
+      line-height: if-map-get(map-get($_heading-line-height, $heading), $type);
+    }
     text-align: map-get($_heading-align, $heading);
     text-transform: map-get($_heading-text-transform, $heading);
   }

@@ -21,7 +21,9 @@
       font-style: $back-matter-title-font-style;
       font-weight: $back-matter-title-font-weight;
       hyphens: none;
-      line-height: if-map-get($back-matter-title-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($back-matter-title-line-height, $type);
+      }
       text-align: $back-matter-title-align;
       text-transform: $back-matter-title-text-transform;
     }

@@ -12,7 +12,9 @@ aside,
 .aside {
   padding: $aside-padding-top $aside-padding-right $aside-padding-bottom $aside-padding-left;
   margin: $aside-margin-top $aside-margin-right $aside-margin-bottom $aside-margin-left;
-  line-height: $aside-line-height;
+  @if $type != 'epub' {
+    line-height: $aside-line-height;
+  }
   text-indent: 0;
   border-top: $aside-border-top;
   border-right: $aside-border-right;
@@ -31,7 +33,9 @@ aside,
   font-style: $pullquote-font-style;
   font-weight: $pullquote-font-weight;
   hyphens: none;
-  line-height: $pullquote-line-height;
+  @if $type != 'epub' {
+    line-height: $pullquote-line-height;
+  }
   text-align: $pullquote-align;
   text-indent: 0;
   border-top: $pullquote-border-top;

@@ -88,7 +88,9 @@ h4.publisher {
   font-style: $title-publisher-font-style;
   font-weight: $title-publisher-font-weight;
   hyphens: none;
-  line-height: $title-publisher-line-height;
+  @if $type != 'epub' {
+    line-height: $title-publisher-line-height;
+  }
   letter-spacing: $title-publisher-letter-spacing;
   word-spacing: $title-publisher-word-spacing;
   text-align: $title-publisher-align;
@@ -103,7 +105,9 @@ h5.publisher-city {
   font-style: $title-publisher-city-font-style;
   font-weight: $title-publisher-city-font-weight;
   hyphens: none;
-  line-height: $title-publisher-city-line-height;
+  @if $type != 'epub' {
+    line-height: $title-publisher-city-line-height;
+  }
   letter-spacing: $title-publisher-city-letter-spacing;
   word-spacing: $title-publisher-city-word-spacing;
   text-align: $title-publisher-city-align;

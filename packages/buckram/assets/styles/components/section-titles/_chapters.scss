@@ -16,7 +16,9 @@
       font-style: $chapter-title-font-style;
       font-weight: $chapter-title-font-weight;
       hyphens: none;
-      line-height: if-map-get($chapter-title-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($chapter-title-line-height, $type);
+      }
       text-align: $chapter-title-align;
       text-transform: $chapter-title-text-transform;
       letter-spacing: if-map-get($chapter-title-letter-spacing, $type);
@@ -33,7 +35,9 @@
       font-size: if-map-get($chapter-number-font-size, $type);
       font-style: $chapter-number-font-style;
       font-weight: $chapter-number-font-weight;
-      line-height: if-map-get($chapter-number-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($chapter-number-line-height, $type);
+      }
       text-align: $chapter-number-align;
       text-transform: $chapter-number-text-transform;
       letter-spacing: if-map-get($chapter-number-letter-spacing, $type);
@@ -109,7 +113,9 @@ blockquote.aphorism {
   font-family: $aphorism-font-family;
   font-size: if-map-get($aphorism-font-size, $type);
   font-style: $aphorism-font-style;
-  line-height: if-map-get($aphorism-line-height, $type);
+  @if $type != 'epub' {
+    line-height: if-map-get($aphorism-line-height, $type);
+  }
   text-align: $aphorism-align;
   text-indent: if-map-get($aphorism-indent, $type);
 

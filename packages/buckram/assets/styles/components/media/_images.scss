@@ -17,7 +17,9 @@
   font-style: $image-caption-font-style;
   font-weight: $image-caption-font-weight;
   hyphens: none;
-  line-height: if-map-get($image-caption-line-height, $type);
+  @if $type != 'epub' {
+    line-height: if-map-get($image-caption-line-height, $type);
+  }
   padding-bottom: if-map-get($image-caption-padding-bottom, $type);
   text-align: $image-caption-text-align;
   text-transform: $image-caption-text-transform;

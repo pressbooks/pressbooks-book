@@ -86,7 +86,9 @@
   font-size: if-map-get($textbox-font-size, $type);
   font-style: $textbox-font-style;
   font-weight: $textbox-font-weight;
-  line-height: if-map-get($textbox-line-height, $type);
+  @if $type != 'epub' {
+    line-height: if-map-get($textbox-line-height, $type);
+  }
   text-align: $textbox-text-align;
   border-style: $textbox-border-style;
   border-width: if-map-get($textbox-border-width, $type);

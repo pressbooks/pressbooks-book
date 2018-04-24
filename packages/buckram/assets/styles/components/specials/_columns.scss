@@ -8,7 +8,9 @@
   margin-top: $column-margin-top;
   margin-bottom: $column-margin-bottom;
   font-size: $column-twocolumn-font-size;
-  line-height: $column-line-height;
+  @if $type != 'epub' {
+    line-height: $column-line-height;
+  }
   text-align: if-map-get($para-align, $type);
   column-gap: $column-twocolumn-column-gap;
   column-count: 2;
@@ -16,7 +18,9 @@
 
   p {
     font-size: inherit;
-    line-height: $column-line-height;
+    @if $type != 'epub' {
+      line-height: $column-line-height;
+    }
     text-align: if-map-get($para-align, $type);
     text-indent: $para-indent;
   }
@@ -30,14 +34,18 @@
   margin-top: $column-margin-top;
   margin-bottom: $column-margin-bottom;
   font-size: $column-threecolumn-font-size;
-  line-height: $column-line-height;
+  @if $type != 'epub' {
+    line-height: $column-line-height;
+  }
   column-gap: $column-threecolumn-column-gap;
   column-count: 3;
   column-fill: balance;
 
   p {
     font-size: inherit;
-    line-height: $column-line-height;
+    @if $type != 'epub' {
+      line-height: $column-line-height;
+    }
     text-align: left;
     text-indent: $para-indent;
   }

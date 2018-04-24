@@ -3,7 +3,9 @@
 @if $type != 'web' {
   #toc {
     ul {
-      line-height: if-map-get($toc-base-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($toc-base-line-height, $type);
+      }
       list-style: none;
       margin: 0;
       padding: 0;
@@ -49,7 +51,9 @@
       font-style: $toc-front-matter-title-font-style;
       font-weight: $toc-front-matter-title-font-weight;
       hyphens: none;
-      line-height: if-map-get($toc-front-matter-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($toc-front-matter-line-height, $type);
+      }
       text-transform: $toc-front-matter-title-text-transform;
     }
 
@@ -78,7 +82,9 @@
       font-style: $toc-part-title-font-style;
       font-weight: $toc-part-title-font-weight;
       hyphens: none;
-      line-height: if-map-get($toc-part-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($toc-part-line-height, $type);
+      }
       margin-top: if-map-get($toc-block-margin-top, $type);
       text-transform: $toc-part-title-text-transform;
     }
@@ -93,7 +99,9 @@
       font-size: if-map-get($toc-chapter-title-font-size, $type);
       font-style: $toc-chapter-title-font-style;
       font-weight: $toc-chapter-title-font-weight;
-      line-height: if-map-get($toc-chapter-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($toc-chapter-line-height, $type);
+      }
       text-transform: $toc-chapter-title-text-transform;
     }
 
@@ -122,7 +130,9 @@
       font-style: $toc-back-matter-title-font-style;
       font-weight: $toc-back-matter-title-font-weight;
       hyphens: none;
-      line-height: if-map-get($toc-front-matter-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($toc-front-matter-line-height, $type);
+      }
       text-transform: $toc-back-matter-title-text-transform;
     }
 
@@ -171,7 +181,9 @@
       font-size: if-map-get($toc-section-title-font-size, $type);
       font-style: $toc-section-title-font-style;
       font-weight: $toc-section-title-font-weight;
-      line-height: if-map-get($toc-front-matter-line-height, $type);
+      @if $type != 'epub' {
+        line-height: if-map-get($toc-front-matter-line-height, $type);
+      }
       margin-top: if-map-get($toc-section-margin-top, $type);
     }
   }
