@@ -761,7 +761,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/ua-parser-js@^0.7.30", "@types/ua-parser-js@^0.7.31":
+"@types/ua-parser-js@^0.7.31":
   version "0.7.32"
   resolved "https://registry.yarnpkg.com/@types/ua-parser-js/-/ua-parser-js-0.7.32.tgz#8827d451d6702307248073b5d98aa9293d02b5e5"
 
@@ -2175,9 +2175,9 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
 
-browser-capabilities@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/browser-capabilities/-/browser-capabilities-0.2.2.tgz#a44639d841dc9f0521c66776fc87b88481ca5c7a"
+browser-capabilities@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/browser-capabilities/-/browser-capabilities-1.0.0.tgz#f56d20a6f08bd7b9805154ac1cfdccc980a5ac12"
   dependencies:
     "@types/ua-parser-js" "^0.7.31"
     ua-parser-js "^0.7.15"
@@ -8178,9 +8178,9 @@ polymer-analyzer@^3.0.0-pre.23:
     vscode-uri "^1.0.1"
     whatwg-url "^6.4.0"
 
-polymer-build@=3.0.0-pre.13:
-  version "3.0.0-pre.13"
-  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.13.tgz#5bc8558da4718f1dbb726026953d5e42a556d269"
+polymer-build@=3.0.0-pre.14:
+  version "3.0.0-pre.14"
+  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.14.tgz#cb87236c3c13c42dd69a520c449f9fe8b71025c4"
   dependencies:
     "@babel/core" "^7.0.0-beta.42"
     "@babel/plugin-external-helpers" "^7.0.0-beta.42"
@@ -8261,8 +8261,8 @@ polymer-project-config@^3.13.0:
     plylog "^0.5.0"
 
 polyserve@^0.27.4:
-  version "0.27.6"
-  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.6.tgz#cd65b40874bfa166e0762f02be715e18d96f0830"
+  version "0.27.7"
+  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.7.tgz#dc9f586f5a780824387c5f18fd7e6e4a3f08e016"
   dependencies:
     "@types/compression" "^0.0.33"
     "@types/content-type" "^1.1.0"
@@ -8277,9 +8277,8 @@ polyserve@^0.27.4:
     "@types/resolve" "0.0.6"
     "@types/serve-static" "^1.7.31"
     "@types/spdy" "^3.4.1"
-    "@types/ua-parser-js" "^0.7.30"
     bower-config "^1.4.1"
-    browser-capabilities "^0.2.2"
+    browser-capabilities "^1.0.0"
     command-line-args "^3.0.1"
     command-line-usage "^3.0.3"
     compression "^1.6.2"
@@ -8293,7 +8292,7 @@ polyserve@^0.27.4:
     mz "^2.4.0"
     opn "^3.0.2"
     pem "^1.8.3"
-    polymer-build "=3.0.0-pre.13"
+    polymer-build "=3.0.0-pre.14"
     requirejs "^2.3.4"
     resolve "^1.5.0"
     send "^0.14.1"
