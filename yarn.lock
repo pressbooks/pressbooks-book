@@ -8107,9 +8107,9 @@ shallow-clone@^0.1.2:
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
 
-sharer.js@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/sharer.js/-/sharer.js-0.3.1.tgz#6bb560082587d5057e140f6ec2b7b642d9bc54e1"
+sharer.js@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/sharer.js/-/sharer.js-0.3.3.tgz#73eb30fc8834224698a44e18dc637c772c514f5f"
 
 shebang-command@^1.2.0:
   version "1.2.0"
