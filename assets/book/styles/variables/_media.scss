@@ -3,7 +3,7 @@
 ////
 
 /// Bottom padding for image captions.
-/// @type String
+/// @type String | Map
 $image-caption-padding-bottom: 0.5em !default;
 
 /// Font stack for image captions.
@@ -11,7 +11,7 @@ $image-caption-padding-bottom: 0.5em !default;
 $image-caption-font-family: $font-1 !default;
 
 /// Font size for image captions.
-/// @type String
+/// @type String | Map
 $image-caption-font-size: 0.8em !default;
 
 /// Font style for image captions.
@@ -23,8 +23,12 @@ $image-caption-font-style: normal !default;
 $image-caption-font-weight: normal !default;
 
 /// Line height for image captions.
-/// @type String
-$image-caption-line-height: 1.2em !default;
+/// @type String | Map
+$image-caption-line-height: (
+  prince: 1.2em,
+  epub: 1.2,
+  web: 1.2em
+) !default;
 
 /// Text alignment for image captions.
 /// @type String
@@ -35,24 +39,81 @@ $image-caption-text-align: left !default;
 $image-caption-text-transform: none !default;
 
 /// Top margin for image wrappers.
-/// @type String
+/// @type String | Map
 $image-wrapper-margin-top: 0.5em !default;
 
+/// Top margin for floated image wrappers
+/// @type String | Map
+/// @since 1.0.0
+$floated-image-wrapper-margin-top: $image-wrapper-margin-top !default;
+
 /// Bottom margin for image wrappers.
-/// @type String
+/// @type String | Map
 $image-wrapper-margin-bottom: 0.5em !default;
 
+/// Bottom margin for floated image wrappers
+/// @type String | Map
+/// @since 1.0.0
+$floated-image-wrapper-margin-bottom: $image-wrapper-margin-bottom !default;
+
 /// Right margin for left-aligned images.
-/// @type String
+/// @type String | Map
 $image-alignleft-margin-right: 1em !default;
 
 /// Left margin for right-aligned images.
-/// @type String
+/// @type String | Map
 $image-alignright-margin-left: 1em !default;
 
 /// Image resolution for PrinceXML PDF outputs.
 /// @type String
-$prince-image-resolution: auto,normal !default;
+$prince-image-resolution: auto, normal !default;
+
+/// Image float for alignnone images (Prince only).
+/// @type String
+/// @since 1.0.0
+$image-alignnone-image-float: none !default;
+
+/// Caption float for alignnone images (Prince only).
+/// @type String
+/// @since 1.0.0
+$image-alignnone-caption-float: none !default;
+
+/// Left padding for captions on alignnone images (Prince only).
+/// @type String | Map
+/// @since 1.0.0
+$image-alignnone-caption-left-padding: 0 !default;
+
+/// Width for captions on alignnone images (Prince only).
+/// @type String | Map
+/// @since 1.0.0
+$image-alignnone-caption-width: 100% !default;
+
+/// Max width for captioned alignnone images (Prince only).
+/// @type String | Map
+/// @since 1.0.0
+$image-alignnone-image-maxwidth: 100% !default;
+
+/// Caption text alignment for aligncenter images.
+/// @type String
+/// @since 1.0.0
+$image-aligncenter-caption-text-align: $image-caption-text-align !default;
+
+/// Caption text alignment for alignleft images.
+/// @type String
+/// @since 1.0.0
+$image-alignleft-caption-text-align: $image-caption-text-align !default;
+
+/// Caption text alignment for alignright images.
+/// @type String
+/// @since 1.0.0
+$image-alignright-caption-text-align: $image-caption-text-align !default;
+
+// Secret!
+$_image-caption-text-align: (
+  center: $image-aligncenter-caption-text-align,
+  left: $image-alignleft-caption-text-align,
+  right: $image-alignright-caption-text-align
+);
 
 /// Icon image URL for generic interactive content
 /// @type String | Map

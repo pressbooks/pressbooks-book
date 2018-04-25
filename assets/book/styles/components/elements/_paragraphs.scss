@@ -156,7 +156,8 @@
   .front-matter,
   .part,
   .chapter,
-  .back-matter {
+  .back-matter,
+  body#tinymce.wp-editor {
     p {
       margin-bottom: $para-margin-bottom;
       text-align: if-map-get($para-align, $type);

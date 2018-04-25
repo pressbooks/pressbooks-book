@@ -14,7 +14,9 @@
     font-size: $blockquote-font-size;
     font-style: $blockquote-font-style;
     font-weight: $blockquote-font-weight;
-    line-height: $blockquote-line-height;
+    @if $type == 'prince' {
+      line-height: $blockquote-line-height;
+    }
     text-align: $blockquote-align;
   }
 }
@@ -54,7 +56,8 @@
   .front-matter blockquote,
   .part blockquote,
   .chapter blockquote,
-  .back-matter blockquote {
+  .back-matter blockquote,
+  body#tinymce.wp-editor blockquote {
     margin: $blockquote-margin-top $blockquote-margin-right $blockquote-margin-bottom $blockquote-margin-left;
     font-family: $blockquote-font-family;
     font-size: $blockquote-font-size;

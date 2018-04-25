@@ -25,6 +25,7 @@
       font-size: if-map-get($copyright-font-size, $type);
       font-style: $copyright-font-style;
       font-weight: $copyright-font-weight;
+      hyphens: $copyright-hyphens;
       line-height: $copyright-line-height;
       text-align: $copyright-align;
       text-indent: $copyright-indent;

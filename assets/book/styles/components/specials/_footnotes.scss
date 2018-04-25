@@ -62,7 +62,6 @@
   .endnote,
   .footnote {
     font-size: $footnote-number-marker-font-size;
-    line-height: $footnote-number-marker-line-height;
     vertical-align: top;
   }
 
@@ -107,7 +106,9 @@
 
 .endnotes {
   margin-left: $endnote-margin-left;
-  line-height: $endnote-line-height;
+  @if $type != 'epub' {
+    line-height: $endnote-line-height;
+  }
 
   h3 {
     padding-bottom: $endnote-header-padding-bottom;
