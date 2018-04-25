@@ -17,6 +17,8 @@
 		"sharer.js": "^0.3.3"
 	},
 	"devDependencies": {
+		"browser-sync": "^2.23.7",
+		"browser-sync-webpack-plugin": "^2.2.2",
 		"pressbooks-build-tools": "^0.11.0"
 	},
 	"scripts": {
@@ -27,8 +29,8 @@
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
 		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
 		"lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
-    "test": "npm run -s lint",
-    "install": "npm run -s build:production"
+		"test": "npm run -s lint",
+		"install": "npm run -s build:production"
 	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
