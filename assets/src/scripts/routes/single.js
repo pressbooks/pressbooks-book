@@ -1,7 +1,43 @@
+import { diffWords } from 'diff';
+
 export default {
 	init() {
 		// Javascript to be fired on single reading view
 		jQuery( $ => {
+			$( '#compare' ).click( () => {
+				let container = $( '#diff' );
+				let current = container.html();
+				let endpoint = container.attr( 'data-source-endpoint' );
+				fetch( endpoint )
+					.then( function ( response ) {
+						if ( response.status !== 200 ) {
+							// TODO
+							return;
+						}
+
+						response.json().then( function ( data ) {
+							let source = data.content.raw;
+							let diff = diffWords( source, current );
+							let fragment = document.createDocumentFragment();
+							diff.forEach( function ( part ) {
+								let color = part.added
+									? 'green'
+									: part.removed ? 'red' : 'grey';
+								let span = document.createElement( 'span' );
+								span.style.color = color;
+								span.appendChild( document.createTextNode( part.value ) );
+								fragment.appendChild( span );
+							} );
+							container.html( fragment );
+							container.removeAttr( 'hidden' );
+							$( '#compare' ).text( 'Hide Comparison' );
+						} );
+					} )
+					.catch( function ( err ) {
+						// TODO
+					} );
+			} );
+
 			$( document ).ready( function () {
 				const offset = 250;
 				const duration = 300;
