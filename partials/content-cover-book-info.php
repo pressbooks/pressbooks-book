@@ -11,39 +11,23 @@
 			</div>
 		<?php endif;
 if ( isset( $book_information['pb_is_based_on'] ) ) {
-	$output = get_transient( 'pb_book_source' );
-	if ( $output !== false ) {
-		echo $output;
-	} else {
-		ob_start();
-		$source_url = \Pressbooks\Book\Helpers\get_source_book( $book_information['pb_is_based_on'] ); ?>
-			<div class="block-info__subsection block-info__source">
-			<h3 class="block__subtitle"><?php _e( 'Book Source', 'pressbooks-book' ); ?></h3>
-			<p>
-				<?php $source_book = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' )['body'], true );
-				$authors = [];
-				if ( array_key_exists( 'name', $source_book['author'] ) ) {
-					$authors[] = $source_book['author']['name'];
-				} else {
-					foreach ( $source_book['author'] as $author ) {
-						$authors[] = $author['name'];
-					}
-				};
-				printf(
-					__( 'This book is a cloned version of %1$s by %2$s, published using Pressbooks by %3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
-					sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_book['name'] ),
-					\Pressbooks\Utility\oxford_comma( $authors ),
-					( isset( $source_book['publisher'] ) ) ? $source_book['publisher']['name'] : '',
-					sprintf( '<a href="%1$s">%2$s</a>', $source_book['license']['url'], $source_book['license']['name'] )
-				); ?>
-			</p>
-			</div>
-		<?php
-		$output = ob_get_clean();
-		echo $output;
-		set_transient( 'pb_book_source', $output );
-	}
-} ?>
+	$source_url = \Pressbooks\Book\Helpers\get_source_book_url( $book_information['pb_is_based_on'] );
+	$source_meta = \Pressbooks\Book\Helpers\get_source_book_meta( $source_url );
+	?>
+
+	<div class="block-info__subsection block-info__source">
+		<h3 class="block__subtitle"><?php _e( 'Book Source', 'pressbooks-book' ); ?></h3>
+		<p>
+			<?php printf(
+				__( 'This book is a cloned version of %1$s by %2$s, published using Pressbooks by %3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
+				sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
+				\Pressbooks\Book\Helpers\get_book_authors( $source_meta ),
+				( isset( $source_meta['publisher'] ) ) ? $source_meta['publisher']['name'] : '',
+				sprintf( '<a href="%1$s">%2$s</a>', $source_meta['license']['url'], $source_meta['license']['name'] )
+			); ?>
+		</p>
+	</div>
+<?php } ?>
 </div>
 		<div class="block-info__inner__content">
 			<div class="block-info__subsection block-info__lead-author">
