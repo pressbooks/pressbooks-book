@@ -284,7 +284,7 @@ function get_original_section( $needle, $haystack ) {
 	if ( in_array( $post_type, [ 'front-matter', 'back-matter' ], true ) ) {
 		foreach ( $haystack[ $post_type ] as $key => $value ) {
 			if ( \Pressbooks\Utility\str_ends_with( $value['link'], trailingslashit( implode( '/', [ $post_type, $slug ] ) ) ) ) {
-				return $value['link'];
+				return $value;
 			}
 		}
 	}
