@@ -106,7 +106,7 @@ function pb_enqueue_assets() {
 	$options = get_option( 'pressbooks_theme_options_web' );
 
 	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
-	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:400,700', false, null );
+	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700|Spectral:400,700', false, null );
 	if ( pb_social_media_enabled() ) {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
@@ -118,6 +118,9 @@ function pb_enqueue_assets() {
 			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
 			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
 			'home_path' => ( is_subdomain_install() ) ? '/' : str_replace( network_home_url( '/' ), '/', home_url( '/' ) ),
+			'comparison_loading' => __( 'Comparison loading…', 'pressbooks-book' ),
+			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
+			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
 		]
 	);
 

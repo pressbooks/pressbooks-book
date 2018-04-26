@@ -13,8 +13,10 @@
 	"dependencies": {
 		"aetna": "^1.0.0-alpha.17",
 		"buckram": "^0.7.3",
+		"diff": "^3.5.0",
 		"js-cookie": "^2.2.0",
-		"sharer.js": "^0.3.3"
+		"sharer.js": "^0.3.3",
+		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
 		"browser-sync": "^2.23.7",

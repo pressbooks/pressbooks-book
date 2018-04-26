@@ -17,7 +17,10 @@ mix
 	.setPublicPath( 'dist' )
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
 	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
-	.js( 'assets/src/scripts/collapse-sections.js', 'dist/scripts/collapse-sections.js' )
+	.js(
+		'assets/src/scripts/collapse-sections.js',
+		'dist/scripts/collapse-sections.js'
+	)
 	.sass( 'assets/src/styles/book.scss', 'dist/styles' )
 	.sass( 'assets/legacy/styles/web-house-style.scss', 'dist/styles' )
 	.copyDirectory( 'node_modules/buckram/assets/styles', 'assets/book/styles' )
@@ -29,7 +32,7 @@ mix
 // BrowserSync
 mix.browserSync( {
 	host:  'localhost',
-	proxy: 'https://pressbooks.test/standardtest',
+	proxy: 'https://pressbooks.test/standardtestbook',
 	port:  3200,
 	files: [ '*.php', '', `${dist}/**/*.css`, `${dist}/**/*.js` ],
 } );

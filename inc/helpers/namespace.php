@@ -194,3 +194,118 @@ function get_source_book( $book_url, $checked = [] ) {
 	}
 	return $output;
 }
+
+/**
+ * Get the (possibly cached) URL for the original source of a cloned book.
+ *
+ * @since 2.3.0
+ *
+ * @param string $book_url The URL of the book to trace.
+ *
+ * @return array The metadata array.
+ */
+function get_source_book_url( $book_url ) {
+	$source_url = get_transient( 'pb_book_source_url' );
+	if ( $source_url === false ) {
+		$source_url = \Pressbooks\Book\Helpers\get_source_book( $book_url );
+		set_transient( 'pb_book_source_url', $source_url );
+	}
+	return $source_url;
+}
+
+/**
+ * Get the metadata from the original source of a cloned book.
+ *
+ * @since 2.3.0
+ *
+ * @param string $source_url The URL of the original book.
+ *
+ * @return array The metadata array.
+ */
+function get_source_book_meta( $source_url ) {
+	$source_meta = get_transient( 'pb_book_source_metadata' );
+	if ( $source_meta === false ) {
+		$source_meta = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' )['body'], true );
+		set_transient( 'pb_book_source_metadata', $source_meta );
+	}
+	return $source_meta;
+}
+
+/**
+ * Get the metadata from the original source of a cloned book.
+ *
+ * @since 2.3.0
+ *
+ * @param string $source_url The URL of the original book.
+ *
+ * @return array The metadata array.
+ */
+function get_source_book_toc( $source_url ) {
+	$source_toc = get_transient( 'pb_book_source_toc' );
+	if ( $source_toc === false ) {
+		$source_toc = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/toc/' )['body'], true );
+		set_transient( 'pb_book_source_toc', $source_toc );
+	}
+	return $source_toc;
+}
+
+/**
+ * Lists a book's authors from API metadata.
+ *
+ * @since 2.3.0
+ *
+ * @param array $metadata The book metadata.
+ */
+
+function get_book_authors( $metadata ) {
+	$authors = [];
+	if ( array_key_exists( 'name', $metadata['author'] ) ) {
+		$authors[] = $metadata['author']['name'];
+	} else {
+		foreach ( $metadata['author'] as $author ) {
+			$authors[] = $author['name'];
+		}
+	};
+	return \Pressbooks\Utility\oxford_comma( $authors );
+}
+
+/**
+ * Get the original section.
+ *
+ * @param string $needle
+ * @param array $haystack
+ */
+
+function get_original_section( $needle, $haystack ) {
+	$parts = explode( '/', untrailingslashit( $needle ) );
+	$post_type = $parts[ count( $parts ) - 2 ];
+	$slug = $parts[ count( $parts ) - 1 ];
+
+	if ( in_array( $post_type, [ 'front-matter', 'back-matter' ], true ) ) {
+		foreach ( $haystack[ $post_type ] as $key => $value ) {
+			if ( \Pressbooks\Utility\str_ends_with( $value['link'], trailingslashit( implode( '/', [ $post_type, $slug ] ) ) ) ) {
+				return $value;
+			}
+		}
+	}
+
+	if ( $post_type === 'part' ) {
+		foreach ( $haystack['parts'] as $key => $value ) {
+			if ( \Pressbooks\Utility\str_ends_with( $value['link'], trailingslashit( implode( '/', [ $post_type, $slug ] ) ) ) ) {
+				return $value;
+			}
+		}
+	}
+
+	if ( $post_type === 'chapter' ) {
+		foreach ( $haystack['parts'] as $part ) {
+			foreach ( $part['chapters'] as $key => $value ) {
+				if ( \Pressbooks\Utility\str_ends_with( $value['link'], trailingslashit( implode( '/', [ $post_type, $slug ] ) ) ) ) {
+					return $value;
+				}
+			}
+		}
+	}
+
+	return false;
+}

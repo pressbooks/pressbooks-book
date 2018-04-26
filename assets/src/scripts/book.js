@@ -1,5 +1,5 @@
 // import external dependencies
-// import 'jquery';
+import 'diff';
 
 // import local dependencies
 import Router from './util/Router';
