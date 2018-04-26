@@ -1,7 +1,9 @@
 <?php $meta = new \Pressbooks\Metadata();
 $pb_book_is_based_on = get_post_meta( $meta->getMetaPost()->ID, 'pb_is_based_on', true );
 $pb_section_is_based_on = get_post_meta( $post->ID, 'pb_is_based_on', true );
-if ( $pb_book_is_based_on ) {
+$options = get_option( 'pressbooks_theme_options_web' );
+$option = $options['allow_source_comparison'] ?? false;
+if ( $pb_book_is_based_on && $option ) {
 	$source_url = \Pressbooks\Book\Helpers\get_source_book_url( $pb_book_is_based_on );
 	$source_meta = \Pressbooks\Book\Helpers\get_source_book_meta( $source_url );
 	$source_toc = \Pressbooks\Book\Helpers\get_source_book_toc( $source_url );
