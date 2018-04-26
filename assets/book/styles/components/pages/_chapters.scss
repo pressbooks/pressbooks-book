@@ -9,7 +9,7 @@
 
 // License
 .chapter .license-attribution {
-  > p {
+  p {
     text-align: $section-license-align;
     @if $type != 'epub' {
       line-height: $section-license-line-height;
@@ -21,15 +21,7 @@
   }
 
   img {
-    margin-bottom: $section-license-image-margin-bottom;
-  }
-}
-
-@if $type == 'epub' {
-  @media amzn-mobi {
-    .chapter .license-attribution img {
-      width: $section-license-image-width !important;
-      height: $section-license-image-height !important;
-    }
+    height: 2em;
+    width: auto;
   }
 }
