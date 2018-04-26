@@ -68,10 +68,13 @@ div.epigraph {
 }
 
 // License
-.front-matter .license-attribution {
-  > p {
+.front-matter .license-attribution,
+#copyright-page .license-attribution {
+  p {
     text-align: $section-license-align;
-    line-height: $section-license-line-height;
+    @if $type != 'epub' {
+      line-height: $section-license-line-height;
+    }
     font-size: $section-license-font-size;
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;
@@ -79,16 +82,8 @@ div.epigraph {
   }
 
   img {
-    margin-bottom: $section-license-image-margin-bottom;
-  }
-}
-
-@if $type == 'epub' {
-  @media amzn-mobi {
-    .front-matter .license-attribution img {
-      width: $section-license-image-width !important;
-      height: $section-license-image-height !important;
-    }
+    height: 2em;
+    width: auto;
   }
 }
 
