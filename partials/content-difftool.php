@@ -32,7 +32,7 @@ if ( $pb_book_is_based_on && $option ) {
 		<div class="sk-child sk-double-bounce2"></div>
 	</div>
 	<div class="block-reading-meta__compare__comparison" hidden>
-		<p><?php printf( __( 'Note: The comparison below is between this text and the %s of the text from which is was adapted.', 'pressbooks-book' ), sprintf( '<strong>%s</strong>', __( 'current version', 'pressbooks-book' ) ) ); ?></p>
+		<p><?php printf( __( 'Note: The comparison below is between this text and the %s of the text from which it was adapted.', 'pressbooks-book' ), sprintf( '<strong>%s</strong>', __( 'current version', 'pressbooks-book' ) ) ); ?></p>
 		<p class="block-reading-meta__compare__stats"><ins><span class="num"></span> <?php _e( 'additions', 'pressbooks-book' ); ?></ins> / <del><span class="num"></span> <?php _e( 'deletions', 'pressbooks-book' ); ?></del></p>
 		<pre class="block-reading-meta__compare__diff" data-source-endpoint="<?php echo $source_endpoint ?>"><?php echo get_post_field( 'post_content', $post, 'raw' ); ?></pre>
 	</div>
