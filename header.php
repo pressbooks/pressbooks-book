@@ -62,7 +62,7 @@
 	<header class="header" role="banner">
 		<div class="header__inside">
 			<div class="header__brand">
-				<a title="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+				<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
 					<?php $root_id = get_network()->site_id;
 					if ( has_custom_logo( $root_id ) ) { ?>
 						<?php switch_to_blog( $root_id );
@@ -75,7 +75,7 @@
 						);
 						restore_current_blog(); ?>
 					<?php } else { ?>
-					<svg class="header__logo--svg">
+					<svg class="header__logo--svg" aria-role="img">
 						<use xlink:href="#logo-pressbooks" />
 					</svg><?php } ?>
 				</a>
