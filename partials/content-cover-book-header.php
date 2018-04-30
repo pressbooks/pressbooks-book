@@ -2,20 +2,18 @@
 	<div class="book-header__inner">
 		<?php pb_get_links( false ); ?>
 		<h1 class="section__title book-header__title">
-			<?php bloginfo( 'name' ); ?>
+			<span class="screen-reader-text"><?php _e( 'Book Title', 'pressbooks-book' ); ?>: </span><?php bloginfo( 'name' ); ?>
 		</h1>
 		<?php if ( ! empty( $book_information['pb_subtitle'] ) ) : ?>
-			<p class="book-header__subtitle"><?php echo $book_information['pb_subtitle']; ?></p>
+			<p class="book-header__subtitle"><span class="screen-reader-text"><?php _e( 'Subtitle', 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
 		<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
-			<p class="book-header__author">
-				<span class="fn"><?php echo $book_information['pb_authors']; ?></span>
-			</p>
+			<p class="book-header__author"><span class="screen-reader-text"><?php echo translate_nooped_plural( _n_noop( 'Author', 'Authors', 'pressbooks-book' ), pb_count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_authors']; ?></p>
 		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
 				<div class="book-header__cover__image">
-					<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="book-cover" title="<?php bloginfo( 'name' ); ?> book cover" />
+					<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="<?php printf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ); ?>" />
 				</div>
 			<?php }
 
@@ -73,10 +71,11 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			<?php
 
 			if ( ! empty( $book_information['pb_about_50'] ) ) { ?>
-				<p class="book-header__description"><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
+				<p class="book-header__description"><span class="screen-reader-text"><?php _e( 'Book Description', 'pressbooks-book' ); ?>: </span><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 			<?php } ?>
 		<?php global $first_chapter; ?>
 		<div class="book-header__license">
+			<span class="screen-reader-text"><?php _e( 'License', 'pressbooks-book' ); ?>: </span>
 			<?php $license = ( isset( $book_information['pb_book_license'] ) ) ? $book_information['pb_book_license'] : 'all-rights-reserved'; ?>
 			<div class="book-header__license__icons license-icons"><?php echo \Pressbooks\Book\Helpers\license_to_icons( $license ); ?></div>
 			<span class="book-header__license__text license-text"><?php echo \Pressbooks\Book\Helpers\license_to_text( $license ); ?></span>
