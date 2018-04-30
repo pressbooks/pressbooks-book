@@ -31,8 +31,7 @@
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
 		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
 		"lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
-		"test": "npm run -s lint",
-		"install": "npm run -s build:production"
+		"test": "npm run -s lint"
 	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
