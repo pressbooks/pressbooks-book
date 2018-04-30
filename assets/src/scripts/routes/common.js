@@ -31,7 +31,7 @@ export default {
 						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '1', {
 							expires: 365,
-							path:    PB_A11y.home_path,
+							path: PB_A11y.home_path,
 						} );
 						return false;
 					} else {
@@ -45,7 +45,7 @@ export default {
 						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '0', {
 							expires: 365,
-							path:    PB_A11y.home_path,
+							path: PB_A11y.home_path,
 						} );
 						return false;
 					}
@@ -86,7 +86,7 @@ export default {
 				heading.innerHTML = `
 				<button type="button" aria-expanded="false">
 					${heading.innerHTML}
-					<svg class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
+					<svg role="img" class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
 				</button>
 			  `;
 
