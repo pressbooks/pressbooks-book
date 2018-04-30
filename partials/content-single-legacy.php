@@ -2,7 +2,7 @@
 if ( $number ) {
 	echo "<span>$number</span>  ";
 }
-if ( get_post_meta( $post->ID, 'pb_show_title', true ) ) {
+if ( get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' ) {
 	the_title();
 }
 ?></h2>
