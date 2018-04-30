@@ -47,7 +47,6 @@ echo $multipage ? ' footer--multipage' : ''; ?>">
 		</section>
 	</div><!-- .container -->
 </footer><!-- .footer -->
-<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>
