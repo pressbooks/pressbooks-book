@@ -30,14 +30,15 @@ before_install:
 - dpkg --compare-versions `npm -v` ge 5.8 || npm i -g npm@^5.8
 install:
 - node -v
-- npm ci
+- npm install -g yarn
+- yarn
 - composer install
 script:
-- npm run test
+- yarn run test
 - composer test
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
-- npm run build:production
+- yarn run build:production
 - composer install --no-dev --optimize-autoloader
 - cd ../
 - zip -9 -ry $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip $TRAVIS_PROJECT_SLUG
