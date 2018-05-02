@@ -19,8 +19,7 @@ get_header(); ?>
 					<?php else : ?>
 					<?php /* translators: %1$s: url to book, %2$s: title of book */ ?>
 					<p><?php printf( __( 'You can buy <a href="%1$s">%2$s</a> by following any of the links below:', 'pressbooks-book' ), get_bloginfo( 'url' ), get_bloginfo( 'name' ) ); ?></p>
-
-						<ul class="buy-book">
+					<ul class="buy-book">
 						<?php if ( isset( $urls['amazon'] ) && $urls['amazon'] ) : ?>
 						<?php /* translators: %1$s: url to purchase */ ?>
 						<li class="buy-amazon"><a href="<?php print $urls['amazon']; ?>" class="bookstore-logo-link logo"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/amazon.png" width="100" height="20" alt="amazon-logo" title="Amazon"/></a><?php printf( __( 'Purchase on  <a href="%1$s">amazon.com</a>', 'pressbooks-book' ), $urls['amazon'] ); ?></li>

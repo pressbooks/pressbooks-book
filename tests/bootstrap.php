@@ -18,8 +18,9 @@ if ( ! file_exists( $_tests_dir . '/includes/functions.php' ) ) {
 require_once $_tests_dir . '/includes/functions.php';
 
 function _manually_load_plugin() {
-	require_once( __DIR__ . '/../../../plugins/pressbooks/hm-autoloader.php' );
-	require_once( __DIR__ . '/../../../plugins/pressbooks/pressbooks.php' );
+	$_pressbooks_dir = '/tmp/wordpress/wp-content/plugins/pressbooks';
+	require_once( $_pressbooks_dir . '/hm-autoloader.php' );
+	require_once( $_pressbooks_dir . '/pressbooks.php' );
 }
 
 function _register_theme() {
