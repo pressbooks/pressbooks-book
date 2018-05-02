@@ -1,5 +1,5 @@
 <?php get_header();
-if ( pb_is_public() ) :
+if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 	if ( have_posts() ) : ?>
 			<div>
 				<h2 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pressbooks-book' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
@@ -18,6 +18,6 @@ if ( pb_is_public() ) :
 					get_template_part( 'partials/content', 'none' );
 				endif; ?>
 <?php else : ?>
-<?php pb_private(); ?>
+<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

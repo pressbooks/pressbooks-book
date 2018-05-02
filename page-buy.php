@@ -1,6 +1,6 @@
 <?php /* Template Name: Buy */
 get_header(); ?>
-<?php if ( pb_is_public() ) : ?>
+<?php if ( \Pressbooks\Book\Helpers\is_book_public() ) : ?>
 		   <div id="post-<?php the_ID(); ?>" <?php post_class( 'buy-page' ); ?>>
 			 <h2 class="page-title"><?php _e( 'Buy the Book', 'pressbooks-book' ); ?></h2>
 
@@ -48,6 +48,6 @@ get_header(); ?>
 			<?php endif; ?>
 	</div><!-- end .post -->
 <?php else : ?>
-<?php pb_private(); ?>
+<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

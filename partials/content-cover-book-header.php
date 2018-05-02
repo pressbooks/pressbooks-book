@@ -1,6 +1,6 @@
 <section class="book-header">
 	<div class="book-header__inner">
-		<?php pb_get_links( false ); ?>
+		<?php \Pressbooks\Book\Helpers\get_links( false ); ?>
 		<h1 class="section__title book-header__title">
 			<span class="screen-reader-text"><?php _e( 'Book Title', 'pressbooks-book' ); ?>: </span><?php bloginfo( 'name' ); ?>
 		</h1>
@@ -8,7 +8,7 @@
 			<p class="book-header__subtitle"><span class="screen-reader-text"><?php _e( 'Subtitle', 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
 		<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
-			<p class="book-header__author"><span class="screen-reader-text"><?php echo translate_nooped_plural( _n_noop( 'Author', 'Authors', 'pressbooks-book' ), pb_count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_authors']; ?></p>
+			<p class="book-header__author"><span class="screen-reader-text"><?php echo translate_nooped_plural( _n_noop( 'Author', 'Authors', 'pressbooks-book' ), \Pressbooks\Book\Helpers\count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_authors']; ?></p>
 		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
@@ -61,7 +61,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 					<ul>
 				</div>
 			<?php }?>
-				<?php if ( pb_social_media_enabled() ) { ?>
+				<?php if ( \Pressbooks\Book\Helpers\social_media_enabled() ) { ?>
 				<div class="book-header__share book-header__cover__share">
 					<?php echo \Pressbooks\Book\Helpers\share_icons(); ?>
 				</div>
@@ -92,7 +92,7 @@ if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 	</a><?php
 } ?>
 		</div> <!-- end .call-to-action -->
-		<?php if ( pb_social_media_enabled() ) { ?>
+		<?php if ( \Pressbooks\Book\Helpers\social_media_enabled() ) { ?>
 		<div class="book-header__share">
 			<?php echo \Pressbooks\Book\Helpers\share_icons(); ?>
 		</div>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $metadata = pb_get_book_information(); ?>
-<?php if ( pb_is_public() ) : ?>
+<?php if ( \Pressbooks\Book\Helpers\is_book_public() ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<h2 class="page-title"><?php _e( 'About The Book', 'pressbooks-book' ); ?></h2>
 
@@ -23,6 +23,6 @@
 						<?php endif; ?>
 			</div><!-- #post-## -->
 <?php else : ?>
-<?php pb_private(); ?>
+<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

@@ -53,7 +53,7 @@
 	</defs>
 </svg>
 
-<?php if ( pb_social_media_enabled() ) { get_template_part( 'partials/content', 'facebook-js' ); } ?>
+<?php if ( \Pressbooks\Book\Helpers\social_media_enabled() ) { get_template_part( 'partials/content', 'facebook-js' ); } ?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>

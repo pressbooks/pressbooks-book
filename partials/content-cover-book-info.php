@@ -31,7 +31,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 </div>
 		<div class="block-info__inner__content">
 			<div class="block-info__subsection block-info__lead-author">
-				<h3 class="block__subtitle"><?php echo _n( 'Author', 'Authors', pb_count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?></h3>
+				<h3 class="block__subtitle"><?php echo _n( 'Author', 'Authors', \Pressbooks\Book\Helpers\count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?></h3>
 				<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
 					<div class="block-info__authors">
 						<?php // TODO add author photo ?>
@@ -47,7 +47,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 			<?php } ?>
 			<div class="block-info__subsection block-info__license">
 				<h3 class="block__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h3>
-				<?php echo pressbooks_copyright_license( false ); ?>
+				<?php echo \Pressbooks\Book\Helpers\copyright_license( false ); ?>
 			</div>
 			<?php if ( ! empty( $book_information['pb_primary_subject'] ) ) { ?>
 			<div class="block-info__subsection block-info__subject">

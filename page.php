@@ -1,5 +1,5 @@
 <?php get_header();
-if ( pb_is_public() ) :
+if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 	if ( have_posts() ) { the_post();
 	} ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -15,6 +15,6 @@ if ( pb_is_public() ) :
 				</div><!-- .entry-content -->
 			</div><!-- #post-## -->
 <?php else : ?>
-<?php pb_private(); ?>
+<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

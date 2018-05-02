@@ -2,6 +2,22 @@
 
 namespace Pressbooks\Book\Helpers;
 
+use Pressbooks\Container;
+
+/**
+ * Output HTML for a group of TOC elements.
+ *
+ * @since 2.0.0
+ *
+ * @param array $sections
+ * @param string $post_type
+ * @param bool $can_read
+ * @param bool $can_read_private
+ * @param int $permissive_private_content
+ *
+ * @return string The HTML blob for this TOC section group.
+ */
+
 function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content ) {
 	foreach ( $sections as $section ) {
 		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
@@ -43,6 +59,15 @@ if ( $post_type !== 'chapter' ) { ?>
 	<?php }
 }
 
+/**
+ * Return a human-readable filetype for a given filetype slug.
+ *
+ * @since 2.0.0
+ *
+ * @param string $filetype The filetype slug.
+ *
+ * @return string A human-readable filetype.
+ */
 function get_name_for_filetype( $filetype ) {
 	/**
 	 * Add custom export file types to the array of human-readable file types.
@@ -65,6 +90,15 @@ function get_name_for_filetype( $filetype ) {
 	return $formats[ $filetype ];
 }
 
+/**
+ * Return an SVG icon for a given license slug.
+ *
+ * @since 2.0.0
+ *
+ * @param string $license The license slug.
+ *
+ * @return string An SVG blob.
+ */
 function license_to_icons( $license ) {
 	if ( ! $license ) {
 		return '';
@@ -76,16 +110,25 @@ function license_to_icons( $license ) {
 			if ( $part !== 'cc' ) {
 				$part = 'cc-' . $part;
 			}
-			$output .= sprintf( '<svg class="icon" style="fill: #000"><use xlink:href="#%s" /></svg>', $part );
+			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use xlink:href="#%s" /></svg>', $part );
 		}
 	} elseif ( $license === 'public-domain' ) {
-		$output .= '<svg class="icon" style="fill: #000"><use xlink:href="#cc-zero" /></svg>';
+		$output .= '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-pd" /></svg>';
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
 	return $output;
 }
 
+/**
+ * Return a human-readable license name for a given license slug.
+ *
+ * @since 2.0.0
+ *
+ * @param string $license The license slug.
+ *
+ * @return string A human-readable license name.
+ */
 function license_to_text( $license ) {
 	switch ( $license ) {
 		case 'public-domain':
@@ -115,13 +158,29 @@ function license_to_text( $license ) {
 	}
 }
 
+/**
+ * Return an HTML blob for the social media share widget.
+ *
+ * @since 2.0.0
+ *
+ * @return string The share widget.
+ */
 function share_icons() {
-	$output = '';
-	$output .= '<a class="sharer" data-sharer="twitter" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '" data-via="pressbooks"><svg class="icon--svg"><use xlink:href="#twitter" /></svg></a>';
-	$output .= '<a class="sharer" data-sharer="facebook" data-title="' . __( 'Check out this great book on Pressbooks.', 'pressbooks-book' ) . '" data-url="' . get_the_permalink() . '"><svg class="icon--svg"><use xlink:href="#facebook" /></svg></a>';
-	return $output;
+	return sprintf(
+		'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-via="%3$s"><svg class="icon--svg"><use xlink:href="#twitter" /></svg></a><a class="sharer" data-sharer="facebook" data-title="%1$s" data-url="%2$s"><svg class="icon--svg"><use xlink:href="#facebook" /></svg></a>',
+		__( 'Check out this great book on Pressbooks.', 'pressbooks-book' ),
+		get_the_permalink(),
+		'pressbooks'
+	);
 }
 
+/**
+ * Return an HTML blob for the primary menu contents.
+ *
+ * @since 2.0.0
+ *
+ * @return string The primary menu contents.
+ */
 function display_menu() {
 	$items = sprintf(
 		'<li><a href="%1$s">%2$s</a></li>',
@@ -270,10 +329,14 @@ function get_book_authors( $metadata ) {
 }
 
 /**
- * Get the original section.
+ * Get the original section for a cloned section.
  *
- * @param string $needle
- * @param array $haystack
+ * @since 2.3.0
+ *
+ * @param string $needle The URL of the cloned section.
+ * @param array $haystack The TOC array for the source book.
+ *
+ * @return array
  */
 
 function get_original_section( $needle, $haystack ) {
@@ -307,5 +370,240 @@ function get_original_section( $needle, $haystack ) {
 		}
 	}
 
+	return false;
+}
+
+/**
+ * Get an array of metadata keys for display in the metadata block.
+ *
+ * @since 2.3.0
+ *
+ * @return array
+ */
+function get_metakeys() {
+	return [
+		'pb_authors' => _n_noop( 'Author', 'Authors', 'pressbooks-book' ),
+		'pb_editors' => _n_noop( 'Editor', 'Editors', 'pressbooks-book' ),
+		'pb_translators' => _n_noop( 'Translator', 'Translators', 'pressbooks-book' ),
+		'pb_reviewers' => _n_noop( 'Reviewer', 'Reviewers', 'pressbooks-book' ),
+		'pb_illustrators' => _n_noop( 'Illustrator', 'Illustrators', 'pressbooks-book' ),
+		'pb_contributors' => _n_noop( 'Contributor', 'Contributors', 'pressbooks-book' ),
+		'pb_book_license' => __( 'License', 'pressbooks-book' ),
+		'pb_primary_subject' => __( 'Primary Subject', 'pressbooks-book' ),
+		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
+		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
+		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),
+		'pb_ebook_isbn' => __( 'Ebook ISBN', 'pressbooks-book' ),
+		'pb_print_isbn' => __( 'Print ISBN', 'pressbooks-book' ),
+		'pb_hashtag' => __( 'Hashtag', 'pressbooks-book' ),
+	];
+}
+
+/**
+ * Render Previous and next buttons
+ *
+ * @since 2.3.0
+ *
+ * @param bool $echo
+ *
+ * @return string|null
+ */
+function get_links( $echo = true ) {
+	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
+	$first_chapter = pb_get_first();
+	$prev_chapter = pb_get_prev();
+	$next_chapter = pb_get_next();
+	if ( $echo ) :
+		?><nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
+		<div class="nav-reading__previous js-nav-previous">
+			<?php if ( $prev_chapter !== '/' ) { ?>
+				<a href="<?php echo $prev_chapter; ?>"><svg class="icon--svg">
+								<use xlink:href="#arrow-left" />
+							</svg><?php _e( 'Previous Section', 'pressbooks-book' ); ?></a>
+			<?php } ?>
+		</div>
+		<div class="nav-reading__next js-nav-next">
+			<?php if ( $next_chapter !== '/' ) : ?>
+				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Section', 'pressbooks-book' ); ?><svg class="icon--svg">
+								<use xlink:href="#arrow-right" />
+							</svg></a>
+			<?php endif; ?>
+		</div>
+		<button class="nav-reading__up" >
+			<svg class="icon--svg"><use xlink:href="#arrow-up" /></svg>
+			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span>
+		</button>
+		</nav><?php
+	endif;
+}
+
+/**
+ * Determine if social media elements should be displayed.
+ *
+ * @since 2.3.0
+ *
+ * @return bool
+ */
+function social_media_enabled() {
+	$options = get_option( 'pressbooks_theme_options_web' );
+	if ( ! isset( $options['social_media'] ) ) {
+		return true;
+	} elseif ( isset( $options['social_media'] ) && absint( $options['social_media'] ) === 1 ) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * Determine if the book is private or public.
+ *
+ * @since 2.3.0
+ *
+ * @return bool
+ */
+function is_book_public() {
+	global $blog_id;
+	$blog_public = absint( get_option( 'blog_public' ) );
+	if ( $blog_public === 1 || $blog_public === 0 && current_user_can_for_blog( $blog_id, 'read' ) ) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * Template for comments and pingbacks.
+ *
+ * To override this walker in a child theme without modifying the comments template
+ * simply create your own pressbooks_comment(), and that function will be used instead.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ * @since 2.3.0
+ *
+ * @param \WP_Comment $comment
+ * @param array $args
+ * @param int $depth
+ */
+function comments_template( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) {
+		case '' :
+			?>
+			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<div id="comment-<?php comment_ID(); ?>">
+				<div class="comment-author vcard">
+					<?php echo get_avatar( $comment, 40 ); ?>
+					<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
+				</div><!-- .comment-author .vcard -->
+				<?php if ( empty( $comment->comment_approved ) ) : ?>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks-book' ); ?></em>
+					<br />
+				<?php endif; ?>
+
+				<div class="comment-body"><?php comment_text(); ?></div>
+
+				<div class="reply">
+					<?php comment_reply_link( array_merge( $args, [ 'depth' => $depth, 'max_depth' => $args['max_depth'] ] ) ); ?>
+				</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+			<?php
+			break;
+		case 'pingback'  :
+		case 'trackback' :
+			?>
+			<li class="post pingback">
+			<p><?php _e( 'Pingback:', 'pressbooks-book' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?></p>
+			<?php
+			break;
+	}
+}
+
+/**
+ * Count authors in an oxford comma delimited string
+ *
+ * @since 2.3.0
+ *
+ * @param string $var
+ *
+ * @return int
+ */
+function count_authors( $var ) {
+	return count( \Pressbooks\Utility\oxford_comma_explode( $var ) );
+}
+
+/**
+ * Retrieve copyright HTML blob.
+ *
+ * @since 2.3.0
+ *
+ * @param bool $show_custom_copyright (optional, default is true)
+ *
+ * @return string
+ */
+function copyright_license( $show_custom_copyright = true ) {
+	$metadata = \Pressbooks\Book::getBookInformation();
+
+	if ( empty( $metadata['pb_book_license'] ) ) {
+		$all_rights_reserved = true;
+	} elseif ( $metadata['pb_book_license'] === 'all-rights-reserved' ) {
+		$all_rights_reserved = true;
+	} else {
+		$all_rights_reserved = false;
+	}
+	if ( ! empty( $metadata['pb_custom_copyright'] ) && $show_custom_copyright ) {
+		$has_custom_copyright = true;
+	} else {
+		$has_custom_copyright = false;
+	}
+
+	// Custom Copyright must override All Rights Reserved
+	$html = '';
+	if ( ! $has_custom_copyright || ( $has_custom_copyright && ! $all_rights_reserved ) ) {
+		$html .= \Pressbooks\Book\Helpers\do_license( $metadata );
+	}
+	if ( $has_custom_copyright ) {
+		$html .= '<div class="license-attribution">' . $metadata['pb_custom_copyright'] . '</div>';
+	}
+
+	return $html;
+}
+
+/**
+ * Output the license.
+ *
+ * @since 2.3.0
+ *
+ * @param array $metadata
+ *
+ * @return string
+ */
+function do_license( $metadata ) {
+
+	global $post;
+	$id = $post->ID;
+	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
+
+	try {
+		$licensing = new \Pressbooks\Licensing();
+		return $licensing->doLicense( $metadata, $id, $title );
+	} catch ( \Exception $e ) {
+		error_log( $e->getMessage() );
+	}
+	return '';
+}
+
+
+/**
+ * Determine if the book is using a modern version of Buckram.
+ *
+ * @since 2.3.0
+ *
+ * @return bool
+ */
+function is_buckram() {
+	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {
+		return true;
+	}
 	return false;
 }
