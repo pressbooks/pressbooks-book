@@ -40,6 +40,8 @@ before_script:
 script:
 - yarn run test
 - composer test
+after_success:
+- bash <(curl -s https://codecov.io/bash)
 before_deploy:
 - export TRAVIS_PROJECT_SLUG="$(basename $TRAVIS_BUILD_DIR)"
 - yarn run build:production
