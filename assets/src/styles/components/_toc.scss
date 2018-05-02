@@ -90,7 +90,8 @@
   }
 }
 
-.toc__selected > a {
+.toc__selected > a,
+.toc__selected > .inner-content > a {
   text-decoration: underline;
 }
 
