@@ -16,7 +16,7 @@ export default {
 						.attr( 'aria-expanded', 'true' );
 					$( this )
 						.find(
-							'h3 + .inner-content, .toc__front-matter-list, .toc__back-matter-list'
+							'p + .inner-content, h3 + .inner-content, .toc__front-matter-list, .toc__back-matter-list'
 						)
 						.removeAttr( 'hidden' );
 				} );
@@ -32,7 +32,7 @@ export default {
 						.attr( 'aria-expanded', 'false' );
 					$( this )
 						.find(
-							'h3 + .inner-content, .toc__front-matter-list, .toc__back-matter-list'
+							'p + .inner-content, h3 + .inner-content, .toc__front-matter-list, .toc__back-matter-list'
 						)
 						.attr( 'hidden', 'true' );
 				} );
