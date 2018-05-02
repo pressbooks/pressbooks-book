@@ -27,7 +27,7 @@ function delete_cached_contents() {
 }
 
 /**
- * Enqueue assets.
+ * Enqueue styles and scripts.
  *
  * @return null
  */
@@ -148,7 +148,11 @@ function update_webbook_stylesheet() {
 
 
 /**
+ * Add metadata to head.
  *
+ * @since 2.3.0
+ *
+ * @return null
  */
 function add_metadata() {
 	if ( is_front_page() ) {
@@ -161,21 +165,38 @@ function add_metadata() {
 
 
 /**
- * Setup
+ * Run after_setup_theme functions.
+ *
+ * @since 2.3.0
+ *
+ * @return null
  */
-
-function setup() {
+function theme_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
 	remove_action( 'wp_head', 'wp_generator' );
 }
 
+/**
+ * Output <style> tag with reading width variable.
+ *
+ * @since 2.3.0
+ *
+ * @return null
+ */
 function webbook_width() {
 	$options = get_option( 'pressbooks_theme_options_web' );
 	$width = $options['webbook_width'] ?? '40em';
 	printf( '<style type="text/css">:root{--reading-width:%s;}</style>', $width );
 }
 
+/**
+ * Output <style> tag with custom color variables.
+ *
+ * @since 2.3.0
+ *
+ * @return null
+ */
 function customizer_colors() {
 	echo \Pressbooks\Admin\Branding\get_customizer_colors();
 }

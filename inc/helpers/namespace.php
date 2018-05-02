@@ -579,7 +579,6 @@ function copyright_license( $show_custom_copyright = true ) {
  * @return string
  */
 function do_license( $metadata ) {
-
 	global $post;
 	$id = $post->ID;
 	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;

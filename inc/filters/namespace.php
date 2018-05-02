@@ -50,16 +50,30 @@ function async_scripts( $tag, $handle, $src ) {
 	return $tag;
 }
 
-/* ------------------------------------------------------------------------ *
- * Replaces the excerpt "more" text by a link
- * ------------------------------------------------------------------------ */
+/**
+ * Replace the excerpt more tag with a custom link.
+ *
+ * @since 2.3.0
+ *
+ * @param string $more The default more tag.
+ *
+ * @return string
+ */
 
 function excerpt_more( $more ) {
 	global $post;
 	return '<a class="more-tag" href="' . get_permalink( $post->ID ) . '"> Read more &raquo;</a>';
 }
 
-
+/**
+ * Filter PDF hacks.
+ *
+ * @since 2.3.0
+ *
+ * @param array $hacks
+ *
+ * @return array
+ */
 function pdf_hacks( $hacks ) {
 
 	$options = get_option( 'pressbooks_theme_options_pdf' );
@@ -69,6 +83,15 @@ function pdf_hacks( $hacks ) {
 	return $hacks;
 }
 
+/**
+ * Filter Ebook hacks.
+ *
+ * @since 2.3.0
+ *
+ * @param array $hacks
+ *
+ * @return array
+ */
 function ebook_hacks( $hacks ) {
 
 	// --------------------------------------------------------------------
@@ -95,7 +118,7 @@ function ebook_hacks( $hacks ) {
 }
 
 /**
- * Restrict search.
+ * Restrict search to post types we support on the front end.
  *
  * @param \WP_Query $query
  * @return \WP_Query

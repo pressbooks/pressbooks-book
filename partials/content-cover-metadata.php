@@ -19,7 +19,7 @@
 	$hashtag = $book_information[ $key ];
 	$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
 } elseif ( 'pb_book_license' === $key ) {
-	$book_information[ $key ] = pressbooks_copyright_license();
+	$book_information[ $key ] = \Pressbooks\Book\Helpers\copyright_license();
 } elseif ( 'pb_primary_subject' === $key ) {
 	$book_information[ $key ] = \Pressbooks\Metadata\get_subject_from_thema( $book_information[ $key ] );
 } elseif ( 'pb_additional_subjects' === $key ) {

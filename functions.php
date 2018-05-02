@@ -59,7 +59,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 add_filter( 'pb_pdf_hacks', '\Pressbooks\Book\Filters\pdf_hacks' );
 add_filter( 'pb_epub_hacks', '\Pressbooks\Book\Filters\ebook_hacks' );
 add_filter( 'pre_get_posts', '\Pressbooks\Book\Filters\filter_search' );
-add_action( 'after_setup_theme', '\Pressbooks\Book\Actions\setup' );
+add_action( 'after_setup_theme', '\Pressbooks\Book\Actions\theme_setup' );
 add_action( 'wp_head', '\Pressbooks\Book\Actions\customizer_colors' );
 add_action( 'wp_head', '\Pressbooks\Book\Actions\webbook_width' );
 add_filter( 'the_title', 'Pressbooks\Book\Filters\add_private_to_title', 10, 2 );
