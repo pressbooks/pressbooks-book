@@ -20,6 +20,7 @@
         <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
         <exclude name="WordPress.NamingConventions.ValidVariableName.MemberNotSnakeCase"/>
         <exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar"/>
+				<exclude name="WordPress.VIP.AdminBarRemoval"/>
         <exclude name="WordPress.VIP.SessionVariableUsage"/>
         <exclude name="WordPress.VIP.SessionFunctionsUsage"/>
         <!-- Disable LayoutOrder until humanmade/coding-standards#5 is fixed -->

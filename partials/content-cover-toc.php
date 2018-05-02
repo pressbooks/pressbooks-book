@@ -1,12 +1,13 @@
 <section class="block block-toc">
 	<?php if ( pb_get_first_post_id() ) : ?>
-		<h2 class="block__title block-toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h2><?php
-		include( locate_template( 'partials/content-toc.php' ) ); ?>
+		<h2 class="block__title block-toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h2>
+		<nav><?php include( locate_template( 'partials/content-toc.php' ) ); ?></nav>
 		<div class="toc__toggle" aria-expanded="false">
 			<button id="show" class="button"><?php _e( 'Show All Contents' ); ?></button>
 			<button id="hide" class="button"><?php _e( 'Hide All Contents' ); ?></button>
 		</div>
-	<?php endif;
+	<?php
+	endif;
 	/**
 	 * Append content to cover table of contents block.
 	 *

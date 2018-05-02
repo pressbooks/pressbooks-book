@@ -6,6 +6,7 @@
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
 
 [![Build Status](https://travis-ci.org/pressbooks/pressbooks-book.svg?branch=dev)](https://travis-ci.org/pressbooks/pressbooks-book)
+[![codecov](https://codecov.io/gh/pressbooks/pressbooks-book/branch/dev/graph/badge.svg)](https://codecov.io/gh/pressbooks/pressbooks-book)
 [![Translate McLuhan](https://img.shields.io/badge/dynamic/json.svg?label=translated&url=https%3A%2F%2Ftenpercent.now.sh%2F%3Forganization%3Dpressbooks%26project%3Dpressbooks-book&query=%24.status&colorB=e05d44&suffix=%25)](https://www.transifex.com/pressbooks/pressbooks-book/translate/)
 
 [![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
