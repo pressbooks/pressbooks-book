@@ -1,6 +1,7 @@
 <?php get_header();
 if ( \Pressbooks\Book\Helpers\is_book_public() ) :
-	if ( have_posts() ) { the_post();
+	if ( have_posts() ) {
+		the_post();
 	} ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( is_front_page() ) : ?>
@@ -11,7 +12,14 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 				<div class="entry-content">
 					<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<span class="edit-link">', '</span>' ); ?>
 					<?php the_content(); ?>
-					<?php wp_link_pages( [ 'before' => '<div class="page-link">' . __( 'Pages:', 'pressbooks-book' ), 'after' => '</div>' ] ); ?>
+					<?php
+					wp_link_pages(
+						[
+							'before' => '<div class="page-link">' . __( 'Pages:', 'pressbooks-book' ),
+							'after' => '</div>',
+						]
+					);
+?>
 				</div><!-- .entry-content -->
 			</div><!-- #post-## -->
 <?php else : ?>

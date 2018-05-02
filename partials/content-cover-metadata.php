@@ -8,36 +8,44 @@
 					<dt class="block__subtitle block-meta__subtitle"><?php _e( 'Title', 'pressbooks-book' ); ?></dt>
 					<dd class="ml0"><?php bloginfo( 'name' ); ?></dd>
 				</div>
-				<?php $metakeys = \Pressbooks\Book\Helpers\get_metakeys();
+				<?php
+				$metakeys = \Pressbooks\Book\Helpers\get_metakeys();
 				foreach ( $metakeys as $key => $val ) {
-					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) { ?>
+					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) {
+					?>
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
 							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \Pressbooks\Book\Helpers\count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
-							<dd class=""><?php if ( 'pb_publication_date' === $key ) {
+							<dd class="">
+							<?php
+							if ( 'pb_publication_date' === $key ) {
 									$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
-} elseif ( 'pb_hashtag' === $key ) {
-	$hashtag = $book_information[ $key ];
-	$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
-} elseif ( 'pb_book_license' === $key ) {
-	$book_information[ $key ] = \Pressbooks\Book\Helpers\copyright_license();
-} elseif ( 'pb_primary_subject' === $key ) {
-	$book_information[ $key ] = \Pressbooks\Metadata\get_subject_from_thema( $book_information[ $key ] );
-} elseif ( 'pb_additional_subjects' === $key ) {
-	$tmp = explode( ', ', $book_information[ $key ] );
-	$output = [];
-	foreach ( $tmp as $code ) {
-		$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
-	}
-	$book_information[ $key ] = implode( ', ', $output );
-}
-								echo $book_information[ $key ]; ?></dd>
+							} elseif ( 'pb_hashtag' === $key ) {
+								$hashtag                  = $book_information[ $key ];
+								$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
+							} elseif ( 'pb_book_license' === $key ) {
+								$book_information[ $key ] = \Pressbooks\Book\Helpers\copyright_license();
+							} elseif ( 'pb_primary_subject' === $key ) {
+								$book_information[ $key ] = \Pressbooks\Metadata\get_subject_from_thema( $book_information[ $key ] );
+							} elseif ( 'pb_additional_subjects' === $key ) {
+								$tmp    = explode( ', ', $book_information[ $key ] );
+								$output = [];
+								foreach ( $tmp as $code ) {
+									$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
+								}
+								$book_information[ $key ] = implode( ', ', $output );
+							}
+								echo $book_information[ $key ];
+								?>
+								</dd>
 							</div>
-						<?php }
-				} ?>
+						<?php
+					}
+				}
+				?>
 			</dl>
 		</div>
 		<?php
-		/**	Append content to cover metadata block.
+		/** Append content to cover metadata block.
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_cover_after_metadata' );

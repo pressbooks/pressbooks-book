@@ -36,27 +36,34 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			<div class="inner-content">
 				<?php } ?>
 				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
-					<?php $chapter_number = pb_get_chapter_number( $section['ID'] );
+					<?php
+					$chapter_number = pb_get_chapter_number( $section['ID'] );
 					if ( $chapter_number ) {
 						echo "<span>$chapter_number.&nbsp;</span>";
 					}
-					echo pb_strip_br( $section['post_title'] ); ?>
+					echo pb_strip_br( $section['post_title'] );
+					?>
 				</a>
-				<?php if ( pb_should_parse_subsections() ) {
+				<?php
+				if ( pb_should_parse_subsections() ) {
 					$subsections = pb_get_subsections( $section['ID'] );
-					if ( $subsections ) { ?>
+					if ( $subsections ) {
+					?>
 						<ol class="toc__subsections">
 							<?php foreach ( $subsections as $id => $name ) { ?>
 								<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
 							<?php } ?>
 						</ol>
-					<?php }
-}
-if ( $post_type !== 'chapter' ) { ?>
-			</div>
-		<?php } ?>
+					<?php
+					}
+				}
+				if ( $post_type !== 'chapter' ) {
+				?>
+							</div>
+						<?php } ?>
 		</li>
-	<?php }
+	<?php
+	}
 }
 
 /**
@@ -73,19 +80,21 @@ function get_name_for_filetype( $filetype ) {
 	 * Add custom export file types to the array of human-readable file types.
 	 * @since 2.0.0
 	 */
-	$formats = apply_filters( 'pb_export_filetype_names', [
-		'print-pdf' => __( 'Print PDF', 'pressbooks-book' ),
-		'pdf' => __( 'Digital PDF', 'pressbooks-book' ),
-		'mpdf' => __( 'Digital PDF', 'pressbooks-book' ),
-		'htmlbook' => __( 'HTMLBook', 'pressbooks-book' ),
-		'epub' => __( 'EPUB', 'pressbooks-book' ),
-		'mobi' => __( 'MOBI', 'pressbooks-book' ),
-		'epub3' => __( 'EPUB3', 'pressbooks-book' ),
-		'xhtml' => __( 'XHTML', 'presbooks-book' ),
-		'odf' => __( 'OpenDocument', 'pressbooks-book' ),
-		'wxr' => __( 'Pressbooks XML', 'pressbooks-book' ),
-		'vanillawxr' => __( 'WordPress XML', 'pressbooks' ),
-	] );
+	$formats = apply_filters(
+		'pb_export_filetype_names', [
+			'print-pdf' => __( 'Print PDF', 'pressbooks-book' ),
+			'pdf' => __( 'Digital PDF', 'pressbooks-book' ),
+			'mpdf' => __( 'Digital PDF', 'pressbooks-book' ),
+			'htmlbook' => __( 'HTMLBook', 'pressbooks-book' ),
+			'epub' => __( 'EPUB', 'pressbooks-book' ),
+			'mobi' => __( 'MOBI', 'pressbooks-book' ),
+			'epub3' => __( 'EPUB3', 'pressbooks-book' ),
+			'xhtml' => __( 'XHTML', 'presbooks-book' ),
+			'odf' => __( 'OpenDocument', 'pressbooks-book' ),
+			'wxr' => __( 'Pressbooks XML', 'pressbooks-book' ),
+			'vanillawxr' => __( 'WordPress XML', 'pressbooks' ),
+		]
+	);
 
 	return $formats[ $filetype ];
 }
@@ -241,15 +250,15 @@ function display_menu() {
  */
 function get_source_book( $book_url, $checked = [] ) {
 	$output = $book_url;
-	$args = [];
+	$args   = [];
 	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
 		$args['sslverify'] = false;
 	}
 	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
-	$result = json_decode( $response['body'], true );
+	$result   = json_decode( $response['body'], true );
 	if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
 		$checked[] = $result['isBasedOn'];
-		$output = get_source_book( $result['isBasedOn'], $checked );
+		$output    = get_source_book( $result['isBasedOn'], $checked );
 	}
 	return $output;
 }
@@ -340,9 +349,9 @@ function get_book_authors( $metadata ) {
  */
 
 function get_original_section( $needle, $haystack ) {
-	$parts = explode( '/', untrailingslashit( $needle ) );
+	$parts     = explode( '/', untrailingslashit( $needle ) );
 	$post_type = $parts[ count( $parts ) - 2 ];
-	$slug = $parts[ count( $parts ) - 1 ];
+	$slug      = $parts[ count( $parts ) - 1 ];
 
 	if ( in_array( $post_type, [ 'front-matter', 'back-matter' ], true ) ) {
 		foreach ( $haystack[ $post_type ] as $key => $value ) {
@@ -411,10 +420,11 @@ function get_metakeys() {
 function get_links( $echo = true ) {
 	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
 	$first_chapter = pb_get_first();
-	$prev_chapter = pb_get_prev();
-	$next_chapter = pb_get_next();
+	$prev_chapter  = pb_get_prev();
+	$next_chapter  = pb_get_next();
 	if ( $echo ) :
-		?><nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
+		?>
+		<nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<a href="<?php echo $prev_chapter; ?>"><svg class="icon--svg">
@@ -433,7 +443,8 @@ function get_links( $echo = true ) {
 			<svg class="icon--svg"><use xlink:href="#arrow-up" /></svg>
 			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span>
 		</button>
-		</nav><?php
+		</nav>
+		<?php
 	endif;
 }
 
@@ -487,13 +498,14 @@ function is_book_public() {
 function comments_template( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) {
-		case '' :
+		case '':
 			?>
 			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 			<div id="comment-<?php comment_ID(); ?>">
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(),  get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
+					<?php /* translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment */ ?>
+					<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(), get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( empty( $comment->comment_approved ) ) : ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks-book' ); ?></em>
@@ -503,14 +515,23 @@ function comments_template( $comment, $args, $depth ) {
 				<div class="comment-body"><?php comment_text(); ?></div>
 
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, [ 'depth' => $depth, 'max_depth' => $args['max_depth'] ] ) ); ?>
+					<?php
+					comment_reply_link(
+						array_merge(
+							$args, [
+								'depth' => $depth,
+								'max_depth' => $args['max_depth'],
+							]
+						)
+					);
+?>
 				</div><!-- .reply -->
 			</div><!-- #comment-##  -->
 
 			<?php
 			break;
-		case 'pingback'  :
-		case 'trackback' :
+		case 'pingback':
+		case 'trackback':
 			?>
 			<li class="post pingback">
 			<p><?php _e( 'Pingback:', 'pressbooks-book' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?></p>
@@ -580,14 +601,14 @@ function copyright_license( $show_custom_copyright = true ) {
  */
 function do_license( $metadata ) {
 	global $post;
-	$id = $post->ID;
+	$id    = $post->ID;
 	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
 
 	try {
 		$licensing = new \Pressbooks\Licensing();
 		return $licensing->doLicense( $metadata, $id, $title );
 	} catch ( \Exception $e ) {
-		error_log( $e->getMessage() );
+		error_log( $e->getMessage() ); // @codingStandardsIgnoreLine
 	}
 	return '';
 }

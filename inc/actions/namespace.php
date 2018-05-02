@@ -2,10 +2,10 @@
 
 namespace Pressbooks\Book\Actions;
 
-use Pressbooks\Container;
+use function Pressbooks\Book\Helpers\social_media_enabled;
 use PressbooksMix\Assets;
 
-use function Pressbooks\Book\Helpers\social_media_enabled;
+use Pressbooks\Container;
 
 /**
  * Delete the cached Table of Contents.
@@ -13,12 +13,12 @@ use function Pressbooks\Book\Helpers\social_media_enabled;
  * @see partials/content-toc.php
  */
 function delete_cached_contents() {
-	$bits = 3;
-	$max = ( 1 << $bits );
+	$bits       = 3;
+	$max        = ( 1 << $bits );
 	$transients = [];
 	for ( $i = 0; $i < $max; $i++ ) {
-		$t = str_pad( decbin( $i ), $bits, '0', STR_PAD_LEFT );
-		$t = str_replace( [ 1, 0 ], [ 'x', 'o' ], $t );
+		$t            = str_pad( decbin( $i ), $bits, '0', STR_PAD_LEFT );
+		$t            = str_replace( [ 1, 0 ], [ 'x', 'o' ], $t );
 		$transients[] = "pb_book_contents_{$t}";
 	}
 	foreach ( $transients as $transient ) {
@@ -61,8 +61,8 @@ function enqueue_assets() {
 		}
 
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
-			$styles = Container::get( 'Styles' );
-			$sass = Container::get( 'Sass' );
+			$styles   = Container::get( 'Styles' );
+			$sass     = Container::get( 'Sass' );
 			$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
 			if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
 				$styles->updateWebBookStyleSheet( 'pressbooks-book' );
@@ -135,14 +135,7 @@ function update_webbook_stylesheet() {
 	}
 
 	if ( true === $recompile ) {
-		if ( WP_DEBUG ) {
-			error_log( 'Updating web book stylesheet.' );
-		}
 		Container::get( 'Sass' )->updateWebBookStyleSheet();
-	} else {
-		if ( WP_DEBUG ) {
-			error_log( 'No web book stylesheet update needed.' );
-		}
 	}
 }
 
@@ -186,7 +179,7 @@ function theme_setup() {
  */
 function webbook_width() {
 	$options = get_option( 'pressbooks_theme_options_web' );
-	$width = $options['webbook_width'] ?? '40em';
+	$width   = $options['webbook_width'] ?? '40em';
 	printf( '<style type="text/css">:root{--reading-width:%s;}</style>', $width );
 }
 

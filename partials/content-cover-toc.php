@@ -6,7 +6,8 @@
 			<button id="show" class="button"><?php _e( 'Show All Contents' ); ?></button>
 			<button id="hide" class="button"><?php _e( 'Hide All Contents' ); ?></button>
 		</div>
-	<?php endif;
+	<?php
+	endif;
 	/**
 	 * Append content to cover table of contents block.
 	 *

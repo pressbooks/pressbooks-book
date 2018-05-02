@@ -10,11 +10,13 @@
 if ( ! class_exists( 'PressbooksMix\Assets' ) || ! function_exists( 'Sober\Intervention\intervention' ) ) {
 	$composer = get_template_directory() . '/vendor/autoload.php';
 	if ( ! file_exists( $composer ) ) {
-		wp_die( sprintf(
-			'<h1>%1$s</h1><p>%2$s</p>',
-			__( 'Dependencies Missing', 'pressbooks-book' ),
-			__( 'You must run <code>composer install</code> from the McLuhan directory.', 'pressbooks-book' )
-		) );
+		wp_die(
+			sprintf(
+				'<h1>%1$s</h1><p>%2$s</p>',
+				__( 'Dependencies Missing', 'pressbooks-book' ),
+				__( 'You must run <code>composer install</code> from the McLuhan directory.', 'pressbooks-book' )
+			)
+		);
 	}
 	require_once $composer;
 }

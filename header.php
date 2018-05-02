@@ -9,13 +9,15 @@
 
 	<?php wp_head(); ?>
 </head>
-<?php if ( is_front_page() ) {
+<?php
+if ( is_front_page() ) {
 	$schema = 'itemscope itemtype="http://schema.org/Book" itemref="about alternativeHeadline author copyrightHolder copyrightYear datePublished description editor image inLanguage keywords publisher" ';
 } elseif ( is_single() ) {
 	$schema = 'itemscope itemtype="http://bib.schema.org/Chapter" itemref="about copyrightHolder copyrightYear inLanguage publisher" ';
 } else {
 	$schema = '';
-} ?>
+}
+?>
 <body <?php body_class(); ?> <?php echo $schema; ?>>
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
 	<defs>
@@ -53,7 +55,10 @@
 	</defs>
 </svg>
 
-<?php if ( \Pressbooks\Book\Helpers\social_media_enabled() ) { get_template_part( 'partials/content', 'facebook-js' ); } ?>
+<?php
+if ( \Pressbooks\Book\Helpers\social_media_enabled() ) {
+	get_template_part( 'partials/content', 'facebook-js' ); }
+?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>
@@ -63,17 +68,22 @@
 		<div class="header__inside">
 			<div class="header__brand">
 				<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
-					<?php $root_id = get_network()->site_id;
-					if ( has_custom_logo( $root_id ) ) { ?>
-						<?php switch_to_blog( $root_id );
+					<?php
+					$root_id = get_network()->site_id;
+					if ( has_custom_logo( $root_id ) ) {
+					?>
+						<?php
+						switch_to_blog( $root_id );
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
 						printf(
 							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
 							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
 							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+							/* translators: %s: name of network */
 							sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
 						);
-						restore_current_blog(); ?>
+						restore_current_blog();
+						?>
 					<?php } else { ?>
 					<svg class="header__logo--svg" aria-role="img">
 						<use xlink:href="#logo-pressbooks" />
