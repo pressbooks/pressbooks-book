@@ -13,8 +13,10 @@
 
 <?php if ( have_comments() ) : ?>
 			<h3 id="comments-title">
-			<?php printf( // WPCS: XSS OK.
+			<?php
+			printf( // WPCS: XSS OK.
 				esc_html(
+					/* translators: %1$d: number of responses, %2$s: title of section */
 					_nx(
 						'%1$d Response to %2$s',
 						'%1$d Responses to %2$s',
@@ -26,7 +28,8 @@
 				number_format_i18n( get_comments_number() ),
 				'<em>' . get_the_title() . '</em>'
 			);
-			?></h3>
+			?>
+			</h3>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 			<div class="navigation">
@@ -36,7 +39,7 @@
 <?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">
-				<?php wp_list_comments( [ 'callback' => 'pressbooks_comment' ] ); ?>
+				<?php wp_list_comments( [ 'callback' => '\Pressbooks\Book\Helpers\comments_template' ] ); ?>
 			</ol>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
@@ -46,7 +49,8 @@
 			</div><!-- .navigation -->
 <?php endif; // check for comment navigation ?>
 
-<?php else : // or, if we don't have comments:
+<?php
+else : // or, if we don't have comments:
 	if ( ! comments_open() ) :
 ?>
 	<p class="nocomments"><?php _e( 'Comments are closed.', 'pressbooks-book' ); ?></p>
@@ -57,13 +61,14 @@
 <?php
 /* Comment form submit text*/
 $comments_args = [
-		'label_submit' => __( 'Submit', 'pressbooks-book' ),
+	'label_submit' => __( 'Submit', 'pressbooks-book' ),
 	'class_form' => 'section-comments__form comment-form clearfix',
 	'class_submit' => 'button button--primary button--header button--submit',
 	'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
 ];
 
-comment_form( $comments_args ); ?>
+comment_form( $comments_args );
+?>
 
 </div>
 </section><!-- #comments -->
