@@ -40,6 +40,7 @@ function add_private_to_title( $title, $id = null ) {
 
 function async_scripts( $tag, $handle, $src ) {
 	$async = [
+		'pressbooks/book',
 		'sharer',
 	];
 
