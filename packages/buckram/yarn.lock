@@ -660,6 +660,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@polymer/esm-amd-loader@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@polymer/esm-amd-loader/-/esm-amd-loader-0.1.0.tgz#764c624fcdf7b2c76fa925cc64a2cc302d494f05"
+
 "@types/acorn@^4.0.3":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@types/acorn/-/acorn-4.0.3.tgz#d1f3e738dde52536f9aad3d3380d14e448820afd"
@@ -8232,9 +8236,9 @@ polymer-analyzer@=3.0.0-pre.24:
     vscode-uri "^1.0.1"
     whatwg-url "^6.4.0"
 
-polymer-build@=3.0.0-pre.15:
-  version "3.0.0-pre.15"
-  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.15.tgz#3e1ead369c2191d66a3ab32124eb967ca5982f5c"
+polymer-build@=3.0.0-pre.16:
+  version "3.0.0-pre.16"
+  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.16.tgz#d559bcc00e53300e2d584b02c5b6eeee520d6eff"
   dependencies:
     "@babel/core" "^7.0.0-beta.46"
     "@babel/plugin-external-helpers" "^7.0.0-beta.46"
@@ -8268,6 +8272,7 @@ polymer-build@=3.0.0-pre.15:
     "@babel/plugin-transform-typeof-symbol" "^7.0.0-beta.46"
     "@babel/plugin-transform-unicode-regex" "^7.0.0-beta.46"
     "@babel/traverse" "^7.0.0-beta.46"
+    "@polymer/esm-amd-loader" "^0.1.0"
     "@types/babel-types" "^6.25.1"
     "@types/babylon" "^6.16.2"
     "@types/gulp-if" "0.0.33"
@@ -8334,8 +8339,8 @@ polymer-project-config@^3.13.0:
     plylog "^0.5.0"
 
 polyserve@^0.27.4:
-  version "0.27.8"
-  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.8.tgz#d2dbd8b854d12358df86b79ddee9d0a5beb2b138"
+  version "0.27.9"
+  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.9.tgz#3e2443fcc4a98e8938b9af388b662b28108cc1be"
   dependencies:
     "@types/compression" "^0.0.33"
     "@types/content-type" "^1.1.0"
@@ -8365,8 +8370,7 @@ polyserve@^0.27.4:
     mz "^2.4.0"
     opn "^3.0.2"
     pem "^1.8.3"
-    polymer-build "=3.0.0-pre.15"
-    requirejs "^2.3.4"
+    polymer-build "=3.0.0-pre.16"
     resolve "^1.5.0"
     send "^0.14.1"
     spdy "^3.3.3"
@@ -9468,10 +9472,6 @@ require-uncached@^1.0.3:
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
-
-requirejs@^2.3.4:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/requirejs/-/requirejs-2.3.5.tgz#617b9acbbcb336540ef4914d790323a8d4b861b0"
 
 requires-port@1.0.x, requires-port@1.x.x, requires-port@~1.0.0:
   version "1.0.0"
