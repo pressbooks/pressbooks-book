@@ -1441,13 +1441,7 @@ browser-sync-webpack-plugin@^2.0.1:
   dependencies:
     lodash "^4"
 
-browser-sync-webpack-plugin@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/browser-sync-webpack-plugin/-/browser-sync-webpack-plugin-2.2.2.tgz#46092da62ff36354a50bf0e2903e78a6974fea54"
-  dependencies:
-    lodash "^4"
-
-browser-sync@^2.18.13, browser-sync@^2.23.6, browser-sync@^2.24.2:
+browser-sync@^2.18.13, browser-sync@^2.23.6:
   version "2.24.2"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.24.2.tgz#e6a452012f8021fa52b93fadb4f65713d7c27ef6"
   dependencies:
