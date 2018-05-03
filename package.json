@@ -19,7 +19,7 @@
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
-		"browser-sync": "^2.24.1",
+		"browser-sync": "^2.24.2",
 		"browser-sync-webpack-plugin": "^2.2.2",
 		"pressbooks-build-tools": "^0.12.0"
 	},
