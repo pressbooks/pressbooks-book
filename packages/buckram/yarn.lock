@@ -660,9 +660,9 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@polymer/esm-amd-loader@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@polymer/esm-amd-loader/-/esm-amd-loader-0.1.0.tgz#764c624fcdf7b2c76fa925cc64a2cc302d494f05"
+"@polymer/esm-amd-loader@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@polymer/esm-amd-loader/-/esm-amd-loader-0.1.1.tgz#ff6edcefce8aa3342c11d51ab97dacdbde93ef06"
 
 "@types/acorn@^4.0.3":
   version "4.0.3"
@@ -841,7 +841,7 @@
   version "4.2.23"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-4.2.23.tgz#9241f00d64eb91084f68367746ef10d5fb2f2fc4"
 
-"@types/node@^6.0.0", "@types/node@^6.0.41":
+"@types/node@^6.0.0":
   version "6.0.106"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.106.tgz#391bc3598ab5823563f7155847212152893edcd7"
 
@@ -979,6 +979,12 @@ acorn-dynamic-import@^3.0.0:
   dependencies:
     acorn "^5.0.0"
 
+acorn-import-meta@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/acorn-import-meta/-/acorn-import-meta-0.2.1.tgz#ac91e06e00facece7e96ff76a0fe9ec7b1cb5b5c"
+  dependencies:
+    acorn "^5.4.1"
+
 acorn-jsx@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-3.0.1.tgz#afdf9488fb1ecefc8348f6fb22f464e32a58b36b"
@@ -997,7 +1003,7 @@ acorn@^5.0.0, acorn@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
-acorn@^5.5.0, acorn@^5.5.3:
+acorn@^5.4.1, acorn@^5.5.0, acorn@^5.5.3:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.5.3.tgz#f473dd47e0277a08e28e9bec5aeeb04751f0b8c9"
 
@@ -3345,9 +3351,9 @@ css-selector-tokenizer@^0.7.0:
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
 
-css-slam@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/css-slam/-/css-slam-2.1.0.tgz#25602bfdfa34e38bfa068fd39053f116e535a28d"
+css-slam@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/css-slam/-/css-slam-2.1.1.tgz#455da20958caddbe35a9fc2999f5aab4a4681dfe"
   dependencies:
     command-line-args "^3.0.1"
     command-line-usage "^3.0.5"
@@ -8193,9 +8199,9 @@ pngquant-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-polymer-analyzer@=3.0.0-pre.24:
-  version "3.0.0-pre.24"
-  resolved "https://registry.yarnpkg.com/polymer-analyzer/-/polymer-analyzer-3.0.0-pre.24.tgz#5cf216fd3048797c9a562cd931073e08a072efdc"
+polymer-analyzer@=3.0.0-pre.25:
+  version "3.0.0-pre.25"
+  resolved "https://registry.yarnpkg.com/polymer-analyzer/-/polymer-analyzer-3.0.0-pre.25.tgz#704a78d446b4bc192683ffc05d44955005172144"
   dependencies:
     "@babel/generator" "^7.0.0-beta.42"
     "@babel/traverse" "^7.0.0-beta.42"
@@ -8236,9 +8242,9 @@ polymer-analyzer@=3.0.0-pre.24:
     vscode-uri "^1.0.1"
     whatwg-url "^6.4.0"
 
-polymer-build@=3.0.0-pre.16:
-  version "3.0.0-pre.16"
-  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.16.tgz#d559bcc00e53300e2d584b02c5b6eeee520d6eff"
+polymer-build@=3.0.0-pre.17:
+  version "3.0.0-pre.17"
+  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.17.tgz#a99e8e4bb0a4a74bb4a20a96268327c3e36dc7eb"
   dependencies:
     "@babel/core" "^7.0.0-beta.46"
     "@babel/plugin-external-helpers" "^7.0.0-beta.46"
@@ -8272,7 +8278,7 @@ polymer-build@=3.0.0-pre.16:
     "@babel/plugin-transform-typeof-symbol" "^7.0.0-beta.46"
     "@babel/plugin-transform-unicode-regex" "^7.0.0-beta.46"
     "@babel/traverse" "^7.0.0-beta.46"
-    "@polymer/esm-amd-loader" "^0.1.0"
+    "@polymer/esm-amd-loader" "^0.1.1"
     "@types/babel-types" "^6.25.1"
     "@types/babylon" "^6.16.2"
     "@types/gulp-if" "0.0.33"
@@ -8287,7 +8293,7 @@ polymer-build@=3.0.0-pre.16:
     "@types/vinyl-fs" "^2.4.8"
     babel-preset-minify "=0.4.0-alpha.caaefb4c"
     babylon "^7.0.0-beta.42"
-    css-slam "^2.1.0"
+    css-slam "^2.1.1"
     dom5 "^3.0.0"
     gulp-if "^2.0.2"
     html-minifier "^3.5.10"
@@ -8296,24 +8302,25 @@ polymer-build@=3.0.0-pre.16:
     mz "^2.6.0"
     parse5 "^4.0.0"
     plylog "^0.5.0"
-    polymer-analyzer "=3.0.0-pre.24"
-    polymer-bundler "=4.0.0-pre.6"
-    polymer-project-config "^3.13.0"
+    polymer-analyzer "=3.0.0-pre.25"
+    polymer-bundler "=4.0.0-pre.7"
+    polymer-project-config "^3.14.0"
+    regenerator-runtime "^0.11.1"
     stream "0.0.2"
     sw-precache "^5.1.1"
     uuid "^3.2.1"
     vinyl "^1.2.0"
     vinyl-fs "^2.4.4"
 
-polymer-bundler@=4.0.0-pre.6:
-  version "4.0.0-pre.6"
-  resolved "https://registry.yarnpkg.com/polymer-bundler/-/polymer-bundler-4.0.0-pre.6.tgz#4217c76947bc5968064107e7e2915794243dbfeb"
+polymer-bundler@=4.0.0-pre.7:
+  version "4.0.0-pre.7"
+  resolved "https://registry.yarnpkg.com/polymer-bundler/-/polymer-bundler-4.0.0-pre.7.tgz#11f23798069899f5a5f918b01f27ea45a9235e97"
   dependencies:
     "@types/acorn" "^4.0.3"
     "@types/babel-generator" "^6.25.1"
     "@types/babel-traverse" "^6.25.3"
-    "@types/node" "^9.6.4"
     "@types/rollup" "^0.54.0"
+    acorn-import-meta "^0.2.1"
     babel-generator "^6.26.1"
     babel-traverse "^6.26.0"
     clone "^2.1.0"
@@ -8324,23 +8331,24 @@ polymer-bundler@=4.0.0-pre.6:
     magic-string "^0.22.4"
     mkdirp "^0.5.1"
     parse5 "^2.2.2"
-    polymer-analyzer "=3.0.0-pre.24"
+    polymer-analyzer "=3.0.0-pre.25"
     rollup "^0.56.1"
     source-map "^0.5.6"
     vscode-uri "^1.0.1"
 
-polymer-project-config@^3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/polymer-project-config/-/polymer-project-config-3.13.0.tgz#5c64c0caba59ebce327f20c586224e44e49634e8"
+polymer-project-config@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/polymer-project-config/-/polymer-project-config-3.14.0.tgz#dbca7765b0c977df8795e2b891610b9834e72b06"
   dependencies:
-    "@types/node" "^6.0.41"
+    "@types/node" "^9.6.4"
+    browser-capabilities "^1.0.0"
     jsonschema "^1.1.1"
     minimatch-all "^1.1.0"
     plylog "^0.5.0"
 
 polyserve@^0.27.4:
-  version "0.27.9"
-  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.9.tgz#3e2443fcc4a98e8938b9af388b662b28108cc1be"
+  version "0.27.10"
+  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.10.tgz#55ce4a85f03a21343a848fcd05232d083d472560"
   dependencies:
     "@types/compression" "^0.0.33"
     "@types/content-type" "^1.1.0"
@@ -8370,7 +8378,9 @@ polyserve@^0.27.4:
     mz "^2.4.0"
     opn "^3.0.2"
     pem "^1.8.3"
-    polymer-build "=3.0.0-pre.16"
+    polymer-build "=3.0.0-pre.17"
+    polymer-project-config "^3.14.0"
+    requirejs "^2.3.4"
     resolve "^1.5.0"
     send "^0.14.1"
     spdy "^3.3.3"
@@ -9189,6 +9199,10 @@ regenerator-runtime@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.0.tgz#7e54fe5b5ccd5d6624ea6255c3473be090b802e1"
 
+regenerator-runtime@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+
 regenerator-transform@^0.10.0:
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/regenerator-transform/-/regenerator-transform-0.10.1.tgz#1e4996837231da8b7f3cf4114d71b5691a0680dd"
@@ -9472,6 +9486,10 @@ require-uncached@^1.0.3:
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
+
+requirejs@^2.3.4:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/requirejs/-/requirejs-2.3.5.tgz#617b9acbbcb336540ef4914d790323a8d4b861b0"
 
 requires-port@1.0.x, requires-port@1.x.x, requires-port@~1.0.0:
   version "1.0.0"
