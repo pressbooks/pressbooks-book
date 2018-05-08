@@ -501,11 +501,3 @@ $section-license-margin-top: 2em !default;
 /// Bottom margin for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
 /// @type String
 $section-license-image-margin-bottom: 0.2em !default;
-
-/// Image width for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
-/// @type String
-$section-license-image-width: 88px !default;
-
-/// Image Height for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
-/// @type String
-$section-license-image-height: 31px !default;

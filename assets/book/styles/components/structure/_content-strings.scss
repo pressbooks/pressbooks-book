@@ -66,10 +66,12 @@ meta[name="pb-publisher-city"] {
 .front-matter .front-matter-title-wrap .short-title,
 .chapter .chapter-title-wrap .short-title,
 .back-matter .back-matter-title-wrap .short-title {
-  width: 0;
   height: 0;
-  visibility: hidden; // display: none causes issues with string-set
+  line-height: 0;
+  margin: 0;
   string-set: section-title content();
+  visibility: hidden; // display: none causes issues with string-set
+  width: 0;
 }
 
 .chapter-title-wrap {
