@@ -466,3 +466,10 @@
   font-family: $font-family-sans-serif;
   margin-bottom: 0.5rem;
 }
+
+#content .license-attribution {
+  img {
+    height: 2em;
+    width: auto;
+  }
+}
