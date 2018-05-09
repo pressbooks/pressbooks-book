@@ -5,7 +5,8 @@
  * @package Pressbooks_Book
  */
 
-use function \Pressbooks\Book\Helpers\get_name_for_filetype;
+use function \Pressbooks\Book\Helpers\get_metakeys;
+ use function \Pressbooks\Book\Helpers\get_name_for_filetype;
 use function \Pressbooks\Book\Helpers\license_to_icons;
 use function \Pressbooks\Book\Helpers\license_to_text;
 use function \Pressbooks\Book\Helpers\share_icons;
@@ -14,6 +15,11 @@ use function \Pressbooks\Book\Helpers\share_icons;
  * Helpers test case.
  */
 class HelpersTest extends WP_UnitTestCase {
+	function test_get_metakeys() {
+		$output = get_metakeys();
+		$this->assertInternalType( 'array', $output );
+	}
+
 	function test_get_name_for_filetype() {
 		$output = get_name_for_filetype( 'pdf' );
 		$this->assertEquals( 'Digital PDF', $output );
