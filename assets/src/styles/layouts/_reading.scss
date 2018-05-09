@@ -446,3 +446,19 @@ h1.reading-header__title {
 [aria-expanded="true"] .vert {
   display: none;
 }
+
+.no-navigation {
+  .header,
+  .nav-reading,
+  .footer {
+    display: none;
+  }
+
+  &.single {
+    #content {
+      box-sizing: border-box;
+      max-width: var(--reading-width);
+      width: 100%;
+    }
+  }
+}
