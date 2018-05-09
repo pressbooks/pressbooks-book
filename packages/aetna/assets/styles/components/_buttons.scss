@@ -1,3 +1,4 @@
+.button,
 button,
 input[type="submit"],
 a.call-to-action {
@@ -16,6 +17,7 @@ a.call-to-action {
 
   // Share hover and focus styles
   &:focus,
+  &.focus,
   &:hover {
     text-decoration: none;
   }
@@ -23,7 +25,6 @@ a.call-to-action {
   &:focus,
   &.focus {
     outline: 0;
-    // box-shadow: $btn-focus-box-shadow;
   }
 
   // Disabled comes first so active can properly restyle
@@ -40,6 +41,7 @@ a.call-to-action {
   }
 }
 
+.button,
 button,
 input[type="submit"] {
   background-color: var(--primary);
@@ -47,23 +49,93 @@ input[type="submit"] {
   color: var(--primary-fg);
 
   &:focus,
+  &.focus,
   &:hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
     color: var(--primary-fg);
   }
+
+  &:focus,
+  &.focus {
+    box-shadow:
+      0 0 0 $btn-border-width var(--primary-fg),
+      0 0 0 (2 * $btn-border-width) var(--primary-dark);
+  }
+
+  &.button--accent {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-fg);
+
+    &:focus,
+    &.focus,
+    &:hover {
+      background-color: var(--accent-dark);
+      border-color: var(--accent-dark);
+      color: var(--accent-fg);
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow:
+        0 0 0 $btn-border-width var(--accent-fg),
+        0 0 0 (2 * $btn-border-width) var(--accent-dark);
+    }
+
+    &:active,
+    &.active {
+      background-image: none;
+      @include btn-active-box-shadow( "accent" );
+    }
+  }
 }
 
-a.call-to-action {
+.call-to-action {
   background-color: var(--primary-fg);
   border-color: var(--primary);
   color: var(--primary);
 
   &:focus,
+  &.focus,
   &:hover {
     background-color: var(--primary-fg);
     border-color: var(--primary-dark);
     color: var(--primary-dark);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow:
+      0 0 0 $btn-border-width var(--primary-fg),
+      0 0 0 (2 * $btn-border-width) var(--primary-dark);
+  }
+
+  &.call-to-action--accent {
+    background-color: var(--accent-fg);
+    border-color: var(--accent);
+    color: var(--accent);
+
+    &:focus,
+    &.focus,
+    &:hover {
+      background-color: var(--accent-fg);
+      border-color: var(--accent-dark);
+      color: var(--accent-dark);
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow:
+        0 0 0 $btn-border-width var(--accent-fg),
+        0 0 0 (2 * $btn-border-width) var(--accent-dark);
+    }
+
+    &:active,
+    &.active {
+      background-image: none;
+      @include btn-active-box-shadow( "accent" );
+    }
   }
 }
 
@@ -73,10 +145,18 @@ a.call-to-action {
   color: var(--accent-fg);
 
   &:focus,
+  &.focus,
   &:hover {
     background-color: var(--accent-dark);
     border-color: var(--accent-fg);
     color: var(--accent-fg);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow:
+      0 0 0 $btn-border-width var(--accent-dark),
+      0 0 0 (2 * $btn-border-width) var(--accent-fg);
   }
 
   &:active,
@@ -86,33 +166,63 @@ a.call-to-action {
   }
 }
 
-.button--secondary {
-  background-color: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
-
-  &:focus,
-  &:hover {
-    border-color: var(--primary-dark);
-    color: var(--primary-dark);
-  }
-}
-
-.button--circle--primary {
+.button--circle {
   align-items: center;
   background-color: var(--primary);
-  color: var(--primary-fg);
+  border-color: var(--primary);
   border-radius: 50%;
+  border-style: solid;
+  border-width: $btn-border-width;
+  color: var(--primary-fg);
   display: flex;
   justify-content: center;
   height: 3.75rem;
   width: 3.75rem;
 
   &:focus,
+  &.focus,
   &:hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
     color: var(--primary-fg);
     text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow:
+    0 0 0 $btn-border-width var(--primary-fg),
+    0 0 0 (2 * $btn-border-width) var(--primary-dark);
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    @include btn-active-box-shadow();
+  }
+
+  &--accent {
+    background-color: var(--accent);
+    color: var(--accent-fg);
+
+    &:focus,
+    &.focus,
+    &:hover {
+      background-color: var(--accent-dark);
+      border-color: var(--accent-dark);
+      color: var(--accent-fg);
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow:
+      0 0 0 $btn-border-width var(--accent-fg),
+      0 0 0 (2 * $btn-border-width) var(--accent-dark);
+    }
+
+    &:active,
+    &.active {
+      @include btn-active-box-shadow( "accent" );
+    }
   }
 }
