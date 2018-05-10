@@ -660,9 +660,9 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@polymer/esm-amd-loader@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@polymer/esm-amd-loader/-/esm-amd-loader-0.1.1.tgz#ff6edcefce8aa3342c11d51ab97dacdbde93ef06"
+"@polymer/esm-amd-loader@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@polymer/esm-amd-loader/-/esm-amd-loader-1.0.0.tgz#7180ae2bce061511b48fb9b8fac1b8213ae6718b"
 
 "@types/acorn@^4.0.3":
   version "4.0.3"
@@ -881,12 +881,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/rollup@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@types/rollup/-/rollup-0.54.0.tgz#e3ab3a7b3c1bf92969602dd92a589de39f324a31"
-  dependencies:
-    rollup "*"
-
 "@types/serve-static@*", "@types/serve-static@^1.7.31":
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.1.tgz#1d2801fa635d274cd97d4ec07e26b21b44127492"
@@ -973,12 +967,6 @@ acorn-dynamic-import@^2.0.0:
   dependencies:
     acorn "^4.0.3"
 
-acorn-dynamic-import@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-3.0.0.tgz#901ceee4c7faaef7e07ad2a47e890675da50a278"
-  dependencies:
-    acorn "^5.0.0"
-
 acorn-import-meta@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/acorn-import-meta/-/acorn-import-meta-0.2.1.tgz#ac91e06e00facece7e96ff76a0fe9ec7b1cb5b5c"
@@ -1003,7 +991,7 @@ acorn@^5.0.0, acorn@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
-acorn@^5.4.1, acorn@^5.5.0, acorn@^5.5.3:
+acorn@^5.4.1, acorn@^5.5.0:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.5.3.tgz#f473dd47e0277a08e28e9bec5aeeb04751f0b8c9"
 
@@ -3466,12 +3454,6 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-date-time@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/date-time/-/date-time-2.1.0.tgz#0286d1b4c769633b3ca13e1e62558d2dbdc2eba2"
-  dependencies:
-    time-zone "^1.0.0"
-
 dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
@@ -4337,10 +4319,6 @@ esrecurse@^4.1.0:
 estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
-
-estree-walker@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.3.1.tgz#e6b1a51cf7292524e7237c312e5fe6660c1ce1aa"
 
 esutils@^2.0.2:
   version "2.0.2"
@@ -5895,10 +5873,6 @@ ipaddr.js@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.6.0.tgz#e3fa357b773da619f26e95f049d055c72796f86b"
 
-irregular-plurals@^1.0.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/irregular-plurals/-/irregular-plurals-1.4.0.tgz#2ca9b033651111855412f16be5d77c62a458a766"
-
 is-absolute-url@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-2.1.0.tgz#50530dfb84fcc9aa7dbe7852e83a37b93b9f2aa6"
@@ -6199,12 +6173,6 @@ is-property@^1.0.0:
 is-redirect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-redirect/-/is-redirect-1.0.0.tgz#1d03dded53bd8db0f30c26e4f95d36fc7c87dc24"
-
-is-reference@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-reference/-/is-reference-1.1.0.tgz#50e6ef3f64c361e2c53c0416cdc9420037f2685b"
-  dependencies:
-    "@types/estree" "0.0.38"
 
 is-regex@^1.0.4:
   version "1.0.4"
@@ -6629,10 +6597,6 @@ localtunnel@1.8.3:
     openurl "1.1.1"
     request "2.81.0"
     yargs "3.29.0"
-
-locate-character@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/locate-character/-/locate-character-2.0.5.tgz#f2d2614d49820ecb3c92d80d193b8db755f74c0f"
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -7998,10 +7962,6 @@ parse-json@^4.0.0:
     error-ex "^1.3.1"
     json-parse-better-errors "^1.0.1"
 
-parse-ms@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/parse-ms/-/parse-ms-1.0.1.tgz#56346d4749d78f23430ca0c713850aef91aa361d"
-
 parse5@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-2.2.3.tgz#0c4fc41c1000c5e6b93d48b03f8083837834e9f6"
@@ -8173,12 +8133,6 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-plur@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/plur/-/plur-2.1.2.tgz#7482452c1a0f508e3e344eaec312c91c29dc655a"
-  dependencies:
-    irregular-plurals "^1.0.0"
-
 pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
@@ -8203,9 +8157,9 @@ pngquant-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-polymer-analyzer@=3.0.0-pre.25:
-  version "3.0.0-pre.25"
-  resolved "https://registry.yarnpkg.com/polymer-analyzer/-/polymer-analyzer-3.0.0-pre.25.tgz#704a78d446b4bc192683ffc05d44955005172144"
+polymer-analyzer@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/polymer-analyzer/-/polymer-analyzer-3.0.0.tgz#4358b389f924ce9cd4a45a2edf589c2b6f0b6e5a"
   dependencies:
     "@babel/generator" "^7.0.0-beta.42"
     "@babel/traverse" "^7.0.0-beta.42"
@@ -8246,9 +8200,9 @@ polymer-analyzer@=3.0.0-pre.25:
     vscode-uri "^1.0.1"
     whatwg-url "^6.4.0"
 
-polymer-build@=3.0.0-pre.17:
-  version "3.0.0-pre.17"
-  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0-pre.17.tgz#a99e8e4bb0a4a74bb4a20a96268327c3e36dc7eb"
+polymer-build@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/polymer-build/-/polymer-build-3.0.0.tgz#d78872e0d28dea4532123bf8f7dc8f4429585913"
   dependencies:
     "@babel/core" "^7.0.0-beta.46"
     "@babel/plugin-external-helpers" "^7.0.0-beta.46"
@@ -8282,7 +8236,7 @@ polymer-build@=3.0.0-pre.17:
     "@babel/plugin-transform-typeof-symbol" "^7.0.0-beta.46"
     "@babel/plugin-transform-unicode-regex" "^7.0.0-beta.46"
     "@babel/traverse" "^7.0.0-beta.46"
-    "@polymer/esm-amd-loader" "^0.1.1"
+    "@polymer/esm-amd-loader" "^1.0.0"
     "@types/babel-types" "^6.25.1"
     "@types/babylon" "^6.16.2"
     "@types/gulp-if" "0.0.33"
@@ -8306,9 +8260,9 @@ polymer-build@=3.0.0-pre.17:
     mz "^2.6.0"
     parse5 "^4.0.0"
     plylog "^0.5.0"
-    polymer-analyzer "=3.0.0-pre.25"
-    polymer-bundler "=4.0.0-pre.7"
-    polymer-project-config "^3.14.0"
+    polymer-analyzer "^3.0.0"
+    polymer-bundler "^4.0.0"
+    polymer-project-config "^4.0.0"
     regenerator-runtime "^0.11.1"
     stream "0.0.2"
     sw-precache "^5.1.1"
@@ -8316,14 +8270,13 @@ polymer-build@=3.0.0-pre.17:
     vinyl "^1.2.0"
     vinyl-fs "^2.4.4"
 
-polymer-bundler@=4.0.0-pre.7:
-  version "4.0.0-pre.7"
-  resolved "https://registry.yarnpkg.com/polymer-bundler/-/polymer-bundler-4.0.0-pre.7.tgz#11f23798069899f5a5f918b01f27ea45a9235e97"
+polymer-bundler@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/polymer-bundler/-/polymer-bundler-4.0.0.tgz#a3dbd0652e2f7c8ecee96d6be36e5c70e1d248ff"
   dependencies:
     "@types/acorn" "^4.0.3"
     "@types/babel-generator" "^6.25.1"
     "@types/babel-traverse" "^6.25.3"
-    "@types/rollup" "^0.54.0"
     acorn-import-meta "^0.2.1"
     babel-generator "^6.26.1"
     babel-traverse "^6.26.0"
@@ -8335,14 +8288,14 @@ polymer-bundler@=4.0.0-pre.7:
     magic-string "^0.22.4"
     mkdirp "^0.5.1"
     parse5 "^2.2.2"
-    polymer-analyzer "=3.0.0-pre.25"
-    rollup "^0.56.1"
+    polymer-analyzer "^3.0.0"
+    rollup "^0.58.2"
     source-map "^0.5.6"
     vscode-uri "^1.0.1"
 
-polymer-project-config@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/polymer-project-config/-/polymer-project-config-3.14.0.tgz#dbca7765b0c977df8795e2b891610b9834e72b06"
+polymer-project-config@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/polymer-project-config/-/polymer-project-config-4.0.0.tgz#a6d830123ed1ab0751c28ed4f68d26569846f818"
   dependencies:
     "@types/node" "^9.6.4"
     browser-capabilities "^1.0.0"
@@ -8351,8 +8304,8 @@ polymer-project-config@^3.14.0:
     plylog "^0.5.0"
 
 polyserve@^0.27.4:
-  version "0.27.10"
-  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.10.tgz#55ce4a85f03a21343a848fcd05232d083d472560"
+  version "0.27.11"
+  resolved "https://registry.yarnpkg.com/polyserve/-/polyserve-0.27.11.tgz#445b06849b2b1b131732c6661791a42cf810a33f"
   dependencies:
     "@types/compression" "^0.0.33"
     "@types/content-type" "^1.1.0"
@@ -8382,8 +8335,8 @@ polyserve@^0.27.4:
     mz "^2.4.0"
     opn "^3.0.2"
     pem "^1.8.3"
-    polymer-build "=3.0.0-pre.17"
-    polymer-project-config "^3.14.0"
+    polymer-build "^3.0.0"
+    polymer-project-config "^4.0.0"
     requirejs "^2.3.4"
     resolve "^1.5.0"
     send "^0.14.1"
@@ -8846,13 +8799,6 @@ prettier@^1.7.0:
 pretty-bytes@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
-
-pretty-ms@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/pretty-ms/-/pretty-ms-3.1.0.tgz#e9cac9c76bf6ee52fe942dd9c6c4213153b12881"
-  dependencies:
-    parse-ms "^1.0.0"
-    plur "^2.1.2"
 
 private@^0.1.6, private@^0.1.7, private@~0.1.5:
   version "0.1.8"
@@ -9480,10 +9426,6 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
-require-relative@^0.8.7:
-  version "0.8.7"
-  resolved "https://registry.yarnpkg.com/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
-
 require-uncached@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/require-uncached/-/require-uncached-1.0.3.tgz#4e0d56d6c9662fd31e43011c4b95aa49955421d3"
@@ -9595,32 +9537,12 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
-rollup-pluginutils@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.0.1.tgz#7ec95b3573f6543a46a6461bd9a7c544525d0fc0"
+rollup@^0.58.2:
+  version "0.58.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.58.2.tgz#2feddea8c0c022f3e74b35c48e3c21b3433803ce"
   dependencies:
-    estree-walker "^0.3.0"
-    micromatch "^2.3.11"
-
-rollup@*:
-  version "0.57.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.57.1.tgz#0bb28be6151d253f67cf4a00fea48fb823c74027"
-  dependencies:
-    "@types/acorn" "^4.0.3"
-    acorn "^5.5.3"
-    acorn-dynamic-import "^3.0.0"
-    date-time "^2.1.0"
-    is-reference "^1.1.0"
-    locate-character "^2.0.5"
-    pretty-ms "^3.1.0"
-    require-relative "^0.8.7"
-    rollup-pluginutils "^2.0.1"
-    signal-exit "^3.0.2"
-    sourcemap-codec "^1.4.1"
-
-rollup@^0.56.1:
-  version "0.56.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.56.5.tgz#40fe3cf0cd1659d469baad11f4d5b6336c14ce84"
+    "@types/estree" "0.0.38"
+    "@types/node" "*"
 
 run-async@^2.2.0:
   version "2.3.0"
@@ -10225,10 +10147,6 @@ source-map@^0.4.2:
 source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-
-sourcemap-codec@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.1.tgz#c8fd92d91889e902a07aee392bdd2c5863958ba2"
 
 sparkles@^1.0.0:
   version "1.0.0"
@@ -10919,10 +10837,6 @@ time-stamp@^1.0.0:
 time-stamp@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-2.0.0.tgz#95c6a44530e15ba8d6f4a3ecb8c3a3fac46da357"
-
-time-zone@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/time-zone/-/time-zone-1.0.0.tgz#99c5bf55958966af6d06d83bdf3800dc82faec5d"
 
 timed-out@^3.0.0:
   version "3.1.3"
