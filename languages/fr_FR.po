@@ -40,189 +40,89 @@ msgstr ""
 "Cette publication est protégée par un mot de passe. Entrer le mot de passe "
 "pour voir les commentaires."
 
-#: ../comments.php33, ../comments.php:44
+#: ../comments.php36, ../comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span> Commentaires plus anciens"
 
-#: ../comments.php34, ../comments.php:45
+#: ../comments.php37, ../comments.php:48
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Commentaires récents<span class=\"meta-nav\">&rarr;</span>"
 
-#: ../comments.php:52
+#: ../comments.php:56
 msgid "Comments are closed."
 msgstr "Les commentaires sont clos."
 
-#: ../comments.php:60
+#: ../comments.php:64
 msgid "Submit"
 msgstr "Soumettre"
 
-#: ../footer.php:25
+#: ../footer.php:32
 msgid "Powered by %s"
 msgstr "Alimenté par %s"
 
-#: ../footer.php:27
+#: ../footer.php:34
 msgid "Open Source"
 msgstr "Open source"
 
-#: ../footer.php:28
+#: ../footer.php:35
 msgid "Open Textbooks"
 msgstr "Manuels scolaires ouverts"
 
-#: ../footer.php:29
+#: ../footer.php:36
 msgid "Open Book Publishing"
 msgstr "Édition ouverte"
 
-#: ../footer.php:30
+#: ../footer.php:37
 msgid "Learn More"
 msgstr "En savoir plus"
 
-#: ../footer.php34, ../footer.php:38
+#: ../footer.php41, ../footer.php:45
 msgid "Pressbooks on Facebook"
 msgstr "Pressbooks sur Facebook"
 
-#: ../footer.php40, ../footer.php:44
+#: ../footer.php47, ../footer.php:51
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks sur Twitter"
 
-#: ../functions.php:18
+#: ../functions.php:16
 msgid "Dependencies Missing"
 msgstr "Dépendances manquantes"
 
-#: ../functions.php:19
+#: ../functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
 msgstr ""
 "Vous devez exécuter <code>composer install</code> à partir du répertoire des"
 " fichiers McLuhan."
 
-#: ../functions.php:29
+#: ../functions.php:28
 msgid "Cannot find Pressbooks install."
 msgstr "L'installation Pressbooks ne peut pas être trouvée."
 
-#: ../functions.php:65
-msgid "Author"
-msgid_plural "Authors"
-msgstr[0] "Auteur"
-msgstr[1] "Auteurs"
-
-#: ../functions.php:66
-msgid "Editor"
-msgid_plural "Editors"
-msgstr[0] "Éditeur"
-msgstr[1] "Éditeurs"
-
-#: ../functions.php:67
-msgid "Translator"
-msgid_plural "Translators"
-msgstr[0] "Traducteur"
-msgstr[1] "Traducteurs"
-
-#: ../functions.php:68
-msgid "Reviewer"
-msgid_plural "Reviewers"
-msgstr[0] "Critique"
-msgstr[1] "Critiques"
-
-#: ../functions.php:69
-msgid "Illustrator"
-msgid_plural "Illustrators"
-msgstr[0] "Illustrateur"
-msgstr[1] "Illustrateurs"
-
-#: ../functions.php:70
-msgid "Contributor"
-msgid_plural "Contributors"
-msgstr[0] "Contributeur"
-msgstr[1] "Contributeurs"
-
-#: ../functions.php71, ../single.php:28
-msgid "License"
-msgstr "License"
-
-#: ../functions.php:72
-msgid "Primary Subject"
-msgstr "Sujet principal"
-
-#: ../functions.php:73
-msgid "Additional Subject(s)"
-msgstr "Sujet(s) supplémentaire(s)"
-
-#: ../functions.php:74
-msgid "Publisher"
-msgstr "Editeur"
-
-#: ../functions.php:75
-msgid "Publication Date"
-msgstr "Date de publication"
-
-#: ../functions.php:76
-msgid "Ebook ISBN"
-msgstr "ISBN de l'ebook"
-
-#: ../functions.php:77
-msgid "Print ISBN"
-msgstr "ISBN de la version imprimée"
-
-#: ../functions.php:78
-msgid "Hashtag"
-msgstr "Hashtag"
-
-#: ../functions.php:115
-msgid "Increase Font Size"
-msgstr "Augmenter la taille de la police"
-
-#: ../functions.php:116
-msgid "Decrease Font Size"
-msgstr "Diminuer la taille de la police"
-
-#: ../functions.php:236
-msgid "Previous Section"
-msgstr "Section précédente"
-
-#: ../functions.php:241
-msgid "Next Section"
-msgstr "Section suivante"
-
-#: ../functions.php:286
-msgid "%s on"
-msgstr "%s sur"
-
-#: ../functions.php:286
-msgid "%1$s at %2$s"
-msgstr "%1$s à %2$s"
-
-#: ../functions.php286, ../functions.php:306
-msgid "(Edit)"
-msgstr "(Modifier)"
-
-#: ../functions.php:289
-msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en cours de modération"
-
-#: ../functions.php:306
-msgid "Pingback:"
-msgstr "PingBack :"
-
-#: ../header.php:59
+#: ../header.php:64
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: ../header.php:73
+#: ../header.php:83
 msgid "Logo for %s"
 msgstr "Logo pour %s"
 
-#: ../header.php:83
+#: ../header.php:94
 msgid "Toggle Menu"
 msgstr "Basculer le menu"
 
-#: ../header.php95, ../index.php:13
+#: ../header.php106, ../index.php:14
 msgid "Contents"
 msgstr "Table des matières"
 
-#: ../header.php:105
+#: ../header.php:112
+msgid "Go to the cover page of %s"
+msgstr ""
+
+#: ../header.php:116
 msgid "Buy"
 msgstr "Acheter"
 
-#: ../index.php:16
+#: ../index.php:18
 msgid "This book does not contain any public content."
 msgstr "Ce livre ne contient aucun contenu public."
 
@@ -234,7 +134,7 @@ msgstr "A propos du livre"
 msgid "It's coming!"
 msgstr "Ça arrive !"
 
-#: ../page-authors.php:26
+#: ../page-authors.php:31
 msgid "Authors"
 msgstr "Auteurs"
 
@@ -242,45 +142,45 @@ msgstr "Auteurs"
 msgid "Buy the Book"
 msgstr "Acheter le livre"
 
-#: ../page-buy.php:20
+#: ../page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
 "Vous pouvez acheter <a href=\"%1$s\">%2$s</a> en suivant l'un des liens ci-"
 "dessous :"
 
-#: ../page-buy.php:24
+#: ../page-buy.php:25
 msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
 msgstr "Achetez sur <a href=\"%1$s\">amazon.com</a>"
 
-#: ../page-buy.php:28
+#: ../page-buy.php:30
 msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
 msgstr "Achetez sur <a href=\"%1$s\">oreilly.com</a>"
 
-#: ../page-buy.php:32
+#: ../page-buy.php:35
 msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
 msgstr "Achetez sur <a href=\"%1$s\">barnesandnoble.com</a>"
 
-#: ../page-buy.php:36
+#: ../page-buy.php:40
 msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
 msgstr "Achetez sur <a href=\"%1$s\">kobobooks.com</a>"
 
-#: ../page-buy.php:40
+#: ../page-buy.php:45
 msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
 msgstr "Achetez sur <a href=\"%1$s\">apple.com</a>"
 
-#: ../page-buy.php:44
+#: ../page-buy.php:50
 msgid "Elsewhere"
 msgstr "Ailleurs"
 
-#: ../page-buy.php:44
+#: ../page-buy.php:50
 msgid "Purchase here:"
 msgstr "Achetez ici :"
 
-#: ../page.php:12
+#: ../page.php:13
 msgid "Edit"
 msgstr "Modifier"
 
-#: ../page.php:14
+#: ../page.php:18
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -288,7 +188,7 @@ msgstr "Pages :"
 msgid "Access Denied"
 msgstr "Accès refusé"
 
-#: ../private.php:7
+#: ../private.php:10
 msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
@@ -296,44 +196,48 @@ msgstr ""
 "Ce livre est privé et accessible uniquement aux utilisateurs enregistrés. Si"
 " vous avez un compte, vous pouvez %s."
 
-#: ../private.php:11
+#: ../private.php:14
 msgid "sign in here"
 msgstr "se connecter ici"
 
-#: ../private.php:15
+#: ../private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "Vous pouvez également configurer votre propre livre Pressbooks à %s"
 
-#: ../search.php:5
+#: ../search.php:6
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour : %s"
 
-#: ../search.php:12
+#: ../search.php:18
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: ../search.php:13
+#: ../search.php:19
 msgid "Next page"
 msgstr "Page suivante"
 
-#: ../search.php:14
+#: ../search.php:20
 msgid "Paged navigation"
 msgstr "Navigation paginée"
 
 #: ../searchform.php:3
 msgctxt "label"
-msgid "Search for:"
-msgstr "Rechercher:"
+msgid "Search in book:"
+msgstr ""
 
 #: ../searchform.php:4
 msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Chercher &hellip;"
+msgid "Search in book &hellip;"
+msgstr ""
 
 #: ../searchform.php:8
 msgid "Search"
 msgstr "Chercher"
 
-#: ../single.php:37
+#: ../single.php:32
+msgid "License"
+msgstr "License"
+
+#: ../single.php:41
 msgid "Share This Book"
 msgstr "Partagez ce livre"
