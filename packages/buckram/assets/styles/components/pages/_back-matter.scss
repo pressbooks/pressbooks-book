@@ -50,9 +50,11 @@ div.index {
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;
     page-break-inside: avoid;
+    text-indent: 0;
   }
 
   img {
+    background: transparent;
     height: 2em;
     width: auto;
   }
