@@ -459,6 +459,9 @@ h1.reading-header__title {
       box-sizing: border-box;
       max-width: var(--reading-width);
       width: 100%;
+      .edit-link {
+        display: none;
+      }
     }
   }
 }
