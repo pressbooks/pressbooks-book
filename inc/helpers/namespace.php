@@ -419,24 +419,34 @@ function get_metakeys() {
  */
 function get_links( $echo = true ) {
 	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
-	$first_chapter = pb_get_first();
-	$prev_chapter  = pb_get_prev();
-	$next_chapter  = pb_get_next();
+	$first_chapter          = pb_get_first();
+	$prev_chapter           = pb_get_prev();
+	$prev_chapter_id        = pb_get_prev_post_id();
+	$prev_chapter_post_type = \Pressbooks\PostType\get_post_type_label( get_post_type( $prev_chapter_id ) );
+	$next_chapter           = pb_get_next();
+	$next_chapter_id        = pb_get_next_post_id();
+	$next_chapter_post_type = \Pressbooks\PostType\get_post_type_label( get_post_type( $next_chapter_id ) );
 	if ( $echo ) :
 		?>
 		<nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
-				<a href="<?php echo $prev_chapter; ?>"><svg class="icon--svg">
-								<use xlink:href="#arrow-left" />
-							</svg><?php _e( 'Previous Section', 'pressbooks-book' ); ?></a>
+				<?php /* translators: %1$s: post title, %2$s: post type name */ ?>
+				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %1$s (%2$s)', 'pressbooks-book' ), get_the_title( $prev_chapter_id ), $prev_chapter_post_type ); ?>">
+					<svg class="icon--svg"><use xlink:href="#arrow-left" /></svg>
+					<?php /* translators: %s: post type name */ ?>
+					<?php printf( __( 'Previous (%s)', 'pressbooks-book' ), $prev_chapter_post_type ); ?>
+				</a>
 			<?php } ?>
 		</div>
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
-				<a href="<?php echo $next_chapter ?>"><?php _e( 'Next Section', 'pressbooks-book' ); ?><svg class="icon--svg">
-								<use xlink:href="#arrow-right" />
-							</svg></a>
+				<?php /* translators: %1$s: post title, %2$s: post type name */ ?>
+				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %1$s (%2$s)', 'pressbooks-book' ), get_the_title( $next_chapter_id ), $next_chapter_post_type ); ?>">
+					<?php /* translators: %s: post type name */ ?>
+					<?php printf( __( 'Next (%s)', 'pressbooks-book' ), $next_chapter_post_type ); ?>
+					<svg class="icon--svg"><use xlink:href="#arrow-right" /></svg>
+				</a>
 			<?php endif; ?>
 		</div>
 		<button class="nav-reading__up" >
