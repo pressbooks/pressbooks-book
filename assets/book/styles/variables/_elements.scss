@@ -938,7 +938,7 @@ $pre-line-height: $code-line-height !default;
 /// Bottom margin of `<pre>` elements.
 /// @type String | Map
 /// @since 1.0.0
-$pre-margin-bottom: 0 !default;
+$pre-margin-bottom: 1em !default;
 
 /// Left margin of `<code>` elements.
 /// @type String | Map
@@ -953,7 +953,7 @@ $pre-margin-right: 0 !default;
 /// Top margin of `<code>` elements.
 /// @type String | Map
 /// @since 1.0.0
-$pre-margin-top: 0 !default;
+$pre-margin-top: 1em !default;
 
 /// Bottom padding of `<code>` elements.
 /// @type String | Map
