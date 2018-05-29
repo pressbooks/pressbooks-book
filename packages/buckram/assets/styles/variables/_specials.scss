@@ -461,6 +461,24 @@ $textbox-line-height: 1.2em !default;
 /// @type String
 $textbox-text-align: left !default;
 
+/// Word spacing on elements with a class of `textbox`.
+/// @type String | Map
+/// @since 1.0.0
+$textbox-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Letter spacing on elements with a class of `textbox`.
+/// @type String | Map
+/// @since 1.0.0
+$textbox-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
 /// Textbox background color on elements with a class of `textbox`.
 /// @type String
 $textbox-background-color: initial !default;
