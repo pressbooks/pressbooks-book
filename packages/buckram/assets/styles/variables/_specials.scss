@@ -34,6 +34,15 @@ $column-threecolumn-column-gap: 1em !default;
 /// @type String
 $column-threecolumn-font-size: 0.8em !default;
 
+/// Text indent for elements with class `.twocolumn` and `.threecolumn`.
+/// @type String | Map
+/// @since 1.0.0
+$column-text-indent: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 // Dropcaps
 
 /// Font stack for elements with class `.first-character`.
