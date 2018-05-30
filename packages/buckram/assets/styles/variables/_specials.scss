@@ -686,6 +686,24 @@ $edu-textbox-padding-left: 1em !default;
 /// @type String
 $edu-textbox-margin-bottom: 1.35em !default;
 
+/// Educational Textbox margin left.
+/// @type String | Map
+/// @since version 1.0.0
+$edu-textbox-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Educational Textbox margin right.
+/// @type String | Map
+/// @since version 1.0.0
+$edu-textbox-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 /// Educational Textbox header top padding.
 /// @deprecated
 /// @type String
