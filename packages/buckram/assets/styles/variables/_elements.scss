@@ -617,6 +617,26 @@ $blockquote-margin-bottom: 1em !default;
 /// @type String
 $blockquote-margin-left: 1em !default;
 
+/// Top padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-top: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Right padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-right: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Bottom padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-bottom: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Left padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-left: (epub: 0em, prince: 0em, web: 0) !default;
+
 /// Alignment for `<blockquote>` elements.
 /// @type String
 $blockquote-align: justify !default;
