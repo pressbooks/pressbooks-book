@@ -621,6 +621,24 @@ $blockquote-margin-left: 1em !default;
 /// @type String
 $blockquote-align: justify !default;
 
+/// Letter spacing on `<blockquote>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$blockquote-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Word spacing on `<blockquote>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$blockquote-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
 /// Left border width for `<blockquote>` elements.
 /// @type String | Map
 /// @since 1.0.0
