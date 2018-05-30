@@ -112,6 +112,8 @@
       font-style: $toc-chapter-subtitle-font-style;
       font-weight: $toc-chapter-subtitle-font-weight;
       text-transform: $toc-chapter-subtitle-text-transform;
+      margin-top: if-map-get($toc-chapter-subtitle-margin-top, $type);
+      margin-bottom: if-map-get($toc-chapter-subtitle-margin-bottom, $type);
     }
 
     .chapter .chapter-author {
@@ -121,6 +123,8 @@
       font-style: $toc-chapter-author-font-style;
       font-weight: $toc-chapter-author-font-weight;
       text-transform: $toc-chapter-author-text-transform;
+      margin-top: if-map-get($toc-chapter-author-margin-top, $type);
+      margin-bottom: if-map-get($toc-chapter-author-margin-bottom, $type);
     }
 
     .back-matter {
