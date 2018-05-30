@@ -281,6 +281,11 @@ $aphorism-font-size: (
 /// @since 0.3.0
 $aphorism-font-style: italic !default;
 
+/// Defines aphorism font weight.
+/// @type String
+/// @since 1.0.0
+$aphorism-font-weight: normal !default;
+
 /// Defines aphorism line height.
 /// @type String | Map
 /// @since 0.3.0
@@ -315,6 +320,11 @@ $aphorism-cite-font-style: italic !default;
 /// @type String
 /// @since 0.3.0
 $aphorism-cite-font-variant: normal !default;
+
+/// Defines aphorism font weight.
+/// @type String
+/// @since 1.0.0
+$aphorism-cite-font-weight: normal !default;
 
 /// Defines aphorism citation text transform.
 /// @type String

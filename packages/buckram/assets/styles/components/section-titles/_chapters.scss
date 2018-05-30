@@ -115,6 +115,7 @@ blockquote.aphorism {
   font-family: $aphorism-font-family;
   font-size: if-map-get($aphorism-font-size, $type);
   font-style: $aphorism-font-style;
+  font-weight: $aphorism-font-weight;
   @if $type != 'epub' {
     line-height: if-map-get($aphorism-line-height, $type);
   }
@@ -128,6 +129,7 @@ blockquote.aphorism {
     font-size: if-map-get($aphorism-cite-font-size, $type);
     font-style: $aphorism-cite-font-style;
     font-variant: $aphorism-cite-font-variant;
+    font-weight: $aphorism-cite-font-weight;
     text-transform: $aphorism-cite-text-transform;
     text-align: $aphorism-cite-align;
 
