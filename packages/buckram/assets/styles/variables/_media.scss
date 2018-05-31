@@ -190,3 +190,13 @@ $interactive-icon-background-size: (
   epub: $interactive-icon-width $interactive-icon-height,
   web: cover
 ) !default;
+
+/// Line height property for interactive content box
+/// @type String | Map
+/// @since 1.0.0
+$interactive-content-line-height: $body-line-height !default;
+
+/// Bottom margin property for interactive content box
+/// @type String | Map
+/// @since 1.0.0
+$interactive-content-margin-bottom: (prince: 1.5em, epub: 1em, web: 1em) !default;
