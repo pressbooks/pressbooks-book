@@ -791,6 +791,16 @@ $toc-title-border-bottom-color: $section-title-border-bottom-color !default;
 /// @since 1.0.0
 $toc-title-padding-bottom: $section-title-padding-bottom !default;
 
+/// Defines letter spacing property on table of contents title
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines word spacing property on table of contents title
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-word-spacing: $section-title-word-spacing !default;
+
 /// Defines the chapter number display property.
 /// @type String
 $chapter-number-display: block !default;

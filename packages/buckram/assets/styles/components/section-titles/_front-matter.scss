@@ -100,6 +100,8 @@
     }
     text-align: $toc-title-align;
     text-transform: $toc-title-text-transform;
+    letter-spacing: if-map-get($toc-title-letter-spacing, $type);
+    word-spacing: if-map-get($toc-title-word-spacing, $type);
   }
 }
 
