@@ -26,6 +26,8 @@
       }
       text-align: $back-matter-title-align;
       text-transform: $back-matter-title-text-transform;
+      border-bottom: if-map-get($back-matter-title-border-bottom-width, $type) $back-matter-title-border-bottom-style if-map-get($back-matter-title-border-bottom-color, $type);
+      padding-bottom: if-map-get($back-matter-title-padding-bottom, $type);
       letter-spacing: if-map-get($back-matter-title-letter-spacing, $type);
       word-spacing: if-map-get($back-matter-title-word-spacing, $type);
     }

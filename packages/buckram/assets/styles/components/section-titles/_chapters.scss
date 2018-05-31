@@ -9,6 +9,8 @@
     margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
     h2.chapter-title {
+      border-bottom: if-map-get($chapter-title-border-bottom-width, $type) $chapter-title-border-bottom-style if-map-get($chapter-title-border-bottom-color, $type);
+      padding-bottom: if-map-get($chapter-title-padding-bottom, $type);
       display: $chapter-title-display;
       margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
       font-family: $chapter-title-font-family;
@@ -27,7 +29,7 @@
     }
 
     .chapter-number {
-      border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
+      border-bottom: if-map-get($chapter-number-border-bottom-width, $type) $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-color, $type);
       display: $chapter-number-display;
       margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
       padding-bottom: if-map-get($chapter-number-padding-bottom, $type);

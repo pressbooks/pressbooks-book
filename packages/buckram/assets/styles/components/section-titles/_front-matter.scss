@@ -16,10 +16,12 @@
       display: block;
       margin-top: if-map-get($front-matter-title-margin-top, $type);
       margin-bottom: 0;
+      padding-bottom: if-map-get(front-matter-title-padding-bottom, $type);
       font-family: $front-matter-title-font-family;
       font-size: if-map-get($front-matter-title-font-size, $type);
       font-style: $front-matter-title-font-style;
       font-weight: $front-matter-title-font-weight;
+      border-bottom: $front-matter-title-border-bottom-style if-map-get($front-matter-title-border-bottom-width, $type) if-map-get($front-matter-title-border-bottom-color, $type);
       letter-spacing: if-map-get($front-matter-title-letter-spacing, $type);
       word-spacing: if-map-get($front-matter-title-word-spacing, $type);
       hyphens: none;
@@ -85,6 +87,8 @@
   #toc h1 {
     display: block;
     margin: if-map-get($toc-title-margin-top, $type) if-map-get($toc-title-margin-right, $type) if-map-get($toc-title-margin-bottom, $type) if-map-get($toc-title-margin-left, $type);
+    border-bottom: $toc-title-border-bottom-style if-map-get($toc-title-border-bottom-width, $type) if-map-get($toc-title-border-bottom-color, $type);
+    padding-bottom: if-map-get(toc-title-padding-bottom, $type);
     font-family: $toc-title-font-family;
     font-size: if-map-get($toc-title-font-size, $type);
     font-style: $toc-title-font-style;
