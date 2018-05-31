@@ -81,6 +81,7 @@
     font-size: if-map-get($toc-title-font-size, $type);
     font-style: $toc-title-font-style;
     font-weight: $toc-title-font-weight;
+    color: $toc-title-color;
     hyphens: none;
     @if $type != 'epub' {
       line-height: $toc-title-line-height;
