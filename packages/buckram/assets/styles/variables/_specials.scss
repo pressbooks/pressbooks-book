@@ -582,21 +582,6 @@ $textbox-para-margin-top: 0 !default;
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
 
-/// Textbox header font size on `<h2>` elements that are children of elements with a class of `textbox`.
-/// @type String
-/// @since 1.0.0
-$textbox-header-font-size: 1.425em !default;
-
-/// Textbox header top margin on `<h2>` elements that are children of elements with a class of `textbox`.
-/// @type String
-/// @since 1.0.0
-$textbox-header-margin-top: 1.25em !default;
-
-/// Textbox header bottom margin on `<h2>` elements that are children of elements with a class of `textbox`.
-/// @type String
-/// @since 1.0.0
-$textbox-header-margin-bottom: 1em !default;
-
 /// Textbox header top margin on `<ul>` elements that are children of elements with a class of `textbox`.
 /// @type String
 /// @since 1.0.0

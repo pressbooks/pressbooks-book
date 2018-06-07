@@ -98,12 +98,6 @@
   border-width: if-map-get($textbox-border-width, $type);
   border-radius: if-map-get($textbox-border-radius, $type);
 
-  h2 {
-    font-size: $textbox-header-font-size;
-    margin-top: $textbox-header-margin-top;
-    margin-bottom: $textbox-header-margin-bottom;
-  }
-
   ul {
     margin-top: $textbox-ul-margin-top;
     margin-bottom: $textbox-ul-margin-bottom;
