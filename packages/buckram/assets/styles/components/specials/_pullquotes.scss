@@ -24,9 +24,7 @@ aside,
 
 // Pullquotes
 
-.pullquote,
-.pullquote-left,
-.pullquote-right {
+%pullquote {
   display: block;
   font-family: $pullquote-font-family;
   font-size: $pullquote-font-size;
@@ -45,23 +43,26 @@ aside,
 }
 
 .pullquote {
-  margin-top: $pullquote-margin-top;
-  margin-bottom: $pullquote-margin-bottom;
+  @extend %pullquote;
+  margin: $pullquote-margin-top 0 $pullquote-margin-bottom;
 }
 
-.pullquote-left {
+.pullquote-left,
+.pullquote--left {
+  @extend %pullquote;
   float: left;
-  width: $pullquote-left-width;
   margin: $pullquote-margin-top $pullquote-left-margin-right $pullquote-margin-bottom $pullquote-left-margin-left;
+  text-align: $pullquote-left-align;
+  width: $pullquote-left-width;
 }
 
-.pullquote-right {
+.pullquote-right,
+.pullquote--right {
+  @extend %pullquote;
   float: right;
-  width: $pullquote-right-width;
   margin: $pullquote-margin-top $pullquote-right-margin-right $pullquote-margin-bottom $pullquote-right-margin-left;
-  border-top: 0;
-  border-bottom: 0;
   text-align: $pullquote-right-align;
+  width: $pullquote-right-width;
 }
 
 // Sidebars
