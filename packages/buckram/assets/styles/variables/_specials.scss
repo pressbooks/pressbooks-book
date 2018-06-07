@@ -239,25 +239,45 @@ $aside-border-left: 0 !default;
 /// Pullquote font family.
 /// @type String
 
-/// Border top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
-/// @type String
+/// Border top width for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String | Map
 /// @since 1.0.0
-$pullquote-border-top: 1px solid black !default;
+$pullquote-border-top-width: 0 !default;
 
-/// Border bottom for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// Border top style for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
 /// @type String
 /// @since 1.0.0
-$pullquote-border-bottom: 1px solid black !default;
+$pullquote-border-top-style: none !default;
+
+/// Border top color for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-border-top-color: transparent !default;
+
+/// Border bottom width for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String | Map
+/// @since 1.0.0
+$pullquote-border-bottom-width: 0 !default;
+
+/// Border bottom style for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-border-bottom-style: none !default;
+
+/// Border bottom color for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-border-bottom-color: transparent !default;
 
 /// Padding top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
-/// @type String
+/// @type String | Map
 /// @since 1.0.0
-$pullquote-padding-top: .4em !default;
+$pullquote-padding-top: 0 !default;
 
 /// Padding bottom for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
-/// @type String
+/// @type String | Map
 /// @since 1.0.0
-$pullquote-padding-bottom: .4em !default;
+$pullquote-padding-bottom: 0 !default;
 
 /// Font stack for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
 /// @type String

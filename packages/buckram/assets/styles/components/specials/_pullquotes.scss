@@ -36,10 +36,10 @@ aside,
   }
   text-align: $pullquote-align;
   text-indent: 0;
-  border-top: $pullquote-border-top;
-  border-bottom: $pullquote-border-bottom;
-  padding-top: $pullquote-padding-top;
-  padding-bottom: $pullquote-padding-bottom;
+  border-top: if-map-get($pullquote-border-top-width, $type) $pullquote-border-top-style $pullquote-border-top-color;
+  border-bottom: if-map-get($pullquote-border-bottom-width, $type) $pullquote-border-bottom-style $pullquote-border-bottom-color;
+  padding-top: if-map-get($pullquote-padding-top, $type);
+  padding-bottom: if-map-get($pullquote-padding-bottom, $type);
 }
 
 .pullquote {
