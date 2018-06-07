@@ -5,6 +5,12 @@
 @import '../utilities';
 
 .interactive-content {
+
+  @if $type != 'epub' {
+    line-height: if-map-get($interactive-content-line-height, $type);
+  }
+  margin-bottom: if-map-get($interactive-content-margin-bottom, $type);
+
   &__icon {
     display: $interactive-icon-display;
     float: $interactive-icon-float;

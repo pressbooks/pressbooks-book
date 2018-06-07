@@ -50,6 +50,17 @@
       page-break-after: avoid;
       letter-spacing: if-map-get($part-title-letter-spacing, $type);
       word-spacing: if-map-get($part-title-word-spacing, $type);
+
+      &::after {
+        font-family: $part-title-decoration-font-family;
+        content: $part-title-decoration-content;
+        display: $part-title-decoration-display;
+        white-space: pre;
+        font-size: if-map-get($part-title-decoration-font-size, $type);
+        font-weight: $part-title-decoration-font-weight;
+        margin-bottom: if-map-get($part-title-decoration-margin-bottom, $type);
+        margin-top: if-map-get($part-title-decoration-margin-top, $type);
+      }
     }
   }
 }

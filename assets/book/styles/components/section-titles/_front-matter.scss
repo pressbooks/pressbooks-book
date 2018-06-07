@@ -16,16 +16,31 @@
       display: block;
       margin-top: if-map-get($front-matter-title-margin-top, $type);
       margin-bottom: 0;
+      padding-bottom: if-map-get(front-matter-title-padding-bottom, $type);
       font-family: $front-matter-title-font-family;
       font-size: if-map-get($front-matter-title-font-size, $type);
       font-style: $front-matter-title-font-style;
       font-weight: $front-matter-title-font-weight;
+      border-bottom: $front-matter-title-border-bottom-style if-map-get($front-matter-title-border-bottom-width, $type) if-map-get($front-matter-title-border-bottom-color, $type);
+      letter-spacing: if-map-get($front-matter-title-letter-spacing, $type);
+      word-spacing: if-map-get($front-matter-title-word-spacing, $type);
       hyphens: none;
       @if $type != 'epub' {
         line-height: if-map-get($front-matter-title-line-height, $type);
       }
       text-align: $front-matter-title-align;
       text-transform: $front-matter-title-text-transform;
+
+      &::after {
+        font-family: $front-matter-title-decoration-font-family;
+        content: $front-matter-title-decoration-content;
+        display: $front-matter-title-decoration-display;
+        white-space: pre;
+        font-size: if-map-get($front-matter-title-decoration-font-size, $type);
+        font-weight: $front-matter-title-decoration-font-weight;
+        margin-bottom: if-map-get($front-matter-title-decoration-margin-bottom, $type);
+        margin-top: if-map-get($front-matter-title-decoration-margin-top, $type);
+      }
     }
 
     h2.chapter-subtitle {
@@ -38,7 +53,11 @@
       hyphens: none;
       text-align: $section-subtitle-align;
       text-transform: $section-subtitle-text-transform;
-      column-span: all;
+      @if $type != 'epub' {
+        column-span: all;
+      }
+      letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
+      word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
     h2.chapter-author {
@@ -51,6 +70,8 @@
       hyphens: none;
       text-align: $section-author-align;
       text-transform: $section-author-text-transform;
+      letter-spacing: if-map-get($section-author-letter-spacing, $type);
+      word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
     h1.front-matter-title + h2.chapter-subtitle {
@@ -77,16 +98,32 @@
   #toc h1 {
     display: block;
     margin: if-map-get($toc-title-margin-top, $type) if-map-get($toc-title-margin-right, $type) if-map-get($toc-title-margin-bottom, $type) if-map-get($toc-title-margin-left, $type);
+    border-bottom: $toc-title-border-bottom-style if-map-get($toc-title-border-bottom-width, $type) if-map-get($toc-title-border-bottom-color, $type);
+    padding-bottom: if-map-get(toc-title-padding-bottom, $type);
     font-family: $toc-title-font-family;
     font-size: if-map-get($toc-title-font-size, $type);
     font-style: $toc-title-font-style;
     font-weight: $toc-title-font-weight;
+    color: $toc-title-color;
     hyphens: none;
     @if $type != 'epub' {
       line-height: $toc-title-line-height;
     }
     text-align: $toc-title-align;
     text-transform: $toc-title-text-transform;
+    letter-spacing: if-map-get($toc-title-letter-spacing, $type);
+    word-spacing: if-map-get($toc-title-word-spacing, $type);
+
+    &::after {
+      font-family: $toc-title-decoration-font-family;
+      content: $toc-title-decoration-content;
+      display: $toc-title-decoration-display;
+      white-space: pre;
+      font-size: if-map-get($toc-title-decoration-font-size, $type);
+      font-weight: $toc-title-decoration-font-weight;
+      margin-bottom: if-map-get($toc-title-decoration-margin-bottom, $type);
+      margin-top: if-map-get($toc-title-decoration-margin-top, $type);
+    }
   }
 }
 

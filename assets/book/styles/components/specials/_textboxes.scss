@@ -15,6 +15,8 @@
     if-map-get($edu-textbox-padding-bottom, $type)
     if-map-get($edu-textbox-padding-left, $type);
   margin-bottom: if-map-get($edu-textbox-margin-bottom, $type);
+  margin-left: if-map-get($edu-textbox-margin-left, $type);
+  margin-right: if-map-get($edu-textbox-margin-right, $type);
   border-radius: if-map-get($edu-textbox-border-radius, $type);
   border-style: $edu-textbox-border-style;
   border-width: if-map-get($edu-textbox-border-width, $type);
@@ -86,6 +88,8 @@
   font-size: if-map-get($textbox-font-size, $type);
   font-style: $textbox-font-style;
   font-weight: $textbox-font-weight;
+  word-spacing: if-map-get($textbox-word-spacing, $type);
+  letter-spacing: if-map-get($textbox-letter-spacing, $type);
   @if $type != 'epub' {
     line-height: if-map-get($textbox-line-height, $type);
   }
@@ -93,12 +97,6 @@
   border-style: $textbox-border-style;
   border-width: if-map-get($textbox-border-width, $type);
   border-radius: if-map-get($textbox-border-radius, $type);
-
-  h2 {
-    font-size: $textbox-header-font-size;
-    margin-top: $textbox-header-margin-top;
-    margin-bottom: $textbox-header-margin-bottom;
-  }
 
   ul {
     margin-top: $textbox-ul-margin-top;

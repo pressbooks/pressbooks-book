@@ -67,13 +67,15 @@ body#tinymce.wp-editor {
     border: 1px solid #000;
     border-width: 1px 0;
 
-    &.pullquote-left {
+    &.pullquote-left,
+    &.pullquote--left {
       float: left;
       padding: 5px 0;
       margin: 0.8em 15px 0.8em 0;
     }
 
-    &.pullquote-right {
+    &.pullquote-right,
+    &.pullquote--right {
       float: right;
       padding: 5px 0;
       margin: 0.8em 0 0.8em 15px;

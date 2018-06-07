@@ -14,6 +14,10 @@
     font-size: $blockquote-font-size;
     font-style: $blockquote-font-style;
     font-weight: $blockquote-font-weight;
+    padding: if-map-get($blockquote-padding-top, $type) if-map-get($blockquote-padding-right, $type) if-map-get($blockquote-padding-bottom, $type) if-map-get($blockquote-padding-left, $type);
+    letter-spacing: if-map-get($blockquote-letter-spacing, $type);
+    word-spacing: if-map-get($blockquote-word-spacing, $type);
+    border-left: if-map-get($blockquote-border-left-width, $type) $blockquote-border-left-style $blockquote-border-left-color;
     @if $type == 'prince' {
       line-height: $blockquote-line-height;
     }
@@ -63,6 +67,10 @@
     font-size: $blockquote-font-size;
     font-style: $blockquote-font-style;
     font-weight: $blockquote-font-weight;
+    padding: if-map-get($blockquote-padding-top, $type) if-map-get($blockquote-padding-right, $type) if-map-get($blockquote-padding-bottom, $type) if-map-get($blockquote-padding-left, $type);
+    letter-spacing: if-map-get($blockquote-letter-spacing, $type);
+    word-spacing: if-map-get($blockquote-word-spacing, $type);
+    border-left: if-map-get($blockquote-border-left-width, $type) $blockquote-border-left-style $blockquote-border-left-color;
     line-height: $blockquote-line-height;
     text-align: $blockquote-align;
   }

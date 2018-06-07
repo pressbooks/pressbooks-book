@@ -12,6 +12,7 @@
     line-height: $column-line-height;
   }
   text-align: if-map-get($para-align, $type);
+  text-indent: if-map-get($column-text-indent, $type);
   column-gap: $column-twocolumn-column-gap;
   column-count: 2;
   column-fill: balance;
@@ -34,6 +35,7 @@
   margin-top: $column-margin-top;
   margin-bottom: $column-margin-bottom;
   font-size: $column-threecolumn-font-size;
+  text-indent: if-map-get($column-text-indent, $type);
   @if $type != 'epub' {
     line-height: $column-line-height;
   }

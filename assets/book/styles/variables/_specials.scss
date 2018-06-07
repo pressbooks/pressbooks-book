@@ -34,6 +34,15 @@ $column-threecolumn-column-gap: 1em !default;
 /// @type String
 $column-threecolumn-font-size: 0.8em !default;
 
+/// Text indent for elements with class `.twocolumn` and `.threecolumn`.
+/// @type String | Map
+/// @since 1.0.0
+$column-text-indent: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 // Dropcaps
 
 /// Font stack for elements with class `.first-character`.
@@ -230,25 +239,45 @@ $aside-border-left: 0 !default;
 /// Pullquote font family.
 /// @type String
 
-/// Border top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
-/// @type String
+/// Border top width for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String | Map
 /// @since 1.0.0
-$pullquote-border-top: 1px solid black !default;
+$pullquote-border-top-width: 0 !default;
 
-/// Border bottom for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// Border top style for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
 /// @type String
 /// @since 1.0.0
-$pullquote-border-bottom: 1px solid black !default;
+$pullquote-border-top-style: none !default;
+
+/// Border top color for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-border-top-color: transparent !default;
+
+/// Border bottom width for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String | Map
+/// @since 1.0.0
+$pullquote-border-bottom-width: 0 !default;
+
+/// Border bottom style for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-border-bottom-style: none !default;
+
+/// Border bottom color for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-border-bottom-color: transparent !default;
 
 /// Padding top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
-/// @type String
+/// @type String | Map
 /// @since 1.0.0
-$pullquote-padding-top: .4em !default;
+$pullquote-padding-top: 0 !default;
 
 /// Padding bottom for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
-/// @type String
+/// @type String | Map
 /// @since 1.0.0
-$pullquote-padding-bottom: .4em !default;
+$pullquote-padding-bottom: 0 !default;
 
 /// Font stack for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
 /// @type String
@@ -290,6 +319,11 @@ $pullquote-margin-bottom: 1em !default;
 /// @type String
 $pullquote-left-width: 45% !default;
 
+/// Text alignment for left-floated pullquotes on elements with a class of `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-left-align: $pullquote-align !default;
+
 /// Right margin for left pullquotes on elements with a class of `pullquote-left`.
 /// @type String
 $pullquote-left-margin-right: 1em !default;
@@ -305,6 +339,11 @@ $pullquote-right-width: 45% !default;
 /// Right margin for right pullquotes on elements with a class of `pullquote-right`.
 /// @type String
 $pullquote-right-margin-right: 1em !default;
+
+/// Text alignment for right pullquotes on elements with a class of `pullquote-right`.
+/// @type String
+/// @since 1.0.0
+$pullquote-right-align: $pullquote-align !default;
 
 /// Left margin for right pullquotes on elements with a class of `pullquote-right`.
 /// @type String
@@ -461,6 +500,24 @@ $textbox-line-height: 1.2em !default;
 /// @type String
 $textbox-text-align: left !default;
 
+/// Word spacing on elements with a class of `textbox`.
+/// @type String | Map
+/// @since 1.0.0
+$textbox-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Letter spacing on elements with a class of `textbox`.
+/// @type String | Map
+/// @since 1.0.0
+$textbox-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
 /// Textbox background color on elements with a class of `textbox`.
 /// @type String
 $textbox-background-color: initial !default;
@@ -524,21 +581,6 @@ $textbox-para-margin-top: 0 !default;
 /// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
-
-/// Textbox header font size on `<h2>` elements that are children of elements with a class of `textbox`.
-/// @type String
-/// @since 1.0.0
-$textbox-header-font-size: 1.425em !default;
-
-/// Textbox header top margin on `<h2>` elements that are children of elements with a class of `textbox`.
-/// @type String
-/// @since 1.0.0
-$textbox-header-margin-top: 1.25em !default;
-
-/// Textbox header bottom margin on `<h2>` elements that are children of elements with a class of `textbox`.
-/// @type String
-/// @since 1.0.0
-$textbox-header-margin-bottom: 1em !default;
 
 /// Textbox header top margin on `<ul>` elements that are children of elements with a class of `textbox`.
 /// @type String
@@ -658,6 +700,24 @@ $edu-textbox-padding-left: 1em !default;
 /// Educational Textbox bottom margin.
 /// @type String
 $edu-textbox-margin-bottom: 1.35em !default;
+
+/// Educational Textbox margin left.
+/// @type String | Map
+/// @since version 1.0.0
+$edu-textbox-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Educational Textbox margin right.
+/// @type String | Map
+/// @since version 1.0.0
+$edu-textbox-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
 
 /// Educational Textbox header top padding.
 /// @deprecated

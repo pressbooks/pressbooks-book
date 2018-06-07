@@ -617,9 +617,62 @@ $blockquote-margin-bottom: 1em !default;
 /// @type String
 $blockquote-margin-left: 1em !default;
 
+/// Top padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-top: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Right padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-right: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Bottom padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-bottom: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Left padding for `<blockquote>` elements.
+/// @type String | Map
+/// @since version 1.0.0
+$blockquote-padding-left: (epub: 0em, prince: 0em, web: 0) !default;
+
 /// Alignment for `<blockquote>` elements.
 /// @type String
 $blockquote-align: justify !default;
+
+/// Letter spacing on `<blockquote>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$blockquote-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Word spacing on `<blockquote>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$blockquote-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Left border width for `<blockquote>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$blockquote-border-left-width: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Left border style for `<blockquote>` elements.
+/// @type String
+/// @since 1.0.0
+$blockquote-border-left-style: none !default;
+
+/// Left border color for `<blockquote>` elements.
+/// @type String
+/// @since 1.0.0
+$blockquote-border-left-color: initial !default;
 
 /// Top margin for `<ol>` elements.
 /// @type String

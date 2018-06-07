@@ -179,6 +179,10 @@ $runningfoot-color: $color-3 !default;
 $page-number-color: $color-3 !default;
 
 //TOC COLOR
+/// Defines the table of contents title color.
+/// @type String 
+/// @since 1.0.0
+$toc-title-color: $color-1 !default;
 /// Table of contents front matter title color.
 /// @type String | Map
 $toc-front-matter-title-color: $color-1 !default;

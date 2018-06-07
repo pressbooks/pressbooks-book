@@ -206,9 +206,13 @@ h1.back-matter-title {
 // PULLQUOTES COLOR
 .pullquote,
 .pullquote-left,
+.pullquote--left,
 .pullquote-right,
+.pullquote--right,
 .pullquote-outside,
-.pullquote-inside {
+.pullquote--outside,
+.pullquote-inside,
+.pullquote--inside {
   color: if-map-get($pullquote-color, $type);
 }
 
