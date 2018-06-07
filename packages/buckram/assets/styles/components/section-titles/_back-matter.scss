@@ -30,6 +30,17 @@
       padding-bottom: if-map-get($back-matter-title-padding-bottom, $type);
       letter-spacing: if-map-get($back-matter-title-letter-spacing, $type);
       word-spacing: if-map-get($back-matter-title-word-spacing, $type);
+
+      &::after {
+        font-family: $back-matter-title-decoration-font-family;
+        content: $back-matter-title-decoration-content;
+        display: $back-matter-title-decoration-display;
+        white-space: pre;
+        font-size: if-map-get($back-matter-title-decoration-font-size, $type);
+        font-weight: $back-matter-title-decoration-font-weight;
+        margin-bottom: if-map-get($back-matter-title-decoration-margin-bottom, $type);
+        margin-top: if-map-get($back-matter-title-decoration-margin-top, $type);
+      }
     }
 
     h2.chapter-subtitle {

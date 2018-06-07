@@ -26,6 +26,16 @@
       letter-spacing: if-map-get($chapter-title-letter-spacing, $type);
       word-spacing: if-map-get($chapter-title-word-spacing, $type);
 
+        &::after {
+            font-family: $chapter-title-decoration-font-family;
+            content: $chapter-title-decoration-content;
+            display: $chapter-title-decoration-display;
+            white-space: pre;
+            font-size: if-map-get($chapter-title-decoration-font-size, $type);
+            font-weight: $chapter-title-decoration-font-weight;
+            margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
+            margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
+          }
     }
 
     .chapter-number {

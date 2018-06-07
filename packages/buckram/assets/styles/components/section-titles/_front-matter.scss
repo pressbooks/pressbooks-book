@@ -30,6 +30,17 @@
       }
       text-align: $front-matter-title-align;
       text-transform: $front-matter-title-text-transform;
+
+      &::after {
+        font-family: $front-matter-title-decoration-font-family;
+        content: $front-matter-title-decoration-content;
+        display: $front-matter-title-decoration-display;
+        white-space: pre;
+        font-size: if-map-get($front-matter-title-decoration-font-size, $type);
+        font-weight: $front-matter-title-decoration-font-weight;
+        margin-bottom: if-map-get($front-matter-title-decoration-margin-bottom, $type);
+        margin-top: if-map-get($front-matter-title-decoration-margin-top, $type);
+      }
     }
 
     h2.chapter-subtitle {
@@ -102,6 +113,17 @@
     text-transform: $toc-title-text-transform;
     letter-spacing: if-map-get($toc-title-letter-spacing, $type);
     word-spacing: if-map-get($toc-title-word-spacing, $type);
+
+    &::after {
+      font-family: $toc-title-decoration-font-family;
+      content: $toc-title-decoration-content;
+      display: $toc-title-decoration-display;
+      white-space: pre;
+      font-size: if-map-get($toc-title-decoration-font-size, $type);
+      font-weight: $toc-title-decoration-font-weight;
+      margin-bottom: if-map-get($toc-title-decoration-margin-bottom, $type);
+      margin-top: if-map-get($toc-title-decoration-margin-top, $type);
+    }
   }
 }
 

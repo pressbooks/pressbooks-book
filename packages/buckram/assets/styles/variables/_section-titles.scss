@@ -178,6 +178,41 @@ $section-title-word-spacing: (
   web: normal
 ) !default; 
 
+/// Defines the section title decoration font family.
+/// @type String
+/// @since 1.0.0
+$section-title-decoration-font-family: $font-3 !default;
+
+/// Defines the section title decoration content.
+/// @type String 
+/// @since 1.0.0
+$section-title-decoration-content: "" !default;
+
+/// Defines the section title decoration display.
+/// @type String
+/// @since 1.0.0
+$section-title-decoration-display: none !default;
+
+/// Defines the section title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines the section title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$section-title-decoration-font-weight: normal !default;
+
+/// Defines the section title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-margin-bottom: (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines the section title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
+
 /// Defines spacing between section subtitle and the bottom of the section header when the section does not have an author.
 /// @type String | Map
 $section-subtitle-margin-bottom: (
@@ -632,6 +667,41 @@ $part-title-letter-spacing: $section-title-letter-spacing !default;
 /// @since 1.0.0
 $part-title-word-spacing: $section-title-word-spacing !default;
 
+/// Defines the part title decoration font family.
+/// @type String
+/// @since 1.0.0
+$part-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the part title decoration content.
+/// @type String 
+/// @since 1.0.0
+$part-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the part title decoration display.
+/// @type String
+/// @since 1.0.0
+$part-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the part title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the part title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$part-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the part title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the part title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
 /// Defines the front matter title display property.
 /// @type String
 /// @since 0.3.0
@@ -717,6 +787,42 @@ $front-matter-title-border-bottom-color: $section-title-border-bottom-color !def
 /// @since 1.0.0
 $front-matter-title-padding-bottom: $section-title-padding-bottom !default;
 
+/// Defines the front matter title decoration font family.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the front matter title decoration content.
+/// @type String 
+/// @since 1.0.0
+$front-matter-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the front matter title decoration display.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the front matter title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the front matter title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$front-matter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the front matter title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the front matter title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
+
 /// Defines the table of contents title display property.
 /// @type String
 /// @since 0.3.0
@@ -790,6 +896,41 @@ $toc-title-border-bottom-color: $section-title-border-bottom-color !default;
 /// @type String | Map
 /// @since 1.0.0
 $toc-title-padding-bottom: $section-title-padding-bottom !default;
+
+/// Defines the table of contents title decoration font family.
+/// @type String
+/// @since 1.0.0
+$toc-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the table of contents title decoration content.
+/// @type String 
+/// @since 1.0.0
+$toc-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the table of contents title decoration display.
+/// @type String
+/// @since 1.0.0
+$toc-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the table of contents title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the table of contents title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$toc-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the table of contents title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the table of contents title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-decoration-margin-top: $section-title-decoration-margin-top !default;
 
 /// Defines letter spacing property on table of contents title
 /// @type String | Map
@@ -1001,6 +1142,41 @@ $chapter-title-border-bottom-color: $section-title-border-bottom-color !default;
 /// @since 1.0.0
 $chapter-title-padding-bottom:$section-title-padding-bottom !default;
 
+/// Defines the chapter title decoration font family.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the chapter title decoration content.
+/// @type String 
+/// @since 1.0.0
+$chapter-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the chapter title decoration display.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the chapter title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the chapter title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$chapter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the chapter title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the chapter title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
 /// Defines the back matter title display property.
 /// @type String
 /// @since 0.3.0
@@ -1085,3 +1261,38 @@ $back-matter-title-letter-spacing: $section-title-letter-spacing !default;
 /// @type String | Map
 /// @since 1.0.0
 $back-matter-title-word-spacing:  $section-title-word-spacing !default;
+
+/// Defines the back-matter title decoration font family.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the back matter title decoration content.
+/// @type String 
+/// @since 1.0.0
+$back-matter-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the back matter title decoration display.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the back matter title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the back matter title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$back-matter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the back title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the back matter title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-decoration-margin-top: $section-title-decoration-margin-top !default;
