@@ -173,6 +173,7 @@
     .part,
     .front-matter + .chapter,
     .chapter + .back-matter,
+    .part + .chapter,
     .part + .back-matter {
       margin-top: if-map-get($toc-block-margin-top, $type);
     }
