@@ -51,7 +51,7 @@ h1.reading-header__title {
 .chapter,
 .back-matter {
   div[hidden] + h1:not(:first-of-type) {
-     margin-top: 0;
+    margin-top: 0;
   }
 
   h1[data-collapsed="true"] {
@@ -199,6 +199,12 @@ h1.reading-header__title {
       }
     }
   }
+}
+
+.nav-reading__previous,
+.nav-reading__next,
+.nav-reading__up {
+  z-index: 11;
 }
 
 .nav-reading__previous {
