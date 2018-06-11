@@ -471,3 +471,8 @@ h1.reading-header__title {
     }
   }
 }
+
+.mejs-container,
+.mejs-embed {
+  z-index: 0;
+}
