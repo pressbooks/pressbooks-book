@@ -168,6 +168,9 @@ export default {
 				} );
 
 				$( document ).keydown( function ( e ) {
+					if ( $( 'body' ).hasClass( 'no-navigation' ) ) {
+						return;
+					}
 					let url = false;
 					if ( e.which === 37 ) {
 						// Left arrow key code
