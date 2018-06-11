@@ -1551,7 +1551,7 @@ bs-recipes@1.3.4:
 
 buckram@pressbooks/buckram:
   version "1.0.0-dev"
-  resolved "https://codeload.github.com/pressbooks/buckram/tar.gz/230c7aecc50ceca5032d20e45b7313a6c0203e71"
+  resolved "https://codeload.github.com/pressbooks/buckram/tar.gz/49fe41dd06eb1138befb6ef4436c4fb67efd9775"
 
 buffer-crc32@~0.2.3:
   version "0.2.13"

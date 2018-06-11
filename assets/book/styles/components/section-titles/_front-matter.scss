@@ -16,7 +16,7 @@
       display: block;
       margin-top: if-map-get($front-matter-title-margin-top, $type);
       margin-bottom: 0;
-      padding-bottom: if-map-get(front-matter-title-padding-bottom, $type);
+      padding-bottom: if-map-get($front-matter-title-padding-bottom, $type);
       font-family: $front-matter-title-font-family;
       font-size: if-map-get($front-matter-title-font-size, $type);
       font-style: $front-matter-title-font-style;
@@ -101,12 +101,12 @@
     display: block;
     margin: if-map-get($toc-title-margin-top, $type) if-map-get($toc-title-margin-right, $type) if-map-get($toc-title-margin-bottom, $type) if-map-get($toc-title-margin-left, $type);
     border-bottom: $toc-title-border-bottom-style if-map-get($toc-title-border-bottom-width, $type) if-map-get($toc-title-border-bottom-color, $type);
-    padding-bottom: if-map-get(toc-title-padding-bottom, $type);
+    padding-bottom: if-map-get($toc-title-padding-bottom, $type);
     font-family: $toc-title-font-family;
     font-size: if-map-get($toc-title-font-size, $type);
     font-style: $toc-title-font-style;
     font-weight: $toc-title-font-weight;
-    color: $toc-title-color;
+    color: if-map-get($toc-title-color, $type);
     hyphens: none;
     @if $type != 'epub' {
       line-height: $toc-title-line-height;
