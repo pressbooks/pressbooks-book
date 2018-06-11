@@ -74,11 +74,13 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h1.back-matter-title + h2.chapter-subtitle {
+    h1.back-matter-title + h2.chapter-subtitle,
+    .short-title + h2.chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    h1.back-matter-title + h2.chapter-author {
+    h1.back-matter-title + h2.chapter-author,
+    .short-title + h2.chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
