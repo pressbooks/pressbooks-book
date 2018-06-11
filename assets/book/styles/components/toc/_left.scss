@@ -66,6 +66,10 @@
       margin-left: if-map-get($toc-left-left-gutter, $type);
     }
 
+    .part {
+      margin-right: if-map-get($toc-left-right-gutter, $type);
+    }
+
     .part a::before {
       content: $toc-part-number-before-content $toc-part-number-content $toc-left-part-number-after-content;
       display: $toc-left-part-number-display;
