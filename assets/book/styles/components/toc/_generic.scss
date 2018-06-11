@@ -209,7 +209,7 @@
 
     a::after {
       color: if-map-get($toc-page-number-color, $type);
-      content: target-counter(attr(href), page);
+      content: $toc-page-number-before-content target-counter(attr(href), page);
       font-family: $toc-page-number-font-family;
       font-size: $toc-page-number-font-size;
       font-style: $toc-page-number-font-style;
@@ -230,7 +230,7 @@
 
     .front-matter a::after {
       color: if-map-get($toc-front-matter-page-number-color, $type);
-      content: target-counter(attr(href), page, lower-roman);
+      content: $toc-page-number-before-content target-counter(attr(href), page, lower-roman);
       font-family: $toc-page-number-font-family;
       font-size: $toc-front-matter-page-number-font-size;
       font-style: $toc-front-matter-page-number-font-style;
@@ -241,12 +241,12 @@
 
     .front-matter.introduction a::after,
     .front-matter.post-introduction a::after {
-      content: target-counter(attr(href), page);
+      content: $toc-page-number-before-content target-counter(attr(href), page);
     }
 
     .chapter a::before {
       color: if-map-get($toc-chapter-number-color, $type);
-      content: target-counter(attr(href), page);
+      content: $toc-page-number-before-content target-counter(attr(href), page);
       font-family: $toc-chapter-number-font-family;
       font-size: if-map-get($toc-chapter-number-font-size, $type);
       font-style: $toc-chapter-number-font-style;

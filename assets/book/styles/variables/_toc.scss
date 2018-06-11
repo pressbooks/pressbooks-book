@@ -532,12 +532,15 @@ $toc-page-number-text-transform: none !default;
 /// @type String
 $toc-page-number-text-decoration: none !default;
 
+/// Content that appears before the page number in the Table of Contents.
+/// @type String
+/// @since 1.0.0
+$toc-page-number-before-content: '' !default;
+
 /// Page number display property for Table of Contents
 /// @type String
 /// @since 1.0.0
 $toc-front-matter-page-number-display: inline !default;
-
-$toc-front-matter-page-number-before-content: '\A0\A0\A0' !default;
 
 /// Front matter page number font size for Table of Contents
 /// @type String | Map

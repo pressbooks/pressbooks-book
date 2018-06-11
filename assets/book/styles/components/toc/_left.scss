@@ -61,7 +61,8 @@
 
     .front-matter,
     .part,
-    .back-matter {
+    .back-matter,
+    .chapter.numberless {
       margin-left: if-map-get($toc-left-left-gutter, $type);
     }
 

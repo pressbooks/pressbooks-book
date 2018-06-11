@@ -352,6 +352,51 @@
         }
       }
     }
+    @else {
+      @if $page-position != 'first' {
+        @page #{$page-type}:#{$page-position} {
+          #{$running-content-position} {
+            @if $page-position == 'left' {
+              content: if-map-get($left-running-content, $page-type);
+            }
+
+            @else if $page-position == 'right' {
+              content: if-map-get($right-running-content, $page-type);
+            }
+          }
+
+          #{$numbering-position} {
+            @if $page-position == 'left' {
+              content: if-map-get($left-page-number, $page-type);
+            }
+
+            @else if $page-position == 'right' {
+              content: if-map-get($right-page-number, $page-type);
+            }
+          }
+
+        }
+      }
+      @else {
+        @page #{$page-type}:first:right {
+          #{map-get($running-content-position, right)} {
+            content: if-map-get($right-running-content, $page-type);
+          }
+          #{map-get($numbering-position, right)} {
+            content: if-map-get($right-page-number, $page-type);
+          }
+        }
+
+        @page #{$page-type}:first:left {
+          #{map-get($running-content-position, left)} {
+            content: if-map-get($left-running-content, $page-type);
+          }
+          #{map-get($numbering-position, left)} {
+            content: if-map-get($left-page-number, $page-type);
+          }
+        }
+      }
+    }
   }
 
   @else {
