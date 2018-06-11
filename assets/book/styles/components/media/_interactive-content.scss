@@ -31,3 +31,10 @@
     text-align: left;
   }
 }
+
+@if $type == 'web' {
+  iframe {
+    display: block;
+    margin: 0 auto if-map-get($interactive-content-margin-bottom, $type);
+  }
+}
