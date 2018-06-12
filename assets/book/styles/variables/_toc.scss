@@ -62,6 +62,11 @@ $toc-left-right-gutter: (epub: 0, prince: 1.5cm) !default;
 /// @type String | Map
 $toc-block-margin-top: 1.5em !default;
 
+/// Top margin for a Table of contents block.
+/// @type String | Map
+/// @since 1.0.0
+$toc-part-margin-top: $toc-block-margin-top !default;
+
 /// Top margin for front matter in Table of Contents.
 /// @type String | Map
 /// @since 1.0.0
