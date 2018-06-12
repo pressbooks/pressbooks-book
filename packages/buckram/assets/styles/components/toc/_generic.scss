@@ -85,7 +85,7 @@
       @if $type != 'epub' {
         line-height: if-map-get($toc-part-line-height, $type);
       }
-      margin-top: if-map-get($toc-block-margin-top, $type);
+      margin-top: if-map-get($toc-part-margin-top, $type);
       text-transform: $toc-part-title-text-transform;
     }
 
@@ -170,7 +170,6 @@
       margin-top: if-map-get($toc-back-matter-margin-top, $type);
     }
 
-    .part,
     .front-matter + .chapter,
     .chapter + .back-matter,
     .part + .chapter,
