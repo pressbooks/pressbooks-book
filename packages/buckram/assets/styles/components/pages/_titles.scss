@@ -36,6 +36,17 @@ h1.title {
   word-spacing: $title-title-word-spacing;
   text-align: $title-title-align;
   text-transform: $title-title-text-transform;
+
+  &::after {
+    font-family: $title-title-decoration-font-family;
+    content: $title-title-decoration-content;
+    display: $title-title-decoration-display;
+    white-space: pre;
+    font-size: if-map-get($title-title-decoration-font-size, $type);
+    font-weight: $title-title-decoration-font-weight;
+    margin-bottom: if-map-get($title-title-decoration-margin-bottom, $type);
+    margin-top: if-map-get($title-title-decoration-margin-top, $type);
+  }
 }
 
 h2.subtitle {

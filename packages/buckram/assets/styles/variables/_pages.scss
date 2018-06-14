@@ -116,6 +116,41 @@ $title-title-align: center !default;
 /// @type String
 $title-title-text-transform: none !default;
 
+/// Defines the title page title decoration font family.
+/// @type String
+/// @since 1.0.0
+$title-title-decoration-font-family: $font-3 !default;
+
+/// Defines the title page title decoration content.
+/// @type String 
+/// @since 1.0.0
+$title-title-decoration-content: "" !default;
+
+/// Defines the title page title decoration display.
+/// @type String
+/// @since 1.0.0
+$title-title-decoration-display: none !default;
+
+/// Defines the title page title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$title-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines the title page title decoration font weight.
+/// @type String 
+/// @since 1.0.0
+$title-title-decoration-font-weight: normal !default;
+
+/// Defines the title page title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$title-title-decoration-margin-bottom: (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines the title page title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$title-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
+
 // Subtitle
 
 /// Top margin for title page subtitle on elements `<h2>` with a class of `subtitle`.
