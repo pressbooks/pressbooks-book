@@ -185,18 +185,10 @@ $toc-chapter-line-height: $toc-base-line-height !default;
 $toc-back-matter-line-height: $toc-base-line-height !default;
 $toc-section-line-height: $toc-base-line-height !default;
 
-
-
 $toc-left-page-number-top: 0.2em !default;
-
-$toc-left-chapter-number-margin-right: 0.5em !default;
 
 $toc-center-margin-right: 0.5cm !default;
 $toc-center-margin-left: 0.5cm !default;
-
-
-
-
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/toc';
