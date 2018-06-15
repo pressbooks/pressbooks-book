@@ -1,37 +1,202 @@
 // Table of Contents
-
+// Display and Margins
 $toc-display: block !default;
-
-$toc-left-margin-left: 1cm !default;
-$toc-left-page-number-top: 0.2em !default;
+$toc-subsection-margin-top: 0 !default;
+$toc-sub-width: 75% !default;
 $toc-left-chapter-number-width: 2em !default;
+$toc-title-width: 80% !default;
+$toc-left-left-gutter: (epub: 2.5em, prince: 1cm) !default;
+$toc-left-right-gutter: (epub: 0, prince: 1.5cm) !default;
+$toc-block-margin-top: 1.5em !default;
+$toc-part-margin-top: $toc-block-margin-top !default;
+$toc-front-matter-margin-top: (
+  epub: 0.25em,
+  prince: 0.5em
+) !default;
+$toc-chapter-margin-top: (
+  epub: 0.25em,
+  prince: 0.3em
+) !default;
+$toc-back-matter-margin-top: (
+  epub: 0.25em,
+  prince: 0.5em
+) !default;
+@if $type == 'epub' {
+  $page-width: 11in;
+  $page-margin-outside: 1in;
+  $page-margin-inside: 1in;
+}
+$toc-left-title-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+$toc-center-title-width: (
+  epub: 100%,
+  prince: 100%
+) !default;
+$toc-left-subtitle-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+$toc-center-subtitle-width: 100% !default;
+$toc-left-author-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+$toc-center-author-width: 100% !default;
+$toc-left-subsection-width: (
+  epub: 100%,
+  prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
+) !default;
+$toc-center-subsection-width: 100% !default;
+$toc-section-margin-top: (
+  epub: 0.25em,
+  prince: 0.5em
+) !default;
+$toc-base-line-height: 1.55em !default;
+
+// Front Matter
+$toc-front-matter-title-font-family: $font-1 !default;
+$toc-front-matter-title-font-size: 1em !default;
+$toc-front-matter-title-font-style: normal !default;
+$toc-front-matter-title-font-weight: normal !default;
+$toc-front-matter-title-text-transform: none !default;
+$toc-front-matter-subtitle-font-family: $font-1 !default;
+$toc-front-matter-subtitle-font-size: 1em !default;
+$toc-front-matter-subtitle-font-style: italic !default;
+$toc-front-matter-subtitle-font-weight: normal !default;
+$toc-front-matter-subtitle-text-transform: none !default;
+$toc-front-matter-author-font-family: $font-1 !default;
+$toc-front-matter-author-font-size: 1em !default;
+$toc-front-matter-author-font-style: normal !default;
+$toc-front-matter-author-font-weight: normal !default;
+$toc-front-matter-author-text-transform: none !default;
+
+// Parts
+$toc-part-number-display: inline-block !default;
+$toc-part-number-before-content: $part '\A0' !default;
+$toc-part-number-content: counter(part, upper-roman) !default;
+$toc-part-number-after-content:  '.\A0' !default;
+$toc-left-part-number-after-content:  '.\A0' !default;
+$toc-center-part-number-after-content:  '.' !default;
+$toc-part-number-font-family: $font-3 !default;
+$toc-part-number-font-size: inherit !default;
+$toc-part-number-font-style: normal !default;
+$toc-part-number-font-weight: normal !default;
+$toc-part-number-text-transform: none !default;
+$toc-part-title-font-family: $font-3 !default;
+$toc-part-title-font-size: 1.2em !default;
+$toc-part-title-font-style: normal !default;
+$toc-part-title-font-weight: normal !default;
+$toc-part-title-text-transform: none !default;
+
+// Chapters
+$toc-chapter-number-display: inline-block !default;
+$toc-chapter-number-font-family: $font-1 !default;
+$toc-chapter-number-font-size: inherit !default;
+$toc-chapter-number-font-style: normal !default;
+$toc-chapter-number-font-weight: normal !default;
+$toc-chapter-number-text-transform: none !default;
+$toc-chapter-number-before-content: '' !default;
+$toc-chapter-number-content: counter(chapter) !default;
+$toc-chapter-number-after-content: '.\A0\A0\A0' !default;
+$toc-left-chapter-number-after-content: '.\A0\A0\A0' !default;
+$toc-center-chapter-number-after-content: '.' !default;
+$toc-chapter-title-font-family: $font-1 !default;
+$toc-chapter-title-font-size: 1em !default;
+$toc-chapter-title-font-style: normal !default;
+$toc-chapter-title-font-weight: normal !default;
+$toc-chapter-title-text-transform: none !default;
+$toc-chapter-title-align: left !default;
+$toc-chapter-title-display: inline !default;
+$toc-chapter-subtitle-margin-top: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
+$toc-chapter-subtitle-margin-bottom: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
+$toc-chapter-author-margin-top: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
+$toc-chapter-author-margin-bottom: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
+$toc-chapter-subtitle-font-family: $font-1 !default;
+$toc-chapter-subtitle-font-size: 1em !default;
+$toc-chapter-subtitle-font-style: italic !default;
+$toc-chapter-subtitle-font-weight: normal !default;
+$toc-chapter-subtitle-text-transform: none !default;
+$toc-chapter-author-font-family: $font-1 !default;
+$toc-chapter-author-font-size: 1em !default;
+$toc-chapter-author-font-style: normal !default;
+$toc-chapter-author-font-weight: normal !default;
+$toc-chapter-author-text-transform: none !default;
+
+// Back Matter
+$toc-back-matter-title-font-family: $toc-front-matter-title-font-family !default;
+$toc-back-matter-title-font-size: $toc-front-matter-title-font-size !default;
+$toc-back-matter-title-font-style: $toc-front-matter-title-font-style !default;
+$toc-back-matter-title-font-weight: $toc-front-matter-title-font-weight !default;
+$toc-back-matter-title-text-transform: $toc-front-matter-title-text-transform !default;
+$toc-back-matter-subtitle-font-family: $toc-front-matter-subtitle-font-family !default;
+$toc-back-matter-subtitle-font-size: $toc-front-matter-subtitle-font-size !default;
+$toc-back-matter-subtitle-font-style: $toc-front-matter-subtitle-font-style !default;
+$toc-back-matter-subtitle-font-weight: $toc-front-matter-subtitle-font-weight !default;
+$toc-back-matter-subtitle-text-transform: $toc-front-matter-subtitle-text-transform !default;
+$toc-back-matter-author-font-family: $toc-front-matter-author-font-family !default;
+$toc-back-matter-author-font-size: $toc-front-matter-author-font-size !default;
+$toc-back-matter-author-font-style: $toc-front-matter-author-font-style !default;
+$toc-back-matter-author-font-weight: $toc-front-matter-author-font-weight !default;
+$toc-back-matter-author-text-transform: $toc-front-matter-author-text-transform !default;
+
+// Page Number Display
+$toc-left-page-number-display: inline-block !default;
+$toc-left-page-number-width: auto !default;
+$toc-left-page-number-float: right !default;
+$toc-left-page-number-align: right !default;
+$toc-page-number-font-family: $font-1 !default;
+$toc-page-number-font-size: 1em !default;
+$toc-page-number-font-style: normal !default;
+$toc-page-number-font-weight: normal !default;
+$toc-page-number-text-transform: none !default;
+$toc-page-number-text-decoration: none !default;
+$toc-page-number-before-content: '' !default;
+$toc-front-matter-page-number-display: inline !default;
+$toc-front-matter-page-number-font-size: 1em !default;
+$toc-front-matter-page-number-font-style: normal !default;
+$toc-front-matter-page-number-font-weight: normal !default;
+$toc-front-matter-page-number-text-transform: none !default;
+
+// Section Titles
+$toc-section-title-font-size: 1em !default;
+$toc-section-title-font-style: italic !default;
+$toc-section-title-font-weight: normal !default;
+$toc-section-title-text-transform: none !default;
+
+// Table of Contents Left
+$toc-left-margin-left: 1cm !default;
+$toc-left-chapter-number-margin-right: 0.5em !default;
+$toc-left-chapter-title-display: inline-block !default;
+$toc-left-subtitle-display: inline-block !default;
+$toc-left-author-display: inline-block !default;
+$toc-left-part-number-align: left !default;
+$toc-left-part-number-display: inline-block !default;
+$toc-left-chapter-number-align: right !default;
+$toc-left-chapter-number-float: left !default;
+$toc-left-chapter-number-display: inline-block !default;
+$toc-left-subsection-display: inline-block !default;
+
+// Line Heights
+$toc-front-matter-line-height: $toc-base-line-height !default;
+$toc-part-line-height: $toc-base-line-height !default;
+$toc-chapter-line-height: $toc-base-line-height !default;
+$toc-back-matter-line-height: $toc-base-line-height !default;
+$toc-section-line-height: $toc-base-line-height !default;
+
+
+
+$toc-left-page-number-top: 0.2em !default;
+
 $toc-left-chapter-number-margin-right: 0.5em !default;
 
 $toc-center-margin-right: 0.5cm !default;
 $toc-center-margin-left: 0.5cm !default;
 
-$toc-block-margin-top: 1.5em !default;
-$toc-section-margin-top: 0.5em !default;
-$toc-subsection-margin-top: 0 !default;
-$toc-chapter-margin-top: 0.3em !default;
-$toc-title-width: 80% !default;
-$toc-sub-width: 75% !default;
 
-$toc-base-line-height: 1.55em !default;
-$toc-front-matter-title-font-size: 1em !default;
-$toc-front-matter-subtitle-font-size: 1em !default;
-$toc-front-matter-author-font-size: 1em !default;
-$toc-part-number-font-size: inherit !default;
-$toc-part-title-font-size: 1.2em !default;
-$toc-chapter-number-font-size: inherit !default;
-$toc-chapter-title-font-size: 1em !default;
-$toc-chapter-subtitle-font-size: 1em !default;
-$toc-chapter-subtitle-font-style: italic !default;
-$toc-chapter-author-font-size: 1em !default;
-$toc-chapter-author-font-weight: normal !default;
-$toc-page-number-font-size: 1em !default;
-$toc-front-matter-page-number-font-size: 1em !default;
-$toc-section-title-font-size: 1em !default;
+
+
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/toc';
