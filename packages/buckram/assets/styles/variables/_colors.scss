@@ -180,7 +180,7 @@ $page-number-color: $color-3 !default;
 
 //TOC COLOR
 /// Defines the table of contents title color.
-/// @type String 
+/// @type String | Map
 /// @since 1.0.0
 $toc-title-color: $color-1 !default;
 /// Table of contents front matter title color.
