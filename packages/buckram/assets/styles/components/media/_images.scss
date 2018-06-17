@@ -40,7 +40,7 @@
     &.alignnone {
       margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
       text-align: left;
-      width: auto;
+      width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
       @include caption-text-align(left);
     }
@@ -90,28 +90,6 @@
       }
     }
   }
-
-  .wp-caption.alignnone {
-    img {
-      float: $image-alignnone-image-float;
-      margin-right: 0;
-      max-width: if-map-get($image-alignnone-image-maxwidth, $type) !important;
-    }
-
-    figcaption,
-    .wp-caption-text {
-      box-sizing: border-box;
-      float: $image-alignnone-caption-float;
-      padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
-      width: if-map-get($image-alignnone-caption-width, $type) !important;
-    }
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-  }
 }
 
 @else if $type == 'prince' {
@@ -152,6 +130,7 @@
       margin-left: 0;
       margin-right: 0;
       text-align: left;
+      width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
       @include caption-text-align(left);
     }
@@ -254,6 +233,7 @@
         margin-left: 0;
         margin-right: 0;
         text-align: left;
+        width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
         @include caption-text-align(left);
       }
@@ -288,28 +268,6 @@
         padding-right: 0;
 
         @include caption-text-align(right);
-      }
-    }
-
-    .wp-caption.alignnone {
-      img {
-        float: $image-alignnone-image-float;
-        margin-right: 0;
-        max-width: if-map-get($image-alignnone-image-maxwidth, $type) !important;
-      }
-
-      figcaption,
-      .wp-caption-text {
-        box-sizing: border-box;
-        float: $image-alignnone-caption-float;
-        padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
-        width: if-map-get($image-alignnone-caption-width, $type) !important;
-      }
-
-      &:after {
-          content: "";
-          display: table;
-          clear: both;
       }
     }
   }

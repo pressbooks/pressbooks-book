@@ -88,6 +88,15 @@ $image-alignnone-caption-left-padding: 0 !default;
 /// @since 1.0.0
 $image-alignnone-caption-width: 100% !default;
 
+/// With for wrapper on alignnone images.
+/// @type String | Map
+/// @since 1.0.0
+$image-alignnone-wrapper-width: (
+  epub: auto,
+  prince: auto,
+  web: auto
+) !default;
+
 /// Max width for captioned alignnone images (Prince only).
 /// @type String | Map
 /// @since 1.0.0
