@@ -40,7 +40,7 @@
     &.alignnone {
       margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
       text-align: left;
-      width: if-map-get($image-alignnone-wrapper-width, $type) !important;
+      width: auto;
 
       @include caption-text-align(left);
     }
@@ -112,7 +112,6 @@
       clear: both;
     }
   }
-
 }
 
 @else if $type == 'prince' {
