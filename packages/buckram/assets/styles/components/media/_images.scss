@@ -43,6 +43,11 @@
       width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
       @include caption-text-align(left);
+
+      figcaption,
+      .wp-caption-text {
+        width: 100% !important;
+      }
     }
 
     &.aligncenter {
