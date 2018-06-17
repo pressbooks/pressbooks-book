@@ -107,7 +107,7 @@
     &.alignnone {
       margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
       text-align: left;
-      width: 100% !important;
+      width: auto;
     }
 
     &.aligncenter {
