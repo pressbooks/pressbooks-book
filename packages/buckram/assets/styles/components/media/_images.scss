@@ -43,11 +43,6 @@
       width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
       @include caption-text-align(left);
-
-      figcaption,
-      .wp-caption-text {
-        width: 100% !important;
-      }
     }
 
     &.aligncenter {
@@ -95,6 +90,29 @@
       }
     }
   }
+
+  .wp-caption.alignnone {
+    img {
+      float: none;
+      margin-right: 0;
+      max-width: 100% !important;
+    }
+
+    figcaption,
+    .wp-caption-text {
+      box-sizing: border-box;
+      float: none;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
 }
 
 @else if $type == 'prince' {
