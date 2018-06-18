@@ -582,6 +582,16 @@ $textbox-para-margin-top: 0 !default;
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
 
+/// Textbox top margin on `<ol>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 1.0.0
+$textbox-ol-margin-top: 1em !default;
+
+/// Textbox bottom margin on `<ol>` elements that are children of elements with a class of `textbox`.
+/// @type String
+/// @since 1.0.0
+$textbox-ol-margin-bottom: 0.75em !default;
+
 /// Textbox header top margin on `<ul>` elements that are children of elements with a class of `textbox`.
 /// @type String
 /// @since 1.0.0
