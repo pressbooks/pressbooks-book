@@ -8,6 +8,7 @@
 
 @import '../utilities';
 
+// Legacy Educational Textboxes
 @mixin educational-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
   padding:
     if-map-get($edu-textbox-padding-top, $type)
@@ -45,6 +46,7 @@
   }
 }
 
+// Legacy Educational Textboxes
 @mixin edu-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
   margin-bottom: if-map-get($edu-textbox-margin-bottom, $type);
   padding: 0;
@@ -101,6 +103,11 @@
   ul {
     margin-top: $textbox-ul-margin-top;
     margin-bottom: $textbox-ul-margin-bottom;
+  }
+
+  ol {
+    margin-top: $textbox-ol-margin-top;
+    margin-bottom: $textbox-ol-margin-bottom;
   }
 
   li {
