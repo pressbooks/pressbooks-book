@@ -149,9 +149,7 @@ $part-title-color: $color-2 !default;
 /// Chapter number color for elements with a class of `chapter-number`.
 /// @type String
 $chapter-number-color: $color-3 !default;
-/// Chapter number bottom border color for elements with a class of `chapter-number`.
-/// @type String
-$chapter-number-border-bottom-color: $color-3 !default;
+
 /// Chapter Title color for elements `<h2>` with a class of `chapter-title`.
 /// @type String
 $chapter-title-color: $color-2 !default;
@@ -181,6 +179,10 @@ $runningfoot-color: $color-3 !default;
 $page-number-color: $color-3 !default;
 
 //TOC COLOR
+/// Defines the table of contents title color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-color: $color-1 !default;
 /// Table of contents front matter title color.
 /// @type String | Map
 $toc-front-matter-title-color: $color-1 !default;
@@ -215,3 +217,15 @@ $toc-page-number-color: $color-1 !default;
 /// @type String | Map
 $toc-front-matter-page-number-color: $color-1 !default;
 
+/// Table of contents back matter title color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-title-color: $toc-front-matter-title-color !default;
+/// Table of contents back matter subtitle color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-subtitle-color: $toc-front-matter-subtitle-color !default;
+/// Table of contents back matter author color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-back-matter-author-color: $toc-front-matter-author-color !default;

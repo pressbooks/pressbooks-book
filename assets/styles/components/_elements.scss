@@ -1,39 +1,272 @@
 // Elements
-$blockquote-margin-left: 2.5em !default;
-$blockquote-font-size: 1em !default;
-$blockquote-line-height: (14 / 9) * 1em !default;
+
+$body-font-family: $font-1 !default;
 $body-font-size: (
   epub: small,
   prince: 9pt,
   web: 1em
 ) !default;
+$body-font-style: normal !default;
+$body-font-weight: normal !default;
 $body-line-height: (14 / 9) * 1em !default;
+
 $hx-margin-top: (30 / 14) * 1em !default;
 $hx-margin-bottom: (20 / 14) * 1em !default;
+$hx-padding-bottom: 0 !default;
 $hx-line-height: (18 / 15) * 1em !default;
+$hx-border-bottom-style: none !default;
+$hx-border-bottom-width: 0 !default;
+$hx-border-bottom-color: initial !default;
+
+// H1
+$h1-margin-top: $hx-margin-top !default;
+$h1-margin-bottom: $hx-margin-bottom !default;
+$h1-padding-bottom: $hx-padding-bottom !default;
+$h1-font-family: $font-3 !default;
 $h1-font-size: (
   epub: large,
   prince: (15 / 9) * 1em,
   web: (15 / 9) * 1em
 ) !default;
+$h1-font-style: normal !default;
 $h1-font-weight: normal !default;
-$h1-align: left !default;
+$h1-line-height: $hx-line-height !default;
 $h1-text-transform: none !default;
+$h1-align: left !default;
+$h1-border-bottom-style: $hx-border-bottom-style !default;
+$h1-border-bottom-width: $hx-border-bottom-width !default;
+$h1-border-bottom-color: $hx-border-bottom-color !default;
+
+// H2
+$h2-margin-top: $hx-margin-top !default;
+$h2-margin-bottom: $hx-margin-bottom !default;
+$h2-padding-bottom: $hx-padding-bottom !default;
+$h2-font-family: $font-3 !default;
+$h2-font-size: 1em !default;
+$h2-font-style: normal !default;
+$h2-font-weight: normal !default;
+$h2-line-height: $hx-line-height !default;
+$h2-text-transform: none !default;
 $h2-align: left !default;
+$h2-border-bottom-style: $hx-border-bottom-style !default;
+$h2-border-bottom-width: $hx-border-bottom-width !default;
+$h2-border-bottom-color: $hx-border-bottom-color !default;
+
+//H3
+$h3-margin-top: $hx-margin-top !default;
+$h3-margin-bottom: $hx-margin-bottom !default;
+$h3-padding-bottom: $hx-padding-bottom !default;
+$h3-font-family: $font-3 !default;
+$h3-font-size: 1em !default;
+$h3-font-style: normal !default;
+$h3-font-weight: bold !default;
+$h3-line-height: $hx-line-height !default;
+$h3-text-transform: none !default;
 $h3-align: left !default;
-$h4-align: left !default;
+$h3-border-bottom-style: $hx-border-bottom-style !default;
+$h3-border-bottom-width: $hx-border-bottom-width !default;
+$h3-border-bottom-color: $hx-border-bottom-color !default;
+
+//H4
+$h4-margin-top: $hx-margin-top !default;
+$h4-margin-bottom: $hx-margin-bottom !default;
+$h4-padding-bottom: $hx-padding-bottom !default;
+$h4-font-family: $font-3 !default;
+$h4-font-size: 1em !default;
 $h4-font-style: italic !default;
+$h4-font-weight: bold !default;
+$h4-line-height: $hx-line-height !default;
+$h4-text-transform: none !default;
+$h4-align: left !default;
+$h4-border-bottom-style: $hx-border-bottom-style !default;
+$h4-border-bottom-width: $hx-border-bottom-width !default;
+$h4-border-bottom-color: $hx-border-bottom-color !default;
+
+//H5
+$h5-margin-top: $hx-margin-top !default;
+$h5-margin-bottom: $hx-margin-bottom !default;
+$h5-padding-bottom: $hx-padding-bottom !default;
+$h5-font-family: $font-3 !default;
+$h5-font-size: 1em !default;
+$h5-font-style: italic !default;
+$h5-font-weight: normal !default;
+$h5-line-height: $hx-line-height !default;
+$h5-text-transform: none !default;
 $h5-align: left !default;
+$h5-border-bottom-style: $hx-border-bottom-style !default;
+$h5-border-bottom-width: $hx-border-bottom-width !default;
+$h5-border-bottom-color: $hx-border-bottom-color !default;
+
+$h6-margin-top: $hx-margin-top !default;
+$h6-margin-bottom: $hx-margin-bottom !default;
+$h6-padding-bottom: $hx-padding-bottom !default;
+$h6-font-family: $font-3 !default;
+$h6-font-size: 1em !default;
+$h6-font-style: normal !default;
+$h6-font-weight: normal !default;
+$h6-line-height: $hx-line-height !default;
+$h6-text-transform: none !default;
 $h6-align: left !default;
+$h6-border-bottom-style: $hx-border-bottom-style !default;
+$h6-border-bottom-width: $hx-border-bottom-width !default;
+$h6-border-bottom-color: $hx-border-bottom-color !default;
+
+//PARAGRAPHS
+$para-margin-bottom: 0 !default;
+$para-align: (epub: initial, prince: justify, web: initial) !default;
+$widows: 2 !default;
+$orphans: 1 !default;
+$para-margin-top: 0 !default;
+$para-indent: 1em !default;
+$para-no-indent-margin-top: 1em !default;
+$para-hyphens: auto !default;
+$para-hyphenate-before: 3 !default;
+$para-hyphenate-after: 3 !default;
+$para-hyphenate-lines: 2 !default;
+$para-hanging-indent-padding-left: 1em !default;
+$para-hanging-indent-text-indent: -1em !default;
+$para-tight-letter-spacing: -0.25px !default; // TODO
+$para-tight-word-spacing: -0.075em !default;
+$para-very-tight-letter-spacing: -0.5px !default; // TODO
+$para-very-tight-word-spacing: -0.09em !default;
+$para-loose-letter-spacing: 0.25px !default; // TODO
+$para-loose-word-spacing: 0.075em !default;
+$para-very-loose-letter-spacing: 0.5px !default; // TODO
+$para-very-loose-word-spacing: 0.09em !default;
+
+//BLOCKQUOTES
+$blockquote-font-family: $font-1 !default;
+$blockquote-font-size: 1em !default;
+$blockquote-font-style: normal !default;
+$blockquote-font-weight: normal !default;
+$blockquote-line-height: (14 / 9) * 1em !default;
+$blockquote-margin-top: 1em !default;
+$blockquote-margin-right: 1em !default;
+$blockquote-margin-bottom: 1em !default;
+$blockquote-margin-left: 2.5em !default;
+$blockquote-padding-top: (epub: 0em, prince: 0em, web: 0) !default;
+$blockquote-padding-right: (epub: 0em, prince: 0em, web: 0) !default;
+$blockquote-padding-bottom: (epub: 0em, prince: 0em, web: 0) !default;
+$blockquote-padding-left: (epub: 0em, prince: 0em, web: 0) !default;
+$blockquote-align: justify !default;
+$blockquote-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+$blockquote-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+$blockquote-border-left-width: (epub: 0em, prince: 0em, web: 0) !default;
+$blockquote-border-left-style: none !default;
+$blockquote-border-left-color: initial !default;
+
+//LISTS
 $ol-margin-top: (20 / 14) * 1em !default;
 $ol-margin-bottom: (20 / 14) * 1em !default;
 $ol-margin-left: 0 !default;
+$ol-padding-left: 2em !default;
 $ul-margin-top: (20 / 14) * 1em !default;
 $ul-margin-bottom: (20 / 14) * 1em !default;
 $ul-margin-left: 0 !default;
+$ul-padding-left: 2em !default;
 $li-li-margin-top: 0 !default;
+$dt-margin-top: 0 !default;
+$dt-margin-right: 0 !default;
+$dt-margin-bottom: 0 !default;
+$dt-margin-left: 0 !default;
+$dt-font-style: normal !default;
+$dt-font-weight: bold !default;
+$dd-margin-top: 0 !default;
+$dd-margin-right: 0 !default;
+$dd-margin-bottom: 0 !default;
+$dd-margin-left: 0 !default;
+$dd-font-style: italic !default;
+$dd-font-weight: normal !default;
+
+//Tables
+$table-margin-top: 1.5em !default;
+$table-margin-bottom: 1.5em !default;
+$table-font-family: $font-1 !default;
 $table-font-size: 0.9em !default;
+$table-hyphens: none !default;
 $table-line-height: 1.1 !default;
+$table-align: left !default;
+$table-border-width: 1px !default;
+$table-caption-margin-bottom: 0.5em !default;
+$table-caption-font-weight: bold !default;
+$table-caption-line-height: 1.1em !default;
+$table-th-padding-top: 0.45em !default;
+$table-th-padding-right: 0.45em !default;
+$table-th-padding-bottom: 0.45em !default;
+$table-th-padding-left: 0.45em !default;
+$table-th-line-height: 1.1em !default;
+$table-th-align: left !default;
+$table-th-vertical-align: middle !default;
+$table-td-padding-top: 0.45em !default;
+$table-td-padding-right: 0.45em !default;
+$table-td-padding-bottom: 0.45em !default;
+$table-td-padding-left: 0.45em !default;
+$table-td-line-height: 1.1em !default;
+$table-td-align: left !default;
+$table-td-vertical-align: middle !default;
+
+//MISC
+$cite-font-size: 0.9em !default;
+$cite-font-style: normal !default;
+$cite-font-weight: normal !default;
+$cite-text-transform: uppercase !default;
+$cite-letter-spacing: normal !default;
+$cite-word-spacing: normal !default;
+$cite-font-variant: small-caps !default;
+
+$code-border: none !default;
+$code-border-radius: 0 !default;
+$code-background: transparent !default;
+$code-font-family: monospace !default;
+$code-font-size: $body-font-size !default;
+$code-margin-bottom: 0 !default;
+$code-margin-left: 0 !default;
+$code-margin-right: 0 !default;
+$code-margin-top: 0 !default;
+$code-padding-bottom: 0 !default;
+$code-padding-left: 0 !default;
+$code-padding-right: 0 !default;
+$code-padding-top: 0 !default;
+$code-line-height: $body-line-height !default;
+
+$pre-border: none !default;
+$pre-border-radius: 0 !default;
+$pre-background: transparent !default;
+$pre-font-family: $code-font-family !default;
+$pre-font-size: $code-font-size !default;
+$pre-line-height: $code-line-height !default;
+$pre-margin-bottom: 1em !default;
+$pre-margin-left: 0 !default;
+$pre-margin-right: 0 !default;
+$pre-margin-top: 1em !default;
+$pre-padding-bottom: 0 !default;
+$pre-padding-left: 0 !default;
+$pre-padding-right: 0 !default;
+$pre-padding-top: 0 !default;
+
+$sup-sub-font-size: 0.8em !default;
+$sup-sub-line-height: 0.5em !default;
+$sub-font-style: normal !default;
+$sub-text-transform: none !default;
+$sub-font-size: $sup-sub-font-size !default;
+$sub-line-height: $sup-sub-line-height !default;
+$sup-font-style: normal !default;
+$sup-text-transform: none !default;
+$sup-font-size: $sup-sub-font-size !default;
+$sup-line-height: $sup-sub-line-height !default;
+$link-text-decoration: (
+  epub: none,
+  prince: none,
+  web: underline
+) !default;
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/elements';

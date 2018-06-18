@@ -82,33 +82,33 @@
   }
 
   @else if $position == 'outside-bottom' {
-    @if $page-position != 'first' {
-      @return '@#{$page-position}-bottom';
+    @if $page-position == 'first' {
+      @return (
+        left: '@left-bottom',
+        right: '@right-bottom'
+      );
     }
-
-    @else {
-      @return false;
-    }
+    @return '@#{$page-position}-bottom';
   }
 
   @else if $position == 'bottom-outside-corner' {
-    @if $page-position != 'first' {
-      @return '@bottom-#{$page-position}-corner';
+    @if $page-position == 'first' {
+      @return (
+        left: '@bottom-left-corner',
+        right: '@bottom-right-corner'
+      );
     }
-
-    @else {
-      @return false;
-    }
+    @return '@bottom-#{$page-position}-corner';
   }
 
   @else if $position == 'bottom-outside' {
-    @if $page-position != 'first' {
-      @return '@bottom-#{$page-position}';
+    @if $page-position == 'first' {
+      @return (
+        left: '@bottom-left',
+        right: '@bottom-right'
+      );
     }
-
-    @else {
-      @return false;
-    }
+    @return '@bottom-#{$page-position}';
   }
 
   @else if $position == 'bottom-center' {
@@ -116,16 +116,19 @@
   }
 
   @else if $position == 'bottom-inside' {
-    @if $page-position == 'left' {
+    @if $page-position == 'first' {
+      @return (
+        left: '@bottom-right',
+        right: '@bottom-left'
+      );
+    }
+
+    @else if $page-position == 'left' {
       @return '@bottom-right';
     }
 
     @else if $page-position == 'right' {
       @return '@bottom-left';
-    }
-
-    @else {
-      @return false;
     }
   }
 }

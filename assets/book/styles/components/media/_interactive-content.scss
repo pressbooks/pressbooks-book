@@ -5,6 +5,12 @@
 @import '../utilities';
 
 .interactive-content {
+
+  @if $type != 'epub' {
+    line-height: if-map-get($interactive-content-line-height, $type);
+  }
+  margin-bottom: if-map-get($interactive-content-margin-bottom, $type);
+
   &__icon {
     display: $interactive-icon-display;
     float: $interactive-icon-float;
@@ -23,5 +29,12 @@
   p {
     margin-bottom: 0;
     text-align: left;
+  }
+}
+
+@if $type == 'web' {
+  iframe {
+    display: block;
+    margin: 0 auto if-map-get($interactive-content-margin-bottom, $type);
   }
 }

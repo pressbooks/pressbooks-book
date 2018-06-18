@@ -3,11 +3,7 @@
 in development
 copyright 2013-2015 Book Oven Inc. */
 
-@import 'tables', 'textboxes';
-
-@mixin header-style {
-  color: red;
-}
+@import 'tables', 'textboxes', 'license-icons';
 
 /* DROPCAPS - (NOTE: WRAP FIRST CHAR IN A SPAN) */
 
