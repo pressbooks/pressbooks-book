@@ -710,6 +710,14 @@ $ul-padding-left: 2em !default;
 /// @type String
 $li-li-margin-top: 0.5em !default;
 
+/// Top margin for multiple `<ol>` elements.
+/// @type String
+$ol-ol-margin-top: 0.5em !default;
+
+/// Top margin for multiple `<ol>` elements.
+/// @type String
+$ul-ul-margin-top: 0.5em !default;
+
 /// Top margin for `<dt>` elements.
 /// @type String
 $dt-margin-top: 0 !default;

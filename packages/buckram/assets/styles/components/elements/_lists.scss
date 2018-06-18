@@ -15,7 +15,7 @@
 
   ol {
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: if-map-get($ol-ol-margin-top, $type);
   }
 }
 
@@ -27,7 +27,7 @@
 
   ul {
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: if-map-get($ul-ul-margin-top, $type);
   }
 }
 
