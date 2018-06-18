@@ -1,0 +1,15 @@
+.git
+assets/src
+bin
+node_modules
+tests
+.editorconfig
+.gitattributes
+.github
+.gitignore
+.travis.yml
+.tx
+phpcs.ruleset.xml
+phpunit.xml
+webpack.mix.js
+yarn.lock
