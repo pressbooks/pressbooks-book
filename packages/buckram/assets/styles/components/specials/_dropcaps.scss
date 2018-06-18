@@ -11,9 +11,7 @@
   font-size: $first-character-font-size;
   font-style: $first-character-font-style;
   font-weight: $first-character-font-weight;
-  @if $type != 'epub' {
-    line-height: $first-character-line-height;
-  }
+  line-height: $first-character-line-height;
 }
 
 .firstcharacter { // Deprecated; only included for backwards-compatibility.
