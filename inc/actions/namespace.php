@@ -6,6 +6,7 @@ use function Pressbooks\Book\Helpers\social_media_enabled;
 use PressbooksMix\Assets;
 
 use Pressbooks\Container;
+use Pressbooks\Options;
 
 /**
  * Delete the cached Table of Contents.
@@ -58,6 +59,12 @@ function enqueue_assets() {
 	if ( ! is_front_page() ) {
 		if ( isset( $options['collapse_sections'] ) && absint( $options['collapse_sections'] ) === 1 ) {
 			wp_enqueue_script( 'pressbooks/collapse-sections', $assets->getPath( 'scripts/collapse-sections.js' ), false, null );
+		}
+
+		if ( isset( $options['enable_lightbox'] ) && absint( $options['enable_lightbox'] ) === 1 ) {
+			wp_enqueue_script( 'lity', $assets->getPath( 'scripts/lity.js' ), [ 'jquery' ], null );
+			wp_enqueue_style( 'lity', $assets->getPath( 'styles/lity.css' ), false, null );
+			wp_enqueue_script( 'pressbooks/lightbox', $assets->getPath( 'scripts/lightbox.js' ), false, null );
 		}
 
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
@@ -192,4 +199,49 @@ function webbook_width() {
  */
 function customizer_colors() {
 	echo \Pressbooks\Admin\Branding\get_customizer_colors();
+}
+
+/**
+ * Add web theme option for lightbox functionality.
+ *
+ * @since 2.4.0
+ *
+ * @param string $_page The settings identifier, e.g. pressbooks_theme_options_web
+ * @param string $_section The settings section identifier, e.g. web_options_section
+ *
+ * @return null
+ */
+function add_lightbox_setting( $_page, $_section ) {
+	add_settings_field(
+		'enable_lightbox',
+		__( 'Enable Image Lightbox', 'pressbooks-book' ),
+		'\Pressbooks\Book\Actions\render_lightbox_setting_field',
+		$_page,
+		$_section,
+		[
+			__( 'Show linked images in a lightbox', 'pressbooks-book' ),
+		]
+	);
+}
+
+/**
+ * Render the lightbox setting field.
+ *
+ * @since 2.4.0
+ *
+ * @param array $args The arguments for the field.
+ *
+ * @return null
+ */
+function render_lightbox_setting_field( $args ) {
+	$options = get_option( 'pressbooks_theme_options_web' );
+	Options::renderCheckbox(
+		[
+			'id' => 'enable_lightbox',
+			'name' => 'pressbooks_theme_options_web',
+			'option' => 'enable_lightbox',
+			'value' => ( isset( $options['enable_lightbox'] ) ) ? $options['enable_lightbox'] : '',
+			'label' => $args[0],
+		]
+	);
 }

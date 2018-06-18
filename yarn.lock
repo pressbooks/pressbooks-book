@@ -5455,6 +5455,10 @@ limiter@^1.0.5:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.2.tgz#229d8055891c8b11af9e0ee5200e8e09bb3dcbeb"
 
+lity@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/lity/-/lity-2.3.1.tgz#dd9a8498eac133a645fc3169689c9bbaccd31074"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"

@@ -131,3 +131,15 @@ function filter_search( $query ) {
 
 	return $query;
 }
+
+/**
+ * Add lightbox setting to sanitization hook.
+ *
+ * @since 2.4.0
+ *
+ * @param array $settings
+ */
+function add_lightbox_to_settings( $settings ) {
+	$settings[] = 'enable_lightbox';
+	return $settings;
+}
