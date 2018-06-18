@@ -65,3 +65,5 @@ add_action( 'after_setup_theme', '\Pressbooks\Book\Actions\theme_setup' );
 add_action( 'wp_head', '\Pressbooks\Book\Actions\customizer_colors' );
 add_action( 'wp_head', '\Pressbooks\Book\Actions\webbook_width' );
 add_filter( 'the_title', 'Pressbooks\Book\Filters\add_private_to_title', 10, 2 );
+add_action( 'pb_theme_options_web_add_settings_fields', '\Pressbooks\Book\Actions\add_lightbox_setting', 10, 2 );
+add_filter( 'pb_theme_options_web_booleans', '\Pressbooks\Book\Filters\add_lightbox_to_settings' );
