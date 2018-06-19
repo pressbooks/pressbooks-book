@@ -151,3 +151,7 @@ body:not(.home) {
     }
   }
 }
+
+.a11y-toolbar {
+  z-index: 9990;
+}
