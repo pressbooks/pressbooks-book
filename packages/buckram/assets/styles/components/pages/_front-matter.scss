@@ -89,6 +89,11 @@ div.epigraph {
   }
 }
 
+#copyright-page p + p {
+  margin-top: 1em;
+  text-indent: 0;
+}
+
 @if $type == 'epub' {
   @media amzn-mobi {
     #copyright-page {

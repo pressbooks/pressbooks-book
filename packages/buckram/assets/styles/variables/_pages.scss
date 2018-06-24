@@ -122,7 +122,7 @@ $title-title-text-transform: none !default;
 $title-title-decoration-font-family: $font-3 !default;
 
 /// Defines the title page title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $title-title-decoration-content: "" !default;
 
@@ -137,7 +137,7 @@ $title-title-decoration-display: none !default;
 $title-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
 
 /// Defines the title page title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $title-title-decoration-font-weight: normal !default;
 
@@ -255,7 +255,7 @@ $title-author-align: center !default;
 
 /// Text transform for title page author on elements `<h3>` with a class of `author`.
 /// @type String
-$title-author-text-transform: uppercase !default;
+$title-author-text-transform: none !default;
 
 // Publisher logo
 
@@ -327,7 +327,7 @@ $title-publisher-align: center !default;
 
 /// Text transform for title page publisher text on elements `<h4>` with a class of `publisher`.
 /// @type String
-$title-publisher-text-transform: uppercase !default;
+$title-publisher-text-transform: none !default;
 
 // Publisher city
 
@@ -437,7 +437,7 @@ $dedication-margin-bottom: 1em !default;
 
 /// Font stack for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
 /// @type String
-$dedication-font-family: $font-2 !default;
+$dedication-font-family: $font-1 !default;
 
 /// Font size for Dedication on `<p>` elements that are children of `<div>` elements with a class of `dedication`.
 /// @type String
@@ -559,7 +559,7 @@ $section-license-align: left !default;
 
 /// Line height for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
 /// @type String
-$section-license-line-height: 1.4em !default;
+$section-license-line-height: 1.2em !default;
 
 /// Font size for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
 /// @type String

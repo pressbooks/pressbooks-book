@@ -27,6 +27,8 @@
   }
 
   p {
+    font-size: if-map-get($interactive-content-font-size, $type);
+    font-style: $interactive-content-font-style;
     margin-bottom: 0;
     text-align: left;
   }
