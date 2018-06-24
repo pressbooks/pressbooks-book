@@ -361,22 +361,12 @@ $toc-chapter-title-display: inline !default;
 /// Chapter subtitle top margin for Table of Contents
 /// @type String | Map
 /// @since 1.0.0
-$toc-chapter-subtitle-margin-top: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
-
-/// Chapter subtitle bottom margin for Table of Contents
-/// @type String | Map
-/// @since 1.0.0
-$toc-chapter-subtitle-margin-bottom: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
+$toc-chapter-subtitle-margin-top: (epub: 0.4em, prince: 0.4em, web: 0.4em) !default;
 
 /// Chapter author top margin for Table of Contents
 /// @type String | Map
 /// @since 1.0.0
-$toc-chapter-author-margin-top: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
-
-/// Chapter author bottom margin for Table of Contents
-/// @type String | Map
-/// @since 1.0.0
-$toc-chapter-author-margin-bottom: (epub: 0.2em, prince: 0.2em, web: 0.2em) !default;
+$toc-chapter-author-margin-top: (epub: 0.4em, prince: 0.4em, web: 0.4em) !default;
 
 /// Chapter subtitle font stack for Table of Contents
 /// @type String
@@ -388,7 +378,7 @@ $toc-chapter-subtitle-font-size: 0.9em !default;
 
 /// Chapter subtitle font style for Table of Contents
 /// @type String
-$toc-chapter-subtitle-font-style: normal !default;
+$toc-chapter-subtitle-font-style: italic !default;
 
 /// Chapter subtitle font weight for Table of Contents
 /// @type String

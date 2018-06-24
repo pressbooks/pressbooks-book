@@ -205,6 +205,16 @@ $interactive-icon-background-size: (
 /// @since 1.0.0
 $interactive-content-line-height: $body-line-height !default;
 
+/// Font size property for interactive content box
+/// @type String | Map
+/// @since 1.0.0
+$interactive-content-font-size: 0.9em !default;
+
+/// Font style property for interactive content box
+/// @type String
+/// @since 1.0.0
+$interactive-content-font-style: italic !default;
+
 /// Bottom margin property for interactive content box
 /// @type String | Map
 /// @since 1.0.0
