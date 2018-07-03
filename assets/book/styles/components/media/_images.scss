@@ -2,19 +2,22 @@
 /// @group media
 ////
 
-//============================================================================//
-//                                  Images                                    //
-//============================================================================//
+@mixin caption-text-align($align) {
+  figcaption,
+  .wp-caption-text {
+    text-align: map-get($_image-caption-text-align, $align);
+  }
+}
 
 @if $type == 'epub' {
+  figcaption,
   .wp-caption-text {
-    padding-bottom: $image-caption-padding-bottom;
     font-family: $image-caption-font-family;
-    font-size: $image-caption-font-size;
+    font-size: if-map-get($image-caption-font-size, $type);
     font-style: $image-caption-font-style;
     font-weight: $image-caption-font-weight;
     hyphens: none;
-    line-height: $image-caption-line-height;
+    padding-bottom: if-map-get($image-caption-padding-bottom, $type);
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
   }
@@ -22,115 +25,105 @@
   img {
     display: inline-block;
     height: auto;
+    margin: 0;
     max-width: 100%;
     padding: 0;
-    margin: 0;
     page-break-inside: avoid !important;
   }
 
-  // Wrapper for captioned and uncaptioned images
   .wp-caption,
   .wp-nocaption {
-    width: 80%;
     height: auto;
-    max-width: 80%;
-    margin: $image-wrapper-margin-top 10% $image-wrapper-margin-bottom;
-    text-align: center;
+    max-width: 100%;
     page-break-inside: avoid !important;
 
-    // Align (Center)
-    &.aligncenter {
+    &.alignnone {
+      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
+      text-align: left;
       width: auto;
+
+      @include caption-text-align(left);
+    }
+
+    &.aligncenter {
+      margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
       text-align: center;
-      page-break-inside: avoid !important;
+      width: auto;
+
+      @include caption-text-align(center);
 
       img {
-        width: auto;
-        margin-right: auto;
         margin-left: auto;
+        margin-right: auto;
         text-align: center;
+        width: auto;
       }
     }
 
-    // Align (Left) – width is 50%
-    &.alignleft {
-      float: left;
-      width: 50% !important;
-      max-width: 50%;
-      padding-left: 0;
-      margin-right: $image-alignleft-margin-right !important;
-      margin-left: 0;
-      page-break-inside: avoid !important;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    // Align (Right) – width is 50%
     &.alignright {
       float: right;
-      width: 50% !important;
+      margin-left: $image-alignright-margin-left !important;
+      margin-right: 0;
       max-width: 50%;
       padding-left: 0;
-      margin-right: 0;
-      margin-left: $image-alignright-margin-left !important;
-      page-break-inside: avoid !important;
+      width: 50% !important;
+
+      @include caption-text-align(right);
 
       img {
-        width: 100%;
+        width: 100%
+      }
+    }
+
+    &.alignleft {
+      float: left;
+      margin-left: 0;
+      margin-right: $image-alignleft-margin-right !important;
+      max-width: 50%;
+      padding-right: 0;
+      width: 50% !important;
+
+      @include caption-text-align(left);
+
+      img {
+        width: 100%
       }
     }
   }
 
-  // Mobi
-
-  @media amzn-mobi {
-    .wp-caption {
-      text-align: center;
+  .wp-caption.alignnone {
+    img {
+      float: none;
+      margin-right: 0;
+      max-width: 100% !important;
     }
 
-    .wp-nocaption {
-      text-align: center;
+    figcaption,
+    .wp-caption-text {
+      box-sizing: border-box;
+      float: none;
+      padding-left: 0;
+      width: 100% !important;
     }
 
-    p.wp-caption-text {
-      font-size: 0.8em !important;
-      font-style: italic !important;
-      margin-bottom: 1em !important;
-      text-align: center !important;
-    }
-  }
-
-  @media amzn-kf8 {
-    div.wp-caption,
-    div.wp-nocaption {
-      height: auto !important;
-      width: auto !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      text-align: center !important;
-      page-break-inside: avoid !important;
-    }
-
-    div.wp-caption img,
-    div.wp-nocaption img {
-      width: auto;
-      page-break-inside: avoid !important;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   }
 }
 
 @else if $type == 'prince' {
-  .wp-caption-text,
-  .figurecaption {
-    padding-bottom: $image-caption-padding-bottom;
+  figcaption,
+  .wp-caption-text {
     font-family: $image-caption-font-family;
-    font-size: $image-caption-font-size;
+    font-size: if-map-get($image-caption-font-size, $type);
     font-style: $image-caption-font-style;
     font-weight: $image-caption-font-weight;
     hyphens: none;
-    line-height: $image-caption-line-height;
+    line-height: if-map-get($image-caption-line-height, $type);
+    padding-bottom: if-map-get($image-caption-padding-bottom, $type);
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
   }
@@ -138,36 +131,38 @@
   img {
     display: inline-block;
     height: auto;
+    margin: 0;
     max-width: 100%;
     padding: 0;
-    margin: 0;
+    page-break-inside: avoid !important;
     prince-image-resolution: $prince-image-resolution;
-    page-break-inside: avoid;
   }
 
-  // Wrapper for captioned and uncaptioned images
   .wp-caption,
-  .wp-nocaption,
-  .figure {
+  .wp-nocaption {
     height: auto;
-    max-width: 100%;
-    margin-top: $image-wrapper-margin-top;
     margin-bottom: $image-wrapper-margin-bottom;
-    text-align: center;
+    margin-top: $image-wrapper-margin-top;
+    max-width: 100%;
     page-break-inside: avoid;
+    text-align: center;
 
-    // Align (None)
     &.alignnone {
       padding-left: 0;
-      margin-right: 0;
       margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+      width: if-map-get($image-alignnone-wrapper-width, $type) !important;
+
+      @include caption-text-align(left);
     }
 
-    // Align (Center)
     &.aligncenter {
       margin-right: auto;
       margin-left: auto;
       text-align: center;
+
+      @include caption-text-align(center);
 
       img {
         margin-right: auto;
@@ -175,21 +170,45 @@
       }
     }
 
-    // Align (Left) – max-width is 50%
     &.alignleft {
       float: left;
-      max-width: 50%;
-      margin-right: $image-alignleft-margin-right;
       margin-left: 0;
+      margin-right: $image-alignleft-margin-right;
+      max-width: 50%;
+
+      @include caption-text-align(left);
     }
 
-    // Align (Right) – max-width is 50%
     &.alignright {
       float: right;
+      margin-left: $image-alignright-margin-left;
+      margin-right: 0;
       max-width: 50%;
       padding-right: 0;
+
+      @include caption-text-align(right);
+    }
+  }
+
+  .wp-caption.alignnone {
+    img {
+      float: $image-alignnone-image-float;
       margin-right: 0;
-      margin-left: $image-alignright-margin-left;
+      max-width: if-map-get($image-alignnone-image-maxwidth, $type) !important;
+    }
+
+    figcaption,
+    .wp-caption-text {
+      box-sizing: border-box;
+      float: $image-alignnone-caption-float;
+      padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
+      width: if-map-get($image-alignnone-caption-width, $type) !important;
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
   }
 }
@@ -199,49 +218,79 @@
   .part,
   .chapter,
   .back-matter {
+    figcaption,
+    .wp-caption-text {
+      font-family: $image-caption-font-family;
+      font-size: if-map-get($image-caption-font-size, $type);
+      font-style: $image-caption-font-style;
+      font-weight: $image-caption-font-weight;
+      hyphens: none;
+      line-height: if-map-get($image-caption-line-height, $type);
+      padding-bottom: if-map-get($image-caption-padding-bottom, $type);
+      text-align: $image-caption-text-align;
+      text-transform: $image-caption-text-transform;
+    }
+
     img {
+      display: inline-block;
       height: auto;
+      margin: 0;
       max-width: 100%;
-    }
-
-    .alignleft {
-      display: inline;
-      float: left;
-      max-width: 50%;
-      margin-right: $image-alignleft-margin-right;
-    }
-
-    .alignright {
-      display: inline;
-      float: right;
-      max-width: 50%;
-      margin-left: $image-alignright-margin-left;
-    }
-
-    .aligncenter {
-      clear: both;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0;
+      page-break-inside: avoid !important;
+      prince-image-resolution: $prince-image-resolution;
     }
 
     .wp-caption,
     .wp-nocaption {
-      margin-top: $image-wrapper-margin-top;
+      height: auto;
       margin-bottom: $image-wrapper-margin-bottom;
+      margin-top: $image-wrapper-margin-top;
+      max-width: 100%;
+      page-break-inside: avoid;
       text-align: center;
-    }
 
-    .wp-caption-text {
-      padding-bottom: $image-caption-padding-bottom;
-      font-family: $image-caption-font-family;
-      font-size: $image-caption-font-size;
-      font-style: $image-caption-font-style;
-      font-weight: $image-caption-font-weight;
-      hyphens: none;
-      line-height: $image-caption-line-height;
-      text-align: $image-caption-text-align;
-      text-transform: $image-caption-text-transform;
+      &.alignnone {
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        width: if-map-get($image-alignnone-wrapper-width, $type) !important;
+
+        @include caption-text-align(left);
+      }
+
+      &.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+
+        @include caption-text-align(center);
+
+        img {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      &.alignleft {
+        float: left;
+        margin-left: 0;
+        margin-right: $image-alignleft-margin-right;
+        max-width: 50%;
+
+        @include caption-text-align(left);
+      }
+
+      &.alignright {
+        float: right;
+        margin-left: $image-alignright-margin-left;
+        margin-right: 0;
+        max-width: 50%;
+        padding-right: 0;
+
+        @include caption-text-align(right);
+      }
     }
   }
 }

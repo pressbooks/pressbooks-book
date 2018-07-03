@@ -54,8 +54,13 @@
   .float-bottom + p,
   .pullquote + p,
   .pullquote-right + p,
+  .pullquote--right + p,
   .pullquote-left + p,
+  .pullquote--left + p,
   .pullquote-outside + p,
+  .pullquote--outside + p,
+  .pullquote-inside + p,
+  .pullquote--inside + p,
   .sidebar + p {
     margin-top: $para-margin-top;
     text-indent: $para-indent;
@@ -156,7 +161,8 @@
   .front-matter,
   .part,
   .chapter,
-  .back-matter {
+  .back-matter,
+  body#tinymce.wp-editor {
     p {
       margin-bottom: $para-margin-bottom;
       text-align: if-map-get($para-align, $type);

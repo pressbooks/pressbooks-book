@@ -56,7 +56,9 @@ hr {
 .section-break-space {
   margin-top: $section-break-space-margin-top;
   margin-bottom: $section-break-space-margin-bottom;
-  line-height: $section-break-space-line-height;
+  @if $type != 'epub' {
+    line-height: $section-break-space-line-height;
+  }
   visibility: hidden;
 }
 

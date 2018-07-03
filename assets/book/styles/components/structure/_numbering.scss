@@ -50,6 +50,11 @@ div.front-matter {
     prince-page-group: start;
     counter-reset: page 1;
   }
+
+  &.post-introduction {
+    page: post-introduction;
+    prince-page-group: start;
+  }
 }
 
 div.part {
