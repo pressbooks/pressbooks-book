@@ -6,12 +6,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
-"Language-Team: Hungarian (Hungary) (https://www.transifex.com/pressbooks/teams/9194/hu_HU/)\n"
+"Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/pressbooks/teams/9194/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu_HU\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -24,18 +24,18 @@ msgstr ""
 
 #: ../404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
-msgstr "Úgy tűnik, semmit nem találtunk ezen a helyen. Kipróbál egy keresést?"
+msgstr "Atrodo, kad šioje vietoje nieko nerasta. Pabandykite paiešką"
 
 #: ../comments.php:2
 msgid "Feedback/Errata"
-msgstr "Visszajelzés/Elírás"
+msgstr "Atsiliepimas / Klaida"
 
 #: ../comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-"Ez a bejegyzés jelszóval védett. A megjegyzések megtekintéséhez írja be a "
-"jelszót."
+"Šis įrašas yra apsaugotas slaptažodžiu. Įveskite slaptažodį norėdami "
+"peržiūrėti komentarus."
 
 #: ../comments.php36, ../comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
@@ -47,11 +47,11 @@ msgstr ""
 
 #: ../comments.php:56
 msgid "Comments are closed."
-msgstr "A hozzászólások le vannak zárva."
+msgstr "Komentarai nepriimami."
 
 #: ../comments.php:64
 msgid "Submit"
-msgstr "Beküldés"
+msgstr "Pateikti"
 
 #: ../footer.php:32
 msgid "Powered by %s"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../footer.php:34
 msgid "Open Source"
-msgstr "Nyílt Forráskód"
+msgstr "Atviras Kodas"
 
 #: ../footer.php:35
 msgid "Open Textbooks"
@@ -67,19 +67,19 @@ msgstr ""
 
 #: ../footer.php:36
 msgid "Open Book Publishing"
-msgstr "Nyílt Könyvkiadás"
+msgstr ""
 
 #: ../footer.php:37
 msgid "Learn More"
-msgstr "Tudjon meg többet"
+msgstr "Sužinokite Daugiau"
 
 #: ../footer.php41, ../footer.php:45
 msgid "Pressbooks on Facebook"
-msgstr "Pressbook a Faceboon"
+msgstr "Facebook Pressbooks"
 
 #: ../footer.php47, ../footer.php:51
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks a Twitteren"
+msgstr "Twitter Pressbooks"
 
 #: ../functions.php:16
 msgid "Dependencies Missing"
@@ -91,11 +91,11 @@ msgstr ""
 
 #: ../functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr "A Pressbook telepítése nem található."
+msgstr "Nepavyksta rasti Pressbooks install."
 
 #: ../header.php:64
 msgid "Skip to content"
-msgstr "Ugrás a tartalomra"
+msgstr "Pereiti prie turinio."
 
 #: ../header.php:83
 msgid "Logo for %s"
@@ -103,11 +103,11 @@ msgstr ""
 
 #: ../header.php:94
 msgid "Toggle Menu"
-msgstr ""
+msgstr "Perjungti Meniu"
 
 #: ../header.php106, ../index.php:14
 msgid "Contents"
-msgstr "Tartalmak"
+msgstr "Turinys"
 
 #: ../header.php:112
 msgid "Go to the cover page of %s"
@@ -115,27 +115,27 @@ msgstr ""
 
 #: ../header.php:116
 msgid "Buy"
-msgstr "Vásárlás"
+msgstr "Pirkti"
 
 #: ../index.php:18
 msgid "This book does not contain any public content."
-msgstr "Ez a könyv nem tartalmaz nyilvános tartalmat."
+msgstr "Šioje knygoje nėra jokio viešo turinio."
 
 #: ../page-about.php:5
 msgid "About The Book"
-msgstr "A Könyvről"
+msgstr "Apie Knygą."
 
 #: ../page-about.php21, ../page-buy.php10, ../page-buy.php:18
 msgid "It's coming!"
-msgstr "Hamarosan!"
+msgstr ""
 
 #: ../page-authors.php:31
 msgid "Authors"
-msgstr "Szerzők!"
+msgstr "Autoriai"
 
 #: ../page-buy.php:5
 msgid "Buy the Book"
-msgstr "A könyv Megvásárlása"
+msgstr "Pirkti Knygą"
 
 #: ../page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
@@ -163,23 +163,23 @@ msgstr ""
 
 #: ../page-buy.php:50
 msgid "Elsewhere"
-msgstr "Máshol"
+msgstr "Kitur"
 
 #: ../page-buy.php:50
 msgid "Purchase here:"
-msgstr "Vásárlás itt:"
+msgstr "Pirkti čia:"
 
 #: ../page.php:13
 msgid "Edit"
-msgstr "Szerkesztés"
+msgstr "Redaguoti"
 
 #: ../page.php:18
 msgid "Pages:"
-msgstr "Oldalak:"
+msgstr "Puslapiai:"
 
 #: ../private.php:4
 msgid "Access Denied"
-msgstr "Hozzáférés megtagadva"
+msgstr "Prieiga Uždrausta"
 
 #: ../private.php:10
 msgid ""
@@ -189,7 +189,7 @@ msgstr ""
 
 #: ../private.php:14
 msgid "sign in here"
-msgstr "bejelentkezés itt"
+msgstr "Prisjungti čia"
 
 #: ../private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
@@ -201,11 +201,11 @@ msgstr ""
 
 #: ../search.php:18
 msgid "Previous page"
-msgstr "Előző oldal"
+msgstr "Ankstesnis puslapis"
 
 #: ../search.php:19
 msgid "Next page"
-msgstr "Következő oldal"
+msgstr "Kitas puslapis"
 
 #: ../search.php:20
 msgid "Paged navigation"
@@ -214,7 +214,7 @@ msgstr ""
 #: ../searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr "Keresés a könyvben:"
+msgstr "Ieškoti knygoje:"
 
 #: ../searchform.php:4
 msgctxt "placeholder"
@@ -223,12 +223,12 @@ msgstr ""
 
 #: ../searchform.php:8
 msgid "Search"
-msgstr "Keresés"
+msgstr "Ieškoti"
 
 #: ../single.php:32
 msgid "License"
-msgstr "Licence"
+msgstr "Licencija"
 
 #: ../single.php:41
 msgid "Share This Book"
-msgstr "A Könyv Megosztása"
+msgstr "Pasidalink šia knyga"

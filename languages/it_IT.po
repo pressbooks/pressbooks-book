@@ -1,8 +1,11 @@
 # Copyright (C) 2018 pressbooks-book
 # This file is distributed under the same license as the pressbooks-book package.
+# Translators:
+# Antonio Devís <colomet@hotmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
+"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/pressbooks/teams/9194/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,15 +25,18 @@ msgstr ""
 #: ../404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
 msgstr ""
+"Sembra che non ci sia niente in questo sito. Vuoi provare con una ricerca?"
 
 #: ../comments.php:2
 msgid "Feedback/Errata"
-msgstr ""
+msgstr "Feedback/Errore"
 
 #: ../comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
+"Questo post è protetto da password. Inserisci la password per vedere i "
+"commenti."
 
 #: ../comments.php36, ../comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
@@ -42,11 +48,11 @@ msgstr ""
 
 #: ../comments.php:56
 msgid "Comments are closed."
-msgstr ""
+msgstr "Commenti negati"
 
 #: ../comments.php:64
 msgid "Submit"
-msgstr ""
+msgstr "Invia"
 
 #: ../footer.php:32
 msgid "Powered by %s"
@@ -54,31 +60,31 @@ msgstr ""
 
 #: ../footer.php:34
 msgid "Open Source"
-msgstr ""
+msgstr "Fonte Aperta/Open Source"
 
 #: ../footer.php:35
 msgid "Open Textbooks"
-msgstr ""
+msgstr "Apri Textbooks"
 
 #: ../footer.php:36
 msgid "Open Book Publishing"
-msgstr ""
+msgstr "Apri Book Publishing"
 
 #: ../footer.php:37
 msgid "Learn More"
-msgstr ""
+msgstr "Per saperne di più"
 
 #: ../footer.php41, ../footer.php:45
 msgid "Pressbooks on Facebook"
-msgstr ""
+msgstr "Pressbooks su Facebook"
 
 #: ../footer.php47, ../footer.php:51
 msgid "Pressbooks on Twitter"
-msgstr ""
+msgstr "Pressbooks su Twitter"
 
 #: ../functions.php:16
 msgid "Dependencies Missing"
-msgstr ""
+msgstr "Dipendenze Mancanti"
 
 #: ../functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
@@ -86,11 +92,11 @@ msgstr ""
 
 #: ../functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr ""
+msgstr "Non riesco a trovare Pressbooks install."
 
 #: ../header.php:64
 msgid "Skip to content"
-msgstr ""
+msgstr "Salta questo contenuto"
 
 #: ../header.php:83
 msgid "Logo for %s"
@@ -98,11 +104,11 @@ msgstr ""
 
 #: ../header.php:94
 msgid "Toggle Menu"
-msgstr ""
+msgstr "Menù Toggle"
 
 #: ../header.php106, ../index.php:14
 msgid "Contents"
-msgstr ""
+msgstr "Contenuti"
 
 #: ../header.php:112
 msgid "Go to the cover page of %s"
@@ -110,27 +116,27 @@ msgstr ""
 
 #: ../header.php:116
 msgid "Buy"
-msgstr ""
+msgstr "Compra"
 
 #: ../index.php:18
 msgid "This book does not contain any public content."
-msgstr ""
+msgstr "Questo libro non contiene alcun contenuto publico."
 
 #: ../page-about.php:5
 msgid "About The Book"
-msgstr ""
+msgstr "Riguardo il Libro"
 
 #: ../page-about.php21, ../page-buy.php10, ../page-buy.php:18
 msgid "It's coming!"
-msgstr ""
+msgstr "In arrivo!"
 
 #: ../page-authors.php:31
 msgid "Authors"
-msgstr ""
+msgstr "Autori"
 
 #: ../page-buy.php:5
 msgid "Buy the Book"
-msgstr ""
+msgstr "Compra il Libro"
 
 #: ../page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
@@ -158,23 +164,23 @@ msgstr ""
 
 #: ../page-buy.php:50
 msgid "Elsewhere"
-msgstr ""
+msgstr "Vedi altrove"
 
 #: ../page-buy.php:50
 msgid "Purchase here:"
-msgstr ""
+msgstr "Acquista qui:"
 
 #: ../page.php:13
 msgid "Edit"
-msgstr ""
+msgstr "Modifica"
 
 #: ../page.php:18
 msgid "Pages:"
-msgstr ""
+msgstr "Pagine:"
 
 #: ../private.php:4
 msgid "Access Denied"
-msgstr ""
+msgstr "Accesso Negato"
 
 #: ../private.php:10
 msgid ""
@@ -184,7 +190,7 @@ msgstr ""
 
 #: ../private.php:14
 msgid "sign in here"
-msgstr ""
+msgstr "Accedi qui"
 
 #: ../private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
@@ -196,20 +202,20 @@ msgstr ""
 
 #: ../search.php:18
 msgid "Previous page"
-msgstr ""
+msgstr "Pagina Precedente"
 
 #: ../search.php:19
 msgid "Next page"
-msgstr ""
+msgstr "Pagina Successiva"
 
 #: ../search.php:20
 msgid "Paged navigation"
-msgstr ""
+msgstr "Navigazione Numerata"
 
 #: ../searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr ""
+msgstr "Cerca nel libro:"
 
 #: ../searchform.php:4
 msgctxt "placeholder"
@@ -218,12 +224,12 @@ msgstr ""
 
 #: ../searchform.php:8
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #: ../single.php:32
 msgid "License"
-msgstr ""
+msgstr "Licensa"
 
 #: ../single.php:41
 msgid "Share This Book"
-msgstr ""
+msgstr "Condividi Questo Libro"
