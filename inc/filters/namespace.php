@@ -51,6 +51,15 @@ function async_scripts( $tag, $handle, $src ) {
 	return $tag;
 }
 
+function status_code_adjustment( $status_header, $code ) {
+	if ( 200 === absint( $code ) && \Pressbooks\Book\Helpers\is_book_public() === false ) {
+		$protocol = wp_get_server_protocol();
+		$msg = get_status_header_desc( 401 );
+		$status_header = "{$protocol} 401 {$msg}";
+	}
+	return $status_header;
+}
+
 /**
  * Replace the excerpt more tag with a custom link.
  *
