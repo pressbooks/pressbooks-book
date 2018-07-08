@@ -51,6 +51,14 @@ function async_scripts( $tag, $handle, $src ) {
 	return $tag;
 }
 
+/**
+ * Hooked into `status_header`
+ *
+ * @param string $status_header
+ * @param int $code
+ *
+ * @return string
+ */
 function status_code_adjustment( $status_header, $code ) {
 	if ( 200 === absint( $code ) && \Pressbooks\Book\Helpers\is_book_public() === false ) {
 		$protocol = wp_get_server_protocol();
