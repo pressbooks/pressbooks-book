@@ -54,6 +54,8 @@ function async_scripts( $tag, $handle, $src ) {
 /**
  * Hooked into `status_header`
  *
+ * @since 2.4.1
+ *
  * @param string $status_header
  * @param int $code
  *
@@ -61,8 +63,8 @@ function async_scripts( $tag, $handle, $src ) {
  */
 function status_code_adjustment( $status_header, $code ) {
 	if ( 200 === absint( $code ) && \Pressbooks\Book\Helpers\is_book_public() === false ) {
-		$protocol = wp_get_server_protocol();
-		$msg = get_status_header_desc( 401 );
+		$protocol      = wp_get_server_protocol();
+		$msg           = get_status_header_desc( 401 );
 		$status_header = "{$protocol} 401 {$msg}";
 	}
 	return $status_header;
