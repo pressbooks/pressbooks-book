@@ -62,10 +62,15 @@ function async_scripts( $tag, $handle, $src ) {
  * @return string
  */
 function status_code_adjustment( $status_header, $code ) {
-	if ( 200 === absint( $code ) && \Pressbooks\Book\Helpers\is_book_public() === false ) {
+	if (
+		200 === absint( $code ) &&
+		\Pressbooks\Book\Helpers\is_book_public() === false &&
+		array_key_exists( 'format', $GLOBALS['wp_query']->query_vars ) === false
+	) {
+		$code          = 401;
 		$protocol      = wp_get_server_protocol();
-		$msg           = get_status_header_desc( 401 );
-		$status_header = "{$protocol} 401 {$msg}";
+		$msg           = get_status_header_desc( $code );
+		$status_header = "{$protocol} {$code} {$msg}";
 	}
 	return $status_header;
 }
