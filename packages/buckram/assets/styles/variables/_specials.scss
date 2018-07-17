@@ -308,12 +308,17 @@ $pullquote-text-transform: none !default;
 $pullquote-align: center !default;
 
 /// Top margin for pullquotes on elements with a class of `pullquote`.
-/// @type String
+/// @type String | Map
 $pullquote-margin-top: 1em !default;
 
 /// Bottom margin for pullquotes on elements with a class of `pullquote`.
-/// @type String
+/// @type String | Map
 $pullquote-margin-bottom: 1em !default;
+
+/// Width for pullquotes on elements with a class of `pullquote`.
+/// @type String | Map
+/// @since 1.1.0
+$pullquote-width: auto !default;
 
 /// Left width for left pullquotes on elements with a class of `pullquote-left`.
 /// @type String
@@ -325,11 +330,11 @@ $pullquote-left-width: 45% !default;
 $pullquote-left-align: $pullquote-align !default;
 
 /// Right margin for left pullquotes on elements with a class of `pullquote-left`.
-/// @type String
+/// @type String | Map
 $pullquote-left-margin-right: 1em !default;
 
 /// Left margin for left pullquotes on elements with a class of `pullquote-left`.
-/// @type String
+/// @type String | Map
 $pullquote-left-margin-left: 1em !default;
 
 /// Width for right pullquotes on elements with a class of `pullquote-right`.
@@ -337,7 +342,7 @@ $pullquote-left-margin-left: 1em !default;
 $pullquote-right-width: 45% !default;
 
 /// Right margin for right pullquotes on elements with a class of `pullquote-right`.
-/// @type String
+/// @type String | Map
 $pullquote-right-margin-right: 1em !default;
 
 /// Text alignment for right pullquotes on elements with a class of `pullquote-right`.
@@ -346,7 +351,7 @@ $pullquote-right-margin-right: 1em !default;
 $pullquote-right-align: $pullquote-align !default;
 
 /// Left margin for right pullquotes on elements with a class of `pullquote-right`.
-/// @type String
+/// @type String | Map
 $pullquote-right-margin-left: 1em !default;
 
 // Sidebars
