@@ -148,6 +148,7 @@
       }
       .numberless & {
         h1 span {
+          display: none;
           content: '';
         }
       }
