@@ -66,8 +66,11 @@
     }
 
     .numberless & {
-      .chapter-number::after {
-        content: '';
+      .chapter-number {
+        display: none;
+        &::after {
+          content: '';
+        }
       }
     }
 
