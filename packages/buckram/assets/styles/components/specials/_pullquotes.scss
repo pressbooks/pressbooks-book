@@ -52,7 +52,7 @@ aside,
 .pullquote--left {
   @extend %pullquote;
   float: left;
-  margin: if-map-get($pullquote-margin-top, $type) if-map-get($pullquote-left-margin-right, $type) if-map-get($pullquote-margin-bottom, $type) if-map-get($pullquote-left-margin-left, $type);
+  margin: if-map-get($pullquote-left-margin-top, $type) if-map-get($pullquote-left-margin-right, $type) if-map-get($pullquote-left-margin-bottom, $type) if-map-get($pullquote-left-margin-left, $type);
   text-align: $pullquote-left-align;
   width: $pullquote-left-width;
 }
@@ -61,7 +61,7 @@ aside,
 .pullquote--right {
   @extend %pullquote;
   float: right;
-  margin: if-map-get($pullquote-margin-top, $type) if-map-get($pullquote-right-margin-right, $type) if-map-get($pullquote-margin-bottom, $type) if-map-get($pullquote-right-margin-left, $type);
+  margin: if-map-get($pullquote-right-margin-top, $type) if-map-get($pullquote-right-margin-right, $type) if-map-get($pullquote-right-margin-bottom, $type) if-map-get($pullquote-right-margin-left, $type);
   text-align: $pullquote-right-align;
   width: $pullquote-right-width;
 }
