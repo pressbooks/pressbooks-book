@@ -6,8 +6,7 @@
     "build": "composer test",
     "diff": "mocha",
     "docs": "node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "node_modules/eslint/bin/eslint.js 'assets/scripts/*.js'",
+    "lint": "npm run -s lint:styles",
     "lint:styles": "node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
     "test": "npm run -s lint && npm run -s build"
   },
