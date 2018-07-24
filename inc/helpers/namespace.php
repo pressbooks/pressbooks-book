@@ -48,21 +48,21 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 				if ( pb_should_parse_subsections() ) {
 					$subsections = pb_get_subsections( $section['ID'] );
 					if ( $subsections ) {
-					?>
+						?>
 						<ol class="toc__subsections">
 							<?php foreach ( $subsections as $id => $name ) { ?>
 								<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
 							<?php } ?>
 						</ol>
-					<?php
+						<?php
 					}
 				}
 				if ( $post_type !== 'chapter' ) {
-				?>
+					?>
 							</div>
 						<?php } ?>
 		</li>
-	<?php
+		<?php
 	}
 }
 
@@ -534,7 +534,7 @@ function comments_template( $comment, $args, $depth ) {
 							]
 						)
 					);
-?>
+					?>
 				</div><!-- .reply -->
 			</div><!-- #comment-##  -->
 

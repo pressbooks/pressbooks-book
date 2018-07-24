@@ -16,7 +16,7 @@
 					<?php /* translators: %s: title of book */ ?>
 					<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="<?php printf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ); ?>" />
 				</div>
-			<?php
+				<?php
 }
 
 			/**
@@ -30,7 +30,7 @@
 			$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
 			$option      = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
 if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) {
-?>
+	?>
 				<div class="book-header__cover__downloads dropdown">
 
 					<p><?php _e( 'Download this book', 'pressbooks-book' ); ?></p>
@@ -52,7 +52,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 						//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$file_class}']);";
 						// }, 10, 2); @codingStandardsIgnoreEnd
 						$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$filetype}');", $filetype );
-					?>
+						?>
 					<li class="dropdown-item">
 						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
 							<?php echo \Pressbooks\Book\Helpers\get_name_for_filetype( $filetype ); ?>
@@ -75,7 +75,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			<?php
 
 			if ( ! empty( $book_information['pb_about_50'] ) ) {
-			?>
+				?>
 				<p class="book-header__description"><span class="screen-reader-text"><?php _e( 'Book Description', 'pressbooks-book' ); ?>: </span><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 			<?php } ?>
 		<?php global $first_chapter; ?>
@@ -90,12 +90,12 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 			<a class="call-to-action" href="<?php echo $first_chapter; ?>">
 				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
 			</a>
-			<?php
+				<?php
 }
 if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 	?>
 	<a class="call-to-action" href="<?php echo home_url( '/buy' ); ?>">
-<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
+	<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
 	</a>
 	<?php
 }

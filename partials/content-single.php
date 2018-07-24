@@ -28,38 +28,38 @@ if ( get_post_type( $post->ID ) !== 'part' ) {
 	}
 	global $multipage;
 	if ( $multipage ) {
-	?>
+		?>
 		<div class="nav-reading--page">
 			<?php
 			global $page, $numpages;
 			if ( $page > 1 ) {
-			?>
+				?>
 					<div class="nav-reading--page__previous">
 						<?php echo _wp_link_page( $page - 1 ); ?><svg class="icon--svg">
 				<use xlink:href="#arrow-left" />
 			</svg>
-			<?php
+				<?php
 						echo __( 'Previous Page', 'pressbooks-book' ) . '</a>'
-						?>
+				?>
 					</div>
 					<?php
 			}
 
 			if ( $page < $numpages ) {
-			?>
+				?>
 					<div class="nav-reading--page__next">
 						<?php echo _wp_link_page( $page + 1 ); ?>
 									<?php
 									echo __( 'Next Page', 'pressbooks-book' ) . '<svg class="icon--svg">
 						<use xlink:href="#arrow-right" />
 					</svg></a>'
-?>
+									?>
 					</div>
 					<?php
 			}
 			?>
 		</div>
-	<?php
+		<?php
 	}
 } else {
 	echo apply_filters( 'the_content', $post->post_content );

@@ -9,10 +9,10 @@
 						$about_unlimited = pb_decode( $book_information['pb_about_unlimited'] );
 						$about_unlimited = preg_replace( '/<p[^>]*>(.*)<\/p[^>]*>/i', '$1', $about_unlimited ); // Make valid HTML by removing first <p> and last </p>
 						echo $about_unlimited;
-						?>
+					?>
 						</p>
 			</div>
-		<?php
+			<?php
 		endif;
 if ( isset( $book_information['pb_is_based_on'] ) ) {
 	$source_url  = \Pressbooks\Book\Helpers\get_source_book_url( $book_information['pb_is_based_on'] );

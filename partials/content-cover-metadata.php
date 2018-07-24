@@ -12,7 +12,7 @@
 				$metakeys = \Pressbooks\Book\Helpers\get_metakeys();
 				foreach ( $metakeys as $key => $val ) {
 					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) {
-					?>
+						?>
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
 							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \Pressbooks\Book\Helpers\count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
 							<dd class="">
@@ -35,7 +35,7 @@
 								$book_information[ $key ] = implode( ', ', $output );
 							}
 								echo $book_information[ $key ];
-								?>
+							?>
 								</dd>
 							</div>
 						<?php

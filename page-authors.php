@@ -30,17 +30,17 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 				} else {
 					_e( 'Authors', 'pressbooks-book' );
 				}
-?>
+				?>
 </h2>
 				<!-- Author page info displayed if populated in Admin area -->
 				<?php
 				$i = 0;
 				foreach ( $authors as $author ) :
-				?>
+					?>
 					<div class="author-block">
 						<?php
 						if ( 0 !== $i ) :
-?>
+							?>
 <h3 class="author-name"><?php echo $author->post_title; ?></h3><?php endif; ?>
 						<!-- Author Bio -->
 						<div class="bio">
@@ -53,6 +53,6 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 			</div><!-- #post-## -->
 
 <?php else : ?>
-<?php get_template_part( 'private' ); ?>
+	<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>
