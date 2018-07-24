@@ -6,7 +6,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	// Get all the headings
 	const sectionHeadingEl = 'h1';
 	const headings = document.querySelectorAll(
-		`#content section > ${sectionHeadingEl}`
+		`#content section ${sectionHeadingEl}:not(.entry-title)`
 	);
 
 	Array.prototype.forEach.call( headings, heading => {
@@ -23,7 +23,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		heading.setAttribute( 'data-collapsed', 'true' );
 
 		// Function to create a node list
-		// of the content between this <h2> and the next
+		// of the content between this <h1> and the next
 		const getContent = elem => {
 			let elems = [];
 			while (
