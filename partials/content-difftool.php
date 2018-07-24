@@ -20,15 +20,15 @@ if ( $pb_book_is_based_on && $option ) {
 		?>
 <div class="block-reading-meta__compare">
 	<p>
-<?php
-printf(
-	/* translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s) */
-	__( 'This chapter is adapted from %1$s in %2$s by %3$s.', 'pressbooks-book' ),
-	sprintf( '<a href="%1$s">%2$s</a>', $original['link'], $original['title'] ),
-	sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
-	\Pressbooks\Book\Helpers\get_book_authors( $source_meta )
-);
-	?>
+		<?php
+		printf(
+			/* translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s) */
+			__( 'This chapter is adapted from %1$s in %2$s by %3$s.', 'pressbooks-book' ),
+			sprintf( '<a href="%1$s">%2$s</a>', $original['link'], $original['title'] ),
+			sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
+			\Pressbooks\Book\Helpers\get_book_authors( $source_meta )
+		);
+		?>
 	</p>
 	<button class="block-reading-meta__compare__toggle" aria-expanded="false"><?php _e( 'Show Comparison with Original', 'pressbooks' ); ?></button>
 	<p aria-live="assertive" role="alert" class="alert visually-hidden"></p>
@@ -42,6 +42,6 @@ printf(
 		<pre class="block-reading-meta__compare__diff" data-source-endpoint="<?php echo $source_endpoint ?>"><?php echo get_post_field( 'post_content', $post, 'raw' ); ?></pre>
 	</div>
 </div>
-<?php
+		<?php
 	}
 }

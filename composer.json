@@ -15,8 +15,8 @@
 		"soberwp/intervention": "1.2.0-p"
 	},
 	"require-dev": {
-		"humanmade/coding-standards": "^0.4.2",
-		"phpunit/phpunit": "~5.7",
+    "phpunit/phpunit": "~5.7",
+    "pressbooks/coding-standards": "dev-master",
 		"wpreadme2markdown/wp2md": "^3.0"
 	},
 	"archive": {

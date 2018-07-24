@@ -71,7 +71,7 @@ if ( \Pressbooks\Book\Helpers\social_media_enabled() ) {
 					<?php
 					$root_id = get_network()->site_id;
 					if ( has_custom_logo( $root_id ) ) {
-					?>
+						?>
 						<?php
 						switch_to_blog( $root_id );
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
