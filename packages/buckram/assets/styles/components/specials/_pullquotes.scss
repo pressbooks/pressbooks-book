@@ -78,6 +78,9 @@ aside,
   font-style: $sidebar-font-style;
   font-weight: $sidebar-font-weight;
   text-align: $sidebar-align;
+  @if $type != 'epub' {
+    line-height: $sidebar-line-height;
+  }
 }
 
 .sidebar p,
