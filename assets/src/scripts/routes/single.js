@@ -20,7 +20,7 @@ export default {
 						activity.attr( 'hidden', true );
 					} else {
 						alert.text( PB_A11y.comparison_loading );
-						let current = pre.text();
+						let current = pre.html();
 						let endpoint = pre.attr( 'data-source-endpoint' );
 						fetch( endpoint )
 							.then( function ( response ) {
@@ -34,7 +34,7 @@ export default {
 								}
 
 								response.json().then( function ( data ) {
-									let source = data.content.raw;
+									let source = $( "<div>" + data.content.raw + "</div>" ).html();
 									let diff = diffWords( source, current );
 									let fragment = document.createDocumentFragment();
 									diff.forEach( function ( part ) {
