@@ -34,7 +34,7 @@ export default {
 								}
 
 								response.json().then( function ( data ) {
-									let source = data.content.raw;
+									let source = $( "<div>" + data.content.raw + "</div>" ).html();
 									let diff = diffWords( source, current );
 									let fragment = document.createDocumentFragment();
 									diff.forEach( function ( part ) {
