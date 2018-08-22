@@ -114,6 +114,9 @@ $half-title-title-color: $color-2 !default;
 $title-page-title-color: $color-2 !default;
 /// Subtitle color for Title page for elements with class `subtitle` of parent element with ID `title-page`
 /// @type String
+$title-title-decoration-color: $title-page-title-color !default;
+/// Subtitle color for Title page for elements with class `subtitle` of parent element with ID `title-page`
+/// @type String
 $title-page-subtitle-color: $color-3 !default;
 /// Author color for Title page for elements with class `author` of parent element with ID `title-page`
 /// @type String
@@ -129,6 +132,10 @@ $title-page-publisher-city-color: $color-3 !default;
 /// Front matter title color for elements `<h1>` with a class `front-matter-title`.
 /// @type String
 $front-matter-title-color: $color-2 !default;
+/// Front Matter Title decoration color.
+/// @type String
+/// @since 1.1.0
+$front-matter-title-decoration-color: $front-matter-title-color !default;
 /// Copyright disclaimer color for elements `<p>` with an ID of `copyright-page`.
 /// @type String
 $copyright-para-color: $color-1 !default;
@@ -145,6 +152,10 @@ $part-number-color: $color-3 !default;
 /// Part title color for elements `<h2>` with a class of `part-title`.
 /// @type String
 $part-title-color: $color-2 !default;
+/// Part Title decoration color.
+/// @type String
+/// @since 1.1.0
+$part-title-decoration-color: $part-title-color !default;
 
 /// Chapter number color for elements with a class of `chapter-number`.
 /// @type String
@@ -153,6 +164,12 @@ $chapter-number-color: $color-3 !default;
 /// Chapter Title color for elements `<h2>` with a class of `chapter-title`.
 /// @type String
 $chapter-title-color: $color-2 !default;
+
+/// Chapter Title decoration color.
+/// @type String
+/// @since 1.1.0
+$chapter-title-decoration-color: $chapter-title-color !default;
+
 /// Chapter subtitle color for elements `<h2>` with a class of `chapter-subtitle`.
 /// @type String
 $chapter-subtitle-color: $color-3 !default;
@@ -165,6 +182,10 @@ $chapter-aphorism-color: $color-3 !default;
 /// Back matter title color for elements `<h1>` with a class of `back-matter-title`.
 /// @type String
 $back-matter-title-color: $color-2 !default;
+/// Back Matter Title decoration color.
+/// @type String
+/// @since 1.1.0
+$back-matter-title-decoration-color: $back-matter-title-color !default;
 
 //RUNNING HEAD/FEET COLOR
 

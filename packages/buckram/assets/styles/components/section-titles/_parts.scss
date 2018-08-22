@@ -61,6 +61,7 @@
         font-weight: $part-title-decoration-font-weight;
         margin-bottom: if-map-get($part-title-decoration-margin-bottom, $type);
         margin-top: if-map-get($part-title-decoration-margin-top, $type);
+        color: $part-title-decoration-color;
       }
     }
   }

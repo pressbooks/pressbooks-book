@@ -40,6 +40,7 @@
         font-weight: $back-matter-title-decoration-font-weight;
         margin-bottom: if-map-get($back-matter-title-decoration-margin-bottom, $type);
         margin-top: if-map-get($back-matter-title-decoration-margin-top, $type);
+        color: $back-matter-title-decoration-color;
       }
     }
 

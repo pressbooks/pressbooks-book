@@ -48,6 +48,7 @@ h1.title {
     font-weight: $title-title-decoration-font-weight;
     margin-bottom: if-map-get($title-title-decoration-margin-bottom, $type);
     margin-top: if-map-get($title-title-decoration-margin-top, $type);
+    color: $title-title-decoration-color;
   }
 }
 
