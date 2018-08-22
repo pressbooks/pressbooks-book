@@ -711,6 +711,21 @@ $part-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !d
 /// @since 1.0.0
 $part-title-decoration-margin-top: $section-title-decoration-margin-top !default;
 
+/// Defines the bottom border width for the part title.
+/// @type String | Map
+/// @since 1.1.0
+$part-title-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Defines the bottom border style for the part title.
+/// @type String
+/// @since 1.1.0
+$part-title-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines the bottom border colour for the part title.
+/// @type String | Map
+/// @since 1.1.0
+$part-title-border-bottom-color: $section-title-border-bottom-color !default;
+
 /// Defines the front matter title display property.
 /// @type String
 /// @since 0.3.0

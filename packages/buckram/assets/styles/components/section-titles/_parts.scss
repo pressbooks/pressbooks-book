@@ -50,6 +50,7 @@
       page-break-after: avoid;
       letter-spacing: if-map-get($part-title-letter-spacing, $type);
       word-spacing: if-map-get($part-title-word-spacing, $type);
+      border-bottom: if-map-get($part-title-border-bottom-width, $type) $part-title-border-bottom-style if-map-get($part-title-border-bottom-color, $type);
 
       &::after {
         font-family: $part-title-decoration-font-family;
