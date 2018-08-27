@@ -251,15 +251,17 @@ function display_menu() {
  */
 function get_source_book( $book_url, $checked = [] ) {
 	$output = $book_url;
-	$args   = [];
+	$args = [];
 	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
 		$args['sslverify'] = false;
 	}
 	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
-	$result   = json_decode( $response['body'], true );
-	if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
-		$checked[] = $result['isBasedOn'];
-		$output    = get_source_book( $result['isBasedOn'], $checked );
+	if ( ! is_wp_error( $response ) ) {
+		$result = json_decode( $response['body'], true );
+		if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
+			$checked[] = $result['isBasedOn'];
+			$output    = get_source_book( $result['isBasedOn'], $checked );
+		}
 	}
 	return $output;
 }
@@ -294,7 +296,12 @@ function get_source_book_url( $book_url ) {
 function get_source_book_meta( $source_url ) {
 	$source_meta = get_transient( 'pb_book_source_metadata' );
 	if ( $source_meta === false ) {
-		$source_meta = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' )['body'], true );
+		$response = wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' );
+		if ( ! is_wp_error( $response ) ) {
+			$source_meta = json_decode( $response['body'], true );
+		} else {
+			$source_meta = false;
+		}
 		set_transient( 'pb_book_source_metadata', $source_meta );
 	}
 	return $source_meta;
