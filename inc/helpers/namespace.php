@@ -256,7 +256,7 @@ function get_source_book( $book_url, $checked = [] ) {
 		$args['sslverify'] = false;
 	}
 	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
-	if ( ! is_wp_error( $response ) ) {
+	if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
 		$result = json_decode( $response['body'], true );
 		if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
 			$checked[] = $result['isBasedOn'];
@@ -297,7 +297,7 @@ function get_source_book_meta( $source_url ) {
 	$source_meta = get_transient( 'pb_book_source_metadata' );
 	if ( $source_meta === false ) {
 		$response = wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' );
-		if ( ! is_wp_error( $response ) ) {
+		if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
 			$source_meta = json_decode( $response['body'], true );
 		} else {
 			$source_meta = false;
