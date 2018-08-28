@@ -78,7 +78,7 @@ export default {
 		( function () {
 			// Get all the <h3> headings
 			const headings = document.querySelectorAll(
-				'.dropdown > h3, .dropdown > p'
+				'.dropdown > h3'
 			);
 
 			Array.prototype.forEach.call( headings, heading => {
@@ -98,6 +98,44 @@ export default {
 
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
+
+				btn.onclick = () => {
+					// Cast the state as a boolean
+					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
+
+					// Switch the state
+					btn.setAttribute( 'aria-expanded', ! expanded );
+					// Switch the content's visibility
+					content.hidden = expanded;
+				};
+			} );
+		} )();
+		( function () {
+			// Get all the part titles
+			const partTitles = document.querySelectorAll(
+				'.toc__part > .toc__part__title'
+			);
+
+			Array.prototype.forEach.call( partTitles, partTitle => {
+				// Give each part title a toggle button child
+				partTitle.innerHTML = `
+				<button type="button" aria-expanded="false">
+					<svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+						<rect class="vert" height="8" width="2" y="1" x="4" />
+						<rect height="2" width="8" y="4" x="1" />
+					</svg>
+				</button>
+				${partTitle.innerHTML}
+			  `;
+
+				// Collapse (hide) the content following the heading
+				let content = partTitle.nextElementSibling;
+				if ( ! partTitle.parentNode.classList.contains( 'toc__parent' ) ) {
+					content.hidden = true;
+				}
+
+				// Assign the button
+				let btn = partTitle.querySelector( 'button' );
 
 				btn.onclick = () => {
 					// Cast the state as a boolean

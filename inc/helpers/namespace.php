@@ -20,6 +20,7 @@ use Pressbooks\Container;
  */
 
 function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content ) {
+	$output = '';
 	foreach ( $sections as $section ) {
 		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
 			if ( ! $can_read_private ) {
@@ -31,40 +32,35 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 					continue; // Skip this one.
 				}
 			}
-		} ?>
-		<li id="<?php echo "toc-{$post_type}-{$section['ID']}"; ?>" class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
-			<?php if ( $post_type !== 'chapter' ) { ?>
-			<div class="inner-content">
-				<?php } ?>
-				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
-					<?php
-					$chapter_number = pb_get_chapter_number( $section['ID'] );
-					if ( $chapter_number ) {
-						echo "<span>$chapter_number.&nbsp;</span>";
-					}
-					echo pb_strip_br( $section['post_title'] );
-					?>
-				</a>
-				<?php
-				if ( pb_should_parse_subsections() ) {
-					$subsections = pb_get_subsections( $section['ID'] );
-					if ( $subsections ) {
-						?>
-						<ol class="toc__subsections">
-							<?php foreach ( $subsections as $id => $name ) { ?>
-								<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-							<?php } ?>
-						</ol>
-						<?php
-					}
+		}
+		$chapter_number = pb_get_chapter_number( $section['ID'] );
+		$subsection_output = '';
+		if ( pb_should_parse_subsections() ) {
+			$subsections = pb_get_subsections( $section['ID'] );
+			if ( $subsections ) {
+				$subsection_output .= '<ol class="toc__subsections">';
+				foreach ( $subsections as $id => $name ) {
+					$subsection_output .= sprintf(
+						'<li class="toc__subsection"><a href="%1$s#%2$s">%3$s</a></li>',
+						get_permalink( $section['ID'] ),
+						$id,
+						$name
+					);
 				}
-				if ( $post_type !== 'chapter' ) {
-					?>
-							</div>
-						<?php } ?>
-		</li>
-		<?php
+				$subsection_output .= '</ol>';
+			}
+		}
+		$output .= sprintf(
+			'<li id="%1$s" class="%2$s"><a class="toc__title" href="%3$s">%4$s%5$s</a>%6$s</li>',
+			"toc-{$post_type}-{$section['ID']}",
+			"toc__{$post_type} " . pb_get_section_type( get_post( $section['ID'] ) ),
+			get_permalink( $section['ID'] ),
+			( $chapter_number ) ? "<span>$chapter_number.&nbsp;</span>" : '',
+			pb_strip_br( $section['post_title'] ),
+			$subsection_output
+		);
 	}
+	return $output;
 }
 
 /**
