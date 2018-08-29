@@ -1,3 +1,9 @@
+<?php
+
+use function \Pressbooks\Image\attachment_id_from_url;
+
+?>
+
 <section class="book-header">
 	<div class="book-header__inner">
 		<?php \Pressbooks\Book\Helpers\get_links( false ); ?>
@@ -13,8 +19,11 @@
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
 				<div class="book-header__cover__image">
-					<?php /* translators: %s: title of book */ ?>
-					<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="<?php printf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ); ?>" />
+					<?php
+					$cover_id = attachment_id_from_url( $book_information['pb_cover_image'] );
+					/* translators: %s: title of book */
+					echo wp_get_attachment_image( $cover_id, [ 333, 500 ], false, [ 'alt' => sprintf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ) ] );
+					?>
 				</div>
 				<?php
 }
