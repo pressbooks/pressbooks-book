@@ -304,6 +304,7 @@ h1.reading-header__title {
   width: 100%;
   padding: 0.5em 0;
 
+
   &:hover,
   &:active {
     border: 0;
@@ -318,6 +319,11 @@ h1.reading-header__title {
     svg {
       outline: 2px solid;
     }
+  }
+
+  span {
+    max-width: calc(100% - 1.5em);
+    display: block;
   }
 
   svg {
