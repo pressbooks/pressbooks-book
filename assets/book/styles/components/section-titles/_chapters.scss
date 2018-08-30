@@ -67,7 +67,9 @@
 
     .numberless & {
       .chapter-number {
-        display: none;
+        @if $type != 'epub' {
+          display: none;
+        }
         &::after {
           content: '';
         }
