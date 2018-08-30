@@ -21,8 +21,15 @@ use function \Pressbooks\Image\attachment_id_from_url;
 				<div class="book-header__cover__image">
 					<?php
 					$cover_id = attachment_id_from_url( $book_information['pb_cover_image'] );
-					/* translators: %s: title of book */
-					echo wp_get_attachment_image( $cover_id, [ 333, 500 ], false, [ 'alt' => sprintf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ) ] );
+					if ( $cover_id ) {
+						/* translators: %s: title of book */
+						echo wp_get_attachment_image( $cover_id, [ 333, 500 ], false, [ 'alt' => sprintf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ) ] );
+					} else {
+						/* translators: %s: title of book */
+						?>
+						<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="<?php printf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ); ?>" />
+						<?php
+					}
 					?>
 				</div>
 				<?php
