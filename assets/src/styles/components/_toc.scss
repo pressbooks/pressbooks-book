@@ -5,12 +5,16 @@
   padding: 0;
 }
 
+.toc li + li {
+  margin-top: (4 / 16) * 1rem;
+}
+
 .toc ol.toc__subsections {
   padding-left: 2rem;
 }
 
 .toc button {
-  background: #eee;
+  background: transparent;
   border: solid (2 / 16) * 1rem transparent;
   border-radius: 0;
   height: (36 / 16) * 1rem;
@@ -19,13 +23,25 @@
   width: (36 / 16) * 1rem;
 }
 
+.toc .toc__part__title button {
+  background: #eee;
+}
+
 .toc .icon--private {
   height: 1rem;
   width: 1rem;
 }
 
+.toc__title,
+.toc__part--full .toc__part__title span,
+.toc__part--empty .toc__part__title {
+  padding: 0 0.5rem;
+}
+
 .toc__part__title {
   background: #eee;
+  height: (36 / 16) * 1rem;
+  margin-bottom: 0;
 }
 
 .toc button:active,
@@ -35,8 +51,9 @@
 }
 
 .toc button svg {
-  height: 2rem;
-  width: 2rem;
+  height: 1rem;
+  margin-top: 0.5rem;
+  width: 1rem;
 }
 
 .toc > li {

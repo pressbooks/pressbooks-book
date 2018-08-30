@@ -22,8 +22,17 @@ if ( ! $toc_output ) {
 		<?php
 		$n = 0;
 		$multiple_parts = count( $book_structure['part'] ) > 1;
-		foreach ( $book_structure['part'] as $key => $part ) :
-			$part_has_chapters = ( empty( $part['chapters'] ) ) ? false : true;
+		foreach ( $book_structure['part'] as $key => $part ) {
+			// echo '<pre>' . print_r( $part, true ) . '</pre>';
+			$part_has_chapters = false;
+			if ( ! empty( $part['chapters'] ) ) {
+				foreach ( $part['chapters'] as $chapter ) {
+					if ( in_array( $chapter['post_status'], [ 'publish', 'web-only' ], true ) ) {
+						$part_has_chapters = true;
+						break;
+					}
+				}
+			}
 			$part_has_content = $part['has_post_content'] ?? false;
 			$part_is_visible = get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on';
 			$part_class = ( $part_has_chapters ) ? 'toc__part toc__part--full' : 'toc__part toc__part--empty';
@@ -32,11 +41,16 @@ if ( ! $toc_output ) {
 					'<li id="%1$s" class="%2$s">%3$s%4$s</li>',
 					"toc-part-{$part['ID']}",
 					( $part_has_chapters ) ? 'toc__part toc__part--full' : 'toc__part toc__part--empty',
-					( $part_has_content ) ? '<span class=\'toc__part__title\'><a href=' . get_permalink( $part['ID'] ) . "'>{$part['post_title']}</a></span>" : "<p class='toc__part__title'>{$part['post_title']}</p>",
+					( $part_is_visible ) ?
+						sprintf(
+							'<p class="toc__part__title">%s</p>',
+							( $part_has_content ) ? '<a href=' . get_permalink( $part['ID'] ) . "'>{$part['post_title']}</a>" : $part['post_title']
+						)
+						: '',
 					( $part_has_chapters ) ? '<div class="inner-content"><ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ) . '</ol></div>' : ''
 				);
 			}
-		endforeach;
+		}
 		?>
 		<?php echo \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content ); ?>
 	</ol> <!-- end #toc -->

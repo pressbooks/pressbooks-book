@@ -119,13 +119,13 @@ export default {
 			Array.prototype.forEach.call( entityTitles, entityTitle => {
 				// Give each part title a toggle button child
 				entityTitle.innerHTML = `
-				<button type="button" aria-expanded="false">
-					<svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
-						<rect class="vert" height="8" width="2" y="1" x="4" />
-						<rect height="2" width="8" y="4" x="1" />
+				<button type="button" aria-expanded="true">
+					<svg viewBox="0 0 9 9" aria-hidden="true" focusable="false">
+						<rect class="vert" height="7" width="1" y="1" x="4" />
+						<rect height="1" width="7" y="4" x="1" />
 					</svg>
 				</button>
-				${entityTitle.innerHTML}
+				<span>${entityTitle.innerHTML}</span>
 			  `;
 
 				// Collapse (hide) the content following the heading
