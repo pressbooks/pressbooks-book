@@ -25,8 +25,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 						/* translators: %s: title of book */
 						echo wp_get_attachment_image( $cover_id, [ 333, 500 ], false, [ 'alt' => sprintf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ) ] );
 					} else {
-						/* translators: %s: title of book */
-						?>
+						/* translators: %s: title of book @codingStandardsIgnoreLine */ ?>
 						<img src="<?php echo $book_information['pb_cover_image']; ?>" alt="<?php printf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) ); ?>" />
 						<?php
 					}
