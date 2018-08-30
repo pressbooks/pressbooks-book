@@ -35,6 +35,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 		}
 		$chapter_number = pb_get_chapter_number( $section['ID'] );
 		$subsection_output = '';
+		$subsections = false;
 		if ( pb_should_parse_subsections() ) {
 			$subsections = pb_get_subsections( $section['ID'] );
 			if ( $subsections ) {
@@ -51,12 +52,13 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			}
 		}
 		$output .= sprintf(
-			'<li id="%1$s" class="%2$s"><a class="toc__title" href="%3$s">%4$s%5$s</a>%6$s</li>',
+			'<li id="%1$s" class="%2$s"><a class="toc__title" href="%3$s">%4$s%5$s%6$s</a>%7$s</li>',
 			"toc-{$post_type}-{$section['ID']}",
-			"toc__{$post_type} " . pb_get_section_type( get_post( $section['ID'] ) ),
+			( $subsections ) ? "toc__{$post_type} toc__{$post_type}--full " . pb_get_section_type( get_post( $section['ID'] ) ) : "toc__{$post_type} toc__{$post_type}--empty " . pb_get_section_type( get_post( $section['ID'] ) ),
 			get_permalink( $section['ID'] ),
 			( $chapter_number ) ? "<span>$chapter_number.&nbsp;</span>" : '',
 			pb_strip_br( $section['post_title'] ),
+			( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) ? ' <svg class="icon--private" viewBox="0 0 36 36"><path fill="currentColor" d="M29 15v-3c0-6.1-4.9-11-11-11S7 5.9 7 12v3H3v16h30V15h-4zm-10 7.7V26h-2v-3.3c-.6-.3-1-1-1-1.7 0-1.1.9-2 2-2s2 .9 2 2c0 .7-.4 1.4-1 1.7zM18 15h-7v-3c0-3.9 3.1-7 7-7s7 3.1 7 7v3h-7z"/></svg>' : '',
 			$subsection_output
 		);
 	}

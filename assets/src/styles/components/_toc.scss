@@ -2,18 +2,35 @@
 .toc ol {
   font-family: $font-family-sans-serif;
   list-style-type: none;
+  padding: 0;
+}
+
+.toc ol.toc__subsections {
+  padding-left: 2rem;
 }
 
 .toc button {
-  background: transparent;
-  border: solid 2px transparent;
+  background: #eee;
+  border: solid (2 / 16) * 1rem transparent;
   border-radius: 0;
+  height: (36 / 16) * 1rem;
+  margin-left: (40 / 16) * -1rem;
   padding: 0;
+  width: (36 / 16) * 1rem;
+}
+
+.toc .icon--private {
+  height: 1rem;
+  width: 1rem;
+}
+
+.toc__part__title {
+  background: #eee;
 }
 
 .toc button:active,
 .toc button:focus {
-  border: solid 2px var(--primary);
+  border-color: var(--primary);
   box-shadow: none;
 }
 

@@ -11,7 +11,7 @@ $can_read_private           = current_user_can_for_blog( $blog_id, 'read_private
 $permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
 $toc_chmod                  = ( $can_read ? 'x' : 'o' ) . ( $can_read_private ? 'x' : 'o' ) . ( $permissive_private_content ? 'x' : 'o' );
 $toc_transient              = 'pb_book_contents_' . $toc_chmod;
-$toc_output                 = false; // get_transient( $toc_transient );
+$toc_output                 = false; // TODO: get_transient( $toc_transient );
 
 if ( ! $toc_output ) {
 	ob_start();
@@ -32,47 +32,9 @@ if ( ! $toc_output ) {
 					'<li id="%1$s" class="%2$s">%3$s%4$s</li>',
 					"toc-part-{$part['ID']}",
 					( $part_has_chapters ) ? 'toc__part toc__part--full' : 'toc__part toc__part--empty',
-					"<p class='toc__part__title'>{$part['post_title']}</p>",
-					'<div class="inner-content"><ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ) . '</ol></div>'
+					( $part_has_content ) ? '<span class=\'toc__part__title\'><a href=' . get_permalink( $part['ID'] ) . "'>{$part['post_title']}</a></span>" : "<p class='toc__part__title'>{$part['post_title']}</p>",
+					( $part_has_chapters ) ? '<div class="inner-content"><ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ) . '</ol></div>' : ''
 				);
-				/* ?>
-			<li id="<?php echo "toc-part-{$part['ID']}"; ?>" class="<?php echo $part_class; ?>">
-				<?php
-				if ( $multiple_parts && $part_is_visible ) {
-					$n++;
-					?>
-					<p class="toc__part__title">
-						<span class="inner-content">
-						<?php
-						if ( $part_has_content ) {
-							?>
-							<a href="<?php echo get_permalink( $part['ID'] ); ?>">
-							<?php
-						}
-						if ( $part_numbers ) {
-							?>
-							<span><?php echo \Pressbooks\L10n\romanize( $n ); ?>. </span>
-							<?php
-						}
-						echo $part['post_title'];
-						if ( $part_has_content ) {
-							?>
-							</a>
-							<?php
-						}
-						?>
-						</span>
-					</p>
-					<?php
-				}
-				if ( $part_has_chapters ) {
-					?>
-					<div class="inner-content">
-						<ol class="toc__chapters"><?php \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ); ?></ol>
-					</div>
-				<?php } ?>
-			</li>
-				<?php */
 			}
 		endforeach;
 		?>
