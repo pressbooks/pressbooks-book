@@ -324,6 +324,9 @@ h1.reading-header__title {
   span {
     max-width: calc(100% - 1.5em);
     display: block;
+    span {
+      display: inline;
+    }
   }
 
   svg {
