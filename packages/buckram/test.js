@@ -11,7 +11,10 @@ const goldenDir = './tests/source/images/golden';
 describe( 'Compare screenshots.', function () {
 	let polyserve, browser, page;
 	before( async function () {
-		polyserve = await startServer( { root: 'tests/', port: 4000 } );
+		polyserve = await startServer( {
+ root: 'tests/',
+port: 4000 
+} );
 		if ( ! fs.existsSync( testDir ) ) fs.mkdirSync( testDir );
 	} );
 
@@ -29,7 +32,10 @@ describe( 'Compare screenshots.', function () {
 
 		beforeEach( async function () {
 			this.timeout( 2500 );
-			return page.setViewport( { width: 600, height: 6000 } );
+			return page.setViewport( {
+ width: 600,
+height: 6000 
+} );
 		} );
 		it( 'Images (small).', async function () {
 			return takeAndCompareScreenshot( page, 'small', 'images' );
@@ -42,6 +48,9 @@ describe( 'Compare screenshots.', function () {
 		} );
 		it( 'Images (large, with captions).', async function () {
 			return takeAndCompareScreenshot( page, 'large-captioned', 'images' );
+		} );
+		it( 'Textboxes (shaded).', async function () {
+			return takeAndCompareScreenshot( page, 'shaded', 'textboxes' );
 		} );
 	} );
 } );
@@ -75,7 +84,10 @@ function compareScreenshots( fileName ) {
 			expect( img1.height, 'Image heights are the same' ).equal( img2.height );
 
 			// Do the visual diff.
-			const diff = new PNG( { width: img1.width, height: img2.height } );
+			const diff = new PNG( {
+ width: img1.width,
+height: img2.height 
+} );
 			const numDiffPixels = pixelmatch(
 				img1.data,
 				img2.data,
