@@ -14,15 +14,15 @@
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
-<?php
-if ( \Pressbooks\Book\Helpers\is_buckram() || pb_is_custom_theme() ) {
-	include( locate_template( 'partials/content-single.php' ) );
-} else {
-	include( locate_template( 'partials/content-single-legacy.php' ) );
-}
-?>
+			<?php
+			if ( \Pressbooks\Book\Helpers\is_buckram() || pb_is_custom_theme() ) {
+				include( locate_template( 'partials/content-single.php' ) );
+			} else {
+				include( locate_template( 'partials/content-single-legacy.php' ) );
+			}
+			?>
 </div><!-- #content -->
-<?php \Pressbooks\Book\Helpers\get_links(); ?>
+			<?php \Pressbooks\Book\Helpers\get_links(); ?>
 
 					<div class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
@@ -50,14 +50,14 @@ if ( \Pressbooks\Book\Helpers\is_buckram() || pb_is_custom_theme() ) {
 					</div>
 				<?php comments_template( '', true ); ?>
 <?php else : ?>
-<?php get_template_part( 'private' ); ?>
+	<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
-<?php
-/** Insert content before content footer.
- * @since 2.0.0
- */
-do_action( 'pb_book_content_before_footer' );
-get_footer();
-?>
+		<?php
+		/** Insert content before content footer.
+		 * @since 2.0.0
+		 */
+		do_action( 'pb_book_content_before_footer' );
+		get_footer();
+		?>
 <?php endwhile;
 };?>

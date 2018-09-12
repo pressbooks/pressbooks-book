@@ -6,7 +6,7 @@
 				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'pressbooks-book' ); ?></p>
 			<div><!-- #comments -->
 		</section>
-<?php
+	<?php
 		return;
 	endif;
 ?>
@@ -31,28 +31,28 @@
 			?>
 			</h3>
 
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 			<div class="navigation">
 				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'pressbooks-book' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'pressbooks-book' ) ); ?></div>
 			</div> <!-- .navigation -->
-<?php endif; // check for comment navigation ?>
+	<?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">
 				<?php wp_list_comments( [ 'callback' => '\Pressbooks\Book\Helpers\comments_template' ] ); ?>
 			</ol>
 
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 			<div class="navigation">
 				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'pressbooks-book' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'pressbooks-book' ) ); ?></div>
 			</div><!-- .navigation -->
-<?php endif; // check for comment navigation ?>
+	<?php endif; // check for comment navigation ?>
 
-<?php
+	<?php
 else : // or, if we don't have comments:
 	if ( ! comments_open() ) :
-?>
+		?>
 	<p class="nocomments"><?php _e( 'Comments are closed.', 'pressbooks-book' ); ?></p>
 <?php endif; ?>
 

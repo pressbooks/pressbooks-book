@@ -6,7 +6,10 @@
  */
 
 use function \Pressbooks\Book\Helpers\get_metakeys;
- use function \Pressbooks\Book\Helpers\get_name_for_filetype;
+use function \Pressbooks\Book\Helpers\get_name_for_filetype;
+use function \Pressbooks\Book\Helpers\get_source_book;
+use function \Pressbooks\Book\Helpers\get_source_book_url;
+use function \Pressbooks\Book\Helpers\get_source_book_meta;
 use function \Pressbooks\Book\Helpers\license_to_icons;
 use function \Pressbooks\Book\Helpers\license_to_text;
 use function \Pressbooks\Book\Helpers\share_icons;
@@ -42,5 +45,18 @@ class HelpersTest extends WP_UnitTestCase {
 	}
 	function test_share_icons() {
 		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book on Pressbooks."', share_icons() );
+	}
+	function test_get_source_book() {
+		$output = get_source_book( 'https://book.pressbooks.com' );
+		$this->assertEquals( 'https://book.pressbooks.com', $output );
+	}
+	function test_get_source_book_url() {
+		$output = get_source_book_url( 'https://book.pressbooks.com' );
+		$this->assertEquals( 'https://book.pressbooks.com', $output );
+	}
+	function test_get_source_book_meta() {
+		$output = get_source_book_meta( 'https://book.pressbooks.com' );
+		$this->assertArrayHasKey( 'name', $output );
+		$this->assertEquals( "Book: A Futurist's Manifesto", $output['name'] );
 	}
 }

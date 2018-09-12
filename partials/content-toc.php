@@ -26,11 +26,11 @@ if ( ! $toc_output ) {
 		$n = 0;
 		foreach ( $book_structure['part'] as $key => $part ) :
 			if ( ! empty( $part['chapters'] ) || $part['has_post_content'] ) {
-			?>
+				?>
 				<li id="<?php echo "toc-part-{$part['ID']}"; ?>" class="toc__part
 									<?php
 									if ( ! empty( $part['chapters'] ) ) {
-					?>
+										?>
 					dropdown<?php } ?>">
 									<?php
 									if ( count( $book_structure['part'] ) > 1 && get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on' ) {
@@ -41,30 +41,30 @@ if ( ! $toc_output ) {
 										<?php
 										if ( $part['has_post_content'] ) {
 
-										?>
+											?>
 					<a href="<?php echo get_permalink( $part['ID'] ); ?>">
-					<?php
+											<?php
 										}
 										if ( $part_numbers ) {
 
-										?>
+											?>
 					<span><?php echo \Pressbooks\L10n\romanize( $n ); ?>. </span>
-					<?php
+											<?php
 										}
 												echo $part['post_title'];
 										if ( $part['has_post_content'] ) {
 
-										?>
+											?>
 					</a>
-					<?php
+											<?php
 										}
 										?>
 										</span>
 										</p>
-					<?php
+										<?php
 									}
 									if ( ! empty( $part['chapters'] ) ) {
-									?>
+										?>
 										<div class="inner-content">
 											<ol class="toc__chapters"><?php \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ); ?></ol>
 					</div>

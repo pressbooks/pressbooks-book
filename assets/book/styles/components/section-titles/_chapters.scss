@@ -66,8 +66,13 @@
     }
 
     .numberless & {
-      .chapter-number::after {
-        content: '';
+      .chapter-number {
+        @if $type != 'epub' {
+          display: none;
+        }
+        &::after {
+          content: '';
+        }
       }
     }
 

@@ -19,10 +19,10 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 							'after' => '</div>',
 						]
 					);
-?>
+					?>
 				</div><!-- .entry-content -->
 			</div><!-- #post-## -->
 <?php else : ?>
-<?php get_template_part( 'private' ); ?>
+	<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

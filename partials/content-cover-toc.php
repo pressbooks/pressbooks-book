@@ -6,7 +6,7 @@
 			<button id="show" class="button"><?php _e( 'Show All Contents' ); ?></button>
 			<button id="hide" class="button"><?php _e( 'Hide All Contents' ); ?></button>
 		</div>
-	<?php
+		<?php
 	endif;
 	/**
 	 * Append content to cover table of contents block.
@@ -14,5 +14,5 @@
 	 * @since 2.0.0
 	 */
 	do_action( 'pb_book_cover_after_toc' );
-	?>
+?>
 </section>

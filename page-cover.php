@@ -14,7 +14,7 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) {
 	<section class="block private-block">
 		<?php get_template_part( 'private' ); ?>
 	</section>
-<?php
+	<?php
 }
 /** Insert content before cover footer.
  * @since 2.0.0

@@ -10,7 +10,7 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 					the_post();
 					get_template_part( 'partials/content', 'search' );
 					endwhile;
-					?>
+				?>
 					</ul>
 						<?php
 						the_posts_navigation(
@@ -26,8 +26,8 @@ if ( \Pressbooks\Book\Helpers\is_book_public() ) :
 						else :
 							get_template_part( 'partials/content', 'none' );
 				endif;
-				?>
+						?>
 <?php else : ?>
-<?php get_template_part( 'private' ); ?>
+	<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

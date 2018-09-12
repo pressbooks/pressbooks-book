@@ -52,6 +52,30 @@ function async_scripts( $tag, $handle, $src ) {
 }
 
 /**
+ * Hooked into `status_header`
+ *
+ * @since 2.4.1
+ *
+ * @param string $status_header
+ * @param int $code
+ *
+ * @return string
+ */
+function status_code_adjustment( $status_header, $code ) {
+	if (
+		200 === absint( $code ) &&
+		\Pressbooks\Book\Helpers\is_book_public() === false &&
+		array_key_exists( 'format', $GLOBALS['wp_query']->query_vars ) === false
+	) {
+		$code          = 401;
+		$protocol      = wp_get_server_protocol();
+		$msg           = get_status_header_desc( $code );
+		$status_header = "{$protocol} {$code} {$msg}";
+	}
+	return $status_header;
+}
+
+/**
  * Replace the excerpt more tag with a custom link.
  *
  * @since 2.3.0

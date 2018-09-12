@@ -6,7 +6,7 @@
 
 		<!-- Display About unlimited description first -->
 			<?php if ( ! empty( $metadata['pb_about_unlimited'] ) ) : ?>
-			<?php echo $metadata['pb_about_unlimited']; ?>
+				<?php echo $metadata['pb_about_unlimited']; ?>
 
 					<!-- if no About unlimited description, set About 50 word description -->
 			<?php elseif ( ! empty( $metadata['pb_about_50'] ) ) : ?>
@@ -23,6 +23,6 @@
 						<?php endif; ?>
 			</div><!-- #post-## -->
 <?php else : ?>
-<?php get_template_part( 'private' ); ?>
+	<?php get_template_part( 'private' ); ?>
 <?php endif; ?>
 <?php get_footer(); ?>

@@ -6,7 +6,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	// Get all the headings
 	const sectionHeadingEl = 'h1';
 	const headings = document.querySelectorAll(
-		`#content section > ${sectionHeadingEl}`
+		`#content section ${sectionHeadingEl}:not(.entry-title)`
 	);
 
 	Array.prototype.forEach.call( headings, heading => {
@@ -14,7 +14,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		// with the SVG plus/minus icon
 		heading.innerHTML = `
 		<button aria-expanded="false" class="button--text">
-		  ${heading.textContent}
+		  <span>${heading.innerHTML}</span>
 		  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
 			<rect class="vert" height="8" width="2" y="1" x="4"/>
 			<rect height="2" width="8" y="4" x="1"/>
@@ -23,7 +23,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		heading.setAttribute( 'data-collapsed', 'true' );
 
 		// Function to create a node list
-		// of the content between this <h2> and the next
+		// of the content between this <h1> and the next
 		const getContent = elem => {
 			let elems = [];
 			while (

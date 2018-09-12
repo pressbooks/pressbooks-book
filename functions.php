@@ -55,6 +55,7 @@ add_action( 'wp_head', '\Pressbooks\Book\Actions\add_metadata' );
 if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 	add_action( 'template_redirect', '\Pressbooks\Book\Actions\update_webbook_stylesheet' );
 }
+add_filter( 'status_header', '\Pressbooks\Book\Filters\status_code_adjustment', 10, 2 );
 add_filter( 'excerpt_more', '\Pressbooks\Book\Filters\excerpt_more' );
 add_filter( 'script_loader_tag', '\Pressbooks\Book\Filters\async_scripts', 10, 3 );
 add_filter( 'show_admin_bar', '__return_false' );
