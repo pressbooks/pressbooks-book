@@ -159,6 +159,59 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
     }
   }
 
+/* RUNNING HEAD OUTSIDE:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+  @page post-introduction:first {
+    @top {
+      content: "";
+    }
+
+    @top-right {
+      content: "";
+    }
+
+    @top-right-corner {
+      content: "";
+    }
+
+    @top-left {
+      content: "";
+    }
+
+    @top-left-corner {
+      content: "";
+    }
+  }
+
+  @page post-introduction:left {
+    @top-left {
+      content: $IntroductionRunningContentLeft;
+
+      @include runningheadleft;
+    }
+
+    @bottom-left {
+      content: counter(page);
+
+      @include pagenumber;
+    }
+  }
+
+  @page post-introduction:right {
+    @top-right {
+      content: $IntroductionRunningContentRight;
+
+      @include runningheadright;
+    }
+
+    @bottom-right {
+      content: counter(page);
+
+      @include pagenumber;
+    }
+  }
+
   /* RUNNING HEAD OUTSIDE:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
 
@@ -413,6 +466,59 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
   }
 
   /* RUNNING HEAD OUTSIDE2:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+}
+
+@page post-introduction:left {
+  @top-left {
+    content: $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+  }
+
+  @top-left-corner {
+    content: counter(page) "\A0\A0\A0\A0";
+
+    @include pagenumber;
+  }
+}
+
+@page post-introduction:right {
+  @top-right {
+    content: $IntroductionRunningContentRight;
+
+    @include runningheadright;
+  }
+
+  @top-right-corner {
+    content: "\A0\A0\A0\A0" counter(page);
+
+    @include pagenumber;
+  }
+}
+
+  /* RUNNING HEAD OUTSIDE2:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
 
   @page part:first {
@@ -644,6 +750,49 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
       text-align: right;
     }
   }
+
+  /* RUNNING HEADS INSIDE:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @include blankheadandfoot;
+}
+
+@page post-introduction:left {
+  @top-right {
+    content: $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+
+    text-align: right;
+  }
+
+  @top-left {
+    content: counter(page);
+
+    @include pagenumber;
+
+    text-align: left;
+  }
+}
+
+@page post-introduction:right {
+  @top-left {
+    content: $IntroductionRunningContentRight;
+
+    @include runningheadright;
+
+    text-align: left;
+  }
+
+  @top-right {
+    content: counter(page);
+
+    @include pagenumber;
+
+    text-align: right;
+  }
+}
 
   /*  RUNNING HEADS INSIDE:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
@@ -882,6 +1031,57 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
     }
   }
 
+  /* RUNNING HEADS CENTER:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @include blankheadandfoot;
+
+  @bottom {
+    content: counter(page);
+
+    @include pagenumber;
+
+    text-align: center;
+  }
+}
+
+@page post-introduction:left {
+  @top {
+    content: $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+
+    text-align: center;
+  }
+
+  @bottom {
+    content: counter(page);
+
+    @include pagenumber;
+
+    text-align: center;
+  }
+}
+
+@page post-introduction:right {
+  @top {
+    content: $IntroductionRunningContentRight;
+
+    @include runningheadright;
+
+    text-align: center;
+  }
+
+  @bottom {
+    content: counter(page);
+
+    @include pagenumber;
+
+    text-align: center;
+  }
+}
+
   /*  RUNNING HEADS CENTER:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
 
@@ -1087,6 +1287,33 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
     }
   }
 
+  /* RUNNING HEADS CENTER2:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @include blankheadandfoot;
+}
+
+@page post-introduction:left {
+  @top {
+    content: counter(page) "\A0\A0•\A0\A0" $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+
+    text-align: center;
+  }
+}
+
+@page post-introduction:right {
+  @top {
+    content: $IntroductionRunningContentRight "\A0\A0•\A0\A0" counter(page);
+
+    @include runningheadright;
+
+    text-align: center;
+  }
+}
+
   /*  RUNNING HEADS CENTER2:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
 
@@ -1287,6 +1514,63 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
       margin-right: -1cm;
     }
   }
+
+  /* RUNNING FOOT OUTSIDE:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+}
+
+@page post-introduction:left {
+  @bottom-left {
+    content: $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+  }
+
+  @bottom-left-corner {
+    content: counter(page) "\A0\A0";
+
+    @include pagenumber;
+
+    margin-left: -1cm;
+  }
+}
+
+@page post-introduction:right {
+  @bottom-right {
+    content: $IntroductionRunningContentRight;
+
+    @include runningheadright;
+  }
+
+  @bottom-right-corner {
+    content: "\A0\A0" counter(page);
+
+    @include pagenumber;
+
+    margin-right: -1cm;
+  }
+}
 
   /* RUNNING FOOT OUTSIDE:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
@@ -1580,6 +1864,64 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
   }
 
   /* RUNNING FOOT OUTSIDE2:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @top {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @top-right-corner {
+    content: "";
+  }
+
+  @top-left {
+    content: "";
+  }
+
+  @top-left-corner {
+    content: "";
+  }
+}
+
+@page post-introduction:left {
+  @bottom-left {
+    content: $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+  }
+
+  @bottom-left-corner {
+    content: counter(page) "\A0\A0|\A0\A0";
+
+    @include pagenumber;
+
+    margin-left: -1cm;
+  }
+}
+
+@page post-introduction:right {
+  @bottom-right {
+    content: $IntroductionRunningContentRight;
+
+    @include runningheadright;
+  }
+
+  @bottom-right-corner {
+    content: "\A0\A0|\A0\A0" counter(page);
+
+    @include pagenumber;
+
+    margin-right: -1cm;
+  }
+}
+
+
+  /* RUNNING FOOT OUTSIDE2:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
 
   @page part:first {
@@ -1835,7 +2177,46 @@ INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
     }
   }
 
-  /*  RUNNING HEADS CENTER3:
+  /* RUNNING HEADS CENTER3:
+POST-INTRODUCTION PAGES: RUNNING HEADS/FEET/PAGE NUMBERS */
+
+@page post-introduction:first {
+  @include blankheadandfoot;
+}
+
+@page post-introduction:left {
+  @top-left-corner {
+    @include pagenumber;
+
+    content: counter(page) "\A0\A0\A0\A0";
+  }
+
+  @top {
+    content: $IntroductionRunningContentLeft;
+
+    @include runningheadleft;
+
+    text-align: center;
+  }
+}
+
+@page post-introduction:right {
+  @top-right-corner {
+    @include pagenumber;
+
+    content: "\A0\A0\A0\A0" counter(page);
+  }
+
+  @top {
+    content: $IntroductionRunningContentRight;
+
+    @include runningheadright;
+
+    text-align: center;
+  }
+}
+
+/*  RUNNING HEADS CENTER3:
 PART PAGES: RUNNING HEADS/FEET/PAGE NUMBERS; */
 
   @page part:first {

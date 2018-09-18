@@ -206,7 +206,8 @@
     content: leader(' ') target-counter(attr(href), page, lower-roman);
   }
 
-  #toc .introduction a::after {
+  #toc .introduction a::after,
+  #toc .post-introduction a::after {
     content: leader(' ') target-counter(attr(href), page);
   }
 }
@@ -651,7 +652,8 @@
     content: '\A0\A0\A0\A0' target-counter(attr(href), page, lower-roman);
   }
 
-  #toc .introduction a::after {
+  #toc .introduction a::after,
+  #toc .post-introduction a::after {
     content: '\A0\A0\A0\A0' target-counter(attr(href), page);
   }
 }
@@ -820,7 +822,8 @@
     content: '\A0\A0\A0'  target-counter(attr(href), page, lower-roman);
   }
 
-  #toc .introduction a::after {
+  #toc .introduction a::after,
+  #toc .post-introduction a::after {
     content: '\A0\A0\A0'  target-counter(attr(href), page);
   }
 
