@@ -34,7 +34,7 @@ echo $multipage ? ' footer--multipage' : '';
 					<li><a href="https://pressbooks.org"><?php _e( 'Open Source', 'pressbooks-book' ); ?></a> |</li>
 					<li><a href="https://pressbooks.education/"><?php _e( 'Open Textbooks', 'pressbooks-book' ); ?></a> |</li>
 					<li><a href="https://pressbooks.com"><?php _e( 'Open Book Publishing', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="https://pressbooks.com/about"><?php _e( 'Learn More', 'pressbooks-book' ); ?></a> </li>
+					<li><a href="https://pressbooks.com/about/"><?php _e( 'Learn More', 'pressbooks-book' ); ?></a> </li>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
