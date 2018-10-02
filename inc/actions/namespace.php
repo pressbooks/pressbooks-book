@@ -173,6 +173,7 @@ function add_metadata() {
  */
 function theme_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
+	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	remove_action( 'wp_head', 'wp_generator' );
 }
