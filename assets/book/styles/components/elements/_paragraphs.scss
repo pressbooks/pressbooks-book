@@ -10,6 +10,7 @@
 
 @if $type != 'web' {
   p {
+    font-weight: normal;
     margin-bottom: $para-margin-bottom;
     text-align: if-map-get($para-align, $type);
     widows: $widows;
@@ -164,6 +165,7 @@
   .back-matter,
   body#tinymce.wp-editor {
     p {
+      font-weight: normal;
       margin-bottom: $para-margin-bottom;
       text-align: if-map-get($para-align, $type);
       widows: $widows;

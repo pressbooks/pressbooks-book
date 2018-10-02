@@ -331,18 +331,22 @@ function get_source_book_toc( $source_url ) {
  * @since 2.3.0
  *
  * @param array $metadata The book metadata.
+ * @return string The list of authors or an empty string if none exist.
  */
 
 function get_book_authors( $metadata ) {
-	$authors = [];
-	if ( array_key_exists( 'name', $metadata['author'] ) ) {
-		$authors[] = $metadata['author']['name'];
-	} else {
-		foreach ( $metadata['author'] as $author ) {
-			$authors[] = $author['name'];
-		}
-	};
-	return \Pressbooks\Utility\oxford_comma( $authors );
+	if ( isset( $metadata['author'] ) ) {
+		$authors = [];
+		if ( array_key_exists( 'name', $metadata['author'] ) ) {
+			$authors[] = $metadata['author']['name'];
+		} else {
+			foreach ( $metadata['author'] as $author ) {
+				$authors[] = $author['name'];
+			}
+		};
+		return \Pressbooks\Utility\oxford_comma( $authors );
+	}
+	return '';
 }
 
 /**
