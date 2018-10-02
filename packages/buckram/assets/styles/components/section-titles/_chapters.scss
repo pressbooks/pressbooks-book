@@ -35,7 +35,7 @@
             font-weight: $chapter-title-decoration-font-weight;
             margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
             margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
-            color: $chapter-title-decoration-color;
+            color: if-map-get($chapter-title-decoration-color, $type);
           }
     }
 

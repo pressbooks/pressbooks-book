@@ -112,7 +112,7 @@ $half-title-title-color: $color-2 !default;
 /// @type String
 $title-page-title-color: $color-2 !default;
 /// Subtitle color for Title page for elements with class `subtitle` of parent element with ID `title-page`
-/// @type String
+/// @type String | Map
 $title-title-decoration-color: $title-page-title-color !default;
 /// Subtitle color for Title page for elements with class `subtitle` of parent element with ID `title-page`
 /// @type String
@@ -132,7 +132,7 @@ $title-page-publisher-city-color: $color-3 !default;
 /// @type String
 $front-matter-title-color: $color-2 !default;
 /// Front Matter Title decoration color.
-/// @type String
+/// @type String | Map
 /// @since 1.1.0
 $front-matter-title-decoration-color: $front-matter-title-color !default;
 /// Copyright disclaimer color for elements `<p>` with an ID of `copyright-page`.
@@ -152,7 +152,7 @@ $part-number-color: $color-3 !default;
 /// @type String
 $part-title-color: $color-2 !default;
 /// Part Title decoration color.
-/// @type String
+/// @type String | Map
 /// @since 1.1.0
 $part-title-decoration-color: $part-title-color !default;
 
@@ -165,7 +165,7 @@ $chapter-number-color: $color-3 !default;
 $chapter-title-color: $color-2 !default;
 
 /// Chapter Title decoration color.
-/// @type String
+/// @type String | Map
 /// @since 1.1.0
 $chapter-title-decoration-color: $chapter-title-color !default;
 
@@ -182,7 +182,7 @@ $chapter-aphorism-color: $color-3 !default;
 /// @type String
 $back-matter-title-color: $color-2 !default;
 /// Back Matter Title decoration color.
-/// @type String
+/// @type String | Map
 /// @since 1.1.0
 $back-matter-title-decoration-color: $back-matter-title-color !default;
 
