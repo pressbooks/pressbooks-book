@@ -21,7 +21,6 @@ $color-6: $color-1 !default;
 /// Color for `<a>` elements.
 /// @type String | Map
 $link-color: (
-  epub: initial,
   prince: initial,
   web: var(--primary, #b01109)
 ) !default;
