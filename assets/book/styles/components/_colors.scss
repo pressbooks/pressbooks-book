@@ -5,12 +5,13 @@
 @import 'utilities';
 
 // STANDARD TEXT COLORS
-
-@if $type != 'web' {
+@if $type == 'prince' {
   a {
     color: if-map-get($link-color, $type);
   }
+}
 
+@if $type != 'web' {
   body,
   .entry-content {
     color: if-map-get($body-color, $type);

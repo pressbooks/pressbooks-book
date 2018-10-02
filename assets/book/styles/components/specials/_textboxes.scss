@@ -71,6 +71,10 @@
       if-map-get($edu-textbox-padding-bottom, $type)
       if-map-get($edu-textbox-padding-left, $type);
     text-align: $edu-header-text-align;
+
+    p {
+      text-indent: 0;
+    }
   }
 
   .textbox__content {
@@ -96,6 +100,7 @@
     line-height: if-map-get($textbox-line-height, $type);
   }
   text-align: $textbox-text-align;
+  text-indent: if-map-get($textbox-text-indent, $type);
   border-style: $textbox-border-style;
   border-width: if-map-get($textbox-border-width, $type);
   border-radius: if-map-get($textbox-border-radius, $type);
@@ -115,9 +120,12 @@
   }
 
   p {
-    margin-top: if-map-get($textbox-para-margin-top, $type);
     margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
-    text-indent: 0;
+  }
+
+  * + p {
+    margin-top: if-map-get($textbox-para-margin-top, $type);
+    text-indent: if-map-get($textbox-para-indent, $type);
   }
 
   .textbox-caption {

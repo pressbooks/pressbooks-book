@@ -77,7 +77,7 @@
     }
 
     .chapter a::before {
-      content: $toc-chapter-number-before-content counter(chapter) $toc-left-chapter-number-after-content;
+      content: $toc-chapter-number-before-content $toc-chapter-number-content $toc-left-chapter-number-after-content;
       display: $toc-left-chapter-number-display;
       float: $toc-left-chapter-number-float; // TODO
       text-align: $toc-left-chapter-number-align; // $toc-chapter-number-align;

@@ -18,6 +18,7 @@
     font-weight: $image-caption-font-weight;
     hyphens: none;
     padding-bottom: if-map-get($image-caption-padding-bottom, $type);
+    margin-top: if-map-get($image-caption-margin-top, $type);
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
   }
@@ -123,6 +124,7 @@
     font-weight: $image-caption-font-weight;
     hyphens: none;
     line-height: if-map-get($image-caption-line-height, $type);
+    margin-top: if-map-get($image-caption-margin-top, $type);
     padding-bottom: if-map-get($image-caption-padding-bottom, $type);
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
@@ -227,6 +229,7 @@
       hyphens: none;
       line-height: if-map-get($image-caption-line-height, $type);
       padding-bottom: if-map-get($image-caption-padding-bottom, $type);
+      margin-top: if-map-get($image-caption-margin-top, $type);
       text-align: $image-caption-text-align;
       text-transform: $image-caption-text-transform;
     }
