@@ -675,15 +675,15 @@ $blockquote-border-left-style: none !default;
 $blockquote-border-left-color: initial !default;
 
 /// Top margin for `<ol>` elements.
-/// @type String
+/// @type String | Map
 $ol-margin-top: 1em !default;
 
 /// Bottom margin for `<ol>` elements.
-/// @type String
+/// @type String | Map
 $ol-margin-bottom: 1em !default;
 
 /// Left margin for `<ol>` elements.
-/// @type String
+/// @type String | Map
 $ol-margin-left: (epub: 2em, prince: 2em, web: 0) !default;
 
 /// Padding left for `<ol>` elements.
@@ -691,15 +691,15 @@ $ol-margin-left: (epub: 2em, prince: 2em, web: 0) !default;
 $ol-padding-left: 2em !default;
 
 /// Top margin for `<ul>` elements.
-/// @type String
+/// @type String | Map
 $ul-margin-top: 1em !default;
 
 /// Bottom Margin for `<ul>` elements.
-/// @type String
+/// @type String | Map
 $ul-margin-bottom: 1em !default;
 
 /// Margin left for `<ul>` elements.
-/// @type String
+/// @type String | Map
 $ul-margin-left: (epub: 2em, prince: 2em, web: 0) !default;
 
 /// Padding left for `<ul>` elements.
@@ -707,15 +707,15 @@ $ul-margin-left: (epub: 2em, prince: 2em, web: 0) !default;
 $ul-padding-left: 2em !default;
 
 /// Top margin for multiple `<li>` elements.
-/// @type String
+/// @type String | Map
 $li-li-margin-top: 0.5em !default;
 
 /// Top margin for multiple `<ol>` elements.
-/// @type String
+/// @type String | Map
 $ol-ol-margin-top: 0.5em !default;
 
 /// Top margin for multiple `<ol>` elements.
-/// @type String
+/// @type String | Map
 $ul-ul-margin-top: 0.5em !default;
 
 /// Top margin for `<dt>` elements.

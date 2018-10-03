@@ -5,6 +5,7 @@
  * @package Pressbooks_Book
  */
 
+use function \Pressbooks\Book\Helpers\get_book_authors;
 use function \Pressbooks\Book\Helpers\get_metakeys;
 use function \Pressbooks\Book\Helpers\get_name_for_filetype;
 use function \Pressbooks\Book\Helpers\get_source_book;
@@ -58,5 +59,47 @@ class HelpersTest extends WP_UnitTestCase {
 		$output = get_source_book_meta( 'https://book.pressbooks.com' );
 		$this->assertArrayHasKey( 'name', $output );
 		$this->assertEquals( "Book: A Futurist's Manifesto", $output['name'] );
+	}
+
+	function test_get_book_authors() {
+		$output = get_book_authors( [] );
+		$this->assertEquals( '', $output );
+		$output = get_book_authors( [
+			'author' => [
+				'@type' => 'Person',
+				'name' => 'Some Author',
+			],
+		] );
+		$this->assertEquals( 'Some Author', $output );
+		$output = get_book_authors( [
+			'author' => [
+				[
+					'@type' => 'Person',
+					'name' => 'Thing One',
+				],
+				[
+					'@type' => 'Person',
+					'name' => 'Thing Two',
+				],
+			],
+		] );
+		$this->assertEquals( 'Thing One and Thing Two', $output );
+		$output = get_book_authors( [
+			'author' => [
+				[
+					'@type' => 'Person',
+					'name' => 'First',
+				],
+				[
+					'@type' => 'Person',
+					'name' => 'Second',
+				],
+				[
+					'@type' => 'Person',
+					'name' => 'Third',
+				],
+			],
+		] );
+		$this->assertEquals( 'First, Second, and Third', $output );
 	}
 }

@@ -31,10 +31,10 @@ echo $multipage ? ' footer--multipage' : '';
 				<?php /* translators: %s: Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li><a href="https://pressbooks.org"><?php _e( 'Open Source', 'pressbooks-book' ); ?></a> |</li>
+					<li><a href="https://pressbooks.org/"><?php _e( 'Open Source', 'pressbooks-book' ); ?></a> |</li>
 					<li><a href="https://pressbooks.education/"><?php _e( 'Open Textbooks', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="https://pressbooks.com"><?php _e( 'Open Book Publishing', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="https://pressbooks.com/about"><?php _e( 'Learn More', 'pressbooks-book' ); ?></a> </li>
+					<li><a href="https://pressbooks.com/"><?php _e( 'Open Book Publishing', 'pressbooks-book' ); ?></a> |</li>
+					<li><a href="https://pressbooks.com/about/"><?php _e( 'Learn More', 'pressbooks-book' ); ?></a> </li>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
