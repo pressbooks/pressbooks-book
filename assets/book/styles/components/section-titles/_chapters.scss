@@ -35,6 +35,7 @@
             font-weight: $chapter-title-decoration-font-weight;
             margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
             margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
+            color: if-map-get($chapter-title-decoration-color, $type);
           }
     }
 
@@ -135,6 +136,7 @@
 blockquote.aphorism {
   width: if-map-get($aphorism-block-width, $type);
   margin: if-map-get($aphorism-margin-top, $type) if-map-get($aphorism-margin-right, $type) if-map-get($aphorism-margin-bottom, $type) if-map-get($aphorism-margin-left, $type);
+  padding-bottom: if-map-get($aphorism-padding-bottom, $type);
   font-family: $aphorism-font-family;
   font-size: if-map-get($aphorism-font-size, $type);
   font-style: $aphorism-font-style;
