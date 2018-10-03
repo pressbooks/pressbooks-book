@@ -4,6 +4,16 @@
 
 /// Bottom padding for image captions.
 /// @type String | Map
+/// @since 1.1.0
+$image-caption-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Bottom padding for image captions.
+/// @type String | Map
+///
 $image-caption-padding-bottom: 0.5em !default;
 
 /// Font stack for image captions.
