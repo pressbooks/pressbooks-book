@@ -429,8 +429,8 @@ $sidebar-font-weight: normal !default;
 $sidebar-align: left !default;
 
 /// Line Height for Sidebar on `<p>` elements that are children of elements with a class of `sidebar`.
-/// @type String 
-/// /// @since 1.1.0
+/// @type String | Map
+/// @since 1.1.0
 $sidebar-line-height: $body-line-height !default;
 
 

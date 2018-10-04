@@ -79,7 +79,7 @@ aside,
   font-weight: $sidebar-font-weight;
   text-align: $sidebar-align;
   @if $type != 'epub' {
-    line-height: $sidebar-line-height;
+    line-height: if-map-get($sidebar-line-height, $type);
   }
 }
 
