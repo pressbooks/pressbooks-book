@@ -114,7 +114,7 @@ function license_to_icons( $license ) {
 		return '';
 	}
 	$output = '';
-	if ( strpos( $license, 'cc' ) !== false ) {
+	if ( strpos( $license, 'cc' ) !== false && $license !== 'cc-zero' ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
 			if ( $part !== 'cc' ) {
@@ -122,6 +122,8 @@ function license_to_icons( $license ) {
 			}
 			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use xlink:href="#%s" /></svg>', $part );
 		}
+	} elseif ( $license === 'cc-zero' ) {
+		$output .= '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-zero" /></svg>';
 	} elseif ( $license === 'public-domain' ) {
 		$output .= '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-pd" /></svg>';
 	} elseif ( $license === 'all-rights-reserved' ) {
@@ -141,6 +143,7 @@ function license_to_icons( $license ) {
  */
 function license_to_text( $license ) {
 	switch ( $license ) {
+		case 'cc-zero':
 		case 'public-domain':
 			return __( 'Public Domain', 'pressbooks-book' );
 			break;
