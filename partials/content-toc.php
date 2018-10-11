@@ -37,14 +37,17 @@ if ( ! $toc_output ) {
 			$part_is_visible = get_post_meta( $part['ID'], 'pb_part_invisible', true ) !== 'on';
 			$part_class = ( $part_has_chapters ) ? 'toc__part toc__part--full' : 'toc__part toc__part--empty';
 			if ( $part_has_chapters || $part_has_content ) {
+				$n++;
+				$part_number = \Pressbooks\L10n\romanize( $n );
+				$part_title = ( $part_numbers ) ? "<span class='toc__title__number'>$part_number</span>. {$part['post_title']}" : $part['post_title'];
 				printf(
 					'<li id="%1$s" class="%2$s">%3$s%4$s</li>',
 					"toc-part-{$part['ID']}",
 					( $part_has_chapters ) ? 'toc__part toc__part--full' : 'toc__part toc__part--empty',
 					( $part_is_visible ) ?
 						sprintf(
-							'<p class="toc__part__title">%s</p>',
-							( $part_has_content ) ? '<a href=' . get_permalink( $part['ID'] ) . "'>{$part['post_title']}</a>" : $part['post_title']
+							'<p class="toc__title">%s</p>',
+							( $part_has_content ) ? '<a href=' . get_permalink( $part['ID'] ) . "'>$part_title</a>" : $part_title
 						)
 						: '',
 					( $part_has_chapters ) ? '<div class="inner-content"><ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ) . '</ol></div>' : ''

@@ -52,7 +52,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 			}
 		}
 		$output .= sprintf(
-			'<li id="%1$s" class="%2$s"><a class="toc__title" href="%3$s">%4$s%5$s%6$s</a>%7$s</li>',
+			'<li id="%1$s" class="%2$s"><p class="toc__title"><a href="%3$s">%4$s%5$s%6$s</a>%7$s</li>',
 			"toc-{$post_type}-{$section['ID']}",
 			( $subsections ) ? "toc__{$post_type} toc__{$post_type}--full " . pb_get_section_type( get_post( $section['ID'] ) ) : "toc__{$post_type} toc__{$post_type}--empty " . pb_get_section_type( get_post( $section['ID'] ) ),
 			get_permalink( $section['ID'] ),

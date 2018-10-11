@@ -113,24 +113,25 @@ export default {
 		( function () {
 			// Get all the part titles
 			const entityTitles = document.querySelectorAll(
-				'.toc__part--full > .toc__part__title, .toc__chapter--full > .toc__title, .toc__front-matter--full > .toc__title, .toc__back-matter--full > .toc__title'
+				'.toc__part--full > .toc__title, .toc__chapter--full > .toc__title, .toc__front-matter--full > .toc__title, .toc__back-matter--full > .toc__title'
 			);
 
 			Array.prototype.forEach.call( entityTitles, entityTitle => {
 				// Give each part title a toggle button child
+				let ariaExpanded = ( entityTitle.parentNode.classList.contains( 'toc__part' ) ) ? true : false;
 				entityTitle.innerHTML = `
-				<button type="button" aria-expanded="true">
+				<span>${entityTitle.innerHTML}</span>
+				<button type="button" aria-expanded="${ariaExpanded}">
 					<svg viewBox="0 0 9 9" aria-hidden="true" focusable="false">
 						<rect class="vert" height="7" width="1" y="1" x="4" />
 						<rect height="1" width="7" y="4" x="1" />
 					</svg>
 				</button>
-				<span>${entityTitle.innerHTML}</span>
 			  `;
 
 				// Collapse (hide) the content following the heading
 				let content = entityTitle.nextElementSibling;
-				if ( ! document.body.classList.contains( 'home' ) && ! entityTitle.parentNode.classList.contains( 'toc__parent' ) ) {
+				if ( ariaExpanded === false || ( ! document.body.classList.contains( 'home' ) && ! entityTitle.parentNode.classList.contains( 'toc__parent' ) ) ) {
 					content.hidden = true;
 				}
 
