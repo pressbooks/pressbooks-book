@@ -472,6 +472,26 @@ $hr-break-symbols-font-size: 1.1em !default;
 /// @type String
 $hr-break-symbols-content: '\066D' !default;
 
+/// Top border width on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.2.0
+$hr-break-symbols-border-top-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Top border style on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.2.0
+$hr-break-symbols-border-top-style: (epub: none, prince: none, web: none) !default;
+
+/// Top border color on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.2.0
+$hr-break-symbols-border-top-color: (epub: $color-3, prince: $color-3, web: $color-3) !default;
+
+/// Top padding on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.2.0
+$hr-break-symbols-padding-top: (epub: 0, prince: 0, web: 0) !default;
+
 /// Top margin on section break on elements with a class of `.section-break`.
 /// @type String
 $section-break-margin-top: 1em !default;

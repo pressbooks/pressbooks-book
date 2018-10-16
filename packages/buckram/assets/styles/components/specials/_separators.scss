@@ -33,6 +33,8 @@ hr {
   text-align: center;
 
   &.break-symbols {
+    padding-top: if-map-get($hr-break-symbols-padding-top, $type);
+    border-top: if-map-get($hr-break-symbols-border-top-width, $type) if-map-get($hr-break-symbols-border-top-style, $type) if-map-get($hr-break-symbols-border-top-color, $type);
     margin-bottom: $hr-break-symbols-margin-bottom;
     border: 0;
 
