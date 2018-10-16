@@ -349,9 +349,25 @@ $title-publisher-logo-margin-left: auto !default;
 
 // Publisher
 
+/// Top margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-top: (epub: 0, prince: 0, web: 0) !default;
+
+/// Right margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-right: (epub: 0, prince: 0, web: 0) !default;
+
 /// Bottom margin for title page publisher text on elements `<h4>` with a class of `publisher`.
-/// @type String
-$title-publisher-margin-bottom: 0.5em !default;
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-bottom: (epub: 0.5em, prince: 0.5em, web: 0.5em) !default;
+
+/// Left margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
 /// Font stack for title page publisher text on elements `<h4>` with a class of `publisher`.
 /// @type String
@@ -410,6 +426,16 @@ $title-publisher-border-bottom-color: $title-title-border-bottom-color !default;
 $title-publisher-padding-bottom: $title-title-padding-bottom !default;
 
 // Publisher city
+
+/// Right margin for title page publisher city text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-city-margin-right: $title-publisher-margin-right !default;
+
+/// Left margin for title page publisher city text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-city-margin-left: $title-publisher-margin-left !default;
 
 /// Font stack for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
 /// @type String

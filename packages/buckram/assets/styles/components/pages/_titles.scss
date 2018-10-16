@@ -100,7 +100,7 @@ div.publisher-logo {
 h4.publisher {
   display: block;
   float: bottom;
-  margin-bottom: $title-publisher-margin-bottom;
+  margin: if-map-get($title-publisher-margin-top, $type) if-map-get($title-publisher-margin-right, $type) if-map-get($title-publisher-margin-bottom, $type) if-map-get($title-publisher-margin-left, $type);
   font-family: $title-publisher-font-family;
   font-size: if-map-get($title-publisher-font-size, $type);
   font-style: $title-publisher-font-style;
@@ -120,6 +120,8 @@ h4.publisher {
 h5.publisher-city {
   float: bottom;
   margin-top: 0;
+  margin-left: if-map-get($title-publisher-city-margin-left, $type);
+  margin-right: if-map-get($title-publisher-city-margin-right, $type);
   font-family: $title-publisher-city-font-family;
   font-size: if-map-get($title-publisher-city-font-size, $type);
   font-style: $title-publisher-city-font-style;
