@@ -54,6 +54,24 @@ $hx-border-bottom-width: 0 !default;
 /// @since 1.0.0
 $hx-border-bottom-color: initial !default;
 
+/// Letter spacing for all heading elements.
+/// @type String | Map
+/// @since 1.2.0
+$hx-letter-spacing: (
+  epub: normal, 
+  prince: normal, 
+  web: normal
+) !default;
+
+/// Word spacing for all heading elements.
+/// @type String | Map
+/// @since 1.2.0
+$hx-word-spacing: (
+  epub: normal, 
+  prince: normal, 
+  web: normal
+) !default;
+
 /// Top margin for `<h1>` elements.
 /// @type String | Map
 $h1-margin-top: $hx-margin-top !default;
@@ -108,6 +126,16 @@ $h1-border-bottom-width: $hx-border-bottom-width !default;
 /// @type String | Map
 /// @since 1.0.0
 $h1-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Word spacing for '<h1>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h1-letter-spacing: $hx-word-spacing !default;
+
+/// Word spacing for '<h1>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h1-word-spacing: $hx-word-spacing !default;
 
 /// Top margin for `<h2>` elements.
 /// @type String | Map
@@ -165,6 +193,16 @@ $h2-border-bottom-width: $hx-border-bottom-width !default;
 /// @since 1.0.0
 $h2-border-bottom-color: $hx-border-bottom-color !default;
 
+/// Word spacing for '<h2>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h2-letter-spacing: $hx-word-spacing !default;
+
+/// Word spacing for '<h2>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h2-word-spacing: $hx-word-spacing !default;
+
 /// Top margin for `<h3>` elements.
 /// @type String | Map
 $h3-margin-top: $hx-margin-top !default;
@@ -220,6 +258,16 @@ $h3-border-bottom-width: $hx-border-bottom-width !default;
 /// @type String | Map
 /// @since 1.0.0
 $h3-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Word spacing for '<h3>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h3-letter-spacing: $hx-word-spacing !default;
+
+/// Word spacing for '<h3>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h3-word-spacing: $hx-word-spacing !default;
 
 /// Top margin for `<h4>` elements.
 /// @type String | Map
@@ -277,6 +325,16 @@ $h4-border-bottom-width: $hx-border-bottom-width !default;
 /// @since 1.0.0
 $h4-border-bottom-color: $hx-border-bottom-color !default;
 
+/// Word spacing for '<h4>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h4-letter-spacing: $hx-word-spacing !default;
+
+/// Word spacing for '<h4>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h4-word-spacing: $hx-word-spacing !default;
+
 /// Top Margin for `<h5>` elements.
 /// @type String | Map
 $h5-margin-top: $hx-margin-top !default;
@@ -333,6 +391,16 @@ $h5-border-bottom-width: $hx-border-bottom-width !default;
 /// @since 1.0.0
 $h5-border-bottom-color: $hx-border-bottom-color !default;
 
+/// Word spacing for '<h5>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h5-letter-spacing: $hx-word-spacing !default;
+
+/// Word spacing for '<h5>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h5-word-spacing: $hx-word-spacing !default;
+
 /// Top margin for `<h6>` elements.
 /// @type String | Map
 $h6-margin-top: $hx-margin-top !default;
@@ -388,6 +456,34 @@ $h6-border-bottom-width: $hx-border-bottom-width !default;
 /// @type String | Map
 /// @since 1.0.0
 $h6-border-bottom-color: $hx-border-bottom-color !default;
+
+/// Word spacing for '<h6>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h6-letter-spacing: $hx-word-spacing !default;
+
+/// Word spacing for '<h6>' elements.
+/// @type String | Map
+/// @since 1.2.0
+$h6-word-spacing: $hx-word-spacing !default;
+
+$_heading-letter-spacing: (
+  h1: $h1-letter-spacing,
+  h2: $h2-letter-spacing,
+  h3: $h3-letter-spacing,
+  h4: $h4-letter-spacing,
+  h5: $h5-letter-spacing,
+  h6: $h6-letter-spacing
+);
+
+$_heading-word-spacing: (
+  h1: $h1-word-spacing,
+  h2: $h2-word-spacing,
+  h3: $h3-word-spacing,
+  h4: $h4-word-spacing,
+  h5: $h5-word-spacing,
+  h6: $h6-word-spacing
+);
 
 $_heading-border-bottom-style: (
   h1: $h1-border-bottom-style,
