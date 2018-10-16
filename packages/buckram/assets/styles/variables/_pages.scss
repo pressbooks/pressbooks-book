@@ -550,9 +550,15 @@ $copyright-indent: 0 !default;
 
 // Dedication
 
+/// Top margin for Dedication on `<div>` elements with a class of `dedication`.
+/// @type String | Map
+/// @since 1.2.0
+$dedication-margin-top: $title-title-block-margin-top !default;
+
 /// Right margin for Dedication on `<div>` elements with a class of `dedication`.
 /// @type String
 $dedication-margin-right: 10% !default;
+
 /// Left margin for Dedication on `<div>` elements with a class of `dedication`.
 /// @type String
 $dedication-margin-left: 10% !default;
@@ -586,6 +592,11 @@ $dedication-line-height: 1.4em !default;
 $dedication-align: center !default;
 
 // Epigraph
+
+/// Top margin for epigraph on `<div>` elements with a class of `epigraph`.
+/// @type String | Map
+/// @since 1.2.0
+$epigraph-margin-top: $title-title-block-margin-top !default;
 
 /// Right margin for epigraph on `<div>` elements with a class of `epigraph`.
 /// @type String

@@ -36,6 +36,7 @@
 // Dedication
 
 div.dedication {
+  margin-top: if-map-get($dedication-margin-top, $type);
   margin-right: $dedication-margin-right;
   margin-left: $dedication-margin-left;
 
@@ -53,6 +54,7 @@ div.dedication {
 // Epigraph
 
 div.epigraph {
+  margin-top: if-map-get($epigraph-margin-top, $type);
   margin-right: $epigraph-margin-right;
   margin-left: $epigraph-margin-left;
 
