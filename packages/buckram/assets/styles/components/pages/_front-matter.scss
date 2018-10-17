@@ -80,6 +80,7 @@ div.epigraph {
     font-size: $section-license-font-size;
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;
+    margin-bottom: if-map-get($section-license-margin-bottom, $type);
     page-break-inside: avoid;
     text-indent: 0;
   }

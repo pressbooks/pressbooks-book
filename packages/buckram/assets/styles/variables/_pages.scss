@@ -725,6 +725,11 @@ $section-license-font-style: italic !default;
 /// @type String
 $section-license-margin-top: 2em !default;
 
+/// Bottom margin for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String | Map
+/// @since 1.2.0
+$section-license-margin-bottom: (epub: 1em, prince: 1em, web: 1em) !default;
+
 /// Bottom margin for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
 /// @type String
 $section-license-image-margin-bottom: 0.2em !default;
