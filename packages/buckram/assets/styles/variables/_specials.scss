@@ -107,6 +107,11 @@ $footnote-line-height: 1.15em !default;
 /// @type String
 $footnote-indent: 0 !default;
 
+/// Text align for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.2.0
+$footnote-align: (epub: left, prince: left, web: left) !default;
+
 /// Top Margin for footnote blockquote for elements with a class of `fn-blockquote`.
 /// @type String
 $footnote-blockquote-margin-top: 0.5em !default;
