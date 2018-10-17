@@ -171,6 +171,11 @@ $title-title-border-bottom-color: $color-3 !default;
 /// @since 1.1.0
 $title-title-padding-bottom: (epub: 0, prince: 0, web: 0) !default;
 
+/// Defines line height for the title page title.
+/// @type String | Map
+/// @since 1.2.0
+$title-title-line-height: $hx-line-height !default;
+
 // Subtitle
 
 /// Top margin for title page subtitle on elements `<h2>` with a class of `subtitle`.
@@ -231,15 +236,20 @@ $title-subtitle-border-bottom-width: $title-title-border-bottom-width !default;
 /// @since 1.1.0
 $title-subtitle-border-bottom-style: $title-title-border-bottom-style !default;
 
-/// Defines bottom border style for the title page subtitle.
+/// Defines bottom border for the title page subtitle.
 /// @type String 
 /// @since 1.1.0
 $title-subtitle-border-bottom-color: $title-title-border-bottom-color !default;
 
-/// Defines bottom padding style for the title page subtitle.
+/// Defines bottom padding for the title page subtitle.
 /// @type String | Map
 /// @since 1.1.0
 $title-subtitle-padding-bottom: $title-title-padding-bottom !default;
+
+/// Defines line height for the title page subtitle.
+/// @type String | Map
+/// @since 1.2.0
+$title-subtitle-line-height: $title-title-line-height !default;
 
 // Author
 
@@ -316,6 +326,11 @@ $title-author-border-bottom-color: $title-title-border-bottom-color !default;
 /// @type String | Map
 /// @since 1.1.0
 $title-author-padding-bottom: $title-title-padding-bottom !default;
+
+/// Defines line height for the title page subtitle.
+/// @type String | Map
+/// @since 1.2.0
+$title-author-line-height: $title-title-line-height !default;
 
 // Publisher logo
 
