@@ -264,25 +264,3 @@ ol.toc__chapters {
     }
   }
 }
-
-
-.toc__toggle {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.toc__toggle[aria-expanded="false"] #hide {
-  display: none;
-}
-
-.toc__toggle[aria-expanded="false"] #show {
-  display: inline-block;
-}
-
-.toc__toggle[aria-expanded="true"] #hide {
-  display: inline-block;
-}
-
-.toc__toggle[aria-expanded="true"] #show {
-  display: none;
-}

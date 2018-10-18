@@ -1,3 +1,4 @@
+$lightest: #fcfcfc;
 $lighter: #fafafa;
 $light: #eee;
 
@@ -8,13 +9,13 @@ $light: #eee;
   padding: 0;
 }
 
+// .toc a {
+//   text-decoration: underline;
+// }
+
 .toc li + li,
 .toc li ol li:first-child {
   margin-top: 0.5rem;
-}
-
-.toc ol.toc__subsections {
-  padding-left: 2rem;
 }
 
 .toc button {
@@ -48,8 +49,19 @@ $light: #eee;
   min-height: 2.25rem;
 }
 
+.toc__subsections li {
+  background: $lightest;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  display: block;
+  min-height: 2.25rem;
+}
+
 .toc [class*="--full"] > .toc__title > span {
   width: calc(100% - 2.75rem);
+}
+
+.toc [class*="--full"] ol {
+  margin-left: 2.25rem;
 }
 
 .toc [class*="--empty"] > .toc__title {
@@ -83,4 +95,26 @@ $light: #eee;
 
 .toc > li {
   padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.toc__toggle {
+  margin: 2rem 0 4rem;
+  text-align: center;
+}
+
+.toc__toggle[aria-expanded="false"] #hide {
+  display: none;
+}
+
+.toc__toggle[aria-expanded="false"] #show {
+  display: inline-block;
+}
+
+.toc__toggle[aria-expanded="true"] #hide {
+  display: inline-block;
+}
+
+.toc__toggle[aria-expanded="true"] #show {
+  display: none;
 }

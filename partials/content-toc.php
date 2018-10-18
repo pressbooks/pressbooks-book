@@ -50,7 +50,7 @@ if ( ! $toc_output ) {
 							( $part_has_content ) ? '<a href=' . get_permalink( $part['ID'] ) . "'>$part_title</a>" : $part_title
 						)
 						: '',
-					( $part_has_chapters ) ? '<div class="inner-content"><ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ) . '</ol></div>' : ''
+					( $part_has_chapters ) ? '<ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content ) . '</ol>' : ''
 				);
 			}
 		}
