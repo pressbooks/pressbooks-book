@@ -18,6 +18,7 @@ mix
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
 	.scripts( 'node_modules/lity/dist/lity.js', 'dist/scripts/lity.js' )
 	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
+	.js( 'assets/src/scripts/pane.js', 'dist/scripts/pane.js' )
 	.js(
 		'assets/src/scripts/collapse-sections.js',
 		'dist/scripts/collapse-sections.js'
