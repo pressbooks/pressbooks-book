@@ -276,7 +276,7 @@ function get_source_book( $book_url, $checked = [] ) {
  *
  * @param string $book_url The URL of the book to trace.
  *
- * @return string The metadata array.
+ * @return string The URL of the book's original source.
  */
 function get_source_book_url( $book_url ) {
 	$source_url = get_transient( 'pb_book_source_url' );
@@ -294,7 +294,7 @@ function get_source_book_url( $book_url ) {
  *
  * @param string $source_url The URL of the original book.
  *
- * @return array|false The metadata array.
+ * @return array|false The metadata array, or false if no metadata was found.
  */
 function get_source_book_meta( $source_url ) {
 	$source_meta = get_transient( 'pb_book_source_metadata' );
@@ -317,7 +317,7 @@ function get_source_book_meta( $source_url ) {
  *
  * @param string $source_url The URL of the original book.
  *
- * @return array|false The metadata array.
+ * @return array|false The metadata array, or false if no metadata was found.
  */
 function get_source_book_toc( $source_url ) {
 	$source_toc = get_transient( 'pb_book_source_toc' );
@@ -365,7 +365,7 @@ function get_book_authors( $metadata ) {
  * @param string $needle The URL of the cloned section.
  * @param array $haystack The TOC array for the source book.
  *
- * @return array|false
+ * @return array|false  The section array from the source book TOC, or false if none was found.
  */
 
 function get_original_section( $needle, $haystack ) {
