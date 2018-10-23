@@ -25,8 +25,8 @@ $h1-padding-bottom: $hx-padding-bottom !default;
 $h1-font-family: $font-3 !default;
 $h1-font-size: (
   epub: large,
-  prince: 1.296em,
-  web: 1.296em
+  prince: 1.296em * 1.125,
+  web:  1.296em * 1.125
 ) !default;
 $h1-font-style: normal !default;
 $h1-font-weight: bold !default;
@@ -37,14 +37,13 @@ $h1-border-bottom-style: $hx-border-bottom-style !default;
 $h1-border-bottom-width: $hx-border-bottom-width !default;
 $h1-border-bottom-color: $hx-border-bottom-color !default;
 
-// H2
 $h2-margin-top: $hx-margin-top !default;
 $h2-margin-bottom: $hx-margin-bottom !default;
 $h2-padding-bottom: $hx-padding-bottom !default;
 $h2-font-family: $font-3 !default;
-$h2-font-size: 1.215em !default;
+$h2-font-size: 1.215em * 1.125 !default;
 $h2-font-style: normal !default;
-$h2-font-weight: normal !default;
+$h2-font-weight: bold !default;
 $h2-line-height: $hx-line-height !default;
 $h2-text-transform: none !default;
 $h2-align: left !default;
@@ -52,14 +51,13 @@ $h2-border-bottom-style: $hx-border-bottom-style !default;
 $h2-border-bottom-width: $hx-border-bottom-width !default;
 $h2-border-bottom-color: $hx-border-bottom-color !default;
 
-//H3
 $h3-margin-top: $hx-margin-top !default;
 $h3-margin-bottom: $hx-margin-bottom !default;
 $h3-padding-bottom: $hx-padding-bottom !default;
 $h3-font-family: $font-3 !default;
-$h3-font-size: 1.215em  !default;
+$h3-font-size: 1.215em * 1.125 !default;
 $h3-font-style: normal !default;
-$h3-font-weight: bold !default;
+$h3-font-weight: normal !default;
 $h3-line-height: $hx-line-height !default;
 $h3-text-transform: none !default;
 $h3-align: left !default;
@@ -67,14 +65,13 @@ $h3-border-bottom-style: $hx-border-bottom-style !default;
 $h3-border-bottom-width: $hx-border-bottom-width !default;
 $h3-border-bottom-color: $hx-border-bottom-color !default;
 
-//H4
 $h4-margin-top: $hx-margin-top !default;
 $h4-margin-bottom: $hx-margin-bottom !default;
 $h4-padding-bottom: $hx-padding-bottom !default;
 $h4-font-family: $font-3 !default;
-$h4-font-size: 1.138em !default;
+$h4-font-size: 1.138em * 1.125 !default;
 $h4-font-style: italic !default;
-$h4-font-weight: bold !default;
+$h4-font-weight: normal !default;
 $h4-line-height: $hx-line-height !default;
 $h4-text-transform: none !default;
 $h4-align: left !default;
@@ -82,13 +79,12 @@ $h4-border-bottom-style: $hx-border-bottom-style !default;
 $h4-border-bottom-width: $hx-border-bottom-width !default;
 $h4-border-bottom-color: $hx-border-bottom-color !default;
 
-//H5
 $h5-margin-top: $hx-margin-top !default;
 $h5-margin-bottom: $hx-margin-bottom !default;
 $h5-padding-bottom: $hx-padding-bottom !default;
 $h5-font-family: $font-3 !default;
-$h5-font-size: 1.067em !default;
-$h5-font-style: italic !default;
+$h5-font-size: 1.067em * 1.125 !default;
+$h5-font-style: normal !default;
 $h5-font-weight: normal !default;
 $h5-line-height: $hx-line-height !default;
 $h5-text-transform: none !default;
@@ -101,8 +97,8 @@ $h6-margin-top: $hx-margin-top !default;
 $h6-margin-bottom: $hx-margin-bottom !default;
 $h6-padding-bottom: $hx-padding-bottom !default;
 $h6-font-family: $font-3 !default;
-$h6-font-size: 1.067em !default;
-$h6-font-style: normal !default;
+$h6-font-size: 1.067em * 1.125 !default;
+$h6-font-style: italic !default;
 $h6-font-weight: normal !default;
 $h6-line-height: $hx-line-height !default;
 $h6-text-transform: none !default;
