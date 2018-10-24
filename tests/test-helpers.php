@@ -11,6 +11,7 @@ use function \Pressbooks\Book\Helpers\get_name_for_filetype;
 use function \Pressbooks\Book\Helpers\get_source_book;
 use function \Pressbooks\Book\Helpers\get_source_book_url;
 use function \Pressbooks\Book\Helpers\get_source_book_meta;
+use function \Pressbooks\Book\Helpers\get_source_book_toc;
 use function \Pressbooks\Book\Helpers\license_to_icons;
 use function \Pressbooks\Book\Helpers\license_to_text;
 use function \Pressbooks\Book\Helpers\share_icons;
@@ -33,6 +34,8 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc" /></svg><svg class="icon" style="fill: currentColor"><use xlink:href="#cc-by" /></svg>', $output );
 		$output = license_to_icons( 'public-domain' );
 		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-pd" /></svg>', $output );
+		$output = license_to_icons( 'cc-zero' );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-zero" /></svg>', $output );
 		$output = license_to_icons( 'all-rights-reserved' );
 		$this->assertEquals( '', $output );
 		$output = license_to_icons( 'foo' );
@@ -41,6 +44,8 @@ class HelpersTest extends WP_UnitTestCase {
 	function test_license_to_text() {
 		$output = license_to_text( 'cc-by' );
 		$this->assertEquals( 'Creative Commons Attribution', $output );
+		$output = license_to_text( 'cc-zero' );
+		$this->assertEquals( 'Public Domain', $output );
 		$output = license_to_text( 'foo' );
 		$this->assertEquals( 'All Rights Reserved', $output );
 	}
@@ -56,6 +61,9 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertEquals( 'https://book.pressbooks.com', $output );
 	}
 	function test_get_source_book_meta() {
+		$output = get_source_book_toc( 'garbage/' );
+		$this->assertFalse( $output );
+
 		$output = get_source_book_meta( 'https://book.pressbooks.com' );
 		$this->assertArrayHasKey( 'name', $output );
 		$this->assertEquals( "Book: A Futurist's Manifesto", $output['name'] );
@@ -101,5 +109,14 @@ class HelpersTest extends WP_UnitTestCase {
 			],
 		] );
 		$this->assertEquals( 'First, Second, and Third', $output );
+	}
+
+	function test_get_source_book_toc() {
+		$results = get_source_book_toc( 'garbage/' );
+		$this->assertFalse( $results );
+
+		$results = get_source_book_toc( 'https://book.pressbooks.com/' );
+		$this->assertTrue( is_array( $results ) );
+		$this->assertNotEmpty( $results );
 	}
 }

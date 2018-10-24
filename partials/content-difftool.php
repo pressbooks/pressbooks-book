@@ -1,23 +1,49 @@
-<?php $meta             = new \Pressbooks\Metadata();
-$pb_book_is_based_on    = get_post_meta( $meta->getMetaPost()->ID, 'pb_is_based_on', true );
+<?php
+
+// Check if all is well
+
+$meta = new \Pressbooks\Metadata();
+$pb_book_is_based_on = get_post_meta( $meta->getMetaPost()->ID, 'pb_is_based_on', true );
+if ( ! $pb_book_is_based_on ) {
+	return;
+}
 $pb_section_is_based_on = get_post_meta( $post->ID, 'pb_is_based_on', true );
-$options                = get_option( 'pressbooks_theme_options_web' );
-$option                 = $options['enable_source_comparison'] ?? false;
-if ( $pb_book_is_based_on && $option ) {
-	$source_url  = \Pressbooks\Book\Helpers\get_source_book_url( $pb_book_is_based_on );
-	$source_meta = \Pressbooks\Book\Helpers\get_source_book_meta( $source_url );
-	$source_toc  = \Pressbooks\Book\Helpers\get_source_book_toc( $source_url );
-	$original    = \Pressbooks\Book\Helpers\get_original_section( $pb_section_is_based_on, $source_toc );
-	if ( $original ) {
-		$source_endpoint = implode(
-			'/', [
-				$source_url,
-				'wp-json/pressbooks/v2',
-				( in_array( $post->post_type, [ 'part', 'chapter' ], true ) ) ? $post->post_type . 's' : $post->post_type,
-				$original['id'],
-			]
-		);
-		?>
+if ( ! $pb_section_is_based_on ) {
+	return;
+}
+$options = get_option( 'pressbooks_theme_options_web' );
+$option = $options['enable_source_comparison'] ?? false;
+if ( ! $option ) {
+	return;
+}
+$source_url = \Pressbooks\Book\Helpers\get_source_book_url( $pb_book_is_based_on );
+if ( ! $source_url ) {
+	return;
+}
+$source_meta = \Pressbooks\Book\Helpers\get_source_book_meta( $source_url );
+if ( ! $source_meta ) {
+	return;
+}
+$source_toc = \Pressbooks\Book\Helpers\get_source_book_toc( $source_url );
+if ( ! $source_toc ) {
+	return;
+}
+$original = \Pressbooks\Book\Helpers\get_original_section( $pb_section_is_based_on, $source_toc );
+if ( ! $original ) {
+	return;
+}
+
+// Ok then!
+
+$source_endpoint = implode(
+	'/', [
+		$source_url,
+		'wp-json/pressbooks/v2',
+		( in_array( $post->post_type, [ 'part', 'chapter' ], true ) ) ? $post->post_type . 's' : $post->post_type,
+		$original['id'],
+	]
+);
+?>
 <div class="block-reading-meta__compare">
 	<p>
 		<?php
@@ -42,6 +68,3 @@ if ( $pb_book_is_based_on && $option ) {
 		<pre class="block-reading-meta__compare__diff" data-source-endpoint="<?php echo $source_endpoint ?>"><?php echo get_post_field( 'post_content', $post, 'raw' ); ?></pre>
 	</div>
 </div>
-		<?php
-	}
-}

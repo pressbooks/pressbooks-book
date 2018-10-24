@@ -1764,9 +1764,9 @@ bs-recipes@1.3.4:
   integrity sha1-DS1NSKcYyMBEdp/cT4lZLci2lYU=
 
 buckram@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/buckram/-/buckram-1.1.1.tgz#f08d086cbd1cd31f1d68094cdbafc03332cb56d3"
-  integrity sha512-gvQUjkAh1/NcCH/csXYTdF1QpVOp96i+f6K4A0VbagtewqhkdM93wRJg7eY2wmDWvcDox4pBiEJyG9e5p3BNKA==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/buckram/-/buckram-1.1.2.tgz#87689b0292ff32cf7dd5fdcbb77b1f5a8e9a8ab8"
+  integrity sha512-YKFrJKJD14vUbv+txCl9ESlJJfnVHB5JjTp3D0fHLs37gEgHmRrUshZHobRY9lJyTd4o6uHRZEqEh5gDZ5s4TA==
 
 buffer-crc32@~0.2.3:
   version "0.2.13"
@@ -9644,10 +9644,10 @@ shallow-clone@^0.1.2:
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
 
-sharer.js@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/sharer.js/-/sharer.js-0.3.3.tgz#73eb30fc8834224698a44e18dc637c772c514f5f"
-  integrity sha512-trdFYjJJy/MpiefrifUIL4z53RjiizxSPbWk8VS69IpJYqGfTeFK0+MtX9GOTfeH5Twe0Zk8Z5uRdmicFbD7/A==
+sharer.js@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/sharer.js/-/sharer.js-0.3.4.tgz#9e7928204ae30fa82be57f287de1885a8bdcde44"
+  integrity sha512-4vxjMT27kQJFbm/jiGV78x9uF+ELcD3YWpdV5Z35P5jaP1Y3hpbeQSCJDAZEa3kAXKWiu+DqH3NGEAcAHnSgKA==
 
 shebang-command@^1.2.0:
   version "1.2.0"
