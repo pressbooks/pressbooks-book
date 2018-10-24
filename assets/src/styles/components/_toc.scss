@@ -30,6 +30,7 @@ $light: #eee;
 
 .toc__title button {
   background: $lighter;
+  text-align: center;
 }
 
 .toc__part > .toc__title button {
@@ -44,14 +45,15 @@ $light: #eee;
 .toc [class*="--full"] > .toc__title > span,
 .toc [class*="--empty"] > .toc__title {
   background: $lighter;
-  padding: 0.25rem 0 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   display: inline-block;
   min-height: 2.25rem;
+  overflow-wrap: break-word;
 }
 
 .toc__subsections li {
   background: $lightest;
-  padding: 0.25rem 0 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   display: block;
   min-height: 2.25rem;
 }
@@ -117,4 +119,24 @@ $light: #eee;
 
 .toc__toggle[aria-expanded="true"] #show {
   display: none;
+}
+
+.block-reading-toc {
+  background: var(--body-bg);
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  box-sizing: border-box;
+  color: var(--body-text);
+  padding-top: 1rem;
+  width: 100%;
+
+  .toc > li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media #{$breakpoint-large} {
+    width: inherit;
+    z-index: 100;
+  }
 }
