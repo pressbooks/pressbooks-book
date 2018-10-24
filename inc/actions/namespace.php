@@ -69,6 +69,8 @@ function enqueue_assets() {
 			wp_enqueue_script( 'pressbooks/lightbox', $assets->getPath( 'scripts/lightbox.js' ), false, null );
 		}
 
+		wp_enqueue_style( 'jquery-ui', '//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css', false, null ); // TODO: Maybe get rid of this.
+
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 			$styles   = Container::get( 'Styles' );
 			$sass     = Container::get( 'Sass' );
