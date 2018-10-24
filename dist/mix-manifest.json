@@ -1,9 +1,10 @@
 {
     "/scripts/book.js": "/scripts/book.js?id=b1e06f844e42c880a811",
-    "/styles/book.css": "/styles/book.css?id=d583d5db0e57c361c33f",
+    "/styles/book.css": "/styles/book.css?id=b1692d9f43352f051116",
     "/styles/web-house-style.css": "/styles/web-house-style.css?id=d3c1aedc7525b0f30ccd",
-    "/scripts/lightbox.js": "/scripts/lightbox.js?id=0157fd51533448cff8d2",
-    "/scripts/collapse-sections.js": "/scripts/collapse-sections.js?id=7b60a0a473403f0cb507",
+    "/scripts/pane.js": "/scripts/pane.js?id=331ebddd6438d1686c5c",
+    "/scripts/lightbox.js": "/scripts/lightbox.js?id=07da2585d307795be0fb",
+    "/scripts/collapse-sections.js": "/scripts/collapse-sections.js?id=bc624e64e271a38fdfc6",
     "/scripts/sharer.js": "/scripts/sharer.js?id=63066106d594a4b1941e",
     "/scripts/lity.js": "/scripts/lity.js?id=78effe3048232008df2b",
     "/styles/lity.css": "/styles/lity.css?id=2cca2f9fd7e0c7c24ac4"

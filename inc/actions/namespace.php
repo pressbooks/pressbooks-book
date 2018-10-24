@@ -43,6 +43,8 @@ function enqueue_assets() {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
+	// TODO: Enqueue only if Hypothesis is enabled.
+	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
 	wp_localize_script(
 		'pressbooks/book',
 		'PB_A11y',
