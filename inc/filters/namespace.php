@@ -52,6 +52,8 @@ function async_scripts( $tag, $handle, $src ) {
 }
 
 /**
+ * Return 401 for private chapters, discourages "phone numbers in titles" spam. We don't want those indexed by Google.
+ *
  * Hooked into `status_header`
  *
  * @since 2.4.1
@@ -62,6 +64,14 @@ function async_scripts( $tag, $handle, $src ) {
  * @return string
  */
 function status_code_adjustment( $status_header, $code ) {
+	if ( is_admin() ) {
+		// Ignore admin requests
+		return $status_header;
+	}
+	if ( defined( 'REST_REQUEST' ) && REST_REQUEST === true ) {
+		// Ignore rest requests
+		return $status_header;
+	}
 	if (
 		200 === absint( $code ) &&
 		\Pressbooks\Book\Helpers\is_book_public() === false &&
