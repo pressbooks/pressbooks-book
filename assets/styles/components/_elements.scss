@@ -23,11 +23,7 @@ $h1-margin-top: $hx-margin-top !default;
 $h1-margin-bottom: $hx-margin-bottom !default;
 $h1-padding-bottom: $hx-padding-bottom !default;
 $h1-font-family: $font-3 !default;
-$h1-font-size: (
-  epub: large,
-  prince: 1.602em * 1.125,
-  web:  1.602em * 1.125
-) !default;
+$h1-font-size: 1.602em * 1.125 !default;
 $h1-font-style: normal !default;
 $h1-font-weight: bold !default;
 $h1-line-height: $hx-line-height !default;
