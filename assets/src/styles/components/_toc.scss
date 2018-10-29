@@ -137,3 +137,11 @@ $light: #eee;
     z-index: 100;
   }
 }
+
+.dropdown .toc button:hover {
+  border-bottom-color: transparent;
+
+  &:focus {
+    border-bottom: solid 0.125rem var(--primary);
+  }
+}
