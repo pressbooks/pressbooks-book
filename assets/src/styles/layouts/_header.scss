@@ -70,9 +70,9 @@ body:not(.home) {
   body:not(.has-annotator-pane) & {
     @media #{$breakpoint-large} {
       flex: 1 0 rem(280);
-      // max-width: rem(280);
       border-top: 0 none;
       order: 0;
+      width: calc((100vw - 800px) / 2);
     }
   }
 }
