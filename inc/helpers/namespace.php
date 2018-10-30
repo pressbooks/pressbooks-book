@@ -83,39 +83,42 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
  * @return array The subsections
  */
 function get_all_subsections( $book_structure ) {
-	$book_subsections_transient = 'pb_book_subsections';
-	$book_subsections = get_transient( $book_subsections_transient );
-	if ( ! $book_subsections ) {
-		$book_subsections = [];
-		if ( ! get_transient( 'pb_getting_all_subsections' ) ) {
-			set_transient( 'pb_getting_all_subsections', 1, 5 * MINUTE_IN_SECONDS );
-			foreach ( $book_structure['front-matter'] as $section ) {
-				$subsections = pb_get_subsections( $section['ID'] );
-				if ( $subsections ) {
-					$book_subsections['front-matter'][ $section['ID'] ] = $subsections;
+	if ( pb_should_parse_subsections() ) {
+		$book_subsections_transient = 'pb_book_subsections';
+		$book_subsections = get_transient( $book_subsections_transient );
+		if ( ! $book_subsections ) {
+			$book_subsections = [];
+			if ( ! get_transient( 'pb_getting_all_subsections' ) ) {
+				set_transient( 'pb_getting_all_subsections', 1, 5 * MINUTE_IN_SECONDS );
+				foreach ( $book_structure['front-matter'] as $section ) {
+					$subsections = pb_get_subsections( $section['ID'] );
+					if ( $subsections ) {
+						$book_subsections['front-matter'][ $section['ID'] ] = $subsections;
+					}
 				}
-			}
-			foreach ( $book_structure['part'] as $key => $part ) {
-				if ( ! empty( $part['chapters'] ) ) {
-					foreach ( $part['chapters'] as $section ) {
-						$subsections = pb_get_subsections( $section['ID'] );
-						if ( $subsections ) {
-							$book_subsections['chapters'][ $section['ID'] ] = $subsections;
+				foreach ( $book_structure['part'] as $key => $part ) {
+					if ( ! empty( $part['chapters'] ) ) {
+						foreach ( $part['chapters'] as $section ) {
+							$subsections = pb_get_subsections( $section['ID'] );
+							if ( $subsections ) {
+								$book_subsections['chapters'][ $section['ID'] ] = $subsections;
+							}
 						}
 					}
 				}
-			}
-			foreach ( $book_structure['back-matter'] as $section ) {
-				$subsections = pb_get_subsections( $section['ID'] );
-				if ( $subsections ) {
-					$book_subsections['back-matter'][ $section['ID'] ] = $subsections;
+				foreach ( $book_structure['back-matter'] as $section ) {
+					$subsections = pb_get_subsections( $section['ID'] );
+					if ( $subsections ) {
+						$book_subsections['back-matter'][ $section['ID'] ] = $subsections;
+					}
 				}
+				delete_transient( 'pb_getting_all_subsections' );
 			}
-			delete_transient( 'pb_getting_all_subsections' );
 		}
 		set_transient( $book_subsections_transient, $book_subsections );
+		return $book_subsections;
 	}
-	return $book_subsections;
+	return [];
 }
 
 /**

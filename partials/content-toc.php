@@ -4,7 +4,7 @@ if ( ! isset( $book_structure ) ) {
 	$book_structure = pb_get_book_structure();
 }
 
-if ( pb_should_parse_subsections() && ! isset( $book_subsections ) ) {
+if ( ! isset( $book_subsections ) ) {
 	$book_subsections = \Pressbooks\Book\Helpers\get_all_subsections( $book_structure );
 }
 
