@@ -372,3 +372,11 @@ h1.reading-header__title {
 .mejs-embed {
   z-index: 0;
 }
+
+.block-reading-meta__subsection h2 + p {
+  margin-top: 0;
+}
+
+.block-reading-meta__subsection a {
+  text-decoration: underline;
+}

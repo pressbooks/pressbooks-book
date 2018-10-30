@@ -476,7 +476,7 @@ function get_metakeys() {
 		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
 		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
 		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),
-		'pb_book_doi' => __( 'DOI (Digital Object Identifier)', 'pressbooks-book' ),
+		'pb_book_doi' => __( 'Digital Object Identifier (DOI)', 'pressbooks-book' ),
 		'pb_ebook_isbn' => __( 'Ebook ISBN', 'pressbooks-book' ),
 		'pb_print_isbn' => __( 'Print ISBN', 'pressbooks-book' ),
 		'pb_hashtag' => __( 'Hashtag', 'pressbooks-book' ),

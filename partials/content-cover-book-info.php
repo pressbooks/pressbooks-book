@@ -74,7 +74,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 			<?php } ?>
 			<?php if ( ! empty( $book_information['pb_book_doi'] ) ) { ?>
 			<div class="block-info__subsection block-info__doi">
-				<h3 class="block__subtitle"><?php _e( 'DOI (Digital Object Identifier)', 'pressbooks-book' ); ?></h3>
+				<h3 class="block__subtitle"><?php _e( 'Digital Object Identifier (DOI)', 'pressbooks-book' ); ?></h3>
 				<p>
 				<?php
 					/**

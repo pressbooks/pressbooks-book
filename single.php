@@ -31,9 +31,26 @@
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h2>
 								<?php if ( \Pressbooks\Book\Helpers\is_book_public() ) { ?>
-									<div class="">
+									<p>
 										<?php echo \Pressbooks\Book\Helpers\copyright_license( false ); ?>
-									</div>
+									</p>
+								<?php } ?>
+								<?php
+								$pb_section_doi = get_post_meta( $post->ID, 'pb_section_doi', true );
+								if ( $pb_section_doi ) {
+									?>
+									<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Digital Object Identifier (DOI)', 'pressbooks-book' ); ?></h2>
+									<p>
+									<?php
+										/**
+										 * Filter the DOI resolver service URL (default: https://dx.doi.org).
+										 *
+										 * @since Pressbooks @ 5.6.0
+										 */
+										$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://dx.doi.org' );
+										printf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', trailingslashit( $doi_resolver ) . $pb_section_doi );
+									?>
+									</p>
 								<?php } ?>
 							</div>
 							<?php if ( \Pressbooks\Book\Helpers\social_media_enabled() ) { ?>
