@@ -88,6 +88,21 @@
       border-bottom: 0;
       border-left: 0;
     }
+
+    &.alignleft {
+      float: left;
+      margin-right: if-map-get($table-alignleft-margin-right, $type);
+    }
+  
+    &.aligncenter {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    &.alignright {
+      float: right;
+      margin-left: if-map-get($table-alignright-margin-left, $type);
+    }
   }
 
   table,
@@ -203,6 +218,21 @@
         border-right: 0;
         border-bottom: 0;
         border-left: 0;
+      }
+
+      &.alignleft {
+        float: left;
+        margin-right: if-map-get($table-alignleft-margin-right, $type);
+      }
+    
+      &.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      &.alignright {
+        float: right;
+        margin-left: if-map-get($table-alignright-margin-left, $type);
       }
     }
 
