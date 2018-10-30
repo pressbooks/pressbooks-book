@@ -78,7 +78,7 @@ export default {
 		( function () {
 			// Get all the <h3> headings
 			const headings = document.querySelectorAll(
-				'.dropdown > h3'
+				'.dropdown > p, .dropdown > h3'
 			);
 
 			Array.prototype.forEach.call( headings, heading => {
@@ -92,9 +92,7 @@ export default {
 
 				// Collapse (hide) the content following the heading
 				let content = heading.nextElementSibling;
-				if ( ! heading.parentNode.classList.contains( 'toc__parent' ) ) {
-					content.hidden = true;
-				}
+				content.hidden = true;
 
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
@@ -110,6 +108,7 @@ export default {
 				};
 			} );
 		} )();
+
 		( function () {
 			// Get all the part titles
 			const entityTitles = document.querySelectorAll(
