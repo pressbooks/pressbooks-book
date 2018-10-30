@@ -41,12 +41,24 @@
         line-height: $table-caption-line-height;
       }
     }
+    &.lines {
+      border-color: if-map-get($line-color-1, $type);
+    } 
 
     &.lines tr {
       border-top: $table-border-width solid;
       border-bottom: $table-border-width solid;
+      border-color: if-map-get($line-color-1, $type);
       border-top-color: if-map-get($line-color-1, $type);
       border-bottom-color: if-map-get($line-color-1, $type);
+    }
+
+    &.lines th {
+      border-color: if-map-get($line-color-1, $type);
+    }
+
+    &.lines td {
+      border-color: if-map-get($line-color-1, $type);
     }
 
     &.no-lines tr,
@@ -91,6 +103,8 @@
     }
     text-align: $table-th-align;
     vertical-align: $table-th-vertical-align;
+    border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
+    border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type) if-map-get($line-color-1, $type);
   }
 
   td {
@@ -100,6 +114,12 @@
     }
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
+    border-color: if-map-get($line-color-1, $type);
+  }
+
+  tr {
+    border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
+    border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
   }
 }
 
@@ -123,6 +143,7 @@
       border-collapse: collapse;
       border-top: $table-border-width solid;
       border-bottom: $table-border-width solid;
+      border-color: if-map-get($line-color-1, $type);
       border-top-color: if-map-get($line-color-1, $type);
       border-bottom-color: if-map-get($line-color-1, $type);
 
@@ -136,11 +157,24 @@
         line-height: $table-caption-line-height;
       }
 
+      &.lines {
+        border-color: if-map-get($line-color-1, $type);
+      }
+
       &.lines tr {
         border-top: $table-border-width solid;
         border-bottom: $table-border-width solid;
+        border-color: if-map-get($line-color-1, $type);
         border-top-color: if-map-get($line-color-1, $type);
         border-bottom-color: if-map-get($line-color-1, $type);
+      }
+
+      &.lines th {
+        border-color: if-map-get($line-color-1, $type);
+      }
+  
+      &.lines td {
+        border-color: if-map-get($line-color-1, $type);
       }
 
       &.no-lines tr,
@@ -183,6 +217,8 @@
       line-height: $table-th-line-height;
       text-align: $table-th-align;
       vertical-align: middle;
+      border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
+      border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type) if-map-get($line-color-1, $type);
     }
 
     td {
@@ -190,6 +226,12 @@
       line-height: $table-td-line-height;
       text-align: $table-td-align;
       vertical-align: middle;
+      border-color: if-map-get($line-color-1, $type);
+    }
+
+    tr {
+      border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
+      border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
     }
   }
 }

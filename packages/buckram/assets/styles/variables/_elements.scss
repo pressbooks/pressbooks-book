@@ -935,6 +935,26 @@ $table-th-align: left !default;
 /// @type String
 $table-th-vertical-align: middle !default;
 
+/// Border top width on `<th>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-th-border-top-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Border top style on `<th>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-th-border-top-style: (epub: none, prince: none, web: none) !default;
+
+/// Border bottom width on `<th>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-th-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Border bottom style on `<th>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-th-border-bottom-style: (epub: none, prince: none, web: none) !default;
+
 /// Top padding for `<td>` elements.
 /// @type String
 $table-td-padding-top: 0.45em !default;
@@ -963,6 +983,26 @@ $table-td-align: left !default;
 /// @since 0.5.0
 /// @type String
 $table-td-vertical-align: middle !default;
+
+/// Border top width on `<tr>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-tr-border-top-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Border top style on `<tr>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-tr-border-top-style: (epub: none, prince: none, web: none) !default;
+
+/// Border bottom width on `<tr>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-tr-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Border bottom style on `<tr>` elements.
+/// @since 1.2.0
+/// @type String | Map 
+$table-tr-border-bottom-style: (epub: none, prince: none, web: none) !default;
 
 /// Font size for `<cite>` elements.
 /// @type String | Map
