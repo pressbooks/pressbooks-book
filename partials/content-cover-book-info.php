@@ -72,6 +72,22 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 				<p><?php echo Pressbooks\Metadata\get_subject_from_thema( $book_information['pb_primary_subject'] ); ?></p>
 			</div>
 			<?php } ?>
+			<?php if ( ! empty( $book_information['pb_book_doi'] ) ) { ?>
+			<div class="block-info__subsection block-info__doi">
+				<h3 class="block__subtitle"><?php _e( 'DOI (Digital Object Identifier)', 'pressbooks-book' ); ?></h3>
+				<p>
+				<?php
+					/**
+					 * Filter the DOI resolver service URL (default: https://dx.doi.org).
+					 *
+					 * @since Pressbooks @ 5.6.0
+					 */
+					$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://dx.doi.org' );
+					printf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', trailingslashit( $doi_resolver ) . $book_information['pb_book_doi'] );
+				?>
+				</p>
+			</div>
+			<?php } ?>
 		</div>
 		<?php
 		/** Append content to cover book info block.
