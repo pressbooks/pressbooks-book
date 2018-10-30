@@ -15,11 +15,14 @@ use Pressbooks\Container;
  * @param bool $can_read
  * @param bool $can_read_private
  * @param int $permissive_private_content
+ * @param array $book_subsections
  *
  * @return string The HTML blob for this TOC section group.
  */
 
-function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content ) {
+function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $book_subsections ) {
+	global $post;
+	$output = '';
 	foreach ( $sections as $section ) {
 		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
 			if ( ! $can_read_private ) {
@@ -31,40 +34,91 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 					continue; // Skip this one.
 				}
 			}
-		} ?>
-		<li id="<?php echo "toc-{$post_type}-{$section['ID']}"; ?>" class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
-			<?php if ( $post_type !== 'chapter' ) { ?>
-			<div class="inner-content">
-				<?php } ?>
-				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
-					<?php
-					$chapter_number = pb_get_chapter_number( $section['ID'] );
-					if ( $chapter_number ) {
-						echo "<span>$chapter_number.&nbsp;</span>";
-					}
-					echo pb_strip_br( $section['post_title'] );
-					?>
-				</a>
-				<?php
-				if ( pb_should_parse_subsections() ) {
+		}
+		$chapter_number = pb_get_chapter_number( $section['ID'] );
+		$subsection_output = '';
+		$subsections = false;
+		if ( pb_should_parse_subsections() ) {
+			$ptype = ( $post_type === 'chapter' ) ? 'chapters' : $post_type;
+			$subsections = $book_subsections[ $ptype ][ $section['ID'] ] ?? false;
+			if ( $subsections ) {
+				$subsection_output .= '<ol class="toc__subsections">';
+				foreach ( $subsections as $id => $name ) {
+					$subsection_output .= sprintf(
+						'<li class="toc__subsection"><a href="%1$s#%2$s">%3$s</a></li>',
+						get_permalink( $section['ID'] ),
+						$id,
+						$name
+					);
+				}
+				$subsection_output .= '</ol>';
+			}
+		}
+		$section_class = "toc__{$post_type} ";
+		$section_class .= pb_get_section_type( get_post( $section['ID'] ) );
+		$section_class .= ( $subsections ) ? " toc__{$post_type}--full" : " toc__{$post_type}--empty";
+		if ( $post ) {
+			$section_class .= ( $post->ID === $section['ID'] ) ? ' toc__selected' : '';
+		}
+		$output .= sprintf(
+			'<li id="%1$s" class="%2$s"><p class="toc__title"><a href="%3$s">%4$s%5$s%6$s</a>%7$s</li>',
+			"toc-{$post_type}-{$section['ID']}",
+			$section_class,
+			get_permalink( $section['ID'] ),
+			( $chapter_number ) ? "<span>$chapter_number.&nbsp;</span>" : '',
+			pb_strip_br( $section['post_title'] ),
+			( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) ? ' <svg class="icon--private" viewBox="0 0 36 36"><path fill="currentColor" d="M29 15v-3c0-6.1-4.9-11-11-11S7 5.9 7 12v3H3v16h30V15h-4zm-10 7.7V26h-2v-3.3c-.6-.3-1-1-1-1.7 0-1.1.9-2 2-2s2 .9 2 2c0 .7-.4 1.4-1 1.7zM18 15h-7v-3c0-3.9 3.1-7 7-7s7 3.1 7 7v3h-7z"/></svg>' : '',
+			$subsection_output
+		);
+	}
+	return $output;
+}
+
+/**
+ * Get all book subsections.
+ *
+ * @since 2.6.0
+ *
+ * @param array $book_structure The book structure (see \Pressbooks\Book::getBookStructure())
+ * @return array The subsections
+ */
+function get_all_subsections( $book_structure ) {
+	if ( pb_should_parse_subsections() ) {
+		$book_subsections_transient = 'pb_book_subsections';
+		$book_subsections = get_transient( $book_subsections_transient );
+		if ( ! $book_subsections ) {
+			$book_subsections = [];
+			if ( ! get_transient( 'pb_getting_all_subsections' ) ) {
+				set_transient( 'pb_getting_all_subsections', 1, 5 * MINUTE_IN_SECONDS );
+				foreach ( $book_structure['front-matter'] as $section ) {
 					$subsections = pb_get_subsections( $section['ID'] );
 					if ( $subsections ) {
-						?>
-						<ol class="toc__subsections">
-							<?php foreach ( $subsections as $id => $name ) { ?>
-								<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-							<?php } ?>
-						</ol>
-						<?php
+						$book_subsections['front-matter'][ $section['ID'] ] = $subsections;
 					}
 				}
-				if ( $post_type !== 'chapter' ) {
-					?>
-							</div>
-						<?php } ?>
-		</li>
-		<?php
+				foreach ( $book_structure['part'] as $key => $part ) {
+					if ( ! empty( $part['chapters'] ) ) {
+						foreach ( $part['chapters'] as $section ) {
+							$subsections = pb_get_subsections( $section['ID'] );
+							if ( $subsections ) {
+								$book_subsections['chapters'][ $section['ID'] ] = $subsections;
+							}
+						}
+					}
+				}
+				foreach ( $book_structure['back-matter'] as $section ) {
+					$subsections = pb_get_subsections( $section['ID'] );
+					if ( $subsections ) {
+						$book_subsections['back-matter'][ $section['ID'] ] = $subsections;
+					}
+				}
+				delete_transient( 'pb_getting_all_subsections' );
+			}
+		}
+		set_transient( $book_subsections_transient, $book_subsections );
+		return $book_subsections;
 	}
+	return [];
 }
 
 /**

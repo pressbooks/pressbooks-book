@@ -102,12 +102,16 @@ if ( \Pressbooks\Book\Helpers\social_media_enabled() ) {
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav class="reading-header__inside">
+					<?php if ( is_single() ) { ?>
 					<div class="reading-header__toc dropdown">
 						<h3 class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h3>
-						<div class="block-reading-toc">
+						<div class="block-reading-toc" hidden>
 							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 						</div>
 					</div>
+					<?php } else { ?>
+					<div class="reading-header__toc"></div>
+					<?php } ?>
 					<?php /* translators: %s: the title of the book */ ?>
 					<h1 class="reading-header__title" ><a href="<?php echo home_url( '/' ); ?>" title="<?php printf( __( 'Go to the cover page of %s', 'pressbooks-book' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
