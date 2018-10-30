@@ -145,3 +145,7 @@ $light: #eee;
     border-bottom: solid 0.125rem var(--primary);
   }
 }
+
+.toc__selected .toc__title a {
+  text-decoration: underline;
+}

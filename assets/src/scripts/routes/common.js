@@ -121,7 +121,7 @@ export default {
 
 			Array.prototype.forEach.call( entityTitles, entityTitle => {
 				// Give each part title a toggle button child
-				let ariaExpanded = ( isHome && entityTitle.parentNode.classList.contains( 'toc__part' ) ) ? true : false;
+				let ariaExpanded = ( ( isHome && entityTitle.parentNode.classList.contains( 'toc__part' ) ) || ( ! isHome && entityTitle.parentNode.classList.contains( 'toc__parent' ) ) ) ? true : false;
 				entityTitle.innerHTML = `
 				<span>${entityTitle.innerHTML}</span>
 				<button type="button" aria-expanded="${ariaExpanded}">
@@ -137,6 +137,8 @@ export default {
 				let content = entityTitle.nextElementSibling;
 				if ( ariaExpanded === false || ( ! isHome && ! entityTitle.parentNode.classList.contains( 'toc__parent' ) ) ) {
 					content.hidden = true;
+				} else if ( isHome && entityTitle.parentNode.classList.contains( 'toc__parent' ) ) {
+					content.hidden = false;
 				}
 
 				// Assign the button
