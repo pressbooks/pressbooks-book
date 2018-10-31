@@ -21,6 +21,6 @@ class ActionsTest extends WP_UnitTestCase {
 
 	function test_theme_setup() {
 		theme_setup();
-		$this->assertEquals( [ 'caption' ], get_theme_support( 'html5' ) )
+		$this->assertEquals( [ 'caption' ], get_theme_support( 'html5' ) );
 	}
 }
