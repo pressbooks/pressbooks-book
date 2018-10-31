@@ -20,7 +20,7 @@
 							if ( 'pb_publication_date' === $key ) {
 									$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
 							} elseif ( 'pb_hashtag' === $key ) {
-								$hashtag                  = $book_information[ $key ];
+								$hashtag = $book_information[ $key ];
 								$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
 							} elseif ( 'pb_book_license' === $key ) {
 								$book_information[ $key ] = \Pressbooks\Book\Helpers\copyright_license();
@@ -33,6 +33,14 @@
 									$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
 								}
 								$book_information[ $key ] = implode( ', ', $output );
+							} elseif ( 'pb_book_doi' === $key ) {
+								/**
+								 * Filter the DOI resolver service URL (default: https://dx.doi.org).
+								 *
+								 * @since Pressbooks @ 5.6.0
+								 */
+								$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://dx.doi.org' );
+								$book_information[ $key ] = sprintf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', trailingslashit( $doi_resolver ) . $book_information[ $key ] );
 							}
 								echo $book_information[ $key ];
 							?>

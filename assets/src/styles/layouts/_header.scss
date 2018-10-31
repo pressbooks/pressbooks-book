@@ -38,9 +38,11 @@ body:not(.home) {
   display: flex;
   flex-direction: column;
 
-  @media #{$breakpoint-large} {
-    flex-direction: row;
-    justify-content: space-between;
+  body:not(.has-annotator-pane) & {
+    @media #{$breakpoint-large} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -51,8 +53,10 @@ body:not(.home) {
   display: flex;
   min-height: 5rem;
 
-  @media #{$breakpoint-large} {
-    height: 5rem;
+  body:not(.has-annotator-pane) & {
+    @media #{$breakpoint-large} {
+      height: 5rem;
+    }
   }
 }
 
@@ -61,17 +65,15 @@ body:not(.home) {
   border-top: 3px solid var(--header-color);
   font-size: 1rem;
   order: 1;
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
   width: 100%;
 
-  @media #{$breakpoint-large} {
-    flex: 1 0 rem(280);
-    // max-width: rem(280);
-    border-top: 0 none;
-    order: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  body:not(.has-annotator-pane) & {
+    @media #{$breakpoint-large} {
+      flex: 1 0 rem(280);
+      border-top: 0 none;
+      order: 0;
+      width: calc((100vw - 800px) / 2);
+    }
   }
 }
 
@@ -81,18 +83,29 @@ body:not(.home) {
   flex-direction: column;
   justify-content: center;
 
-  @media #{$breakpoint-large} {
-    align-items: flex-end;
-    justify-content: flex-start;
+  body:not(.has-annotator-pane) & {
+    @media #{$breakpoint-large} {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
   }
 
   h3.reading-header__toc__title {
     width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
     height: 5rem;
     margin-bottom: 0;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
 
-    @media #{$breakpoint-large} {
-      width: 100%;
+    body:not(.has-annotator-pane) & {
+      @media #{$breakpoint-large} {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+      }
     }
 
     button {
@@ -132,22 +145,30 @@ body:not(.home) {
   text-transform: uppercase;
   width: 100%;
 
-  @media #{$breakpoint-large} {
-    flex: 1 1 var(--reading-width, 40em);
-    max-width: var(--reading-width, 40em);
+  body:not(.has-annotator-pane) & {
+      @media #{$breakpoint-large} {
+      flex: 1 1 var(--reading-width, 40em);
+      max-width: var(--reading-width, 40em);
+    }
   }
 }
 
 .reading-header__end-container {
   display: none;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 
-  @media #{$breakpoint-large} {
-    display: flex;
-    justify-content: flex-end;
+  body:not(.has-annotator-pane) & {
+    @media #{$breakpoint-large} {
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 2rem;
+      padding-right: 2rem;
 
-    a {
-      font-size: 1.125rem;
-      text-transform: uppercase;
+      a {
+        font-size: 1.125rem;
+        text-transform: uppercase;
+      }
     }
   }
 }
