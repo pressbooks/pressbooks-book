@@ -11,17 +11,10 @@ use Pressbooks\Options;
 /**
  * Delete the cached Table of Contents.
  *
- * @see partials/content-toc.php
+ * @see in/helpers/namespace.php
  */
 function delete_cached_contents() {
-	$bits       = 3;
-	$max        = ( 1 << $bits );
-	$transients = [];
-	for ( $i = 0; $i < $max; $i++ ) {
-		$t            = str_pad( decbin( $i ), $bits, '0', STR_PAD_LEFT );
-		$t            = str_replace( [ 1, 0 ], [ 'x', 'o' ], $t );
-		$transients[] = "pb_book_contents_{$t}";
-	}
+	$transients = [ 'pb_book_subsections' ];
 	foreach ( $transients as $transient ) {
 		delete_transient( $transient );
 	}
@@ -43,6 +36,8 @@ function enqueue_assets() {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
+	// TODO: Enqueue only if Hypothesis is enabled.
+	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
 	wp_localize_script(
 		'pressbooks/book',
 		'PB_A11y',

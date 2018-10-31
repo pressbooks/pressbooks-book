@@ -51,7 +51,7 @@ $section-title-subtitle-spacing: $section-title-margin-bottom !default;
 $section-title-author-spacing: $section-title-margin-bottom !default;
 $section-title-font-family: $font-2 !default;
 $section-title-font-size: (
-  epub: large,
+  epub: x-large,
   prince: (24 / 9) * 1em,
   web: (24 / 9) * 1em
 ) !default;
@@ -64,12 +64,12 @@ $section-title-letter-spacing: (
   epub: normal,
   prince: normal,
   web: normal
-) !default; 
+) !default;
 $section-title-word-spacing: (
   epub: normal,
   prince: normal,
   web: normal
-) !default; 
+) !default;
 $section-title-decoration-font-family: $font-3 !default;
 $section-title-decoration-content: "" !default;
 $section-title-decoration-display: none !default;
@@ -279,7 +279,7 @@ $front-matter-title-font-weight: $section-title-font-weight !default;
 $front-matter-title-align: $section-title-align !default;
 $front-matter-title-text-transform: $section-title-text-transform !default;
 $front-matter-title-line-height: $section-title-line-height !default;
-$front-matter-title-border-bottom-style: $section-title-border-bottom-style !default; 
+$front-matter-title-border-bottom-style: $section-title-border-bottom-style !default;
 $front-matter-title-border-bottom-width: $section-title-border-bottom-width !default;
 $front-matter-title-border-bottom-color: $section-title-border-bottom-color !default;
 $front-matter-title-padding-bottom: $section-title-padding-bottom !default;
@@ -304,7 +304,7 @@ $toc-title-font-weight: $section-title-font-weight !default;
 $toc-title-align: $section-title-align !default;
 $toc-title-text-transform: $section-title-text-transform !default;
 $toc-title-line-height: $section-title-line-height !default;
-$toc-title-border-bottom-style: $section-title-border-bottom-style !default; 
+$toc-title-border-bottom-style: $section-title-border-bottom-style !default;
 $toc-title-border-bottom-width: $section-title-border-bottom-width !default;
 $toc-title-border-bottom-color: $section-title-border-bottom-color !default;
 $toc-title-padding-bottom: $section-title-padding-bottom !default;

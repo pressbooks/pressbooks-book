@@ -9,14 +9,14 @@ export default {
 
 			$( document.body ).on( 'click', '.toc__toggle #show', function ( e ) {
 				let $target = $( this );
-				let $dropdowns = $( '.toc__list .dropdown' );
+				let $dropdowns = $( '.toc [class*="--full"]' );
 				$dropdowns.each( function ( el ) {
 					$( this )
 						.find( 'button' )
 						.attr( 'aria-expanded', 'true' );
 					$( this )
 						.find(
-							'p + .inner-content, h3 + .inner-content, .toc__front-matter-list, .toc__back-matter-list'
+							'ol'
 						)
 						.removeAttr( 'hidden' );
 				} );
@@ -25,14 +25,14 @@ export default {
 
 			$( document.body ).on( 'click', '.toc__toggle #hide', function ( e ) {
 				let $target = $( this );
-				let $dropdowns = $( '.toc__list .dropdown' );
+				let $dropdowns = $( '.toc [class*="--full"]' );
 				$dropdowns.each( function ( el ) {
 					$( this )
 						.find( 'button' )
 						.attr( 'aria-expanded', 'false' );
 					$( this )
 						.find(
-							'p + .inner-content, h3 + .inner-content, .toc__front-matter-list, .toc__back-matter-list'
+							'ol'
 						)
 						.attr( 'hidden', 'true' );
 				} );
