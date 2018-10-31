@@ -5,13 +5,14 @@
  * @package Pressbooks_Book
  */
 
+use function \Pressbooks\Book\Helpers\get_all_subsections;
 use function \Pressbooks\Book\Helpers\get_book_authors;
 use function \Pressbooks\Book\Helpers\get_metakeys;
 use function \Pressbooks\Book\Helpers\get_name_for_filetype;
 use function \Pressbooks\Book\Helpers\get_source_book;
-use function \Pressbooks\Book\Helpers\get_source_book_url;
 use function \Pressbooks\Book\Helpers\get_source_book_meta;
 use function \Pressbooks\Book\Helpers\get_source_book_toc;
+use function \Pressbooks\Book\Helpers\get_source_book_url;
 use function \Pressbooks\Book\Helpers\license_to_icons;
 use function \Pressbooks\Book\Helpers\license_to_text;
 use function \Pressbooks\Book\Helpers\share_icons;
@@ -118,5 +119,17 @@ class HelpersTest extends WP_UnitTestCase {
 		$results = get_source_book_toc( 'https://book.pressbooks.com/' );
 		$this->assertTrue( is_array( $results ) );
 		$this->assertNotEmpty( $results );
+	}
+
+	function test_get_all_subsections() {
+		update_option( 'pressbooks_theme_options_global', [ 'parse_subsections' => 1 ] );
+		$result = get_all_subsections( [
+			'front-matter' => [],
+			'part' => [
+				'chapters' => [],
+			],
+			'back-matter' => [],
+		] );
+		$this->assertInternalType( 'array', $result );
 	}
 }
