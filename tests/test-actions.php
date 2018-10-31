@@ -5,7 +5,6 @@
  * @package Pressbooks_Book
  */
 
-use function \Pressbooks\Book\Actions\add_lightbox_setting;
 use function \Pressbooks\Book\Actions\render_lightbox_setting_field;
 
 /**
