@@ -526,9 +526,24 @@ $before-title-title-block-margin-bottom: 0.5em !default;
 /// @type String
 $copyright-float: none !default;
 
+/// Top margin for copyright page.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-top: (epub: 2em, prince: 2cm, web: 2em) !default;
+
+/// Right margin for copyright page.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-right: (epub: 0, prince: 0, web: 0) !default;
+
 /// Bottom margin for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String | Map
 $copyright-margin-bottom: initial !default;
+
+/// Left margin for copyright page.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
 /// Font family for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String
