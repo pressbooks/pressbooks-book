@@ -1,8 +1,6 @@
 <?php
 
 namespace Pressbooks\Book\Helpers;
-
-use function \Pressbooks\PostType\get_post_type_label;
 use Pressbooks\Container;
 
 /**
