@@ -1,6 +1,7 @@
 <?php
 
 namespace Pressbooks\Book\Helpers;
+
 use Pressbooks\Container;
 
 /**
