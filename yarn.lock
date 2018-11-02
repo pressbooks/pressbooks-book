@@ -9644,10 +9644,10 @@ shallow-clone@^0.1.2:
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
 
-sharer.js@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/sharer.js/-/sharer.js-0.3.4.tgz#9e7928204ae30fa82be57f287de1885a8bdcde44"
-  integrity sha512-4vxjMT27kQJFbm/jiGV78x9uF+ELcD3YWpdV5Z35P5jaP1Y3hpbeQSCJDAZEa3kAXKWiu+DqH3NGEAcAHnSgKA==
+sharer.js@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/sharer.js/-/sharer.js-0.3.5.tgz#a589661fe9d9105c0014037900c98d39c9c07459"
+  integrity sha512-F97Qrts1Kr+FjErjYtO0uz4KEyO0giaKYeQw65Bk6itLk6FjT8OW3rBMuRdFTQ1wiDHbpRwjNIFy7NT1Byt11Q==
 
 shebang-command@^1.2.0:
   version "1.2.0"
