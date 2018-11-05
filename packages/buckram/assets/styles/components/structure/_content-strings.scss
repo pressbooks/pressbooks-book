@@ -37,7 +37,6 @@ meta[name="pb-publisher-city"] {
 }
 
 // Parts
-
 .part-title-wrap {
   .part-number {
     string-set: part-number content();
@@ -54,24 +53,10 @@ meta[name="pb-publisher-city"] {
   string-set: chapter-number content();
 }
 
-.front-matter .front-matter-title-wrap .front-matter-title,
-.chapter .chapter-title-wrap .chapter-title,
-.back-matter .back-matter-title-wrap .back-matter-title {
-  string-set: section-title content();
-}
-
-// If the 'short-title' property is available, this will override the section
-// title for use in the running head.
-
-.front-matter .front-matter-title-wrap .short-title,
-.chapter .chapter-title-wrap .short-title,
-.back-matter .back-matter-title-wrap .short-title {
-  height: 0;
-  line-height: 0;
-  margin: 0;
-  string-set: section-title content();
-  visibility: hidden; // display: none causes issues with string-set
-  width: 0;
+.front-matter,
+.chapter,
+.back-matter {
+  string-set: section-title attr('title');
 }
 
 .chapter-title-wrap {
