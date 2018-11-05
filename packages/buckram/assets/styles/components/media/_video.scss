@@ -9,3 +9,10 @@
     background-image: url(if-map-get($video-icon-url, $type));
   }
 }
+
+@if $type == 'web' {
+  .wp-video {
+    display: block;
+    margin: 0 auto if-map-get($interactive-content-margin-bottom, $type);
+  }
+}
