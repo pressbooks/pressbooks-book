@@ -102,74 +102,85 @@ h1.reading-header__title {
 .nav-reading {
   background-color: var(--primary);
   bottom: 0;
-  display: flex;
+  display: block;
   left: 0;
   position: fixed;
-  width: 100vw;
-
-  &.absolute {
-    position: absolute;
-  }
+  width: 100%;
 }
 
 .nav-reading__previous,
 .nav-reading__next {
-  align-items: center;
-  display: flex;
   color: var(--primary-fg);
-  flex: 1 1 50%;
+  min-height: rem(37);
+
+  @media #{$breakpoint-large} {
+    float: left;
+    width: 50%;
+  }
+}
+
+.nav-reading__next {
+  text-align: right;
+}
+
+.nav-reading__previous a,
+.nav-reading__next a {
+  border: solid 1px transparent;
+  color: var(--primary-fg);
+  display: block;
   font-family: $font-family-sans-serif;
   font-size: 0.875rem;
-  height: 2.5rem;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
 
-  a {
-    align-items: center;
-    color: var(--button-primary-color);
-    display: flex;
-    white-space: nowrap;
-
-    &:hover {
-      color: var(--primary--dark);
-      text-decoration: underline;
-    }
-
-    svg {
-      fill: var(--primary);
-      height: 1em;
-      width: 1em;
-
-      &:hover {
-        fill: var(--primary--dark);
-      }
-    }
+  &:focus {
+    border: solid 1px var(--primary-fg);
+    outline: none;
   }
+
+  &:hover {
+    background: var(--primary-dark);
+  }
+}
+
+.nav-reading__previous a {
+  border-bottom-color: var(--primary-dark);
+
+  @media #{$breakpoint-large} {
+    border-bottom-color: transparent;
+    border-right-color: var(--primary-dark);
+  }
+}
+
+.nav-reading__next a {
+  border-top-color: var(--primary-dark);
+
+  @media #{$breakpoint-large} {
+    border-top-color: transparent;
+    border-left-color: var(--primary-dark);
+  }
+}
+
+
+.nav-reading__previous a svg,
+.nav-reading__next a svg {
+  fill: currentColor;
+  height: 1em;
+  vertical-align: text-bottom;
+  width: 1em;
+}
+
+.nav-reading__previous a svg {
+  margin-right: 0.5em;
+}
+
+.nav-reading__next a svg {
+  margin-left: 0.5em;
 }
 
 .nav-reading__previous,
 .nav-reading__next,
 .nav-reading__up {
   z-index: 11;
-}
-
-.nav-reading__previous {
-  border-right: 1px solid var(--primary-fg);
-  justify-content: flex-start;
-  left: 0;
-
-  svg {
-    margin-right: 0.5rem;
-  }
-}
-
-.nav-reading__next {
-  border-left: 1px solid var(--primary-fg);
-  justify-content: flex-end;
-  right: 0;
-
-  svg {
-    margin-left: 0.5rem;
-  }
 }
 
 .nav-reading__up {
@@ -189,8 +200,12 @@ h1.reading-header__title {
   width: 2.5rem;
   padding: 0;
 
-  &:hover,
   &:focus {
+    background-color: var(--primary);
+    border: solid 1px var(--primary-fg);
+  }
+
+  &:hover {
     background-color: var(--primary-dark);
     color: var(--primary-fg);
     text-decoration: none;
@@ -218,49 +233,18 @@ h1.reading-header__title {
     width: 1em;
   }
 }
-//page navigation
-.nav-reading--page {
-  background-color: var(--body-bg);
-  bottom: $nav-reading-height-mobile;
-  display: flex;
-  left: 0;
-  position: fixed;
-  width: 100vw;
-  margin-top: 2rem;
 
-  body:not(.has-annotator-pane) & {
-    @media #{$breakpoint-large} {
-      background-color: transparent;
-      bottom: auto;
-      top: 58%;
-      position: relative;
-      display: block;
-      width: auto;
-    }
-  }
+.nav-reading--page {
+  margin-top: 2rem;
 }
 
 .nav-reading--page__previous,
 .nav-reading--page__next {
-  align-items: center;
-  display: flex;
-  flex: 1 1 50%;
   font-family: $font-family-sans-serif;
-  font-size: 0.875rem;
-  height: 2.5rem;
-  padding: 0 1rem;
-
-  body:not(.has-annotator-pane) & {
-    @media #{$breakpoint-large} {
-      padding: 0 1rem;
-    }
-  }
+  font-size: 1rem;
 
   a {
-    align-items: center;
     color: var(--body-color);
-    display: flex;
-    white-space: nowrap;
 
     &:hover {
       color: var(--primary-dark);
@@ -268,42 +252,20 @@ h1.reading-header__title {
     }
 
     svg {
+      fill: currentColor;
       height: 1em;
+      vertical-align: text-bottom;
       width: 1em;
     }
   }
 }
 
-.nav-reading--page__previous {
-  justify-content: flex-start;
-  left: 0;
-
-  svg {
-    margin-right: 0.5rem;
-
-    body:not(.has-annotator-pane) & {
-      @media #{$breakpoint-large} {
-        margin-left: 0;
-        margin-right: 1rem;
-      }
-    }
-  }
+.nav-reading--page__previous a svg {
+  margin-right: 0.5em;
 }
 
-.nav-reading--page__next {
-  justify-content: flex-end;
-  right: 0;
-
-  svg {
-    margin-left: 0.5rem;
-
-    body:not(.has-annotator-pane) & {
-      @media #{$breakpoint-large} {
-        margin-left: 1rem;
-        margin-right: 0;
-      }
-    }
-  }
+.nav-reading--page__next a svg {
+  margin-left: 0.5em;
 }
 
 .button--text {
