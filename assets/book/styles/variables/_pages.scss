@@ -171,6 +171,11 @@ $title-title-border-bottom-color: $color-3 !default;
 /// @since 1.1.0
 $title-title-padding-bottom: (epub: 0, prince: 0, web: 0) !default;
 
+/// Defines line height for the title page title.
+/// @type String | Map
+/// @since 1.2.0
+$title-title-line-height: $hx-line-height !default;
+
 // Subtitle
 
 /// Top margin for title page subtitle on elements `<h2>` with a class of `subtitle`.
@@ -231,15 +236,20 @@ $title-subtitle-border-bottom-width: $title-title-border-bottom-width !default;
 /// @since 1.1.0
 $title-subtitle-border-bottom-style: $title-title-border-bottom-style !default;
 
-/// Defines bottom border style for the title page subtitle.
+/// Defines bottom border for the title page subtitle.
 /// @type String 
 /// @since 1.1.0
 $title-subtitle-border-bottom-color: $title-title-border-bottom-color !default;
 
-/// Defines bottom padding style for the title page subtitle.
+/// Defines bottom padding for the title page subtitle.
 /// @type String | Map
 /// @since 1.1.0
 $title-subtitle-padding-bottom: $title-title-padding-bottom !default;
+
+/// Defines line height for the title page subtitle.
+/// @type String | Map
+/// @since 1.2.0
+$title-subtitle-line-height: $title-title-line-height !default;
 
 // Author
 
@@ -317,6 +327,11 @@ $title-author-border-bottom-color: $title-title-border-bottom-color !default;
 /// @since 1.1.0
 $title-author-padding-bottom: $title-title-padding-bottom !default;
 
+/// Defines line height for the title page subtitle.
+/// @type String | Map
+/// @since 1.2.0
+$title-author-line-height: $title-title-line-height !default;
+
 // Publisher logo
 
 /// Display for title page Publisher logo on elements `<div>` with a class of `publisher-logo`.
@@ -349,9 +364,25 @@ $title-publisher-logo-margin-left: auto !default;
 
 // Publisher
 
+/// Top margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-top: (epub: 0, prince: 0, web: 0) !default;
+
+/// Right margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-right: (epub: 0, prince: 0, web: 0) !default;
+
 /// Bottom margin for title page publisher text on elements `<h4>` with a class of `publisher`.
-/// @type String
-$title-publisher-margin-bottom: 0.5em !default;
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-bottom: (epub: 0.5em, prince: 0.5em, web: 0.5em) !default;
+
+/// Left margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
 /// Font stack for title page publisher text on elements `<h4>` with a class of `publisher`.
 /// @type String
@@ -410,6 +441,16 @@ $title-publisher-border-bottom-color: $title-title-border-bottom-color !default;
 $title-publisher-padding-bottom: $title-title-padding-bottom !default;
 
 // Publisher city
+
+/// Right margin for title page publisher city text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-city-margin-right: $title-publisher-margin-right !default;
+
+/// Left margin for title page publisher city text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.2.0
+$title-publisher-city-margin-left: $title-publisher-margin-left !default;
 
 /// Font stack for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
 /// @type String
@@ -485,9 +526,24 @@ $before-title-title-block-margin-bottom: 0.5em !default;
 /// @type String
 $copyright-float: none !default;
 
+/// Top margin for copyright page.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-top: (epub: 2em, prince: 2cm, web: 2em) !default;
+
+/// Right margin for copyright page.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-right: (epub: 0, prince: 0, web: 0) !default;
+
 /// Bottom margin for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String | Map
 $copyright-margin-bottom: initial !default;
+
+/// Left margin for copyright page.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
 /// Font family for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String
@@ -524,9 +580,15 @@ $copyright-indent: 0 !default;
 
 // Dedication
 
+/// Top margin for Dedication on `<div>` elements with a class of `dedication`.
+/// @type String | Map
+/// @since 1.2.0
+$dedication-margin-top: $title-title-block-margin-top !default;
+
 /// Right margin for Dedication on `<div>` elements with a class of `dedication`.
 /// @type String
 $dedication-margin-right: 10% !default;
+
 /// Left margin for Dedication on `<div>` elements with a class of `dedication`.
 /// @type String
 $dedication-margin-left: 10% !default;
@@ -560,6 +622,11 @@ $dedication-line-height: 1.4em !default;
 $dedication-align: center !default;
 
 // Epigraph
+
+/// Top margin for epigraph on `<div>` elements with a class of `epigraph`.
+/// @type String | Map
+/// @since 1.2.0
+$epigraph-margin-top: $title-title-block-margin-top !default;
 
 /// Right margin for epigraph on `<div>` elements with a class of `epigraph`.
 /// @type String
@@ -672,6 +739,11 @@ $section-license-font-style: italic !default;
 /// Top margin for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
 /// @type String
 $section-license-margin-top: 2em !default;
+
+/// Bottom margin for License on `<p>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
+/// @type String | Map
+/// @since 1.2.0
+$section-license-margin-bottom: (epub: 1em, prince: 1em, web: 1em) !default;
 
 /// Bottom margin for License on `<img>` elements that are immediate children of elements with classes `front-matter` and `license-attribution`.
 /// @type String

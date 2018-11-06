@@ -9,6 +9,7 @@ tests
 .gitignore
 .travis.yml
 .tx
+packages
 phpcs.ruleset.xml
 phpunit.xml
 webpack.mix.js

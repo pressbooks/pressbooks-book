@@ -23,6 +23,8 @@
     }
     text-align: map-get($_heading-align, $heading);
     text-transform: map-get($_heading-text-transform, $heading);
+    letter-spacing: if-map-get(map-get($_heading-letter-spacing, $heading), $type);
+    word-spacing: if-map-get(map-get($_heading-word-spacing, $heading), $type);
   }
 }
 

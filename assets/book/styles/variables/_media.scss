@@ -229,3 +229,8 @@ $interactive-content-font-style: italic !default;
 /// @type String | Map
 /// @since 1.0.0
 $interactive-content-margin-bottom: (prince: 1.5em, epub: 1em, web: 1em) !default;
+
+/// Caption alignment on embedded media
+/// @type String | Map
+/// @since 1.2.0
+$media-caption-align: (epub: center, prince: center, web: center) !default;

@@ -29,7 +29,7 @@
     margin-left: 0;
     font-size: if-map-get($footnote-font-size, $type);
     line-height: $footnote-line-height;
-    text-align: left;
+    text-align: if-map-get($footnote-align, $type);
     text-indent: $footnote-indent;
     counter-increment: footnote;
     footnote-style-position: outside;

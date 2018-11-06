@@ -15,7 +15,9 @@
 
 #copyright-page {
   page-break-before: always;
-
+  margin-top: if-map-get($copyright-margin-top, $type);
+  margin-right: if-map-get($copyright-margin-right, $type);
+  margin-left: if-map-get($copyright-margin-left, $type);
   .ugc {
     float: $copyright-float;
 
@@ -36,6 +38,7 @@
 // Dedication
 
 div.dedication {
+  margin-top: if-map-get($dedication-margin-top, $type);
   margin-right: $dedication-margin-right;
   margin-left: $dedication-margin-left;
 
@@ -53,6 +56,7 @@ div.dedication {
 // Epigraph
 
 div.epigraph {
+  margin-top: if-map-get($epigraph-margin-top, $type);
   margin-right: $epigraph-margin-right;
   margin-left: $epigraph-margin-left;
 
@@ -78,6 +82,7 @@ div.epigraph {
     font-size: $section-license-font-size;
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;
+    margin-bottom: if-map-get($section-license-margin-bottom, $type);
     page-break-inside: avoid;
     text-indent: 0;
   }

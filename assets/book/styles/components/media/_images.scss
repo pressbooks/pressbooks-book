@@ -220,8 +220,8 @@
   .part,
   .chapter,
   .back-matter {
-    figcaption,
-    .wp-caption-text {
+    .wp-caption figcaption,
+    .wp-caption .wp-caption-text {
       font-family: $image-caption-font-family;
       font-size: if-map-get($image-caption-font-size, $type);
       font-style: $image-caption-font-style;

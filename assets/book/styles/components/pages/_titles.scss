@@ -38,6 +38,9 @@ h1.title {
   text-transform: $title-title-text-transform;
   border-bottom: if-map-get($title-title-border-bottom-width, $type) $title-title-border-bottom-style if-map-get($title-title-border-bottom-color, $type);
   padding-bottom: if-map-get($title-title-padding-bottom, $type);
+  @if $type != 'epub' {
+    line-height: if-map-get($title-title-line-height, $type);
+  }
 
   &::after {
     font-family: $title-title-decoration-font-family;
@@ -67,6 +70,9 @@ h2.subtitle {
   text-transform: $title-subtitle-text-transform;
   border-bottom: if-map-get($title-subtitle-border-bottom-width, $type) $title-subtitle-border-bottom-style if-map-get($title-subtitle-border-bottom-color, $type);
   padding-bottom: if-map-get($title-subtitle-padding-bottom, $type);
+  @if $type != 'epub' {
+    line-height: if-map-get($title-subtitle-line-height, $type);
+  }
 }
 
 h3.author {
@@ -84,6 +90,9 @@ h3.author {
   text-transform: $title-author-text-transform;
   border-bottom: if-map-get($title-author-border-bottom-width, $type) $title-author-border-bottom-style if-map-get($title-author-border-bottom-color, $type);
   padding-bottom: if-map-get($title-author-padding-bottom, $type);
+  @if $type != 'epub' {
+    line-height: if-map-get($title-author-line-height, $type);
+  }
 }
 
 div.publisher-logo {
@@ -100,7 +109,7 @@ div.publisher-logo {
 h4.publisher {
   display: block;
   float: bottom;
-  margin-bottom: $title-publisher-margin-bottom;
+  margin: if-map-get($title-publisher-margin-top, $type) if-map-get($title-publisher-margin-right, $type) if-map-get($title-publisher-margin-bottom, $type) if-map-get($title-publisher-margin-left, $type);
   font-family: $title-publisher-font-family;
   font-size: if-map-get($title-publisher-font-size, $type);
   font-style: $title-publisher-font-style;
@@ -120,6 +129,8 @@ h4.publisher {
 h5.publisher-city {
   float: bottom;
   margin-top: 0;
+  margin-left: if-map-get($title-publisher-city-margin-left, $type);
+  margin-right: if-map-get($title-publisher-city-margin-right, $type);
   font-family: $title-publisher-city-font-family;
   font-size: if-map-get($title-publisher-city-font-size, $type);
   font-style: $title-publisher-city-font-style;
