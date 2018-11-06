@@ -1,0 +1,350 @@
+////
+/// @group elements
+////
+
+//============================================================================//
+//                                   Lists                                    //
+//============================================================================//
+@import "../utilities";
+
+%ol {
+  margin-top: if-map-get($ol-margin-top, $type);
+  margin-bottom: if-map-get($ol-margin-bottom, $type);
+  margin-left: if-map-get($ol-margin-left, $type);
+  padding-left: if-map-get($ol-padding-left, $type);
+
+  ol {
+    margin-bottom: 0;
+    margin-top: if-map-get($ol-ol-margin-top, $type);
+  }
+}
+
+%ul {
+  margin-top: if-map-get($ul-margin-top, $type);
+  margin-bottom: if-map-get($ul-margin-bottom, $type);
+  margin-left: if-map-get($ul-margin-left, $type);
+  padding-left: if-map-get($ul-padding-left, $type);
+
+  ul {
+    margin-bottom: 0;
+    margin-top: if-map-get($ul-ul-margin-top, $type);
+  }
+}
+
+%legal {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: level-1;
+
+  li::before {
+    counter-increment: level-1;
+    content: counter(level-1)".\A0";
+    display: inline-block;
+    text-align: right;
+    width: if-map-get($ol-padding-left, $type);
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: level-2;
+  }
+
+  ol li::before {
+    counter-increment: level-2;
+    content: counter(level-2, lower-alpha)".\A0";
+    min-width: if-map-get($ol-padding-left, $type);
+    width: auto;
+  }
+
+  ol ol {
+    list-style-type: none;
+    counter-reset: level-3;
+  }
+
+  ol ol li::before {
+    counter-increment: level-3;
+    content: counter(level-3, lower-roman)".\A0";
+  }
+
+  ol ol ol {
+    list-style-type: none;
+    counter-reset: level-4;
+  }
+
+  ol ol ol li::before {
+    counter-increment: level-4;
+    content: counter(level-4)")\A0";
+  }
+
+  ol ol ol ol {
+    list-style-type: none;
+    counter-reset: level-5;
+  }
+
+  ol ol ol ol li::before {
+    counter-increment: level-5;
+    content: counter(level-5, lower-alpha)")\A0";
+  }
+
+  ol ol ol ol ol {
+    list-style-type: none;
+    counter-reset: level-6;
+  }
+
+  ol ol ol ol ol li::before {
+    counter-increment: level-6;
+    content: counter(level-6, lower-roman)")\A0";
+  }
+}
+
+%harvard {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: level-1;
+
+  li::before {
+    counter-increment: level-1;
+    content: counter(level-1, upper-roman)".\A0";
+    display: inline-block;
+    text-align: right;
+    width: if-map-get($ol-padding-left, $type);
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: level-2;
+  }
+
+  ol li::before {
+    counter-increment: level-2;
+    content: counter(level-2, upper-alpha)".\A0";
+    min-width: if-map-get($ol-padding-left, $type);
+    width: auto;
+  }
+
+  ol ol {
+    list-style-type: none;
+    counter-reset: level-3;
+  }
+
+  ol ol li::before {
+    counter-increment: level-3;
+    content: counter(level-3)".\A0";
+  }
+
+  ol ol ol {
+    list-style-type: none;
+    counter-reset: level-4;
+  }
+
+  ol ol ol li::before {
+    counter-increment: level-4;
+    content: counter(level-4, lower-alpha)".\A0";
+  }
+
+  ol ol ol ol {
+    list-style-type: none;
+    counter-reset: level-5;
+  }
+
+  ol ol ol ol li::before {
+    counter-increment: level-5;
+    content: "("counter(level-5)")\A0";
+  }
+
+  ol ol ol ol ol {
+    list-style-type: none;
+    counter-reset: level-6;
+  }
+
+  ol ol ol ol ol li::before {
+    counter-increment: level-6;
+    content: "("counter(level-6, lower-alpha)")\A0";
+  }
+}
+
+%decimal {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: level-1;
+
+  li::before {
+    counter-increment: level-1;
+    content: counter(level-1)".\A0";
+    display: inline-block;
+    text-align: right;
+    width: if-map-get($ol-padding-left, $type);
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: level-2;
+  }
+
+  ol li::before {
+    counter-increment: level-2;
+    content: counter(level-1)"."counter(level-2)".\A0";
+    min-width: if-map-get($ol-padding-left, $type);
+    width: auto;
+  }
+
+  ol ol {
+    list-style-type: none;
+    counter-reset: level-3;
+  }
+
+  ol ol li::before {
+    counter-increment: level-3;
+    content: counter(level-1)"."counter(level-2)"."counter(level-3)".\A0";
+  }
+
+  ol ol ol {
+    list-style-type: none;
+    counter-reset: level-4;
+  }
+
+  ol ol ol li::before {
+    counter-increment: level-4;
+    content: counter(level-1)"."counter(level-2)"."counter(level-3)"."counter(level-4)".\A0";
+  }
+
+  ol ol ol ol {
+    list-style-type: none;
+    counter-reset: level-5;
+  }
+
+  ol ol ol ol li::before {
+    counter-increment: level-5;
+    content: counter(level-1)"."counter(level-2)"."counter(level-3)"."counter(level-4)"."counter(level-5)".\A0";
+  }
+
+  ol ol ol ol ol {
+    list-style-type: none;
+    counter-reset: level-6;
+  }
+
+  ol ol ol ol ol li::before {
+    counter-increment: level-6;
+    content: counter(level-1)"."counter(level-2)"."counter(level-3)"."counter(level-4)"."counter(level-5)"."counter(level-6)"\A0";
+  }
+}
+
+%dt {
+  display: block;
+  margin: $dt-margin-top $dt-margin-right $dt-margin-bottom $dt-margin-left;
+  font-style: $dt-font-style;
+  font-weight: $dt-font-weight;
+}
+
+%dd {
+  margin: $dd-margin-top $dd-margin-right $dd-margin-bottom $dd-margin-left;
+  font-style: $dd-font-style;
+  font-weight: $dd-font-weight;
+}
+
+@mixin generic-ordered-lists() {
+  @each $list-style-type in upper-alpha, lower-alpha, upper-roman, lower-roman {
+    ol.#{$list-style-type},
+    ol.#{$list-style-type} ol {
+      list-style-type: $list-style-type;
+    }
+  }
+}
+
+@if $type != "web" {
+  ol {
+    @extend %ol;
+  }
+
+  ul {
+    @extend %ul;
+  }
+
+  li + li {
+    margin-top: if-map-get($li-li-margin-top, $type);
+  }
+
+  ol.legal {
+    @extend %legal;
+  }
+
+  ol.harvard {
+    @extend %harvard;
+  }
+
+  ol.decimal {
+    @extend %decimal;
+  }
+
+  @include generic-ordered-lists();
+
+  dl dt {
+    @extend %dt;
+  }
+
+  dl dd {
+    @extend %dd;
+  }
+} @else {
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter,
+  body#tinymce.wp-editor {
+    ol {
+      @extend %ol;
+    }
+
+    ul {
+      @extend %ul;
+    }
+
+    li + li {
+      margin-top: if-map-get($li-li-margin-top, $type);
+    }
+
+    ol.legal {
+      @extend %legal;
+    }
+
+    ol.harvard {
+      @extend %harvard;
+    }
+
+    ol.decimal {
+      @extend %decimal;
+    }
+
+    @include generic-ordered-lists();
+  }
+
+  dl dt {
+    @extend %dt;
+  }
+
+  dl dd {
+    @extend %dd;
+  }
+}
+
+@if $type == "epub" {
+  @media amzn-mobi {
+    ul,
+    ol {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      text-align: left !important;
+    }
+
+    ol {
+      text-align: left !important;
+    }
+
+    li {
+      text-align: left !important;
+    }
+  }
+}

@@ -1,0 +1,191 @@
+////
+/// @group section-titles
+////
+
+@import '../utilities';
+
+@if $type == 'web' {
+  section.front-matter,
+  section.back-matter,
+  section.part,
+  section.chapter {
+    header {
+      margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+    }
+  }
+
+  section.part {
+    header {
+      h1 {
+        display: $part-title-display;
+        margin: if-map-get($part-title-margin-top, $type) if-map-get($part-title-margin-right, $type) if-map-get($part-title-margin-bottom, $type) if-map-get($part-title-margin-left, $type);
+        font-family: $part-title-font-family;
+        font-size: if-map-get($part-title-font-size, $type);
+        font-style: $part-title-font-style;
+        font-weight: $part-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($part-title-line-height, $type);
+        text-align: $part-title-align;
+        text-transform: $part-title-text-transform;
+
+        span {
+          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) if-map-get($part-number-border-bottom-color, $type);
+          display: $part-number-display;
+          margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
+          padding-bottom: if-map-get($part-number-padding-bottom, $type);
+          font-family: $part-number-font-family;
+          font-size: if-map-get($part-number-font-size, $type);
+          font-style: $part-number-font-style;
+          font-weight: $part-number-font-weight;
+          line-height: if-map-get($part-number-line-height, $type);
+          text-align: $part-number-align;
+          text-transform: $part-number-text-transform;
+
+          &:before {
+            content: $part-number-before-content;
+            text-transform: $part-number-before-content-text-transform;
+          }
+
+          &::after {
+            content: $part-number-after-content;
+          }
+        }
+      }
+    }
+  }
+
+  section.front-matter,
+  section.back-matter,
+  section.chapter {
+    header {
+      [data-type='subtitle'] {
+        display: block;
+        margin-bottom: 0;
+        font-family: $section-subtitle-font-family;
+        font-size: if-map-get($section-subtitle-font-size, $type);
+        font-style: $section-subtitle-font-style;
+        font-weight: $section-subtitle-font-weight;
+        hyphens: none;
+        text-align: $section-subtitle-align;
+        text-transform: $section-subtitle-text-transform;
+        letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
+        word-spacing: if-map-get($section-subtitle-word-spacing, $type);
+        column-span: all;
+      }
+
+      [data-type='author'] {
+        display: block;
+        margin-bottom: if-map-get($section-author-margin-bottom, $type);
+        font-family: $section-author-font-family;
+        font-size: if-map-get($section-author-font-size, $type);
+        font-style: $section-author-font-style;
+        font-weight: $section-author-font-weight;
+        hyphens: none;
+        text-align: $section-author-align;
+        text-transform: $section-author-text-transform;
+        letter-spacing: if-map-get($section-author-letter-spacing, $type);
+        word-spacing: if-map-get($section-author-word-spacing, $type);
+      }
+
+      h1 + [data-type='subtitle'] {
+        margin-top: if-map-get($section-title-subtitle-spacing, $type);
+      }
+
+      h1 + [data-type='author'] {
+        margin-top: if-map-get($section-title-author-spacing, $type);
+      }
+
+      [data-type='subtitle'] + [data-type='author']  {
+        margin-top: if-map-get($section-subtitle-author-spacing, $type);
+      }
+
+      h1:last-child {
+        margin-bottom: if-map-get($section-title-margin-bottom, $type);
+      }
+
+      [data-type='subtitle']:last-child {
+        margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+      }
+    }
+  }
+
+  section.chapter {
+    header {
+      h1 {
+        display: $chapter-title-display;
+        margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
+        font-family: $chapter-title-font-family;
+        font-size: if-map-get($chapter-title-font-size, $type);
+        font-style: $chapter-title-font-style;
+        font-weight: $chapter-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($chapter-title-line-height, $type);
+        text-align: $chapter-title-align;
+        text-transform: $chapter-title-text-transform;
+
+        span {
+          border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
+          display: $chapter-number-display;
+          margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
+          padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
+          font-family: $chapter-number-font-family;
+          font-size: if-map-get($chapter-number-font-size, $type);
+          font-style: $chapter-number-font-style;
+          font-weight: $chapter-number-font-weight;
+          line-height: if-map-get($chapter-number-line-height, $type);
+          text-align: $chapter-number-align;
+          text-transform: $chapter-number-text-transform;
+
+          &:before {
+            content: $chapter-number-before-content;
+            text-transform: $chapter-number-before-content-text-transform;
+          }
+
+          &::after {
+            content: $chapter-number-after-content;
+          }
+        }
+      }
+      .numberless & {
+        h1 span {
+          display: none;
+          content: '';
+        }
+      }
+    }
+  }
+
+  section.front-matter {
+    header {
+      h1 {
+        display: $front-matter-title-display;
+        margin: if-map-get($front-matter-title-margin-top, $type) if-map-get($front-matter-title-margin-right, $type) 0 if-map-get($front-matter-title-margin-left, $type);
+        font-family: $front-matter-title-font-family;
+        font-size: if-map-get($front-matter-title-font-size, $type);
+        font-style: $front-matter-title-font-style;
+        font-weight: $front-matter-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($front-matter-title-line-height, $type);
+        text-align: $front-matter-title-align;
+        text-transform: $front-matter-title-text-transform;
+      }
+    }
+  }
+
+  section.back-matter {
+    header {
+      h1 {
+        display: $back-matter-title-display;
+        margin: if-map-get($back-matter-title-margin-top, $type) if-map-get($back-matter-title-margin-right, $type) 0 if-map-get($back-matter-title-margin-left, $type);
+        font-family: $back-matter-title-font-family;
+        font-size: if-map-get($back-matter-title-font-size, $type);
+        font-style: $back-matter-title-font-style;
+        font-weight: $back-matter-title-font-weight;
+        hyphens: none;
+        line-height: if-map-get($back-matter-title-line-height, $type);
+        text-align: $back-matter-title-align;
+        text-transform: $back-matter-title-text-transform;
+      }
+    }
+  }
+}

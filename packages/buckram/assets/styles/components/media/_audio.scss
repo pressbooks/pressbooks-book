@@ -1,0 +1,11 @@
+////
+/// @group media
+////
+
+@import '../utilities';
+
+.interactive-content--audio {
+  .interactive-content__icon {
+    background-image: url(if-map-get($audio-icon-url, $type));
+  }
+}

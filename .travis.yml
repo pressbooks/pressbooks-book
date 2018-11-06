@@ -31,7 +31,9 @@ before_install:
 install:
 - node -v
 - npm install -g yarn
+- npm install -g lerna
 - yarn
+- yarn run bootstrap
 - composer install
 before_script:
 - if [[ ${TRAVIS_PHP_VERSION:0:3} != "7.1" ]] && php -v | grep -q 'Xdebug'; then phpenv config-rm xdebug.ini; fi
@@ -39,6 +41,7 @@ before_script:
 script:
 - yarn run test
 - composer test
+- lerna run test
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 before_deploy:
