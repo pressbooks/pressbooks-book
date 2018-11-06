@@ -102,6 +102,10 @@ $textbox-border-color: $color-1 !default;
 /// Shading color for `<div>` elements with class `.sidebar.shaded`.
 /// @type String
 $shaded-color: $color-4 !default;
+/// Top border color on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.2.0
+$hr-break-symbols-border-top-color: (epub: $color-3, prince: $color-3, web: $color-3) !default;
 
 //TITLE PAGE(S) COLOR
 

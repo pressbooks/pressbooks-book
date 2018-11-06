@@ -1,14 +1,24 @@
 $type: 'prince';
+$part: 'Part';
+$chapter: 'Chapter';
 
 @import 'partials/fonts';
-@import 'partials/variables';
 
+@import "../../../assets/styles/variables/accessibility";
 @import '../../../assets/styles/components/accessibility';
+@import "../../../assets/styles/variables/colors";
 @import '../../../assets/styles/components/colors';
+@import "../../../assets/styles/variables/elements";
 @import '../../../assets/styles/components/elements';
+@import "../../../assets/styles/variables/specials";
 @import '../../../assets/styles/components/specials';
+@import "../../../assets/styles/variables/media";
 @import '../../../assets/styles/components/media';
+@import "../../../assets/styles/variables/pages";
 @import '../../../assets/styles/components/pages';
+@import "../../../assets/styles/variables/section-titles";
 @import '../../../assets/styles/components/section-titles';
+@import "../../../assets/styles/variables/structure";
 @import '../../../assets/styles/components/structure';
+@import "../../../assets/styles/variables/toc";
 @import '../../../assets/styles/components/toc/left';
