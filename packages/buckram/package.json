@@ -3,7 +3,7 @@
   "version": "1.1.2",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
-    "build": "composer test",
+    "build": "composer install && composer test",
     "diff": "npm run -s build && mocha",
     "docs": "node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
     "lint": "npm run -s lint:styles",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pressbooks/buckram.git"
+    "url": "git+https://github.com/pressbooks/pressbooks-book.git"
   },
   "author": "Pressbooks (Book Oven Inc.)",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/pressbooks/buckram/issues"
+    "url": "https://github.com/pressbooks/pressbooks-book/issues"
   },
-  "homepage": "https://github.com/pressbooks/buckram#readme",
+  "homepage": "https://github.com/pressbooks/pressbooks-book/tree/master/packages/buckram#readme",
   "engines": {
     "node": ">= 6.9.4"
   },

@@ -23,6 +23,7 @@
 		"pressbooks-build-tools": "^0.13.0"
 	},
 	"scripts": {
+		"bootstrap": "lerna bootstrap",
 		"build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
