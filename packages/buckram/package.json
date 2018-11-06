@@ -42,5 +42,6 @@
       "no-descending-specificity": null,
       "no-duplicate-at-import-rules": null
     }
-  }
+  },
+  "gitHead": "05197d8e4b33316b45bcd2607535f8b32ad14053"
 }
