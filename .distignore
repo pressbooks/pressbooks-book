@@ -9,7 +9,7 @@ tests
 .gitignore
 .travis.yml
 .tx
-packages
+packages/buckram/tests
 phpcs.ruleset.xml
 phpunit.xml
 webpack.mix.js
