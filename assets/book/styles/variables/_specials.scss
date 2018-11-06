@@ -488,11 +488,6 @@ $hr-break-symbols-border-top-width: (epub: 0, prince: 0, web: 0) !default;
 /// @since 1.2.0
 $hr-break-symbols-border-top-style: (epub: none, prince: none, web: none) !default;
 
-/// Top border color on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
-/// @type String | Map
-/// @since 1.2.0
-$hr-break-symbols-border-top-color: (epub: $color-3, prince: $color-3, web: $color-3) !default;
-
 /// Top padding on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String | Map
 /// @since 1.2.0
