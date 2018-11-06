@@ -2,6 +2,8 @@
 /// @group pages
 ////
 
+@import 'colors';
+
 // HALF TITLE PAGE
 /// Half Title page display.
 /// @type String | Map
@@ -157,12 +159,12 @@ $title-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !defaul
 $title-title-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Defines bottom border style for the title page title.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-title-border-bottom-style: none !default;
 
 /// Defines bottom border style for the title page title.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-title-border-bottom-color: $color-3 !default;
 
@@ -232,12 +234,12 @@ $title-subtitle-text-transform: none !default;
 $title-subtitle-border-bottom-width: $title-title-border-bottom-width !default;
 
 /// Defines bottom border style for the title page subtitle.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-subtitle-border-bottom-style: $title-title-border-bottom-style !default;
 
 /// Defines bottom border for the title page subtitle.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-subtitle-border-bottom-color: $title-title-border-bottom-color !default;
 
@@ -313,12 +315,12 @@ $title-author-text-transform: none !default;
 $title-author-border-bottom-width: $title-title-border-bottom-width !default;
 
 /// Defines bottom border style for the title page author.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-author-border-bottom-style: $title-title-border-bottom-style !default;
 
 /// Defines bottom border style for the title page author.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-author-border-bottom-color: $title-title-border-bottom-color !default;
 
@@ -426,12 +428,12 @@ $title-publisher-text-transform: none !default;
 $title-publisher-border-bottom-width: $title-title-border-bottom-width !default;
 
 /// Defines bottom border style for the title page publisher.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-publisher-border-bottom-style: $title-title-border-bottom-style !default;
 
 /// Defines bottom border style for the title page publisher.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-publisher-border-bottom-color: $title-title-border-bottom-color !default;
 
@@ -494,12 +496,12 @@ $title-publisher-city-text-transform: uppercase !default;
 $title-publisher-city-border-bottom-width: $title-title-border-bottom-width !default;
 
 /// Defines bottom border style for the title page publisher city.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-publisher-city-border-bottom-style: $title-title-border-bottom-style !default;
 
 /// Defines bottom border style for the title page publisher city.
-/// @type String 
+/// @type String
 /// @since 1.1.0
 $title-publisher-city-border-bottom-color: $title-title-border-bottom-color !default;
 

@@ -2,6 +2,8 @@
 /// @group section-titles
 ////
 
+@import 'colors';
+
 /// Defines margin between the section header and preceding element (section number) or top edge of the page content area.
 /// @type String | Map
 /// @deprecated Use $section-header-margin-top.
@@ -103,12 +105,12 @@ $section-title-margin-right: (
 $section-title-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Defines bottom border style for the section title.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $section-title-border-bottom-style: none !default;
 
 /// Defines bottom border style for the section title.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $section-title-border-bottom-color: $color-3 !default;
 
@@ -167,7 +169,7 @@ $section-title-letter-spacing: (
   epub: normal,
   prince: normal,
   web: normal
-) !default; 
+) !default;
 
 /// Defines the section title word spacing.
 /// @type String | Map
@@ -176,7 +178,7 @@ $section-title-word-spacing: (
   epub: normal,
   prince: normal,
   web: normal
-) !default; 
+) !default;
 
 /// Defines the section title decoration font family.
 /// @type String
@@ -184,7 +186,7 @@ $section-title-word-spacing: (
 $section-title-decoration-font-family: $font-3 !default;
 
 /// Defines the section title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $section-title-decoration-content: "" !default;
 
@@ -199,7 +201,7 @@ $section-title-decoration-display: none !default;
 $section-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
 
 /// Defines the section title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $section-title-decoration-font-weight: normal !default;
 
@@ -682,7 +684,7 @@ $part-title-word-spacing: $section-title-word-spacing !default;
 $part-title-decoration-font-family: $section-title-decoration-font-family !default;
 
 /// Defines the part title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $part-title-decoration-content: $section-title-decoration-content !default;
 
@@ -697,7 +699,7 @@ $part-title-decoration-display: $section-title-decoration-display !default;
 $part-title-decoration-font-size: $section-title-decoration-font-size !default;
 
 /// Defines the part title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $part-title-decoration-font-weight: $section-title-decoration-font-weight !default;
 
@@ -794,7 +796,7 @@ $front-matter-title-line-height: $section-title-line-height !default;
 /// Defines the front matter title bottom border style.
 /// @type String
 /// @since 1.0.0
-$front-matter-title-border-bottom-style: $section-title-border-bottom-style !default; 
+$front-matter-title-border-bottom-style: $section-title-border-bottom-style !default;
 
 /// Defines the front matter title bottom border width.
 /// @type String | Map
@@ -817,7 +819,7 @@ $front-matter-title-padding-bottom: $section-title-padding-bottom !default;
 $front-matter-title-decoration-font-family: $section-title-decoration-font-family !default;
 
 /// Defines the front matter title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $front-matter-title-decoration-content: $section-title-decoration-content !default;
 
@@ -832,7 +834,7 @@ $front-matter-title-decoration-display: $section-title-decoration-display !defau
 $front-matter-title-decoration-font-size: $section-title-decoration-font-size !default;
 
 /// Defines the front matter title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $front-matter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
 
@@ -904,7 +906,7 @@ $toc-title-line-height: $section-title-line-height !default;
 /// Defines the table of contents title bottom border style.
 /// @type String
 /// @since 1.0.0
-$toc-title-border-bottom-style: $section-title-border-bottom-style !default; 
+$toc-title-border-bottom-style: $section-title-border-bottom-style !default;
 
 /// Defines the table of contents title bottom border width.
 /// @type String | Map
@@ -927,7 +929,7 @@ $toc-title-padding-bottom: $section-title-padding-bottom !default;
 $toc-title-decoration-font-family: $section-title-decoration-font-family !default;
 
 /// Defines the table of contents title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $toc-title-decoration-content: $section-title-decoration-content !default;
 
@@ -942,7 +944,7 @@ $toc-title-decoration-display: $section-title-decoration-display !default;
 $toc-title-decoration-font-size: $section-title-decoration-font-size !default;
 
 /// Defines the table of contents title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $toc-title-decoration-font-weight: $section-title-decoration-font-weight !default;
 
@@ -1152,12 +1154,12 @@ $chapter-title-word-spacing:  $section-title-word-spacing !default;
 $chapter-title-border-bottom-width: $section-title-border-bottom-width !default;
 
 /// Defines bottom border style for the chapter title.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $chapter-title-border-bottom-style: $section-title-border-bottom-style !default;
 
 /// Defines bottom border style for the chapter title.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $chapter-title-border-bottom-color: $section-title-border-bottom-color !default;
 
@@ -1172,7 +1174,7 @@ $chapter-title-padding-bottom:$section-title-padding-bottom !default;
 $chapter-title-decoration-font-family: $section-title-decoration-font-family !default;
 
 /// Defines the chapter title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $chapter-title-decoration-content: $section-title-decoration-content !default;
 
@@ -1187,7 +1189,7 @@ $chapter-title-decoration-display: $section-title-decoration-display !default;
 $chapter-title-decoration-font-size: $section-title-decoration-font-size !default;
 
 /// Defines the chapter title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $chapter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
 
@@ -1262,12 +1264,12 @@ $back-matter-title-line-height: $section-title-line-height !default;
 $back-matter-title-border-bottom-width: $section-title-border-bottom-width !default;
 
 /// Defines bottom border style for the back matter title.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $back-matter-title-border-bottom-style: $section-title-border-bottom-style !default;
 
 /// Defines bottom border style for the back matter title.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $back-matter-title-border-bottom-color: $section-title-border-bottom-color !default;
 
@@ -1292,7 +1294,7 @@ $back-matter-title-word-spacing:  $section-title-word-spacing !default;
 $back-matter-title-decoration-font-family: $section-title-decoration-font-family !default;
 
 /// Defines the back matter title decoration content.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $back-matter-title-decoration-content: $section-title-decoration-content !default;
 
@@ -1307,7 +1309,7 @@ $back-matter-title-decoration-display: $section-title-decoration-display !defaul
 $back-matter-title-decoration-font-size: $section-title-decoration-font-size !default;
 
 /// Defines the back matter title decoration font weight.
-/// @type String 
+/// @type String
 /// @since 1.0.0
 $back-matter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
 
