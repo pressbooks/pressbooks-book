@@ -27,8 +27,6 @@ mix
 	.sass( 'assets/src/styles/book.scss', 'dist/styles' )
 	.sass( 'assets/legacy/styles/web-house-style.scss', 'dist/styles' )
 	.copy( 'node_modules/lity/dist/lity.css', 'dist/styles/lity.css' )
-	.copyDirectory( 'packages/buckram/assets/styles', 'assets/book/styles' )
-	.copyDirectory( 'packages/buckram/assets/images', 'assets/book/images' )
 	.copyDirectory( 'assets/src/images', 'dist/images' )
 	.version()
 	.options( { processCssUrls: false } );
