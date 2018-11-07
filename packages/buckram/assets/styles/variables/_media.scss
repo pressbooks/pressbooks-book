@@ -138,27 +138,27 @@ $_image-caption-text-align: (
 /// @type String | Map
 /// @since 0.7.0
 $interactive-icon-url: (
-  prince: "pressbooks-book/assets/book/images/icon-interactive.svg",
-  epub: "pressbooks-book/assets/book/images/icon-interactive.png",
-  web: "pressbooks-book/assets/book/images/icon-interactive.svg"
+  prince: "images/icon-interactive.svg",
+  epub: "images/icon-interactive.png",
+  web: "images/icon-interactive.svg"
 ) !default;
 
 /// Icon image URL for audio content
 /// @type String | Map
 /// @since 0.7.0
 $audio-icon-url: (
-  prince: "pressbooks-book/assets/book/images/icon-audio.svg",
-  epub: "pressbooks-book/assets/book/images/icon-audio.png",
-  web: "pressbooks-book/assets/book/images/icon-audio.svg"
+  prince: "images/icon-audio.svg",
+  epub: "images/icon-audio.png",
+  web: "images/icon-audio.svg"
 ) !default;
 
 /// Icon image URL for video content
 /// @type String | Map
 /// @since 0.7.0
 $video-icon-url: (
-  prince: "pressbooks-book/assets/book/images/icon-video.svg",
-  epub: "pressbooks-book/assets/book/images/icon-video.png",
-  web: "pressbooks-book/assets/book/images/icon-video.svg"
+  prince: "images/icon-video.svg",
+  epub: "images/icon-video.png",
+  web: "images/icon-video.svg"
 ) !default;
 
 /// Display property for interactive content icon
