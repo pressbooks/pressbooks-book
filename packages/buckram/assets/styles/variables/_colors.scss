@@ -21,9 +21,14 @@ $color-6: $color-1 !default;
 /// Color for `<a>` elements.
 /// @type String | Map
 $link-color: (
-  prince: initial,
+  prince: normal,
   web: var(--primary, #b01109)
 ) !default;
+
+/// Color for `<a>` elements in the print context.
+/// @since 1.2.0
+/// @type String
+$link-color-print: initial !default;
 
 //BODY COLOR
 

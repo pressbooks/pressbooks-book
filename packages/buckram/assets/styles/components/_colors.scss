@@ -9,6 +9,10 @@
   a {
     color: if-map-get($link-color, $type);
   }
+
+  .print a {
+    color: $link-color-print;
+  }
 }
 
 @if $type != 'web' {

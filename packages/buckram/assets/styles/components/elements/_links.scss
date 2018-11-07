@@ -14,6 +14,12 @@
   }
 }
 
+@if $type == 'prince' {
+  .print a {
+    text-decoration: $link-text-decoration-print;
+  }
+}
+
 @else {
   .front-matter,
   .part,

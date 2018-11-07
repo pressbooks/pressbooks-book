@@ -254,11 +254,6 @@ $sup-font-style: normal !default;
 $sup-text-transform: none !default;
 $sup-font-size: $sup-sub-font-size !default;
 $sup-line-height: $sup-sub-line-height !default;
-$link-text-decoration: (
-  epub: none,
-  prince: none,
-  web: underline
-) !default;
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/elements';

@@ -58,8 +58,8 @@ $hx-border-bottom-color: initial !default;
 /// @type String | Map
 /// @since 1.2.0
 $hx-letter-spacing: (
-  epub: normal, 
-  prince: normal, 
+  epub: normal,
+  prince: normal,
   web: normal
 ) !default;
 
@@ -67,8 +67,8 @@ $hx-letter-spacing: (
 /// @type String | Map
 /// @since 1.2.0
 $hx-word-spacing: (
-  epub: normal, 
-  prince: normal, 
+  epub: normal,
+  prince: normal,
   web: normal
 ) !default;
 
@@ -947,22 +947,22 @@ $table-th-vertical-align: middle !default;
 
 /// Border top width on `<th>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-th-border-top-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Border top style on `<th>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-th-border-top-style: (epub: none, prince: none, web: none) !default;
 
 /// Border bottom width on `<th>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-th-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Border bottom style on `<th>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-th-border-bottom-style: (epub: none, prince: none, web: none) !default;
 
 /// Top padding for `<td>` elements.
@@ -996,22 +996,22 @@ $table-td-vertical-align: middle !default;
 
 /// Border top width on `<tr>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-tr-border-top-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Border top style on `<tr>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-tr-border-top-style: (epub: none, prince: none, web: none) !default;
 
 /// Border bottom width on `<tr>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-tr-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Border bottom style on `<tr>` elements.
 /// @since 1.2.0
-/// @type String | Map 
+/// @type String | Map
 $table-tr-border-bottom-style: (epub: none, prince: none, web: none) !default;
 
 /// Font size for `<cite>` elements.
@@ -1234,6 +1234,11 @@ $sup-line-height: $sup-sub-line-height !default;
 /// @type String
 $link-text-decoration: (
   epub: none,
-  prince: none,
+  prince: underline,
   web: underline
 ) !default;
+
+/// Text decoration for `<a>` elements in the print context.
+/// @since 1.2.0
+/// @type String
+$link-text-decoration-print: none;
