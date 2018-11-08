@@ -5,7 +5,7 @@ if ( ! isset( $book_structure ) ) {
 }
 
 if ( ! isset( $book_subsections ) ) {
-	$book_subsections = \Pressbooks\Book\Helpers\get_all_subsections( $book_structure );
+	$book_subsections = pb_get_all_subsections( $book_structure );
 }
 
 // Setup TOC specific variables

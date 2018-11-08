@@ -5,9 +5,9 @@
 
 .footer.footer--reading {
   padding-top: 1rem;
-  padding-bottom: 7rem;
+  padding-bottom: 12rem;
 
-  @media screen and (min-width: rem(768)) {
+  @media #{$breakpoint-large} {
     padding-bottom: 4rem;
   }
 

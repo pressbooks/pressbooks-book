@@ -1,0 +1,70 @@
+////
+/// @group structure
+////
+
+//========================
+// Content String Settings
+//========================
+
+// Metadata
+
+meta[name="pb-title"] {
+  string-set: book-title attr('content');
+}
+
+meta[name="pb-short-title"] {
+  string-set: book-title attr('content');
+}
+
+meta[name="pb-subtitle"] {
+  string-set: book-subtitle attr('content');
+}
+
+meta[name="pb-authors"] {
+  string-set: book-author attr('content');
+}
+
+meta[name="pb-publisher"] {
+  string-set: book-publisher attr('content');
+}
+
+meta[name="pb-publisher-city"] {
+  string-set: book-publisher-city attr('content');
+}
+
+.short-book-title {
+  visibility: hidden;
+}
+
+// Parts
+.part-title-wrap {
+  .part-number {
+    string-set: part-number content();
+  }
+
+  .part-title {
+    string-set: part-title content();
+  }
+}
+
+// Sections (Front Matter, Chapters, Back Matter)
+
+.chapter-number {
+  string-set: chapter-number content();
+}
+
+.front-matter,
+.chapter,
+.back-matter {
+  string-set: section-title attr('title');
+}
+
+.chapter-title-wrap {
+  .chapter-author {
+    string-set: chapter-author content();
+  }
+
+  .chapter-subtitle {
+    string-set: chapter-subtitle content();
+  }
+}

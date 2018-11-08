@@ -1,0 +1,32 @@
+////
+/// @group elements
+////
+
+//============================================================================//
+//                                   Links                                    //
+//============================================================================//
+
+@import "../utilities";
+
+@if $type != 'web' {
+  a {
+    text-decoration: if-map-get($link-text-decoration, $type);
+  }
+}
+
+@if $type == 'prince' {
+  .print a {
+    text-decoration: $link-text-decoration-print;
+  }
+}
+
+@else {
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter {
+    a {
+      text-decoration: if-map-get($link-text-decoration, $type);
+    }
+  }
+}

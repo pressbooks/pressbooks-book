@@ -2,7 +2,6 @@
 
 namespace Pressbooks\Book\Helpers;
 
-use function \Pressbooks\PostType\get_post_type_label;
 use Pressbooks\Container;
 
 /**
@@ -72,53 +71,6 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 		);
 	}
 	return $output;
-}
-
-/**
- * Get all book subsections.
- *
- * @since 2.6.0
- *
- * @param array $book_structure The book structure (see \Pressbooks\Book::getBookStructure())
- * @return array The subsections
- */
-function get_all_subsections( $book_structure ) {
-	if ( pb_should_parse_subsections() ) {
-		$book_subsections_transient = 'pb_book_subsections';
-		$book_subsections = get_transient( $book_subsections_transient );
-		if ( ! $book_subsections ) {
-			$book_subsections = [];
-			if ( ! get_transient( 'pb_getting_all_subsections' ) ) {
-				set_transient( 'pb_getting_all_subsections', 1, 5 * MINUTE_IN_SECONDS );
-				foreach ( $book_structure['front-matter'] as $section ) {
-					$subsections = pb_get_subsections( $section['ID'] );
-					if ( $subsections ) {
-						$book_subsections['front-matter'][ $section['ID'] ] = $subsections;
-					}
-				}
-				foreach ( $book_structure['part'] as $key => $part ) {
-					if ( ! empty( $part['chapters'] ) ) {
-						foreach ( $part['chapters'] as $section ) {
-							$subsections = pb_get_subsections( $section['ID'] );
-							if ( $subsections ) {
-								$book_subsections['chapters'][ $section['ID'] ] = $subsections;
-							}
-						}
-					}
-				}
-				foreach ( $book_structure['back-matter'] as $section ) {
-					$subsections = pb_get_subsections( $section['ID'] );
-					if ( $subsections ) {
-						$book_subsections['back-matter'][ $section['ID'] ] = $subsections;
-					}
-				}
-				delete_transient( 'pb_getting_all_subsections' );
-			}
-		}
-		set_transient( $book_subsections_transient, $book_subsections );
-		return $book_subsections;
-	}
-	return [];
 }
 
 /**
@@ -494,52 +446,45 @@ function get_metakeys() {
  */
 function get_links( $echo = true ) {
 	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
-	$first_chapter          = pb_get_first();
-	$prev_chapter           = pb_get_prev();
-	$prev_chapter_id        = pb_get_prev_post_id();
-	$prev_post_type         = get_post_type( $prev_chapter_id );
-	if ( in_array( $prev_post_type, [ 'front-matter', 'back-matter', 'chapter' ], true ) ) {
-		$prev_section_type = pb_get_section_type( get_post( $prev_chapter_id ) );
-		if ( in_array( $prev_section_type, [ 'miscellaneous', 'standard', 'numberless' ], true ) ) {
-			$prev_label = get_post_type_label( $prev_post_type );
-		} else {
-			$prev_label = get_term_by( 'slug', $prev_section_type, "$prev_post_type-type" )->name;
-		}
+	$first_chapter = pb_get_first();
+	$prev_chapter = pb_get_prev();
+	$prev_chapter_id = pb_get_prev_post_id();
+	$prev_title = get_the_title( $prev_chapter_id );
+	$prev_short_title = get_post_meta( 'pb_short_title', $prev_chapter_id, true );
+	if ( $prev_short_title ) {
+		$prev_label = $prev_short_title;
 	} else {
-		$prev_label = get_post_type_label( $prev_post_type );
+		$prev_label = $prev_title;
 	}
-	$next_chapter           = pb_get_next();
-	$next_chapter_id        = pb_get_next_post_id();
-	$next_post_type         = get_post_type( $next_chapter_id );
-	if ( in_array( $next_post_type, [ 'front-matter', 'back-matter', 'chapter' ], true ) ) {
-		$next_section_type = pb_get_section_type( get_post( $next_chapter_id ) );
-		if ( in_array( $next_section_type, [ 'miscellaneous', 'standard', 'numberless' ], true ) ) {
-			$next_label = get_post_type_label( $next_post_type );
-		} else {
-			$next_label = get_term_by( 'slug', $next_section_type, "$next_post_type-type" )->name;
-		}
+	$next_chapter = pb_get_next();
+	$next_chapter_id = pb_get_next_post_id();
+	$next_title = get_the_title( $next_chapter_id );
+	$next_short_title = get_post_meta( 'pb_short_title', $next_chapter_id, true );
+	if ( $next_short_title ) {
+		$next_label = $next_short_title;
 	} else {
-		$next_label = get_post_type_label( $next_post_type );
+		$next_label = $next_title;
 	}
+
 	if ( $echo ) :
 		?>
 		<nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
-				<?php /* translators: %1$s: post title, %2$s: post type name */ ?>
-				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %1$s (%2$s)', 'pressbooks-book' ), get_the_title( $prev_chapter_id ), $prev_label ); ?>">
+				<?php /* translators: %s: post title */ ?>
+				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_title ); ?>">
 					<svg class="icon--svg"><use xlink:href="#arrow-left" /></svg>
-					<?php /* translators: %s: post type name */ ?>
-					<?php printf( __( 'Previous (%s)', 'pressbooks-book' ), $prev_label ); ?>
+					<?php /* translators: %s: post short title or title */ ?>
+					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
 			<?php } ?>
 		</div>
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
-				<?php /* translators: %1$s: post title, %2$s: post type name */ ?>
-				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %1$s (%2$s)', 'pressbooks-book' ), get_the_title( $next_chapter_id ), $next_label ); ?>">
-					<?php /* translators: %s: post type name */ ?>
-					<?php printf( __( 'Next (%s)', 'pressbooks-book' ), $next_label ); ?>
+				<?php /* translators: %s: post title, */ ?>
+				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_title ); ?>">
+					<?php /* translators: %s: post short title or title */ ?>
+					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
 					<svg class="icon--svg"><use xlink:href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
