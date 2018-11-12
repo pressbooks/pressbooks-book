@@ -137,6 +137,8 @@
 }
 
 // Running Content
+/// @param {string} $page-position - The page position.
+/// @param {string|map} $content-position - The running content position.
 @mixin runninghead($page-position, $content-position) {
   @each $page-type in
     'front-matter:#{$page-position}',
@@ -212,6 +214,9 @@
   }
 }
 
+// Running Content
+/// @param {string} $page-position - The page position.
+/// @param {string|map} $content-position - The running content position.
 @mixin runningfoot($page-position, $content-position) {
   @each $page-type in
     'front-matter:#{$page-position}',
@@ -288,6 +293,10 @@
 }
 
 // Page Structure
+/// @param {string} $page-type - The page type.
+/// @param {string} $page-position - The page position.
+/// @param {string|map} $numbering-position - The page numbering position.
+/// @param {string|map} $running-content-position - The running content position.
 @mixin page-structure($page-type, $page-position, $numbering-position, $running-content-position) {
   @if $numbering-position and $running-content-position {
     @if $numbering-position == $running-content-position {
@@ -324,10 +333,10 @@
       }
       @else {
         @page #{$page-type}:first:right {
-          #{map-get($running-content-position, right)} {
-            @if map-get($running-content-position, right) == '@bottom-left'
-              or map-get($running-content-position, right) == '@bottom-left-corner'
-              or map-get($running-content-position, right) == '@left-bottom' {
+          #{if-map-get($running-content-position, right)} {
+            @if if-map-get($running-content-position, right) == '@bottom-left'
+              or if-map-get($running-content-position, right) == '@bottom-left-corner'
+              or if-map-get($running-content-position, right) == '@left-bottom' {
               content: if-map-get($right-page-number, $page-type) $right-running-separator if-map-get($right-running-content, $page-type);
             }
 
@@ -338,10 +347,10 @@
         }
 
         @page #{$page-type}:first:left {
-          #{map-get($running-content-position, left)} {
-            @if map-get($running-content-position, left) == '@bottom-right'
-              or map-get($running-content-position, left) == '@bottom-right-corner'
-              or map-get($running-content-position, left) == '@right-bottom' {
+          #{if-map-get($running-content-position, left)} {
+            @if if-map-get($running-content-position, left) == '@bottom-right'
+              or if-map-get($running-content-position, left) == '@bottom-right-corner'
+              or if-map-get($running-content-position, left) == '@right-bottom' {
               content: if-map-get($right-running-content, $page-type) $right-running-separator if-map-get($right-page-number, $page-type);
             }
 
@@ -379,19 +388,19 @@
       }
       @else {
         @page #{$page-type}:first:right {
-          #{map-get($running-content-position, right)} {
+          #{if-map-get($running-content-position, right)} {
             content: if-map-get($right-running-content, $page-type);
           }
-          #{map-get($numbering-position, right)} {
+          #{if-map-get($numbering-position, right)} {
             content: if-map-get($right-page-number, $page-type);
           }
         }
 
         @page #{$page-type}:first:left {
-          #{map-get($running-content-position, left)} {
+          #{if-map-get($running-content-position, left)} {
             content: if-map-get($left-running-content, $page-type);
           }
-          #{map-get($numbering-position, left)} {
+          #{if-map-get($numbering-position, left)} {
             content: if-map-get($left-page-number, $page-type);
           }
         }
@@ -417,13 +426,13 @@
 
       @else {
         @page #{$page-type}:first:right {
-          #{map-get($numbering-position, right)} {
+          #{if-map-get($numbering-position, right)} {
             content: if-map-get($right-page-number, $page-type);
           }
         }
 
         @page #{$page-type}:first:left {
-          #{map-get($numbering-position, left)} {
+          #{if-map-get($numbering-position, left)} {
             content: if-map-get($left-page-number, $page-type);
           }
         }
@@ -447,13 +456,13 @@
 
       @else {
         @page #{$page-type}:first:right {
-          #{map-get($running-content-position, right)} {
+          #{if-map-get($running-content-position, right)} {
             content: if-map-get($right-running-content, $page-type);
           }
         }
 
         @page #{$page-type}:first:left {
-          #{map-get($running-content-position, left)} {
+          #{if-map-get($running-content-position, left)} {
             content: if-map-get($left-running-content, $page-type);
           }
         }
