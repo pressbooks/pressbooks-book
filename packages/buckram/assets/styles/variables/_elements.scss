@@ -815,19 +815,19 @@ $ol-ol-margin-top: 0.5em !default;
 $ul-ul-margin-top: 0.5em !default;
 
 /// Top margin for `<dt>` elements.
-/// @type String
+/// @type String | Map
 $dt-margin-top: 0 !default;
 
 /// Right margin for `<dt>` elements.
-/// @type String
+/// @type String | Map
 $dt-margin-right: 0 !default;
 
 /// Bottom margin for `<dt>` elements.
-/// @type String
+/// @type String | Map
 $dt-margin-bottom: 0 !default;
 
 /// Left margin for `<dt>` elements.
-/// @type String
+/// @type String | Map
 $dt-margin-left: 0 !default;
 
 /// Font style for `<dt>` elements.
@@ -838,25 +838,30 @@ $dt-font-style: normal !default;
 /// @type String
 $dt-font-weight: bold !default;
 
+/// Spacing between a `<dt>` element and the subsequent `<dt>` element.
+/// @since 1.2.0
+/// @type String | Map
+$dd-dt-spacing: 1em !default;
+
 /// Top margin for `<dd>` elements.
-/// @type String
+/// @type String | Map
 $dd-margin-top: 0 !default;
 
 /// Right margin for `<dd>` elements.
-/// @type String
+/// @type String | Map
 $dd-margin-right: 0 !default;
 
 /// Bottom margin for `<dd>` elements.
-/// @type String
+/// @type String | Map
 $dd-margin-bottom: 0 !default;
 
 /// Left margin for `<dd>` elements.
-/// @type String
-$dd-margin-left: 0 !default;
+/// @type String | Map
+$dd-margin-left: (epub: 0, prince: 2em, web: 0) !default;
 
 /// Font style for `<dd>` elements.
 /// @type String
-$dd-font-style: italic !default;
+$dd-font-style: normal !default;
 
 /// Font weight for `<dd>` elements.
 /// @type String

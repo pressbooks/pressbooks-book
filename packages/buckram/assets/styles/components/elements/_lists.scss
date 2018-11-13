@@ -231,13 +231,26 @@
 
 %dt {
   display: block;
-  margin: $dt-margin-top $dt-margin-right $dt-margin-bottom $dt-margin-left;
+  margin:
+    if-map-get($dt-margin-top, $type)
+    if-map-get($dt-margin-right, $type)
+    if-map-get($dt-margin-bottom, $type)
+    if-map-get($dt-margin-left, $type);
+  font-style: $dt-font-style;
+  font-weight: $dt-font-weight;
+}
+
+%dfn {
   font-style: $dt-font-style;
   font-weight: $dt-font-weight;
 }
 
 %dd {
-  margin: $dd-margin-top $dd-margin-right $dd-margin-bottom $dd-margin-left;
+  margin:
+    if-map-get($dd-margin-top, $type)
+    if-map-get($dd-margin-right, $type)
+    if-map-get($dd-margin-bottom, $type)
+    if-map-get($dd-margin-left, $type);
   font-style: $dd-font-style;
   font-weight: $dd-font-weight;
 }
@@ -282,8 +295,16 @@
     @extend %dt;
   }
 
+  dl dt dfn {
+    @extend %dfn;
+  }
+
   dl dd {
     @extend %dd;
+  }
+
+  dd + dt {
+    margin-top: $dd-dt-spacing;
   }
 } @else {
   .front-matter,
@@ -322,8 +343,16 @@
     @extend %dt;
   }
 
+  dl dt dfn {
+    @extend %dfn;
+  }
+
   dl dd {
     @extend %dd;
+  }
+
+  dd + dt {
+    margin-top: $dd-dt-spacing;
   }
 }
 
