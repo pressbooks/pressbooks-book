@@ -45,7 +45,7 @@
       @if $type != 'epub' {
         line-height: if-map-get($part-title-line-height, $type);
       }
-      text-align: $part-title-align;
+      text-align: if-map-get($part-title-align, $type);
       text-transform: $part-title-text-transform;
       page-break-after: avoid;
       letter-spacing: if-map-get($part-title-letter-spacing, $type);
