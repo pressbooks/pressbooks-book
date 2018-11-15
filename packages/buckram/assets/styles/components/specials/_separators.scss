@@ -81,6 +81,16 @@ hr {
   page-break-after: always;
 }
 
+@if $type == "web" {
+    h3.section-break{
+      text-align: center;
+    }
+
+    h3.section-break-page{
+      text-align: center;
+    }
+}
+
 // Blank Pages
 .blank-page {
   font-size: 0;
