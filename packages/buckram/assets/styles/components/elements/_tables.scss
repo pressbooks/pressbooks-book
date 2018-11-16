@@ -32,6 +32,9 @@
 
     p {
       text-align: $table-align;
+      @if $type == 'prince' {
+        line-height: $table-line-height;
+      }
     }
 
     caption {
