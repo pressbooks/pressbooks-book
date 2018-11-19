@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- Improve focus styles ([#169](https://github.com/pressbooks/pressbooks-book/issues/169), [#189](https://github.com/pressbooks/pressbooks-book/issues/189)): [#369](https://github.com/pressbooks/pressbooks-book/pull/369)
+- Improve focus styles ([#189](https://github.com/pressbooks/pressbooks-book/issues/189)): [#369](https://github.com/pressbooks/pressbooks-book/pull/369)
 - Add styling for glossary term lists ([#320](https://github.com/pressbooks/pressbooks-book/issues/320)): [#361](https://github.com/pressbooks/pressbooks-book/pull/361)
 - Include Buckram as subpackage ([#278](https://github.com/pressbooks/pressbooks-book/issues/278), [#307](https://github.com/pressbooks/pressbooks-book/issues/307)): [#308](https://github.com/pressbooks/pressbooks-book/pull/308), [#357](https://github.com/pressbooks/pressbooks-book/pull/357), [#358](https://github.com/pressbooks/pressbooks-book/pull/358)
 - Use short title for webbook navigation: [#296](https://github.com/pressbooks/pressbooks-book/pull/296)
