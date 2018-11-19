@@ -1,7 +1,7 @@
 module.exports = {
-	title: "Button",
-	status: "prototype",
+	title: 'Button',
+	status: 'prototype',
 	context: {
-		text: "Do Something"
-	}
+		text: 'Do Something',
+	},
 };
