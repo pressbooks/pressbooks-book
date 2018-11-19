@@ -1,0 +1,112 @@
+// stylelint-disable no-descending-specificity
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+main * + p {
+  margin-top: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: inherit;
+  }
+}
+
+.home {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $headings-color;
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 1rem;
+    width: rem(45);
+    height: rem(5);
+    background: var(--accent);
+
+    @media #{$breakpoint-large} {
+      margin-bottom: 2rem;
+      width: rem(75);
+    }
+  }
+
+  @media #{$breakpoint-tablet-and-up} {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 1rem;
+    width: rem(45);
+    height: rem(5);
+    background: var(--accent);
+
+    @media #{$breakpoint-large} {
+      margin-bottom: 2rem;
+      width: rem(75);
+    }
+  }
+
+  @media #{$breakpoint-tablet-and-up} {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p,
+ul,
+ol {
+  font-size: rem(18);
+  line-height: $line-height-base;
+}

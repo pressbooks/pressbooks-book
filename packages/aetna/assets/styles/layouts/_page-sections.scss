@@ -1,0 +1,154 @@
+.has-sections .entry-content {
+  // TODO
+}
+
+.page-section {
+  width: 100%;
+  padding: 4rem 1rem;
+  background: var(--body-bg);
+  text-align: center;
+
+  ul,
+  ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  &--accent {
+    color: var(--accent-fg);
+    background: var(--accent);
+
+    h2 {
+      color: var(--accent-fg);
+
+      &::before {
+        background: var(--accent-fg);
+      }
+    }
+  }
+
+  &--bordered {
+    width: calc(100% - 2rem);
+    margin: 5rem auto 0;
+    border: solid 4px var(--accent);
+  }
+
+  &--borderless {
+    box-shadow: none;
+  }
+}
+
+.block__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+
+  @media #{$breakpoint-tablet-and-up} {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.block-toggle__cta {
+  position: relative;
+  text-align: center;
+
+  @media #{$breakpoint-large} {
+    display: none;
+  }
+}
+
+.block-toggle__cta__blurb {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  padding-bottom: 2.5rem;
+}
+
+.block-toggle__cta__button {
+  bottom: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  z-index: 10;
+  color: var(--primary-fg);
+
+  svg {
+    width: 1.5rem;
+    height: 2rem;
+  }
+
+  &.--visible {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.block.block-toggle {
+  @media #{$breakpoint-not-large} {
+    &:not(.block-toggle--visible) {
+      .block-toggle__content {
+        display: none;
+      }
+    }
+
+    &.block-toggle--visible {
+      .block-toggle__cta__blurb {
+        display: none;
+      }
+    }
+  }
+
+  padding-bottom: 0;
+
+  &.block-meta {
+    padding-bottom: 6rem;
+  }
+}
+
+@media #{$breakpoint-large} {
+  .has-sections .entry-content {
+    display: flex;
+    width: 100%;
+    max-width: 90rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .page-section {
+    width: 100%;
+    max-width: 50rem;
+    margin: 4rem auto;
+    padding: 4rem 5.625rem;
+    box-shadow: -3px 5px 4px 2px rgba(135, 135, 135, 0.09);
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      width: calc(50% - 4rem);
+    }
+
+    &:only-of-type {
+      width: 100%;
+      max-width: 50rem;
+    }
+
+    &--bordered {
+      margin: 4rem auto;
+      width: 100%;
+      max-width: 50rem;
+      box-shadow: none;
+
+      &:first-of-type,
+      &:nth-of-type(2) {
+        width: calc(50% - 4rem);
+      }
+
+      &:only-of-type {
+        width: 100%;
+        max-width: 50rem;
+      }
+    }
+  }
+}
