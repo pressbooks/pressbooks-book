@@ -63,8 +63,7 @@
 
     &.alignright {
       float: right;
-      margin-left: $image-alignright-margin-left !important;
-      margin-right: 0;
+      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
       max-width: 50%;
       padding-left: 0;
       width: 50% !important;
@@ -78,8 +77,7 @@
 
     &.alignleft {
       float: left;
-      margin-left: 0;
-      margin-right: $image-alignleft-margin-right !important;
+      margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
       max-width: 50%;
       padding-right: 0;
       width: 50% !important;
@@ -143,16 +141,13 @@
   .wp-caption,
   .wp-nocaption {
     height: auto;
-    margin-bottom: $image-wrapper-margin-bottom;
-    margin-top: $image-wrapper-margin-top;
     max-width: 100%;
     page-break-inside: avoid;
     text-align: center;
 
     &.alignnone {
       padding-left: 0;
-      margin-left: 0;
-      margin-right: 0;
+      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
       text-align: left;
       width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
@@ -160,8 +155,7 @@
     }
 
     &.aligncenter {
-      margin-right: auto;
-      margin-left: auto;
+      margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
       text-align: center;
 
       @include caption-text-align(center);
@@ -174,8 +168,7 @@
 
     &.alignleft {
       float: left;
-      margin-left: 0;
-      margin-right: $image-alignleft-margin-right;
+      margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
       max-width: 50%;
 
       @include caption-text-align(left);
@@ -183,8 +176,7 @@
 
     &.alignright {
       float: right;
-      margin-left: $image-alignright-margin-left;
-      margin-right: 0;
+      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
       max-width: 50%;
       padding-right: 0;
 
@@ -247,16 +239,13 @@
     .wp-caption,
     .wp-nocaption {
       height: auto;
-      margin-bottom: $image-wrapper-margin-bottom;
-      margin-top: $image-wrapper-margin-top;
       max-width: 100%;
       page-break-inside: avoid;
       text-align: center;
 
       &.alignnone {
         padding-left: 0;
-        margin-left: 0;
-        margin-right: 0;
+        margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
         text-align: left;
         width: if-map-get($image-alignnone-wrapper-width, $type) !important;
 
@@ -264,8 +253,7 @@
       }
 
       &.aligncenter {
-        margin-right: auto;
-        margin-left: auto;
+        margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
         text-align: center;
 
         @include caption-text-align(center);
@@ -278,8 +266,7 @@
 
       &.alignleft {
         float: left;
-        margin-left: 0;
-        margin-right: $image-alignleft-margin-right;
+        margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
         max-width: 50%;
 
         @include caption-text-align(left);
@@ -287,8 +274,7 @@
 
       &.alignright {
         float: right;
-        margin-left: $image-alignright-margin-left;
-        margin-right: 0;
+        margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
         max-width: 50%;
         padding-right: 0;
 
