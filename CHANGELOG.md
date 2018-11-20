@@ -6,6 +6,7 @@
 
 - Improve focus styles ([#189](https://github.com/pressbooks/pressbooks-book/issues/189)): [#369](https://github.com/pressbooks/pressbooks-book/pull/369)
 - Add styling for glossary term lists ([#320](https://github.com/pressbooks/pressbooks-book/issues/320)): [#361](https://github.com/pressbooks/pressbooks-book/pull/361)
+- Differentiate link styles between print and digital PDF ([#317](https://github.com/pressbooks/pressbooks-book/issues/317)): [#359](https://github.com/pressbooks/pressbooks-book/pull/359), [#371](https://github.com/pressbooks/pressbooks-book/pull/371)
 - Include Buckram as subpackage ([#278](https://github.com/pressbooks/pressbooks-book/issues/278), [#307](https://github.com/pressbooks/pressbooks-book/issues/307)): [#308](https://github.com/pressbooks/pressbooks-book/pull/308), [#357](https://github.com/pressbooks/pressbooks-book/pull/357), [#358](https://github.com/pressbooks/pressbooks-book/pull/358)
 - Use short title for webbook navigation: [#296](https://github.com/pressbooks/pressbooks-book/pull/296)
 - Display book and section Digital Object Identifiers (DOIs): [#294](https://github.com/pressbooks/pressbooks-book/pull/294), [#295](https://github.com/pressbooks/pressbooks-book/pull/295)
@@ -21,5 +22,7 @@
 
 ### Patches
 
+- Fix floating image margins for Buckram themes ([#236](https://github.com/pressbooks/pressbooks-book/issues/236), props [@beckej13820](https://github.com/beckej13820) for the bug report): [#374](https://github.com/pressbooks/pressbooks-book/pull/374)
+- Fix license icon size in webbook reading footer ([#372](https://github.com/pressbooks/pressbooks-book/issues/372)): [#373](https://github.com/pressbooks/pressbooks-book/pull/373)
 - Fix 401 errors when making authenticated REST requests: [#291](https://github.com/pressbooks/pressbooks-book/pull/291)
 - Fix failure of cloned content comparison tool when source book is missing ([#285](https://github.com/pressbooks/pressbooks-book/issues/285)): [#288](https://github.com/pressbooks/pressbooks-book/pull/288)
