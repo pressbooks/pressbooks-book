@@ -23,6 +23,6 @@
 ### Patches
 
 - Fix floating image margins for Buckram themes ([#236](https://github.com/pressbooks/pressbooks-book/issues/236), props [@beckej13820](https://github.com/beckej13820) for the bug report): [#374](https://github.com/pressbooks/pressbooks-book/pull/374)
-- Fix license icon size in webbook reading footer ([#372](https://github.com/pressbooks/pressbooks-book/issues/372)): [#373](https://github.com/pressbooks/pressbooks-book/pull/373)
+- Fix license icon size in webbook reading footer ([#372](https://github.com/pressbooks/pressbooks-book/issues/372)): [#373](https://github.com/pressbooks/pressbooks-book/pull/373), [#377](https://github.com/pressbooks/pressbooks-book/pull/377)
 - Fix 401 errors when making authenticated REST requests: [#291](https://github.com/pressbooks/pressbooks-book/pull/291)
 - Fix failure of cloned content comparison tool when source book is missing ([#285](https://github.com/pressbooks/pressbooks-book/issues/285)): [#288](https://github.com/pressbooks/pressbooks-book/pull/288)
