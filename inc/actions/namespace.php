@@ -40,7 +40,7 @@ function enqueue_assets() {
 	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
 	wp_localize_script(
 		'pressbooks/book',
-		'PB_A11y',
+		'pressbooksBook',
 		[
 			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
 			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
@@ -48,6 +48,7 @@ function enqueue_assets() {
 			'comparison_loading' => __( 'Comparison loading…', 'pressbooks-book' ),
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
 			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
+			'toggle_contents' => __( 'Toggle contents of', 'pressbooks-book' ),
 		]
 	);
 

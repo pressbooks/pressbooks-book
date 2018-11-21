@@ -15,8 +15,8 @@ export default {
 						.attr( 'id', 'is_large_fontsize' )
 						.attr( 'aria-checked', true )
 						.addClass( 'active' )
-						.text( PB_A11y.decrease_label )
-						.attr( 'title', PB_A11y.decrease_label );
+						.text( pressbooksBook.decrease_label )
+						.attr( 'title', pressbooksBook.decrease_label );
 				}
 
 				$( '.toggle-fontsize' ).on( 'click', function () {
@@ -26,12 +26,12 @@ export default {
 							.attr( 'id', 'is_large_fontsize' )
 							.attr( 'aria-checked', true )
 							.addClass( 'active' )
-							.text( PB_A11y.decrease_label )
-							.attr( 'title', PB_A11y.decrease_label );
+							.text( pressbooksBook.decrease_label )
+							.attr( 'title', pressbooksBook.decrease_label );
 						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '1', {
 							expires: 365,
-							path: PB_A11y.home_path,
+							path: pressbooksBook.home_path,
 						} );
 						return false;
 					} else {
@@ -40,12 +40,12 @@ export default {
 							.attr( 'id', 'is_normal_fontsize' )
 							.removeAttr( 'aria-checked' )
 							.removeClass( 'active' )
-							.text( PB_A11y.increase_label )
-							.attr( 'title', PB_A11y.increase_label );
+							.text( pressbooksBook.increase_label )
+							.attr( 'title', pressbooksBook.increase_label );
 						$( '.nav-reading' ).removeAttr( 'style' );
 						Cookies.set( 'a11y-larger-fontsize', '0', {
 							expires: 365,
-							path: PB_A11y.home_path,
+							path: pressbooksBook.home_path,
 						} );
 						return false;
 					}
@@ -119,18 +119,19 @@ export default {
 			const isHome = document.body.classList.contains( 'home' );
 
 			Array.prototype.forEach.call( entityTitles, entityTitle => {
+
 				// Give each part title a toggle button child
 				let ariaExpanded = ( ( isHome && entityTitle.parentNode.classList.contains( 'toc__part' ) ) || ( ! isHome && entityTitle.parentNode.classList.contains( 'toc__parent' ) ) ) ? true : false;
+				let ariaLabel = `${pressbooksBook.toggle_contents} '${entityTitle.innerText}'`;
 				entityTitle.innerHTML = `
 				<span>${entityTitle.innerHTML}</span>
-				<button type="button" aria-expanded="${ariaExpanded}">
-					<span class="screen-reader-text">${entityTitle.innerHTML}</span>
+				<button type="button" aria-expanded="${ariaExpanded}" aria-label="${ariaLabel}">
 					<svg viewBox="0 0 9 9" aria-hidden="true" focusable="false">
 						<rect class="vert" height="7" width="1" y="1" x="4" />
 						<rect height="1" width="7" y="4" x="1" />
 					</svg>
 				</button>
-			  `;
+				`;
 
 				// Collapse (hide) the content following the heading
 				let content = entityTitle.nextElementSibling;
