@@ -36,7 +36,7 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
 			"$": true,
-			"PB_A11y": true
+			"pressbooksBook": true
 		}
 	},
 	"stylelint": {
