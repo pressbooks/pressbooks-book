@@ -33,8 +33,10 @@ h1.reading-header__title {
     padding: 0 1rem;
     margin-bottom: 2rem;
 
-    @media #{$breakpoint-large} {
-      padding: 0;
+    body:not(.has-annotator-pane) & {
+      @media #{$breakpoint-large} {
+        padding: 0;
+      }
     }
 
     h1,
@@ -100,159 +102,90 @@ h1.reading-header__title {
 .nav-reading {
   background-color: var(--primary);
   bottom: 0;
-  display: flex;
+  display: block;
   left: 0;
   position: fixed;
-  width: 100vw;
-
-  &.absolute {
-    position: absolute;
-  }
-
-  @media #{$breakpoint-max-content} {
-    background-color: transparent;
-    display: block;
-    bottom: auto;
-    top: 58%;
-
-    .fontsize & {
-      background-color: var(--primary);
-      bottom: 0;
-      display: flex;
-      left: 0;
-      top: auto;
-    }
+  width: 100%;
+  @media #{$breakpoint-large} {
+    display: flex;
+    flex-direction: row;
   }
 }
 
 .nav-reading__previous,
 .nav-reading__next {
-  align-items: center;
-  display: flex;
   color: var(--primary-fg);
-  flex: 1 1 50%;
+  min-height: rem(37);
+
+  @media #{$breakpoint-large} {
+    float: left;
+    width: 50%;
+  }
+}
+
+.nav-reading__next {
+  text-align: right;
+}
+
+.nav-reading__previous a,
+.nav-reading__next a {
+  border: solid 1px transparent;
+  color: var(--primary-fg);
+  display: block;
   font-family: $font-family-sans-serif;
   font-size: 0.875rem;
-  height: 2.5rem;
-  padding: 0 1rem;
+  height: 100%;
+  padding: 0.5rem 1rem;
 
-  @media #{$breakpoint-max-content} {
-    bottom: 0;
-    color: var(--body-color);
-    font-size: 1.25rem;
-    height: auto;
-    position: absolute;
-    padding: 0 1rem;
-
-    .fontsize & {
-      color: var(--primary-fg);
-      flex: 1 1 50%;
-      font-size: 0.875rem;
-      height: 2.5rem;
-      position: relative;
-      padding: 0 1rem;
-    }
+  &:focus {
+    border: solid 1px var(--primary-fg);
+    outline: none;
   }
 
-  a {
-    align-items: center;
-    color: var(--button-primary-color);
-    display: flex;
-    white-space: nowrap;
-
-    &:hover {
-      color: var(--primary--dark);
-      text-decoration: underline;
-    }
-
-    svg {
-      fill: var(--primary);
-      height: 1em;
-      width: 1em;
-
-      &:hover {
-        fill: var(--primary--dark);
-      }
-    }
-
-    @media #{$breakpoint-max-content} {
-      color: var(--body-color);
-      font-size: 1.25rem;
-      height: auto;
-
-      &:hover {
-        color: var(--primary-dark);
-      }
-
-      svg {
-        fill: var(--primary);
-        height: 1em;
-        width: 1em;
-      }
-
-      .fontsize & {
-        color: var(--button-primary-color);
-
-        &:hover {
-          color: var(--primary--dark);
-        }
-      }
-    }
+  &:hover {
+    background: var(--primary-dark);
   }
+}
+
+.nav-reading__previous a {
+  border-bottom-color: var(--primary-dark);
+
+  @media #{$breakpoint-large} {
+    border-bottom-color: transparent;
+    border-right-color: var(--primary-dark);
+  }
+}
+
+.nav-reading__next a {
+  border-top-color: var(--primary-dark);
+
+  @media #{$breakpoint-large} {
+    border-top-color: transparent;
+    border-left-color: var(--primary-dark);
+  }
+}
+
+
+.nav-reading__previous a svg,
+.nav-reading__next a svg {
+  fill: currentColor;
+  height: 1em;
+  vertical-align: text-bottom;
+  width: 1em;
+}
+
+.nav-reading__previous a svg {
+  margin-right: 0.5em;
+}
+
+.nav-reading__next a svg {
+  margin-left: 0.5em;
 }
 
 .nav-reading__previous,
 .nav-reading__next,
 .nav-reading__up {
   z-index: 11;
-}
-
-.nav-reading__previous {
-  border-right: 1px solid var(--primary-fg);
-  justify-content: flex-start;
-  left: 0;
-
-  @media #{$breakpoint-max-content} {
-    border: 0 none;
-    left: 3rem;
-
-    .fontsize & {
-      border-right: 1px solid var(--primary-fg);
-      left: 0;
-    }
-  }
-
-  svg {
-    margin-right: 0.5rem;
-
-    @media #{$breakpoint-max-content} {
-      margin-right: 1rem;
-    }
-  }
-}
-
-.nav-reading__next {
-  border-left: 1px solid var(--primary-fg);
-  justify-content: flex-end;
-  right: 0;
-
-  @media #{$breakpoint-max-content} {
-    border: 0 none;
-    right: 3rem;
-
-    .fontsize & {
-      border-left: 1px solid var(--primary-fg);
-      right: 0;
-    }
-  }
-
-  svg {
-    margin-left: 0.5rem;
-
-    @media #{$breakpoint-max-content} {
-      margin-left: 1rem;
-    }
-  }
 }
 
 .nav-reading__up {
@@ -272,8 +205,12 @@ h1.reading-header__title {
   width: 2.5rem;
   padding: 0;
 
-  &:hover,
   &:focus {
+    background-color: var(--primary);
+    border: solid 1px var(--primary-fg);
+  }
+
+  &:hover {
     background-color: var(--primary-dark);
     color: var(--primary-fg);
     text-decoration: none;
@@ -289,86 +226,30 @@ h1.reading-header__title {
     }
   }
 
-  @media #{$breakpoint-max-content} {
-    left: auto;
-    right: 3rem;
-    top: 4rem;
-    height: 6rem;
-    width: 6rem;
-
-    .fontsize & {
-      left: 50%;
-      right: auto;
-      top: -6.5rem;
-    }
-  }
-
   .nav-reading__up__text {
     display: none;
     font-family: $font-family-serif;
     font-size: 0.875rem;
-
-    @media #{$breakpoint-max-content} {
-      display: block;
-    }
   }
 
   svg {
     height: 1em;
     margin: 0;
     width: 1em;
-
-    @media #{$breakpoint-max-content} {
-      width: 1.25em;
-      height: 1.25em;
-    }
   }
 }
-//page navigation
-.nav-reading--page {
-  background-color: var(--body-bg);
-  bottom: $nav-reading-height-mobile;
-  display: flex;
-  left: 0;
-  position: fixed;
-  width: 100vw;
-  margin-top: 2rem;
 
-  @media #{$breakpoint-large} {
-    background-color: transparent;
-    bottom: auto;
-    top: 58%;
-    position: relative;
-    display: block;
-    width: auto;
-  }
+.nav-reading--page {
+  margin-top: 2rem;
 }
 
 .nav-reading--page__previous,
 .nav-reading--page__next {
-  align-items: center;
-  display: flex;
-  flex: 1 1 50%;
   font-family: $font-family-sans-serif;
-  font-size: 0.875rem;
-  height: 2.5rem;
-  padding: 0 1rem;
-
-  @media #{$breakpoint-large} {
-    padding: 0 1rem;
-  }
-
-  @media #{$breakpoint-max-content} {
-    bottom: 0;
-    height: auto;
-    font-size: 1.25rem;
-  }
+  font-size: 1rem;
 
   a {
-    align-items: center;
     color: var(--body-color);
-    display: flex;
-    white-space: nowrap;
 
     &:hover {
       color: var(--primary-dark);
@@ -376,47 +257,20 @@ h1.reading-header__title {
     }
 
     svg {
+      fill: currentColor;
       height: 1em;
+      vertical-align: text-bottom;
       width: 1em;
-
-      // &:hover {
-      //   fill: var(--primary-dark);
-      // }
-    }
-
-    @media #{$breakpoint-max-content} {
-      height: auto;
-      font-size: 1.25rem;
     }
   }
 }
 
-.nav-reading--page__previous {
-  justify-content: flex-start;
-  left: 0;
-
-  svg {
-    margin-right: 0.5rem;
-
-    @media #{$breakpoint-large} {
-      margin-left: 0;
-      margin-right: 1rem;
-    }
-  }
+.nav-reading--page__previous a svg {
+  margin-right: 0.5em;
 }
 
-.nav-reading--page__next {
-  justify-content: flex-end;
-  right: 0;
-
-  svg {
-    margin-left: 0.5rem;
-
-    @media #{$breakpoint-large} {
-      margin-left: 1rem;
-      margin-right: 0;
-    }
-  }
+.nav-reading--page__next a svg {
+  margin-left: 0.5em;
 }
 
 .button--text {
@@ -426,6 +280,7 @@ h1.reading-header__title {
   justify-content: space-between;
   width: 100%;
   padding: 0.5em 0;
+
 
   &:hover,
   &:active {
@@ -440,6 +295,14 @@ h1.reading-header__title {
     color: inherit;
     svg {
       outline: 2px solid;
+    }
+  }
+
+  span {
+    max-width: calc(100% - 1.5em);
+    display: block;
+    span {
+      display: inline;
     }
   }
 
@@ -475,4 +338,12 @@ h1.reading-header__title {
 .mejs-container,
 .mejs-embed {
   z-index: 0;
+}
+
+.block-reading-meta__subsection h2 + p {
+  margin-top: 0;
+}
+
+.block-reading-meta__subsection a {
+  text-decoration: underline;
 }

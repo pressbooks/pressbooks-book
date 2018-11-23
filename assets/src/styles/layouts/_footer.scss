@@ -2,3 +2,16 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+.footer.footer--reading {
+  padding-top: 1rem;
+  padding-bottom: 12rem;
+
+  @media #{$breakpoint-large} {
+    padding-bottom: 4rem;
+  }
+
+  @media #{$breakpoint-max-content} {
+    padding-bottom: 4rem;
+  }
+}

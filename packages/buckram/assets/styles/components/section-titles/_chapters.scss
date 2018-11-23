@@ -1,0 +1,220 @@
+////
+/// @group section-titles
+////
+
+@import '../utilities';
+
+@if $type != 'web' {
+  .chapter-title-wrap {
+    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+
+    h2.chapter-title {
+      border-bottom: if-map-get($chapter-title-border-bottom-width, $type) $chapter-title-border-bottom-style if-map-get($chapter-title-border-bottom-color, $type);
+      padding-bottom: if-map-get($chapter-title-padding-bottom, $type);
+      display: $chapter-title-display;
+      margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
+      font-family: $chapter-title-font-family;
+      font-size: if-map-get($section-title-font-size, $type);
+      font-style: $chapter-title-font-style;
+      font-weight: $chapter-title-font-weight;
+      hyphens: none;
+      @if $type != 'epub' {
+        line-height: if-map-get($chapter-title-line-height, $type);
+      }
+      text-align: $chapter-title-align;
+      text-transform: $chapter-title-text-transform;
+      letter-spacing: if-map-get($chapter-title-letter-spacing, $type);
+      word-spacing: if-map-get($chapter-title-word-spacing, $type);
+
+        &::after {
+            font-family: $chapter-title-decoration-font-family;
+            content: $chapter-title-decoration-content;
+            display: $chapter-title-decoration-display;
+            white-space: pre;
+            font-size: if-map-get($chapter-title-decoration-font-size, $type);
+            font-weight: $chapter-title-decoration-font-weight;
+            margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
+            margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
+            color: if-map-get($chapter-title-decoration-color, $type);
+          }
+    }
+
+    .chapter-number {
+      border-bottom: if-map-get($chapter-number-border-bottom-width, $type) $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-color, $type);
+      display: $chapter-number-display;
+      margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
+      padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
+      font-family: $chapter-number-font-family;
+      font-size: if-map-get($chapter-number-font-size, $type);
+      font-style: $chapter-number-font-style;
+      font-weight: $chapter-number-font-weight;
+      @if $type != 'epub' {
+        line-height: if-map-get($chapter-number-line-height, $type);
+      }
+      text-align: $chapter-number-align;
+      text-transform: $chapter-number-text-transform;
+      letter-spacing: if-map-get($chapter-number-letter-spacing, $type);
+      word-spacing: if-map-get($chapter-number-word-spacing, $type);
+
+      &:before {
+        content: $chapter-number-before-content;
+        text-transform: $chapter-number-before-content-text-transform;
+      }
+
+      &::after {
+        content: $chapter-number-after-content;
+      }
+    }
+
+    .numberless & {
+      .chapter-number {
+        @if $type != 'epub' {
+          display: none;
+        }
+        &::after {
+          content: '';
+        }
+      }
+    }
+
+    h2.chapter-subtitle {
+      display: block;
+      margin-bottom: 0;
+      font-family: $section-subtitle-font-family;
+      font-size: if-map-get($section-subtitle-font-size, $type);
+      font-style: $section-subtitle-font-style;
+      font-weight: $section-subtitle-font-weight;
+      hyphens: none;
+      text-align: $section-subtitle-align;
+      text-transform: $section-subtitle-text-transform;
+      @if $type != 'epub' {
+        column-span: all;
+      }
+      letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
+      word-spacing: if-map-get($section-subtitle-word-spacing, $type);
+    }
+
+    h2.chapter-author {
+      display: block;
+      margin-bottom: if-map-get($section-author-margin-bottom, $type);
+      font-family: $section-author-font-family;
+      font-size: if-map-get($section-author-font-size, $type);
+      font-style: $section-author-font-style;
+      font-weight: $section-author-font-weight;
+      hyphens: none;
+      text-align: $section-author-align;
+      text-transform: $section-author-text-transform;
+      letter-spacing: if-map-get($section-author-letter-spacing, $type);
+      word-spacing: if-map-get($section-author-word-spacing, $type);
+    }
+
+    h2.chapter-title + h2.chapter-subtitle,
+    .short-title + h2.chapter-subtitle {
+      margin-top: if-map-get($section-title-subtitle-spacing, $type);
+    }
+
+    h2.chapter-title + h2.chapter-author,
+    .short-title + h2.chapter-author {
+      margin-top: if-map-get($section-title-author-spacing, $type);
+    }
+
+    h2.chapter-subtitle + h2.chapter-author {
+      margin-top: if-map-get($section-subtitle-author-spacing, $type);
+    }
+
+    h2.chapter-title:last-child {
+      margin-bottom: if-map-get($section-title-margin-bottom, $type);
+    }
+
+    h2.chapter-subtitle:last-child {
+      margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+    }
+  }
+}
+
+.aphorism,
+blockquote.aphorism {
+  width: if-map-get($aphorism-block-width, $type);
+  margin: if-map-get($aphorism-margin-top, $type) if-map-get($aphorism-margin-right, $type) if-map-get($aphorism-margin-bottom, $type) if-map-get($aphorism-margin-left, $type);
+  padding-bottom: if-map-get($aphorism-padding-bottom, $type);
+  font-family: $aphorism-font-family;
+  font-size: if-map-get($aphorism-font-size, $type);
+  font-style: $aphorism-font-style;
+  font-weight: $aphorism-font-weight;
+  @if $type != 'epub' {
+    line-height: if-map-get($aphorism-line-height, $type);
+  }
+  text-align: $aphorism-align;
+  text-indent: if-map-get($aphorism-indent, $type);
+
+  cite {
+    display: block;
+    margin-right: if-map-get($aphorism-cite-margin-right, $type);
+    margin-left: if-map-get($aphorism-cite-margin-left, $type);
+    font-size: if-map-get($aphorism-cite-font-size, $type);
+    font-style: $aphorism-cite-font-style;
+    font-variant: $aphorism-cite-font-variant;
+    font-weight: $aphorism-cite-font-weight;
+    text-transform: $aphorism-cite-text-transform;
+    text-align: $aphorism-cite-align;
+
+    &::before {
+      content: $aphorism-cite-before-content;
+    }
+  }
+}
+
+@if $type == 'epub' {
+  @media amzn-mobi {
+    div.chapter-title-wrap {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h3.chapter-number {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: 1.2em;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    h2.chapter-title {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    h2.chapter-subtitle {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    h2.chapter-author {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: 0.8em;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+
+  @media amzn-kf8 {
+    .chapter-title-wrap h2.chapter-title::before {
+      content: '';
+    }
+
+    .chapter-title-wrap h2.chapter-title::after {
+      content: '';
+    }
+  }
+}

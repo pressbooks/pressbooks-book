@@ -19,7 +19,7 @@ export default {
 						container.removeAttr( 'hidden ' );
 						activity.attr( 'hidden', true );
 					} else {
-						alert.text( PB_A11y.comparison_loading );
+						alert.text( pressbooksBook.comparison_loading );
 						let current = pre.html();
 						let endpoint = pre.attr( 'data-source-endpoint' );
 						fetch( endpoint )
@@ -28,13 +28,13 @@ export default {
 									alert
 										.addClass( 'alert--error' )
 										.removeClass( 'visually-hidden' )
-										.text( PB_A11y.chapter_not_loaded );
+										.text( pressbooksBook.chapter_not_loaded );
 									activity.attr( 'hidden', true );
 									return;
 								}
 
 								response.json().then( function ( data ) {
-									let source = $( "<div>" + data.content.raw + "</div>" ).html();
+									let source = $( '<div>' + data.content.raw + '</div>' ).html();
 									let diff = diffWords( source, current );
 									let fragment = document.createDocumentFragment();
 									diff.forEach( function ( part ) {
@@ -58,7 +58,7 @@ export default {
 										.children( '.num' )
 										.text( deletions );
 									activity.attr( 'hidden', true );
-									alert.text( PB_A11y.comparison_loaded );
+									alert.text( pressbooksBook.comparison_loaded );
 									container.removeAttr( 'hidden' );
 								} );
 							} )
@@ -66,7 +66,7 @@ export default {
 								alert
 									.addClass( 'alert--error' )
 									.removeClass( 'visually-hidden' )
-									.text( PB_A11y.chapter_not_loaded );
+									.text( pressbooksBook.chapter_not_loaded );
 								activity.attr( 'hidden', true );
 							} );
 					}
@@ -79,82 +79,13 @@ export default {
 			$( document ).ready( function () {
 				const offset = 250;
 				const duration = 300;
-				const nav = $( '.nav-reading' );
-				const readingMeta = $( '.block-reading-meta' );
-				// const comments = $( '.section-comments' );
-				// const footer = $( '.footer--reading' );
-				const fontsize = $( 'html' ).hasClass( 'fontsize' );
-				if ( fontsize === false ) {
-					if ( $( window ).width() > 1330 ) {
-						if (
-							nav.offset().top + nav.height() >=
-							readingMeta.offset().top - 18
-						) {
-							nav.addClass( 'absolute' );
-							nav.css( 'top', readingMeta.offset().top - 36 );
-						}
-						if (
-							$( document ).scrollTop() <
-							readingMeta.offset().top - window.innerHeight * 0.58
-						) {
-							nav.removeClass( 'absolute' );
-							nav.css( 'top', '58%' );
-						}
-					}
-				}
 
 				$( window ).scroll( function () {
-					const fontsize = $( 'html' ).hasClass( 'fontsize' );
 					if ( $( window ).scrollTop() > offset ) {
 						$( '.nav-reading__up' ).animate( { opacity: 1 }, duration );
 					}
 					if ( $( window ).scrollTop() < offset ) {
 						$( '.nav-reading__up' ).animate( { opacity: 0 }, duration );
-					}
-
-					if ( fontsize === false ) {
-						if ( $( window ).width() > 1330 ) {
-							if (
-								nav.offset().top + nav.height() >=
-								readingMeta.offset().top - 18
-							) {
-								nav.addClass( 'absolute' );
-								nav.css( 'top', readingMeta.offset().top - 36 );
-							}
-							if (
-								$( document ).scrollTop() <
-								readingMeta.offset().top - window.innerHeight * 0.58
-							) {
-								nav.removeClass( 'absolute' );
-								nav.css( 'top', '58%' );
-							}
-						}
-					}
-				} );
-
-				$( window ).resize( function () {
-					const fontsize = $( 'html' ).hasClass( 'fontsize' );
-					if ( fontsize === false ) {
-						if ( $( window ).width() > 1330 ) {
-							if (
-								nav.offset().top + nav.height() >=
-								readingMeta.offset().top - 18
-							) {
-								nav.addClass( 'absolute' );
-								nav.css( 'top', readingMeta.offset().top - 36 );
-							}
-							if (
-								$( document ).scrollTop() <
-								readingMeta.offset().top - window.innerHeight * 0.58
-							) {
-								nav.removeClass( 'absolute' );
-								nav.css( 'top', '58%' );
-							}
-						}
-						if ( $( window ).width() < 1330 ) {
-							nav.removeClass( 'absolute' );
-							nav.removeAttr( 'style' );
-						}
 					}
 				} );
 

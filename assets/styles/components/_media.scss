@@ -34,21 +34,6 @@ $_image-caption-text-align: (
   right: $image-alignright-caption-text-align
 );
 
-$interactive-icon-url: (
-  prince: "pressbooks-book/assets/book/images/icon-interactive.svg",
-  epub: "pressbooks-book/assets/book/images/icon-interactive.png",
-  web: "pressbooks-book/assets/book/images/icon-interactive.svg"
-) !default;
-$audio-icon-url: (
-  prince: "pressbooks-book/assets/book/images/icon-audio.svg",
-  epub: "pressbooks-book/assets/book/images/icon-audio.png",
-  web: "pressbooks-book/assets/book/images/icon-audio.svg"
-) !default;
-$video-icon-url: (
-  prince: "pressbooks-book/assets/book/images/icon-video.svg",
-  epub: "pressbooks-book/assets/book/images/icon-video.png",
-  web: "pressbooks-book/assets/book/images/icon-video.svg"
-) !default;
 $interactive-icon-display: block !default;
 $interactive-icon-float: left !default;
 $interactive-icon-width: 3em !default;

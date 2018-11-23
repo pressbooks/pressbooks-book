@@ -11,17 +11,10 @@ use Pressbooks\Options;
 /**
  * Delete the cached Table of Contents.
  *
- * @see partials/content-toc.php
+ * @see in/helpers/namespace.php
  */
 function delete_cached_contents() {
-	$bits       = 3;
-	$max        = ( 1 << $bits );
-	$transients = [];
-	for ( $i = 0; $i < $max; $i++ ) {
-		$t            = str_pad( decbin( $i ), $bits, '0', STR_PAD_LEFT );
-		$t            = str_replace( [ 1, 0 ], [ 'x', 'o' ], $t );
-		$transients[] = "pb_book_contents_{$t}";
-	}
+	$transients = [ 'pb_book_subsections' ];
 	foreach ( $transients as $transient ) {
 		delete_transient( $transient );
 	}
@@ -43,9 +36,11 @@ function enqueue_assets() {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
+	// TODO: Enqueue only if Hypothesis is enabled.
+	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
 	wp_localize_script(
 		'pressbooks/book',
-		'PB_A11y',
+		'pressbooksBook',
 		[
 			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
 			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
@@ -53,6 +48,7 @@ function enqueue_assets() {
 			'comparison_loading' => __( 'Comparison loading…', 'pressbooks-book' ),
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
 			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
+			'toggle_contents' => __( 'Toggle contents of', 'pressbooks-book' ),
 		]
 	);
 
@@ -66,6 +62,8 @@ function enqueue_assets() {
 			wp_enqueue_style( 'lity', $assets->getPath( 'styles/lity.css' ), false, null );
 			wp_enqueue_script( 'pressbooks/lightbox', $assets->getPath( 'scripts/lightbox.js' ), false, null );
 		}
+
+		wp_enqueue_style( 'jquery-ui', '//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css', false, null ); // TODO: Maybe get rid of this.
 
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 			$styles   = Container::get( 'Styles' );
@@ -173,7 +171,9 @@ function add_metadata() {
  */
 function theme_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
+	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
+	add_theme_support( 'html5', [ 'caption' ] );
 	remove_action( 'wp_head', 'wp_generator' );
 }
 

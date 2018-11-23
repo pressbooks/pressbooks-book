@@ -1,0 +1,1324 @@
+////
+/// @group section-titles
+////
+
+@import 'colors';
+
+/// Defines margin between the section header and preceding element (section number) or top edge of the page content area.
+/// @type String | Map
+/// @deprecated Use $section-header-margin-top.
+$section-title-block-margin-top: (
+  epub: 3em,
+  prince: 3cm,
+  web: 3em
+) !default;
+
+/// Defines margin between the section header and the page content.
+/// @type String | Map
+/// @deprecated Use $section-header-margin-bottom.
+$section-title-block-margin-bottom: (
+  epub: 2em,
+  prince: 2cm,
+  web: 2em
+) !default;
+
+/// Defines left margin for section header element.
+/// @type String | Map
+/// @deprecated Use $section-header-margin-left.
+$section-title-block-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines right margin for section header element.
+/// @type String | Map
+/// @deprecated Use $section-header-margin-right.
+$section-title-block-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines margin between the section header and top edge of the page content area.
+/// @type String | Map
+/// @since 0.3.0
+$section-header-margin-top: $section-title-block-margin-top !default;
+
+/// Defines margin between the section header and the page content.
+/// @type String | Map
+/// @since 0.3.0
+$section-header-margin-bottom: $section-title-block-margin-bottom !default;
+
+/// Defines left margin for section header element.
+/// @type String | Map
+/// @since 0.3.0
+$section-header-margin-left: $section-title-block-margin-left !default;
+
+/// Defines right margin for section header element.
+/// @type String | Map
+/// @since 0.3.0
+$section-header-margin-right: $section-title-block-margin-right !default;
+
+/// Defines the display property of the section title.
+/// @type String
+/// @since 0.3.0
+$section-title-display: block !default;
+
+/// Defines margin between section title and the top of the section header.
+/// @type String | Map
+$section-title-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines spacing between section title and the bottom of the section header when the section does not have a subtitle or author.
+/// @type String | Map
+$section-title-margin-bottom: (
+  epub: 2em,
+  prince: 1.5cm,
+  web: 2em
+) !default;
+
+/// Defines left margin for the section title.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines right margin for the section title.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines bottom border width for the section title.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Defines bottom border style for the section title.
+/// @type String
+/// @since 1.0.0
+$section-title-border-bottom-style: none !default;
+
+/// Defines bottom border style for the section title.
+/// @type String
+/// @since 1.0.0
+$section-title-border-bottom-color: $color-3 !default;
+
+/// Defines bottom padding style for the section title.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-padding-bottom: (epub: 0, prince: 0, web: 0) !default;
+
+/// Defines spacing between section title and section subtitle, when present.
+/// @type String | Map
+/// @since 0.3.0
+$section-title-subtitle-spacing: $section-title-margin-bottom !default;
+
+/// Defines spacing between section title and section author, when present.
+/// @type String | Map
+/// @since 0.3.0
+$section-title-author-spacing: $section-title-margin-bottom !default;
+
+/// Defines the section title font family.
+/// @type String
+$section-title-font-family: $font-2 !default;
+
+/// Defines the section title font size.
+/// @type String | Map
+$section-title-font-size: (
+  epub: 1.5em,
+  prince: 2em,
+  web: 2em
+) !default;
+
+/// Defines the section title font style.
+/// @type String
+$section-title-font-style: normal !default;
+
+/// Defines the section title font weight.
+/// @type String | Integer
+$section-title-font-weight: normal !default;
+
+/// Defines the section title text alignment.
+/// @type String
+$section-title-align: center !default;
+
+/// Defines the section title text transform.
+/// @type String
+$section-title-text-transform: none !default;
+
+/// Defines the section title line height.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-line-height: $h1-line-height !default;
+
+/// Defines the section title letter spacing.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Defines the section title word spacing.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
+/// Defines the section title decoration font family.
+/// @type String
+/// @since 1.0.0
+$section-title-decoration-font-family: $font-3 !default;
+
+/// Defines the section title decoration content.
+/// @type String
+/// @since 1.0.0
+$section-title-decoration-content: "" !default;
+
+/// Defines the section title decoration display.
+/// @type String
+/// @since 1.0.0
+$section-title-decoration-display: none !default;
+
+/// Defines the section title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines the section title decoration font weight.
+/// @type String
+/// @since 1.0.0
+$section-title-decoration-font-weight: normal !default;
+
+/// Defines the section title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-margin-bottom: (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines the section title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
+
+/// Defines spacing between section subtitle and the bottom of the section header when the section does not have an author.
+/// @type String | Map
+$section-subtitle-margin-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines spacing between section subtitle and section author, when present.
+/// @type String | Map
+/// @since 0.3.0
+$section-subtitle-author-spacing: (
+  epub: 0.5em,
+  prince: 0.375cm,
+  web: 0.5em
+) !default;
+
+/// Defines the section subtitle font family.
+/// @type String
+$section-subtitle-font-family: $font-2 !default;
+
+/// Defines the section subtitle font size.
+/// @type String | Map
+$section-subtitle-font-size: (
+  epub: medium,
+  prince: 1em,
+  web: 1em
+) !default;
+
+/// Defines the section subtitle font style.
+/// @type String
+$section-subtitle-font-style: normal !default;
+
+/// Defines the section subtitle font weight.
+/// @type String | Integer
+$section-subtitle-font-weight: normal !default;
+
+/// Defines the section subtitle text alignment.
+/// @type String
+$section-subtitle-align: center !default;
+
+/// Defines the section subtitle text transform.
+/// @type String
+$section-subtitle-text-transform: none !default;
+
+/// Defines letter spacing property on section subtitle
+/// @type String | Map
+/// @since 1.0.0
+$section-subtitle-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines word spacing property on section subtitle
+/// @type String | Map
+/// @since 1.0.0
+$section-subtitle-word-spacing: $section-title-word-spacing !default;
+
+/// Defines spacing between section author and the bottom border of the section header.
+/// @type String | Map
+$section-author-margin-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the section author font family.
+/// @type String
+$section-author-font-family: $font-2 !default;
+
+/// Defines the section author font size.
+/// @type String | Map
+$section-author-font-size: (
+  epub: medium,
+  prince: 1em,
+  web: 1em
+) !default;
+
+/// Defines the section author font style.
+/// @type String
+$section-author-font-style: normal !default;
+
+/// Defines the section author font weight.
+/// @type String | Integer
+$section-author-font-weight: normal !default;
+
+/// Defines the section author text alignment.
+/// @type String
+$section-author-align: center !default;
+
+/// Defines the section author text transform.
+/// @type String
+$section-author-text-transform: uppercase !default;
+
+/// Defines letter spacing property on section author
+/// @type String | Map
+/// @since 1.0.0
+$section-author-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines word spacing property on section author
+/// @type String | Map
+/// @since 1.0.0
+$section-author-word-spacing: $section-title-word-spacing !default;
+
+/// Defines aphorism block-width.
+/// @type String | Map
+/// @since 0.3.0
+$aphorism-block-width: (
+  epub: 100%,
+  prince: 100%,
+  web: 100%
+) !default;
+
+/// Defines aphorism top margin.
+/// @type String | Map
+$aphorism-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines aphorism padding bottom.
+/// @type String | Map
+/// @since 1.1.0
+$aphorism-padding-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines aphorism bottom margin.
+/// @type String | Map
+$aphorism-margin-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines aphorism left margin.
+/// @type String | Map
+/// @since 0.3.0
+$aphorism-margin-left: (
+  epub: auto,
+  prince: auto,
+  web: auto
+) !default;
+
+/// Defines aphorism right margin.
+/// @type String | Map
+/// @since 0.3.0
+$aphorism-margin-right: (
+  epub: auto,
+  prince: auto,
+  web: auto
+) !default;
+
+/// Defines aphorism font family.
+/// @type String
+$aphorism-font-family: $body-font-family !default;
+
+/// Defines aphorism font size.
+/// @type String | Map
+$aphorism-font-size: (
+  epub: small,
+  prince: 0.9em,
+  web: 0.9em
+) !default;
+
+/// Defines aphorism font size.
+/// @type String
+/// @since 0.3.0
+$aphorism-font-style: italic !default;
+
+/// Defines aphorism font weight.
+/// @type String
+/// @since 1.0.0
+$aphorism-font-weight: normal !default;
+
+/// Defines aphorism line height.
+/// @type String | Map
+/// @since 0.3.0
+$aphorism-line-height: $body-line-height !default;
+
+/// Defines aphorism text alignment.
+/// @type String
+$aphorism-align: left !default;
+
+/// Defines the aphorism text indentation.
+/// @type String | Map
+$aphorism-indent: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines aphorism citation font size.
+/// @type String | Map
+$aphorism-cite-font-size: (
+  epub: small,
+  prince: 0.9em,
+  web: 0.9em
+) !default;
+
+/// Defines aphorism citation font style.
+/// @type String
+/// @since 0.3.0
+$aphorism-cite-font-style: italic !default;
+
+/// Defines aphorism citation font variant.
+/// @type String
+/// @since 0.3.0
+$aphorism-cite-font-variant: normal !default;
+
+/// Defines aphorism font weight.
+/// @type String
+/// @since 1.0.0
+$aphorism-cite-font-weight: normal !default;
+
+/// Defines aphorism citation text transform.
+/// @type String
+/// @since 0.3.4
+$aphorism-cite-text-transform: none !default;
+
+/// Defines aphorism citation alignment.
+/// @type String
+$aphorism-cite-align: left !default;
+
+/// Defines the left margin of the aphorism citation.
+/// @type String | Map
+/// @since 0.3.0
+$aphorism-cite-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the right margin of the aphorism citation.
+/// @type String | Map
+/// @since 0.3.0
+$aphorism-cite-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Content that appears before the aphorism citation. Defaults to an em dash and a non-breaking space.
+/// @type String
+/// @since 0.3.0
+$aphorism-cite-before-content: '\2014\00a0' !default;
+
+/// Defines the display property for the part number.
+/// @type String
+$part-number-display: block !default;
+
+/// Defines the top margin for the part number.
+/// @type String | Map
+/// @since 0.3.0
+$part-number-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the right margin for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom margin for the part number.
+/// @type String | Map
+$part-number-margin-bottom: (
+  epub: 1em,
+  prince: 0.5cm,
+  web: 1em
+) !default;
+
+/// Defines the left margin for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom padding for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-padding-bottom: $section-title-padding-bottom !default;
+
+/// Defines the bottom border width for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-border-bottom-width: $section-title-border-bottom-width !default;
+
+/// Defines the bottom border style for the part number.
+/// @type String
+/// @since 1.0.0
+$part-number-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines the bottom border colour for the part number.
+/// @type String | Map
+/// @since 1.0.0
+$part-number-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines part number font family.
+/// @type String
+$part-number-font-family: $font-3 !default;
+
+/// Defines part number font size.
+/// @type String | Map
+$part-number-font-size: (
+  epub: 1em,
+  prince: 1.5em,
+  web: 1em
+) !default;
+
+/// Defines part number font style.
+/// @type String
+$part-number-font-style: normal !default;
+
+/// Defines part number font weight.
+/// @type String
+$part-number-font-weight: normal !default;
+
+/// Defines part number letter spacing.
+/// @type String
+$part-number-letter-spacing: 1px !default;
+
+/// Defines part number word spacing.
+/// @type String
+$part-number-word-spacing: 2px !default;
+
+/// Defines part number alignment.
+/// @type String
+$part-number-align: center !default;
+
+/// Defines part number text transform.
+/// @type String
+$part-number-text-transform: none !default;
+
+/// Defines part number line height.
+/// @since 1.0.0
+/// @type String | Map
+$part-number-line-height: (
+  epub: 1,
+  prince: 1,
+  web: 1
+ ) !default;
+
+/// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
+/// @type String
+/// @since 0.3.0
+/// @since 1.0.0 Use $part-number-before-content instead.
+/// @deprecated
+$part-number-prefix-content: $part + '\00A0' !default;
+
+/// Content that appears before the part number. Defaults to the localized string "Part" and a non-breaking space.
+/// @type String
+/// @since 1.0.0
+$part-number-before-content: $part-number-prefix-content !default;
+
+/// Defines the content that appears before the part number's text transform.
+/// @type String
+/// @since 1.0.0 Use $part-number-before-content-text-transform instead.
+/// @deprecated
+$part-number-prefix-text-transform: uppercase !default;
+
+/// Defines the content that appears before the part number's text transform.
+/// @type String
+/// @since 1.0.0
+$part-number-before-content-text-transform: $part-number-prefix-text-transform !default;
+
+/// Content that appears after the part number. Defaults to an empty string.
+/// @type String
+/// @since 1.0.0
+$part-number-after-content: '' !default;
+
+/// Defines the part title display property.
+/// @type String
+/// @since 0.3.0
+$part-title-display: $section-title-display !default;
+
+/// Defines the part title top margin.
+/// @type String | Map
+/// @since 0.3.0
+$part-title-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the part title bottom margin.
+/// @type String | Map
+/// @since 0.3.0
+$part-title-margin-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the part title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the part title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the part title font family.
+/// @type String
+$part-title-font-family: $font-2 !default;
+
+/// Defines the part title font size.
+/// @type String | Map
+$part-title-font-size:(
+  epub: 1.75em,
+  prince: 2.5em,
+  web: 2.5em
+) !default;
+
+/// Defines the part title font style.
+/// @type String
+$part-title-font-style: normal !default;
+
+/// Defines the part title font weight.
+/// @type String
+$part-title-font-weight: normal !default;
+
+/// Defines the part title alignment.
+/// @type String
+$part-title-align: center !default;
+
+/// Defines the part title text transform.
+/// @type String
+$part-title-text-transform: uppercase !default;
+
+/// Defines the part title line height.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-line-height: $h1-line-height !default;
+
+/// Defines letter spacing property on part titles
+/// @type String | Map
+/// @since 1.0.0
+$part-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines the word spacing title on part titles
+/// @type String | Map
+/// @since 1.0.0
+$part-title-word-spacing: $section-title-word-spacing !default;
+
+/// Defines the part title decoration font family.
+/// @type String
+/// @since 1.0.0
+$part-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the part title decoration content.
+/// @type String
+/// @since 1.0.0
+$part-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the part title decoration display.
+/// @type String
+/// @since 1.0.0
+$part-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the part title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the part title decoration font weight.
+/// @type String
+/// @since 1.0.0
+$part-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the part title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the part title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$part-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
+/// Defines the bottom border width for the part title.
+/// @type String | Map
+/// @since 1.1.0
+$part-title-border-bottom-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Defines the bottom border style for the part title.
+/// @type String
+/// @since 1.1.0
+$part-title-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines the bottom border colour for the part title.
+/// @type String | Map
+/// @since 1.1.0
+$part-title-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines the front matter title display property.
+/// @type String
+/// @since 0.3.0
+$front-matter-title-display: $section-title-display !default;
+
+/// Defines the front matter title top margin.
+/// @type String | Map
+/// @since 0.3.0
+$front-matter-title-margin-top: $section-title-margin-top !default;
+
+/// Defines the front matter title bottom margin.
+/// @type String | Map
+/// @since 0.3.0
+$front-matter-title-margin-bottom: $section-title-margin-bottom !default;
+
+/// Defines the front matter title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the front matter title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-margin-left: $section-title-margin-left !default;
+
+/// Defines the front matter title letter spacing.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines the front matter title word spacing.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-word-spacing: $section-title-word-spacing !default;
+
+/// Defines the front matter title font family.
+/// @type String
+$front-matter-title-font-family: $section-title-font-family !default;
+
+/// Defines the front matter title font family.
+/// @type String | Map
+/// @since 0.3.0
+$front-matter-title-font-size: $section-title-font-size !default;
+
+/// Defines the front matter title font styles.
+/// @type String
+$front-matter-title-font-style: $section-title-font-style !default;
+
+/// Defines the front matter title font weight.
+/// @type String
+$front-matter-title-font-weight: $section-title-font-weight !default;
+
+/// Defines the front matter title alignment.
+/// @type String
+$front-matter-title-align: $section-title-align !default;
+
+/// Defines the front matter title text transform.
+/// @type String
+$front-matter-title-text-transform: $section-title-text-transform !default;
+
+/// Defines the front matter title line height.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-line-height: $section-title-line-height !default;
+
+/// Defines the front matter title bottom border style.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines the front matter title bottom border width.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-border-bottom-width: $section-title-border-bottom-width !default;
+
+/// Defines the front matter bottom border color.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines bottom padding style for the front-matter title.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-padding-bottom: $section-title-padding-bottom !default;
+
+/// Defines the front matter title decoration font family.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the front matter title decoration content.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the front matter title decoration display.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the front matter title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the front matter title decoration font weight.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the front matter title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the front matter title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
+
+/// Defines the table of contents title display property.
+/// @type String
+/// @since 0.3.0
+$toc-title-display: $section-title-display !default;
+
+/// Defines the table of contents title top margin.
+/// @type String | Map
+/// @since 0.3.0
+$toc-title-margin-top: $section-header-margin-top !default;
+
+/// Defines the table of contents title bottom margin.
+/// @type String | Map
+/// @since 0.3.0
+$toc-title-margin-bottom: $section-header-margin-bottom !default;
+
+/// Defines the table of contents title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the table of contents title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-margin-left: $section-title-margin-left !default;
+
+/// Defines the table of contents title font family.
+/// @type String
+$toc-title-font-family: $section-title-font-family !default;
+
+/// Defines the table of contents title font size.
+/// @type String | Map
+$toc-title-font-size: $section-title-font-size !default;
+
+/// Defines the table of contents title font style.
+/// @type String
+$toc-title-font-style: $section-title-font-style !default;
+
+/// Defines the table of contents title font weight.
+/// @type String
+$toc-title-font-weight: $section-title-font-weight !default;
+
+/// Defines the table of contents title alignment.
+/// @type String
+$toc-title-align: $section-title-align !default;
+
+/// Defines the table of contents title text transform.
+/// @type String
+$toc-title-text-transform: $section-title-text-transform !default;
+
+/// Defines the table of contents title line height.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-line-height: $section-title-line-height !default;
+
+/// Defines the table of contents title bottom border style.
+/// @type String
+/// @since 1.0.0
+$toc-title-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines the table of contents title bottom border width.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-border-bottom-width: $section-title-border-bottom-width !default;
+
+/// Defines the table of contents title bottom border color.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines bottom padding style for the front-matter title.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-padding-bottom: $section-title-padding-bottom !default;
+
+/// Defines the table of contents title decoration font family.
+/// @type String
+/// @since 1.0.0
+$toc-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the table of contents title decoration content.
+/// @type String
+/// @since 1.0.0
+$toc-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the table of contents title decoration display.
+/// @type String
+/// @since 1.0.0
+$toc-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the table of contents title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the table of contents title decoration font weight.
+/// @type String
+/// @since 1.0.0
+$toc-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the table of contents title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the table of contents title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
+/// Defines letter spacing property on table of contents title
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines word spacing property on table of contents title
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-word-spacing: $section-title-word-spacing !default;
+
+/// Defines the chapter number display property.
+/// @type String
+$chapter-number-display: block !default;
+
+/// Defines the chapter number top margin.
+/// @type String | Map
+$chapter-number-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the chapter number bottom margin.
+/// @type String | Map
+$chapter-number-margin-bottom: (
+  epub: 1em,
+  prince: 0.5cm,
+  web: 1em
+) !default;
+
+/// Defines the chapter number right margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-margin-right: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the chapter number left margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-margin-left: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the chapter number bottom padding.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-padding-bottom:$section-title-padding-bottom !default;
+
+/// Defines the bottom border width for the chapter number.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-border-bottom-width: $section-title-border-bottom-width !default;
+
+/// Defines the bottom border style for the chapter number.
+/// @type String
+/// @since 1.0.0
+$chapter-number-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines the bottom border colour for the chapter number.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines the chapter number font family.
+/// @type String
+$chapter-number-font-family: $font-3 !default;
+
+/// Defines the chapter number font size.
+/// @type String | Map
+$chapter-number-font-size: (
+  epub: 1em,
+  prince: 1.5em,
+  web: 1em
+) !default;
+
+/// Defines the chapter number font style.
+/// @type String
+$chapter-number-font-style: normal !default;
+
+/// Defines the chapter number font weight.
+/// @type String
+$chapter-number-font-weight: normal !default;
+
+/// Defines the chapter number line height.
+/// @type String | Map
+$chapter-number-line-height: (
+  epub: 1,
+  prince: 1,
+  web: 1
+ ) !default;
+
+/// Defines the chapter number alignment.
+/// @type String
+$chapter-number-align: center !default;
+
+/// Defines the chapter number text transform.
+/// @type String
+$chapter-number-text-transform: none !default;
+
+/// Defines the content that precedes the chapter number. Defaults to an empty string.
+/// @type String
+/// @since 1.0.0
+$chapter-number-before-content: '' !default;
+
+/// Defines the chapter number before content text transform.
+/// @type String
+/// @since 1.0.0
+$chapter-number-before-content-text-transform: none !default;
+
+/// Defines the content that follows the chapter number. Defaults to a period and a non-breaking space.
+/// @type String
+$chapter-number-after-content: '.\00A0' !default;
+
+/// Defines letter spacing property on chapter numbers
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines the word spacing property on chapter numbers
+/// @type String | Map
+/// @since 1.0.0
+$chapter-number-word-spacing: $section-title-word-spacing !default;
+
+/// Defines the chapter title display propert.
+/// @type String
+$chapter-title-display: $section-title-display !default;
+
+/// Defines the chapter title top margin.
+/// @type String | Map
+$chapter-title-margin-top: $section-title-margin-top !default;
+
+/// Defines the chapter title bottom margin.
+/// @type String | Map
+$chapter-title-margin-bottom: $section-title-margin-bottom !default;
+
+/// Defines the chapter title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the chapter title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-margin-left: $section-title-margin-left !default;
+
+/// Defines the chapter title font family.
+/// @type String
+$chapter-title-font-family: $section-title-font-family !default;
+
+/// Defines the chapter title font size.
+/// @type String | Map
+/// @since 0.3.0
+$chapter-title-font-size: $section-title-font-size !default;
+
+/// Defines the chapter title font style.
+/// @type String
+$chapter-title-font-style: $section-title-font-style !default;
+
+/// Defines the chapter title font weight.
+/// @type String
+$chapter-title-font-weight: $section-title-font-weight !default;
+
+/// Defines the chapter title alignment.
+/// @type String
+$chapter-title-align: $section-title-align !default;
+
+/// Defines the chapter title text transform.
+/// @type String
+$chapter-title-text-transform: $section-title-text-transform !default;
+
+/// Defines the chapter title line height.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-line-height: $section-title-line-height !default;
+
+/// Defines letter spacing property on chapter titles
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines the word spacing title on chapter titles
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-word-spacing:  $section-title-word-spacing !default;
+
+/// Defines bottom border width for the chapter title.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-border-bottom-width: $section-title-border-bottom-width !default;
+
+/// Defines bottom border style for the chapter title.
+/// @type String
+/// @since 1.0.0
+$chapter-title-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines bottom border style for the chapter title.
+/// @type String
+/// @since 1.0.0
+$chapter-title-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines the chapter number bottom padding.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-padding-bottom:$section-title-padding-bottom !default;
+
+/// Defines the chapter title decoration font family.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the chapter title decoration content.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the chapter title decoration display.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the chapter title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the chapter title decoration font weight.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the chapter title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the chapter title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$chapter-title-decoration-margin-top: $section-title-decoration-margin-top !default;
+
+/// Defines the back matter title display property.
+/// @type String
+/// @since 0.3.0
+$back-matter-title-display: $section-title-display !default;
+
+/// Defines the back matter title top margin.
+/// @type String | Map
+/// @since 0.3.0
+$back-matter-title-margin-top: $section-title-margin-top !default;
+
+/// Defines the back matter title bottom margin.
+/// @type String | Map
+/// @since 0.3.0
+$back-matter-title-margin-bottom: $section-title-margin-bottom !default;
+
+/// Defines the back matter title right margin.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-margin-right: $section-title-margin-right !default;
+
+/// Defines the back matter title left margin.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-margin-left: $section-title-margin-left !default;
+
+/// Defines the back matter title font family.
+/// @type String
+$back-matter-title-font-family: $section-title-font-family !default;
+
+/// Defines the back matter title font size.
+/// @type String | Map
+/// @since 0.3.0
+$back-matter-title-font-size: $section-title-font-size !default;
+
+/// Defines the back matter title font style.
+/// @type String
+$back-matter-title-font-style: $section-title-font-style !default;
+
+/// Defines the back matter title font weight.
+/// @type String
+$back-matter-title-font-weight: $section-title-font-weight !default;
+
+/// Defines the back matter title alignment.
+/// @type String
+$back-matter-title-align: $section-title-align !default;
+
+/// Defines the back matter title text transform.
+/// @type String
+$back-matter-title-text-transform: $section-title-text-transform !default;
+
+/// Defines the back matter title line height.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-line-height: $section-title-line-height !default;
+
+/// Defines bottom border width for the back matter title.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-border-bottom-width: $section-title-border-bottom-width !default;
+
+/// Defines bottom border style for the back matter title.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-border-bottom-style: $section-title-border-bottom-style !default;
+
+/// Defines bottom border style for the back matter title.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-border-bottom-color: $section-title-border-bottom-color !default;
+
+/// Defines the back matter title bottom padding.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-padding-bottom:$section-title-padding-bottom !default;
+
+/// Defines letter spacing property on back matter titles
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines the word spacing title on back matter titles
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-word-spacing:  $section-title-word-spacing !default;
+
+/// Defines the back-matter title decoration font family.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-decoration-font-family: $section-title-decoration-font-family !default;
+
+/// Defines the back matter title decoration content.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-decoration-content: $section-title-decoration-content !default;
+
+/// Defines the back matter title decoration display.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-decoration-display: $section-title-decoration-display !default;
+
+/// Defines the back matter title decoration font size.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-decoration-font-size: $section-title-decoration-font-size !default;
+
+/// Defines the back matter title decoration font weight.
+/// @type String
+/// @since 1.0.0
+$back-matter-title-decoration-font-weight: $section-title-decoration-font-weight !default;
+
+/// Defines the back title decoration margin bottom.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-decoration-margin-bottom: $section-title-decoration-margin-bottom !default;
+
+/// Defines the back matter title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-decoration-margin-top: $section-title-decoration-margin-top !default;

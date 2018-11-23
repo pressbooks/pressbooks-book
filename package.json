@@ -11,18 +11,18 @@
 		"url": "git+https://github.com/pressbooks/pressbooks-book.git"
 	},
 	"dependencies": {
-		"aetna": "^1.0.0-alpha.17",
-		"buckram": "^1.0.2",
 		"diff": "^3.5.0",
 		"js-cookie": "^2.2.0",
 		"lity": "^2.3.1",
-		"sharer.js": "^0.3.3",
+		"sharer.js": "^0.3.5",
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
+		"lerna": "^3.4.3",
 		"pressbooks-build-tools": "^0.13.0"
 	},
 	"scripts": {
+		"bootstrap": "lerna bootstrap",
 		"build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -36,7 +36,7 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
 			"$": true,
-			"PB_A11y": true
+			"pressbooksBook": true
 		}
 	},
 	"stylelint": {

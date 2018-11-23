@@ -1,10 +1,11 @@
 {
-    "/scripts/book.js": "/scripts/book.js?id=0bfb4474f41f85eb3351",
-    "/styles/book.css": "/styles/book.css?id=8877cb917f8b8546de31",
+    "/scripts/book.js": "/scripts/book.js?id=868d0ac3b8c6150d2ffb",
+    "/styles/book.css": "/styles/book.css?id=301366ccacf1d5411511",
     "/styles/web-house-style.css": "/styles/web-house-style.css?id=d3c1aedc7525b0f30ccd",
-    "/scripts/lightbox.js": "/scripts/lightbox.js?id=0157fd51533448cff8d2",
-    "/scripts/collapse-sections.js": "/scripts/collapse-sections.js?id=9cc88417ba7fc1ac6a7e",
-    "/scripts/sharer.js": "/scripts/sharer.js?id=63066106d594a4b1941e",
+    "/scripts/pane.js": "/scripts/pane.js?id=331ebddd6438d1686c5c",
+    "/scripts/lightbox.js": "/scripts/lightbox.js?id=07da2585d307795be0fb",
+    "/scripts/collapse-sections.js": "/scripts/collapse-sections.js?id=bc624e64e271a38fdfc6",
+    "/scripts/sharer.js": "/scripts/sharer.js?id=cb1d75f017e08db3a704",
     "/scripts/lity.js": "/scripts/lity.js?id=78effe3048232008df2b",
     "/styles/lity.css": "/styles/lity.css?id=2cca2f9fd7e0c7c24ac4"
 }

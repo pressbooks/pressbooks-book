@@ -14,11 +14,14 @@ use Pressbooks\Container;
  * @param bool $can_read
  * @param bool $can_read_private
  * @param int $permissive_private_content
+ * @param array $book_subsections
  *
  * @return string The HTML blob for this TOC section group.
  */
 
-function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content ) {
+function toc_sections( $sections, $post_type, $can_read, $can_read_private, $permissive_private_content, $book_subsections ) {
+	global $post;
+	$output = '';
 	foreach ( $sections as $section ) {
 		if ( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) {
 			if ( ! $can_read_private ) {
@@ -30,40 +33,44 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 					continue; // Skip this one.
 				}
 			}
-		} ?>
-		<li id="<?php echo "toc-{$post_type}-{$section['ID']}"; ?>" class="toc__<?php echo $post_type; ?> <?php echo pb_get_section_type( get_post( $section['ID'] ) ) ?>">
-			<?php if ( $post_type !== 'chapter' ) { ?>
-			<div class="inner-content">
-				<?php } ?>
-				<a class="toc__chapter-title" href="<?php echo get_permalink( $section['ID'] ); ?>">
-					<?php
-					$chapter_number = pb_get_chapter_number( $section['ID'] );
-					if ( $chapter_number ) {
-						echo "<span>$chapter_number.&nbsp;</span>";
-					}
-					echo pb_strip_br( $section['post_title'] );
-					?>
-				</a>
-				<?php
-				if ( pb_should_parse_subsections() ) {
-					$subsections = pb_get_subsections( $section['ID'] );
-					if ( $subsections ) {
-						?>
-						<ol class="toc__subsections">
-							<?php foreach ( $subsections as $id => $name ) { ?>
-								<li class="toc__subsection"><a href="<?php echo get_permalink( $section['ID'] ); ?>#<?php echo $id; ?>"><?php echo $name; ?></a></li>
-							<?php } ?>
-						</ol>
-						<?php
-					}
+		}
+		$chapter_number = pb_get_chapter_number( $section['ID'] );
+		$subsection_output = '';
+		$subsections = false;
+		if ( pb_should_parse_subsections() ) {
+			$ptype = ( $post_type === 'chapter' ) ? 'chapters' : $post_type;
+			$subsections = $book_subsections[ $ptype ][ $section['ID'] ] ?? false;
+			if ( $subsections ) {
+				$subsection_output .= '<ol class="toc__subsections">';
+				foreach ( $subsections as $id => $name ) {
+					$subsection_output .= sprintf(
+						'<li class="toc__subsection"><a href="%1$s#%2$s">%3$s</a></li>',
+						get_permalink( $section['ID'] ),
+						$id,
+						$name
+					);
 				}
-				if ( $post_type !== 'chapter' ) {
-					?>
-							</div>
-						<?php } ?>
-		</li>
-		<?php
+				$subsection_output .= '</ol>';
+			}
+		}
+		$section_class = "toc__{$post_type} ";
+		$section_class .= pb_get_section_type( get_post( $section['ID'] ) );
+		$section_class .= ( $subsections ) ? " toc__{$post_type}--full" : " toc__{$post_type}--empty";
+		if ( $post ) {
+			$section_class .= ( $post->ID === $section['ID'] ) ? ' toc__selected' : '';
+		}
+		$output .= sprintf(
+			'<li id="%1$s" class="%2$s"><p class="toc__title"><a href="%3$s">%4$s%5$s%6$s</a>%7$s</li>',
+			"toc-{$post_type}-{$section['ID']}",
+			$section_class,
+			get_permalink( $section['ID'] ),
+			( $chapter_number ) ? "<span>$chapter_number.&nbsp;</span>" : '',
+			pb_strip_br( $section['post_title'] ),
+			( ! in_array( $section['post_status'], [ 'publish', 'web-only' ], true ) ) ? ' <svg class="icon--private" viewBox="0 0 36 36"><path fill="currentColor" d="M29 15v-3c0-6.1-4.9-11-11-11S7 5.9 7 12v3H3v16h30V15h-4zm-10 7.7V26h-2v-3.3c-.6-.3-1-1-1-1.7 0-1.1.9-2 2-2s2 .9 2 2c0 .7-.4 1.4-1 1.7zM18 15h-7v-3c0-3.9 3.1-7 7-7s7 3.1 7 7v3h-7z"/></svg>' : '',
+			$subsection_output
+		);
 	}
+	return $output;
 }
 
 /**
@@ -113,7 +120,7 @@ function license_to_icons( $license ) {
 		return '';
 	}
 	$output = '';
-	if ( strpos( $license, 'cc' ) !== false ) {
+	if ( strpos( $license, 'cc' ) !== false && $license !== 'cc-zero' ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
 			if ( $part !== 'cc' ) {
@@ -121,6 +128,8 @@ function license_to_icons( $license ) {
 			}
 			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use xlink:href="#%s" /></svg>', $part );
 		}
+	} elseif ( $license === 'cc-zero' ) {
+		$output .= '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-zero" /></svg>';
 	} elseif ( $license === 'public-domain' ) {
 		$output .= '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-pd" /></svg>';
 	} elseif ( $license === 'all-rights-reserved' ) {
@@ -140,6 +149,7 @@ function license_to_icons( $license ) {
  */
 function license_to_text( $license ) {
 	switch ( $license ) {
+		case 'cc-zero':
 		case 'public-domain':
 			return __( 'Public Domain', 'pressbooks-book' );
 			break;
@@ -250,15 +260,17 @@ function display_menu() {
  */
 function get_source_book( $book_url, $checked = [] ) {
 	$output = $book_url;
-	$args   = [];
+	$args = [];
 	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
 		$args['sslverify'] = false;
 	}
 	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
-	$result   = json_decode( $response['body'], true );
-	if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
-		$checked[] = $result['isBasedOn'];
-		$output    = get_source_book( $result['isBasedOn'], $checked );
+	if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
+		$result = json_decode( $response['body'], true );
+		if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
+			$checked[] = $result['isBasedOn'];
+			$output    = get_source_book( $result['isBasedOn'], $checked );
+		}
 	}
 	return $output;
 }
@@ -270,7 +282,7 @@ function get_source_book( $book_url, $checked = [] ) {
  *
  * @param string $book_url The URL of the book to trace.
  *
- * @return array The metadata array.
+ * @return string The URL of the book's original source.
  */
 function get_source_book_url( $book_url ) {
 	$source_url = get_transient( 'pb_book_source_url' );
@@ -288,12 +300,17 @@ function get_source_book_url( $book_url ) {
  *
  * @param string $source_url The URL of the original book.
  *
- * @return array The metadata array.
+ * @return array|false The metadata array, or false if no metadata was found.
  */
 function get_source_book_meta( $source_url ) {
 	$source_meta = get_transient( 'pb_book_source_metadata' );
 	if ( $source_meta === false ) {
-		$source_meta = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' )['body'], true );
+		$response = wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' );
+		if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
+			$source_meta = json_decode( $response['body'], true );
+		} else {
+			$source_meta = false;
+		}
 		set_transient( 'pb_book_source_metadata', $source_meta );
 	}
 	return $source_meta;
@@ -306,12 +323,17 @@ function get_source_book_meta( $source_url ) {
  *
  * @param string $source_url The URL of the original book.
  *
- * @return array The metadata array.
+ * @return array|false The metadata array, or false if no metadata was found.
  */
 function get_source_book_toc( $source_url ) {
 	$source_toc = get_transient( 'pb_book_source_toc' );
 	if ( $source_toc === false ) {
-		$source_toc = json_decode( wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/toc/' )['body'], true );
+		$response = wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/toc/' );
+		if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
+			$source_toc = json_decode( $response['body'], true );
+		} else {
+			$source_toc = false;
+		}
 		set_transient( 'pb_book_source_toc', $source_toc );
 	}
 	return $source_toc;
@@ -323,18 +345,22 @@ function get_source_book_toc( $source_url ) {
  * @since 2.3.0
  *
  * @param array $metadata The book metadata.
+ * @return string The list of authors or an empty string if none exist.
  */
 
 function get_book_authors( $metadata ) {
-	$authors = [];
-	if ( array_key_exists( 'name', $metadata['author'] ) ) {
-		$authors[] = $metadata['author']['name'];
-	} else {
-		foreach ( $metadata['author'] as $author ) {
-			$authors[] = $author['name'];
-		}
-	};
-	return \Pressbooks\Utility\oxford_comma( $authors );
+	if ( isset( $metadata['author'] ) ) {
+		$authors = [];
+		if ( array_key_exists( 'name', $metadata['author'] ) ) {
+			$authors[] = $metadata['author']['name'];
+		} else {
+			foreach ( $metadata['author'] as $author ) {
+				$authors[] = $author['name'];
+			}
+		};
+		return \Pressbooks\Utility\oxford_comma( $authors );
+	}
+	return '';
 }
 
 /**
@@ -345,7 +371,7 @@ function get_book_authors( $metadata ) {
  * @param string $needle The URL of the cloned section.
  * @param array $haystack The TOC array for the source book.
  *
- * @return array
+ * @return array|false  The section array from the source book TOC, or false if none was found.
  */
 
 function get_original_section( $needle, $haystack ) {
@@ -402,6 +428,7 @@ function get_metakeys() {
 		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
 		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
 		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),
+		'pb_book_doi' => __( 'Digital Object Identifier (DOI)', 'pressbooks-book' ),
 		'pb_ebook_isbn' => __( 'Ebook ISBN', 'pressbooks-book' ),
 		'pb_print_isbn' => __( 'Print ISBN', 'pressbooks-book' ),
 		'pb_hashtag' => __( 'Hashtag', 'pressbooks-book' ),
@@ -419,32 +446,45 @@ function get_metakeys() {
  */
 function get_links( $echo = true ) {
 	global $first_chapter, $prev_chapter, $next_chapter, $multipage;
-	$first_chapter          = pb_get_first();
-	$prev_chapter           = pb_get_prev();
-	$prev_chapter_id        = pb_get_prev_post_id();
-	$prev_chapter_post_type = \Pressbooks\PostType\get_post_type_label( get_post_type( $prev_chapter_id ) );
-	$next_chapter           = pb_get_next();
-	$next_chapter_id        = pb_get_next_post_id();
-	$next_chapter_post_type = \Pressbooks\PostType\get_post_type_label( get_post_type( $next_chapter_id ) );
+	$first_chapter = pb_get_first();
+	$prev_chapter = pb_get_prev();
+	$prev_chapter_id = pb_get_prev_post_id();
+	$prev_title = get_the_title( $prev_chapter_id );
+	$prev_short_title = get_post_meta( 'pb_short_title', $prev_chapter_id, true );
+	if ( $prev_short_title ) {
+		$prev_label = $prev_short_title;
+	} else {
+		$prev_label = $prev_title;
+	}
+	$next_chapter = pb_get_next();
+	$next_chapter_id = pb_get_next_post_id();
+	$next_title = get_the_title( $next_chapter_id );
+	$next_short_title = get_post_meta( 'pb_short_title', $next_chapter_id, true );
+	if ( $next_short_title ) {
+		$next_label = $next_short_title;
+	} else {
+		$next_label = $next_title;
+	}
+
 	if ( $echo ) :
 		?>
 		<nav class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
-				<?php /* translators: %1$s: post title, %2$s: post type name */ ?>
-				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %1$s (%2$s)', 'pressbooks-book' ), get_the_title( $prev_chapter_id ), $prev_chapter_post_type ); ?>">
+				<?php /* translators: %s: post title */ ?>
+				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_title ); ?>">
 					<svg class="icon--svg"><use xlink:href="#arrow-left" /></svg>
-					<?php /* translators: %s: post type name */ ?>
-					<?php printf( __( 'Previous (%s)', 'pressbooks-book' ), $prev_chapter_post_type ); ?>
+					<?php /* translators: %s: post short title or title */ ?>
+					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
 			<?php } ?>
 		</div>
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
-				<?php /* translators: %1$s: post title, %2$s: post type name */ ?>
-				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %1$s (%2$s)', 'pressbooks-book' ), get_the_title( $next_chapter_id ), $next_chapter_post_type ); ?>">
-					<?php /* translators: %s: post type name */ ?>
-					<?php printf( __( 'Next (%s)', 'pressbooks-book' ), $next_chapter_post_type ); ?>
+				<?php /* translators: %s: post title, */ ?>
+				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_title ); ?>">
+					<?php /* translators: %s: post short title or title */ ?>
+					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
 					<svg class="icon--svg"><use xlink:href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
