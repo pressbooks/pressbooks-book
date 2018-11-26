@@ -29,6 +29,7 @@ function enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 	$options = get_option( 'pressbooks_theme_options_web' );
+	$hypothesis_options = get_option( 'wp_hypothesis_options' );
 
 	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700|Spectral:400,700', false, null );
@@ -38,6 +39,15 @@ function enqueue_assets() {
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
 	// TODO: Enqueue only if Hypothesis is enabled.
 	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
+	wp_localize_script(
+		'pressbooks/pane',
+		'pressbooksHypothesis',
+		[
+			'showHighlights' => ( isset( $hypothesis_options['highlights-on-by-default'] ) ) ? true : false,
+			'openSidebar' => ( isset( $hypothesis_options['sidebar-open-by-default'] ) ) ? true : false,
+		]
+	);
+
 	wp_localize_script(
 		'pressbooks/book',
 		'pressbooksBook',
