@@ -18,6 +18,12 @@ $light: #eee;
   margin-top: 0.5rem;
 }
 
+.toc__front-matter + .toc__part,
+.toc__part + .toc__part,
+.toc__part + .toc__back-matter {
+  margin-top: 1rem;
+}
+
 .toc button {
   background: transparent;
   border: solid (2 / 16) * 1rem transparent;
