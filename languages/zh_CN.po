@@ -1,21 +1,17 @@
 # Copyright (C) 2018 pressbooks-book
 # This file is distributed under the same license as the pressbooks-book package.
-# Translators:
-# Antonio Devís <colomet@hotmail.com>, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
-"Language-Team: Italian (https://www.transifex.com/pressbooks/teams/9194/it/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/pressbooks/teams/9194/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
@@ -33,18 +29,15 @@ msgstr ""
 #: 404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
 msgstr ""
-"Sembra che non ci sia niente in questo sito. Vuoi provare con una ricerca?"
 
 #: comments.php:2
 msgid "Feedback/Errata"
-msgstr "Feedback/Errore"
+msgstr ""
 
 #: comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-"Questo post è protetto da password. Inserisci la password per vedere i "
-"commenti."
 
 #: comments.php:21
 #, php-format
@@ -52,7 +45,6 @@ msgctxt "comments title"
 msgid "%1$d Response to %2$s"
 msgid_plural "%1$d Responses to %2$s"
 msgstr[0] ""
-msgstr[1] ""
 
 #: comments.php:36 comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
@@ -64,11 +56,11 @@ msgstr ""
 
 #: comments.php:56
 msgid "Comments are closed."
-msgstr "Commenti negati"
+msgstr ""
 
 #: comments.php:64
 msgid "Submit"
-msgstr "Invia"
+msgstr ""
 
 #: footer.php:32
 #, php-format
@@ -77,31 +69,31 @@ msgstr ""
 
 #: footer.php:34
 msgid "Open Source"
-msgstr "Fonte Aperta/Open Source"
+msgstr ""
 
 #: footer.php:35
 msgid "Open Textbooks"
-msgstr "Apri Textbooks"
+msgstr ""
 
 #: footer.php:36
 msgid "Open Book Publishing"
-msgstr "Apri Book Publishing"
+msgstr ""
 
 #: footer.php:37
 msgid "Learn More"
-msgstr "Per saperne di più"
+msgstr ""
 
 #: footer.php:41 footer.php:45
 msgid "Pressbooks on Facebook"
-msgstr "Pressbooks su Facebook"
+msgstr ""
 
 #: footer.php:47 footer.php:51
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks su Twitter"
+msgstr ""
 
 #: functions.php:16
 msgid "Dependencies Missing"
-msgstr "Dipendenze Mancanti"
+msgstr ""
 
 #: functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
@@ -109,11 +101,11 @@ msgstr ""
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr "Non riesco a trovare Pressbooks install."
+msgstr ""
 
 #: header.php:72
 msgid "Skip to content"
-msgstr "Salta questo contenuto"
+msgstr ""
 
 #: header.php:91
 #, php-format
@@ -122,11 +114,11 @@ msgstr ""
 
 #: header.php:102
 msgid "Toggle Menu"
-msgstr "Menù Toggle"
+msgstr ""
 
 #: header.php:115 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr "Contenuti"
+msgstr ""
 
 #: header.php:124
 #, php-format
@@ -135,7 +127,7 @@ msgstr ""
 
 #: header.php:128 inc/helpers/namespace.php:220
 msgid "Buy"
-msgstr "Compra"
+msgstr ""
 
 #: inc/actions/namespace.php:55 partials/content-accessibility-toolbar.php:7
 msgid "Increase Font Size"
@@ -274,42 +266,36 @@ msgstr ""
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:421
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:422
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:423
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:424
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:425
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:426 partials/content-cover-book-header.php:101
 #: partials/content-cover-book-info.php:66 single.php:32
 msgid "License"
-msgstr "Licensa"
+msgstr ""
 
 #: inc/helpers/namespace.php:427
 msgid "Primary Subject"
@@ -385,23 +371,23 @@ msgstr ""
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr "Questo libro non contiene alcun contenuto publico."
+msgstr ""
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr "Riguardo il Libro"
+msgstr ""
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
-msgstr "In arrivo!"
+msgstr ""
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr "Autori"
+msgstr ""
 
 #: page-buy.php:5
 msgid "Buy the Book"
-msgstr "Compra il Libro"
+msgstr ""
 
 #: page-buy.php:21
 #, php-format
@@ -435,20 +421,20 @@ msgstr ""
 
 #: page-buy.php:50
 msgid "Elsewhere"
-msgstr "Vedi altrove"
+msgstr ""
 
 #: page-buy.php:50
 msgid "Purchase here:"
-msgstr "Acquista qui:"
+msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:69
 msgid "Edit"
-msgstr "Modifica"
+msgstr ""
 
 #: page.php:18
 msgid "Pages:"
-msgstr "Pagine:"
+msgstr ""
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
@@ -580,7 +566,7 @@ msgstr ""
 
 #: private.php:4
 msgid "Access Denied"
-msgstr "Accesso Negato"
+msgstr ""
 
 #: private.php:10
 #, php-format
@@ -591,7 +577,7 @@ msgstr ""
 
 #: private.php:14
 msgid "sign in here"
-msgstr "Accedi qui"
+msgstr ""
 
 #: private.php:23
 #, php-format
@@ -605,20 +591,20 @@ msgstr ""
 
 #: search.php:18
 msgid "Previous page"
-msgstr "Pagina Precedente"
+msgstr ""
 
 #: search.php:19
 msgid "Next page"
-msgstr "Pagina Successiva"
+msgstr ""
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr "Navigazione Numerata"
+msgstr ""
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr "Cerca nel libro:"
+msgstr ""
 
 #: searchform.php:4
 msgctxt "placeholder"
@@ -627,8 +613,8 @@ msgstr ""
 
 #: searchform.php:8
 msgid "Search"
-msgstr "Cerca"
+msgstr ""
 
 #: single.php:58
 msgid "Share This Book"
-msgstr "Condividi Questo Libro"
+msgstr ""
