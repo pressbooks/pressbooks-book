@@ -38,5 +38,6 @@
   "homepage": "https://github.com/pressbooks/aetna#readme",
   "stylelint": {
     "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
-  }
+  },
+  "gitHead": "a6a8fa31c2b97a828d4abc4990ec113c629080bc"
 }
