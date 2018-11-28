@@ -26,9 +26,13 @@
     text-align: $table-align;
     border-collapse: collapse;
     border-top: $table-border-width solid;
+    border-right: if-map-get($table-border-right-width, $type) if-map-get($table-border-right-style, $type);
     border-bottom: $table-border-width solid;
+    border-right: if-map-get($table-border-left-width, $type) if-map-get($table-border-left-style, $type);
     border-top-color: if-map-get($line-color-1, $type);
+    border-right-color: if-map-get($line-color-1, $type);
     border-bottom-color: if-map-get($line-color-1, $type);
+    border-left-color: if-map-get($line-color-1, $type);
 
     p {
       text-align: $table-align;
@@ -43,7 +47,7 @@
     }
     &.lines {
       border-color: if-map-get($line-color-1, $type);
-    } 
+    }
 
     &.lines tr {
       border-top: $table-border-width solid;
@@ -93,12 +97,12 @@
       float: left;
       margin-right: if-map-get($table-alignleft-margin-right, $type);
     }
-  
+
     &.aligncenter {
       margin-left: auto;
       margin-right: auto;
     }
-  
+
     &.alignright {
       float: right;
       margin-left: if-map-get($table-alignright-margin-left, $type);
@@ -187,7 +191,7 @@
       &.lines th {
         border-color: if-map-get($line-color-1, $type);
       }
-  
+
       &.lines td {
         border-color: if-map-get($line-color-1, $type);
       }
@@ -224,12 +228,12 @@
         float: left;
         margin-right: if-map-get($table-alignleft-margin-right, $type);
       }
-    
+
       &.aligncenter {
         margin-left: auto;
         margin-right: auto;
       }
-    
+
       &.alignright {
         float: right;
         margin-left: if-map-get($table-alignright-margin-left, $type);

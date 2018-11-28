@@ -909,6 +909,26 @@ $table-alignright-margin-left: (epub: 1.5em, prince: 1.5em, web: 1.5em) !default
 /// @type String
 $table-border-width: 1px !default;
 
+/// Border left width for `<table>` elements.
+/// @type String | Map
+/// @since 1.3.0
+$table-border-left-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Border left style for `<table>` elements.
+/// @type String | Map
+/// @since 1.3.0
+$table-border-left-style: (epub: none, prince: none, web: none) !default;
+
+/// Border right width for `<table>` elements.
+/// @type String | Map
+/// @since 1.3.0
+$table-border-right-width: (epub: 0, prince: 0, web: 0) !default;
+
+/// Border right style for `<table>` elements.
+/// @type String | Map
+/// @since 1.3.0
+$table-border-right-style: (epub: none, prince: none, web: none) !default;
+
 /// Margin Bottom for `<caption>` elements.
 /// @type String
 $table-caption-margin-bottom: 0.5em !default;
