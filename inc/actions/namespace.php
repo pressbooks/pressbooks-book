@@ -150,7 +150,7 @@ function update_webbook_stylesheet() {
 	}
 
 	if ( true === $recompile ) {
-		Container::get( 'Sass' )->updateWebBookStyleSheet();
+		Container::get( 'Styles' )->updateWebBookStyleSheet();
 	}
 }
 
