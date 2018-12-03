@@ -43,7 +43,7 @@
     }
     &.lines {
       border-color: if-map-get($line-color-1, $type);
-    } 
+    }
 
     &.lines tr {
       border-top: $table-border-width solid;
@@ -93,12 +93,12 @@
       float: left;
       margin-right: if-map-get($table-alignleft-margin-right, $type);
     }
-  
+
     &.aligncenter {
       margin-left: auto;
       margin-right: auto;
     }
-  
+
     &.alignright {
       float: right;
       margin-left: if-map-get($table-alignright-margin-left, $type);
@@ -119,7 +119,9 @@
     text-align: $table-th-align;
     vertical-align: $table-th-vertical-align;
     border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
+    border-right: if-map-get($table-th-border-right-width, $type) if-map-get($table-th-border-right-style, $type) if-map-get($line-color-1, $type);
     border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type) if-map-get($line-color-1, $type);
+    border-left: if-map-get($table-th-border-left-width, $type) if-map-get($table-th-border-left-style, $type) if-map-get($line-color-1, $type);
   }
 
   td {
@@ -129,6 +131,7 @@
     }
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
+    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
     border-color: if-map-get($line-color-1, $type);
   }
 
@@ -187,7 +190,7 @@
       &.lines th {
         border-color: if-map-get($line-color-1, $type);
       }
-  
+
       &.lines td {
         border-color: if-map-get($line-color-1, $type);
       }
@@ -224,12 +227,12 @@
         float: left;
         margin-right: if-map-get($table-alignleft-margin-right, $type);
       }
-    
+
       &.aligncenter {
         margin-left: auto;
         margin-right: auto;
       }
-    
+
       &.alignright {
         float: right;
         margin-left: if-map-get($table-alignright-margin-left, $type);
