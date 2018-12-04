@@ -44,6 +44,11 @@ $image-caption-line-height: (
 /// @type String
 $image-caption-text-align: left !default;
 
+/// Text indent for image captions.
+/// @type String | Map
+/// @since 1.3.0
+$image-caption-text-indent: (epub: 0, prince: 0, web: 0) !default;
+
 /// Text transform for image captions.
 /// @type String
 $image-caption-text-transform: none !default;

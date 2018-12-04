@@ -1,12 +1,16 @@
 # Copyright (C) 2018 pressbooks-book
 # This file is distributed under the same license as the pressbooks-book package.
+# Translators:
+# jorge santibañez <info@letrapixel.com>, 2017
+# Antonio Devís <colomet@hotmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pressbooks-book\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: jorge santibañez <info@letrapixel.com>, 2017\n"
+"PO-Revision-Date: 2017-06-22 17:45+0000\n"
+"Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/pressbooks/teams/9194/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,7 +62,7 @@ msgstr ""
 
 #: comments.php:56
 msgid "Comments are closed."
-msgstr ""
+msgstr "Los comentarios están cerrados."
 
 #: comments.php:64
 msgid "Submit"
@@ -67,31 +71,31 @@ msgstr "Enviar"
 #: footer.php:32
 #, php-format
 msgid "Powered by %s"
-msgstr ""
+msgstr "Powered by %s"
 
 #: footer.php:34
 msgid "Open Source"
-msgstr ""
+msgstr "Open Source"
 
 #: footer.php:35
 msgid "Open Textbooks"
-msgstr ""
+msgstr "Open Textbooks"
 
 #: footer.php:36
 msgid "Open Book Publishing"
-msgstr ""
+msgstr "Open Book Publishing"
 
 #: footer.php:37
 msgid "Learn More"
-msgstr ""
+msgstr "Aprender más"
 
 #: footer.php:41 footer.php:45
 msgid "Pressbooks on Facebook"
-msgstr ""
+msgstr "Pressbooks en Facebook"
 
 #: footer.php:47 footer.php:51
 msgid "Pressbooks on Twitter"
-msgstr ""
+msgstr "Pressbooks en Twitter"
 
 #: functions.php:16
 msgid "Dependencies Missing"
@@ -103,281 +107,279 @@ msgstr ""
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr ""
+msgstr "No podemos encontrar la instalación de Pressbooks."
 
-#: header.php:64
+#: header.php:72
 msgid "Skip to content"
-msgstr ""
+msgstr "Saltar al contenido"
 
-#: header.php:83
+#: header.php:91
 #, php-format
 msgid "Logo for %s"
 msgstr ""
 
-#: header.php:94
+#: header.php:102
 msgid "Toggle Menu"
 msgstr ""
 
-#: header.php:106 index.php:14 partials/content-cover-toc.php:3
+#: header.php:115 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr ""
+msgstr "Contenidos"
 
-#: header.php:112
+#: header.php:124
 #, php-format
 msgid "Go to the cover page of %s"
 msgstr ""
 
-#: header.php:116 inc/helpers/namespace.php:211
+#: header.php:128 inc/helpers/namespace.php:220
 msgid "Buy"
 msgstr "Comprar"
 
-#: inc/actions/namespace.php:50 partials/content-accessibility-toolbar.php:7
+#: inc/actions/namespace.php:55 partials/content-accessibility-toolbar.php:7
 msgid "Increase Font Size"
-msgstr ""
+msgstr "Aumentar el tamaño de la fuente"
 
-#: inc/actions/namespace.php:51
+#: inc/actions/namespace.php:56
 msgid "Decrease Font Size"
-msgstr ""
+msgstr "Disminuir el tamaño de la fuente"
 
-#: inc/actions/namespace.php:53
+#: inc/actions/namespace.php:58
 msgid "Comparison loading…"
 msgstr ""
 
-#: inc/actions/namespace.php:54
+#: inc/actions/namespace.php:59
 msgid "Comparison loaded."
 msgstr ""
 
-#: inc/actions/namespace.php:55
+#: inc/actions/namespace.php:60
 msgid "The original chapter could not be loaded."
 msgstr ""
 
-#: inc/actions/namespace.php:217
+#: inc/actions/namespace.php:61
+msgid "Toggle contents of"
+msgstr ""
+
+#: inc/actions/namespace.php:227
 msgid "Enable Image Lightbox"
 msgstr ""
 
-#: inc/actions/namespace.php:222
+#: inc/actions/namespace.php:232
 msgid "Show linked images in a lightbox"
 msgstr ""
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr ""
-
-#: inc/helpers/namespace.php:86
-msgid "Print PDF"
-msgstr ""
-
-#: inc/helpers/namespace.php:87 inc/helpers/namespace.php:88
-msgid "Digital PDF"
-msgstr ""
-
-#: inc/helpers/namespace.php:89
-msgid "HTMLBook"
-msgstr ""
-
-#: inc/helpers/namespace.php:90
-msgid "EPUB"
-msgstr ""
-
-#: inc/helpers/namespace.php:91
-msgid "MOBI"
-msgstr ""
+msgstr "Privado"
 
 #: inc/helpers/namespace.php:92
-msgid "EPUB3"
-msgstr ""
+msgid "Print PDF"
+msgstr "Imprimir PDF"
 
-#: inc/helpers/namespace.php:93
-msgid "XHTML"
-msgstr ""
-
-#: inc/helpers/namespace.php:94
-msgid "OpenDocument"
-msgstr ""
+#: inc/helpers/namespace.php:93 inc/helpers/namespace.php:94
+msgid "Digital PDF"
+msgstr "PDF digital"
 
 #: inc/helpers/namespace.php:95
-msgid "Pressbooks XML"
-msgstr ""
+msgid "HTMLBook"
+msgstr "HTMLBook"
 
 #: inc/helpers/namespace.php:96
+msgid "EPUB"
+msgstr "EPUB"
+
+#: inc/helpers/namespace.php:97
+msgid "MOBI"
+msgstr "MOBI"
+
+#: inc/helpers/namespace.php:98
+msgid "EPUB3"
+msgstr "EPUB3"
+
+#: inc/helpers/namespace.php:99
+msgid "XHTML"
+msgstr "XHTML"
+
+#: inc/helpers/namespace.php:100
+msgid "OpenDocument"
+msgstr "OpenDocument"
+
+#: inc/helpers/namespace.php:101
+msgid "Pressbooks XML"
+msgstr "Pressbooks XML"
+
+#: inc/helpers/namespace.php:102
 msgid "WordPress XML"
-msgstr ""
-
-#: inc/helpers/namespace.php:145
-msgid "Public Domain"
-msgstr ""
-
-#: inc/helpers/namespace.php:148
-msgid "Creative Commons Attribution"
-msgstr ""
-
-#: inc/helpers/namespace.php:151
-msgid "Creative Commons Attribution ShareAlike"
-msgstr ""
+msgstr "WordPress XML"
 
 #: inc/helpers/namespace.php:154
-msgid "Creative Commons Attribution NoDerivatives"
-msgstr ""
+msgid "Public Domain"
+msgstr "Dominio público"
 
 #: inc/helpers/namespace.php:157
-msgid "Creative Commons Attribution NonCommercial"
-msgstr ""
+msgid "Creative Commons Attribution"
+msgstr "Creative Commons atribución"
 
 #: inc/helpers/namespace.php:160
-msgid "Creative Commons Attribution NonCommercial ShareAlike"
-msgstr ""
+msgid "Creative Commons Attribution ShareAlike"
+msgstr "Creative Commons Atribución ComppartirIgual"
 
 #: inc/helpers/namespace.php:163
+msgid "Creative Commons Attribution NoDerivatives"
+msgstr "Creative Commons Atribución NoDerivadas"
+
+#: inc/helpers/namespace.php:166
+msgid "Creative Commons Attribution NonCommercial"
+msgstr "Creative Commons Atribución NoComercial"
+
+#: inc/helpers/namespace.php:169
+msgid "Creative Commons Attribution NonCommercial ShareAlike"
+msgstr "Creative Commons Atribución NoComercial ComppartirIgual"
+
+#: inc/helpers/namespace.php:172
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr ""
+msgstr "Creative Commons Atribución NoComercial NoDerivadas"
 
-#: inc/helpers/namespace.php:167
+#: inc/helpers/namespace.php:176
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Todos los derechos reservados."
 
-#: inc/helpers/namespace.php:181
+#: inc/helpers/namespace.php:190
 msgid "Check out this great book on Pressbooks."
 msgstr ""
 
-#: inc/helpers/namespace.php:198
+#: inc/helpers/namespace.php:207
 msgid "Home"
 msgstr ""
 
-#: inc/helpers/namespace.php:204
+#: inc/helpers/namespace.php:213
 msgid "Read"
-msgstr ""
+msgstr "Leer"
 
-#: inc/helpers/namespace.php:218
+#: inc/helpers/namespace.php:227
 msgid "Sign in"
 msgstr ""
 
-#: inc/helpers/namespace.php:225
+#: inc/helpers/namespace.php:234
 msgid "Admin"
-msgstr ""
+msgstr "Administración"
 
-#: inc/helpers/namespace.php:231
+#: inc/helpers/namespace.php:240
 msgid "Sign out"
-msgstr ""
+msgstr "Salir"
 
-#: inc/helpers/namespace.php:402 partials/content-cover-book-header.php:17
-#: partials/content-cover-book-info.php:49
+#: inc/helpers/namespace.php:420 partials/content-cover-book-header.php:17
+#: partials/content-cover-book-info.php:51
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Autores"
+msgstr[1] "Autores"
 
-#: inc/helpers/namespace.php:403
+#: inc/helpers/namespace.php:421
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Editores"
+msgstr[1] "Editores"
 
-#: inc/helpers/namespace.php:404
+#: inc/helpers/namespace.php:422
 msgid "Translator"
 msgid_plural "Translators"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Traductores"
+msgstr[1] "Traductores"
 
-#: inc/helpers/namespace.php:405
+#: inc/helpers/namespace.php:423
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:406
+#: inc/helpers/namespace.php:424
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ilustradores"
+msgstr[1] "Ilustradores"
 
-#: inc/helpers/namespace.php:407
+#: inc/helpers/namespace.php:425
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Contribuidores"
+msgstr[1] "Contribuidores"
 
-#: inc/helpers/namespace.php:408 partials/content-cover-book-header.php:101
-#: partials/content-cover-book-info.php:64 single.php:32
+#: inc/helpers/namespace.php:426 partials/content-cover-book-header.php:101
+#: partials/content-cover-book-info.php:66 single.php:32
 msgid "License"
-msgstr ""
+msgstr "Licencia"
 
-#: inc/helpers/namespace.php:409
+#: inc/helpers/namespace.php:427
 msgid "Primary Subject"
 msgstr ""
 
-#: inc/helpers/namespace.php:410
+#: inc/helpers/namespace.php:428
 msgid "Additional Subject(s)"
 msgstr ""
 
-#: inc/helpers/namespace.php:411
+#: inc/helpers/namespace.php:429
 msgid "Publisher"
-msgstr ""
+msgstr "Editorial"
 
-#: inc/helpers/namespace.php:412
+#: inc/helpers/namespace.php:430
 msgid "Publication Date"
+msgstr "Fecha de publicación"
+
+#: inc/helpers/namespace.php:431 single.php:42
+msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
-#: inc/helpers/namespace.php:413
+#: inc/helpers/namespace.php:432
 msgid "Ebook ISBN"
-msgstr ""
+msgstr "ISBN de la edición en Ebook"
 
-#: inc/helpers/namespace.php:414
+#: inc/helpers/namespace.php:433
 msgid "Print ISBN"
-msgstr ""
+msgstr "ISBN de la edición impresa"
 
-#: inc/helpers/namespace.php:415
+#: inc/helpers/namespace.php:434
 msgid "Hashtag"
-msgstr ""
+msgstr "Hashtag"
 
-#: inc/helpers/namespace.php:463
+#: inc/helpers/namespace.php:475 inc/helpers/namespace.php:478
 #, php-format
-msgid "Previous: %1$s (%2$s)"
+msgid "Previous: %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:466
+#: inc/helpers/namespace.php:485 inc/helpers/namespace.php:487
 #, php-format
-msgid "Previous (%s)"
+msgid "Next: %s"
 msgstr ""
 
-#: inc/helpers/namespace.php:473
-#, php-format
-msgid "Next: %1$s (%2$s)"
-msgstr ""
-
-#: inc/helpers/namespace.php:475
-#, php-format
-msgid "Next (%s)"
-msgstr ""
-
-#: inc/helpers/namespace.php:482
+#: inc/helpers/namespace.php:494
 msgid "Back to top"
 msgstr ""
 
-#: inc/helpers/namespace.php:546
+#: inc/helpers/namespace.php:558
 #, php-format
 msgid "%s on"
 msgstr ""
 
-#: inc/helpers/namespace.php:546
+#: inc/helpers/namespace.php:558
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/helpers/namespace.php:546 inc/helpers/namespace.php:575
+#: inc/helpers/namespace.php:558 inc/helpers/namespace.php:587
 msgid "(Edit)"
-msgstr ""
+msgstr "(Editar)"
 
-#: inc/helpers/namespace.php:549
+#: inc/helpers/namespace.php:561
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/helpers/namespace.php:575
+#: inc/helpers/namespace.php:587
 msgid "Pingback:"
 msgstr ""
 
 #: inc/intervention.php:11
 msgid "Hello,"
-msgstr ""
+msgstr "Hola,"
 
 #: index.php:18
 msgid "This book does not contain any public content."
@@ -448,11 +450,11 @@ msgstr "Páginas:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr ""
+msgstr "Título del libro"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr ""
+msgstr "Subtítulo"
 
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
@@ -462,92 +464,97 @@ msgstr ""
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr ""
+msgstr "Descargar el libro"
 
 #: partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr ""
+msgstr "Descripción del libro"
 
 #: partials/content-cover-book-header.php:109
 msgid "Read Book"
-msgstr ""
+msgstr "Leer el libro"
 
 #: partials/content-cover-book-header.php:116
 msgid "Buy Book"
-msgstr ""
+msgstr "Comprar el libro"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr ""
+msgstr "Información del libro"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr ""
+msgstr "Fuente del libro"
 
-#: partials/content-cover-book-info.php:29
+#: partials/content-cover-book-info.php:30
 #, php-format
 msgid ""
-"This book is a cloned version of %1$s by %2$s, published using Pressbooks by"
-" %3$s under a %4$s license. It may differ from the original."
+"This book is a cloned version of %1$s%2$s, published using Pressbooks by "
+"%3$s under a %4$s license. It may differ from the original."
 msgstr ""
 
-#: partials/content-cover-book-info.php:38
+#: partials/content-cover-book-info.php:33
+#, php-format
+msgid " by %s"
+msgstr ""
+
+#: partials/content-cover-book-info.php:40
 #, php-format
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
 msgstr ""
 
-#: partials/content-cover-book-info.php:59
+#: partials/content-cover-book-info.php:61
 msgid "Contributors"
 msgstr ""
 
-#: partials/content-cover-book-info.php:69
+#: partials/content-cover-book-info.php:71
 msgid "Subject"
 msgstr ""
 
-#: partials/content-cover-book-info.php:83
-#: partials/content-cover-metadata.php:55
+#: partials/content-cover-book-info.php:85
+#: partials/content-cover-metadata.php:63
 msgid "Click for more information"
 msgstr ""
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr ""
+msgstr "Metadatos"
 
 #: partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
-#: partials/content-cover-toc.php:6
+#: partials/content-cover-toc.php:5
 msgid "Show All Contents"
 msgstr ""
 
-#: partials/content-cover-toc.php:7
+#: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
 msgstr ""
 
-#: partials/content-difftool.php:26
+#: partials/content-difftool.php:52
 #, php-format
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
 msgstr ""
 
-#: partials/content-difftool.php:33
+#: partials/content-difftool.php:59
 msgid "Show Comparison with Original"
 msgstr ""
 
-#: partials/content-difftool.php:40
+#: partials/content-difftool.php:66
 msgid ""
 "Note: The comparison below is between this text and the <strong>current "
 "version</strong> of the text from which it was adapted."
 msgstr ""
 
-#: partials/content-difftool.php:41
+#: partials/content-difftool.php:67
 msgid "additions"
 msgstr ""
 
-#: partials/content-difftool.php:41
+#: partials/content-difftool.php:67
 msgid "deletions"
 msgstr ""
 
@@ -563,19 +570,11 @@ msgstr ""
 
 #: partials/content-single-legacy.php:41 partials/content-single.php:42
 msgid "Previous Page"
-msgstr ""
+msgstr "Página anterior"
 
 #: partials/content-single-legacy.php:52 partials/content-single.php:53
 msgid "Next Page"
-msgstr ""
-
-#: partials/content-toc.php:22
-msgid "Front Matter"
-msgstr ""
-
-#: partials/content-toc.php:77
-msgid "Back Matter"
-msgstr ""
+msgstr "Próxima página"
 
 #: private.php:4
 msgid "Access Denied"
@@ -604,11 +603,11 @@ msgstr ""
 
 #: search.php:18
 msgid "Previous page"
-msgstr ""
+msgstr "Página anterior"
 
 #: search.php:19
 msgid "Next page"
-msgstr ""
+msgstr "Próxima página"
 
 #: search.php:20
 msgid "Paged navigation"
@@ -617,7 +616,7 @@ msgstr ""
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr ""
+msgstr "Buscar en el libro:"
 
 #: searchform.php:4
 msgctxt "placeholder"
@@ -626,8 +625,8 @@ msgstr ""
 
 #: searchform.php:8
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
-#: single.php:41
+#: single.php:58
 msgid "Share This Book"
-msgstr ""
+msgstr "Compartir este libro"

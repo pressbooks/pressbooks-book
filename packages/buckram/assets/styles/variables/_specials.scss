@@ -27,6 +27,11 @@ $column-twocolumn-column-gap: 1.5em !default;
 /// @type String
 $column-twocolumn-font-size: 0.85em !default;
 
+/// Text align for elements with class `.twocolumn`.
+/// @type String | Map
+/// @since 1.3.0
+$column-twocolumn-text-align: $para-align !default;
+
 /// Column gap for elements with class `.threecolumn`.
 /// @type String
 $column-threecolumn-column-gap: 1em !default;
@@ -34,6 +39,11 @@ $column-threecolumn-column-gap: 1em !default;
 /// Font size for elements with class `.threecolumn`.
 /// @type String
 $column-threecolumn-font-size: 0.8em !default;
+
+/// Text align for elements with class `.threecolumn`.
+/// @type String | Map
+/// @since 1.3.0
+$column-threecolumn-text-align: $column-twocolumn-text-align !default;
 
 /// Text indent for elements with class `.twocolumn` and `.threecolumn`.
 /// @type String | Map
