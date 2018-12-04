@@ -49,7 +49,7 @@
     @if $type != 'epub' {
       line-height: $column-line-height;
     }
-    text-align: left;
+    text-align: if-map-get($column-threecolumn-text-align, $type);
     text-indent: $para-indent;
   }
 
