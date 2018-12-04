@@ -447,7 +447,7 @@ $sidebar-line-height: $body-line-height !default;
 $hr-width: 20% !default;
 
 /// Seperator Top margin on `<hr>` elements.
-/// @type String
+/// @type String | Map
 $hr-margin-top: 0.9em !default;
 
 /// Seperator Bottom margin on `<hr>` elements.
@@ -473,7 +473,7 @@ $hr-break-symbols-margin-bottom: 1.66em !default;
 /// Top margin on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String | Map
 /// @since 1.3.0
-$hr-break-symbols-margin-top: (epub: 0.5em, prince: 0.5em, web: 0.5em) !default;
+$hr-break-symbols-margin-top: $hr-margin-top !default;
 
 /// Font size on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String
