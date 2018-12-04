@@ -224,6 +224,7 @@
       margin-top: if-map-get($image-caption-margin-top, $type);
       text-align: $image-caption-text-align;
       text-transform: $image-caption-text-transform;
+      text-indent: if-map-get($image-caption-text-indent, $type);
     }
 
     img {
