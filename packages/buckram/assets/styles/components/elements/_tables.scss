@@ -25,10 +25,10 @@
     }
     text-align: $table-align;
     border-collapse: collapse;
-    border-top: $table-border-width solid;
-    border-bottom: $table-border-width solid;
-    border-top-color: if-map-get($line-color-1, $type);
-    border-bottom-color: if-map-get($line-color-1, $type);
+    border-top: $table-border-width solid if-map-get($line-color-1, $type);
+    border-right: if-map-get($table-border-right-width, $type) if-map-get($table-border-right-style, $type) if-map-get($line-color-1, $type);
+    border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
+    border-left: if-map-get($table-border-left-width, $type) if-map-get($table-border-left-style, $type) if-map-get($line-color-1, $type);
 
     p {
       text-align: $table-align;
@@ -46,11 +46,9 @@
     }
 
     &.lines tr {
-      border-top: $table-border-width solid;
-      border-bottom: $table-border-width solid;
+      border-top: $table-border-width solid if-map-get($line-color-1, $type);
+      border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
       border-color: if-map-get($line-color-1, $type);
-      border-top-color: if-map-get($line-color-1, $type);
-      border-bottom-color: if-map-get($line-color-1, $type);
     }
 
     &.lines th {
@@ -72,8 +70,7 @@
     }
 
     &.border {
-      border: $table-border-width solid;
-      border-color: if-map-get($line-color-1, $type);
+      border: $table-border-width solid if-map-get($line-color-1, $type);
     }
 
     &.no-border,
@@ -159,11 +156,9 @@
       line-height: $table-line-height;
       text-align: $table-align;
       border-collapse: collapse;
-      border-top: $table-border-width solid;
-      border-bottom: $table-border-width solid;
+      border-top: $table-border-width solid if-map-get($line-color-1, $type);
+      border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
       border-color: if-map-get($line-color-1, $type);
-      border-top-color: if-map-get($line-color-1, $type);
-      border-bottom-color: if-map-get($line-color-1, $type);
 
       p {
         text-align: $table-align;
@@ -180,11 +175,9 @@
       }
 
       &.lines tr {
-        border-top: $table-border-width solid;
-        border-bottom: $table-border-width solid;
+        border-top: $table-border-width solid if-map-get($line-color-1, $type);
+        border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
         border-color: if-map-get($line-color-1, $type);
-        border-top-color: if-map-get($line-color-1, $type);
-        border-bottom-color: if-map-get($line-color-1, $type);
       }
 
       &.lines th {
@@ -206,8 +199,7 @@
       }
 
       &.border {
-        border: $table-border-width solid;
-        border-color: if-map-get($line-color-1, $type);
+        border: $table-border-width solid if-map-get($line-color-1, $type);
       }
 
       &.no-border,
