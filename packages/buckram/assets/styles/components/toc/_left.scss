@@ -32,7 +32,8 @@
 
     .chapter .chapter-subtitle,
     .chapter .chapter-author,
-    .chapter .sections {
+    .chapter .sections,
+    .chapter .chapter-license {
       margin-left: if-map-get($toc-left-left-gutter, $type);
     }
   }
