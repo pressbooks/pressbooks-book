@@ -6,6 +6,12 @@
 
 #### Patches
 
+## 2.6.1
+
+### Patches
+
+- Use short title in navigation cues ([#396](https://github.com/pressbooks/pressbooks-book/issues/396)): [#397](https://github.com/pressbooks/pressbooks-book/pull/397)
+
 ## 2.6.0
 
 ### Minor Changes
