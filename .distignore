@@ -9,6 +9,7 @@ tests
 .gitignore
 .travis.yml
 .tx
+packages/aetna
 packages/buckram/tests
 phpcs.ruleset.xml
 phpunit.xml
