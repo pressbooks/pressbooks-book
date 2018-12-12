@@ -19,7 +19,6 @@ require_once $_tests_dir . '/includes/functions.php';
 
 function _manually_load_plugin() {
 	$_pressbooks_dir = '/tmp/wordpress/wp-content/plugins/pressbooks';
-	require_once( $_pressbooks_dir . '/hm-autoloader.php' );
 	require_once( $_pressbooks_dir . '/pressbooks.php' );
 }
 
