@@ -4,6 +4,7 @@
 
 ### Patches
 
+- Ensure that Hypothesis highlights are shown as expected ([#392](https://github.com/pressbooks/pressbooks-book/issues/392)): [#400](https://github.com/pressbooks/pressbooks-book/pull/400)
 - Use short title in navigation cues ([#396](https://github.com/pressbooks/pressbooks-book/issues/396)): [#397](https://github.com/pressbooks/pressbooks-book/pull/397)
 
 ## 2.6.0
