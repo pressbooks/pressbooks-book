@@ -9,10 +9,12 @@ notifications:
 branches:
   only:
   - dev
+  - hotfix
   - "/^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(\\.(0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\\+[0-9a-zA-Z-]+(\\.[0-9a-zA-Z-]+)*)?$/"
 php:
 - 7.1
 - 7.2
+- 7.3
 - nightly
 env:
 - WP_VERSION=latest WP_MULTISITE=1 TRAVIS_NODE_VERSION="8"
