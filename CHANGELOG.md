@@ -10,6 +10,7 @@
 
 ### Patches
 
+- Improve focus style for webbook TOC dropdown button ([#399](https://github.com/pressbooks/pressbooks-book/issues/399)): [#401](https://github.com/pressbooks/pressbooks-book/pull/401)
 - Ensure that Hypothesis highlights are shown as expected ([#392](https://github.com/pressbooks/pressbooks-book/issues/392)): [#400](https://github.com/pressbooks/pressbooks-book/pull/400)
 - Use short title in navigation cues ([#396](https://github.com/pressbooks/pressbooks-book/issues/396)): [#397](https://github.com/pressbooks/pressbooks-book/pull/397)
 
