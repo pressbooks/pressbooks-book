@@ -47,6 +47,9 @@ function enqueue_assets() {
 			'openSidebar' => ( isset( $hypothesis_options['sidebar-open-by-default'] ) ) ? true : false,
 		]
 	);
+	foreach ( [ 'nohighlights', 'showhighlights', 'sidebaropen' ] as $handle ) {
+		wp_dequeue_script( $handle );
+	}
 
 	wp_localize_script(
 		'pressbooks/book',
