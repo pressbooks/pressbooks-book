@@ -14,7 +14,6 @@ branches:
 php:
 - 7.1
 - 7.2
-- 7.3
 - nightly
 env:
 - WP_VERSION=latest WP_MULTISITE=1 TRAVIS_NODE_VERSION="8"
