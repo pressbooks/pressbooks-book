@@ -42,7 +42,10 @@
 			"pressbooksBook": true,
 			"pressbooksHypothesis": true
 		}
-	},
+  },
+  "eslintIgnore": [
+    "assets/src/scripts/routes/*.js"
+  ],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
 		"rules": {
