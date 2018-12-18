@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"lerna": "^3.4.3",
-		"pressbooks-build-tools": "^1.0.2",
+		"pressbooks-build-tools": "^1.1.0",
 		"sass": "^1.15.2",
 		"sass-loader": "^7.1.0",
 		"vue-template-compiler": "^2.5.21"
