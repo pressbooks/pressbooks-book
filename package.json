@@ -19,10 +19,7 @@
 	},
 	"devDependencies": {
 		"lerna": "^3.4.3",
-		"pressbooks-build-tools": "^1.1.0",
-		"sass": "^1.15.2",
-		"sass-loader": "^7.1.0",
-		"vue-template-compiler": "^2.5.21"
+		"pressbooks-build-tools": "^1.1.0"
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
@@ -42,10 +39,10 @@
 			"pressbooksBook": true,
 			"pressbooksHypothesis": true
 		}
-  },
-  "eslintIgnore": [
-    "assets/src/scripts/routes/*.js"
-  ],
+	},
+	"eslintIgnore": [
+		"assets/src/scripts/routes/*.js"
+	],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
 		"rules": {
