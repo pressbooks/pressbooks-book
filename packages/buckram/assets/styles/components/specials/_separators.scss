@@ -83,13 +83,19 @@ hr {
 }
 
 @if $type == "web" {
-    h3.section-break{
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter,
+  body#tinymce.wp-editor {
+    .section-break {
       text-align: center;
     }
 
-    h3.section-break-page{
+    .section-break-page {
       text-align: center;
     }
+  }
 }
 
 // Blank Pages
