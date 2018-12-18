@@ -19,7 +19,10 @@
 	},
 	"devDependencies": {
 		"lerna": "^3.4.3",
-		"pressbooks-build-tools": "^1.0.2"
+		"pressbooks-build-tools": "^1.0.2",
+		"sass": "^1.15.2",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.5.21"
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
@@ -28,7 +31,7 @@
 		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"rmdist": "rimraf dist",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
+		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
 		"lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
 		"test": "npm run -s lint"
 	},
@@ -36,8 +39,8 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
 			"$": true,
-      "pressbooksBook": true,
-      "pressbooksHypothesis": true
+			"pressbooksBook": true,
+			"pressbooksHypothesis": true
 		}
 	},
 	"stylelint": {
