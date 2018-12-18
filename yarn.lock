@@ -8929,10 +8929,10 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
 
-pressbooks-build-tools@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/pressbooks-build-tools/-/pressbooks-build-tools-1.0.1.tgz#de3a10b4c00ab3fcef21d1a387e147f15ee9e195"
-  integrity sha512-owo6Q9ZgP+3KyknFZF1kb5xM+Tz/0x1+JKK7YRZbNl9R+Z5KYLd9KWat/RjLUE/aD2IqXBkKek3fIBdrpbfL0g==
+pressbooks-build-tools@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pressbooks-build-tools/-/pressbooks-build-tools-1.0.2.tgz#eca79fb193e044d79f25dc092fce8ac988cc7488"
+  integrity sha512-J7VDMbq4CuIqpBIi/g6a6oQcjT7DS8hKI6fFPRvcuuH43he8z+XQ6MXYbk/qEG9fwcwWRsMahbGuw8NQ2W+a0w==
   dependencies:
     babel-eslint "^10.0.0"
     browser-sync "^2.23.6"
