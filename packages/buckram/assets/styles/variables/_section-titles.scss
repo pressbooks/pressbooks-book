@@ -656,8 +656,9 @@ $part-title-font-style: normal !default;
 $part-title-font-weight: normal !default;
 
 /// Defines the part title alignment.
-/// @type String
-$part-title-align: center !default;
+/// @type String | Map
+/// @since 1.3.0
+$part-title-align: (epub: center, prince: center, web: center) !default;
 
 /// Defines the part title text transform.
 /// @type String

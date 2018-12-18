@@ -19,7 +19,7 @@ export default {
 						container.removeAttr( 'hidden ' );
 						activity.attr( 'hidden', true );
 					} else {
-						alert.text( PB_A11y.comparison_loading );
+						alert.text( pressbooksBook.comparison_loading );
 						let current = pre.html();
 						let endpoint = pre.attr( 'data-source-endpoint' );
 						fetch( endpoint )
@@ -28,7 +28,7 @@ export default {
 									alert
 										.addClass( 'alert--error' )
 										.removeClass( 'visually-hidden' )
-										.text( PB_A11y.chapter_not_loaded );
+										.text( pressbooksBook.chapter_not_loaded );
 									activity.attr( 'hidden', true );
 									return;
 								}
@@ -58,7 +58,7 @@ export default {
 										.children( '.num' )
 										.text( deletions );
 									activity.attr( 'hidden', true );
-									alert.text( PB_A11y.comparison_loaded );
+									alert.text( pressbooksBook.comparison_loaded );
 									container.removeAttr( 'hidden' );
 								} );
 							} )
@@ -66,7 +66,7 @@ export default {
 								alert
 									.addClass( 'alert--error' )
 									.removeClass( 'visually-hidden' )
-									.text( PB_A11y.chapter_not_loaded );
+									.text( pressbooksBook.chapter_not_loaded );
 								activity.attr( 'hidden', true );
 							} );
 					}

@@ -121,6 +121,7 @@
 
   p {
     margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
+    text-align: $textbox-text-align;
   }
 
   * + p {

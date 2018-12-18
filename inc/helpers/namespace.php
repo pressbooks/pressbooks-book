@@ -449,22 +449,15 @@ function get_links( $echo = true ) {
 	$first_chapter = pb_get_first();
 	$prev_chapter = pb_get_prev();
 	$prev_chapter_id = pb_get_prev_post_id();
-	$prev_title = get_the_title( $prev_chapter_id );
-	$prev_short_title = get_post_meta( 'pb_short_title', $prev_chapter_id, true );
-	if ( $prev_short_title ) {
-		$prev_label = $prev_short_title;
-	} else {
-		$prev_label = $prev_title;
-	}
+	$prev_title = wp_strip_all_tags( html_entity_decode( get_the_title( $prev_chapter_id ) ) );
+	$prev_short_title = get_post_meta( $prev_chapter_id, 'pb_short_title', true );
+	$prev_label = ( $prev_short_title ) ? $prev_short_title : $prev_title;
+
 	$next_chapter = pb_get_next();
 	$next_chapter_id = pb_get_next_post_id();
-	$next_title = get_the_title( $next_chapter_id );
-	$next_short_title = get_post_meta( 'pb_short_title', $next_chapter_id, true );
-	if ( $next_short_title ) {
-		$next_label = $next_short_title;
-	} else {
-		$next_label = $next_title;
-	}
+	$next_title = wp_strip_all_tags( html_entity_decode( get_the_title( $next_chapter_id ) ) );
+	$next_short_title = get_post_meta( $next_chapter_id, 'pb_short_title', true );
+	$next_label = ( $next_short_title ) ? $next_short_title : $next_title;
 
 	if ( $echo ) :
 		?>

@@ -29,6 +29,7 @@ function enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 	$options = get_option( 'pressbooks_theme_options_web' );
+	$hypothesis_options = get_option( 'wp_hypothesis_options' );
 
 	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700|Spectral:400,700', false, null );
@@ -39,8 +40,20 @@ function enqueue_assets() {
 	// TODO: Enqueue only if Hypothesis is enabled.
 	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
 	wp_localize_script(
+		'pressbooks/pane',
+		'pressbooksHypothesis',
+		[
+			'showHighlights' => ( isset( $hypothesis_options['highlights-on-by-default'] ) ) ? true : false,
+			'openSidebar' => ( isset( $hypothesis_options['sidebar-open-by-default'] ) ) ? true : false,
+		]
+	);
+	foreach ( [ 'nohighlights', 'showhighlights', 'sidebaropen' ] as $handle ) {
+		wp_dequeue_script( $handle );
+	}
+
+	wp_localize_script(
 		'pressbooks/book',
-		'PB_A11y',
+		'pressbooksBook',
 		[
 			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
 			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
@@ -48,6 +61,7 @@ function enqueue_assets() {
 			'comparison_loading' => __( 'Comparison loading…', 'pressbooks-book' ),
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
 			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
+			'toggle_contents' => __( 'Toggle contents of', 'pressbooks-book' ),
 		]
 	);
 
@@ -139,7 +153,7 @@ function update_webbook_stylesheet() {
 	}
 
 	if ( true === $recompile ) {
-		Container::get( 'Sass' )->updateWebBookStyleSheet();
+		Container::get( 'Styles' )->updateWebBookStyleSheet();
 	}
 }
 
