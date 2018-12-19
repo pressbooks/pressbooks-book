@@ -61,12 +61,22 @@ export default {
 				// If there is a '#' in the URL (someone linking directly to a page with an anchor), go directly to that area and focus is
 				// Thanks to WebAIM.org for this idea
 				if ( document.location.hash && document.location.hash !== '#' ) {
-					let anchorUponArrival = document.location.hash;
-					setTimeout( function () {
-						$( anchorUponArrival ).scrollTo( { duration: 1500 } );
-						$( anchorUponArrival ).focus();
-					}, 100 );
+					let anchorUponArrival = $( document.location.hash );
+					$.scrollTo( anchorUponArrival, 1500 );
 				}
+
+				$.localScroll( {
+					onBefore: ( event, el ) => {
+						let hiddenParent = $( el ).closest( 'div[hidden]' );
+						if ( hiddenParent ) {
+							$( hiddenParent ).removeAttr( 'hidden' );
+							let sectionTitle = $( hiddenParent ).prev();
+							let sectionTitleButton = $( sectionTitle ).children( 'button' );
+							$( sectionTitle ).attr( 'data-collapsed', false );
+							$( sectionTitleButton ).attr( 'aria-expanded', true );
+						}
+					},
+				} );
 			} );
 			// Header navigation
 			$( '.js-header-nav-toggle' ).click( event => {
