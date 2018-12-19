@@ -1,5 +1,5 @@
 {
-    "/scripts/book.js": "/scripts/book.js?id=2839e1084df91bfd0a06",
+    "/scripts/book.js": "/scripts/book.js?id=da36adf9e53acfe19191",
     "/styles/book.css": "/styles/book.css?id=1bcaf4c23ed25ee5e4e3",
     "/styles/web-house-style.css": "/styles/web-house-style.css?id=d3c1aedc7525b0f30ccd",
     "/scripts/collapse-sections.js": "/scripts/collapse-sections.js?id=e6c1602fde59adf5db0a",
@@ -7,5 +7,6 @@
     "/scripts/pane.js": "/scripts/pane.js?id=4173f00e886097d83339",
     "/scripts/sharer.js": "/scripts/sharer.js?id=cb1d75f017e08db3a704",
     "/scripts/lity.js": "/scripts/lity.js?id=78effe3048232008df2b",
+    "/scripts/jquery.scrollTo.js": "/scripts/jquery.scrollTo.js?id=708d57a70235fc5c6529",
     "/styles/lity.css": "/styles/lity.css?id=2cca2f9fd7e0c7c24ac4"
 }

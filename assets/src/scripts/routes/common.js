@@ -61,11 +61,8 @@ export default {
 				// If there is a '#' in the URL (someone linking directly to a page with an anchor), go directly to that area and focus is
 				// Thanks to WebAIM.org for this idea
 				if ( document.location.hash && document.location.hash !== '#' ) {
-					let anchorUponArrival = document.location.hash;
-					setTimeout( function () {
-						$( anchorUponArrival ).scrollTo( { duration: 1500 } );
-						$( anchorUponArrival ).focus();
-					}, 100 );
+					let anchorUponArrival = $( document.location.hash );
+					$.scrollTo( anchorUponArrival, 1500 );
 				}
 			} );
 			// Header navigation
