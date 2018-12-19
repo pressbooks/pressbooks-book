@@ -107,7 +107,7 @@
     content: counter(level-1, upper-roman)".\A0";
     display: inline-block;
     text-align: right;
-    width: if-map-get($ol-padding-left, $type);
+    width: auto;
   }
 
   ol {
@@ -173,7 +173,7 @@
     content: counter(level-1)".\A0";
     display: inline-block;
     text-align: right;
-    width: if-map-get($ol-padding-left, $type);
+    width: auto;
   }
 
   ol {
