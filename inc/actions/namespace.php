@@ -36,7 +36,8 @@ function enqueue_assets() {
 	if ( social_media_enabled() ) {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
-	wp_enqueue_script( 'jquery-scrollto', $assets->getPath( 'scripts/jquery.scrollTo.js' ), [ 'jquery' ], '2.1.2', true );
+	wp_enqueue_script( 'jquery-scrollto', $assets->getPath( 'scripts/jquery.scrollTo.js' ), [ 'jquery' ], null, true );
+	wp_enqueue_script( 'jquery-localscroll', $assets->getPath( 'scripts/jquery.localScroll.js' ), [ 'jquery', 'jquery-scrollto' ], null, true );
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery', 'jquery-scrollto' ], null );
 	// TODO: Enqueue only if Hypothesis is enabled.
 	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );

@@ -64,6 +64,19 @@ export default {
 					let anchorUponArrival = $( document.location.hash );
 					$.scrollTo( anchorUponArrival, 1500 );
 				}
+
+				$.localScroll( {
+					onBefore: ( event, el ) => {
+						let hiddenParent = $( el ).closest( 'div[hidden]' );
+						if ( hiddenParent ) {
+							$( hiddenParent ).removeAttr( 'hidden' );
+							let sectionTitle = $( hiddenParent ).prev();
+							let sectionTitleButton = $( sectionTitle ).children( 'button' );
+							$( sectionTitle ).attr( 'data-collapsed', false );
+							$( sectionTitleButton ).attr( 'aria-expanded', true );
+						}
+					},
+				} );
 			} );
 			// Header navigation
 			$( '.js-header-nav-toggle' ).click( event => {

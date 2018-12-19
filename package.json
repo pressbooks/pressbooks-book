@@ -19,6 +19,7 @@
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
+		"jquery.localscroll": "^2.0.0",
 		"lerna": "^3.4.3",
 		"pressbooks-build-tools": "^1.0.2",
 		"sass": "^1.15.2",
