@@ -1,6 +1,6 @@
 {
   "name": "aetna",
-  "version": "1.0.0-alpha.20",
+  "version": "1.0.0-alpha.21",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
@@ -20,7 +20,7 @@
     "@frctl/fractal": "^1.1.7"
   },
   "devDependencies": {
-    "pressbooks-build-tools": "^0.13.0"
+    "pressbooks-build-tools": "^1.2.0"
   },
   "repository": {
     "type": "git",

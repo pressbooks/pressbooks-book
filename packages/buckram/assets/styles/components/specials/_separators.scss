@@ -82,6 +82,22 @@ hr {
   page-break-after: always;
 }
 
+@if $type == "web" {
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter,
+  body#tinymce.wp-editor {
+    .section-break {
+      text-align: center;
+    }
+
+    .section-break-page {
+      text-align: center;
+    }
+  }
+}
+
 // Blank Pages
 .blank-page {
   font-size: 0;

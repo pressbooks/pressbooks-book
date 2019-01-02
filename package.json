@@ -12,14 +12,16 @@
 	},
 	"dependencies": {
 		"diff": "^3.5.0",
+		"jquery.localscroll": "^2.0.0",
+		"jquery.scrollto": "^2.1.2",
 		"js-cookie": "^2.2.0",
 		"lity": "^2.3.1",
 		"sharer.js": "^0.3.5",
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
-		"lerna": "^3.4.3",
-		"pressbooks-build-tools": "^0.13.0"
+		"lerna": "^3.8.1",
+		"pressbooks-build-tools": "^1.2.0"
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
@@ -28,7 +30,7 @@
 		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"rmdist": "rimraf dist",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
-		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/*.js\"",
+		"lint:scripts": "node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
 		"lint:styles": "node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
 		"test": "npm run -s lint"
 	},
@@ -36,10 +38,13 @@
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
 			"$": true,
-      "pressbooksBook": true,
-      "pressbooksHypothesis": true
+			"pressbooksBook": true,
+			"pressbooksHypothesis": true
 		}
 	},
+	"eslintIgnore": [
+		"assets/src/scripts/routes/*.js"
+	],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
 		"rules": {

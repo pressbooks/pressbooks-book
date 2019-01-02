@@ -17,6 +17,8 @@ mix
 	.setPublicPath( 'dist' )
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
 	.scripts( 'node_modules/lity/dist/lity.js', 'dist/scripts/lity.js' )
+	.scripts( 'node_modules/jquery.localscroll/jquery.localScroll.js', 'dist/scripts/jquery.localScroll.js' )
+	.scripts( 'node_modules/jquery.scrollto/jquery.scrollTo.js', 'dist/scripts/jquery.scrollTo.js' )
 	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
 	.js( 'assets/src/scripts/pane.js', 'dist/scripts/pane.js' )
 	.js(

@@ -12,9 +12,7 @@
 @mixin page-numbers($page-position, $content-position) {
   @if $content-position {
     @each $page-type in
-      'front-matter:#{$page-position}',
-      'introduction:#{$page-position}',
-      'post-introduction:#{$page-position}' {
+      'front-matter:#{$page-position}' {
       @page #{$page-type} {
         @if $page-position == 'first:left' {
           @if (if-map-get($content-position, left)) {
@@ -27,7 +25,7 @@
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
-              @include page-number;
+              @include front-matter-page-number;
             }
           }
         }
@@ -43,7 +41,7 @@
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
-              @include page-number;
+              @include front-matter-page-number;
             }
           }
         }
@@ -64,6 +62,8 @@
     }
 
     @each $page-type in
+      'introduction:#{$page-position}',
+      'post-introduction:#{$page-position}',
       'part:#{$page-position}',
       'chapter:#{$page-position}',
       'back-matter:#{$page-position}' {
