@@ -623,9 +623,8 @@ $orphans: 1 !default;
 $para-margin-top: 0 !default;
 
 /// Text indentation size for `<p>` elements with class `indent`.
-/// @type String | Map
-/// @since 1.3.0
-$para-indent: (epub: 1em, prince: 1em, web: 1em) !default;
+/// @type String
+$para-indent: 1em !default;
 
 /// Top margin for `<p>` elements with class `no-indent`.
 /// @type String
