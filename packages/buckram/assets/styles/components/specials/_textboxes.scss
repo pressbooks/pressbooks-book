@@ -122,11 +122,12 @@
   p {
     margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
     text-align: $textbox-text-align;
+    text-indent: if-map-get($textbox-text-indent, $type);
   }
 
   * + p {
     margin-top: if-map-get($textbox-para-margin-top, $type);
-    text-indent: if-map-get($textbox-para-indent, $type);
+    text-indent: if-map-get($textbox-text-indent, $type);
   }
 
   .textbox-caption {

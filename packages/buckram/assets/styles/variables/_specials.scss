@@ -572,12 +572,8 @@ $textbox-text-align: left !default;
 
 /// Text indents on elements with a class of `textbox`.
 /// @type string | Map
-/// @since 1.0.0
-$textbox-text-indent: (
-  epub: 0,
-  prince: 0,
-  web: 0
-) !default;
+/// @since 1.3.0
+$textbox-text-indent: $para-indent !default;
 
 /// Word spacing on elements with a class of `textbox`.
 /// @type String | Map
@@ -660,11 +656,6 @@ $textbox-para-margin-top: $para-margin-top !default;
 /// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
-
-/// Text-indent on `<p>` elements that are children of elements with a class of `textbox`.
-/// @type String | Map
-/// @since 1.1.0
-$textbox-para-indent: $para-indent !default;
 
 /// Textbox top margin on `<ol>` elements that are children of elements with a class of `textbox`.
 /// @type String
