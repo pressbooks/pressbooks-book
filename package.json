@@ -11,7 +11,7 @@
 		"url": "git+https://github.com/pressbooks/pressbooks-book.git"
 	},
 	"dependencies": {
-		"diff": "^3.5.0",
+		"diff": "^4.0.0",
 		"jquery.localscroll": "^2.0.0",
 		"jquery.scrollto": "^2.1.2",
 		"js-cookie": "^2.2.0",
