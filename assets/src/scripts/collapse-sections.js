@@ -61,6 +61,15 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		// Assign the button
 		let btn = heading.querySelector( 'button' );
 
+		// If there's a URL hash linking to an anchor in this section, open it.
+		if ( document.location.hash && document.location.hash !== '#' ) {
+			if ( wrapper.querySelector( document.location.hash ) ) {
+				heading.setAttribute( 'data-collapsed', 'false' );
+				btn.setAttribute( 'aria-expanded', 'true' );
+				wrapper.hidden = false;
+			}
+		}
+
 		btn.onclick = () => {
 			// Cast the state as a boolean
 			let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;

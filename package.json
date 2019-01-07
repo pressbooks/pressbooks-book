@@ -43,7 +43,8 @@
 		}
 	},
 	"eslintIgnore": [
-		"assets/src/scripts/routes/*.js"
+    "assets/src/scripts/routes/home.js",
+    "assets/src/scripts/routes/single.js"
 	],
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
