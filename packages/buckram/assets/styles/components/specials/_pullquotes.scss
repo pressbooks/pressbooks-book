@@ -40,6 +40,8 @@ aside,
   border-bottom: if-map-get($pullquote-border-bottom-width, $type) $pullquote-border-bottom-style $pullquote-border-bottom-color;
   padding-top: if-map-get($pullquote-padding-top, $type);
   padding-bottom: if-map-get($pullquote-padding-bottom, $type);
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .pullquote {
@@ -64,6 +66,16 @@ aside,
   margin: if-map-get($pullquote-right-margin-top, $type) if-map-get($pullquote-right-margin-right, $type) if-map-get($pullquote-right-margin-bottom, $type) if-map-get($pullquote-right-margin-left, $type);
   text-align: $pullquote-right-align;
   width: $pullquote-right-width;
+}
+
+@supports not ((page-break-inside: avoid) and (break-inside: avoid)) {
+  .pullquote,
+  .pullquote-left,
+  .pullquote--left,
+  .pullquote-right,
+  .pullquote--right {
+    -webkit-column-break-inside: avoid;
+  }
 }
 
 // Sidebars
