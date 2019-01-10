@@ -14,7 +14,6 @@
 // Copyright Page
 
 #copyright-page {
-  page-break-before: always;
   margin-top: if-map-get($copyright-margin-top, $type);
   margin-right: if-map-get($copyright-margin-right, $type);
   margin-left: if-map-get($copyright-margin-left, $type);
