@@ -63,7 +63,7 @@
   li::before {
     counter-increment: level-1;
     content: counter(level-1)".\A0";
-    display: inline-block;
+    display: inline;
     text-align: right;
     width: if-map-get($ol-padding-left, $type);
   }
@@ -78,6 +78,7 @@
     content: counter(level-2, lower-alpha)".\A0";
     min-width: if-map-get($ol-padding-left, $type);
     width: auto;
+    display: inline;
   }
 
   ol ol {
@@ -153,7 +154,7 @@
   li::before {
     counter-increment: level-1;
     content: counter(level-1, upper-roman)".\A0";
-    display: inline-block;
+    display: inline;
     text-align: right;
     width: if-map-get($ol-padding-left, $type);
   }
@@ -168,6 +169,7 @@
     content: counter(level-2, upper-alpha)".\A0";
     min-width: if-map-get($ol-padding-left, $type);
     width: auto;
+    display: inline;
   }
 
   ol ol {
@@ -219,7 +221,7 @@
   li::before {
     counter-increment: level-1;
     content: counter(level-1)".\A0";
-    display: inline-block;
+    display: inline;
     text-align: right;
     width: if-map-get($ol-padding-left, $type);
   }
@@ -234,6 +236,7 @@
     content: counter(level-1)"."counter(level-2)".\A0";
     min-width: if-map-get($ol-padding-left, $type);
     width: auto;
+    display: inline;
   }
 
   ol ol {
