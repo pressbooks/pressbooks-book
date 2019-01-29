@@ -4,7 +4,9 @@
 
 ### Minor Changes
 
-#### Patches
+- Open sections when linking to anchors within them (props [@josieg](https://github.com/josieg) for the bug report): [#425](https://github.com/pressbooks/pressbooks-book/pull/425), [#452](https://github.com/pressbooks/pressbooks-book/pull/452)
+- Update SCSS compilation method: [#388](https://github.com/pressbooks/pressbooks-book/pull/388)
+- Buckram 1.3.0: [1623cb0](https://github.com/pressbooks/pressbooks-book/commit/1623cb0e55a627f08d3d6f81880d47da434c0ffe)
 
 ## 2.6.1
 
