@@ -644,12 +644,10 @@ function copyright_license( $show_custom_copyright = true ) {
  */
 function do_license( $metadata ) {
 	global $post;
-	$id    = $post->ID;
-	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
-
+	$id = $post->ID;
 	try {
 		$licensing = new \Pressbooks\Licensing();
-		return $licensing->doLicense( $metadata, $id, $title );
+		return $licensing->doLicense( $metadata, $id );
 	} catch ( \Exception $e ) {
 		error_log( $e->getMessage() ); // @codingStandardsIgnoreLine
 	}

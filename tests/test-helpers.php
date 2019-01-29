@@ -25,6 +25,18 @@ use function \Pressbooks\Book\Helpers\social_media_enabled;
  */
 class HelpersTest extends WP_UnitTestCase {
 
+	private function _setupGlobalPost() {
+		$new_post = [
+			'post_title' => 'Test Chapter',
+			'post_type' => 'chapter',
+			'post_status' => 'publish',
+			'post_content' => 'My test chapter.',
+		];
+		$post_id = $this->factory()->post->create_object( $new_post );
+		global $post;
+		$post = get_post( $post_id );
+	}
+
 	function test_get_name_for_filetype() {
 		$output = get_name_for_filetype( 'pdf' );
 		$this->assertEquals( 'Digital PDF', $output );
@@ -156,5 +168,11 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertEquals( 1, $result );
 		$result = count_authors( '' );
 		$this->assertEquals( 0, $result );
+	}
+
+	function test_do_license() {
+		$this->_setupGlobalPost();
+		$license = \Pressbooks\Book\Helpers\do_license( [] );
+		$this->assertContains( '<div class="license-attribution">', $license );
 	}
 }
