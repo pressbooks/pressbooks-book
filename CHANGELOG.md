@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.7.1
+
+### Patches
+
+- Buckram 1.3.1: [b72e3d6](https://github.com/pressbooks/pressbooks-book/commit/b72e3d6b77f0080ffff26e3330dbd1367434c6a8)
+
+
 ## 2.7.0
 
 ### Minor Changes
