@@ -11,7 +11,6 @@
   }
   margin-bottom: if-map-get($interactive-content-margin-bottom, $type);
   padding: if-map-get($interactive-content-padding-top, $type) if-map-get($interactive-content-padding-right, $type) if-map-get($interactive-content-padding-bottom, $type) if-map-get($interactive-content-padding-left, $type);
-  text-indent: if-map-get($interactive-content-text-indent, $type);
 
   &__icon {
     display: $interactive-icon-display;
@@ -26,6 +25,11 @@
     background-image: url(if-map-get($interactive-icon-url, $type));
     background-repeat: no-repeat;
     background-size: if-map-get($interactive-icon-background-size, $type);
+  }
+
+  img {
+    display: block;
+    margin-bottom: if-map-get($interactive-thumbnail-margin-bottom, $type);
   }
 
   p {

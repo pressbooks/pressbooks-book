@@ -215,6 +215,11 @@ $interactive-icon-background-size: (
   web: cover
 ) !default;
 
+/// Bottom margin for interactive content thumbnail
+/// @type String | Map
+/// @since 1.4.0
+$interactive-thumbnail-margin-bottom: 0.5em !default;
+
 /// Line height property for interactive content box
 /// @type String | Map
 /// @since 1.0.0
