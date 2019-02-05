@@ -28,7 +28,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			let elems = [];
 			while (
 				elem.nextElementSibling &&
-				elem.nextElementSibling.tagName !== 'H1'
+				elem.nextElementSibling.tagName !== 'H1' &&
+				! elem.nextElementSibling.classList.contains( 'nav-reading--page' )
 			) {
 				elems.push( elem.nextElementSibling );
 				elem = elem.nextElementSibling;
