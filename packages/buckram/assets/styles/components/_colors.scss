@@ -226,13 +226,13 @@ div.sidebar {
   background-color: if-map-get($sidebar-color, $type);
 }
 
-div.textbox {
+.textbox {
   background-color: if-map-get($textbox-background-color, $type);
   border-color: if-map-get($textbox-border-color, $type);
 }
 
 .textbox.shaded {
-  background-color: if-map-get($shaded-color, $type);
+  background-color: if-map-get($textbox-shaded-background-color, $type);
 }
 
 // SHADED COLOR

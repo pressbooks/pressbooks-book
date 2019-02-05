@@ -599,7 +599,7 @@ $textbox-background-color: initial !default;
 
 /// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
 /// @type String
-$textbox-shaded-background-color: #eee !default;
+$textbox-shaded-background-color: $shaded-color !default;
 
 /// Textbox top padding on elements with a class of `textbox`.
 /// @type String | Map

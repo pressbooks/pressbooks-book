@@ -139,10 +139,6 @@
     font-weight: $textbox-caption-font-weight;
   }
 
-  &.shaded {
-    background-color: if-map-get($textbox-shaded-background-color, $type);
-  }
-
   &.learning-objectives {
     @include educational-textbox($learning-objectives-header-color, $learning-objectives-header-background, $learning-objectives-color, $learning-objectives-background);
   }
