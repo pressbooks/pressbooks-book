@@ -106,7 +106,7 @@ $textbox-background-color: initial !default;
 $shaded-color: $color-4 !default;
 /// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
 /// @type String
-$textbox-shaded-background-color: $shaded !default;
+$textbox-shaded-background-color: $shaded-color !default;
 /// Textbox border color for `<div>` elements with class `.sidebar`.
 /// @type String
 $textbox-border-color: $color-1 !default;
