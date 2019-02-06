@@ -38,8 +38,8 @@ class HelpersTest extends WP_UnitTestCase {
 	}
 
 	function test_get_name_for_filetype() {
-		$output = get_name_for_filetype( 'pdf' );
-		$this->assertEquals( 'Digital PDF', $output );
+		$output = get_name_for_filetype( 'word' );
+		$this->assertEquals( 'Word', $output );
 	}
 
 	function test_license_to_icons() {

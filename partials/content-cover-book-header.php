@@ -73,7 +73,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 						?>
 					<li class="dropdown-item">
 						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
-							<?php echo \Pressbooks\Book\Helpers\get_name_for_filetype( $filetype ); ?>
+							<?php echo \Pressbooks\Modules\Export\get_name_from_filetype_slug( $filetype ); ?>
 							<meta itemprop="price" content="$0.00">
 							<link itemprop="bookFormat" href="http://schema.org/EBook">
 							<link itemprop="availability" href="http://schema.org/InStock">
