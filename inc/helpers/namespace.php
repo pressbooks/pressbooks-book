@@ -76,6 +76,9 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 /**
  * Return a human-readable filetype for a given filetype slug.
  *
+ * @deprecated 2.8.0
+ * @deprecated Use \Pressbooks\Modules\Export\get_name_from_filetype_slug() instead.
+ *
  * @since 2.0.0
  *
  * @param string $filetype The filetype slug.
