@@ -86,7 +86,10 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
  * @return string A human-readable filetype.
  */
 function get_name_for_filetype( $filetype ) {
-	return \Pressbooks\Modules\Export\get_name_from_filetype_slug( $filetype );
+	if ( function_exists( '\Pressbooks\Modules\Export\get_name_from_filetype_slug' ) ) {
+		return \Pressbooks\Modules\Export\get_name_from_filetype_slug( $filetype );
+	}
+	return ucfirst( $filetype );
 }
 
 /**
