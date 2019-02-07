@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.7.2
+
+### Patches
+
+- Prevent pagination links from being included in collapsed sections ([#489](https://github.com/pressbooks/pressbooks-book/issues/489)): [#491](https://github.com/pressbooks/pressbooks-book/pull/491)
+
 ## 2.7.1
 
 ### Patches
