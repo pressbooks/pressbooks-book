@@ -5,6 +5,7 @@
 ### Patches
 
 - Prevent pagination links from being included in collapsed sections ([#489](https://github.com/pressbooks/pressbooks-book/issues/489)): [#491](https://github.com/pressbooks/pressbooks-book/pull/491)
+- Update to Buckram 1.3.2: [13199bb](https://github.com/pressbooks/pressbooks-book/commit/13199bb612b4f1a3c9b04704a8bed72af69213ba)
 
 ## 2.7.1
 
