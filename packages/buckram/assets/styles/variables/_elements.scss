@@ -1195,7 +1195,7 @@ $pre-font-size: $code-font-size !default;
 /// Line height of `<pre>` elements.
 /// @type String | Map
 /// @since 1.0.0
-$pre-line-height: $code-line-height !default;
+$pre-line-height: normal !default;
 
 /// Bottom margin of `<pre>` elements.
 /// @type String | Map
