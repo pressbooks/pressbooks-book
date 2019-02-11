@@ -5,6 +5,7 @@
  * @package Pressbooks_Book
  */
 
+use function \Pressbooks\Book\Actions\add_json_ld_metadata;
 use function \Pressbooks\Book\Actions\render_lightbox_setting_field;
 
 /**
