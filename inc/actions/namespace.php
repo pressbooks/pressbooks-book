@@ -173,6 +173,9 @@ function update_webbook_stylesheet() {
 function add_metadata() {
 	if ( is_front_page() ) {
 		echo pb_get_seo_meta_elements();
+		echo pb_get_microdata_elements();
+	} else {
+		echo pb_get_microdata_elements();
 	}
 }
 
