@@ -30,6 +30,8 @@
   img {
     display: block;
     margin-bottom: if-map-get($interactive-thumbnail-margin-bottom, $type);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   p {
