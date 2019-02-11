@@ -3,12 +3,8 @@
 namespace Pressbooks\Book\Actions;
 
 use function \Pressbooks\Book\Helpers\social_media_enabled;
-use function \Pressbooks\Metadata\get_section_information;
-use function \Pressbooks\Metadata\section_information_to_schema;
 use PressbooksMix\Assets;
-use Pressbooks\Book;
 use Pressbooks\Container;
-use Pressbooks\Metadata;
 use Pressbooks\Options;
 
 /**
@@ -262,24 +258,4 @@ function render_lightbox_setting_field( $args ) {
 			'label' => $args[0],
 		]
 	);
-}
-
-/**
- * Output JSON-LD metadata for book or section.
- *
- * @since 2.8.0
- *
- * @return string The appropriate JSON-LD metadata for the current context.
- */
-function add_json_ld_metadata() {
-	$context = is_singular( [ 'front-matter', 'part', 'chapter', 'back-matter' ] ) ? 'section' : 'book';
-	if ( $context === 'section' ) {
-		global $post_id;
-		$section_information = get_section_information( $post_id );
-		$book_information = Book::getBookInformation();
-		$metadata = section_information_to_schema( $section_information, $book_information );
-	} else {
-		$metadata = new Metadata();
-	}
-	printf( '<script type="application/ld+json">%s</script>', wp_json_encode( $metadata ) );
 }

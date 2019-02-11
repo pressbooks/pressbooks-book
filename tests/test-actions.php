@@ -18,10 +18,4 @@ class ActionsTest extends WP_UnitTestCase {
 		$buffer = ob_get_clean();
 		$this->assertEquals( '<input id="enable_lightbox" name="pressbooks_theme_options_web[enable_lightbox]" type="checkbox" value="1" /><label for="enable_lightbox">Show linked images in a lightbox</label>', $buffer );
 	}
-	function test_add_json_ld_metadata() {
-		ob_start();
-		add_json_ld_metadata();
-		$buffer = ob_get_clean();
-		$this->assertStringStartsWith( '<script type="application/ld+json">', $buffer );
-	}
 }
