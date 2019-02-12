@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.7.3
+
+### Patches
+
+- Suppress unused Gutenberg block styles: [#500](https://github.com/pressbooks/pressbooks-book/pull/500)
+- [Buckram 1.3.3](https://github.com/pressbooks/pressbooks-book/blob/baafe9075dde8d2f6e4e67ac2e0a24dc13b984aa/packages/buckram/CHANGELOG.md#133): [#497](https://github.com/pressbooks/pressbooks-book/pull/497)
+
 ## 2.7.2
 
 ### Patches
