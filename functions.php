@@ -51,8 +51,8 @@ require get_template_directory() . '/inc/intervention.php';
 
 add_action( 'pb_cache_delete', '\Pressbooks\Book\Actions\delete_cached_contents' );
 add_action( 'wp_enqueue_scripts', '\Pressbooks\Book\Actions\enqueue_assets' );
-add_action( 'wp_head', '\Pressbooks\Book\Actions\add_metadata' );
 add_action( 'wp_head', '\Pressbooks\Metadata\add_json_ld_metadata' );
+add_action( 'wp_head', '\Pressbooks\Metadata\add_citation_metadata' );
 if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 	add_action( 'template_redirect', '\Pressbooks\Book\Actions\update_webbook_stylesheet' );
 }
