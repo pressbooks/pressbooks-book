@@ -31,6 +31,7 @@ function enqueue_assets() {
 	$options = get_option( 'pressbooks_theme_options_web' );
 	$hypothesis_options = get_option( 'wp_hypothesis_options' );
 
+	wp_dequeue_style( 'wp-block-library' );
 	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700|Spectral:400,700', false, null );
 	if ( social_media_enabled() ) {
