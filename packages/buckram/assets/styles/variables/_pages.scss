@@ -462,7 +462,7 @@ $title-publisher-city-margin-left: $title-publisher-margin-left !default;
 /// Float for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
 /// @type String | Map
 /// @since 1.4.0
-$title-publisher-float: (epub: none, prince: none, web: none) !default;
+$title-publisher-city-float: (epub: none, prince: none, web: none) !default;
 
 /// Font stack for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
 /// @type String
