@@ -128,13 +128,14 @@
     }
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
-    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
-    border-color: if-map-get($line-color-1, $type);
   }
 
   tr {
     border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
     border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
+    td {
+      border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type) if-map-get($line-color-1, $type);
+    }
   }
 }
 

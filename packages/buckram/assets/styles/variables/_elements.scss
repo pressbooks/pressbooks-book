@@ -1042,12 +1042,12 @@ $table-td-vertical-align: middle !default;
 /// Border width for `<td>` elements.
 /// @since 1.3.0
 /// @type String | Map
-$table-td-border-width: (epub: 0, prince: 0, web: 0);
+$table-td-border-width: (epub: 0, prince: 0, web: 0) !default;
 
 /// Border width for `<td>` elements.
 /// @since 1.3.0
 /// @type String | Map
-$table-td-border-style: (epub: none, prince: none, web: none);
+$table-td-border-style: (epub: none, prince: none, web: none) !default;
 
 /// Border top width on `<tr>` elements.
 /// @since 1.2.0
