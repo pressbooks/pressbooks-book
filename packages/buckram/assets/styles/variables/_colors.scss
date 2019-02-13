@@ -114,6 +114,10 @@ $textbox-border-color: $color-1 !default;
 /// @type String | Map
 /// @since 1.2.0
 $hr-break-symbols-border-top-color: $color-3 !default;
+/// Color for description term on elements `<dt>`.
+/// @type String
+/// @since 1.4.0
+$dt-color: $color-3 !default;
 
 //TITLE PAGE(S) COLOR
 
