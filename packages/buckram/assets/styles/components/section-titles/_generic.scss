@@ -82,6 +82,7 @@
         font-weight: $section-author-font-weight;
         hyphens: none;
         text-align: $section-author-align;
+        text-indent: if-map-get($section-author-text-indent, $type);
         text-transform: $section-author-text-transform;
         letter-spacing: if-map-get($section-author-letter-spacing, $type);
         word-spacing: if-map-get($section-author-word-spacing, $type);
