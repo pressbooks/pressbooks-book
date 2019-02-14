@@ -286,6 +286,7 @@
     if-map-get($dt-margin-left, $type);
   font-style: $dt-font-style;
   font-weight: $dt-font-weight;
+  color: $dt-color;
 }
 
 %dfn {
