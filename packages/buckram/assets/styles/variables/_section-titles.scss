@@ -302,6 +302,11 @@ $section-author-font-weight: normal !default;
 /// @type String
 $section-author-align: center !default;
 
+/// Defines the section author text indent.
+/// @since 1.4.0
+/// @type String | Map
+$section-author-text-indent: 0 !default;
+
 /// Defines the section author text transform.
 /// @type String
 $section-author-text-transform: uppercase !default;
@@ -1010,7 +1015,7 @@ $chapter-number-margin-left: (
 /// Defines the chapter number bottom padding.
 /// @type String | Map
 /// @since 1.0.0
-$chapter-number-padding-bottom:$section-title-padding-bottom !default;
+$chapter-number-padding-bottom: $section-title-padding-bottom !default;
 
 /// Defines the bottom border width for the chapter number.
 /// @type String | Map
