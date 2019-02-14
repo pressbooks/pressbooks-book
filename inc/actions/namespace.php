@@ -161,24 +161,6 @@ function update_webbook_stylesheet() {
 	}
 }
 
-
-/**
- * Add metadata to head.
- *
- * @since 2.3.0
- *
- * @return null
- */
-function add_metadata() {
-	if ( is_front_page() ) {
-		echo pb_get_seo_meta_elements();
-		echo pb_get_microdata_elements();
-	} else {
-		echo pb_get_microdata_elements();
-	}
-}
-
-
 /**
  * Run after_setup_theme functions.
  *
