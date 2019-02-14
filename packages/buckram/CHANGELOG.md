@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0
+
+- Add color variable for `<dt>` elements: [#502](https://github.com/pressbooks/pressbooks-book/pull/502)
+
 ## 1.3.3
 
 ### Patches
