@@ -386,6 +386,11 @@ $title-publisher-margin-bottom: (epub: 0.5em, prince: 0.5em, web: 0.5em) !defaul
 /// @since 1.2.0
 $title-publisher-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
+/// Float for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// @type String | Map
+/// @since 1.4.0
+$title-publisher-float: (epub: none, prince: none, web: none) !default;
+
 /// Font stack for title page publisher text on elements `<h4>` with a class of `publisher`.
 /// @type String
 $title-publisher-font-family: $font-3 !default;
@@ -453,6 +458,11 @@ $title-publisher-city-margin-right: $title-publisher-margin-right !default;
 /// @type String | Map
 /// @since 1.2.0
 $title-publisher-city-margin-left: $title-publisher-margin-left !default;
+
+/// Float for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// @type String | Map
+/// @since 1.4.0
+$title-publisher-city-float: (epub: none, prince: none, web: none) !default;
 
 /// Font stack for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
 /// @type String
