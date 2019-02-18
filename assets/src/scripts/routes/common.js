@@ -59,10 +59,11 @@ export default {
 
 		// Smooth scroll to anchor, expand parent if present.
 		jQuery( $ => {
-			$.localScroll.hash( {} );
+			$.localScroll.hash( { duration: 0 } );
 
 			$.localScroll( {
 				hash: true,
+				duration: 0,
 				onBefore: ( event, el ) => {
 					let hiddenParent = el.closest( 'div[hidden]' );
 					if ( hiddenParent ) {

@@ -78,7 +78,7 @@ export default {
 
 			$( document ).ready( function () {
 				const offset = 250;
-				const duration = 300;
+				const duration = 0;
 
 				$( window ).scroll( function () {
 					if ( $( window ).scrollTop() > offset ) {
