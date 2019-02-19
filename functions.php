@@ -69,3 +69,8 @@ add_action( 'wp_head', '\Pressbooks\Book\Actions\webbook_width' );
 add_filter( 'the_title', 'Pressbooks\Book\Filters\add_private_to_title', 10, 2 );
 add_action( 'pb_theme_options_web_add_settings_fields', '\Pressbooks\Book\Actions\add_lightbox_setting', 10, 2 );
 add_filter( 'pb_theme_options_web_booleans', '\Pressbooks\Book\Filters\add_lightbox_to_settings' );
+
+if ( is_admin() ) {
+	add_action( 'wp_ajax_text_diff', '\Pressbooks\Book\Actions\text_diff' );
+	add_action( 'wp_ajax_nopriv_text_diff', '\Pressbooks\Book\Actions\text_diff' );
+}

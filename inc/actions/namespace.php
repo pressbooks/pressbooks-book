@@ -67,6 +67,8 @@ function enqueue_assets() {
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
 			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
 			'toggle_contents' => __( 'Toggle contents of', 'pressbooks-book' ),
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'text_diff_nonce' => wp_create_nonce( 'text_diff_nonce' ),
 		]
 	);
 
@@ -242,4 +244,18 @@ function render_lightbox_setting_field( $args ) {
 			'label' => $args[0],
 		]
 	);
+}
+
+function text_diff() {
+	if ( check_ajax_referer( 'text_diff_nonce', 'security' ) ) {
+		$diff = wp_text_diff(
+			$_POST['left'],
+			$_POST['right'],
+			[
+				'title_left' => __( 'Before', 'pressbooks' ),
+				'title_right' => __( 'After', 'pressbooks' ),
+			]
+		);
+		wp_send_json_success( wp_json_encode( $diff ) );
+	}
 }
