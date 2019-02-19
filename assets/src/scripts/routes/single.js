@@ -1,5 +1,3 @@
-// import { diffWords } from 'diff';
-
 export default {
 	init() {
 		// Javascript to be fired on single reading view
