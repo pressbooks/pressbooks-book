@@ -41,18 +41,19 @@ function enqueue_assets() {
 	wp_enqueue_script( 'jquery-scrollto', $assets->getPath( 'scripts/jquery.scrollTo.js' ), [ 'jquery' ], null, true );
 	wp_enqueue_script( 'jquery-localscroll', $assets->getPath( 'scripts/jquery.localScroll.js' ), [ 'jquery', 'jquery-scrollto' ], null, true );
 	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery', 'jquery-scrollto' ], null );
-	// TODO: Enqueue only if Hypothesis is enabled.
-	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
-	wp_localize_script(
-		'pressbooks/pane',
-		'pressbooksHypothesis',
-		[
-			'showHighlights' => ( isset( $hypothesis_options['highlights-on-by-default'] ) ) ? true : false,
-			'openSidebar' => ( isset( $hypothesis_options['sidebar-open-by-default'] ) ) ? true : false,
-		]
-	);
-	foreach ( [ 'nohighlights', 'showhighlights', 'sidebaropen' ] as $handle ) {
-		wp_dequeue_script( $handle );
+	if ( wp_script_is( 'hypothesis', 'enqueued' ) ) {
+		wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
+		wp_localize_script(
+			'pressbooks/pane',
+			'pressbooksHypothesis',
+			[
+				'showHighlights' => ( isset( $hypothesis_options['highlights-on-by-default'] ) ) ? true : false,
+				'openSidebar' => ( isset( $hypothesis_options['sidebar-open-by-default'] ) ) ? true : false,
+			]
+		);
+		foreach ( [ 'nohighlights', 'showhighlights', 'sidebaropen' ] as $handle ) {
+			wp_dequeue_script( $handle );
+		}
 	}
 
 	wp_localize_script(
@@ -66,6 +67,8 @@ function enqueue_assets() {
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
 			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
 			'toggle_contents' => __( 'Toggle contents of', 'pressbooks-book' ),
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'text_diff_nonce' => wp_create_nonce( 'text_diff_nonce' ),
 		]
 	);
 
@@ -79,8 +82,6 @@ function enqueue_assets() {
 			wp_enqueue_style( 'lity', $assets->getPath( 'styles/lity.css' ), false, null );
 			wp_enqueue_script( 'pressbooks/lightbox', $assets->getPath( 'scripts/lightbox.js' ), false, null );
 		}
-
-		wp_enqueue_style( 'jquery-ui', '//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css', false, null ); // TODO: Maybe get rid of this.
 
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 			$styles   = Container::get( 'Styles' );
@@ -160,24 +161,6 @@ function update_webbook_stylesheet() {
 		Container::get( 'Styles' )->updateWebBookStyleSheet();
 	}
 }
-
-
-/**
- * Add metadata to head.
- *
- * @since 2.3.0
- *
- * @return null
- */
-function add_metadata() {
-	if ( is_front_page() ) {
-		echo pb_get_seo_meta_elements();
-		echo pb_get_microdata_elements();
-	} else {
-		echo pb_get_microdata_elements();
-	}
-}
-
 
 /**
  * Run after_setup_theme functions.
@@ -261,4 +244,22 @@ function render_lightbox_setting_field( $args ) {
 			'label' => $args[0],
 		]
 	);
+}
+
+/**
+ * Handler for text_diff AJAX action.
+ *
+ * @since 2.8.0
+ *
+ * @return null
+ */
+function text_diff() {
+	if ( check_ajax_referer( 'text_diff_nonce', 'security' ) ) {
+		$diff = wp_text_diff(
+			$_POST['left'],
+			$_POST['right']
+		);
+		wp_send_json_success( wp_json_encode( $diff ) );
+	}
+	wp_send_json_error();
 }

@@ -51,8 +51,8 @@ require get_template_directory() . '/inc/intervention.php';
 
 add_action( 'pb_cache_delete', '\Pressbooks\Book\Actions\delete_cached_contents' );
 add_action( 'wp_enqueue_scripts', '\Pressbooks\Book\Actions\enqueue_assets' );
-add_action( 'wp_head', '\Pressbooks\Book\Actions\add_metadata' );
 add_action( 'wp_head', '\Pressbooks\Metadata\add_json_ld_metadata' );
+add_action( 'wp_head', '\Pressbooks\Metadata\add_citation_metadata' );
 if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 	add_action( 'template_redirect', '\Pressbooks\Book\Actions\update_webbook_stylesheet' );
 }
@@ -69,3 +69,8 @@ add_action( 'wp_head', '\Pressbooks\Book\Actions\webbook_width' );
 add_filter( 'the_title', 'Pressbooks\Book\Filters\add_private_to_title', 10, 2 );
 add_action( 'pb_theme_options_web_add_settings_fields', '\Pressbooks\Book\Actions\add_lightbox_setting', 10, 2 );
 add_filter( 'pb_theme_options_web_booleans', '\Pressbooks\Book\Filters\add_lightbox_to_settings' );
+
+if ( is_admin() ) {
+	add_action( 'wp_ajax_text_diff', '\Pressbooks\Book\Actions\text_diff' );
+	add_action( 'wp_ajax_nopriv_text_diff', '\Pressbooks\Book\Actions\text_diff' );
+}

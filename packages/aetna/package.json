@@ -24,7 +24,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pressbooks/aetna.git"
+    "url": "git+https://github.com/pressbooks/pressbooks-book.git",
+    "directory": "packages/aetna"
   },
   "keywords": [
     "styleguide",

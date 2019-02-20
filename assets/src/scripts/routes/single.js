@@ -1,5 +1,3 @@
-import { diffWords } from 'diff';
-
 export default {
 	init() {
 		// Javascript to be fired on single reading view
@@ -10,13 +8,13 @@ export default {
 				let alert = $( '.alert' );
 				let container = $( '.block-reading-meta__compare__comparison' );
 				let stats = $( '.block-reading-meta__compare__stats' );
-				let pre = $( '.block-reading-meta__compare__diff' );
+				let pre = $( '.block-reading-meta__compare__current' );
 				alert.addClass( 'visually-hidden' );
 				if ( $( event.currentTarget ).attr( 'aria-expanded' ) === 'false' ) {
 					toggle.attr( 'aria-expanded', true );
 					activity.removeAttr( 'hidden' );
-					if ( pre.hasClass( 'populated' ) ) {
-						container.removeAttr( 'hidden ' );
+					if ( container.hasClass( 'populated' ) ) {
+						container.removeAttr( 'hidden' );
 						activity.attr( 'hidden', true );
 					} else {
 						alert.text( pressbooksBook.comparison_loading );
@@ -32,34 +30,33 @@ export default {
 									activity.attr( 'hidden', true );
 									return;
 								}
-
 								response.json().then( function ( data ) {
 									let source = $( '<div>' + data.content.raw + '</div>' ).html();
-									let diff = diffWords( source, current );
-									let fragment = document.createDocumentFragment();
-									diff.forEach( function ( part ) {
-										let element = part.added
-											? 'ins'
-											: part.removed ? 'del' : 'span';
-										let el = document.createElement( element );
-										el.appendChild( document.createTextNode( part.value ) );
-										fragment.appendChild( el );
-									} );
-									pre.html( fragment );
-									pre.addClass( 'populated' );
-									let deletions = pre.children( 'del' ).length;
-									let insertions = pre.children( 'ins' ).length;
-									stats
-										.children( 'ins' )
-										.children( '.num' )
-										.text( insertions );
-									stats
-										.children( 'del ' )
-										.children( '.num' )
-										.text( deletions );
-									activity.attr( 'hidden', true );
-									alert.text( pressbooksBook.comparison_loaded );
-									container.removeAttr( 'hidden' );
+									  $.post(pressbooksBook.ajaxurl, {
+										action: 'text_diff',
+										security : pressbooksBook.text_diff_nonce,
+										left: source,
+										right: current,
+									  }, function( response ) {
+										if ( true === response.success ) {
+											let table = JSON.parse( response.data );
+											container.append( table );
+											container.children( 'table' )
+											let deletions = $( '.diff del' ).length;
+											let insertions = $( '.diff ins' ).length;
+											stats
+												.children( 'ins' )
+												.children( '.num' )
+												.text( insertions );
+											stats
+												.children( 'del ' )
+												.children( '.num' )
+												.text( deletions );
+											activity.attr( 'hidden', true );
+											alert.text( pressbooksBook.comparison_loaded );
+											container.removeAttr( 'hidden' );
+										}
+									  });
 								} );
 							} )
 							.catch( function ( err ) {
@@ -73,12 +70,13 @@ export default {
 				} else {
 					toggle.attr( 'aria-expanded', false );
 					container.attr( 'hidden', true );
+					$( '.diff' ).remove();
 				}
 			} );
 
 			$( document ).ready( function () {
 				const offset = 250;
-				const duration = 300;
+				const duration = 0;
 
 				$( window ).scroll( function () {
 					if ( $( window ).scrollTop() > offset ) {

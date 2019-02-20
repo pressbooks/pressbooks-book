@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pressbooks/pressbooks-book.git"
+    "url": "git+https://github.com/pressbooks/pressbooks-book.git",
+    "directory": "packages/buckram"
   },
   "author": "Pressbooks (Book Oven Inc.)",
   "license": "GPL-3.0-or-later",

@@ -10,23 +10,14 @@
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/site.webmanifest">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/dist/images/safari-pinned-tab.svg" color="#b01109">
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon.ico">
+	<meta name="application-name" content="Pressbooks">
 	<meta name="msapplication-TileColor" content="#b01109">
 	<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" /><?php // TODO ?>
-
 	<?php wp_head(); ?>
 </head>
-<?php
-if ( is_front_page() ) {
-	$schema = 'itemscope itemtype="http://schema.org/Book" itemref="about alternativeHeadline author copyrightHolder copyrightYear datePublished description editor image inLanguage keywords publisher" ';
-} elseif ( is_single() ) {
-	$schema = 'itemscope itemtype="http://bib.schema.org/Chapter" itemref="about copyrightHolder copyrightYear inLanguage publisher" ';
-} else {
-	$schema = '';
-}
-?>
-<body <?php body_class(); ?> <?php echo $schema; ?>>
+<body <?php body_class(); ?>>
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
