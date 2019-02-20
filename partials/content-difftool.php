@@ -56,7 +56,7 @@ $source_endpoint = implode(
 		);
 		?>
 	</p>
-	<button class="block-reading-meta__compare__toggle" aria-expanded="false"><?php _e( 'Show Comparison with Original', 'pressbooks' ); ?></button>
+	<p><button class="block-reading-meta__compare__toggle" aria-expanded="false"><?php _e( 'Show Comparison with Original', 'pressbooks' ); ?></button></p>
 	<p aria-live="assertive" role="alert" class="alert visually-hidden"></p>
 	<div class="block-reading-meta__compare__activity sk-double-bounce" hidden>
 		<div class="sk-child sk-double-bounce1"></div>
@@ -65,6 +65,6 @@ $source_endpoint = implode(
 	<div class="block-reading-meta__compare__comparison" hidden>
 		<p><?php _e( 'Note: The comparison below is between this text and the <strong>current version</strong> of the text from which it was adapted.', 'pressbooks-book' ); ?></p>
 		<p class="block-reading-meta__compare__stats"><ins><span class="num"></span> <?php _e( 'additions', 'pressbooks-book' ); ?></ins> / <del><span class="num"></span> <?php _e( 'deletions', 'pressbooks-book' ); ?></del></p>
-		<pre class="block-reading-meta__compare__diff" data-source-endpoint="<?php echo $source_endpoint ?>"><?php echo get_post_field( 'post_content', $post, 'raw' ); ?></pre>
+		<pre class="block-reading-meta__compare__current" data-source-endpoint="<?php echo $source_endpoint ?>" hidden><?php echo get_post_field( 'post_content', $post, 'raw' ); ?></pre>
 	</div>
 </div>
