@@ -122,14 +122,13 @@
   }
 
   td {
+    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type) if-map-get($line-color-1, $type);
     padding: $table-td-padding-top $table-td-padding-right $table-td-padding-bottom $table-td-padding-left;
     @if $type == 'prince' {
       line-height: $table-td-line-height;
     }
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
-    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
-    border-color: if-map-get($line-color-1, $type);
   }
 
   tr {
@@ -251,7 +250,7 @@
       line-height: $table-td-line-height;
       text-align: $table-td-align;
       vertical-align: middle;
-      border-color: if-map-get($line-color-1, $type);
+      border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type) if-map-get($line-color-1, $type);
     }
 
     tr {
