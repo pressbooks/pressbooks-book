@@ -246,16 +246,20 @@ function render_lightbox_setting_field( $args ) {
 	);
 }
 
+/**
+ * Handler for text_diff AJAX action.
+ *
+ * @since 2.8.0
+ *
+ * @return null
+ */
 function text_diff() {
 	if ( check_ajax_referer( 'text_diff_nonce', 'security' ) ) {
 		$diff = wp_text_diff(
 			$_POST['left'],
-			$_POST['right'],
-			[
-				'title_left' => __( 'Before', 'pressbooks' ),
-				'title_right' => __( 'After', 'pressbooks' ),
-			]
+			$_POST['right']
 		);
 		wp_send_json_success( wp_json_encode( $diff ) );
 	}
+	wp_send_json_error();
 }

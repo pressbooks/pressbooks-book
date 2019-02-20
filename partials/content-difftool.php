@@ -56,7 +56,7 @@ $source_endpoint = implode(
 		);
 		?>
 	</p>
-	<button class="block-reading-meta__compare__toggle" aria-expanded="false"><?php _e( 'Show Comparison with Original', 'pressbooks' ); ?></button>
+	<p><button class="block-reading-meta__compare__toggle" aria-expanded="false"><?php _e( 'Show Comparison with Original', 'pressbooks' ); ?></button></p>
 	<p aria-live="assertive" role="alert" class="alert visually-hidden"></p>
 	<div class="block-reading-meta__compare__activity sk-double-bounce" hidden>
 		<div class="sk-child sk-double-bounce1"></div>
