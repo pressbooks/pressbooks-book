@@ -5,20 +5,20 @@
  * @package Pressbooks_Book
  */
 
-use function \Pressbooks\Book\Helpers\count_authors;
-use function \Pressbooks\Book\Helpers\display_menu;
-use function \Pressbooks\Book\Helpers\get_book_authors;
-use function \Pressbooks\Book\Helpers\get_metakeys;
-use function \Pressbooks\Book\Helpers\get_name_for_filetype;
-use function \Pressbooks\Book\Helpers\get_source_book;
-use function \Pressbooks\Book\Helpers\get_source_book_meta;
-use function \Pressbooks\Book\Helpers\get_source_book_toc;
-use function \Pressbooks\Book\Helpers\get_source_book_url;
-use function \Pressbooks\Book\Helpers\is_book_public;
-use function \Pressbooks\Book\Helpers\license_to_icons;
-use function \Pressbooks\Book\Helpers\license_to_text;
-use function \Pressbooks\Book\Helpers\share_icons;
-use function \Pressbooks\Book\Helpers\social_media_enabled;
+use function \PressbooksBook\Helpers\count_authors;
+use function \PressbooksBook\Helpers\display_menu;
+use function \PressbooksBook\Helpers\get_book_authors;
+use function \PressbooksBook\Helpers\get_metakeys;
+use function \PressbooksBook\Helpers\get_name_for_filetype;
+use function \PressbooksBook\Helpers\get_source_book;
+use function \PressbooksBook\Helpers\get_source_book_meta;
+use function \PressbooksBook\Helpers\get_source_book_toc;
+use function \PressbooksBook\Helpers\get_source_book_url;
+use function \PressbooksBook\Helpers\is_book_public;
+use function \PressbooksBook\Helpers\license_to_icons;
+use function \PressbooksBook\Helpers\license_to_text;
+use function \PressbooksBook\Helpers\share_icons;
+use function \PressbooksBook\Helpers\social_media_enabled;
 
 /**
  * Helpers test case.
@@ -172,7 +172,7 @@ class HelpersTest extends WP_UnitTestCase {
 
 	function test_do_license() {
 		$this->_setupGlobalPost();
-		$license = \Pressbooks\Book\Helpers\do_license( [] );
+		$license = \PressbooksBook\Helpers\do_license( [] );
 		$this->assertContains( '<div class="license-attribution">', $license );
 	}
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pressbooks\Book\Actions;
+namespace PressbooksBook\Actions;
 
-use function \Pressbooks\Book\Helpers\social_media_enabled;
+use function \PressbooksBook\Helpers\social_media_enabled;
 use PressbooksMix\Assets;
 use Pressbooks\Container;
 use Pressbooks\Options;
@@ -215,7 +215,7 @@ function add_lightbox_setting( $_page, $_section ) {
 	add_settings_field(
 		'enable_lightbox',
 		__( 'Enable Image Lightbox', 'pressbooks-book' ),
-		'\Pressbooks\Book\Actions\render_lightbox_setting_field',
+		'\PressbooksBook\Actions\render_lightbox_setting_field',
 		$_page,
 		$_section,
 		[

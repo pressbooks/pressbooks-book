@@ -9,12 +9,12 @@
 					<dd class="ml0"><?php bloginfo( 'name' ); ?></dd>
 				</div>
 				<?php
-				$metakeys = \Pressbooks\Book\Helpers\get_metakeys();
+				$metakeys = \PressbooksBook\Helpers\get_metakeys();
 				foreach ( $metakeys as $key => $val ) {
 					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) {
 						?>
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
-							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \Pressbooks\Book\Helpers\count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
+							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \PressbooksBook\Helpers\count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
 							<dd class="">
 							<?php
 							if ( 'pb_publication_date' === $key ) {
@@ -23,7 +23,7 @@
 								$hashtag = $book_information[ $key ];
 								$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
 							} elseif ( 'pb_book_license' === $key ) {
-								$book_information[ $key ] = \Pressbooks\Book\Helpers\copyright_license();
+								$book_information[ $key ] = \PressbooksBook\Helpers\copyright_license();
 							} elseif ( 'pb_primary_subject' === $key ) {
 								$book_information[ $key ] = \Pressbooks\Metadata\get_subject_from_thema( $book_information[ $key ] );
 							} elseif ( 'pb_additional_subjects' === $key ) {

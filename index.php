@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 ?>
-<?php if ( \Pressbooks\Book\Helpers\is_book_public() ) : ?>
+<?php if ( \PressbooksBook\Helpers\is_book_public() ) : ?>
 	<section class="block block-toc">
 		<?php
 		if ( pb_get_first_post_id() ) :
