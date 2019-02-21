@@ -1,6 +1,6 @@
 <?php
 get_header();
-if ( \Pressbooks\Book\Helpers\is_book_public() ) :
+if ( \PressbooksBook\Helpers\is_book_public() ) :
 	if ( have_posts() ) {
 		the_post();
 	} ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pressbooks\Book\Helpers;
+namespace PressbooksBook\Helpers;
 
 use Pressbooks\Container;
 
@@ -273,7 +273,7 @@ function get_source_book( $book_url, $checked = [] ) {
 function get_source_book_url( $book_url ) {
 	$source_url = get_transient( 'pb_book_source_url' );
 	if ( $source_url === false ) {
-		$source_url = \Pressbooks\Book\Helpers\get_source_book( $book_url );
+		$source_url = \PressbooksBook\Helpers\get_source_book( $book_url );
 		set_transient( 'pb_book_source_url', $source_url );
 	}
 	return $source_url;
@@ -610,7 +610,7 @@ function copyright_license( $show_custom_copyright = true ) {
 	// Custom Copyright must override All Rights Reserved
 	$html = '';
 	if ( ! $has_custom_copyright || ( $has_custom_copyright && ! $all_rights_reserved ) ) {
-		$html .= \Pressbooks\Book\Helpers\do_license( $metadata );
+		$html .= \PressbooksBook\Helpers\do_license( $metadata );
 	}
 	if ( $has_custom_copyright ) {
 		$html .= '<div class="license-attribution">' . $metadata['pb_custom_copyright'] . '</div>';

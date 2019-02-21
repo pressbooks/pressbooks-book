@@ -2,7 +2,7 @@
 	while ( have_posts() ) :
 		the_post();
 		get_header();
-		if ( \Pressbooks\Book\Helpers\is_book_public() ) :
+		if ( \PressbooksBook\Helpers\is_book_public() ) :
 			$web_options  = get_option( 'pressbooks_theme_options_web' );
 			$number       = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
 			$subtitle     = get_post_meta( $post->ID, 'pb_subtitle', true );
@@ -15,14 +15,14 @@
 				}
 			} ?>
 			<?php
-			if ( \Pressbooks\Book\Helpers\is_buckram() || pb_is_custom_theme() ) {
+			if ( \PressbooksBook\Helpers\is_buckram() || pb_is_custom_theme() ) {
 				include( locate_template( 'partials/content-single.php' ) );
 			} else {
 				include( locate_template( 'partials/content-single-legacy.php' ) );
 			}
 			?>
 </div><!-- #content -->
-			<?php \Pressbooks\Book\Helpers\get_links(); ?>
+			<?php \PressbooksBook\Helpers\get_links(); ?>
 
 					<div class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
@@ -30,9 +30,9 @@
 
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h2>
-								<?php if ( \Pressbooks\Book\Helpers\is_book_public() ) { ?>
+								<?php if ( \PressbooksBook\Helpers\is_book_public() ) { ?>
 									<p>
-										<?php echo \Pressbooks\Book\Helpers\copyright_license( false ); ?>
+										<?php echo \PressbooksBook\Helpers\copyright_license( false ); ?>
 									</p>
 								<?php } ?>
 								<?php
@@ -53,12 +53,12 @@
 									</p>
 								<?php } ?>
 							</div>
-							<?php if ( \Pressbooks\Book\Helpers\social_media_enabled() ) { ?>
+							<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Share This Book', 'pressbooks-book' ); ?></h2>
 								<div class="block-reading-meta__share">
 									<?php
-										echo \Pressbooks\Book\Helpers\share_icons();
+										echo \PressbooksBook\Helpers\share_icons();
 									?>
 								</div>
 							</div>

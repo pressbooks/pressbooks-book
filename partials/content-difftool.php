@@ -16,19 +16,19 @@ $option = $options['enable_source_comparison'] ?? false;
 if ( ! $option ) {
 	return;
 }
-$source_url = \Pressbooks\Book\Helpers\get_source_book_url( $pb_book_is_based_on );
+$source_url = \PressbooksBook\Helpers\get_source_book_url( $pb_book_is_based_on );
 if ( ! $source_url ) {
 	return;
 }
-$source_meta = \Pressbooks\Book\Helpers\get_source_book_meta( $source_url );
+$source_meta = \PressbooksBook\Helpers\get_source_book_meta( $source_url );
 if ( ! $source_meta ) {
 	return;
 }
-$source_toc = \Pressbooks\Book\Helpers\get_source_book_toc( $source_url );
+$source_toc = \PressbooksBook\Helpers\get_source_book_toc( $source_url );
 if ( ! $source_toc ) {
 	return;
 }
-$original = \Pressbooks\Book\Helpers\get_original_section( $pb_section_is_based_on, $source_toc );
+$original = \PressbooksBook\Helpers\get_original_section( $pb_section_is_based_on, $source_toc );
 if ( ! $original ) {
 	return;
 }
@@ -52,7 +52,7 @@ $source_endpoint = implode(
 			__( 'This chapter is adapted from %1$s in %2$s by %3$s.', 'pressbooks-book' ),
 			sprintf( '<a href="%1$s">%2$s</a>', $original['link'], $original['title'] ),
 			sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
-			\Pressbooks\Book\Helpers\get_book_authors( $source_meta )
+			\PressbooksBook\Helpers\get_book_authors( $source_meta )
 		);
 		?>
 	</p>

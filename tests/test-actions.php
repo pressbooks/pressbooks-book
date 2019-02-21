@@ -5,8 +5,8 @@
  * @package Pressbooks_Book
  */
 
-use function \Pressbooks\Book\Actions\enqueue_assets;
-use function \Pressbooks\Book\Actions\render_lightbox_setting_field;
+use function \PressbooksBook\Actions\enqueue_assets;
+use function \PressbooksBook\Actions\render_lightbox_setting_field;
 
 /**
  * Actions test case.

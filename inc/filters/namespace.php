@@ -1,6 +1,6 @@
 <?php
 
-namespace Pressbooks\Book\Filters;
+namespace PressbooksBook\Filters;
 
 /**
  * Prepends "Private: " to the titles of draft posts.
@@ -74,7 +74,7 @@ function status_code_adjustment( $status_header, $code ) {
 	}
 	if (
 		200 === absint( $code ) &&
-		\Pressbooks\Book\Helpers\is_book_public() === false &&
+		\PressbooksBook\Helpers\is_book_public() === false &&
 		array_key_exists( 'format', $GLOBALS['wp_query']->query_vars ) === false
 	) {
 		$code          = 401;

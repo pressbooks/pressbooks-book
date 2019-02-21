@@ -55,7 +55,7 @@
 </svg>
 
 <?php
-if ( \Pressbooks\Book\Helpers\social_media_enabled() ) {
+if ( \PressbooksBook\Helpers\social_media_enabled() ) {
 	get_template_part( 'partials/content', 'facebook-js' ); }
 ?>
 
@@ -93,7 +93,7 @@ if ( \Pressbooks\Book\Helpers\social_media_enabled() ) {
 				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
 				<nav class="js-header-nav" id="navigation">
 					<ul id="nav-primary-menu" class="nav--primary">
-						<?php echo \Pressbooks\Book\Helpers\display_menu(); ?>
+						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
 					</ul>
 				</nav>
 			</div>
