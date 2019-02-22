@@ -12,6 +12,7 @@
   ins {
     margin: 0 0.1rem;
     padding: 0.2rem;
+    word-break: break-word;
   }
 
   del {
@@ -44,8 +45,8 @@
   .diff {
     font-size: 1rem;
     font-family: Inconsolata, monospace;
-    height: 24em;
     margin: 2rem 0 0;
+    min-width: 40rem;
     overflow: scroll;
     white-space: pre-wrap;
 
