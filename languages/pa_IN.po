@@ -2,9 +2,9 @@
 # This file is distributed under the GPL v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.7.3\n"
+"Project-Id-Version: McLuhan 2.8.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-02-12T19:40:04+00:00\n"
+"POT-Creation-Date: 2019-02-27T15:35:35+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Language-Team: Panjabi (Punjabi) (https://www.transifex.com/pressbooks/teams/9194/pa/)\n"
 "MIME-Version: 1.0\n"
@@ -87,216 +87,184 @@ msgstr ""
 msgid "Toggle contents of"
 msgstr ""
 
-#: inc/actions/namespace.php:235
+#: inc/actions/namespace.php:217
 msgid "Enable Image Lightbox"
 msgstr ""
 
-#: inc/actions/namespace.php:240
+#: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
 msgstr ""
 
-#: inc/helpers/namespace.php:92
-msgid "Print PDF"
-msgstr ""
-
-#: inc/helpers/namespace.php:93 inc/helpers/namespace.php:94
-msgid "Digital PDF"
-msgstr ""
-
-#: inc/helpers/namespace.php:95
-msgid "HTMLBook"
-msgstr ""
-
-#: inc/helpers/namespace.php:96
-msgid "EPUB"
-msgstr ""
-
-#: inc/helpers/namespace.php:97
-msgid "MOBI"
-msgstr ""
-
-#: inc/helpers/namespace.php:98
-msgid "EPUB3"
-msgstr ""
-
-#: inc/helpers/namespace.php:100
-msgid "OpenDocument"
-msgstr ""
-
-#: inc/helpers/namespace.php:101
-msgid "Pressbooks XML"
-msgstr ""
-
-#: inc/helpers/namespace.php:154
+#: inc/helpers/namespace.php:140
 msgid "Public Domain"
 msgstr ""
 
-#: inc/helpers/namespace.php:157
+#: inc/helpers/namespace.php:143
 msgid "Creative Commons Attribution"
 msgstr ""
 
-#: inc/helpers/namespace.php:160
+#: inc/helpers/namespace.php:146
 msgid "Creative Commons Attribution ShareAlike"
 msgstr ""
 
-#: inc/helpers/namespace.php:163
+#: inc/helpers/namespace.php:149
 msgid "Creative Commons Attribution NoDerivatives"
 msgstr ""
 
-#: inc/helpers/namespace.php:166
+#: inc/helpers/namespace.php:152
 msgid "Creative Commons Attribution NonCommercial"
 msgstr ""
 
-#: inc/helpers/namespace.php:169
+#: inc/helpers/namespace.php:155
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr ""
 
-#: inc/helpers/namespace.php:172
+#: inc/helpers/namespace.php:158
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr ""
 
-#: inc/helpers/namespace.php:176
+#: inc/helpers/namespace.php:162
 msgid "All Rights Reserved"
 msgstr ""
 
-#: inc/helpers/namespace.php:190
+#: inc/helpers/namespace.php:176
 msgid "Check out this great book on Pressbooks."
 msgstr ""
 
-#: inc/helpers/namespace.php:207
+#: inc/helpers/namespace.php:193
 msgid "Home"
 msgstr ""
 
-#: inc/helpers/namespace.php:213
+#: inc/helpers/namespace.php:199
 msgid "Read"
 msgstr ""
 
-#: inc/helpers/namespace.php:220 header.php:128
+#: inc/helpers/namespace.php:206 header.php:119
 msgid "Buy"
 msgstr ""
 
-#: inc/helpers/namespace.php:227
+#: inc/helpers/namespace.php:213
 msgid "Sign in"
 msgstr ""
 
-#: inc/helpers/namespace.php:234
+#: inc/helpers/namespace.php:220
 msgid "Admin"
 msgstr ""
 
-#: inc/helpers/namespace.php:240
+#: inc/helpers/namespace.php:226
 msgid "Sign out"
 msgstr ""
 
-#: inc/helpers/namespace.php:420 partials/content-cover-book-info.php:51
+#: inc/helpers/namespace.php:406 partials/content-cover-book-info.php:51
 #: partials/content-cover-book-header.php:17
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:421
+#: inc/helpers/namespace.php:407
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:422
+#: inc/helpers/namespace.php:408
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:423
+#: inc/helpers/namespace.php:409
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:424
+#: inc/helpers/namespace.php:410
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:425
+#: inc/helpers/namespace.php:411
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:426 single.php:32
+#: inc/helpers/namespace.php:412 single.php:32
 #: partials/content-cover-book-info.php:66
 #: partials/content-cover-book-header.php:101
 msgid "License"
 msgstr ""
 
-#: inc/helpers/namespace.php:427
+#: inc/helpers/namespace.php:413
 msgid "Primary Subject"
 msgstr ""
 
-#: inc/helpers/namespace.php:428
+#: inc/helpers/namespace.php:414
 msgid "Additional Subject(s)"
 msgstr ""
 
-#: inc/helpers/namespace.php:429
+#: inc/helpers/namespace.php:415
 msgid "Publisher"
 msgstr ""
 
-#: inc/helpers/namespace.php:430
+#: inc/helpers/namespace.php:416
 msgid "Publication Date"
 msgstr ""
 
-#: inc/helpers/namespace.php:431 single.php:42
+#: inc/helpers/namespace.php:417 single.php:42
 msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
-#: inc/helpers/namespace.php:432
+#: inc/helpers/namespace.php:418
 msgid "Ebook ISBN"
 msgstr ""
 
-#: inc/helpers/namespace.php:433
+#: inc/helpers/namespace.php:419
 msgid "Print ISBN"
 msgstr ""
 
-#: inc/helpers/namespace.php:434
+#: inc/helpers/namespace.php:420
 msgid "Hashtag"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:468 inc/helpers/namespace.php:471
+#: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
 msgid "Previous: %s"
 msgstr ""
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:478 inc/helpers/namespace.php:480
+#: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
 msgid "Next: %s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:551
+#: inc/helpers/namespace.php:537
 msgid "%s on"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:551
+#: inc/helpers/namespace.php:537
 msgid "%1$s at %2$s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:551 inc/helpers/namespace.php:580
+#: inc/helpers/namespace.php:537 inc/helpers/namespace.php:566
 msgid "(Edit)"
 msgstr ""
 
-#: inc/helpers/namespace.php:554
+#: inc/helpers/namespace.php:540
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/helpers/namespace.php:580
+#: inc/helpers/namespace.php:566
 msgid "Pingback:"
 msgstr ""
 
@@ -304,7 +272,7 @@ msgstr ""
 msgid "Hello,"
 msgstr ""
 
-#: index.php:14 header.php:115 partials/content-cover-toc.php:3
+#: index.php:14 header.php:106 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr ""
 
@@ -402,21 +370,21 @@ msgstr ""
 msgid "Purchase here:"
 msgstr ""
 
-#: header.php:72
+#: header.php:63
 msgid "Skip to content"
 msgstr ""
 
 #. translators: %s: name of network
-#: header.php:91
+#: header.php:82
 msgid "Logo for %s"
 msgstr ""
 
-#: header.php:102
+#: header.php:93
 msgid "Toggle Menu"
 msgstr ""
 
 #. translators: %s: the title of the book
-#: header.php:124
+#: header.php:115
 msgid "Go to the cover page of %s"
 msgstr ""
 
