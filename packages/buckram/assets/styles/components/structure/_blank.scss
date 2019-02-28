@@ -123,6 +123,10 @@
   @include blank-head-and-foot;
 }
 
+@page post-introduction:blank {
+  @include blank-head-and-foot;
+}
+
 @page part:blank {
   @include blank-head-and-foot;
 }
