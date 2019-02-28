@@ -11,6 +11,7 @@
 ### Patches
 
 - Fix `td` border variable functionality: [#504](https://github.com/pressbooks/pressbooks-book/pull/504)
+- Remove running content from blank pages on post introduction front matter: [#518](https://github.com/pressbooks/pressbooks-book/pull/518)
 
 ## 1.3.3
 
