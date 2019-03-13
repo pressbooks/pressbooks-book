@@ -1,6 +1,6 @@
 <?php
 
-namespace Pressbooks\Book\Helpers;
+namespace PressbooksBook\Helpers;
 
 use Pressbooks\Container;
 
@@ -76,6 +76,9 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 /**
  * Return a human-readable filetype for a given filetype slug.
  *
+ * @deprecated 2.8.0
+ * @deprecated Use \Pressbooks\Modules\Export\get_name_from_filetype_slug() instead.
+ *
  * @since 2.0.0
  *
  * @param string $filetype The filetype slug.
@@ -83,27 +86,10 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
  * @return string A human-readable filetype.
  */
 function get_name_for_filetype( $filetype ) {
-	/**
-	 * Add custom export file types to the array of human-readable file types.
-	 * @since 2.0.0
-	 */
-	$formats = apply_filters(
-		'pb_export_filetype_names', [
-			'print-pdf' => __( 'Print PDF', 'pressbooks-book' ),
-			'pdf' => __( 'Digital PDF', 'pressbooks-book' ),
-			'mpdf' => __( 'Digital PDF', 'pressbooks-book' ),
-			'htmlbook' => __( 'HTMLBook', 'pressbooks-book' ),
-			'epub' => __( 'EPUB', 'pressbooks-book' ),
-			'mobi' => __( 'MOBI', 'pressbooks-book' ),
-			'epub3' => __( 'EPUB3', 'pressbooks-book' ),
-			'xhtml' => __( 'XHTML', 'presbooks-book' ),
-			'odf' => __( 'OpenDocument', 'pressbooks-book' ),
-			'wxr' => __( 'Pressbooks XML', 'pressbooks-book' ),
-			'vanillawxr' => __( 'WordPress XML', 'pressbooks' ),
-		]
-	);
-
-	return $formats[ $filetype ];
+	if ( function_exists( '\Pressbooks\Modules\Export\get_name_from_filetype_slug' ) ) {
+		return \Pressbooks\Modules\Export\get_name_from_filetype_slug( $filetype );
+	}
+	return ucfirst( $filetype );
 }
 
 /**
@@ -287,7 +273,7 @@ function get_source_book( $book_url, $checked = [] ) {
 function get_source_book_url( $book_url ) {
 	$source_url = get_transient( 'pb_book_source_url' );
 	if ( $source_url === false ) {
-		$source_url = \Pressbooks\Book\Helpers\get_source_book( $book_url );
+		$source_url = \PressbooksBook\Helpers\get_source_book( $book_url );
 		set_transient( 'pb_book_source_url', $source_url );
 	}
 	return $source_url;
@@ -449,22 +435,15 @@ function get_links( $echo = true ) {
 	$first_chapter = pb_get_first();
 	$prev_chapter = pb_get_prev();
 	$prev_chapter_id = pb_get_prev_post_id();
-	$prev_title = get_the_title( $prev_chapter_id );
-	$prev_short_title = get_post_meta( 'pb_short_title', $prev_chapter_id, true );
-	if ( $prev_short_title ) {
-		$prev_label = $prev_short_title;
-	} else {
-		$prev_label = $prev_title;
-	}
+	$prev_title = wp_strip_all_tags( html_entity_decode( get_the_title( $prev_chapter_id ) ) );
+	$prev_short_title = get_post_meta( $prev_chapter_id, 'pb_short_title', true );
+	$prev_label = ( $prev_short_title ) ? $prev_short_title : $prev_title;
+
 	$next_chapter = pb_get_next();
 	$next_chapter_id = pb_get_next_post_id();
-	$next_title = get_the_title( $next_chapter_id );
-	$next_short_title = get_post_meta( 'pb_short_title', $next_chapter_id, true );
-	if ( $next_short_title ) {
-		$next_label = $next_short_title;
-	} else {
-		$next_label = $next_title;
-	}
+	$next_title = wp_strip_all_tags( html_entity_decode( get_the_title( $next_chapter_id ) ) );
+	$next_short_title = get_post_meta( $next_chapter_id, 'pb_short_title', true );
+	$next_label = ( $next_short_title ) ? $next_short_title : $next_title;
 
 	if ( $echo ) :
 		?>
@@ -631,7 +610,7 @@ function copyright_license( $show_custom_copyright = true ) {
 	// Custom Copyright must override All Rights Reserved
 	$html = '';
 	if ( ! $has_custom_copyright || ( $has_custom_copyright && ! $all_rights_reserved ) ) {
-		$html .= \Pressbooks\Book\Helpers\do_license( $metadata );
+		$html .= \PressbooksBook\Helpers\do_license( $metadata );
 	}
 	if ( $has_custom_copyright ) {
 		$html .= '<div class="license-attribution">' . $metadata['pb_custom_copyright'] . '</div>';
@@ -651,12 +630,10 @@ function copyright_license( $show_custom_copyright = true ) {
  */
 function do_license( $metadata ) {
 	global $post;
-	$id    = $post->ID;
-	$title = ( is_front_page() ) ? get_bloginfo( 'name' ) : $post->post_title;
-
+	$id = $post->ID;
 	try {
 		$licensing = new \Pressbooks\Licensing();
-		return $licensing->doLicense( $metadata, $id, $title );
+		return $licensing->doLicense( $metadata, $id );
 	} catch ( \Exception $e ) {
 		error_log( $e->getMessage() ); // @codingStandardsIgnoreLine
 	}

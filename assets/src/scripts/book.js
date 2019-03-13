@@ -1,5 +1,4 @@
 // import external dependencies
-import 'diff';
 
 // import local dependencies
 import Router from './util/Router';

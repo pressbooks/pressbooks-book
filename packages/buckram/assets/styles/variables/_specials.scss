@@ -27,6 +27,11 @@ $column-twocolumn-column-gap: 1.5em !default;
 /// @type String
 $column-twocolumn-font-size: 0.85em !default;
 
+/// Text align for elements with class `.twocolumn`.
+/// @type String | Map
+/// @since 1.3.0
+$column-twocolumn-text-align: $para-align !default;
+
 /// Column gap for elements with class `.threecolumn`.
 /// @type String
 $column-threecolumn-column-gap: 1em !default;
@@ -34,6 +39,11 @@ $column-threecolumn-column-gap: 1em !default;
 /// Font size for elements with class `.threecolumn`.
 /// @type String
 $column-threecolumn-font-size: 0.8em !default;
+
+/// Text align for elements with class `.threecolumn`.
+/// @type String | Map
+/// @since 1.3.0
+$column-threecolumn-text-align: $column-twocolumn-text-align !default;
 
 /// Text indent for elements with class `.twocolumn` and `.threecolumn`.
 /// @type String | Map
@@ -447,7 +457,7 @@ $sidebar-line-height: $body-line-height !default;
 $hr-width: 20% !default;
 
 /// Seperator Top margin on `<hr>` elements.
-/// @type String
+/// @type String | Map
 $hr-margin-top: 0.9em !default;
 
 /// Seperator Bottom margin on `<hr>` elements.
@@ -469,6 +479,11 @@ $hr-border-color: if-map-get($color-1, $type) !default;
 /// Bottom margin on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String
 $hr-break-symbols-margin-bottom: 1.66em !default;
+
+/// Top margin on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.3.0
+$hr-break-symbols-margin-top: $hr-margin-top !default;
 
 /// Font size on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String
@@ -557,12 +572,8 @@ $textbox-text-align: left !default;
 
 /// Text indents on elements with a class of `textbox`.
 /// @type string | Map
-/// @since 1.0.0
-$textbox-text-indent: (
-  epub: 0,
-  prince: 0,
-  web: 0
-) !default;
+/// @since 1.3.0
+$textbox-text-indent: $para-indent !default;
 
 /// Word spacing on elements with a class of `textbox`.
 /// @type String | Map
@@ -588,7 +599,7 @@ $textbox-background-color: initial !default;
 
 /// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
 /// @type String
-$textbox-shaded-background-color: #eee !default;
+$textbox-shaded-background-color: $shaded-color !default;
 
 /// Textbox top padding on elements with a class of `textbox`.
 /// @type String | Map
@@ -645,11 +656,6 @@ $textbox-para-margin-top: $para-margin-top !default;
 /// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
-
-/// Text-indent on `<p>` elements that are children of elements with a class of `textbox`.
-/// @type String | Map
-/// @since 1.1.0
-$textbox-para-indent: $para-indent !default;
 
 /// Textbox top margin on `<ol>` elements that are children of elements with a class of `textbox`.
 /// @type String

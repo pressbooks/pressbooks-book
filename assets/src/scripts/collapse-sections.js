@@ -28,7 +28,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			let elems = [];
 			while (
 				elem.nextElementSibling &&
-				elem.nextElementSibling.tagName !== 'H1'
+				elem.nextElementSibling.tagName !== 'H1' &&
+				! elem.nextElementSibling.classList.contains( 'nav-reading--page' )
 			) {
 				elems.push( elem.nextElementSibling );
 				elem = elem.nextElementSibling;
@@ -60,6 +61,15 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 		// Assign the button
 		let btn = heading.querySelector( 'button' );
+
+		// If there's a URL hash linking to an anchor in this section, open it.
+		if ( document.location.hash && document.location.hash !== '#' ) {
+			if ( wrapper.querySelector( document.location.hash ) ) {
+				heading.setAttribute( 'data-collapsed', 'false' );
+				btn.setAttribute( 'aria-expanded', 'true' );
+				wrapper.hidden = false;
+			}
+		}
 
 		btn.onclick = () => {
 			// Cast the state as a boolean

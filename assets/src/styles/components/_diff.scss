@@ -10,15 +10,15 @@
 
   del,
   ins {
-    border-radius: 0.2rem;
     margin: 0 0.1rem;
     padding: 0.2rem;
+    word-break: break-word;
   }
 
   del {
     background: #faa;
     color: black;
-    text-decoration-color: black;
+    text-decoration: none;
   }
 
   ins {
@@ -42,13 +42,38 @@
     width: 100%;
   }
 
-  &__diff {
-    background: white;
-    border: solid 1px black;
+  .diff {
+    font-size: 1rem;
     font-family: Inconsolata, monospace;
-    height: 24em;
+    margin: 2rem 0 0;
+    min-width: 40rem;
     overflow: scroll;
-    padding: 1em;
     white-space: pre-wrap;
+
+    tr {
+      border-bottom: 0;
+      display: grid;
+      grid-template-columns: 48% 1fr 48%;
+    }
+
+    .diff-addedline,
+    .diff-context,
+    .diff-deletedline {
+      background-color: #fff;
+      padding: 1rem;
+      vertical-align: top;
+    }
+
+    .diff-context {
+      background-color: #fff;
+    }
+
+    .diff-addedline {
+      background-color: #e9ffe9;
+    }
+
+    .diff-deletedline {
+      background-color: #ffe9e9;
+    }
   }
 }

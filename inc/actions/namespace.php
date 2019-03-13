@@ -1,10 +1,9 @@
 <?php
 
-namespace Pressbooks\Book\Actions;
+namespace PressbooksBook\Actions;
 
-use function Pressbooks\Book\Helpers\social_media_enabled;
+use function \PressbooksBook\Helpers\social_media_enabled;
 use PressbooksMix\Assets;
-
 use Pressbooks\Container;
 use Pressbooks\Options;
 
@@ -29,15 +28,34 @@ function enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
 	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
 	$options = get_option( 'pressbooks_theme_options_web' );
+	$hypothesis_options = get_option( 'wp_hypothesis_options' );
 
+	if ( ! defined( 'PB_GUTENBERG_TESTING' ) || ! PB_GUTENBERG_TESTING ) {
+		wp_dequeue_style( 'wp-block-library' );
+	}
 	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700|Spectral:400,700', false, null );
 	if ( social_media_enabled() ) {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
-	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
-	// TODO: Enqueue only if Hypothesis is enabled.
-	wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
+	wp_enqueue_script( 'jquery-scrollto', $assets->getPath( 'scripts/jquery.scrollTo.js' ), [ 'jquery' ], null, true );
+	wp_enqueue_script( 'jquery-localscroll', $assets->getPath( 'scripts/jquery.localScroll.js' ), [ 'jquery', 'jquery-scrollto' ], null, true );
+	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery', 'jquery-scrollto' ], null );
+	if ( wp_script_is( 'hypothesis', 'enqueued' ) ) {
+		wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
+		wp_localize_script(
+			'pressbooks/pane',
+			'pressbooksHypothesis',
+			[
+				'showHighlights' => ( isset( $hypothesis_options['highlights-on-by-default'] ) ) ? true : false,
+				'openSidebar' => ( isset( $hypothesis_options['sidebar-open-by-default'] ) ) ? true : false,
+			]
+		);
+		foreach ( [ 'nohighlights', 'showhighlights', 'sidebaropen' ] as $handle ) {
+			wp_dequeue_script( $handle );
+		}
+	}
+
 	wp_localize_script(
 		'pressbooks/book',
 		'pressbooksBook',
@@ -49,6 +67,8 @@ function enqueue_assets() {
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
 			'chapter_not_loaded' => __( 'The original chapter could not be loaded.', 'pressbooks-book' ),
 			'toggle_contents' => __( 'Toggle contents of', 'pressbooks-book' ),
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'text_diff_nonce' => wp_create_nonce( 'text_diff_nonce' ),
 		]
 	);
 
@@ -62,8 +82,6 @@ function enqueue_assets() {
 			wp_enqueue_style( 'lity', $assets->getPath( 'styles/lity.css' ), false, null );
 			wp_enqueue_script( 'pressbooks/lightbox', $assets->getPath( 'scripts/lightbox.js' ), false, null );
 		}
-
-		wp_enqueue_style( 'jquery-ui', '//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css', false, null ); // TODO: Maybe get rid of this.
 
 		if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 			$styles   = Container::get( 'Styles' );
@@ -140,27 +158,9 @@ function update_webbook_stylesheet() {
 	}
 
 	if ( true === $recompile ) {
-		Container::get( 'Sass' )->updateWebBookStyleSheet();
+		Container::get( 'Styles' )->updateWebBookStyleSheet();
 	}
 }
-
-
-/**
- * Add metadata to head.
- *
- * @since 2.3.0
- *
- * @return null
- */
-function add_metadata() {
-	if ( is_front_page() ) {
-		echo pb_get_seo_meta_elements();
-		echo pb_get_microdata_elements();
-	} else {
-		echo pb_get_microdata_elements();
-	}
-}
-
 
 /**
  * Run after_setup_theme functions.
@@ -215,7 +215,7 @@ function add_lightbox_setting( $_page, $_section ) {
 	add_settings_field(
 		'enable_lightbox',
 		__( 'Enable Image Lightbox', 'pressbooks-book' ),
-		'\Pressbooks\Book\Actions\render_lightbox_setting_field',
+		'\PressbooksBook\Actions\render_lightbox_setting_field',
 		$_page,
 		$_section,
 		[
@@ -244,4 +244,22 @@ function render_lightbox_setting_field( $args ) {
 			'label' => $args[0],
 		]
 	);
+}
+
+/**
+ * Handler for text_diff AJAX action.
+ *
+ * @since 2.8.0
+ *
+ * @return null
+ */
+function text_diff() {
+	if ( check_ajax_referer( 'text_diff_nonce', 'security' ) ) {
+		$diff = wp_text_diff(
+			$_POST['left'],
+			$_POST['right']
+		);
+		wp_send_json_success( wp_json_encode( $diff ) );
+	}
+	wp_send_json_error();
 }

@@ -43,6 +43,10 @@
       text-indent: 0;
     }
 
+    .chapter-license {
+      display: block;
+    }
+
     .front-matter {
       @if $type == 'epub' {
         color: if-map-get($toc-front-matter-title-color, $type);

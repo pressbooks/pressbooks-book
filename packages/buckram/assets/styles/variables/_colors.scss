@@ -76,7 +76,7 @@ $table-para-color: $color-1 !default;
 $shade-color-1: $color-4 !default;
 /// Line color for `<table>` elements.
 /// @type String
-$line-color-1: $color-3 !default; //FIX
+$line-color-1: #000 !default;
 
 //INDEX PARA COLOR
 
@@ -101,16 +101,23 @@ $sidebar-color: $color-4 !default;
 /// Textbox color for `<div>` elements with class `.textbox`.
 /// @type String
 $textbox-background-color: initial !default;
-/// Textbox border color for `<div>` elements with class `.sidebar`.
-/// @type String
-$textbox-border-color: $color-1 !default;
 /// Shading color for `<div>` elements with class `.sidebar.shaded`.
 /// @type String
 $shaded-color: $color-4 !default;
+/// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
+/// @type String
+$textbox-shaded-background-color: $shaded-color !default;
+/// Textbox border color for `<div>` elements with class `.sidebar`.
+/// @type String
+$textbox-border-color: $color-1 !default;
 /// Top border color on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String | Map
 /// @since 1.2.0
-$hr-break-symbols-border-top-color: (epub: $color-3, prince: $color-3, web: $color-3) !default;
+$hr-break-symbols-border-top-color: $color-3 !default;
+/// Color for description term on elements `<dt>`.
+/// @type String
+/// @since 1.4.0
+$dt-color: $color-3 !default;
 
 //TITLE PAGE(S) COLOR
 

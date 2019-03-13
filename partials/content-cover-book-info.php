@@ -15,8 +15,8 @@
 			<?php
 		endif;
 if ( isset( $book_information['pb_is_based_on'] ) ) {
-	$source_url  = \Pressbooks\Book\Helpers\get_source_book_url( $book_information['pb_is_based_on'] );
-	$source_meta = \Pressbooks\Book\Helpers\get_source_book_meta( $source_url );
+	$source_url  = \PressbooksBook\Helpers\get_source_book_url( $book_information['pb_is_based_on'] );
+	$source_meta = \PressbooksBook\Helpers\get_source_book_meta( $source_url );
 	?>
 
 	<div class="block-info__subsection block-info__source">
@@ -24,7 +24,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 		<p>
 			<?php
 			if ( $source_meta ) {
-				$authors = \Pressbooks\Book\Helpers\get_book_authors( $source_meta );
+				$authors = \PressbooksBook\Helpers\get_book_authors( $source_meta );
 				printf(
 					/* translators: %$1s: title of book, link to book, %2$s: attribution string for the book, %3$s: publisher of book, %4$s: license for book */
 					__( 'This book is a cloned version of %1$s%2$s, published using Pressbooks by %3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
@@ -48,7 +48,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 </div>
 		<div class="block-info__inner__content">
 			<div class="block-info__subsection block-info__lead-author">
-				<h3 class="block__subtitle"><?php echo _n( 'Author', 'Authors', \Pressbooks\Book\Helpers\count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?></h3>
+				<h3 class="block__subtitle"><?php echo _n( 'Author', 'Authors', \PressbooksBook\Helpers\count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?></h3>
 				<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
 					<div class="block-info__authors">
 						<?php // TODO add author photo ?>
@@ -64,7 +64,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 			<?php } ?>
 			<div class="block-info__subsection block-info__license">
 				<h3 class="block__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h3>
-				<?php echo \Pressbooks\Book\Helpers\copyright_license( false ); ?>
+				<?php echo \PressbooksBook\Helpers\copyright_license( false ); ?>
 			</div>
 			<?php if ( ! empty( $book_information['pb_primary_subject'] ) ) { ?>
 			<div class="block-info__subsection block-info__subject">

@@ -44,6 +44,11 @@ $image-caption-line-height: (
 /// @type String
 $image-caption-text-align: left !default;
 
+/// Text indent for image captions.
+/// @type String | Map
+/// @since 1.3.0
+$image-caption-text-indent: (epub: 0, prince: 0, web: 0) !default;
+
 /// Text transform for image captions.
 /// @type String
 $image-caption-text-transform: none !default;
@@ -210,6 +215,11 @@ $interactive-icon-background-size: (
   web: cover
 ) !default;
 
+/// Bottom margin for interactive content thumbnail
+/// @type String | Map
+/// @since 1.4.0
+$interactive-thumbnail-margin-bottom: 0.5em !default;
+
 /// Line height property for interactive content box
 /// @type String | Map
 /// @since 1.0.0
@@ -225,10 +235,50 @@ $interactive-content-font-size: 0.9em !default;
 /// @since 1.0.0
 $interactive-content-font-style: italic !default;
 
+/// Font family for interactive content textbox
+/// @type String
+/// @since 1.3.0
+$interactive-content-font-family: $textbox-font-family !default;
+
+/// Font weight for interactive content textbox
+/// @type String
+/// @since 1.3.0
+$interactive-content-font-weight: $textbox-font-weight !default;
+
 /// Bottom margin property for interactive content box
 /// @type String | Map
 /// @since 1.0.0
 $interactive-content-margin-bottom: (prince: 1.5em, epub: 1em, web: 1em) !default;
+
+/// Padding top for interactive content textbox
+/// @type String | Map
+/// @since 1.3.0
+$interactive-content-padding-top: $textbox-padding-top !default;
+
+/// Padding right for interactive content textbox
+/// @type String | Map
+/// @since 1.3.0
+$interactive-content-padding-right: $textbox-padding-right !default;
+
+/// Padding bottom for interactive content textbox
+/// @type String | Map
+/// @since 1.3.0
+$interactive-content-padding-bottom: $textbox-padding-bottom !default;
+
+/// Padding left for interactive content textbox
+/// @type String | Map
+/// @since 1.3.0
+$interactive-content-padding-left: $textbox-padding-left !default;
+
+/// Text align property for interactive content box
+/// @type String | Map
+/// @since 1.3.0
+$interactive-content-text-align: (epub: left, prince: left, web: left) !default;
+
+/// Text indent for interactive content textbox
+/// @type String | Map
+/// @since 1.3.0
+$interactive-content-text-indent: $textbox-text-indent !default;
 
 /// Caption alignment on embedded media
 /// @type String | Map

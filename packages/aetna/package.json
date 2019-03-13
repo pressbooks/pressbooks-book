@@ -1,6 +1,6 @@
 {
   "name": "aetna",
-  "version": "1.0.0-alpha.18",
+  "version": "1.0.0-alpha.24",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
@@ -20,11 +20,12 @@
     "@frctl/fractal": "^1.1.7"
   },
   "devDependencies": {
-    "pressbooks-build-tools": "^0.13.0"
+    "pressbooks-build-tools": "^1.3.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pressbooks/aetna.git"
+    "url": "git+https://github.com/pressbooks/pressbooks-book.git",
+    "directory": "packages/aetna"
   },
   "keywords": [
     "styleguide",
@@ -38,5 +39,6 @@
   "homepage": "https://github.com/pressbooks/aetna#readme",
   "stylelint": {
     "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
-  }
+  },
+  "gitHead": "d8f356c924ea88204d555650f7c9a28a66ba2292"
 }

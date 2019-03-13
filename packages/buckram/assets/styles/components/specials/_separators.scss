@@ -25,7 +25,7 @@
 // Separators
 hr {
   width: $hr-width;
-  margin: $hr-margin-top auto $hr-margin-bottom;
+  margin: if-map-get($hr-margin-top, $type) auto $hr-margin-bottom;
   border-top: none;
   border-right: none;
   border-bottom: $hr-border-style $hr-border-width $hr-border-color;
@@ -35,6 +35,7 @@ hr {
   &.break-symbols {
     padding-top: if-map-get($hr-break-symbols-padding-top, $type);
     border-top: if-map-get($hr-break-symbols-border-top-width, $type) if-map-get($hr-break-symbols-border-top-style, $type) if-map-get($hr-break-symbols-border-top-color, $type);
+    margin-top: if-map-get($hr-break-symbols-margin-top, $type);
     margin-bottom: $hr-break-symbols-margin-bottom;
     border: 0;
 
@@ -81,9 +82,24 @@ hr {
   page-break-after: always;
 }
 
+@if $type == "web" {
+  .front-matter,
+  .part,
+  .chapter,
+  .back-matter,
+  body#tinymce.wp-editor {
+    .section-break {
+      text-align: center;
+    }
+
+    .section-break-page {
+      text-align: center;
+    }
+  }
+}
+
 // Blank Pages
 .blank-page {
-  font-size: 0;
   visibility: hidden;
   page-break-before: always;
 }

@@ -31,6 +31,30 @@
   }
 }
 
+%legal-simple {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+  }
+
+  ol ol {
+    list-style-type: lower-roman;
+  }
+
+  ol ol ol {
+    list-style-type: decimal;
+  }
+
+  ol ol ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  ol ol ol ol ol {
+    list-style-type: lower-roman;
+  }
+}
+
 %legal {
   list-style-type: none;
   padding-left: 0;
@@ -94,6 +118,30 @@
   ol ol ol ol ol li::before {
     counter-increment: level-6;
     content: counter(level-6, lower-roman)")\A0";
+  }
+}
+
+%harvard-simple {
+  list-style-type: upper-roman;
+
+  ol {
+    list-style-type: upper-alpha;
+  }
+
+  ol ol {
+    list-style-type: decimal;
+  }
+
+  ol ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  ol ol ol ol {
+    list-style-type: decimal;
+  }
+
+  ol ol ol ol ol {
+    list-style-type: lower-alpha;
   }
 }
 
@@ -238,6 +286,7 @@
     if-map-get($dt-margin-left, $type);
   font-style: $dt-font-style;
   font-weight: $dt-font-weight;
+  color: $dt-color;
 }
 
 %dfn {
@@ -277,18 +326,6 @@
     margin-top: if-map-get($li-li-margin-top, $type);
   }
 
-  ol.legal {
-    @extend %legal;
-  }
-
-  ol.harvard {
-    @extend %harvard;
-  }
-
-  ol.decimal {
-    @extend %decimal;
-  }
-
   @include generic-ordered-lists();
 
   dl dt {
@@ -306,7 +343,37 @@
   dd + dt {
     margin-top: $dd-dt-spacing;
   }
-} @else {
+}
+
+@if $type == "prince" {
+  ol.legal {
+    @extend %legal;
+  }
+
+  ol.harvard {
+    @extend %harvard;
+  }
+
+  ol.decimal {
+     @extend %decimal;
+  }
+}
+
+@if $type == "epub" {
+  ol.legal {
+    @extend %legal-simple;
+  }
+
+  ol.harvard {
+    @extend %harvard-simple;
+  }
+
+  ol.decimal {
+     @extend %ol;
+  }
+}
+
+@if $type == "web" {
   .front-matter,
   .part,
   .chapter,
@@ -353,27 +420,5 @@
 
   dd + dt {
     margin-top: $dd-dt-spacing;
-  }
-}
-
-@if $type == "epub" {
-  @media amzn-mobi {
-    ul,
-    ol {
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-
-    ul {
-      text-align: left !important;
-    }
-
-    ol {
-      text-align: left !important;
-    }
-
-    li {
-      text-align: left !important;
-    }
   }
 }

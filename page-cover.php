@@ -5,7 +5,7 @@ $book_information = pb_get_book_information();
 
 get_header();
 
-if ( \Pressbooks\Book\Helpers\is_book_public() ) {
+if ( \PressbooksBook\Helpers\is_book_public() ) {
 	include( locate_template( 'partials/content-cover-book-header.php' ) );
 	include( locate_template( 'partials/content-cover-toc.php' ) );
 	include( locate_template( 'partials/content-cover-book-info.php' ) );

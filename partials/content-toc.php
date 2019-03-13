@@ -16,7 +16,7 @@ $permissive_private_content = (int) get_option( 'permissive_private_content', 0 
 $options = get_option( 'pressbooks_theme_options_global' );
 $part_numbers = $options['chapter_numbers'] ?? false; ?>
 <ol class="toc">
-	<?php echo \Pressbooks\Book\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ); ?>
+	<?php echo \PressbooksBook\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ); ?>
 	<?php
 	$n = 0;
 	$multiple_parts = count( $book_structure['part'] ) > 1;
@@ -52,10 +52,10 @@ $part_numbers = $options['chapter_numbers'] ?? false; ?>
 						( $part_has_content ) ? '<a href=' . get_permalink( $part['ID'] ) . "'>$part_title</a>" : $part_title
 					)
 					: '',
-				( $part_has_chapters ) ? '<ol class="toc__chapters">' . \Pressbooks\Book\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ) . '</ol>' : ''
+				( $part_has_chapters ) ? '<ol class="toc__chapters">' . \PressbooksBook\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ) . '</ol>' : ''
 			);
 		}
 	}
 	?>
-	<?php echo \Pressbooks\Book\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ); ?>
+	<?php echo \PressbooksBook\Helpers\toc_sections( $book_structure['back-matter'], 'back-matter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ); ?>
 </ol> <!-- end #toc -->

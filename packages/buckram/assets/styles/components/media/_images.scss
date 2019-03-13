@@ -21,6 +21,7 @@
     margin-top: if-map-get($image-caption-margin-top, $type);
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
+    text-indent: if-map-get($image-caption-text-indent, $type);
   }
 
   img {
@@ -57,7 +58,6 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        width: auto;
       }
     }
 
@@ -126,6 +126,7 @@
     padding-bottom: if-map-get($image-caption-padding-bottom, $type);
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
+    text-indent: if-map-get($image-caption-text-indent, $type);
   }
 
   img {
@@ -224,6 +225,7 @@
       margin-top: if-map-get($image-caption-margin-top, $type);
       text-align: $image-caption-text-align;
       text-transform: $image-caption-text-transform;
+      text-indent: if-map-get($image-caption-text-indent, $type);
     }
 
     img {

@@ -1,5 +1,10 @@
-.travis.yml
-sassdoc.json
 tests
 vendor
+.travis.yml
+composer.json
+composer.lock
+sassdoc.json
+test.js
 webpack.mix.js
+yarn.lock
+yarn-error.log

@@ -10,6 +10,7 @@
     line-height: if-map-get($interactive-content-line-height, $type);
   }
   margin-bottom: if-map-get($interactive-content-margin-bottom, $type);
+  padding: if-map-get($interactive-content-padding-top, $type) if-map-get($interactive-content-padding-right, $type) if-map-get($interactive-content-padding-bottom, $type) if-map-get($interactive-content-padding-left, $type);
 
   &__icon {
     display: $interactive-icon-display;
@@ -26,16 +27,26 @@
     background-size: if-map-get($interactive-icon-background-size, $type);
   }
 
+  img {
+    display: block;
+    margin-bottom: if-map-get($interactive-thumbnail-margin-bottom, $type);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   p {
     font-size: if-map-get($interactive-content-font-size, $type);
     font-style: $interactive-content-font-style;
+    font-family: $interactive-content-font-family;
+    font-weight: $interactive-content-font-weight;
     margin-bottom: 0;
-    text-align: left;
+    text-indent: if-map-get($interactive-content-text-indent, $type);
+    text-align: if-map-get($interactive-content-text-align, $type);
   }
 }
 
-.embed div.figcaption { 
-  text-align: if-map-get($media-caption-align, $type); 
+.embed div.figcaption {
+  text-align: if-map-get($media-caption-align, $type);
 }
 
 @if $type == 'web' {
@@ -44,7 +55,7 @@
     margin: 0 auto if-map-get($interactive-content-margin-bottom, $type);
   }
 
-  .embed figcaption { 
-    text-align: if-map-get($media-caption-align, $type); 
+  .embed figcaption {
+    text-align: if-map-get($media-caption-align, $type);
   }
 }
