@@ -59,17 +59,18 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 
 						// Rewrite rule
 						$url = home_url( "/open/download?type={$filetype}" );
+						$title = esc_js( get_bloginfo( 'name' ) );
 
 						// Tracking event defaults to Google Analytics (Universal). @codingStandardsIgnoreStart
 						// Filter like so (for Piwik):
 						// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
-						//  return "_paq.push(['trackEvent','exportFiles','Downloads','{$filetype}']);";
+						//  return "_paq.push(['trackEvent','exportFiles','Downloads','{$title}:{$filetype}']);";
 						// }, 10, 2);
 						// Or for Google Analytics (Classic):
 						// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
-						//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$file_class}']);";
+						//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$title}:{$filetype}']);";
 						// }, 10, 2); @codingStandardsIgnoreEnd
-						$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$filetype}');", $filetype );
+						$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$title}:{$filetype}');", $filetype, $title );
 						?>
 					<li class="dropdown-item">
 						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
