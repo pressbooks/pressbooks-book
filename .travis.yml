@@ -31,16 +31,15 @@ before_install:
 - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
 install:
 - node -v
-- npm install -g yarn
 - npm install -g lerna
-- yarn
-- yarn run bootstrap
+- npm install
+- npm run bootstrap
 - composer install
 before_script:
 - if [[ ${TRAVIS_PHP_VERSION:0:3} != "7.1" ]] && php -v | grep -q 'Xdebug'; then phpenv config-rm xdebug.ini; fi
 - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 script:
-- yarn run test
+- npm run test
 - composer test
 - lerna run test
 after_success:
@@ -51,7 +50,7 @@ before_deploy:
 - chmod +x wp-cli.phar
 - sudo mv wp-cli.phar /usr/local/bin/wp
 - wp package install wp-cli/dist-archive-command
-- yarn run build:production
+- npm run build:production
 - composer install --no-dev --optimize-autoloader
 - cd ../
 - wp dist-archive $TRAVIS_PROJECT_SLUG $TRAVIS_BUILD_DIR/$TRAVIS_PROJECT_SLUG-$TRAVIS_TAG.zip
