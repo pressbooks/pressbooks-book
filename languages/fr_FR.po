@@ -2,8 +2,10 @@
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Antonio Devís <colomet@hotmail.com>, 2017
-# Gilbert MOISIO <gmoisio@gmail.com>, 2017
 # Hugh McGuire <hugh@pressbooks.com>, 2018
+# Hubert GB <hgblouin@tciinc.ca>, 2019
+# Eric Lord <elord@tciinc.ca>, 2019
+# Amelie Roberge <aroberge@tciinc.ca>, 2019
 # 
 msgid ""
 msgstr ""
@@ -11,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
 "POT-Creation-Date: 2019-02-27T15:35:35+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Hugh McGuire <hugh@pressbooks.com>, 2018\n"
+"Last-Translator: Amelie Roberge <aroberge@tciinc.ca>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +25,11 @@ msgstr ""
 
 #. Theme Name of the theme
 msgid "McLuhan"
-msgstr ""
+msgstr "McLuhan"
 
 #. Theme URI of the theme
 msgid "https://pressbooks.com/themes/pressbooks-book"
-msgstr ""
+msgstr "https://pressbooks.com/themes/pressbooks-book"
 
 #. Description of the theme
 msgid ""
@@ -36,14 +38,19 @@ msgid ""
 "writing and is also suitable for fiction. Headings are set in Cormorant "
 "Garamond, and body type is set in Lora."
 msgstr ""
+"Ce thème a été nommé en l&rsquo;honneur du théoricien canadien des "
+"communications Marshall McLuhan, célèbre pour la phrase&nbsp;: «&nbsp;le "
+"médium constitue le message même.&nbsp;». Le thème convient autant pour la "
+"rédaction universitaire que pour la rédaction d&rsquo;ouvrages de fiction. "
+"Les en-têtes sont en Cormorant Garamond et le corps du texte en Lora."
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr ""
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 msgid "https://pressbooks.com"
-msgstr ""
+msgstr "https://pressbooks.com"
 
 #: functions.php:16
 msgid "Dependencies Missing"
@@ -52,101 +59,106 @@ msgstr "Dépendances manquantes"
 #: functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
 msgstr ""
-"Vous devez exécuter <code>composer install</code> à partir du répertoire des"
-" fichiers McLuhan."
+"Vous devez exécuter <code>composer install</code> depuis le répertoire "
+"McLuhan."
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr "L'installation Pressbooks ne peut pas être trouvée."
+msgstr "Le fichier d&rsquo;installation Pressbooks est introuvable."
 
 #: 404.php:2
 msgid "Oops! That content can&rsquo;t be found."
-msgstr "Oops! Ce contenu ne peut pas être trouvé."
+msgstr "Oops! Le contenu est introuvable."
 
 #: 404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
 msgstr ""
-"Il semble que rien n'a été trouvé à cet endroit. Essayez une recherche?"
+"Il semble que l&rsquo;emplacement soit vide. Essayez de nouveau en faisant "
+"une recherche."
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr ""
+msgstr "Privé"
 
 #: inc/actions/namespace.php:63 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
-msgstr ""
+msgstr "Augmenter la taille de la police"
 
 #: inc/actions/namespace.php:64
 msgid "Decrease Font Size"
-msgstr ""
+msgstr "Réduire la taille de la police"
 
 #: inc/actions/namespace.php:66
 msgid "Comparison loading…"
-msgstr ""
+msgstr "Chargement de la comparaison..."
 
 #: inc/actions/namespace.php:67
 msgid "Comparison loaded."
-msgstr ""
+msgstr "Chargement de la comparaison terminé."
 
 #: inc/actions/namespace.php:68
 msgid "The original chapter could not be loaded."
-msgstr ""
+msgstr "Le chapitre original n&rsquo;a pas pu être chargé."
 
 #: inc/actions/namespace.php:69
 msgid "Toggle contents of"
-msgstr ""
+msgstr "Afficher/dissimuler les contenus de"
 
 #: inc/actions/namespace.php:217
 msgid "Enable Image Lightbox"
-msgstr ""
+msgstr "Activer la fonction Lightbox pour les images"
 
 #: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
-msgstr ""
+msgstr "Afficher les images comportant un lien dans une fenêtre superposée."
 
 #: inc/helpers/namespace.php:140
 msgid "Public Domain"
-msgstr ""
+msgstr "Domaine public"
 
 #: inc/helpers/namespace.php:143
 msgid "Creative Commons Attribution"
-msgstr ""
+msgstr "Creative Commons Attribution"
 
 #: inc/helpers/namespace.php:146
 msgid "Creative Commons Attribution ShareAlike"
-msgstr ""
+msgstr "Creative Commons Attribution – Partage dans les Mêmes Conditions"
 
 #: inc/helpers/namespace.php:149
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr ""
+msgstr "Creative Commons Attribution – Pas de Modification"
 
 #: inc/helpers/namespace.php:152
 msgid "Creative Commons Attribution NonCommercial"
-msgstr ""
+msgstr "Creative Commons Attribution – Pas d&rsquo;Utilisation Commerciale"
 
 #: inc/helpers/namespace.php:155
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr ""
+"Creative Commons Attribution – Pas d&rsquo;Utilisation Commerciale – Partage"
+" dans les Mêmes Conditions"
 
 #: inc/helpers/namespace.php:158
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr ""
+"Creative Commons Attribution – Pas d&rsquo;Utilisation Commerciale – Pas de "
+"Modification"
 
 #: inc/helpers/namespace.php:162
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Tous droits réservés"
 
 #: inc/helpers/namespace.php:176
 msgid "Check out this great book on Pressbooks."
-msgstr ""
+msgstr "Découvrez cet excellent livre sur Pressbooks."
 
 #: inc/helpers/namespace.php:193
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
 #: inc/helpers/namespace.php:199
 msgid "Read"
-msgstr ""
+msgstr "Lire"
 
 #: inc/helpers/namespace.php:206 header.php:119
 msgid "Buy"
@@ -154,52 +166,52 @@ msgstr "Acheter"
 
 #: inc/helpers/namespace.php:213
 msgid "Sign in"
-msgstr ""
+msgstr "Se connecter"
 
 #: inc/helpers/namespace.php:220
 msgid "Admin"
-msgstr ""
+msgstr "Administrateur"
 
 #: inc/helpers/namespace.php:226
 msgid "Sign out"
-msgstr ""
+msgstr "Se déconnecter"
 
 #: inc/helpers/namespace.php:406 partials/content-cover-book-info.php:51
 #: partials/content-cover-book-header.php:17
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Auteur"
+msgstr[1] "Auteurs"
 
 #: inc/helpers/namespace.php:407
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Éditeur"
+msgstr[1] "Directeurs de rédaction"
 
 #: inc/helpers/namespace.php:408
 msgid "Translator"
 msgid_plural "Translators"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Traducteur"
+msgstr[1] "Traducteurs"
 
 #: inc/helpers/namespace.php:409
 msgid "Reviewer"
 msgid_plural "Reviewers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Réviseur"
+msgstr[1] "Réviseurs"
 
 #: inc/helpers/namespace.php:410
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Illustrateur"
+msgstr[1] "Illustrateurs"
 
 #: inc/helpers/namespace.php:411
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Contributeur"
+msgstr[1] "Collaborateurs"
 
 #: inc/helpers/namespace.php:412 single.php:32
 #: partials/content-cover-book-info.php:66
@@ -209,81 +221,81 @@ msgstr "License"
 
 #: inc/helpers/namespace.php:413
 msgid "Primary Subject"
-msgstr ""
+msgstr "Sujet principal"
 
 #: inc/helpers/namespace.php:414
 msgid "Additional Subject(s)"
-msgstr ""
+msgstr "Sujets supplémentaires"
 
 #: inc/helpers/namespace.php:415
 msgid "Publisher"
-msgstr ""
+msgstr "Éditeur"
 
 #: inc/helpers/namespace.php:416
 msgid "Publication Date"
-msgstr ""
+msgstr "Date de publication"
 
 #: inc/helpers/namespace.php:417 single.php:42
 msgid "Digital Object Identifier (DOI)"
-msgstr ""
+msgstr "identificateur d&rsquo;objets numériques (DOI)"
 
 #: inc/helpers/namespace.php:418
 msgid "Ebook ISBN"
-msgstr ""
+msgstr "NINL du livre numérique"
 
 #: inc/helpers/namespace.php:419
 msgid "Print ISBN"
-msgstr ""
+msgstr "Imprimer le NINL"
 
 #: inc/helpers/namespace.php:420
 msgid "Hashtag"
-msgstr ""
+msgstr "Mot-clic"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
 msgid "Previous: %s"
-msgstr ""
+msgstr "Précédent&nbsp;: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
 msgid "Next: %s"
-msgstr ""
+msgstr "Suivant&nbsp;: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:537
 msgid "%s on"
-msgstr ""
+msgstr "%s activé"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:537
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s à %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:537 inc/helpers/namespace.php:566
 msgid "(Edit)"
-msgstr ""
+msgstr "(Modifier)"
 
 #: inc/helpers/namespace.php:540
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Votre commentaire a été soumis aux modérateurs."
 
 #: inc/helpers/namespace.php:566
 msgid "Pingback:"
-msgstr ""
+msgstr "Fonction rétrolien Pingback&nbsp;:"
 
 #: inc/intervention.php:11
 msgid "Hello,"
-msgstr ""
+msgstr "Bonjour,"
 
 #: index.php:14 header.php:106 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr "Table des matières"
+msgstr "Contenus"
 
 #: index.php:18
 msgid "This book does not contain any public content."
@@ -297,20 +309,20 @@ msgstr "Commentaires/Errata"
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-"Cette publication est protégée par un mot de passe. Entrer le mot de passe "
-"pour voir les commentaires."
+"Cette publication est protégée par mot de passe. Entrez le mot de passe pour"
+" voir les commentaires."
 
 #: comments.php:36 comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr "<span class=\"meta-nav\">&larr;</span> Commentaires plus anciens"
+msgstr "<span class=\"meta-nav\">&larr;</span> Commentaires antérieurs"
 
 #: comments.php:37 comments.php:48
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Commentaires récents<span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nouveaux commentaires<span class=\"meta-nav\">&rarr;</span>"
 
 #: comments.php:56
 msgid "Comments are closed."
-msgstr "Les commentaires sont clos."
+msgstr "Les commentaires sont désactivés."
 
 #: comments.php:64
 msgid "Submit"
@@ -319,7 +331,7 @@ msgstr "Soumettre"
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour : %s"
+msgstr "Résultats de recherche pour&nbsp;: %s"
 
 #: search.php:18
 msgid "Previous page"
@@ -331,7 +343,7 @@ msgstr "Page suivante"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr "Navigation paginée"
+msgstr "Navigation découpée en pages"
 
 #: page-buy.php:5
 msgid "Buy the Book"
@@ -339,39 +351,39 @@ msgstr "Acheter le livre"
 
 #: page-buy.php:10 page-buy.php:18 page-about.php:21
 msgid "It's coming!"
-msgstr "Ça arrive !"
+msgstr "Ça arrive!"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
-"Vous pouvez acheter <a href=\"%1$s\">%2$s</a> en suivant l'un des liens ci-"
-"dessous :"
+"Vous pouvez acheter <a href=\"%1$s\">%2$s</a> en cliquant sur l&rsquo;un des"
+" liens ci-dessous&nbsp;:"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:25
 msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
-msgstr "Achetez sur <a href=\"%1$s\">amazon.com</a>"
+msgstr "Acheter sur <a href=\"%1$s\">amazon.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:30
 msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
-msgstr "Achetez sur <a href=\"%1$s\">oreilly.com</a>"
+msgstr "Acheter sur <a href=\"%1$s\">oreilly.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:35
 msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
-msgstr "Achetez sur <a href=\"%1$s\">barnesandnoble.com</a>"
+msgstr "Acheter sur <a href=\"%1$s\">barnesandnoble.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:40
 msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
-msgstr "Achetez sur <a href=\"%1$s\">kobobooks.com</a>"
+msgstr "Acheter sur <a href=\"%1$s\">kobobooks.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:45
 msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
-msgstr "Achetez sur <a href=\"%1$s\">apple.com</a>"
+msgstr "Acheter sur <a href=\"%1$s\">apple.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:50
@@ -381,7 +393,7 @@ msgstr "Ailleurs"
 #. translators: %1$s: url to purchase
 #: page-buy.php:50
 msgid "Purchase here:"
-msgstr "Achetez ici :"
+msgstr "Acheter ici&nbsp;:"
 
 #: header.php:63
 msgid "Skip to content"
@@ -394,12 +406,12 @@ msgstr "Logo pour %s"
 
 #: header.php:93
 msgid "Toggle Menu"
-msgstr "Basculer le menu"
+msgstr "Afficher/dissimuler le menu"
 
 #. translators: %s: the title of the book
 #: header.php:115
 msgid "Go to the cover page of %s"
-msgstr ""
+msgstr "Aller à la page couverture de %s"
 
 #: private.php:4
 msgid "Access Denied"
@@ -411,8 +423,8 @@ msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
 msgstr ""
-"Ce livre est privé et accessible uniquement aux utilisateurs enregistrés. Si"
-" vous avez un compte, vous pouvez %s."
+"Ce livre est privé. Seuls les utilisateurs autorisés peuvent y avoir accès. "
+"Si vous avez un compte, vous pouvez %s."
 
 #: private.php:14
 msgid "sign in here"
@@ -421,24 +433,24 @@ msgstr "se connecter ici"
 #. translators: link to Pressbooks.com
 #: private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr "Vous pouvez également configurer votre propre livre Pressbooks à %s"
+msgstr "Vous pouvez également créer votre propre livre Pressbooks à %s"
 
 #. translators: %s: Pressbooks
 #: footer.php:32
 msgid "Powered by %s"
-msgstr "Alimenté par %s"
+msgstr "Propulsé par %s"
 
 #: footer.php:34
 msgid "Open Source"
-msgstr "Open source"
+msgstr "Code source libre"
 
 #: footer.php:35
 msgid "Open Textbooks"
-msgstr "Manuels scolaires ouverts"
+msgstr "Manuels libres"
 
 #: footer.php:36
 msgid "Open Book Publishing"
-msgstr "Édition ouverte"
+msgstr "Publication de livres libres"
 
 #: footer.php:37
 msgid "Learn More"
@@ -467,20 +479,20 @@ msgstr "Modifier"
 
 #: page.php:18
 msgid "Pages:"
-msgstr "Pages :"
+msgstr "Pages&nbsp;:"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr ""
+msgstr "Information sur le livre"
 
 #: partials/content-cover-book-info.php:6
 #: partials/content-cover-book-header.php:97
 msgid "Book Description"
-msgstr ""
+msgstr "Description du livre"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr ""
+msgstr "Source du livre"
 
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
@@ -489,11 +501,14 @@ msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks by "
 "%3$s under a %4$s license. It may differ from the original."
 msgstr ""
+"Ce livre est une version clonée de %1$s %2$s, publiée sur Pressbooks par "
+"%3$s sous la license %4$s. Il se peut qu&rsquo;il soit différent de "
+"l&rsquo;original."
 
 #. translators: %2$s: authors of book
 #: partials/content-cover-book-info.php:33
 msgid " by %s"
-msgstr ""
+msgstr "par %s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:40
@@ -501,100 +516,107 @@ msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
 msgstr ""
+"Ce livre a été cloné à partir d&rsquo;une source qui n'est plus disponible. "
+"L&rsquo;adresse de la source était%s. Il se peut que ce livre soit différent"
+" de l&rsquo;original."
 
 #: partials/content-cover-book-info.php:61
 msgid "Contributors"
-msgstr ""
+msgstr "Collaborateurs"
 
 #: partials/content-cover-book-info.php:71
 msgid "Subject"
-msgstr ""
+msgstr "Sujet"
 
 #: partials/content-cover-book-info.php:85
 #: partials/content-cover-metadata.php:63
 msgid "Click for more information"
-msgstr ""
+msgstr "Cliquer pour plus d&rsquo;information"
 
 #: partials/content-single.php:42 partials/content-single-legacy.php:41
 msgid "Previous Page"
-msgstr ""
+msgstr "Page précédente"
 
 #: partials/content-single.php:53 partials/content-single-legacy.php:52
 msgid "Next Page"
-msgstr ""
+msgstr "Page suivante"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr ""
+msgstr "Métadonnées"
 
 #: partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr ""
+msgstr "Aucun résultat"
 
 #: partials/content-none.php:3
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Désolé, votre recherche n&rsquo;a donné aucun résultat. Veuillez réessayer "
+"avec des mots-clés différents."
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr ""
+msgstr "Titre du livre"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr ""
+msgstr "Sous-titre"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr ""
+msgstr "Page couverture de %s"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr ""
+msgstr "Télécharger ce livre"
 
 #: partials/content-cover-book-header.php:109
 msgid "Read Book"
-msgstr ""
+msgstr "Lire le livre"
 
 #: partials/content-cover-book-header.php:116
 msgid "Buy Book"
-msgstr ""
+msgstr "Acheter le livre"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr ""
+msgstr "Ce chapitre est adapté de %1$s dans %2$spar %3$s."
 
 #: partials/content-difftool.php:66
 msgid ""
 "Note: The comparison below is between this text and the <strong>current "
 "version</strong> of the text from which it was adapted."
 msgstr ""
+"Note&nbsp;: la comparaison ci-dessous est entre ce texte et la "
+"<strong>version actuelle</strong> du texte à partir duquel il a été adapté."
 
 #: partials/content-difftool.php:67
 msgid "additions"
-msgstr ""
+msgstr "ajouts"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
-msgstr ""
+msgstr "suppressions"
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr ""
+msgstr "Rechercher dans le livre&nbsp;:"
 
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr ""
+msgstr "Rechercher dans le livre &hellip;"
 
 #: searchform.php:8
 msgid "Search"
@@ -602,4 +624,4 @@ msgstr "Chercher"
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr "A propos du livre"
+msgstr "À propos du livre"

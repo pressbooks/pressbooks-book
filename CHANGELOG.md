@@ -8,6 +8,7 @@
 
 ### Minor Changes
 
+* Book download tracking: #526 
 * Improve display of source comparison tool for cloned books: #512, #514
 * Disable scroll animation for webbook anchors (#488): #511
 * Only load Hypothesis pane resize script when Hypothesis is enabled (#505): #509
@@ -18,6 +19,7 @@
 
 ### Buckram Changes
 
+* Update pressbooks-build-tools to 1.4.4: #526 
 * Update to [Buckram 1.4.0](https://github.com/pressbooks/pressbooks-book/blob/af3c81f/packages/buckram/CHANGELOG.md#140): af3c81f
 
 ## 2.7.3
