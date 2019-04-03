@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.8.1
+
+### Patches
+
+* Add 'if-map-get' to dt-color variable to fix parse error (#527): #528
+
 ## 2.8.0
 
 ### Upgrade Notice
