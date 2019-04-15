@@ -80,6 +80,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			heading.setAttribute( 'data-collapsed', expanded );
 			// Switch the content's visibility
 			wrapper.hidden = expanded;
+			// Trigger H5P resize
+			window.dispatchEvent( new Event( 'resize' ) );
 		};
 	} );
 } );
