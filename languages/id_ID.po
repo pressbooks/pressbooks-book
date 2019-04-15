@@ -6,12 +6,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/<theme>/\n"
 "POT-Creation-Date: 2019-04-15T20:23:04+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Language-Team: Swedish (Sweden) (https://www.transifex.com/pressbooks/teams/9194/sv_SE/)\n"
+"Language-Team: Indonesian (Indonesia) (https://www.transifex.com/pressbooks/teams/9194/id_ID/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv_SE\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: id_ID\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: pressbooks-book\n"
 "X-Generator: WP-CLI 2.0.1\n"
 
@@ -236,37 +236,31 @@ msgstr ""
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:407
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:408
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:409
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:410
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:411
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] ""
-msgstr[1] ""
 
 #: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
 #: partials/content-cover-book-info.php:66 single.php:32

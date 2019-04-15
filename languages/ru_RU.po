@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.0\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-02-27T15:35:35+00:00\n"
+"Project-Id-Version: McLuhan 2.8.2\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/<theme>/\n"
+"POT-Creation-Date: 2019-04-15T20:23:04+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/pressbooks/teams/9194/ru/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.1.0\n"
+"X-Generator: WP-CLI 2.0.1\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -43,6 +43,69 @@ msgstr ""
 msgid "https://pressbooks.com"
 msgstr ""
 
+#: 404.php:2
+msgid "Oops! That content can&rsquo;t be found."
+msgstr "Упс! Невозможно найти это содержание."
+
+#: 404.php:3
+msgid "It looks like nothing was found at this location. Try a search?"
+msgstr "Кажется, здесь ничего нет. Попытаться поискать?"
+
+#: comments.php:2
+msgid "Feedback/Errata"
+msgstr "Обратная связь/Список предложенных исправлений"
+
+#: comments.php:6
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Эта публикация защищена паролем. Введите пароль, чтобы увидеть комментарии. "
+
+#: comments.php:36 comments.php:47
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:48
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: comments.php:56
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: comments.php:64
+msgid "Submit"
+msgstr "Отправить"
+
+#. translators: %s: Pressbooks
+#: footer.php:32
+msgid "Powered by %s"
+msgstr ""
+
+#: footer.php:34
+msgid "Open Source"
+msgstr "Общедоступный источник"
+
+#: footer.php:35
+msgid "Open Textbooks"
+msgstr "Общедоступные учебные пособия"
+
+#: footer.php:36
+msgid "Open Book Publishing"
+msgstr "Общедоступная публикация книг"
+
+#: footer.php:37
+msgid "Learn More"
+msgstr "Подробнее"
+
+#: footer.php:41 footer.php:45
+msgid "Pressbooks on Facebook"
+msgstr "Pressbooks на Facebook"
+
+#: footer.php:47 footer.php:51
+msgid "Pressbooks on Twitter"
+msgstr "Pressbooks в Twitter"
+
 #: functions.php:16
 msgid "Dependencies Missing"
 msgstr "Недостаток зависимости данных"
@@ -55,17 +118,31 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr "Невозможно найти установщик Pressbooks."
 
-#: 404.php:2
-msgid "Oops! That content can&rsquo;t be found."
-msgstr "Упс! Невозможно найти это содержание."
+#: header.php:63
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
 
-#: 404.php:3
-msgid "It looks like nothing was found at this location. Try a search?"
-msgstr "Кажется, здесь ничего нет. Попытаться поискать?"
+#. translators: %s: name of network
+#: header.php:82
+msgid "Logo for %s"
+msgstr ""
 
-#: inc/filters/namespace.php:19
-msgid "Private"
-msgstr "Личное"
+#: header.php:93
+msgid "Toggle Menu"
+msgstr "Переключить меню"
+
+#: header.php:106 index.php:14 partials/content-cover-toc.php:3
+msgid "Contents"
+msgstr "Содержание"
+
+#. translators: %s: the title of the book
+#: header.php:115
+msgid "Go to the cover page of %s"
+msgstr ""
+
+#: header.php:119 inc/helpers/namespace.php:206
+msgid "Buy"
+msgstr "Купить"
 
 #: inc/actions/namespace.php:63 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
@@ -98,6 +175,10 @@ msgstr "Включить всплывающее окно с изображени
 #: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
 msgstr "Показать связанные изображения во всплывающем окне"
+
+#: inc/filters/namespace.php:19
+msgid "Private"
+msgstr "Личное"
 
 #: inc/helpers/namespace.php:140
 msgid "Public Domain"
@@ -150,10 +231,6 @@ msgstr "Главная страница"
 msgid "Read"
 msgstr "Читать"
 
-#: inc/helpers/namespace.php:206 header.php:119
-msgid "Buy"
-msgstr "Купить"
-
 #: inc/helpers/namespace.php:213
 msgid "Sign in"
 msgstr "Войти"
@@ -166,8 +243,8 @@ msgstr "Администрирование"
 msgid "Sign out"
 msgstr "Выйти"
 
-#: inc/helpers/namespace.php:406 partials/content-cover-book-info.php:51
-#: partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
+#: partials/content-cover-book-info.php:51
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Автор"
@@ -215,9 +292,8 @@ msgstr[1] "Составители"
 msgstr[2] "Составители"
 msgstr[3] "Составители"
 
-#: inc/helpers/namespace.php:412 single.php:32
-#: partials/content-cover-book-info.php:66
-#: partials/content-cover-book-header.php:101
+#: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
+#: partials/content-cover-book-info.php:66 single.php:32
 msgid "License"
 msgstr "Лицензия"
 
@@ -295,64 +371,25 @@ msgstr "Автоматическое уведомление:"
 msgid "Hello,"
 msgstr "Здравствуйте,"
 
-#: index.php:14 header.php:106 partials/content-cover-toc.php:3
-msgid "Contents"
-msgstr "Содержание"
-
 #: index.php:18
 msgid "This book does not contain any public content."
 msgstr "Эта книга не имеет какого-либо доступного публично содержания."
 
-#: comments.php:2
-msgid "Feedback/Errata"
-msgstr "Обратная связь/Список предложенных исправлений"
+#: page-about.php:5
+msgid "About The Book"
+msgstr "О книге"
 
-#: comments.php:6
-msgid ""
-"This post is password protected. Enter the password to view any comments."
-msgstr ""
-"Эта публикация защищена паролем. Введите пароль, чтобы увидеть комментарии. "
+#: page-about.php:21 page-buy.php:10 page-buy.php:18
+msgid "It's coming!"
+msgstr "В скором времени!"
 
-#: comments.php:36 comments.php:47
-msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr ""
-
-#: comments.php:37 comments.php:48
-msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: comments.php:56
-msgid "Comments are closed."
-msgstr "Комментарии закрыты."
-
-#: comments.php:64
-msgid "Submit"
-msgstr "Отправить"
-
-#. translators: search string
-#: search.php:6
-msgid "Search Results for: %s"
-msgstr ""
-
-#: search.php:18
-msgid "Previous page"
-msgstr "Предыдущая страница"
-
-#: search.php:19
-msgid "Next page"
-msgstr "Следующая страница"
-
-#: search.php:20
-msgid "Paged navigation"
-msgstr "Навигация по странице"
+#: page-authors.php:31
+msgid "Authors"
+msgstr "Авторы"
 
 #: page-buy.php:5
 msgid "Buy the Book"
 msgstr "Купить книгу"
-
-#: page-buy.php:10 page-buy.php:18 page-about.php:21
-msgid "It's coming!"
-msgstr "В скором времени!"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
@@ -394,83 +431,8 @@ msgstr "На других платформах"
 msgid "Purchase here:"
 msgstr "Приобрести здесь:"
 
-#: header.php:63
-msgid "Skip to content"
-msgstr "Перейти к содержанию"
-
-#. translators: %s: name of network
-#: header.php:82
-msgid "Logo for %s"
-msgstr ""
-
-#: header.php:93
-msgid "Toggle Menu"
-msgstr "Переключить меню"
-
-#. translators: %s: the title of the book
-#: header.php:115
-msgid "Go to the cover page of %s"
-msgstr ""
-
-#: private.php:4
-msgid "Access Denied"
-msgstr "В доступе отказано"
-
-#. translators: link to sign in
-#: private.php:10
-msgid ""
-"This book is private, and accessible only to registered users. If you have "
-"an account you can %s."
-msgstr ""
-
-#: private.php:14
-msgid "sign in here"
-msgstr "войти здесь"
-
-#. translators: link to Pressbooks.com
-#: private.php:23
-msgid "You can also set up your own Pressbooks book at %s."
-msgstr ""
-
-#. translators: %s: Pressbooks
-#: footer.php:32
-msgid "Powered by %s"
-msgstr ""
-
-#: footer.php:34
-msgid "Open Source"
-msgstr "Общедоступный источник"
-
-#: footer.php:35
-msgid "Open Textbooks"
-msgstr "Общедоступные учебные пособия"
-
-#: footer.php:36
-msgid "Open Book Publishing"
-msgstr "Общедоступная публикация книг"
-
-#: footer.php:37
-msgid "Learn More"
-msgstr "Подробнее"
-
-#: footer.php:41 footer.php:45
-msgid "Pressbooks on Facebook"
-msgstr "Pressbooks на Facebook"
-
-#: footer.php:47 footer.php:51
-msgid "Pressbooks on Twitter"
-msgstr "Pressbooks в Twitter"
-
-#: single.php:58
-msgid "Share This Book"
-msgstr "Поделиться книгой"
-
-#: page-authors.php:31
-msgid "Authors"
-msgstr "Авторы"
-
-#: page.php:13 partials/content-single.php:69
-#: partials/content-single-legacy.php:69
+#: page.php:13 partials/content-single-legacy.php:69
+#: partials/content-single.php:69
 msgid "Edit"
 msgstr "Редактировать"
 
@@ -478,14 +440,40 @@ msgstr "Редактировать"
 msgid "Pages:"
 msgstr "Страницы:"
 
+#: partials/content-cover-book-header.php:11
+msgid "Book Title"
+msgstr "Заголовок книги"
+
+#: partials/content-cover-book-header.php:14
+msgid "Subtitle"
+msgstr "Подзаголовок"
+
+#. translators: %s: title of book
+#: partials/content-cover-book-header.php:26
+#: partials/content-cover-book-header.php:32
+msgid "Cover image for %s"
+msgstr ""
+
+#: partials/content-cover-book-header.php:54
+msgid "Download this book"
+msgstr "Скачать эту книгу"
+
+#: partials/content-cover-book-header.php:98
+#: partials/content-cover-book-info.php:6
+msgid "Book Description"
+msgstr "Описание книги"
+
+#: partials/content-cover-book-header.php:110
+msgid "Read Book"
+msgstr "Читать книгу"
+
+#: partials/content-cover-book-header.php:117
+msgid "Buy Book"
+msgstr "Купить книгу"
+
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
 msgstr "Информация о книге"
-
-#: partials/content-cover-book-info.php:6
-#: partials/content-cover-book-header.php:97
-msgid "Book Description"
-msgstr "Описание книги"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
@@ -524,14 +512,6 @@ msgstr "Тема"
 msgid "Click for more information"
 msgstr "Нажмите, чтобы получить более подробную информацию"
 
-#: partials/content-single.php:42 partials/content-single-legacy.php:41
-msgid "Previous Page"
-msgstr "Предыдущая страница"
-
-#: partials/content-single.php:53 partials/content-single-legacy.php:52
-msgid "Next Page"
-msgstr "Следующая страница"
-
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
 msgstr "Метаданные"
@@ -539,44 +519,6 @@ msgstr "Метаданные"
 #: partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Заголовок"
-
-#: partials/content-none.php:2
-msgid "Nothing Found"
-msgstr "Ничего не найдено"
-
-#: partials/content-none.php:3
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Извините, но мы не нашли ничего, что совпадало бы с Вашим поисковым "
-"запросом. Пожалуйста, попробуйте ещё раз, используя другие ключевые слова."
-
-#: partials/content-cover-book-header.php:11
-msgid "Book Title"
-msgstr "Заголовок книги"
-
-#: partials/content-cover-book-header.php:14
-msgid "Subtitle"
-msgstr "Подзаголовок"
-
-#. translators: %s: title of book
-#: partials/content-cover-book-header.php:26
-#: partials/content-cover-book-header.php:32
-msgid "Cover image for %s"
-msgstr ""
-
-#: partials/content-cover-book-header.php:54
-msgid "Download this book"
-msgstr "Скачать эту книгу"
-
-#: partials/content-cover-book-header.php:109
-msgid "Read Book"
-msgstr "Читать книгу"
-
-#: partials/content-cover-book-header.php:116
-msgid "Buy Book"
-msgstr "Купить книгу"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
@@ -597,6 +539,63 @@ msgstr "дополнения"
 msgid "deletions"
 msgstr "удаления"
 
+#: partials/content-none.php:2
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: partials/content-none.php:3
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, но мы не нашли ничего, что совпадало бы с Вашим поисковым "
+"запросом. Пожалуйста, попробуйте ещё раз, используя другие ключевые слова."
+
+#: partials/content-single-legacy.php:41 partials/content-single.php:42
+msgid "Previous Page"
+msgstr "Предыдущая страница"
+
+#: partials/content-single-legacy.php:52 partials/content-single.php:53
+msgid "Next Page"
+msgstr "Следующая страница"
+
+#: private.php:4
+msgid "Access Denied"
+msgstr "В доступе отказано"
+
+#. translators: link to sign in
+#: private.php:10
+msgid ""
+"This book is private, and accessible only to registered users. If you have "
+"an account you can %s."
+msgstr ""
+
+#: private.php:14
+msgid "sign in here"
+msgstr "войти здесь"
+
+#. translators: link to Pressbooks.com
+#: private.php:23
+msgid "You can also set up your own Pressbooks book at %s."
+msgstr ""
+
+#. translators: search string
+#: search.php:6
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:18
+msgid "Previous page"
+msgstr "Предыдущая страница"
+
+#: search.php:19
+msgid "Next page"
+msgstr "Следующая страница"
+
+#: search.php:20
+msgid "Paged navigation"
+msgstr "Навигация по странице"
+
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
@@ -611,6 +610,6 @@ msgstr ""
 msgid "Search"
 msgstr "Поиск"
 
-#: page-about.php:5
-msgid "About The Book"
-msgstr "О книге"
+#: single.php:58
+msgid "Share This Book"
+msgstr "Поделиться книгой"

@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.0\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-02-27T15:35:35+00:00\n"
+"Project-Id-Version: McLuhan 2.8.2\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/<theme>/\n"
+"POT-Creation-Date: 2019-04-15T20:23:04+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/pressbooks/teams/9194/es/)\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.1.0\n"
+"X-Generator: WP-CLI 2.0.1\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -44,6 +44,68 @@ msgstr ""
 msgid "https://pressbooks.com"
 msgstr ""
 
+#: 404.php:2
+msgid "Oops! That content can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:3
+msgid "It looks like nothing was found at this location. Try a search?"
+msgstr ""
+
+#: comments.php:2
+msgid "Feedback/Errata"
+msgstr ""
+
+#: comments.php:6
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:36 comments.php:47
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:48
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: comments.php:56
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: comments.php:64
+msgid "Submit"
+msgstr "Enviar"
+
+#. translators: %s: Pressbooks
+#: footer.php:32
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: footer.php:34
+msgid "Open Source"
+msgstr "Open Source"
+
+#: footer.php:35
+msgid "Open Textbooks"
+msgstr "Open Textbooks"
+
+#: footer.php:36
+msgid "Open Book Publishing"
+msgstr "Open Book Publishing"
+
+#: footer.php:37
+msgid "Learn More"
+msgstr "Aprender más"
+
+#: footer.php:41 footer.php:45
+msgid "Pressbooks on Facebook"
+msgstr "Pressbooks en Facebook"
+
+#: footer.php:47 footer.php:51
+msgid "Pressbooks on Twitter"
+msgstr "Pressbooks en Twitter"
+
 #: functions.php:16
 msgid "Dependencies Missing"
 msgstr ""
@@ -56,17 +118,31 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr "No podemos encontrar la instalación de Pressbooks."
 
-#: 404.php:2
-msgid "Oops! That content can&rsquo;t be found."
+#: header.php:63
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#. translators: %s: name of network
+#: header.php:82
+msgid "Logo for %s"
 msgstr ""
 
-#: 404.php:3
-msgid "It looks like nothing was found at this location. Try a search?"
+#: header.php:93
+msgid "Toggle Menu"
 msgstr ""
 
-#: inc/filters/namespace.php:19
-msgid "Private"
-msgstr "Privado"
+#: header.php:106 index.php:14 partials/content-cover-toc.php:3
+msgid "Contents"
+msgstr "Contenidos"
+
+#. translators: %s: the title of the book
+#: header.php:115
+msgid "Go to the cover page of %s"
+msgstr ""
+
+#: header.php:119 inc/helpers/namespace.php:206
+msgid "Buy"
+msgstr "Comprar"
 
 #: inc/actions/namespace.php:63 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
@@ -99,6 +175,10 @@ msgstr ""
 #: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
 msgstr ""
+
+#: inc/filters/namespace.php:19
+msgid "Private"
+msgstr "Privado"
 
 #: inc/helpers/namespace.php:140
 msgid "Public Domain"
@@ -144,10 +224,6 @@ msgstr ""
 msgid "Read"
 msgstr "Leer"
 
-#: inc/helpers/namespace.php:206 header.php:119
-msgid "Buy"
-msgstr "Comprar"
-
 #: inc/helpers/namespace.php:213
 msgid "Sign in"
 msgstr ""
@@ -160,8 +236,8 @@ msgstr "Administración"
 msgid "Sign out"
 msgstr "Salir"
 
-#: inc/helpers/namespace.php:406 partials/content-cover-book-info.php:51
-#: partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
+#: partials/content-cover-book-info.php:51
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Autores"
@@ -197,9 +273,8 @@ msgid_plural "Contributors"
 msgstr[0] "Contribuidores"
 msgstr[1] "Contribuidores"
 
-#: inc/helpers/namespace.php:412 single.php:32
-#: partials/content-cover-book-info.php:66
-#: partials/content-cover-book-header.php:101
+#: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
+#: partials/content-cover-book-info.php:66 single.php:32
 msgid "License"
 msgstr "Licencia"
 
@@ -277,63 +352,25 @@ msgstr ""
 msgid "Hello,"
 msgstr "Hola,"
 
-#: index.php:14 header.php:106 partials/content-cover-toc.php:3
-msgid "Contents"
-msgstr "Contenidos"
-
 #: index.php:18
 msgid "This book does not contain any public content."
 msgstr ""
 
-#: comments.php:2
-msgid "Feedback/Errata"
+#: page-about.php:5
+msgid "About The Book"
+msgstr "Acerca del libro"
+
+#: page-about.php:21 page-buy.php:10 page-buy.php:18
+msgid "It's coming!"
 msgstr ""
 
-#: comments.php:6
-msgid ""
-"This post is password protected. Enter the password to view any comments."
-msgstr ""
-
-#: comments.php:36 comments.php:47
-msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr ""
-
-#: comments.php:37 comments.php:48
-msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: comments.php:56
-msgid "Comments are closed."
-msgstr "Los comentarios están cerrados."
-
-#: comments.php:64
-msgid "Submit"
-msgstr "Enviar"
-
-#. translators: search string
-#: search.php:6
-msgid "Search Results for: %s"
-msgstr ""
-
-#: search.php:18
-msgid "Previous page"
-msgstr "Página anterior"
-
-#: search.php:19
-msgid "Next page"
-msgstr "Próxima página"
-
-#: search.php:20
-msgid "Paged navigation"
-msgstr ""
+#: page-authors.php:31
+msgid "Authors"
+msgstr "Autores"
 
 #: page-buy.php:5
 msgid "Buy the Book"
 msgstr "Comprar el libro"
-
-#: page-buy.php:10 page-buy.php:18 page-about.php:21
-msgid "It's coming!"
-msgstr ""
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
@@ -375,83 +412,8 @@ msgstr ""
 msgid "Purchase here:"
 msgstr ""
 
-#: header.php:63
-msgid "Skip to content"
-msgstr "Saltar al contenido"
-
-#. translators: %s: name of network
-#: header.php:82
-msgid "Logo for %s"
-msgstr ""
-
-#: header.php:93
-msgid "Toggle Menu"
-msgstr ""
-
-#. translators: %s: the title of the book
-#: header.php:115
-msgid "Go to the cover page of %s"
-msgstr ""
-
-#: private.php:4
-msgid "Access Denied"
-msgstr "Acceso Denegado"
-
-#. translators: link to sign in
-#: private.php:10
-msgid ""
-"This book is private, and accessible only to registered users. If you have "
-"an account you can %s."
-msgstr ""
-
-#: private.php:14
-msgid "sign in here"
-msgstr ""
-
-#. translators: link to Pressbooks.com
-#: private.php:23
-msgid "You can also set up your own Pressbooks book at %s."
-msgstr ""
-
-#. translators: %s: Pressbooks
-#: footer.php:32
-msgid "Powered by %s"
-msgstr "Powered by %s"
-
-#: footer.php:34
-msgid "Open Source"
-msgstr "Open Source"
-
-#: footer.php:35
-msgid "Open Textbooks"
-msgstr "Open Textbooks"
-
-#: footer.php:36
-msgid "Open Book Publishing"
-msgstr "Open Book Publishing"
-
-#: footer.php:37
-msgid "Learn More"
-msgstr "Aprender más"
-
-#: footer.php:41 footer.php:45
-msgid "Pressbooks on Facebook"
-msgstr "Pressbooks en Facebook"
-
-#: footer.php:47 footer.php:51
-msgid "Pressbooks on Twitter"
-msgstr "Pressbooks en Twitter"
-
-#: single.php:58
-msgid "Share This Book"
-msgstr "Compartir este libro"
-
-#: page-authors.php:31
-msgid "Authors"
-msgstr "Autores"
-
-#: page.php:13 partials/content-single.php:69
-#: partials/content-single-legacy.php:69
+#: page.php:13 partials/content-single-legacy.php:69
+#: partials/content-single.php:69
 msgid "Edit"
 msgstr "Editar"
 
@@ -459,14 +421,40 @@ msgstr "Editar"
 msgid "Pages:"
 msgstr "Páginas:"
 
+#: partials/content-cover-book-header.php:11
+msgid "Book Title"
+msgstr "Título del libro"
+
+#: partials/content-cover-book-header.php:14
+msgid "Subtitle"
+msgstr "Subtítulo"
+
+#. translators: %s: title of book
+#: partials/content-cover-book-header.php:26
+#: partials/content-cover-book-header.php:32
+msgid "Cover image for %s"
+msgstr ""
+
+#: partials/content-cover-book-header.php:54
+msgid "Download this book"
+msgstr "Descargar el libro"
+
+#: partials/content-cover-book-header.php:98
+#: partials/content-cover-book-info.php:6
+msgid "Book Description"
+msgstr "Descripción del libro"
+
+#: partials/content-cover-book-header.php:110
+msgid "Read Book"
+msgstr "Leer el libro"
+
+#: partials/content-cover-book-header.php:117
+msgid "Buy Book"
+msgstr "Comprar el libro"
+
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
 msgstr "Información del libro"
-
-#: partials/content-cover-book-info.php:6
-#: partials/content-cover-book-header.php:97
-msgid "Book Description"
-msgstr "Descripción del libro"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
@@ -505,14 +493,6 @@ msgstr ""
 msgid "Click for more information"
 msgstr ""
 
-#: partials/content-single.php:42 partials/content-single-legacy.php:41
-msgid "Previous Page"
-msgstr "Página anterior"
-
-#: partials/content-single.php:53 partials/content-single-legacy.php:52
-msgid "Next Page"
-msgstr "Próxima página"
-
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
 msgstr "Metadatos"
@@ -520,42 +500,6 @@ msgstr "Metadatos"
 #: partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Título"
-
-#: partials/content-none.php:2
-msgid "Nothing Found"
-msgstr ""
-
-#: partials/content-none.php:3
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: partials/content-cover-book-header.php:11
-msgid "Book Title"
-msgstr "Título del libro"
-
-#: partials/content-cover-book-header.php:14
-msgid "Subtitle"
-msgstr "Subtítulo"
-
-#. translators: %s: title of book
-#: partials/content-cover-book-header.php:26
-#: partials/content-cover-book-header.php:32
-msgid "Cover image for %s"
-msgstr ""
-
-#: partials/content-cover-book-header.php:54
-msgid "Download this book"
-msgstr "Descargar el libro"
-
-#: partials/content-cover-book-header.php:109
-msgid "Read Book"
-msgstr "Leer el libro"
-
-#: partials/content-cover-book-header.php:116
-msgid "Buy Book"
-msgstr "Comprar el libro"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
@@ -576,6 +520,61 @@ msgstr ""
 msgid "deletions"
 msgstr ""
 
+#: partials/content-none.php:2
+msgid "Nothing Found"
+msgstr ""
+
+#: partials/content-none.php:3
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partials/content-single-legacy.php:41 partials/content-single.php:42
+msgid "Previous Page"
+msgstr "Página anterior"
+
+#: partials/content-single-legacy.php:52 partials/content-single.php:53
+msgid "Next Page"
+msgstr "Próxima página"
+
+#: private.php:4
+msgid "Access Denied"
+msgstr "Acceso Denegado"
+
+#. translators: link to sign in
+#: private.php:10
+msgid ""
+"This book is private, and accessible only to registered users. If you have "
+"an account you can %s."
+msgstr ""
+
+#: private.php:14
+msgid "sign in here"
+msgstr ""
+
+#. translators: link to Pressbooks.com
+#: private.php:23
+msgid "You can also set up your own Pressbooks book at %s."
+msgstr ""
+
+#. translators: search string
+#: search.php:6
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:18
+msgid "Previous page"
+msgstr "Página anterior"
+
+#: search.php:19
+msgid "Next page"
+msgstr "Próxima página"
+
+#: search.php:20
+msgid "Paged navigation"
+msgstr ""
+
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
@@ -590,6 +589,6 @@ msgstr ""
 msgid "Search"
 msgstr "Buscar"
 
-#: page-about.php:5
-msgid "About The Book"
-msgstr "Acerca del libro"
+#: single.php:58
+msgid "Share This Book"
+msgstr "Compartir este libro"
