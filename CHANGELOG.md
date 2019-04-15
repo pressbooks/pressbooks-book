@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.8.2
+
+### Patches
+
+* Trigger a window resize to fix H5P display issue (#492): #531
+
 ## 2.8.1
 
 ### Patches
