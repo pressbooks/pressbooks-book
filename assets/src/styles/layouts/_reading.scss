@@ -109,6 +109,7 @@ h1.reading-header__title {
   @media #{$breakpoint-large} {
     display: flex;
     flex-direction: row;
+    z-index: 1;
   }
 }
 
