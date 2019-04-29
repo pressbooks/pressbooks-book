@@ -234,6 +234,7 @@ function add_lightbox_setting( $_page, $_section ) {
  * @return null
  */
 function render_lightbox_setting_field( $args ) {
+	unset( $args['label_for'], $args['class'] );
 	$options = get_option( 'pressbooks_theme_options_web' );
 	Options::renderCheckbox(
 		[
