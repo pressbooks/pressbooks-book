@@ -31,18 +31,16 @@ echo $multipage ? ' footer--multipage' : '';
 				<?php /* translators: %s: Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li><a href="https://pressbooks.org/"><?php _e( 'Open Source', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="https://pressbooks.education/"><?php _e( 'Open Textbooks', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="https://pressbooks.com/"><?php _e( 'Open Book Publishing', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="https://pressbooks.com/about/"><?php _e( 'Learn More', 'pressbooks-book' ); ?></a> </li>
+					<li><a href="https://pressbooks.com/help-and-support/"><?php _e( 'Guides and Tutorials', 'pressbooks-book' ); ?></a> |</li>
+					<li><a href="../#contact"><?php _e( 'Contact', 'pressbooks-book' ); ?></a> </li>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a class="facebook" href="https://facebook.com/pressbooks2" title="<?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?>">
+				<a class="facebook" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?>">
 					<svg class="icon--svg">
 						<use xlink:href="#facebook" />
 					</svg>
-					<span class="screen-reader-text"><?php _e( 'Pressbooks on Facebook', 'pressbooks-book' ); ?></span>
+					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
 				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>">
 					<svg class="icon--svg">
