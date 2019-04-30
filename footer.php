@@ -37,9 +37,11 @@ echo $multipage ? ' footer--multipage' : '';
 			</div>
 			<div class="footer__pressbooks__social">
 				<a class="facebook" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?>">
-					<svg class="icon--svg">
+					<!-- placeholder for YT icon -->
+					<span>YT</span>
+					<!-- <svg class="icon--svg">
 						<use xlink:href="#facebook" />
-					</svg>
+					</svg> -->
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
 				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>">
