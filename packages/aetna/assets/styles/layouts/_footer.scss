@@ -125,6 +125,11 @@
       width: rem(32);
     }
 
+    .youtube-link{
+      height: rem(32);
+      width: auto;
+    }
+
     @media (min-width: $medium) {
       > .icon--svg {
         height: rem(24);
@@ -157,6 +162,8 @@
         height: rem(32);
         width: rem(32);
       }
+
+
     }
   }
 

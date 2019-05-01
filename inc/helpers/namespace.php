@@ -172,7 +172,7 @@ function license_to_text( $license ) {
  */
 function share_icons() {
 	return sprintf(
-		'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-via="%3$s"><svg class="icon--svg"><use xlink:href="#twitter" /></svg></a><a class="sharer" data-sharer="facebook" data-title="%1$s" data-url="%2$s"><svg class="icon--svg"><use xlink:href="#facebook" /></svg></a>',
+		'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-via="%3$s"><svg class="icon--svg"><use xlink:href="#twitter" /></svg></a>',
 		__( 'Check out this great book on Pressbooks.', 'pressbooks-book' ),
 		get_the_permalink(),
 		'pressbooks'
