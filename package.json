@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"lerna": "^3.13.1",
-		"pressbooks-build-tools": "^1.4.2"
+		"pressbooks-build-tools": "^1.4.3"
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
