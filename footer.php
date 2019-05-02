@@ -32,7 +32,7 @@ echo $multipage ? ' footer--multipage' : '';
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
 					<li><a href="https://pressbooks.com/help-and-support/"><?php _e( 'Guides and Tutorials', 'pressbooks-book' ); ?></a> |</li>
-					<li><a href="<?php echo network_home_url('/#contacts'); ?>"><?php _e( 'Contact', 'pressbooks-book' ); ?></a> </li>
+					<li><a href="<?php echo network_home_url( '/#contact' ); ?>"><?php _e( 'Contact', 'pressbooks-book' ); ?></a> </li>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
