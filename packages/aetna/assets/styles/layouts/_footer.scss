@@ -125,10 +125,24 @@
       width: rem(32);
     }
 
+    > .youtube-link{
+      height: 2.2em;
+      width: auto;
+      padding-bottom: .6em;
+      margin-right: .2em;
+    }
+
     @media (min-width: $medium) {
       > .icon--svg {
         height: rem(24);
         width: rem(24);
+      }
+
+      > .youtube-link{
+        height: 1.9em;
+        width: auto;
+        padding-bottom: .7em;
+        margin-right: .2em;
       }
     }
   }
@@ -157,6 +171,8 @@
         height: rem(32);
         width: rem(32);
       }
+
+
     }
   }
 
