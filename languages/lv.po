@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/<theme>/\n"
-"POT-Creation-Date: 2019-04-15T20:23:04+00:00\n"
+"Project-Id-Version: McLuhan 2.8.4\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
+"POT-Creation-Date: 2019-05-13T16:26:24+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
@@ -84,26 +84,18 @@ msgid "Powered by %s"
 msgstr ""
 
 #: footer.php:34
-msgid "Open Source"
-msgstr "Atvērts avots"
+msgid "Guides and Tutorials"
+msgstr ""
 
 #: footer.php:35
-msgid "Open Textbooks"
-msgstr "Atvērtas mācību grāmatas"
+msgid "Contact"
+msgstr ""
 
-#: footer.php:36
-msgid "Open Book Publishing"
-msgstr "Atvērta grāmatu publicēšana"
+#: footer.php:39 footer.php:41
+msgid "Pressbooks on YouTube"
+msgstr ""
 
-#: footer.php:37
-msgid "Learn More"
-msgstr "Uzzināt vairāk"
-
-#: footer.php:41 footer.php:45
-msgid "Pressbooks on Facebook"
-msgstr "Pressbooks profils Facebook'ā"
-
-#: footer.php:47 footer.php:51
+#: footer.php:43 footer.php:47
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks profils Twitter'ā"
 
