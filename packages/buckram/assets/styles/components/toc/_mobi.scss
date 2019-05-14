@@ -3,6 +3,14 @@
 ////
 
 @if $type == 'epub' {
+
+  @media amzn-kf8 {
+    #toc .toc-chapter-title {
+      /* CSS property in content is not supported. Table of contents cannot be clicked. */
+      position: static;
+    }
+  }
+
   @media amzn-mobi {
     #toc {
       font-style: normal;
@@ -15,6 +23,11 @@
       font-size: 1em;
       font-style: normal;
       font-weight: normal;
+    }
+
+    #toc .toc-chapter-title {
+      /* CSS property in content is not supported. Table of contents cannot be clicked. */
+      position: static;
     }
 
     span.chapter-author {
