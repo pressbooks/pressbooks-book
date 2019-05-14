@@ -41,7 +41,7 @@ Then, from the GitHub Updater interface, navigate to the "Install Theme" tab. En
 
 ## Changelog
 
-### 2.8.4
+### 2.8.5
 
-* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.8.4
+* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.8.5
 * Full release history available at: https://github.com/pressbooks/pressbooks-book/releases
