@@ -12,6 +12,7 @@
 
 - Fix `td` border variable functionality: [#504](https://github.com/pressbooks/pressbooks-book/pull/504)
 - Remove running content from blank pages on post introduction front matter: [#522](https://github.com/pressbooks/pressbooks-book/pull/522)
+- Fix: MOBI Table of Contents cannot be clicked: [#543](https://github.com/pressbooks/pressbooks-book/pull/543)
 
 ## 1.3.3
 
