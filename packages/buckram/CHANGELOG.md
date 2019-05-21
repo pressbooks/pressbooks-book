@@ -7,6 +7,7 @@
 - Add `$section-author-text-indent` variable: [#501](https://github.com/pressbooks/pressbooks-book/pull/501)
 - Add color variable for `<dt>` elements: [#502](https://github.com/pressbooks/pressbooks-book/pull/502)
 - Add `$title-publisher-float` and `$title-publisher-city-float` variables: [#503](https://github.com/pressbooks/pressbooks-book/pull/503)
+- Add `$footote-font-family` variable and update `$footnote-font-weight`: [#544](https://github.com/pressbooks/pressbooks-book/pull/544)
 
 ### Patches
 
@@ -14,6 +15,7 @@
 - Remove running content from blank pages on post introduction front matter: [#522](https://github.com/pressbooks/pressbooks-book/pull/522)
 - Add 'if-map-get' to dt-color variable to fix parse error: [#528](https://github.com/pressbooks/pressbooks-book/pull/528)
 - Fix: MOBI Table of Contents cannot be clicked: [#543](https://github.com/pressbooks/pressbooks-book/pull/543)
+- Fix: Footnotes in headers inherit header styles: [#544](https://github.com/pressbooks/pressbooks-book/pull/544)
 
 ## 1.3.3
 

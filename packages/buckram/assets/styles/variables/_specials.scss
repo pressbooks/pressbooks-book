@@ -94,21 +94,27 @@ $footnote-padding-top: 1em !default;
 /// @type String
 $footnote-padding-left: 0 !default;
 
+/// Font family for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-font-family: $body-font-family !default;
+
 /// Font size for footnote for elements with a class of `footnote`.
-/// @type String | map
+/// @type String | Map
 $footnote-font-size: (
   epub: 0.9em,
   prince: 0.8em,
   web: 0.9em
 ) !default;
 
+/// Font weight for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-font-weight: $body-font-weight !default;
+
 /// Font style for footnote.
 /// @type String
 $footnote-font-style: normal !default;
-
-/// Font weight for footnote.
-/// @type String
-$footnote-font-weight: normal !default;
 
 /// Line height for footnote.
 /// @type String
