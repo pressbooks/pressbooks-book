@@ -15,7 +15,7 @@
 - Remove running content from blank pages on post introduction front matter: [#522](https://github.com/pressbooks/pressbooks-book/pull/522)
 - Add 'if-map-get' to dt-color variable to fix parse error: [#528](https://github.com/pressbooks/pressbooks-book/pull/528)
 - Fix: MOBI Table of Contents cannot be clicked: [#543](https://github.com/pressbooks/pressbooks-book/pull/543)
-- Fix: Footnotes in headers inherit header styles: [#544](https://github.com/pressbooks/pressbooks-book/pull/544) [#546](https://github.com/pressbooks/pressbooks-book/pull/546)
+- Fix: Footnotes in headers inherit header styles: [#544](https://github.com/pressbooks/pressbooks-book/pull/544) [#546](https://github.com/pressbooks/pressbooks-book/pull/546) [#547](https://github.com/pressbooks/pressbooks-book/pull/547)
 
 ## 1.3.3
 
