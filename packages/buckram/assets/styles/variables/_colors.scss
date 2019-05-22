@@ -118,6 +118,10 @@ $hr-break-symbols-border-top-color: $color-3 !default;
 /// @type String
 /// @since 1.4.0
 $dt-color: $color-3 !default;
+/// Color for footnotes on elements with class of`.footnote`.
+/// @type String
+/// @since 1.4.0
+$footnote-color: $color-1 !default;
 
 //TITLE PAGE(S) COLOR
 
