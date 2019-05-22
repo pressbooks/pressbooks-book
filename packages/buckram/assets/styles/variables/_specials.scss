@@ -129,6 +129,21 @@ $footnote-indent: 0 !default;
 /// @since 1.2.0
 $footnote-align: (epub: left, prince: left, web: left) !default;
 
+/// Text transform for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-text-transform: (epub: none, prince: none, web: none) !default;
+
+/// Letter spacing for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-letter-spacing: (epub: normal, prince: normal, web: normal) !default;
+
+/// Word spacing for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-word-spacing: (epub: normal, prince: normal, web: normal) !default;
+
 /// Top Margin for footnote blockquote for elements with a class of `fn-blockquote`.
 /// @type String
 $footnote-blockquote-margin-top: 0.5em !default;
