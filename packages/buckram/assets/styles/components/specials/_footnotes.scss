@@ -30,6 +30,7 @@
     font-family: if-map-get($footnote-font-family, $type);
     font-size: if-map-get($footnote-font-size, $type);
     font-weight: if-map-get($footnote-font-weight, $type);
+    font-style: $footnote-font-style;
     letter-spacing: if-map-get($footnote-letter-spacing, $type);
     word-spacing: if-map-get($footnote-word-spacing, $type);
     color: if-map-get($footnote-color, $type);

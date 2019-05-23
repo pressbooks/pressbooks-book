@@ -49,6 +49,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 						$id,
 						$name
 					);
+					$subsection_output = strip_shortcodes( $subsection_output );
 				}
 				$subsection_output .= '</ol>';
 			}
