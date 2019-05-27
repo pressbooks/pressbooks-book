@@ -1,6 +1,6 @@
 {
   "name": "aetna",
-  "version": "2.0.0-alpha.0",
+  "version": "1.0.0-alpha.26",
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
