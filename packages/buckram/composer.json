@@ -3,7 +3,6 @@
 	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
 	"license": "GPL-3.0-or-later",
 	"require-dev": {
-		"leafo/scssphp": "^0.7.5"
 	},
 	"scripts": {
 		"test": [
@@ -13,5 +12,8 @@
 			"vendor/bin/pscss tests/source/styles/prince-toc-center.scss > tests/output/css/prince-toc-center.css",
 			"vendor/bin/pscss tests/source/styles/web.scss > tests/output/css/web.css"
 		]
+	},
+	"require": {
+		"leafo/scssphp": "^0.8.2"
 	}
 }
