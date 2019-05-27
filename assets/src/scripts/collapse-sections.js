@@ -3,11 +3,32 @@
  */
 
 document.addEventListener( 'DOMContentLoaded', function () {
+
+	// ### Helper functions:
+
+	/**
+	 * @param {string} url
+	 * @returns {string}
+	 */
+	function url_domain( url ) {
+		const matches = url.match( /^https?:\/\/([^/?#]+)(?:[/?#]|$)/i );
+		const domain = matches && matches[ 1 ];  // domain will be null if no match is found
+		if ( typeof domain === 'string' || domain instanceof String ) {
+			return domain;
+		} else {
+			return '';
+		}
+	}
+
+	// ### Show/hide code:
+
 	// Get all the headings
 	const sectionHeadingEl = 'h1';
 	const headings = document.querySelectorAll(
 		`#content section ${sectionHeadingEl}:not(.entry-title)`
 	);
+	// Collapsed Iframes
+	let collapsedIframesHaveBeenUnfurled = false;
 
 	Array.prototype.forEach.call( headings, heading => {
 		// Give each <h1> a toggle button child
@@ -82,6 +103,18 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			wrapper.hidden = expanded;
 			// Trigger H5P resize
 			window.dispatchEvent( new Event( 'resize' ) );
+			// Unfurl collapsed iframes
+			if ( ! expanded && ! collapsedIframesHaveBeenUnfurled  ) {
+				const collapsedIframes = wrapper.querySelectorAll( 'iframe' );
+				Array.prototype.forEach.call( collapsedIframes, iframe => {
+					// Hack: Reload broken PHeT Iframes
+					// @see https://github.com/phetsims/tasks/issues/1002
+					if ( url_domain( iframe.src ).includes( 'phet.colorado.edu' ) ) {
+						iframe.src = iframe.src; // eslint-disable-line
+					}
+				} );
+				collapsedIframesHaveBeenUnfurled = true;
+			}
 		};
 	} );
 } );
