@@ -1,13 +1,13 @@
 {
   "name": "buckram",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "build": "composer install && composer test",
     "diff": "npm run -s build && mocha",
-    "docs": "node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
+    "docs": "cross-env NODE_ENV=development node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
     "lint": "npm run -s lint:styles",
-    "lint:styles": "node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
+    "lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
     "test": "npm run -s lint && npm run -s build"
   },
   "repository": {
@@ -29,9 +29,9 @@
     "mocha": "^5.0.0",
     "pixelmatch": "^4.0.2",
     "polyserve": "^0.27.15",
-    "pressbooks-build-tools": "^1.3.3",
-    "puppeteer": "^1.12.2",
-    "sassdoc": "^2.5.0",
+    "pressbooks-build-tools": "^1.4.3",
+    "puppeteer": "^1.17.0",
+    "sassdoc": "^2.7.0",
     "type-detect": "^4.0.8"
   },
   "eslintConfig": {
