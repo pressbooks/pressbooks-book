@@ -330,7 +330,7 @@
       color: if-map-get($toc-front-matter-author-color, $type);
     }
 
-    .part {
+    .part a {
       color: if-map-get($toc-part-title-color, $type);
     }
 
