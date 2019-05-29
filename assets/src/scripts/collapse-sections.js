@@ -27,8 +27,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	const headings = document.querySelectorAll(
 		`#content section ${sectionHeadingEl}:not(.entry-title)`
 	);
-	// Collapsed Iframes
-	let collapsedIframesHaveBeenUnfurled = false;
+
+	console.log( headings );
 
 	Array.prototype.forEach.call( headings, heading => {
 		// Give each <h1> a toggle button child
@@ -42,6 +42,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		  </svg>
 		</button>`;
 		heading.setAttribute( 'data-collapsed', 'true' );
+
+		// Add an attribute to check if collapsed
+		// container has been opened once
+		// heading.setAttribute( 'data-openedOnce', false );
 
 		// Function to create a node list
 		// of the content between this <h1> and the next
@@ -83,6 +87,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		// Assign the button
 		let btn = heading.querySelector( 'button' );
 
+		console.log( heading.dataset.openedonce, 'initial open' );
+
 		// If there's a URL hash linking to an anchor in this section, open it.
 		if ( document.location.hash && document.location.hash !== '#' ) {
 			if ( wrapper.querySelector( document.location.hash ) ) {
@@ -92,29 +98,35 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			}
 		}
 
+		console.log( heading.hasAttribute( 'data-openedonce' ) );
+
 		btn.onclick = () => {
 			// Cast the state as a boolean
 			let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
-
 			// Switch the state
 			btn.setAttribute( 'aria-expanded', ! expanded );
 			heading.setAttribute( 'data-collapsed', expanded );
+			// Set the openedOnce data attribute to true only once
+			heading.setAttribute( 'data-openedonce', true );
 			// Switch the content's visibility
 			wrapper.hidden = expanded;
 			// Trigger H5P resize
 			window.dispatchEvent( new Event( 'resize' ) );
 			// Unfurl collapsed iframes
-			if ( ! expanded && ! collapsedIframesHaveBeenUnfurled  ) {
+			console.log( typeof heading.dataset.openedonce, 'initial open on click' );
+
+			if ( ! expanded && heading.hasAttribute( 'data-openedonce' ) ) {
+				console.log( 'Im in the right collapsed section' );
 				const collapsedIframes = wrapper.querySelectorAll( 'iframe' );
 				Array.prototype.forEach.call( collapsedIframes, iframe => {
-					// Hack: Reload broken PHeT Iframes
-					// @see https://github.com/phetsims/tasks/issues/1002
+				// Hack: Reload broken PHeT Iframes
+				// @see https://github.com/phetsims/tasks/issues/1002
 					if ( url_domain( iframe.src ).includes( 'phet.colorado.edu' ) ) {
-						iframe.src = iframe.src; // eslint-disable-line
+					iframe.src = iframe.src; // eslint-disable-line
 					}
 				} );
-				collapsedIframesHaveBeenUnfurled = true;
 			}
+
 		};
 	} );
 } );
