@@ -6,6 +6,9 @@
 
 - TODO
 
+### Patches
+- Fix color variable for Table of Contents part title: [#559](https://github.com/pressbooks/pressbooks-book/pull/559)
+
 ## 1.4.0
 
 ### Minor Changes
