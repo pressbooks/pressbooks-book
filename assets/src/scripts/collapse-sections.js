@@ -27,8 +27,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	const headings = document.querySelectorAll(
 		`#content section ${sectionHeadingEl}:not(.entry-title)`
 	);
-	// Collapsed Iframes
-	let collapsedIframesHaveBeenUnfurled = false;
 
 	Array.prototype.forEach.call( headings, heading => {
 		// Give each <h1> a toggle button child
@@ -95,7 +93,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		btn.onclick = () => {
 			// Cast the state as a boolean
 			let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
-
 			// Switch the state
 			btn.setAttribute( 'aria-expanded', ! expanded );
 			heading.setAttribute( 'data-collapsed', expanded );
@@ -104,17 +101,20 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			// Trigger H5P resize
 			window.dispatchEvent( new Event( 'resize' ) );
 			// Unfurl collapsed iframes
-			if ( ! expanded && ! collapsedIframesHaveBeenUnfurled  ) {
+			if ( ! expanded && ! heading.hasAttribute( 'data-unfurled' ) ) {
 				const collapsedIframes = wrapper.querySelectorAll( 'iframe' );
 				Array.prototype.forEach.call( collapsedIframes, iframe => {
-					// Hack: Reload broken PHeT Iframes
-					// @see https://github.com/phetsims/tasks/issues/1002
+				// Hack: Reload broken PHeT Iframes
+				// @see https://github.com/phetsims/tasks/issues/1002
 					if ( url_domain( iframe.src ).includes( 'phet.colorado.edu' ) ) {
-						iframe.src = iframe.src; // eslint-disable-line
+					iframe.src = iframe.src; // eslint-disable-line
 					}
 				} );
-				collapsedIframesHaveBeenUnfurled = true;
 			}
+			// Give heading a data-attribute to show that
+			// collapsed section has been unfurled
+			heading.setAttribute( 'data-unfurled', true );
+
 		};
 	} );
 } );
