@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.6\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbook-book/\n"
-"POT-Creation-Date: 2019-05-28T16:41:10+00:00\n"
+"Project-Id-Version: McLuhan 2.8.7\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
+"POT-Creation-Date: 2019-06-11T15:31:22+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
@@ -87,19 +87,19 @@ msgstr "Einreichen"
 #. translators: %s: Pressbooks
 #: footer.php:32
 msgid "Powered by %s"
-msgstr "Unterstützt von %s"
+msgstr "Mit %s erstellt"
 
 #: footer.php:34
 msgid "Guides and Tutorials"
-msgstr ""
+msgstr "Hilfestellungen und Tutorials"
 
 #: footer.php:35
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: footer.php:39 footer.php:41
 msgid "Pressbooks on YouTube"
-msgstr ""
+msgstr "Pressbooks auf YouTube"
 
 #: footer.php:43 footer.php:47
 msgid "Pressbooks on Twitter"
@@ -314,13 +314,13 @@ msgstr "Hashtag"
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
 msgid "Previous: %s"
-msgstr "Vorhergehende: %s "
+msgstr "Zurück zu: %s "
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
 msgid "Next: %s"
-msgstr "Nächte: %s"
+msgstr "Weiter zu: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
