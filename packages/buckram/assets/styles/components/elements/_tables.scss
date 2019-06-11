@@ -8,6 +8,10 @@
 
 @import '../utilities';
 
+@page landscape_table {
+  prince-rotate-body: landscape;
+ }
+
 @if $type != 'web' {
   table {
     display: table;
@@ -99,6 +103,10 @@
     &.alignright {
       float: right;
       margin-left: if-map-get($table-alignright-margin-left, $type);
+    }
+
+    &.landscape {
+      page: landscape_table;
     }
   }
 
