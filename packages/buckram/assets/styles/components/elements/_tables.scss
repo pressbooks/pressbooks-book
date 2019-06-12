@@ -105,8 +105,10 @@
       margin-left: if-map-get($table-alignright-margin-left, $type);
     }
 
-    &.landscape {
-      page: landscape_table;
+    @if $type == 'prince' {
+      &.landscape {
+        page: landscape_table;
+      }
     }
   }
 
