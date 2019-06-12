@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- TODO
+- Add `.landscape` class to add landscape option for large tables that overflow: [#563](https://github.com/pressbooks/pressbooks-book/pull/563)
 
 ### Patches
 - Fix color variable for Table of Contents part title: [#559](https://github.com/pressbooks/pressbooks-book/pull/559)
