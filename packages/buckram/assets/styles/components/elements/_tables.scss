@@ -8,6 +8,12 @@
 
 @import '../utilities';
 
+// stylelint-disable property-no-unknown
+@page landscape_table {
+  prince-rotate-body: landscape;
+ }
+// stylelint-enable property-no-unknown
+
 @if $type != 'web' {
   table {
     display: table;
@@ -99,6 +105,12 @@
     &.alignright {
       float: right;
       margin-left: if-map-get($table-alignright-margin-left, $type);
+    }
+
+    @if $type == 'prince' {
+      &.landscape {
+        page: landscape_table;
+      }
     }
   }
 
