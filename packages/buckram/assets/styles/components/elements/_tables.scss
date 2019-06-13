@@ -8,11 +8,11 @@
 
 @import '../utilities';
 
-// stylelint-disable property-no-unkown
+// stylelint-disable
 @page landscape_table {
   prince-rotate-body: landscape;
  }
-// stylelint-enable property-no-unkown
+// stylelint-enable
 
 @if $type != 'web' {
   table {
