@@ -8,9 +8,11 @@
 
 @import '../utilities';
 
+/* stylelint-disable */
 @page landscape_table {
   prince-rotate-body: landscape;
  }
+/* stylelint-enable */
 
 @if $type != 'web' {
   table {
