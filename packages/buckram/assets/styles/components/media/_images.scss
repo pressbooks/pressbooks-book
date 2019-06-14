@@ -33,6 +33,12 @@
     page-break-inside: avoid !important;
   }
 
+  img.mathjax {
+    vertical-align: middle;
+    border: none;
+    background: none;
+  }
+
   .wp-caption,
   .wp-nocaption {
     height: auto;
@@ -139,6 +145,12 @@
     prince-image-resolution: $prince-image-resolution;
   }
 
+  img.mathjax {
+    vertical-align: middle;
+    border: none;
+    background: none;
+  }
+
   .wp-caption,
   .wp-nocaption {
     height: auto;
@@ -235,7 +247,12 @@
       max-width: 100%;
       padding: 0;
       page-break-inside: avoid !important;
-      prince-image-resolution: $prince-image-resolution;
+    }
+
+    img.mathjax {
+      vertical-align: middle;
+      border: none;
+      background: none;
     }
 
     .wp-caption,
