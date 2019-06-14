@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- Add img.mathjax CSS
+- Add img.mathjax CSS: [#566](https://github.com/pressbooks/pressbooks-book/pull/566)
 - Add `.landscape` class to add landscape option for large tables that overflow: [#563](https://github.com/pressbooks/pressbooks-book/pull/563)
 
 ### Patches
