@@ -84,6 +84,7 @@
       float: $toc-left-chapter-number-float; // TODO
       text-align: $toc-left-chapter-number-align; // $toc-chapter-number-align;
       width: if-map-get($toc-left-left-gutter, $type);
+      overflow-wrap: normal;
     }
   }
 }
