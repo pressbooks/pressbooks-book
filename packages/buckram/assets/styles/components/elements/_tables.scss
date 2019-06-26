@@ -93,6 +93,16 @@
       border-left: 0;
     }
 
+    &.grid,
+    &.grid tbody,
+    &.grid th,
+    &.grid tr,
+    &.grid td,
+    &.grid tfoot,
+    &.grid thead {
+      border: 1px solid if-map-get($line-color-1, $type);
+    }
+
     &.alignleft {
       float: left;
       margin-right: if-map-get($table-alignleft-margin-right, $type);
@@ -225,6 +235,16 @@
         border-right: 0;
         border-bottom: 0;
         border-left: 0;
+      }
+
+      &.grid,
+      &.grid tbody,
+      &.grid th,
+      &.grid tr,
+      &.grid td,
+      &.grid tfoot,
+      &.grid thead {
+        border: 1px solid if-map-get($line-color-1, $type);
       }
 
       &.alignleft {
