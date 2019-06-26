@@ -4,6 +4,7 @@
 
 ### Minor Changes
 
+- Add Full Grid and Full Grid Landscape table options: [#575](https://github.com/pressbooks/pressbooks-book/pull/575)
 - Add `overflow-wrap: normal;` to table of contents chapter number to prevent wrapping:[#574](https://github.com/pressbooks/pressbooks-book/pull/574)
 - Add img.mathjax CSS: [#566](https://github.com/pressbooks/pressbooks-book/pull/566)
 - Add `.landscape` class to add landscape option for large tables that overflow: [#563](https://github.com/pressbooks/pressbooks-book/pull/563)
