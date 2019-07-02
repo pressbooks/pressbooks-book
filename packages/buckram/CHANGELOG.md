@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.1-dev
+
+### Patches
+- REPLACE THIS LINE NEXT TIME FILE NEEDS UPDATING
+
 ## 1.5.0
 
 ### Minor Changes
