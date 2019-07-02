@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.7\n"
+"Project-Id-Version: McLuhan 2.8.8\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-06-11T15:31:22+00:00\n"
+"POT-Creation-Date: 2019-07-02T18:13:29+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
@@ -85,23 +85,19 @@ msgid "Submit"
 msgstr "Einreichen"
 
 #. translators: %s: Pressbooks
-#: footer.php:32
+#: footer.php:64
 msgid "Powered by %s"
 msgstr "Mit %s erstellt"
 
-#: footer.php:34
+#: footer.php:66
 msgid "Guides and Tutorials"
 msgstr "Hilfestellungen und Tutorials"
 
-#: footer.php:35
-msgid "Contact"
-msgstr "Kontakt"
-
-#: footer.php:39 footer.php:41
+#: footer.php:73 footer.php:75
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks auf YouTube"
 
-#: footer.php:43 footer.php:47
+#: footer.php:77 footer.php:81
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks auf Twitter"
 
@@ -507,6 +503,14 @@ msgstr "Metadaten"
 #: partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Titel"
+
+#: partials/content-cover-toc.php:5
+msgid "Show All Contents"
+msgstr ""
+
+#: partials/content-cover-toc.php:6
+msgid "Hide All Contents"
+msgstr ""
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
