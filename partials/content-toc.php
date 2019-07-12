@@ -49,7 +49,7 @@ $part_numbers = $options['chapter_numbers'] ?? false; ?>
 				( $part_is_visible ) ?
 					sprintf(
 						'<p class="toc__title">%s</p>',
-						( $part_has_content ) ? '<a href=' . get_permalink( $part['ID'] ) . "'>$part_title</a>" : $part_title
+						( $part_has_content ) ? "<a href='" . get_permalink( $part['ID'] ) . "'>$part_title</a>" : $part_title
 					)
 					: '',
 				( $part_has_chapters ) ? '<ol class="toc__chapters">' . \PressbooksBook\Helpers\toc_sections( $part['chapters'], 'chapter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ) . '</ol>' : ''
