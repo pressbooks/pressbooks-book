@@ -505,6 +505,10 @@ summary {
   display: list-item; // Add the correct display in all browsers
 }
 
+details summary:first-of-type {
+  list-style: none;
+}
+
 template {
   display: none; // Add the correct display in IE
 }
