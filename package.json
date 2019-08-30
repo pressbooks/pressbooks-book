@@ -13,14 +13,14 @@
 	"dependencies": {
 		"jquery.localscroll": "^2.0.0",
 		"jquery.scrollto": "^2.1.2",
-		"js-cookie": "^2.2.0",
-		"lity": "^2.3.1",
+		"js-cookie": "^2.2.1",
+		"lity": "^2.4.0",
 		"sharer.js": "^0.3.8",
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
-		"lerna": "^3.14.1",
-		"pressbooks-build-tools": "^1.4.3"
+		"lerna": "^3.16.4",
+		"pressbooks-build-tools": "^1.5.0"
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
