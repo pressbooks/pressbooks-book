@@ -55,6 +55,8 @@ function enqueue_assets() {
 			wp_dequeue_script( $handle );
 		}
 	}
+	// <details> tag needs polyfill for MS Edge
+	wp_enqueue_script( 'details-element-polyfill', $assets->getPath( 'scripts/details-element-polyfill.js' ), [], '2.4.0', true );
 
 	wp_localize_script(
 		'pressbooks/book',

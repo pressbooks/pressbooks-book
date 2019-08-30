@@ -48,7 +48,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			while (
 				elem.nextElementSibling &&
 				elem.nextElementSibling.tagName !== 'H1' &&
-				! elem.nextElementSibling.classList.contains( 'nav-reading--page' )
+				! elem.nextElementSibling.classList.contains( 'nav-reading--page' ) &&
+				! ( elem.nextElementSibling.tagName === 'DIV' && elem.nextElementSibling.className === 'glossary' )
 			) {
 				elems.push( elem.nextElementSibling );
 				elem = elem.nextElementSibling;
