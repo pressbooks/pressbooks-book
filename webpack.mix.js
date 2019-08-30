@@ -36,6 +36,7 @@ mix
 	.scripts( 'node_modules/lity/dist/lity.js', 'dist/scripts/lity.js' )
 	.scripts( 'node_modules/jquery.localscroll/jquery.localScroll.js', 'dist/scripts/jquery.localScroll.js' )
 	.scripts( 'node_modules/jquery.scrollto/jquery.scrollTo.js', 'dist/scripts/jquery.scrollTo.js' )
+	.scripts( 'node_modules/details-element-polyfill/dist/details-element-polyfill.js', 'dist/scripts/details-element-polyfill.js' )
 	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
 	.js( 'assets/src/scripts/pane.js', 'dist/scripts/pane.js' )
 	.js(
