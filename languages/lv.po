@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.9\n"
+"Project-Id-Version: McLuhan 2.8.10\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-08-19T22:02:06+00:00\n"
+"POT-Creation-Date: 2019-09-04T18:53:10+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: lv\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.2.0\n"
+"X-Generator: WP-CLI 2.3.0\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -133,35 +133,35 @@ msgstr ""
 msgid "Buy"
 msgstr "Nopirkt"
 
-#: inc/actions/namespace.php:63 partials/content-accessibility-toolbar.php:4
+#: inc/actions/namespace.php:65 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
 msgstr "Palielināt fonta izmēru"
 
-#: inc/actions/namespace.php:64
+#: inc/actions/namespace.php:66
 msgid "Decrease Font Size"
 msgstr "Samazināt fonta izmēru"
 
-#: inc/actions/namespace.php:66
+#: inc/actions/namespace.php:68
 msgid "Comparison loading…"
 msgstr "Salīdzinājuma ielāde..."
 
-#: inc/actions/namespace.php:67
+#: inc/actions/namespace.php:69
 msgid "Comparison loaded."
 msgstr "Salīdzinājums ielādējās."
 
-#: inc/actions/namespace.php:68
+#: inc/actions/namespace.php:70
 msgid "The original chapter could not be loaded."
 msgstr "Oriģināla nodaļa nevar būt ielādēta."
 
-#: inc/actions/namespace.php:69
+#: inc/actions/namespace.php:71
 msgid "Toggle contents of"
 msgstr ""
 
-#: inc/actions/namespace.php:217
+#: inc/actions/namespace.php:219
 msgid "Enable Image Lightbox"
 msgstr "Aktivēt uznirstošo logu ar bildi"
 
-#: inc/actions/namespace.php:222
+#: inc/actions/namespace.php:224
 msgid "Show linked images in a lightbox"
 msgstr "Rādīt saistītus attēlus uznirstošā logā"
 

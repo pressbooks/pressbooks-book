@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.9\n"
+"Project-Id-Version: McLuhan 2.8.10\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-08-19T22:02:06+00:00\n"
+"POT-Creation-Date: 2019-09-04T18:53:10+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: hr_HR\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.2.0\n"
+"X-Generator: WP-CLI 2.3.0\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -136,35 +136,35 @@ msgstr "Idi na naslovnicu za %s"
 msgid "Buy"
 msgstr "Kupi"
 
-#: inc/actions/namespace.php:63 partials/content-accessibility-toolbar.php:4
+#: inc/actions/namespace.php:65 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
 msgstr "Povećaj veličinu pisma"
 
-#: inc/actions/namespace.php:64
+#: inc/actions/namespace.php:66
 msgid "Decrease Font Size"
 msgstr "Smanji veličinu pisma"
 
-#: inc/actions/namespace.php:66
+#: inc/actions/namespace.php:68
 msgid "Comparison loading…"
 msgstr "Usporedba se učitava..."
 
-#: inc/actions/namespace.php:67
+#: inc/actions/namespace.php:69
 msgid "Comparison loaded."
 msgstr "Usporedba učitana."
 
-#: inc/actions/namespace.php:68
+#: inc/actions/namespace.php:70
 msgid "The original chapter could not be loaded."
 msgstr "Originalno poglavlje nije moglo biti učitano."
 
-#: inc/actions/namespace.php:69
+#: inc/actions/namespace.php:71
 msgid "Toggle contents of"
 msgstr "Prebaci sadržaj od"
 
-#: inc/actions/namespace.php:217
+#: inc/actions/namespace.php:219
 msgid "Enable Image Lightbox"
 msgstr "Omogući Lightbox za slike"
 
-#: inc/actions/namespace.php:222
+#: inc/actions/namespace.php:224
 msgid "Show linked images in a lightbox"
 msgstr "Prikaži povezane slike u Lightbox-u"
 

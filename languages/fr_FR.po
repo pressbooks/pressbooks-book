@@ -11,9 +11,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.9\n"
+"Project-Id-Version: McLuhan 2.8.10\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-08-19T22:02:06+00:00\n"
+"POT-Creation-Date: 2019-09-04T18:53:10+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.2.0\n"
+"X-Generator: WP-CLI 2.3.0\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -148,35 +148,35 @@ msgstr "Aller à la page couverture de %s"
 msgid "Buy"
 msgstr "Acheter"
 
-#: inc/actions/namespace.php:63 partials/content-accessibility-toolbar.php:4
+#: inc/actions/namespace.php:65 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
 msgstr "Augmenter la taille de la police"
 
-#: inc/actions/namespace.php:64
+#: inc/actions/namespace.php:66
 msgid "Decrease Font Size"
 msgstr "Réduire la taille de la police"
 
-#: inc/actions/namespace.php:66
+#: inc/actions/namespace.php:68
 msgid "Comparison loading…"
 msgstr "Chargement de la comparaison..."
 
-#: inc/actions/namespace.php:67
+#: inc/actions/namespace.php:69
 msgid "Comparison loaded."
 msgstr "Chargement de la comparaison terminé."
 
-#: inc/actions/namespace.php:68
+#: inc/actions/namespace.php:70
 msgid "The original chapter could not be loaded."
 msgstr "Le chapitre original n&rsquo;a pas pu être chargé."
 
-#: inc/actions/namespace.php:69
+#: inc/actions/namespace.php:71
 msgid "Toggle contents of"
 msgstr "Afficher/dissimuler les contenus de"
 
-#: inc/actions/namespace.php:217
+#: inc/actions/namespace.php:219
 msgid "Enable Image Lightbox"
 msgstr "Activer la fonction Lightbox pour les images"
 
-#: inc/actions/namespace.php:222
+#: inc/actions/namespace.php:224
 msgid "Show linked images in a lightbox"
 msgstr "Afficher les images comportant un lien dans une fenêtre superposée."
 
