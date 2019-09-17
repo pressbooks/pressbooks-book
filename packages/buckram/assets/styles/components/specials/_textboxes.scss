@@ -85,6 +85,10 @@
       if-map-get($edu-textbox-padding-bottom, $type)
       if-map-get($edu-textbox-padding-left, $type);
   }
+
+  // &.textbox--sidebar {
+
+  // }
 }
 
 .textbox {

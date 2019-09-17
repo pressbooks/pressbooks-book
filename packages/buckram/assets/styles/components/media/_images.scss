@@ -22,6 +22,7 @@
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
     text-indent: if-map-get($image-caption-text-indent, $type);
+    color: $image-caption-text-color;
   }
 
   img {
@@ -133,6 +134,7 @@
     text-align: $image-caption-text-align;
     text-transform: $image-caption-text-transform;
     text-indent: if-map-get($image-caption-text-indent, $type);
+    color: $image-caption-text-color;
   }
 
   img {
@@ -238,6 +240,7 @@
       text-align: $image-caption-text-align;
       text-transform: $image-caption-text-transform;
       text-indent: if-map-get($image-caption-text-indent, $type);
+      color: $image-caption-text-color;
     }
 
     img {
