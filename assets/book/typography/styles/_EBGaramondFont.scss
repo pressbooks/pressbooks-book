@@ -1,0 +1,32 @@
+// 'EBGaramond', @import 'EBGaramondFont'
+
+//EB GARAMOND
+//SERIF, CLEAN
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('fonts/EBGaramond-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('fonts/EBGaramond-RegularItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('fonts/EBGaramond-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('fonts/EBGaramond-BoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: bold;
+}

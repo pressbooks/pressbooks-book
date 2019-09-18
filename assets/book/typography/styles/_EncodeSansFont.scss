@@ -1,0 +1,32 @@
+// 'EncodeSans', @import 'EncodeSansFont'
+
+//ENCODE SANS
+//SANS-SERIF, CLEAN
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('fonts/EncodeSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('fonts/EncodeSans-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('fonts/EncodeSans-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('fonts/EncodeSans-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: lighter;
+}
