@@ -35,6 +35,9 @@ Arvo is Copyright (c) Anton Koovit and is released under the SIL Open Font Licen
 Audiowide is Copyright (c) Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com) and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Audiowide
 
+Barlow is Copyright (c) Jeremy Tribby and is released under the SIL Open Font License 1.1.
+@see: https://fonts.google.com/specimen/Barlow
+
 Belleza is Copyright (c) Eduardo Tunni (edu@tipo.net.ar) and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Belleza
 
@@ -71,8 +74,14 @@ Droid Sans is Copyright (c) Steve Matteson and is released under the Apache Lice
 Droid Serif is Copyright (c) Steve Matteson and is released under the Apache License, version 2.0.
 @see: https://www.google.com/fonts/specimen/Droid+Serif
 
+EB Garamond is Copyright (c) Georg Duffner and Octavio Pardo and is released under the SIL Open Font License 1.1.
+@see: https://fonts.google.com/specimen/EB+Garamond
+
 Ekatra is Copyright (c) Ekatra Foundation and is released under the SIL Open Font License 1.1.
 @see: https://github.com/samyakbhuta/chhapkaam/wiki/ગુજરાતી-યુનિકોડ-ફોન્ટ-સૂચી---List-of-Gujarati-Unicode-Fonts
+
+Encode Sans is Copyright (c) Impallari Type, Andres Torresi, and Jacques Le Bailly and is released under the SIL Open Font License 1.1.
+@see: https://fonts.google.com/specimen/Encode+Sans
 
 Exo is Copyright (c) Natanael Gama and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Exo
@@ -104,11 +113,17 @@ IM Fell French Canon is Copyright (c) Igino Marini and is released under the SIL
 IM Fell French Canon SC is Copyright (c) Igino Marini and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/IM+Fell+French+Canon+SC
 
+K2D is Copyright (c) Cadson Demak and is released under the SIL Open Font License 1.1.
+@see: https://fonts.google.com/specimen/K2D
+
 Lato is Copyright (c) Łukasz Dziedzic and is released under the SIL Open Font License 1.1.
 @see: http://www.latofonts.com
 
 Libre Baskerville is Copyright (c) Impallari Type and is released under the SIL Open Font License 1.1.
 @see: http://www.impallari.com/projects/overview/libre-baskerville
+
+Libre Franklin is Copyright (c) Impallari Type and is released under the SIL Open Font License 1.1.
+@see: https://fonts.google.com/specimen/Libre+Franklin
 
 Linux Biolinum is Copyright (c) 2003–2012 Philipp H. Poll released under the SIL Open Font License 1.1.
 @see: http://www.linuxlibertine.org
@@ -182,11 +197,17 @@ PT Serif is Copyright (c) 2010 ParaType (Alexandra Korolkova, Olga Umpeleva and 
 Quantico is Copyright (c) MADType and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Quantico
 
+Raleway is Copyright (c) 2010, Matt McInerney, Copyright (c) 2011, Pablo Impallari, Copyright (c) 2011, Rodrigo Fuenzalida and is released under the SIL Open Font License 1.1.
+@see: https://github.com/impallari/Raleway/
+
 Robotois Copyright (c) Christian Robertson and is released under the Apache License, version 2.0.
 @see: https://www.google.com/fonts/specimen/Roboto
 
 Roboto Condensed is Copyright (c) Christian Robertson and is released under the Apache License, version 2.0.
 @see: http://www.google.com/fonts/specimen/Roboto+Condensed
+
+Rubik is Copyright (c) Hubert and Fischer and is released under the SIL Open Font License 1.1.
+@see: https://fonts.google.com/specimen/Rubik
 
 SBL Greek is Copyright (c) Tiro Tyepworks and the Society of Biblical Literature and released under the license available at http://www.sbl-site.org/assets/pdfs/SBL_Font_End_User_License_Agreement.pdf.
 @see: http://www.sbl-site.org/educational/biblicalfonts.aspx
@@ -199,6 +220,9 @@ Sorts Mill Goudy is Copyright (c) Barry Schwartz and is released under the SIL O
 
 Special Elite is Copyright (c) Astigmatic and is released under the Apache License, version 2.0.
 @see: https://www.google.com/fonts/specimen/Special+Elite
+
+Spectral is Copyright (c) Production Type and is released under the SIL Open Font License 1.1.
+@see: https://github.com/productiontype/spectral
 
 Teko is Copyright (c) Indian Type Foundry and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Teko
