@@ -1,0 +1,49 @@
+// Shape Shifter Fonts
+// @see \Pressbooks\Styles::getShapeShifterFonts
+
+$shapeshifter-fonts: ();
+
+@if variable-exists(shapeshifter-font-1) {
+  $shapeshifter-fonts: append($shapeshifter-fonts, $shapeshifter-font-1, ',' )
+}
+
+@if variable-exists(shapeshifter-font-2) {
+  $shapeshifter-fonts: append($shapeshifter-fonts, $shapeshifter-font-2, ',' )
+}
+
+@each $font in $shapeshifter-fonts {
+  @if unquote($font) == 'Cormorant Garamond' {
+    @import 'CormorantGaramondFont';
+  } @else if unquote($font) == 'Noto serif' {
+    @import 'NotoSerifFont';
+  } @else if unquote($font) == 'Spectral' {
+    @import 'SpectralFont';
+  } @else if unquote($font) == 'Alegreya' {
+    @import 'AlegreyaSansSCFont';
+  } @else if unquote($font) == 'Crimson Text' {
+    @import 'CrimsonTextFont';
+  } @else if unquote($font) == 'Roboto' {
+    @import 'RobotoFont';
+  } @else if unquote($font) == 'Open Sans' {
+    @import 'OpenSansFont';
+  } @else if unquote($font) == 'Lato' {
+    @import 'LatoFont';
+  } @else if unquote($font) == 'Montserrat' {
+    @import 'MontserratFont';
+  } @else if unquote($font) == 'Raleway' {
+    @import 'RalewayFont';
+  } @else if unquote($font) == 'Noto Sans' {
+    @import 'NotoSansFont';
+  } @else if unquote($font) == 'Rubik' {
+    @import 'RubikFont';
+  } @else if unquote($font) == 'Barlow' {
+    @import 'BarlowFont';
+  } @else if unquote($font) == 'Libre Franklin' {
+    @import 'LibreFranklinFont';
+  } @else if unquote($font) == 'K2D' {
+    @import 'K2DFont';
+  }
+}
+
+
+
