@@ -58,5 +58,11 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'K2D' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'K2DFont';
+  } @else if unquote($font) == 'FreeSans' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'FreeSans';
+  } @else if unquote($font) == 'FreeSerif' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'FreeSerif';
   }
 }

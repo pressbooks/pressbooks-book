@@ -58,6 +58,12 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'K2D' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'https://fonts.googleapis.com/css?family=K2D&display=swap';
+  } @else if unquote($font) == 'FreeSans' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'FreeSans';
+  } @else if unquote($font) == 'FreeSerif' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'FreeSerif';
   }
 }
 
