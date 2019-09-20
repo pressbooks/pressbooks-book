@@ -1,0 +1,29 @@
+// 'FreeSerif', @import 'FreeSerif'
+
+@font-face {
+  font-family: 'FreeSerif';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/FreeSerif.ttf');
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fonts/FreeSerifItalic.ttf');
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/FreeSerifBold.ttf');
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  font-style: italic;
+  font-weight: bold;
+  src: url('fonts/FreeSerifBoldItalic.ttf');
+}

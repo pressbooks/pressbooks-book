@@ -86,6 +86,9 @@ Encode Sans is Copyright (c) Impallari Type, Andres Torresi, and Jacques Le Bail
 Exo is Copyright (c) Natanael Gama and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Exo
 
+GNU FreeFont is Copyright (c) GNU FreeFont project and is released under the GNU General Public License v3 or later
+@see: http://savannah.gnu.org/projects/freefont/
+
 Gentium Basic is Copyright (c) Victor Gaultney and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Gentium+Basic
 
