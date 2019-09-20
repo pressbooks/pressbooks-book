@@ -1,0 +1,63 @@
+// Shape Shifter Fonts
+// @see \Pressbooks\Styles::getShapeShifterFonts
+
+$shapeshifter-fonts: ();
+
+@if variable-exists(shapeshifter-font-1) {
+  $shapeshifter-fonts: append($shapeshifter-fonts, $shapeshifter-font-1);
+}
+
+@if variable-exists(shapeshifter-font-2) {
+  $shapeshifter-fonts: append($shapeshifter-fonts, $shapeshifter-font-2);
+}
+
+@each $font in $shapeshifter-fonts {
+  @if unquote($font) == 'Cormorant Garamond' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap';
+  } @else if unquote($font) == 'Noto serif' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP|Noto+Serif+KR|Noto+Serif+SC|Noto+Serif+TC&display=swap';
+  } @else if unquote($font) == 'Spectral' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Spectral|Spectral+SC&display=swap';
+  } @else if unquote($font) == 'Alegreya' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Alegreya|Alegreya+SC|Alegreya+Sans|Alegreya+Sans+SC&display=swap';
+  } @else if unquote($font) == 'Crimson Text' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Crimson+Text&display=swap';
+  } @else if unquote($font) == 'Roboto' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Roboto&display=swap';
+  } @else if unquote($font) == 'Open Sans' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap';
+  } @else if unquote($font) == 'Lato' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Lato&display=swap';
+  } @else if unquote($font) == 'Montserrat' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Montserrat&display=swap';
+  } @else if unquote($font) == 'Raleway' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Raleway&display=swap';
+  } @else if unquote($font) == 'Noto Sans' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+HK|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+SC|Noto+Sans+TC|Raleway&display=swap';
+  } @else if unquote($font) == 'Rubik' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Rubik&display=swap';
+  } @else if unquote($font) == 'Barlow' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Barlow&display=swap';
+    // noinspection CssInvalidAtRule
+  } @else if unquote($font) == 'Libre Franklin' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap';
+  } @else if unquote($font) == 'K2D' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=K2D&display=swap';
+  }
+}
+

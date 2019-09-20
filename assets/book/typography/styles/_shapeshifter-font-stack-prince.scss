@@ -1,0 +1,62 @@
+// Shape Shifter Fonts
+// @see \Pressbooks\Styles::getShapeShifterFonts
+
+$shapeshifter-fonts: ();
+
+@if variable-exists(shapeshifter-font-1) {
+  $shapeshifter-fonts: append($shapeshifter-fonts, $shapeshifter-font-1 );
+}
+
+@if variable-exists(shapeshifter-font-2) {
+  $shapeshifter-fonts: append($shapeshifter-fonts, $shapeshifter-font-2 );
+}
+
+@each $font in $shapeshifter-fonts {
+  @if unquote($font) == 'Cormorant Garamond' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'CormorantGaramondFont';
+  } @else if unquote($font) == 'Noto serif' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'NotoSerifFont';
+  } @else if unquote($font) == 'Spectral' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'SpectralFont';
+  } @else if unquote($font) == 'Alegreya' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'AlegreyaSansSCFont';
+  } @else if unquote($font) == 'Crimson Text' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'CrimsonTextFont';
+  } @else if unquote($font) == 'Roboto' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'RobotoFont';
+  } @else if unquote($font) == 'Open Sans' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'OpenSansFont';
+  } @else if unquote($font) == 'Lato' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'LatoFont';
+  } @else if unquote($font) == 'Montserrat' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'MontserratFont';
+  } @else if unquote($font) == 'Raleway' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'RalewayFont';
+  } @else if unquote($font) == 'Noto Sans' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'NotoSansFont';
+  } @else if unquote($font) == 'Rubik' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'RubikFont';
+  } @else if unquote($font) == 'Barlow' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'BarlowFont';
+    // noinspection CssInvalidAtRule
+  } @else if unquote($font) == 'Libre Franklin' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'LibreFranklinFont';
+  } @else if unquote($font) == 'K2D' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'K2DFont';
+  }
+}
