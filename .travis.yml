@@ -1,6 +1,6 @@
 dist: xenial
 services:
-  - mysql
+- mysql
 language: php
 sudo: required
 notifications:
@@ -23,7 +23,7 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
-    - php: nightly
+  - php: nightly
 cache:
   apt: true
   directories:
@@ -62,7 +62,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: XdchVIQYOB87JkkIdkIfhQUeU6jkATDaAf2MypPNoiSJKmShVyWRxXehl0b8ieZqz8WP0wciZhDXfRSufbBIxeNy+nXh7dSn0L3BMOv7Up+/lYTmBIQUtXJM6UJV1CBALgcmO4K0vFVnUQzEi1TbTQK62QUgfTJ1sQBAKB7Eg7WMhgn3sSVhV0pADRJshsOTsuVMiZ3DuDnWQ3RzGjC0deIlKCr/GO4+R6W5giR7+05WPZOB9o/+ugD2ZbeblBJIk8kt6ZcyQBbhGv1cCEoSPsyXg4B7vA15jZdabDFkMu0ebbnpxgMWCuh2PReoc7jaefyR5/c+Le5mSelFkY/wEB92VBO2TcjgEzXbf5cx7AxWaI9AFyDf7XUrqept/0xXdmpyOzgg6J6SNcOoc9rs6P24q2RGYUCTUGcynd+wTzlsWWpL1pi/ZG2A3mvHaPfCltvyGgXxTBWCI3mTClEebu+rg0GED1LDGKlwlop4wFVvX+5KzBfuo5buULIouud1deav63xBq9Td7HGcAH9N3zwEOaNjTDCc/cw9ZgzjTcOC4sbyLLeFJ6xHpONd7HtvstibSlu5aHuDd6hRD3Kgzs11JUzXMwgo3jiCWTfAZ25lDisEVmIqYS+Ea8lyCoY+BLfDcPlEeyhOtlXfRT4n2xtGPWZmgbndvtOMXDXuDds=
+    secure: rZ6NfU8GvfvMgc9Cs6SVa9vt7ttKUKp65VdZqfAmN5bwu71gjxWRwBxyyKBia+cu8kHZL6K4hDdtG9uRDMQSNMrdOVvuSNnz64PGTAo5cGxhmz7xVN/gzTtUAgQzwzcQembTvnvvRDKfUTl/2y+iWYYGmiqEAM146DUWXG0ee3NfsEFivjxqGUOTvWVMQcYsz7oilGk8ZtsFIYlrCaX52nCu1xqmOYzrnIznOozZbOvvHwZX6lKqOmxPqrJAVG+b/gbEE4J7enM4/j/7CHHlazG/mAURQVhK5YtO1y3xLM616vEAoWT+OsBYHo6SOxA8caav7tL+Gr9sB7XjEzwhNUhYVgYF05x2TbwBWtnkO7sWmGxm1DLjbjzRR5jUcHQguaOHe4a4NUu73JWP7WfH8ZyGTFR85LQMVgWSLz3ODpDVGj1zdgBdCqFm7RNKPC+IF1xN9aN5IfKIU7JRrkqv6GaVNbakV3wqhwm/9eS6Wh7tERgBPniGqIPOnk/NMCqFb4k5WIcH5ZF3K0BSE13ojyLgeWW/5HH6KJJ3HurY+cUx8yDt/MCOcX05PdUJA1hMWyYYZIyy2BzklDUX9qa43r8X6aSPGZR78j9OVqFzlon93bUBY/jzYdr5QrdkmUOM2HXEq34yuiGOueJsbW3IU2TSk1wgv5d/89UwTLOtxWw=
   file: pressbooks-book-$TRAVIS_TAG.zip
   on:
     tags: true
