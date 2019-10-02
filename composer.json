@@ -29,6 +29,12 @@
 			"email": "code@pressbooks.com"
 		}
 	],
+  "keywords": [
+      "academic",
+      "literary",
+      "nonfiction",
+      "textbook"
+  ],
 	"scripts": {
 		"test": [
 			"vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml",
