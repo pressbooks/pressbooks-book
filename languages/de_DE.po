@@ -2,14 +2,15 @@
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2019
+# nebulon42, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.8.11\n"
+"Project-Id-Version: McLuhan 2.8.12\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-10-01T16:49:01+00:00\n"
+"POT-Creation-Date: 2019-10-15T19:54:32+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2019\n"
+"Last-Translator: nebulon42, 2019\n"
 "Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,10 +35,10 @@ msgid ""
 "writing and is also suitable for fiction. Headings are set in Cormorant "
 "Garamond, and body type is set in Lora."
 msgstr ""
-"Dieses Thema ist nach dem kanadischen Medientheoretiker Marshall McLuhan "
+"Dieses Theme ist nach dem kanadischen Medientheoretiker Marshall McLuhan "
 "benannt, der den Ausdruck \"Das Medium ist die Botschaft\" geprägt hat. Es "
-"ist für akademische Texte konzipiert und eignet sich auch für Romane. "
-"Überschriften werden in Cormorant Garamond und der Fliesstext in Lora "
+"ist für akademische Texte konzipiert und eignet sich auch für Belletristik. "
+"Überschriften werden in Cormorant Garamond und der Fließtext in Lora "
 "gesetzt."
 
 #. Author of the theme
@@ -55,17 +56,18 @@ msgstr "Hoppla! Dieser Inhalt kann nicht gefunden werden."
 #: 404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
 msgstr ""
-"Anscheinend wurde an dieser Stelle nichts gefunden. Versuchen Sie eine Suche"
+"Anscheinend wurde an dieser Stelle nichts gefunden. Möchten Sie eine Suche "
+"versuchen?"
 
 #: comments.php:2
 msgid "Feedback/Errata"
-msgstr "Rückmeldung / Fehlermeldung"
+msgstr "Rückmeldung/Errata"
 
 #: comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-"Dieser Post ist passwortgeschützt. Geben Sie das Passwort ein um die "
+"Dieser Beitrag ist passwortgeschützt. Geben Sie das Passwort ein um die "
 "Kommentare zu sehen."
 
 #: comments.php:36 comments.php:47
@@ -91,7 +93,7 @@ msgstr "Mit %s erstellt"
 
 #: footer.php:66
 msgid "Guides and Tutorials"
-msgstr "Hilfestellungen und Tutorials"
+msgstr "Anleitungen und Tutorials"
 
 #: footer.php:73 footer.php:75
 msgid "Pressbooks on YouTube"
@@ -116,7 +118,7 @@ msgstr "Pressbooks-Installation kann nicht gefunden werden."
 
 #: header.php:63
 msgid "Skip to content"
-msgstr "Inhalt überspringen"
+msgstr "Zum Inhalt springen"
 
 #. translators: %s: name of network
 #: header.php:82
@@ -142,7 +144,7 @@ msgstr "Kaufen"
 
 #: inc/actions/namespace.php:65 partials/content-accessibility-toolbar.php:4
 msgid "Increase Font Size"
-msgstr "Grössere Schrift"
+msgstr "Größere Schrift"
 
 #: inc/actions/namespace.php:66
 msgid "Decrease Font Size"
@@ -178,31 +180,33 @@ msgstr "Privat"
 
 #: inc/helpers/namespace.php:140
 msgid "Public Domain"
-msgstr "Public Domain"
+msgstr "Gemeinfrei (Public Domain)"
 
 #: inc/helpers/namespace.php:143
 msgid "Creative Commons Attribution"
-msgstr "Creative Commons Attribution"
+msgstr "Creative Commons Namensnennung"
 
 #: inc/helpers/namespace.php:146
 msgid "Creative Commons Attribution ShareAlike"
-msgstr "Creative Commons Attribution ShareAlike"
+msgstr "Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen"
 
 #: inc/helpers/namespace.php:149
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr "Creative Commons Attribution NoDerivatives"
+msgstr "Creative Commons Namensnennung-Keine Bearbeitung"
 
 #: inc/helpers/namespace.php:152
 msgid "Creative Commons Attribution NonCommercial"
-msgstr "Creative Commons Attribution NonCommercial"
+msgstr "Creative Commons Namensnennung-Nicht kommerziell"
 
 #: inc/helpers/namespace.php:155
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
-msgstr "Creative Commons Attribution NonCommercial ShareAlike"
+msgstr ""
+"Creative Commons Namensnennung-Nicht kommerziell-Weitergabe unter gleichen "
+"Bedingungen"
 
 #: inc/helpers/namespace.php:158
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr "Creative Commons Attribution NonCommercial NoDerivatives"
+msgstr "Creative Commons Namensnennung-Nicht kommerziell-Keine Bearbeitung"
 
 #: inc/helpers/namespace.php:162
 msgid "All Rights Reserved"
@@ -210,7 +214,7 @@ msgstr "Alle Rechte vorbehalten"
 
 #: inc/helpers/namespace.php:176
 msgid "Check out this great book on Pressbooks."
-msgstr "Schauen Sie sich dieses grossartige Buch auf Pressbooks an."
+msgstr "Schauen Sie sich dieses großartige Buch auf Pressbooks an."
 
 #: inc/helpers/namespace.php:193
 msgid "Home"
@@ -222,7 +226,7 @@ msgstr "Lesen"
 
 #: inc/helpers/namespace.php:213
 msgid "Sign in"
-msgstr "Einloggen"
+msgstr "Anmelden"
 
 #: inc/helpers/namespace.php:220
 msgid "Admin"
@@ -230,7 +234,7 @@ msgstr "Admin"
 
 #: inc/helpers/namespace.php:226
 msgid "Sign out"
-msgstr "Ausloggen"
+msgstr "Abmelden"
 
 #: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:51
@@ -280,7 +284,7 @@ msgstr "Hauptthema"
 
 #: inc/helpers/namespace.php:414
 msgid "Additional Subject(s)"
-msgstr "Zusatzthema(en)"
+msgstr "Zusatzthema/-themen"
 
 #: inc/helpers/namespace.php:415
 msgid "Publisher"
@@ -292,15 +296,15 @@ msgstr "Erscheinungsdatum"
 
 #: inc/helpers/namespace.php:417 single.php:42
 msgid "Digital Object Identifier (DOI)"
-msgstr "Digital Object Identifier (DOI)"
+msgstr "Digitaler Objektbezeichner (DOI)"
 
 #: inc/helpers/namespace.php:418
 msgid "Ebook ISBN"
-msgstr "eBook ISBN"
+msgstr "eBook-ISBN"
 
 #: inc/helpers/namespace.php:419
 msgid "Print ISBN"
-msgstr "Print ISBN"
+msgstr "Druck-ISBN"
 
 #: inc/helpers/namespace.php:420
 msgid "Hashtag"
@@ -431,7 +435,7 @@ msgstr "Untertitel"
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr "Titelbild für"
+msgstr "Titelbild für %s"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
@@ -506,16 +510,16 @@ msgstr "Titel"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr ""
+msgstr "Alle Inhalte anzeigen"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr ""
+msgstr "Alle Inhalte verbergen"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "Dieses Kapitel ist eine adaptierte Version von %1$s in %2$s von%3$s."
+msgstr "Dieses Kapitel ist eine adaptierte Version von %1$s in %2$s von %3$s."
 
 #: partials/content-difftool.php:66
 msgid ""
@@ -568,7 +572,7 @@ msgstr ""
 
 #: private.php:14
 msgid "sign in here"
-msgstr "hier einloggen"
+msgstr "hier anmelden"
 
 #. translators: link to Pressbooks.com
 #: private.php:23
