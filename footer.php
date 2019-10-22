@@ -30,15 +30,15 @@ if ( $pb_network_contact_form ) {
 	if ( ! empty( $pb_network_contact_link ) ) {
 		$contact_link = $pb_network_contact_link;
 	} else {
-		$contact_link = '';
+		/**
+		 * Filter the "Contact" link.
+		 *
+		 * @since 5.6.0
+		 */
+		$contact_link = apply_filters( 'pb_contact_link', '' );
 	}
 }
-/**
- * Filter the "Contact" link.
- *
- * @since 5.6.0
- */
-$contact_link = apply_filters( 'pb_contact_link', $contact_link );
+
 if ( $contact_link ) {
 	$contact_link_href = sprintf(
 		'&bull; <a href="%1$s">%2$s</a>',
