@@ -4,7 +4,7 @@
 		<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search in book &hellip;', 'placeholder', 'pressbooks-book' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 	</label>
 	<button type="submit" class="search-submit">
-		<svg class="icon--svg"><use xlink:href="#search" /></svg>
+		<svg class="icon--svg"><use href="#search" /></svg>
 		<span class="screen-reader-text" ><?php _e( 'Search', 'pressbooks-book' ); ?></span>
 	</button>
 </form>

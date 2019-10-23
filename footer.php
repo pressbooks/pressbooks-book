@@ -56,7 +56,7 @@ if ( $contact_link ) {
 			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
 				<?php // TODO ?>
 				<svg class="icon--svg">
-					<use xlink:href="#icon-pressbooks" />
+					<use href="#icon-pressbooks" />
 				</svg>
 			</a>
 			<div class="footer__pressbooks__links">
@@ -76,7 +76,7 @@ if ( $contact_link ) {
 				</a>
 				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>">
 					<svg class="icon--svg">
-						<use xlink:href="#twitter" />
+						<use href="#twitter" />
 					</svg>
 				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
 			</div>

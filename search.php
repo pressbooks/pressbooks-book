@@ -15,8 +15,8 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 						<?php
 						the_posts_navigation(
 							[
-								'prev_text' => '<svg class="icon--svg"><use xlink:href="#arrow-left" /></svg>' . __( 'Previous page', 'pressbooks-book' ),
-								'next_text' => __( 'Next page', 'pressbooks-book' ) . '<svg class="icon--svg"><use xlink:href="#arrow-right" /></svg>',
+								'prev_text' => '<svg class="icon--svg"><use href="#arrow-left" /></svg>' . __( 'Previous page', 'pressbooks-book' ),
+								'next_text' => __( 'Next page', 'pressbooks-book' ) . '<svg class="icon--svg"><use href="#arrow-right" /></svg>',
 								'screen_reader_text' => __( 'Paged navigation', 'pressbooks-book' ),
 							]
 						);

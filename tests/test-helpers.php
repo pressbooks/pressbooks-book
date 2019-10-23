@@ -44,11 +44,11 @@ class HelpersTest extends WP_UnitTestCase {
 
 	function test_license_to_icons() {
 		$output = license_to_icons( 'cc-by' );
-		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc" /></svg><svg class="icon" style="fill: currentColor"><use xlink:href="#cc-by" /></svg>', $output );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use href="#cc" /></svg><svg class="icon" style="fill: currentColor"><use href="#cc-by" /></svg>', $output );
 		$output = license_to_icons( 'public-domain' );
-		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-pd" /></svg>', $output );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use href="#cc-pd" /></svg>', $output );
 		$output = license_to_icons( 'cc-zero' );
-		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use xlink:href="#cc-zero" /></svg>', $output );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use href="#cc-zero" /></svg>', $output );
 		$output = license_to_icons( 'all-rights-reserved' );
 		$this->assertEquals( '', $output );
 		$output = license_to_icons( 'foo' );
