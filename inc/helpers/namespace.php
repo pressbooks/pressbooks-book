@@ -112,12 +112,12 @@ function license_to_icons( $license ) {
 			if ( $part !== 'cc' ) {
 				$part = 'cc-' . $part;
 			}
-			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use href:="#%s" /></svg>', $part );
+			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use href="#%s" /></svg>', $part );
 		}
 	} elseif ( $license === 'cc-zero' ) {
-		$output .= '<svg class="icon" style="fill: currentColor"><use href:="#cc-zero" /></svg>';
+		$output .= '<svg class="icon" style="fill: currentColor"><use href="#cc-zero" /></svg>';
 	} elseif ( $license === 'public-domain' ) {
-		$output .= '<svg class="icon" style="fill: currentColor"><use href:="#cc-pd" /></svg>';
+		$output .= '<svg class="icon" style="fill: currentColor"><use href="#cc-pd" /></svg>';
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
@@ -452,7 +452,7 @@ function get_links( $echo = true ) {
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
 				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_title ); ?>">
-					<svg class="icon--svg"><use href:="#arrow-left" /></svg>
+					<svg class="icon--svg"><use href="#arrow-left" /></svg>
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
@@ -464,12 +464,12 @@ function get_links( $echo = true ) {
 				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_title ); ?>">
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
-					<svg class="icon--svg"><use href:="#arrow-right" /></svg>
+					<svg class="icon--svg"><use href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
 		</div>
 		<button class="nav-reading__up" >
-			<svg class="icon--svg"><use href:="#arrow-up" /></svg>
+			<svg class="icon--svg"><use href="#arrow-up" /></svg>
 			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span>
 		</button>
 		</nav>
