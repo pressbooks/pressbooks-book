@@ -22,7 +22,7 @@ function delete_cached_contents() {
 /**
  * Enqueue styles and scripts.
  *
- * @return null
+ * @return void
  */
 function enqueue_assets() {
 	$assets = new Assets( 'pressbooks-book', 'theme' );
@@ -169,7 +169,7 @@ function update_webbook_stylesheet() {
  *
  * @since 2.3.0
  *
- * @return null
+ * @return void
  */
 function theme_setup() {
 	load_theme_textdomain( 'pressbooks-book', get_template_directory() . '/languages' );
@@ -184,7 +184,7 @@ function theme_setup() {
  *
  * @since 2.3.0
  *
- * @return null
+ * @return void
  */
 function webbook_width() {
 	$options = get_option( 'pressbooks_theme_options_web' );
@@ -197,7 +197,7 @@ function webbook_width() {
  *
  * @since 2.3.0
  *
- * @return null
+ * @return void
  */
 function customizer_colors() {
 	echo \Pressbooks\Admin\Branding\get_customizer_colors();
@@ -211,7 +211,7 @@ function customizer_colors() {
  * @param string $_page The settings identifier, e.g. pressbooks_theme_options_web
  * @param string $_section The settings section identifier, e.g. web_options_section
  *
- * @return null
+ * @return void
  */
 function add_lightbox_setting( $_page, $_section ) {
 	add_settings_field(
@@ -233,7 +233,7 @@ function add_lightbox_setting( $_page, $_section ) {
  *
  * @param array $args The arguments for the field.
  *
- * @return null
+ * @return void
  */
 function render_lightbox_setting_field( $args ) {
 	unset( $args['label_for'], $args['class'] );
@@ -254,7 +254,7 @@ function render_lightbox_setting_field( $args ) {
  *
  * @since 2.8.0
  *
- * @return null
+ * @return void
  */
 function text_diff() {
 	if ( check_ajax_referer( 'text_diff_nonce', 'security' ) ) {
@@ -265,4 +265,22 @@ function text_diff() {
 		wp_send_json_success( wp_json_encode( $diff ) );
 	}
 	wp_send_json_error();
+}
+
+
+/**
+ * Suppress Media Attachment pages
+ *
+ * Files used in open textbooks are openly licensed images where usage requires proper attribution. Images may receive attribution in the webbook, but this attribution does not
+ * currently display on the standalone attribution page. This can be problem.
+ */
+function redirect_attachment_page() {
+	if ( is_attachment() ) {
+		global $post;
+		if ( $post && $post->post_parent ) {
+			\Pressbooks\Redirect\location( esc_url( get_permalink( $post->post_parent ) ) );
+		} else {
+			\Pressbooks\Redirect\location( esc_url( home_url( '/' ) ) );
+		}
+	}
 }
