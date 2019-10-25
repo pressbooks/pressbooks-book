@@ -85,7 +85,7 @@ if ( \PressbooksBook\Helpers\social_media_enabled() ) {
 						?>
 					<?php } else { ?>
 					<svg class="header__logo--svg" aria-role="img">
-						<use xlink:href="#logo-pressbooks" />
+						<use href="#logo-pressbooks" />
 					</svg><?php } ?>
 				</a>
 			</div>
