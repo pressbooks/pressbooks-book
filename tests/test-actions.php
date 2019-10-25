@@ -25,4 +25,24 @@ class ActionsTest extends WP_UnitTestCase {
 		$buffer = ob_get_clean();
 		$this->assertEquals( '<input id="enable_lightbox" name="pressbooks_theme_options_web[enable_lightbox]" type="checkbox" value="1" /><label for="enable_lightbox">Show linked images in a lightbox</label>', $buffer );
 	}
+
+	function test_redirect_attachment_page() {
+
+		global $_pb_redirect_location;
+		\PressbooksBook\Actions\redirect_attachment_page();
+		$this->assertEmpty( $_pb_redirect_location );
+
+		$parent_post_id = $this->factory()->post->create();
+		$post_id = $this->factory()->post->create( [ 'post_type' => 'attachment', 'post_parent' => $parent_post_id ] );
+		$this->go_to( "/?attachment_id=$post_id" );
+		\PressbooksBook\Actions\redirect_attachment_page();
+		$this->assertEquals( esc_url( get_permalink( $parent_post_id ) ), $_pb_redirect_location );
+
+		$post_id = $this->factory()->post->create( [ 'post_type' => 'attachment' ] );
+		$this->go_to( "/?attachment_id=$post_id" );
+		\PressbooksBook\Actions\redirect_attachment_page();
+		$this->assertEquals( esc_url( home_url( '/' ) ), $_pb_redirect_location );
+
+		$_pb_redirect_location = null;
+	}
 }

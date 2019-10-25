@@ -42,16 +42,18 @@ h1.title {
     line-height: if-map-get($title-title-line-height, $type);
   }
 
-  &::after {
-    font-family: $title-title-decoration-font-family;
-    content: $title-title-decoration-content;
-    display: $title-title-decoration-display;
-    white-space: pre;
-    font-size: if-map-get($title-title-decoration-font-size, $type);
-    font-weight: $title-title-decoration-font-weight;
-    margin-bottom: if-map-get($title-title-decoration-margin-bottom, $type);
-    margin-top: if-map-get($title-title-decoration-margin-top, $type);
-    color: if-map-get($title-title-decoration-color, $type);
+  @if ($title-title-decoration-content != "" or $title-title-decoration-display != none) {
+    &::after {
+      font-family: $title-title-decoration-font-family;
+      content: $title-title-decoration-content;
+      display: $title-title-decoration-display;
+      white-space: pre;
+      font-size: if-map-get($title-title-decoration-font-size, $type);
+      font-weight: $title-title-decoration-font-weight;
+      margin-bottom: if-map-get($title-title-decoration-margin-bottom, $type);
+      margin-top: if-map-get($title-title-decoration-margin-top, $type);
+      color: if-map-get($title-title-decoration-color, $type);
+    }
   }
 }
 

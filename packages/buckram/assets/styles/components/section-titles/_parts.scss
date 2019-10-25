@@ -52,16 +52,18 @@
       word-spacing: if-map-get($part-title-word-spacing, $type);
       border-bottom: if-map-get($part-title-border-bottom-width, $type) $part-title-border-bottom-style if-map-get($part-title-border-bottom-color, $type);
 
-      &::after {
-        font-family: $part-title-decoration-font-family;
-        content: $part-title-decoration-content;
-        display: $part-title-decoration-display;
-        white-space: pre;
-        font-size: if-map-get($part-title-decoration-font-size, $type);
-        font-weight: $part-title-decoration-font-weight;
-        margin-bottom: if-map-get($part-title-decoration-margin-bottom, $type);
-        margin-top: if-map-get($part-title-decoration-margin-top, $type);
-        color: if-map-get($part-title-decoration-color, $type);
+      @if ($part-title-decoration-content != "" or $part-title-decoration-display != none) {
+        &::after {
+          font-family: $part-title-decoration-font-family;
+          content: $part-title-decoration-content;
+          display: $part-title-decoration-display;
+          white-space: pre;
+          font-size: if-map-get($part-title-decoration-font-size, $type);
+          font-weight: $part-title-decoration-font-weight;
+          margin-bottom: if-map-get($part-title-decoration-margin-bottom, $type);
+          margin-top: if-map-get($part-title-decoration-margin-top, $type);
+          color: if-map-get($part-title-decoration-color, $type);
+        }
       }
     }
   }

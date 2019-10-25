@@ -26,17 +26,19 @@
       letter-spacing: if-map-get($chapter-title-letter-spacing, $type);
       word-spacing: if-map-get($chapter-title-word-spacing, $type);
 
+      @if ($chapter-title-decoration-content != "" or $chapter-title-decoration-display != none) {
         &::after {
-            font-family: $chapter-title-decoration-font-family;
-            content: $chapter-title-decoration-content;
-            display: $chapter-title-decoration-display;
-            white-space: pre;
-            font-size: if-map-get($chapter-title-decoration-font-size, $type);
-            font-weight: $chapter-title-decoration-font-weight;
-            margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
-            margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
-            color: if-map-get($chapter-title-decoration-color, $type);
-          }
+          font-family: $chapter-title-decoration-font-family;
+          content: $chapter-title-decoration-content;
+          display: $chapter-title-decoration-display;
+          white-space: pre;
+          font-size: if-map-get($chapter-title-decoration-font-size, $type);
+          font-weight: $chapter-title-decoration-font-weight;
+          margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
+          margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
+          color: if-map-get($chapter-title-decoration-color, $type);
+        }
+      }
     }
 
     .chapter-number {
