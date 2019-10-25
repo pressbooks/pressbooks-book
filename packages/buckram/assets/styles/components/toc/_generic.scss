@@ -100,8 +100,12 @@
       text-transform: $toc-part-title-text-transform;
     }
 
-    .part.invisible {
-      display: none;
+    // epub uses .display-none in the TOC for parts, not .invisble
+    // kindlegen throws a limit: 10000 character error on lengthy two-level TOC
+    @if $type != 'epub' {
+      .part.invisible {
+        display: none;
+      }
     }
 
     .chapter {

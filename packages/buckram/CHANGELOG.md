@@ -2,8 +2,10 @@
 
 ## 1.5.1-dev
 
-### Patches
-- REPLACE THIS LINE NEXT TIME FILE NEEDS UPDATING
+### Patches 
+- Kindle limits usage of the display:none property for content blocks beyond 10000 characters. If the display:none property is applied to a content block that is bigger than 
+  10000 characters, KindleGen returns an error. Fix is to use less display:none, and hope it affects less characters.
+- Fix: $image-caption-text-color is often a map  
 
 ## 1.5.0
 
