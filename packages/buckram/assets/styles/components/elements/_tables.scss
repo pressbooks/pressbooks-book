@@ -108,6 +108,10 @@
       margin-right: if-map-get($table-alignleft-margin-right, $type);
     }
 
+    td img.alignleft {
+      float: left;
+    }
+
     &.aligncenter {
       margin-left: auto;
       margin-right: auto;
@@ -122,6 +126,10 @@
     &.alignright {
       float: right;
       margin-left: if-map-get($table-alignright-margin-left, $type);
+    }
+
+    td img.alignright {
+      float: right;
     }
 
     @if $type == 'prince' {
@@ -258,6 +266,10 @@
         margin-right: if-map-get($table-alignleft-margin-right, $type);
       }
 
+      td img.alignleft {
+        float: left;
+      }
+
       &.aligncenter {
         margin-left: auto;
         margin-right: auto;
@@ -272,6 +284,10 @@
       &.alignright {
         float: right;
         margin-left: if-map-get($table-alignright-margin-left, $type);
+      }
+
+      td img.alignright {
+        float: right;
       }
     }
 
