@@ -269,13 +269,15 @@ function text_diff() {
 
 
 /**
- * Suppress Media Attachment pages
+ * Suppress Media Attachment pages. This code redirects bots, unprivileged users, away from the attachment page.
  *
  * Files used in open textbooks are openly licensed images where usage requires proper attribution. Images may receive attribution in the webbook, but this attribution does not
- * currently display on the standalone attribution page. This can be problem.
+ * currently display on the standalone media attachment page. This can be problem.
+ *
+ * @since 2.8.13
  */
 function redirect_attachment_page() {
-	if ( is_attachment() ) {
+	if ( is_attachment() && ! current_user_can( 'upload_files' ) ) {
 		global $post;
 		if ( $post && $post->post_parent ) {
 			\Pressbooks\Redirect\location( esc_url( get_permalink( $post->post_parent ) ) );

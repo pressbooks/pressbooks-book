@@ -27,22 +27,36 @@ class ActionsTest extends WP_UnitTestCase {
 	}
 
 	function test_redirect_attachment_page() {
-
 		global $_pb_redirect_location;
 		\PressbooksBook\Actions\redirect_attachment_page();
 		$this->assertEmpty( $_pb_redirect_location );
+		$_pb_redirect_location = null;
 
 		$parent_post_id = $this->factory()->post->create();
 		$post_id = $this->factory()->post->create( [ 'post_type' => 'attachment', 'post_parent' => $parent_post_id ] );
 		$this->go_to( "/?attachment_id=$post_id" );
 		\PressbooksBook\Actions\redirect_attachment_page();
 		$this->assertEquals( esc_url( get_permalink( $parent_post_id ) ), $_pb_redirect_location );
+		$_pb_redirect_location = null;
 
 		$post_id = $this->factory()->post->create( [ 'post_type' => 'attachment' ] );
 		$this->go_to( "/?attachment_id=$post_id" );
 		\PressbooksBook\Actions\redirect_attachment_page();
 		$this->assertEquals( esc_url( home_url( '/' ) ), $_pb_redirect_location );
+		$_pb_redirect_location = null;
 
+		$user_id = $this->factory()->user->create( [ 'role' => 'author' ] ); // has upload_files capability
+		wp_set_current_user( $user_id );
+		$this->go_to( "/?attachment_id=$post_id" );
+		\PressbooksBook\Actions\redirect_attachment_page();
+		$this->assertEmpty( $_pb_redirect_location );
+		$_pb_redirect_location = null;
+
+		$user_id = $this->factory()->user->create( [ 'role' => 'contributor' ] ); // does not have upload_files capability
+		wp_set_current_user( $user_id );
+		$this->go_to( "/?attachment_id=$post_id" );
+		\PressbooksBook\Actions\redirect_attachment_page();
+		$this->assertEquals( esc_url( home_url( '/' ) ), $_pb_redirect_location );
 		$_pb_redirect_location = null;
 	}
 }
