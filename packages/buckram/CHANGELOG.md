@@ -3,6 +3,7 @@
 ## 1.5.1-dev
 
 ### Patches 
+- Color can be "initial", which is incompatible with border shorthand syntax
 - Center image in table td using CSS (td img.aligncenter)
 - Kindle limits usage of the display:none property for content blocks beyond 10000 characters. If the display:none property is applied to a content block that is bigger than 
   10000 characters, KindleGen returns an error. Fix is to use less display:none, and hope it affects less characters.

@@ -11,7 +11,7 @@ $color-2: $color-1 !default; //highlight color, for titles etc.
 $color-3: $color-1 !default; //second hightlight color, or black
 $color-4: #eee !default; //shaded
 $color-5: $color-4 !default; //2nd shaded
-$color-5: $color-1 !default;
+$color-5: $color-1 !default; // TODO: Declared twice, is this a bug?!
 $color-6: $color-1 !default;
 
 //HTML ELEMENTS COLOR
