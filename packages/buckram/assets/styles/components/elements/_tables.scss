@@ -77,7 +77,8 @@
     }
 
     &.border {
-      border: $table-border-width solid if-map-get($line-color-1, $type);
+      border: $table-border-width solid;
+      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     }
 
     &.no-border,
@@ -100,7 +101,8 @@
     &.grid td,
     &.grid tfoot,
     &.grid thead {
-      border: 1px solid if-map-get($line-color-1, $type);
+      border: 1px solid;
+      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     }
 
     &.alignleft {
@@ -159,7 +161,8 @@
   }
 
   td {
-    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type) if-map-get($line-color-1, $type);
+    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
+    border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     padding: $table-td-padding-top $table-td-padding-right $table-td-padding-bottom $table-td-padding-left;
     @if $type == 'prince' {
       line-height: $table-td-line-height;
@@ -235,7 +238,8 @@
       }
 
       &.border {
-        border: $table-border-width solid if-map-get($line-color-1, $type);
+        border: $table-border-width solid;
+        border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
       }
 
       &.no-border,
@@ -258,7 +262,8 @@
       &.grid td,
       &.grid tfoot,
       &.grid thead {
-        border: 1px solid if-map-get($line-color-1, $type);
+        border: 1px solid;
+        border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
       }
 
       &.alignleft {
@@ -311,7 +316,8 @@
       line-height: $table-td-line-height;
       text-align: $table-td-align;
       vertical-align: middle;
-      border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type) if-map-get($line-color-1, $type);
+      border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
+      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     }
 
     tr {
