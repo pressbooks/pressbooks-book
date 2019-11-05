@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.5.1-dev
+## 1.5.1
 
 ### Patches 
 - Color can be "initial", which is incompatible with border shorthand syntax
