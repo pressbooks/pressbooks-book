@@ -4,7 +4,7 @@
 	"author": "Pressbooks (Book Oven Inc.)",
 	"license": "GPL-3.0-or-later",
 	"engines": {
-		"node": ">= 6.9.4"
+		"node": ">= 10"
 	},
 	"repository": {
 		"type": "git",
@@ -20,19 +20,20 @@
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
-		"lerna": "^3.16.4",
-		"pressbooks-build-tools": "^1.5.0"
+		"lerna": "^3.16.4"
 	},
 	"scripts": {
+		"install-build-tools": "npm install --no-save pressbooks-build-tools",
+		"watch": "npm run production -- --watch",
+		"prod": "npm run production",
+		"build:production": "npm run production",
+		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"bootstrap": "lerna bootstrap",
-		"build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"start": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"rmdist": "rimraf dist",
+		"test": "npm run -s lint",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
 		"lint:scripts": "cross-env node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
-		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
-		"test": "npm run -s lint"
+		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss"
 	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
