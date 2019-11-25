@@ -20,8 +20,7 @@
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
-		"lerna": "^3.16.4",
-		"pressbooks-build-tools": "^1.5.0"
+		"lerna": "^3.16.4"
 	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
