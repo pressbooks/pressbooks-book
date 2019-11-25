@@ -22,18 +22,18 @@
 	"devDependencies": {
 		"lerna": "^3.16.4"
 	},
-  "scripts": {
-    "install-build-tools": "npm install --no-save pressbooks-build-tools",
-    "watch": "npm run production -- --watch",
-    "prod": "npm run production",
-    "build:production": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "rmdist": "rimraf dist",
-    "test": "npm run -s lint",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "cross-env node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
-    "lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss"
-  },
+	"scripts": {
+		"install-build-tools": "npm install --no-save pressbooks-build-tools",
+		"watch": "npm run production -- --watch",
+		"prod": "npm run production",
+		"build:production": "npm run production",
+		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"rmdist": "rimraf dist",
+		"test": "npm run -s lint",
+		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
+		"lint:scripts": "cross-env node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
+		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss"
+	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"globals": {
