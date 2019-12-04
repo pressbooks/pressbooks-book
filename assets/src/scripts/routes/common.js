@@ -87,13 +87,13 @@ export default {
 		} )();
 
 		( function () {
-			// Get all the <h3> headings
+			// Get all the div.reading-header__toc__title elements
 			const headings = document.querySelectorAll(
-				'.dropdown > p, .dropdown > h3'
+				'.dropdown > p, .dropdown > div.reading-header__toc__title'
 			);
 
 			Array.prototype.forEach.call( headings, heading => {
-				// Give each <h3> a toggle button child
+				// Give each div.reading-header__toc__title a toggle button child
 				heading.innerHTML = `
 				<button type="button" aria-expanded="false">
 					${heading.innerHTML}

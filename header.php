@@ -103,7 +103,7 @@ if ( \PressbooksBook\Helpers\social_media_enabled() ) {
 				<nav class="reading-header__inside">
 					<?php if ( is_single() ) { ?>
 					<div class="reading-header__toc dropdown">
-						<h3 class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></h3>
+						<div class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></div>
 						<div class="block-reading-toc" hidden>
 							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 						</div>
