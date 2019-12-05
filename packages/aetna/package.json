@@ -4,6 +4,7 @@
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
+    "install-build-tools": "npm install --no-save pressbooks-build-tools",
     "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:profile": "cross-env NODE_ENV=production webpack --progress --profile --json --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -19,9 +20,7 @@
   "dependencies": {
     "@frctl/fractal": "^1.1.7"
   },
-  "devDependencies": {
-    "pressbooks-build-tools": "^1.4.3"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pressbooks/pressbooks-book.git",
