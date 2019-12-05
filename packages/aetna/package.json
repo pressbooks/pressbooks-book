@@ -14,7 +14,7 @@
     "rmdist": "rimraf public",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"src/components/**/*.js\"",
-    "lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"src/components/**/*.scss\" --syntax scss",
+    "lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
   "dependencies": {
@@ -37,7 +37,10 @@
   },
   "homepage": "https://github.com/pressbooks/aetna#readme",
   "stylelint": {
-    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
+    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
+    "rules": {
+      "no-descending-specificity": null
+    }
   },
   "gitHead": "d8f356c924ea88204d555650f7c9a28a66ba2292"
 }
