@@ -99,18 +99,15 @@ $large: 1200px !default;
 $extra-large: 1650px !default;
 
 $breakpoint-not-small: "screen and (min-width: 30rem)" !default;
-$breakpoint-medium: "screen and (min-width: 30rem) and (max-width: 60rem)"
-  !default;
+$breakpoint-medium: "screen and (min-width: 30rem) and (max-width: 60rem)" !default;
 $breakpoint-large: "screen and (min-width: 60rem)" !default;
 $breakpoint-extra-large: "screen and (min-width: 90rem)" !default;
 $breakpoint-not-large: "screen and (max-width: 59.975rem)" !default;
-$breakpoint-max-content: "screen and (min-width: #{$content-max-width})"
-  !default;
+$breakpoint-max-content: "screen and (min-width: #{$content-max-width})" !default;
 
 $breakpoint-small-to-tablet: "screen and (max-width: 767px)" !default;
 $breakpoint-tablet-and-up: "screen and (min-width: 768px)" !default;
-$breakpoint-tablet-to-large: "screen and (min-width: 768px) and (max-width: 60em)"
-  !default;
+$breakpoint-tablet-to-large: "screen and (min-width: 768px) and (max-width: 60em)" !default;
 
 // Components
 //

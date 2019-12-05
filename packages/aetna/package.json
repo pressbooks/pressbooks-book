@@ -4,6 +4,7 @@
   "description": "Front-end style guide and pattern library for Pressbooks.",
   "style": "assets/styles/aetna.scss",
   "scripts": {
+    "install-build-tools": "npm install --no-save pressbooks-build-tools",
     "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:profile": "cross-env NODE_ENV=production webpack --progress --profile --json --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -13,15 +14,13 @@
     "rmdist": "rimraf public",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "cross-env NODE_ENV=development node_modules/eslint/bin/eslint.js \"src/components/**/*.js\"",
-    "lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"src/components/**/*.scss\" --syntax scss",
+    "lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js \"assets/styles/**/*.scss\" --syntax scss",
     "test": "npm run -s lint"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.1.7"
+    "@frctl/fractal": "^1.2.1"
   },
-  "devDependencies": {
-    "pressbooks-build-tools": "^1.4.3"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pressbooks/pressbooks-book.git",
@@ -38,7 +37,10 @@
   },
   "homepage": "https://github.com/pressbooks/aetna#readme",
   "stylelint": {
-    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
+    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
+    "rules": {
+      "no-descending-specificity": null
+    }
   },
   "gitHead": "d8f356c924ea88204d555650f7c9a28a66ba2292"
 }
