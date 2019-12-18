@@ -99,7 +99,7 @@ export default {
 					${heading.innerHTML}
 					<svg role="img" class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
 				</button>
-			  `;
+				`;
 
 				// Collapse (hide) the content following the heading
 				let content = heading.nextElementSibling;
@@ -116,6 +116,14 @@ export default {
 					btn.setAttribute( 'aria-expanded', ! expanded );
 					// Switch the content's visibility
 					content.hidden = expanded;
+				};
+
+				document.onkeydown = (e) => {
+					// Hide the content when 'esc' key is pressed
+					if ( e.which === 27 ) {
+						btn.setAttribute( 'aria-expanded', false );
+						content.hidden = true;
+					}
 				};
 			} );
 		} )();
