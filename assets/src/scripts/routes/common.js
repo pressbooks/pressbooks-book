@@ -108,25 +108,13 @@ export default {
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
 
-				let listItems = content.children;
+				let links = content.querySelectorAll( 'a' );
 
 				// Handle list items and events
-				Array.prototype.forEach.call( listItems, item => {
-					// Click the anchor tag inside the list item if the list item is clicked.
-					item.onclick = () => {
-						item.firstElementChild.click();
-					};
-
-					// Click the anchor tag inside the list item if the list item is active and 'Enter' is pressed.
-					item.onkeydown = e => {
-						if ( e.which === 13 ) {
-							item.firstElementChild.click();
-						}
-					};
-
+				Array.prototype.forEach.call( links, link => {
 					// Collapse the content menu if user tabs out.
-					item.onblur = e => {
-						if ( item === listItems[listItems.length - 1] && e.relatedTarget.nodeName !== 'LI' ) {
+					link.onblur = e => {
+						if ( link === links[links.length - 1] && e.relatedTarget.nodeName !== 'LI' ) {
 							btn.setAttribute( 'aria-expanded', false );
 							content.hidden = true;
 						}
