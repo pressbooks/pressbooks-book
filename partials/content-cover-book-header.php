@@ -72,7 +72,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 						// }, 10, 2); @codingStandardsIgnoreEnd
 						$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$title}:{$filetype}');", $filetype, $title );
 						?>
-					<li class="dropdown-item" tabindex=0>
+					<li class="dropdown-item" tabindex="0">
 						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
 							<?php echo \Pressbooks\Modules\Export\get_name_from_filetype_slug( $filetype ); ?>
 							<meta itemprop="price" content="$0.00">
@@ -81,7 +81,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 						</a>
 					</li>
 					<?php endforeach; ?>
-					<ul>
+					</ul>
 				</div>
 			<?php } ?>
 				<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>

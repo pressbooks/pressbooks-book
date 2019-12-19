@@ -108,19 +108,49 @@ export default {
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
 
-				btn.onclick = () => {
+				let listItems = content.children;
+
+				// Handle list items and events
+				Array.prototype.forEach.call( listItems, item => {
+					// Click the anchor tag inside the list item if the list item is clicked.
+					item.onclick = () => {
+						item.firstElementChild.click();
+					};
+
+					// Click the anchor tag inside the list item if the list item is active and 'Enter' is pressed.
+					item.onkeydown = e => {
+						if ( e.which === 13 ) {
+							item.firstElementChild.click();
+						}
+					};
+
+					// Collapse the content menu if user tabs out.
+					item.onblur = e => {
+						if ( item === listItems[listItems.length - 1] && e.relatedTarget.nodeName !== 'LI' ) {
+							btn.setAttribute( 'aria-expanded', false );
+							content.hidden = true;
+						}
+					};
+				} );
+
+				document.onclick = e => {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
 
-					// Switch the state
-					btn.setAttribute( 'aria-expanded', ! expanded );
-					// Switch the content's visibility
-					content.hidden = expanded;
+					if ( btn === e.target ) {
+						// Switch the state
+						btn.setAttribute( 'aria-expanded', ! expanded );
+						// Switch the content's visibility
+						content.hidden = expanded;
+					} else {
+						btn.setAttribute( 'aria-expanded', false );
+						content.hidden = true;
+					}
 				};
 
-				document.onkeydown = (e) => {
-					// Hide the content when 'esc' key is pressed
-					if ( e.which === 27 ) {
+				document.onkeydown = e => {
+					// Hide the content when 'Esc' key is pressed (and content is showing)
+					if ( e.which === 27 && ! content.hidden ) {
 						btn.setAttribute( 'aria-expanded', false );
 						content.hidden = true;
 					}
