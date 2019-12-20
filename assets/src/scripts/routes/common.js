@@ -114,7 +114,7 @@ export default {
 				Array.prototype.forEach.call( links, link => {
 					// Collapse the content menu if user tabs out.
 					link.onblur = e => {
-						if ( link === links[links.length - 1] && e.relatedTarget.nodeName !== 'LI' ) {
+						if ( link === links[links.length - 1] && e.relatedTarget.parentNode.nodeName !== 'LI' ) {
 							btn.setAttribute( 'aria-expanded', false );
 							content.hidden = true;
 						}
