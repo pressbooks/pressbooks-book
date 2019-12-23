@@ -99,7 +99,7 @@ export default {
 					${heading.innerHTML}
 					<svg role="img" class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
 				</button>
-			  `;
+				`;
 
 				// Collapse (hide) the content following the heading
 				let content = heading.nextElementSibling;
@@ -108,14 +108,40 @@ export default {
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
 
-				btn.onclick = () => {
+				let links = content.querySelectorAll( 'a' );
+
+				// Handle list items and events
+				Array.prototype.forEach.call( links, link => {
+					// Collapse the content menu if user tabs out.
+					link.onblur = e => {
+						if ( link === links[links.length - 1] && e.relatedTarget.parentNode.nodeName !== 'LI' ) {
+							btn.setAttribute( 'aria-expanded', false );
+							content.hidden = true;
+						}
+					};
+				} );
+
+				document.onclick = e => {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
 
-					// Switch the state
-					btn.setAttribute( 'aria-expanded', ! expanded );
-					// Switch the content's visibility
-					content.hidden = expanded;
+					if ( btn === e.target ) {
+						// Switch the state
+						btn.setAttribute( 'aria-expanded', ! expanded );
+						// Switch the content's visibility
+						content.hidden = expanded;
+					} else {
+						btn.setAttribute( 'aria-expanded', false );
+						content.hidden = true;
+					}
+				};
+
+				document.onkeydown = e => {
+					// Hide the content when 'Esc' key is pressed (and content is showing)
+					if ( e.which === 27 && ! content.hidden ) {
+						btn.setAttribute( 'aria-expanded', false );
+						content.hidden = true;
+					}
 				};
 			} );
 		} )();

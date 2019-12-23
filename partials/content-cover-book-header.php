@@ -81,7 +81,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 						</a>
 					</li>
 					<?php endforeach; ?>
-					<ul>
+					</ul>
 				</div>
 			<?php } ?>
 				<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
