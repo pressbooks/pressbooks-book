@@ -112,6 +112,30 @@ export default {
 						window.location = url;
 					}
 				} );
+
+				// Set fluid width for mobile videos
+				( function () {
+					let $allVideos = $( 'iframe[src*=\'//player.vimeo.com\'], iframe[src*=\'//www.youtube.com\']' );
+					let $fluidEl = $( '#content' );
+
+					$allVideos.each( function () {
+						$( this )
+							.data( 'aspectRatio', this.height / this.width )
+							.removeAttr( 'height' )
+							.removeAttr( 'width' );
+					} );
+
+					$( window ).resize( function () {
+						let newWidth = $fluidEl.width();
+
+						$allVideos.each( function () {
+							let $el = $( this );
+							$el
+								.width( newWidth )
+								.height( newWidth * $el.data( 'aspectRatio' ) );
+						} );
+					} ).resize();
+				} )();
 			} );
 		} );
 	},
