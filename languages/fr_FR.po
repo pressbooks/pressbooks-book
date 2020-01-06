@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2020 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Antonio Devís <colomet@hotmail.com>, 2017
@@ -11,9 +11,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.9.0\n"
+"Project-Id-Version: McLuhan 2.9.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2019-12-10T18:21:52+00:00\n"
+"POT-Creation-Date: 2020-01-06T20:14:41+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
