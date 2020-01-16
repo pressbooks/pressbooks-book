@@ -140,6 +140,23 @@ export default {
 					}
 				} );
 
+				document.onclick = e => {
+					const downloadClass = 'book-header__cover__downloads';
+					const $target = jQuery( e.target );
+					const $downloadButton = jQuery( `.${downloadClass}` ).find( 'button' );
+
+					if ( $downloadButton.length === 0
+						|| $target.closest( 'div' ).hasClass( downloadClass )
+						|| $target.hasClass( 'dropdown-item' ) ) {
+						return;
+					}
+
+					if ( $downloadButton.attr( 'aria-expanded' ) === 'true' ) {
+						btn.setAttribute( 'aria-expanded', false );
+						content.hidden = true;
+					}
+				};
+
 				document.onkeydown = e => {
 					// Hide the content when 'Esc' key is pressed (and content is showing)
 					if ( e.which === 27 && ! content.hidden ) {
