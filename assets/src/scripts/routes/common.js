@@ -107,6 +107,7 @@ export default {
 
 				// Assign the button
 				let btn = heading.querySelector( 'button' );
+				let svg = heading.querySelector( 'button > .arrow' );
 
 				let links = content.querySelectorAll( 'a' );
 
@@ -121,16 +122,36 @@ export default {
 					};
 				} );
 
-				document.onclick = e => {
+				let $svgArrow = jQuery( 'button[aria-expanded] > svg' );
+				let $toggleButton = jQuery( 'button[aria-expanded]' );
+
+				jQuery( $toggleButton, $svgArrow ).click( function ( e ) {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
 
-					if ( btn === e.target ) {
+					if ( btn === e.target || svg === e.target ) {
 						// Switch the state
 						btn.setAttribute( 'aria-expanded', ! expanded );
 						// Switch the content's visibility
 						content.hidden = expanded;
 					} else {
+						btn.setAttribute( 'aria-expanded', false );
+						content.hidden = true;
+					}
+				} );
+
+				document.onclick = e => {
+					const downloadClass = 'book-header__cover__downloads';
+					const $target = jQuery( e.target );
+					const $downloadButton = jQuery( `.${downloadClass}` ).find( 'button' );
+
+					if ( $downloadButton.length === 0
+						|| $target.closest( 'div' ).hasClass( downloadClass )
+						|| $target.hasClass( 'dropdown-item' ) ) {
+						return;
+					}
+
+					if ( $downloadButton.attr( 'aria-expanded' ) === 'true' ) {
 						btn.setAttribute( 'aria-expanded', false );
 						content.hidden = true;
 					}
