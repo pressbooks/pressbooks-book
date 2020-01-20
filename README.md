@@ -41,7 +41,7 @@ Then, from the GitHub Updater interface, navigate to the "Install Theme" tab. En
 
 ## Changelog
 
-### 2.9.1
+### 2.9.2
 
-* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.9.1
+* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.9.2
 * Full release history available at: https://github.com/pressbooks/pressbooks-book/releases
