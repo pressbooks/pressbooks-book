@@ -77,6 +77,8 @@ $light: #eee;
 
 .toc [class*="--empty"] > .toc__title {
   width: 100%;
+  text-indent: -1.18rem;
+  padding-left: 1.18rem;
 }
 
 .toc__title {
