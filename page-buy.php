@@ -47,7 +47,7 @@ get_header(); ?>
 
 						<?php if ( isset( $urls['otherservice'] ) && $urls['otherservice'] ) : ?>
 							<?php /* translators: %1$s: url to purchase */ ?>
-						<li class="buy-other"><a href="<?php print $urls['otherservice']; ?>" class="bookstore-other-link logo"><?php _e( 'Elsewhere', 'pressbooks-book' ); ?></a><?php _e( 'Purchase here:', 'pressbooks-book' ); ?> <a href="<?php print $urls['otherservice']; ?>"><?php print $urls['otherservice']; ?></a></li>
+						<li class="buy-other"><?php _e( 'Purchase here:', 'pressbooks-book' ); ?> <a href="<?php print $urls['otherservice']; ?>"><?php print $urls['otherservice']; ?></a></li>
 						<?php endif; ?>
 						</ul>
 				<?php endif; ?>
