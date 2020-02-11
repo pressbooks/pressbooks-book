@@ -68,6 +68,8 @@ $light: #eee;
 
 .toc [class*="--full"] > .toc__title > span {
   width: calc(100% - 2.75rem);
+  text-indent: -1.18rem;
+  padding-left: 1.68rem;
 }
 
 .toc [class*="--full"] .toc__subsections {
