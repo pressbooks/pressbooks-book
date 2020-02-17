@@ -286,3 +286,43 @@ function redirect_attachment_page() {
 		}
 	}
 }
+
+/**
+ * Add H5P listing page
+ * Fire on the plugin initialization.
+ */
+function register_h5p_listing_page() {
+	global $wpdb;
+
+	$post_name = 'h5p-listing';
+	$post_title = __( 'H5P listing', 'pressbooks' );
+	$post_type = 'page';
+	$user_id = 1;
+
+	$data = [
+		'post_title' => $post_title,
+		'post_name' => $post_name,
+		'post_type' => $post_type,
+		'post_status' => 'publish',
+		'comment_status' => 'closed',
+		'ping_status' => 'closed',
+		'post_content' => '<!-- Here be dragons. -->',
+		'post_author' => $user_id,
+		'tags_input' => __( 'Default Data', 'pressbooks' ),
+	];
+
+	$exists = $wpdb->get_var(
+		$wpdb->prepare(
+			"SELECT ID FROM {$wpdb->posts} WHERE post_title = %s AND post_type = %s AND post_name = %s AND post_status = 'publish' ", [
+				$post_title,
+				$post_type,
+				$post_name,
+			]
+		)
+	);
+
+	if ( empty( $exists ) ) {
+		wp_insert_post( $data, true );
+	}
+}
+
