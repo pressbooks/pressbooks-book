@@ -227,7 +227,7 @@ export default {
 					$( this ).closest( 'tr' ).next( this ).show( 'slow' );
 					$( this ).text( $( this ).attr( 'hide-activity-text' ) );
 				} else {
-					$( this ).closest( 'tr' ).next( this ).hide( 'slow' );
+					$( this ).closest( 'tr' ).next( this ).hide();
 					$( this ).text( $( this ).attr( 'show-activity-text' ) );
 				}
 			} );
