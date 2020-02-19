@@ -217,7 +217,7 @@ export default {
 		jQuery( $ => {
 			const $h5pActivities = $( '.h5p-row-item' );
 
-			$h5pActivities.click( function() {
+			$h5pActivities.click( function () {
 				$( '.h5p-activity-container' ).hide();
 				$( this ).closest( 'tr' ).next( '.h5p-activity-container' ).show( 'slow' );
 			} );
