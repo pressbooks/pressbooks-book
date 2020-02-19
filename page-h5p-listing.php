@@ -5,8 +5,7 @@ get_header(); ?>
 			<h2 class="page-title"><?php echo __( 'H5P activities list', 'pressbooks-book' ); ?></h2>
 
 			<div class="float-right">
-					<?php echo sprintf( '<button type="button" id="h5p-show-all" class="btn btn-secondary btn-sm">%s</button>', __( 'Show all', 'pressbooks-book' ) ); ?>
-					<?php echo sprintf( '<button type="button" id="h5p-hide-all" class="btn btn-secondary btn-sm">%s</button>', __( 'Hide all', 'pressbooks-book' ) ); ?>
+					<?php echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" ></button>', __( 'Show all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ) ); ?>
 			</div>
 
 			<br /><br />
@@ -30,9 +29,9 @@ get_header(); ?>
 					echo sprintf( '<td>%s</td>', $activity['ID'] );
 					echo sprintf( '<td>%s</td>', $activity['title'] );
 					echo sprintf( '<td>%s</td>', $activity['activity_type'] );
-					echo sprintf( '<td><button h5p-id="%s" type="button" class="btn btn-secondary btn-sm h5p-row-item">%s</button></td>', $activity['ID'], __( 'View activity', 'pressbooks-book' ) );
+					echo sprintf( '<td><button h5p-id="%s" type="button" show-activity-text="%s" hide-activity-text="%s" class="btn btn-secondary btn-sm h5p-row-item"></button></td>', $activity['ID'], __( 'View activity', 'pressbooks-book' ), __( 'Hide activity', 'pressbooks-book' ) );
 					echo '</tr>';
-					echo sprintf( '<tr class="h5p-activity-container" style="display: none;"><td colspan="4">%s</td></tr>', do_shortcode( $short_code ) );
+					echo sprintf( '<tr class="h5p-activity-container"><td colspan="4">%s</td></tr>', do_shortcode( $short_code ) );
 				}
 				?>
 				</tbody>
