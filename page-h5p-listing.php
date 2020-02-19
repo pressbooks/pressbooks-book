@@ -24,8 +24,8 @@ get_header(); ?>
 				<?php
 				$activities = \PressbooksBook\Helpers\get_h5p_activities();
 
-				foreach( $activities as $activity ) {
-					$short_code = sprintf( '[h5p id="%s"]', $activity["ID"] );
+				foreach ( $activities as $activity ) {
+					$short_code = sprintf( '[h5p id="%s"]', $activity['ID'] );
 					echo '<tr>';
 					echo sprintf( '<td>%s</td>', $activity['ID'] );
 					echo sprintf( '<td>%s</td>', $activity['title'] );

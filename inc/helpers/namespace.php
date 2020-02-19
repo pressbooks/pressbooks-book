@@ -669,10 +669,12 @@ function get_h5p_activities() {
 
 	$data = get_transient( $cache_key );
 
-	if ( ! $data  ) {
-		$data = $wpdb->get_results("SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
+	if ( ! $data ) {
+		$data = $wpdb->get_results(
+			"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
 					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID;
-				", ARRAY_A);
+				", ARRAY_A
+		);
 
 		set_transient( $cache_key, $data, 3600 );
 	}

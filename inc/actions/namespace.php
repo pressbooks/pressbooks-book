@@ -294,7 +294,7 @@ function redirect_attachment_page() {
  */
 function enqueue_h5p_listing_bootstrap_files() {
 	if ( is_page( 'h5p-listing' ) ) {
-		wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', false, null  );
+		wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', false, null );
 	}
 }
 
