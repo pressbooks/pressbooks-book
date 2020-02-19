@@ -65,7 +65,7 @@ class ActionsTest extends WP_UnitTestCase {
 
 	function test_register_h5p_listing_page() {
 		$result = register_h5p_listing_page();
-		$this->assertIsInt( $result );
+		$this->assertInternalType( 'int', $result );
 		$this->assertGreaterThan( 0, $result );
 	}
 
