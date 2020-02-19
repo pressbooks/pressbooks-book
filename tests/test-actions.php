@@ -6,10 +6,13 @@
  */
 
 use function \PressbooksBook\Actions\enqueue_assets;
+use function \PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files;
+use function \PressbooksBook\Actions\register_h5p_listing_page;
 use function \PressbooksBook\Actions\render_lightbox_setting_field;
 
 /**
  * Actions test case.
+ * @group actions
  */
 class ActionsTest extends WP_UnitTestCase {
 	function test_enqueue_assets() {
@@ -58,5 +61,16 @@ class ActionsTest extends WP_UnitTestCase {
 		\PressbooksBook\Actions\redirect_attachment_page();
 		$this->assertEquals( esc_url( home_url( '/' ) ), $_pb_redirect_location );
 		$_pb_redirect_location = null;
+	}
+
+	function test_register_h5p_listing_page() {
+		$result = register_h5p_listing_page();
+		$this->assertInternalType( 'int', $result );
+		$this->assertGreaterThan( 0, $result );
+	}
+
+	function test_enqueue_h5p_listing_bootstrap_files() {
+		enqueue_h5p_listing_bootstrap_files( 'h5p-listing' );
+		$this->assertTrue( wp_style_is( 'bootstrap-css' ) );
 	}
 }

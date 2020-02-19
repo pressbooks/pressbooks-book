@@ -213,6 +213,39 @@ export default {
 				};
 			} );
 		} )();
+
+		jQuery( $ => {
+			const $h5pActivities = $( '.h5p-row-item' );
+			const $activityContainer = $( '.h5p-activity-container' );
+			$activityContainer.hide();
+			$( '#h5p-show-hide' ).text( $( '#h5p-show-hide' ).attr( 'show-all-text' ) );
+			$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
+
+			$h5pActivities.click( function () {
+				if ( $( this ).text() === $( this ).attr( 'show-activity-text' ) ) {
+					$activityContainer.hide();
+					$( this ).closest( 'tr' ).next( this ).show( 'slow' );
+					$( this ).text( $( this ).attr( 'hide-activity-text' ) );
+				} else {
+					$( this ).closest( 'tr' ).next( this ).hide();
+					$( this ).text( $( this ).attr( 'show-activity-text' ) );
+				}
+			} );
+
+			$( '#h5p-show-hide' ).click( function () {
+				if ( $( this ).text() === $( this ).attr( 'show-all-text' ) ) {
+					$activityContainer.show();
+					$( this ).text( $( this ).attr( 'hide-all-text' ) );
+					$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'hide-activity-text' ) );
+				} else {
+					$activityContainer.hide();
+					$( this ).text( $( this ).attr( 'show-all-text' ) );
+					$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
+				}
+			} );
+
+		} );
+
 	},
 	finalize() {
 		// JavaScript to be fired on all pages, after page specific JS is fired
