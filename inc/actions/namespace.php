@@ -292,8 +292,10 @@ function redirect_attachment_page() {
  *
  * @since 2.9.2
  */
-function enqueue_h5p_listing_bootstrap_files() {
-	if ( is_page( 'h5p-listing' ) ) {
+function enqueue_h5p_listing_bootstrap_files( $page = '' ) {
+	$slug = 'h5p-listing';
+
+	if ( is_page( $slug ) || $slug === $page ) {
 		wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', false, null );
 	}
 }
@@ -335,7 +337,9 @@ function register_h5p_listing_page() {
 	);
 
 	if ( empty( $exists ) ) {
-		wp_insert_post( $data, true );
+		return wp_insert_post( $data, true );
 	}
+
+	return false;
 }
 
