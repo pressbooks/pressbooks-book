@@ -288,8 +288,21 @@ function redirect_attachment_page() {
 }
 
 /**
+ * Enqueue bootstrap assents for H5P listing page
+ *
+ * @since 2.9.2
+ */
+function enqueue_h5p_listing_bootstrap_files() {
+	if ( is_page( 'h5p-listing' ) ) {
+		wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', false, null  );
+	}
+}
+
+/**
  * Add H5P listing page
  * Fire on the plugin initialization.
+ *
+ * @since 2.9.2
  */
 function register_h5p_listing_page() {
 	global $wpdb;
