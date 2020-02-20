@@ -284,3 +284,60 @@ function redirect_attachment_page() {
 		}
 	}
 }
+
+/**
+ * Enqueue bootstrap assents for H5P listing page
+ *
+ * @since 2.9.2
+ */
+function enqueue_h5p_listing_bootstrap_files( $page = '' ) {
+	$slug = 'h5p-listing';
+
+	if ( is_page( $slug ) || $slug === $page ) {
+		wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', false, null );
+	}
+}
+
+/**
+ * Add H5P listing page
+ * Fire on the plugin initialization.
+ *
+ * @since 2.9.2
+ */
+function register_h5p_listing_page() {
+	global $wpdb;
+
+	$post_name = 'h5p-listing';
+	$post_title = __( 'H5P listing', 'pressbooks' );
+	$post_type = 'page';
+	$user_id = 1;
+
+	$data = [
+		'post_title' => $post_title,
+		'post_name' => $post_name,
+		'post_type' => $post_type,
+		'post_status' => 'publish',
+		'comment_status' => 'closed',
+		'ping_status' => 'closed',
+		'post_content' => '<!-- Here be dragons. -->',
+		'post_author' => $user_id,
+		'tags_input' => __( 'Default Data', 'pressbooks' ),
+	];
+
+	$exists = $wpdb->get_var(
+		$wpdb->prepare(
+			"SELECT ID FROM {$wpdb->posts} WHERE post_title = %s AND post_type = %s AND post_name = %s AND post_status = 'publish' ", [
+				$post_title,
+				$post_type,
+				$post_name,
+			]
+		)
+	);
+
+	if ( empty( $exists ) ) {
+		return wp_insert_post( $data, true );
+	}
+
+	return false;
+}
+

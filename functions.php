@@ -49,6 +49,8 @@ foreach ( $includes as $include ) {
 }
 require get_template_directory() . '/inc/intervention.php';
 
+add_action( 'init', '\PressbooksBook\Actions\register_h5p_listing_page' );
+add_action( 'wp_enqueue_scripts', '\PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files' );
 add_action( 'pb_cache_delete', '\PressbooksBook\Actions\delete_cached_contents' );
 add_action( 'wp_enqueue_scripts', '\PressbooksBook\Actions\enqueue_assets' );
 add_action( 'wp_head', '\Pressbooks\Metadata\add_json_ld_metadata' );

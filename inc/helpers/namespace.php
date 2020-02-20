@@ -654,3 +654,30 @@ function is_buckram() {
 	}
 	return false;
 }
+
+/**
+ * Get all H5P activities in the book
+ * Results are cached for 1 hour
+ *
+ * @since 2.9.2
+ *
+ * @return bool
+ */
+function get_h5p_activities() {
+	global $wpdb;
+	$cache_key = 'h5p_book_activities';
+
+	$data = get_transient( $cache_key );
+
+	if ( ! $data ) {
+		$data = $wpdb->get_results(
+			"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
+					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID;
+				", ARRAY_A
+		);
+
+		set_transient( $cache_key, $data, 3600 );
+	}
+
+	return $data;
+}
