@@ -6,47 +6,6 @@ export default {
 		document.body.classList.remove( 'no-js' );
 		document.body.classList.add( 'js' );
 
-		// Font Size handler
-		( function () {
-			const fontSizeButton = document.querySelector( '.a11y-fontsize' );
-
-			if ( Cookies.get( 'a11y-larger-fontsize' ) === '1' ) {
-				document.documentElement.classList.add( 'fontsize' );
-				fontSizeButton.setAttribute( 'aria-pressed', true );
-				fontSizeButton.textContent = pressbooksBook.decrease_label;
-			}
-
-			fontSizeButton.onclick = () => {
-				// Cast the state as a boolean
-				let pressed = fontSizeButton.getAttribute( 'aria-pressed' ) === 'true' || false;
-
-				// Switch the state
-				fontSizeButton.setAttribute( 'aria-pressed', ! pressed );
-
-				if ( ! pressed ) {
-					document.documentElement.classList.add( 'fontsize' );
-					fontSizeButton.setAttribute( 'title', pressbooksBook.decrease_label );
-					fontSizeButton.textContent = pressbooksBook.decrease_label;
-					document.querySelector( '.nav-reading' ).setAttribute( 'style', '' );
-					Cookies.set( 'a11y-larger-fontsize', '1', {
-						expires: 365,
-						path: pressbooksBook.home_path,
-					} );
-					return false;
-				} else {
-					document.documentElement.classList.remove( 'fontsize' );
-					fontSizeButton.setAttribute( 'title', pressbooksBook.increase_label );
-					fontSizeButton.textContent = pressbooksBook.increase_label;
-					document.querySelector( '.nav-reading' ).setAttribute( 'style', '' );
-					Cookies.set( 'a11y-larger-fontsize', '0', {
-						expires: 365,
-						path: pressbooksBook.home_path,
-					} );
-					return false;
-				}
-			};
-		} )();
-
 		( function () {
 			// document.addEventListener( 'DOMContentLoaded', function () {
 			// Sets a -1 tabindex to ALL sections for .focus()-ing

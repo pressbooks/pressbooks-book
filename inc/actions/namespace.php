@@ -62,8 +62,6 @@ function enqueue_assets() {
 		'pressbooks/book',
 		'pressbooksBook',
 		[
-			'increase_label' => __( 'Increase Font Size', 'pressbooks-book' ),
-			'decrease_label' => __( 'Decrease Font Size', 'pressbooks-book' ),
 			'home_path' => ( is_subdomain_install() ) ? '/' : str_replace( network_home_url( '/' ), '/', home_url( '/' ) ),
 			'comparison_loading' => __( 'Comparison loading…', 'pressbooks-book' ),
 			'comparison_loaded' => __( 'Comparison loaded.', 'pressbooks-book' ),
