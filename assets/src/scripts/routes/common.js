@@ -185,6 +185,7 @@ export default {
 					$activityContainer.hide();
 					$( this ).closest( 'tr' ).next( this ).show( 'slow' );
 					$( this ).text( $( this ).attr( 'hide-activity-text' ) );
+					window.dispatchEvent( new Event( 'resize' ) );
 				} else {
 					$( this ).closest( 'tr' ).next( this ).hide();
 					$( this ).text( $( this ).attr( 'show-activity-text' ) );
@@ -196,6 +197,7 @@ export default {
 					$activityContainer.show();
 					$( this ).text( $( this ).attr( 'hide-all-text' ) );
 					$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'hide-activity-text' ) );
+					window.dispatchEvent( new Event( 'resize' ) );
 				} else {
 					$activityContainer.hide();
 					$( this ).text( $( this ).attr( 'show-all-text' ) );

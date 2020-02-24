@@ -676,7 +676,7 @@ function get_h5p_activities() {
 				", ARRAY_A
 		);
 
-		set_transient( $cache_key, $data, 3600 );
+		set_transient( $cache_key, $data, 900 );
 	}
 
 	return $data;
