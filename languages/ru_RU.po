@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.9.3\n"
+"Project-Id-Version: McLuhan 2.10.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2020-02-17T20:51:03+00:00\n"
+"POT-Creation-Date: 2020-02-21T23:05:47+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Antonio Devís <colomet@hotmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/pressbooks/teams/9194/ru/)\n"
@@ -132,35 +132,27 @@ msgstr ""
 msgid "Buy"
 msgstr "Купить"
 
-#: inc/actions/namespace.php:65 partials/content-accessibility-toolbar.php:4
-msgid "Increase Font Size"
-msgstr "Увеличить размер шрифта"
-
 #: inc/actions/namespace.php:66
-msgid "Decrease Font Size"
-msgstr "Уменьшить размер шрифта"
-
-#: inc/actions/namespace.php:68
 msgid "Comparison loading…"
 msgstr "Загрузка сравнения..."
 
-#: inc/actions/namespace.php:69
+#: inc/actions/namespace.php:67
 msgid "Comparison loaded."
 msgstr "Сравнение загружено."
 
-#: inc/actions/namespace.php:70
+#: inc/actions/namespace.php:68
 msgid "The original chapter could not be loaded."
 msgstr "Оригинальная глава не может быть загружена."
 
-#: inc/actions/namespace.php:71
+#: inc/actions/namespace.php:69
 msgid "Toggle contents of"
 msgstr ""
 
-#: inc/actions/namespace.php:219
+#: inc/actions/namespace.php:217
 msgid "Enable Image Lightbox"
 msgstr "Включить всплывающее окно с изображением"
 
-#: inc/actions/namespace.php:224
+#: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
 msgstr "Показать связанные изображения во всплывающем окне"
 
@@ -414,6 +406,42 @@ msgstr ""
 msgid "Purchase here:"
 msgstr "Приобрести здесь:"
 
+#: page-h5p-listing.php:5
+msgid "H5P activities list"
+msgstr ""
+
+#: page-h5p-listing.php:8
+msgid "Show all"
+msgstr ""
+
+#: page-h5p-listing.php:8
+msgid "Hide all"
+msgstr ""
+
+#: page-h5p-listing.php:16
+msgid "ID"
+msgstr ""
+
+#: page-h5p-listing.php:17 partials/content-cover-metadata.php:8
+msgid "Title"
+msgstr "Заголовок"
+
+#: page-h5p-listing.php:18
+msgid "Activity type"
+msgstr ""
+
+#: page-h5p-listing.php:19
+msgid "View"
+msgstr ""
+
+#: page-h5p-listing.php:32
+msgid "View activity"
+msgstr ""
+
+#: page-h5p-listing.php:32
+msgid "Hide activity"
+msgstr ""
+
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:69
 msgid "Edit"
@@ -498,10 +526,6 @@ msgstr "Нажмите, чтобы получить более подробну�
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
 msgstr "Метаданные"
-
-#: partials/content-cover-metadata.php:8
-msgid "Title"
-msgstr "Заголовок"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
