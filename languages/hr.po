@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.9.3\n"
+"Project-Id-Version: McLuhan 2.10.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2020-02-17T20:51:03+00:00\n"
+"POT-Creation-Date: 2020-02-21T23:05:47+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -136,35 +136,27 @@ msgstr "Idi na naslovnicu za %s"
 msgid "Buy"
 msgstr "Kupi"
 
-#: inc/actions/namespace.php:65 partials/content-accessibility-toolbar.php:4
-msgid "Increase Font Size"
-msgstr "Povećaj veličinu pisma"
-
 #: inc/actions/namespace.php:66
-msgid "Decrease Font Size"
-msgstr "Smanji veličinu pisma"
-
-#: inc/actions/namespace.php:68
 msgid "Comparison loading…"
 msgstr "Usporedba se učitava..."
 
-#: inc/actions/namespace.php:69
+#: inc/actions/namespace.php:67
 msgid "Comparison loaded."
 msgstr "Usporedba učitana."
 
-#: inc/actions/namespace.php:70
+#: inc/actions/namespace.php:68
 msgid "The original chapter could not be loaded."
 msgstr "Originalno poglavlje nije moglo biti učitano."
 
-#: inc/actions/namespace.php:71
+#: inc/actions/namespace.php:69
 msgid "Toggle contents of"
 msgstr "Prebaci sadržaj od"
 
-#: inc/actions/namespace.php:219
+#: inc/actions/namespace.php:217
 msgid "Enable Image Lightbox"
 msgstr "Omogući Lightbox za slike"
 
-#: inc/actions/namespace.php:224
+#: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
 msgstr "Prikaži povezane slike u Lightbox-u"
 
@@ -407,6 +399,42 @@ msgstr "Purchase on  <a href=\"%1$s\">apple.com</a>"
 msgid "Purchase here:"
 msgstr "Kupite ovdje:"
 
+#: page-h5p-listing.php:5
+msgid "H5P activities list"
+msgstr ""
+
+#: page-h5p-listing.php:8
+msgid "Show all"
+msgstr ""
+
+#: page-h5p-listing.php:8
+msgid "Hide all"
+msgstr ""
+
+#: page-h5p-listing.php:16
+msgid "ID"
+msgstr ""
+
+#: page-h5p-listing.php:17 partials/content-cover-metadata.php:8
+msgid "Title"
+msgstr "Naslov"
+
+#: page-h5p-listing.php:18
+msgid "Activity type"
+msgstr ""
+
+#: page-h5p-listing.php:19
+msgid "View"
+msgstr ""
+
+#: page-h5p-listing.php:32
+msgid "View activity"
+msgstr ""
+
+#: page-h5p-listing.php:32
+msgid "Hide activity"
+msgstr ""
+
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:69
 msgid "Edit"
@@ -495,10 +523,6 @@ msgstr "Kliknite za više informacija"
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
 msgstr "Meta podaci"
-
-#: partials/content-cover-metadata.php:8
-msgid "Title"
-msgstr "Naslov"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
