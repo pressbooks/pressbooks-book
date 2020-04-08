@@ -68,7 +68,7 @@
 .back-matter {
   color: if-map-get($body-color, $type);
 
-  a, .show-answer {
+  a {
     color: if-map-get($link-color, $type);
   }
 
