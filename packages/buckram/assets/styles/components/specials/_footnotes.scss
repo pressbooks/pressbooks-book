@@ -145,3 +145,9 @@
     text-indent: 0;
   }
 }
+
+#content {
+  .footnotes, .before-footnotes, .media-attributions {
+    clear: both;
+  }
+}
