@@ -26,7 +26,7 @@
   .footnote {
     display: prince-footnote;
     padding-left: $footnote-padding-left;
-    margin-left: $footnote-blockquote-margin-left;
+    margin-left: 0;
     font-family: if-map-get($footnote-font-family, $type);
     font-size: if-map-get($footnote-font-size, $type);
     font-weight: if-map-get($footnote-font-weight, $type);
