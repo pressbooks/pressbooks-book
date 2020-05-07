@@ -64,6 +64,9 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'FreeSerif' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'FreeSerif';
+  } @else if unquote($font) == 'Source Sans Pro' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'
   }
 }
 
