@@ -1,0 +1,627 @@
+# Copyright (C) 2020 Pressbooks (Book Oven Inc.)
+# This file is distributed under the GPL v3.0 or later.
+# Translators:
+# Antonio Devís <colomet@hotmail.com>, 2017
+# Robert Szmurlo <robert.szmurlo@ee.pw.edu.pl>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: McLuhan 2.10.0\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
+"POT-Creation-Date: 2020-02-21T23:05:47+00:00\n"
+"PO-Revision-Date: 2017-06-22 17:45+0000\n"
+"Last-Translator: Robert Szmurlo <robert.szmurlo@ee.pw.edu.pl>, 2020\n"
+"Language-Team: Polish (https://www.transifex.com/pressbooks/teams/9194/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Domain: pressbooks-book\n"
+"X-Generator: WP-CLI 2.3.0\n"
+
+#. Theme Name of the theme
+msgid "McLuhan"
+msgstr "Czytaj"
+
+#. Theme URI of the theme
+msgid "https://pressbooks.com/themes/pressbooks-book"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"This theme is named after Canadian media theorist Marshall McLuhan, who "
+"coined the phrase “the medium is the message.” It is designed for academic "
+"writing and is also suitable for fiction. Headings are set in Cormorant "
+"Garamond, and body type is set in Lora."
+msgstr ""
+
+#. Author of the theme
+msgid "Pressbooks (Book Oven Inc.)"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://pressbooks.com"
+msgstr ""
+
+#: 404.php:2
+msgid "Oops! That content can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:3
+msgid "It looks like nothing was found at this location. Try a search?"
+msgstr ""
+
+#: comments.php:2
+msgid "Feedback/Errata"
+msgstr ""
+
+#: comments.php:6
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "Ten post jest chroniony hasłem. Podaj hasło, aby zobaczyć komentarze."
+
+#: comments.php:36 comments.php:47
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starsze komentarze"
+
+#: comments.php:37 comments.php:48
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nowsze komentarze <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:56
+msgid "Comments are closed."
+msgstr "Komentarze zostały wyłączone."
+
+#: comments.php:64
+msgid "Submit"
+msgstr "Prześlij"
+
+#. translators: %s: Pressbooks
+#: footer.php:64
+msgid "Powered by %s"
+msgstr ""
+
+#: footer.php:66
+msgid "Guides and Tutorials"
+msgstr ""
+
+#: footer.php:73 footer.php:75
+msgid "Pressbooks on YouTube"
+msgstr ""
+
+#: footer.php:77 footer.php:81
+msgid "Pressbooks on Twitter"
+msgstr ""
+
+#: functions.php:16
+msgid "Dependencies Missing"
+msgstr ""
+
+#: functions.php:17
+msgid "You must run <code>composer install</code> from the McLuhan directory."
+msgstr ""
+
+#: functions.php:28
+msgid "Cannot find Pressbooks install."
+msgstr ""
+
+#: header.php:63
+msgid "Skip to content"
+msgstr ""
+
+#. translators: %s: name of network
+#: header.php:82
+msgid "Logo for %s"
+msgstr ""
+
+#: header.php:93
+msgid "Toggle Menu"
+msgstr ""
+
+#: header.php:106 index.php:14 partials/content-cover-toc.php:3
+msgid "Contents"
+msgstr "Spis treści"
+
+#. translators: %s: the title of the book
+#: header.php:115
+msgid "Go to the cover page of %s"
+msgstr ""
+
+#: header.php:119 inc/helpers/namespace.php:206
+msgid "Buy"
+msgstr "Kup"
+
+#: inc/actions/namespace.php:66
+msgid "Comparison loading…"
+msgstr ""
+
+#: inc/actions/namespace.php:67
+msgid "Comparison loaded."
+msgstr ""
+
+#: inc/actions/namespace.php:68
+msgid "The original chapter could not be loaded."
+msgstr ""
+
+#: inc/actions/namespace.php:69
+msgid "Toggle contents of"
+msgstr ""
+
+#: inc/actions/namespace.php:217
+msgid "Enable Image Lightbox"
+msgstr ""
+
+#: inc/actions/namespace.php:222
+msgid "Show linked images in a lightbox"
+msgstr ""
+
+#: inc/filters/namespace.php:19
+msgid "Private"
+msgstr ""
+
+#: inc/helpers/namespace.php:140
+msgid "Public Domain"
+msgstr ""
+
+#: inc/helpers/namespace.php:143
+msgid "Creative Commons Attribution"
+msgstr ""
+
+#: inc/helpers/namespace.php:146
+msgid "Creative Commons Attribution ShareAlike"
+msgstr ""
+
+#: inc/helpers/namespace.php:149
+msgid "Creative Commons Attribution NoDerivatives"
+msgstr ""
+
+#: inc/helpers/namespace.php:152
+msgid "Creative Commons Attribution NonCommercial"
+msgstr ""
+
+#: inc/helpers/namespace.php:155
+msgid "Creative Commons Attribution NonCommercial ShareAlike"
+msgstr ""
+
+#: inc/helpers/namespace.php:158
+msgid "Creative Commons Attribution NonCommercial NoDerivatives"
+msgstr ""
+
+#: inc/helpers/namespace.php:162
+msgid "All Rights Reserved"
+msgstr "Wszelkie prawa zastrzeżone"
+
+#: inc/helpers/namespace.php:176
+msgid "Check out this great book on Pressbooks."
+msgstr ""
+
+#: inc/helpers/namespace.php:193
+msgid "Home"
+msgstr "Strona główna"
+
+#: inc/helpers/namespace.php:199
+msgid "Read"
+msgstr "Czytaj"
+
+#: inc/helpers/namespace.php:213
+msgid "Sign in"
+msgstr "Zaloguj"
+
+#: inc/helpers/namespace.php:220
+msgid "Admin"
+msgstr "Admin"
+
+#: inc/helpers/namespace.php:226
+msgid "Sign out"
+msgstr "Wyloguj"
+
+#: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
+#: partials/content-cover-book-info.php:51
+msgid "Author"
+msgid_plural "Authors"
+msgstr[0] "Autor"
+msgstr[1] "Autorzy"
+msgstr[2] "Autorzy"
+msgstr[3] "Autorzy"
+
+#: inc/helpers/namespace.php:407
+msgid "Editor"
+msgid_plural "Editors"
+msgstr[0] "Edytor"
+msgstr[1] "Edytorzy"
+msgstr[2] "Edytorzy"
+msgstr[3] "Edytorzy"
+
+#: inc/helpers/namespace.php:408
+msgid "Translator"
+msgid_plural "Translators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: inc/helpers/namespace.php:409
+msgid "Reviewer"
+msgid_plural "Reviewers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: inc/helpers/namespace.php:410
+msgid "Illustrator"
+msgid_plural "Illustrators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: inc/helpers/namespace.php:411
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
+#: partials/content-cover-book-info.php:66 single.php:32
+msgid "License"
+msgstr ""
+
+#: inc/helpers/namespace.php:413
+msgid "Primary Subject"
+msgstr ""
+
+#: inc/helpers/namespace.php:414
+msgid "Additional Subject(s)"
+msgstr ""
+
+#: inc/helpers/namespace.php:415
+msgid "Publisher"
+msgstr "Wydawca"
+
+#: inc/helpers/namespace.php:416
+msgid "Publication Date"
+msgstr "Data wydania"
+
+#: inc/helpers/namespace.php:417 single.php:42
+msgid "Digital Object Identifier (DOI)"
+msgstr ""
+
+#: inc/helpers/namespace.php:418
+msgid "Ebook ISBN"
+msgstr ""
+
+#: inc/helpers/namespace.php:419
+msgid "Print ISBN"
+msgstr ""
+
+#: inc/helpers/namespace.php:420
+msgid "Hashtag"
+msgstr ""
+
+#. translators: %s: post title
+#. translators: %s: post short title or title
+#: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
+msgid "Previous: %s"
+msgstr "Poprzednie"
+
+#. translators: %s: post title,
+#. translators: %s: post short title or title
+#: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
+msgid "Next: %s"
+msgstr "Następne"
+
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
+#. comment
+#: inc/helpers/namespace.php:537
+msgid "%s on"
+msgstr ""
+
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
+#. comment
+#: inc/helpers/namespace.php:537
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
+#. comment
+#: inc/helpers/namespace.php:537 inc/helpers/namespace.php:566
+msgid "(Edit)"
+msgstr "(Zmień)"
+
+#: inc/helpers/namespace.php:540
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/helpers/namespace.php:566
+msgid "Pingback:"
+msgstr ""
+
+#: inc/intervention.php:11
+msgid "Hello,"
+msgstr "Witaj, "
+
+#: index.php:18
+msgid "This book does not contain any public content."
+msgstr ""
+
+#: page-about.php:5
+msgid "About The Book"
+msgstr "O książce"
+
+#: page-about.php:21 page-buy.php:10 page-buy.php:18
+msgid "It's coming!"
+msgstr "Nadchodzi!"
+
+#: page-authors.php:31
+msgid "Authors"
+msgstr "Autorzy"
+
+#: page-buy.php:5
+msgid "Buy the Book"
+msgstr "Kup książkę"
+
+#. translators: %1$s: url to book, %2$s: title of book
+#: page-buy.php:21
+msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
+msgstr ""
+"Możesz kupić <a href=\"%1$s\">%2$s</a> za pomocą jednego z poniższych "
+"lunków:"
+
+#. translators: %1$s: url to purchase
+#: page-buy.php:25
+msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
+msgstr "Kup na  <a href=\"%1$s\">amazon.com</a>"
+
+#. translators: %1$s: url to purchase
+#: page-buy.php:30
+msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
+msgstr "Kup na  <a href=\"%1$s\">oreilly.com</a>"
+
+#. translators: %1$s: url to purchase
+#: page-buy.php:35
+msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
+msgstr "Kup na  <a href=\"%1$s\">barnesandnoble.com</a>"
+
+#. translators: %1$s: url to purchase
+#: page-buy.php:40
+msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
+msgstr "Kup na  <a href=\"%1$s\">kobobooks.com</a>"
+
+#. translators: %1$s: url to purchase
+#: page-buy.php:45
+msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
+msgstr "Kup na  <a href=\"%1$s\">apple.com</a>"
+
+#. translators: %1$s: url to purchase
+#: page-buy.php:50
+msgid "Purchase here:"
+msgstr "Kup tutaj:"
+
+#: page-h5p-listing.php:5
+msgid "H5P activities list"
+msgstr ""
+
+#: page-h5p-listing.php:8
+msgid "Show all"
+msgstr "Pokaż wszystko"
+
+#: page-h5p-listing.php:8
+msgid "Hide all"
+msgstr "Ukryj wszystko"
+
+#: page-h5p-listing.php:16
+msgid "ID"
+msgstr ""
+
+#: page-h5p-listing.php:17 partials/content-cover-metadata.php:8
+msgid "Title"
+msgstr "Tytuł"
+
+#: page-h5p-listing.php:18
+msgid "Activity type"
+msgstr "Rodzaj aktywności"
+
+#: page-h5p-listing.php:19
+msgid "View"
+msgstr "Widok"
+
+#: page-h5p-listing.php:32
+msgid "View activity"
+msgstr ""
+
+#: page-h5p-listing.php:32
+msgid "Hide activity"
+msgstr ""
+
+#: page.php:13 partials/content-single-legacy.php:69
+#: partials/content-single.php:69
+msgid "Edit"
+msgstr "Edytuj"
+
+#: page.php:18
+msgid "Pages:"
+msgstr "Strony:"
+
+#: partials/content-cover-book-header.php:11
+msgid "Book Title"
+msgstr "Tytuł książki"
+
+#: partials/content-cover-book-header.php:14
+msgid "Subtitle"
+msgstr "Podrozdział"
+
+#. translators: %s: title of book
+#: partials/content-cover-book-header.php:26
+#: partials/content-cover-book-header.php:32
+msgid "Cover image for %s"
+msgstr ""
+
+#: partials/content-cover-book-header.php:54
+msgid "Download this book"
+msgstr "Pobierz tą książkę"
+
+#: partials/content-cover-book-header.php:98
+#: partials/content-cover-book-info.php:6
+msgid "Book Description"
+msgstr "Opis książki"
+
+#: partials/content-cover-book-header.php:110
+msgid "Read Book"
+msgstr "Czytaj książkę"
+
+#: partials/content-cover-book-header.php:117
+msgid "Buy Book"
+msgstr "Kup książkę"
+
+#: partials/content-cover-book-info.php:2
+msgid "Book Information"
+msgstr "Opis książki"
+
+#: partials/content-cover-book-info.php:23
+msgid "Book Source"
+msgstr ""
+
+#. translators: %$1s: title of book, link to book, %2$s: attribution string
+#. for the book, %3$s: publisher of book, %4$s: license for book
+#: partials/content-cover-book-info.php:30
+msgid ""
+"This book is a cloned version of %1$s%2$s, published using Pressbooks by "
+"%3$s under a %4$s license. It may differ from the original."
+msgstr ""
+
+#. translators: %2$s: authors of book
+#: partials/content-cover-book-info.php:33
+msgid " by %s"
+msgstr "przez"
+
+#. translators: %s: link to source book
+#: partials/content-cover-book-info.php:40
+msgid ""
+"This book was cloned from a source that is no longer available. The source "
+"URL was %s. This book may differ from the original."
+msgstr ""
+"Ta książka została skopiowana ze źródła, które nie jest już dostępne. "
+"Źródłowy adres URL to %s.  Ta książka może różnić się od oryginału."
+
+#: partials/content-cover-book-info.php:61
+msgid "Contributors"
+msgstr "Współpracownicy"
+
+#: partials/content-cover-book-info.php:71
+msgid "Subject"
+msgstr "Temat"
+
+#: partials/content-cover-book-info.php:85
+#: partials/content-cover-metadata.php:63
+msgid "Click for more information"
+msgstr "Kliknij, aby uzyskać więcej informacji "
+
+#: partials/content-cover-metadata.php:3
+msgid "Metadata"
+msgstr "Metadane"
+
+#: partials/content-cover-toc.php:5
+msgid "Show All Contents"
+msgstr "Wyświetl pełny spis treści"
+
+#: partials/content-cover-toc.php:6
+msgid "Hide All Contents"
+msgstr "Zwiń pełen spis treści"
+
+#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
+#: partials/content-difftool.php:52
+msgid "This chapter is adapted from %1$s in %2$s by %3$s."
+msgstr ""
+
+#: partials/content-difftool.php:66
+msgid ""
+"Note: The comparison below is between this text and the <strong>current "
+"version</strong> of the text from which it was adapted."
+msgstr ""
+
+#: partials/content-difftool.php:67
+msgid "additions"
+msgstr ""
+
+#: partials/content-difftool.php:67
+msgid "deletions"
+msgstr ""
+
+#: partials/content-none.php:2
+msgid "Nothing Found"
+msgstr "Nic nie znalazłem"
+
+#: partials/content-none.php:3
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partials/content-single-legacy.php:41 partials/content-single.php:42
+msgid "Previous Page"
+msgstr "Poprzednia strona"
+
+#: partials/content-single-legacy.php:52 partials/content-single.php:53
+msgid "Next Page"
+msgstr "Następna strona"
+
+#: private.php:4
+msgid "Access Denied"
+msgstr "Odmowa dostępu"
+
+#. translators: link to sign in
+#: private.php:10
+msgid ""
+"This book is private, and accessible only to registered users. If you have "
+"an account you can %s."
+msgstr ""
+"Ta książka jest prywatna, dostępna jedynie dla zarejestrowanych "
+"użytkowników. Jeżeli masz konto, możesz %s."
+
+#: private.php:14
+msgid "sign in here"
+msgstr "Zaloguj się tutaj"
+
+#. translators: link to Pressbooks.com
+#: private.php:23
+msgid "You can also set up your own Pressbooks book at %s."
+msgstr "Możesz stworzyć własną książkę Pressbooks na %s."
+
+#. translators: search string
+#: search.php:6
+msgid "Search Results for: %s"
+msgstr "Wyniki wyszukiwania dla: %s"
+
+#: search.php:18
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+#: search.php:19
+msgid "Next page"
+msgstr "Następna strona"
+
+#: search.php:20
+msgid "Paged navigation"
+msgstr "Strony"
+
+#: searchform.php:3
+msgctxt "label"
+msgid "Search in book:"
+msgstr "Szukaj w książce:"
+
+#: searchform.php:4
+msgctxt "placeholder"
+msgid "Search in book &hellip;"
+msgstr "Szukaj w książce &hellip;"
+
+#: searchform.php:8
+msgid "Search"
+msgstr "Szukaj"
+
+#: single.php:58
+msgid "Share This Book"
+msgstr "Udostępnij książkę"
