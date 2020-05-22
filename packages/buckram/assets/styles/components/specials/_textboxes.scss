@@ -72,6 +72,10 @@
       if-map-get($edu-textbox-padding-left, $type);
     text-align: $edu-header-text-align;
 
+    h1, h2, h3, h4, h5, h6 {
+      color: $header-color;
+    }
+
     p {
       text-indent: 0;
     }
