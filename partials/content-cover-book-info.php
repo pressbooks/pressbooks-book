@@ -31,6 +31,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 					sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
 					/* translators: %2$s: authors of book */
 					( $authors ) ? sprintf( __( ' by %s', 'pressbooks-book' ), $authors ) : '',
+					/* translators: %3$s: publisher of book */
 					( isset( $source_meta['publisher'] ) ) ? sprintf( __( ' by %s', 'pressbooks-book' ), $source_meta['publisher']['name'] ) : '',
 					sprintf( '<a href="%1$s">%2$s</a>', $source_meta['license']['url'], $source_meta['license']['name'] )
 				);
