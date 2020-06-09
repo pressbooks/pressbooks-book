@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.10.2\n"
+"Project-Id-Version: McLuhan 2.10.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2020-05-26T21:16:56+00:00\n"
+"POT-Creation-Date: 2020-06-09T22:18:25+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -221,7 +221,7 @@ msgid "Sign out"
 msgstr "Odjava"
 
 #: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
-#: partials/content-cover-book-info.php:51
+#: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Autor"
@@ -264,7 +264,7 @@ msgstr[1] "Suradnici"
 msgstr[2] "Suradnici"
 
 #: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
-#: partials/content-cover-book-info.php:66 single.php:32
+#: partials/content-cover-book-info.php:67 single.php:32
 msgid "License"
 msgstr "Licenca"
 
@@ -487,19 +487,19 @@ msgstr "Izvor knjige"
 #. for the book, %3$s: publisher of book, %4$s: license for book
 #: partials/content-cover-book-info.php:30
 msgid ""
-"This book is a cloned version of %1$s%2$s, published using Pressbooks by "
-"%3$s under a %4$s license. It may differ from the original."
+"This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
+"under a %4$s license. It may differ from the original."
 msgstr ""
-"Ova knjiga je klonirana inačica od %1$s%2$s, objavljena koristeći Pressbooks"
-" od %3$s pod licencom %4$s. Moguće su razlike u odnosu na original."
 
 #. translators: %2$s: authors of book
+#. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
+#: partials/content-cover-book-info.php:35
 msgid " by %s"
 msgstr "od %s"
 
 #. translators: %s: link to source book
-#: partials/content-cover-book-info.php:40
+#: partials/content-cover-book-info.php:41
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
@@ -507,15 +507,15 @@ msgstr ""
 "Ova knjiga je klonirana iz izvora koji više nije dostupan. URL izvornika je "
 "glasio %s. Ova knjiga se može razlikovati od originala."
 
-#: partials/content-cover-book-info.php:61
+#: partials/content-cover-book-info.php:62
 msgid "Contributors"
 msgstr "Suradnici"
 
-#: partials/content-cover-book-info.php:71
+#: partials/content-cover-book-info.php:72
 msgid "Subject"
 msgstr "Predmet"
 
-#: partials/content-cover-book-info.php:85
+#: partials/content-cover-book-info.php:86
 #: partials/content-cover-metadata.php:63
 msgid "Click for more information"
 msgstr "Kliknite za više informacija"
