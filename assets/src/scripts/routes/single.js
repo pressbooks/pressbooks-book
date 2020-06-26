@@ -116,7 +116,6 @@ export default {
 				// Set fluid width for mobile videos
 				( function () {
 					let $allVideos = $( 'iframe[src*=\'//player.vimeo.com\'], iframe[src*=\'//www.youtube.com\']' );
-					let $fluidEl = $( '#content' );
 
 					$allVideos.each( function () {
 						$( this )
@@ -126,10 +125,9 @@ export default {
 					} );
 
 					$( window ).resize( function () {
-						let newWidth = $fluidEl.width();
-
 						$allVideos.each( function () {
 							let $el = $( this );
+							let newWidth = $el.parent().parent().width();
 							$el
 								.width( newWidth )
 								.height( newWidth * $el.data( 'aspectRatio' ) );
