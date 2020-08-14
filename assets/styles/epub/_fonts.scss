@@ -3,17 +3,27 @@
 $serif-epub: serif !default;
 $sans-serif-epub: sans-serif !default;
 
+// Load Shape Shifter fonts, if any.
+@import 'shapeshifter-font-stack-web';
+$shapeshifter-font-1-is-serif: true !default;
+$shapeshifter-font-2-is-serif: true !default;
+
 // Insert custom fonts for your theme into the font stacks below. Always end the
 // stack with $serif-epub or $sans-serif-epub, as appropriate—this allows custom
 // language support to be added dynamically.
-$font-1: 'Lora', $serif-epub;
-$font-2: 'Cormorant Garamond', $serif-epub;
+
+@if variable-exists(shapeshifter-font-1) {
+  $font-1: $shapeshifter-font-1, if($shapeshifter-font-1-is-serif, $serif-epub, $sans-serif-epub);
+} @else {
+  $font-1: 'Lora', $serif-epub;
+  @import 'LoraFont';
+}
+
+@if variable-exists(shapeshifter-font-2) {
+  $font-2: $shapeshifter-font-2, if($shapeshifter-font-2-is-serif, $serif-epub, $sans-serif-epub);
+} @else {
+  $font-2: 'Cormorant Garamond', $serif-epub;
+  @import 'CormorantGaramondFont';
+}
+
 $font-3: $font-2;
-
-// Add import rules for any fonts you referenced below. Available font partials
-// are found in /pressbooks/assets/scss/fonts and follow the naming pattern:
-// _FontNameInCamelCaseFont.scss. For example, to import Alegreya Sans, use:
-// @import 'AlegreyaSansFont';
-
-@import 'LoraFont';
-@import 'CormorantGaramondFont';

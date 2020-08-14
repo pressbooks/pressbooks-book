@@ -3,14 +3,26 @@
 $serif-web: serif !default;
 $sans-serif-web: sans-serif !default;
 
+// Load Shape Shifter fonts, if any.
+@import 'shapeshifter-font-stack-web';
+$shapeshifter-font-1-is-serif: true !default;
+$shapeshifter-font-2-is-serif: true !default;
+
 // Insert custom fonts for your theme into the font stacks below. Always end the
 // stack with $serif-web or $sans-serif-web, as appropriate—this allows custom
 // language support to be added dynamically.
-$font-1: 'Lora', $serif-web;
-$font-2: 'Cormorant Garamond', $serif-web;
-$font-3: $font-2;
 
-// Add import rules for any referenced fonts you below. You must use Google
-// Fonts or an equivalent over https. For example, to import Alegreya Sans, use:
-// @import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Lora:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
+@if variable-exists(shapeshifter-font-1) {
+  $font-1: $shapeshifter-font-1, if($shapeshifter-font-1-is-serif, $serif-web, $sans-serif-web);
+} @else {
+  $font-1: 'Lora', $serif-web;
+}
+
+@if variable-exists(shapeshifter-font-2) {
+  $font-2: $shapeshifter-font-2, if($shapeshifter-font-2-is-serif, $serif-web, $sans-serif-web);
+} @else {
+  $font-2: 'Cormorant Garamond', $serif-web;
+  @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Lora:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
+}
+
+$font-3: $font-2;

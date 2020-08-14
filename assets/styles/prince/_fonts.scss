@@ -3,17 +3,32 @@
 $serif-prince: serif !default;
 $sans-serif-prince: sans-serif !default;
 
+// Load Shape Shifter fonts, if any. Must come after Global Typography snippet
+@import 'shapeshifter-font-stack-prince';
+$shapeshifter-font-1-is-serif: true !default;
+$shapeshifter-font-2-is-serif: true !default;
+
 // Insert custom fonts for your theme into the font stacks below. Always end the
 // stack with $serif-prince or $sans-serif-prince, as appropriate—this allows
 // custom language support to be added dynamically.
-$font-1: 'Lora', $serif-prince;
-$font-2: 'Cormorant Garamond', $serif-prince;
-$font-3: $font-2;
 
-// Add import rules for any fonts you referenced below. Available font partials
-// are found in /pressbooks/assets/scss/fonts and follow the naming pattern:
-// _FontNameInCamelCaseFont.scss. For example, to import Alegreya Sans, use:
-// @import 'AlegreyaSansFont';
+@if variable-exists(shapeshifter-font-1)  {
+  $font-1: $shapeshifter-font-1, if($shapeshifter-font-1-is-serif, $serif-prince, $sans-serif-prince);
+} @else {
+  $font-1: 'Lora', $serif-prince;
+  @import 'LoraFont';
+}
 
-@import 'LoraFont';
-@import 'CormorantGaramondFont';
+@if variable-exists(shapeshifter-font-2) {
+  $font-2: $shapeshifter-font-2, if($shapeshifter-font-2-is-serif, $serif-prince, $sans-serif-prince);
+} @else {
+  $font-2: 'Cormorant Garamond', $serif-prince;
+  @import 'CormorantGaramondFont';
+}
+
+@if variable-exists(shapeshifter-font-2) {
+  $font-3: $shapeshifter-font-2, if($shapeshifter-font-2-is-serif, $serif-prince, $sans-serif-prince);
+} @else {
+  $font-3: 'Cormorant Garamond', $serif-prince;
+  @import 'CormorantGaramondFont';
+}
