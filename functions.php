@@ -72,7 +72,6 @@ add_filter( 'the_title', 'PressbooksBook\Filters\add_private_to_title', 10, 2 );
 add_action( 'pb_theme_options_web_add_settings_fields', '\PressbooksBook\Actions\add_lightbox_setting', 10, 2 );
 add_filter( 'pb_theme_options_web_booleans', '\PressbooksBook\Filters\add_lightbox_to_settings' );
 add_action( 'template_redirect', '\PressbooksBook\Actions\redirect_attachment_page' );
-add_filter( 'pb_is_shape_shifter_compatible', '__return_true' );
 
 if ( is_admin() ) {
 	add_action( 'wp_ajax_text_diff', '\PressbooksBook\Actions\text_diff' );
