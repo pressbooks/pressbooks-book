@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.10.0\n"
+"Project-Id-Version: McLuhan 2.10.4\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2020-02-21T23:05:47+00:00\n"
+"POT-Creation-Date: 2020-07-07T15:27:29+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: nebulon42, 2019\n"
 "Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
@@ -229,7 +229,7 @@ msgid "Sign out"
 msgstr "Abmelden"
 
 #: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
-#: partials/content-cover-book-info.php:51
+#: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Autor"
@@ -266,7 +266,7 @@ msgstr[0] "Mitarbeiter"
 msgstr[1] "Mitarbeitende"
 
 #: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
-#: partials/content-cover-book-info.php:66 single.php:32
+#: partials/content-cover-book-info.php:67 single.php:32
 msgid "License"
 msgstr "Lizenz"
 
@@ -489,20 +489,19 @@ msgstr "Buchquelle"
 #. for the book, %3$s: publisher of book, %4$s: license for book
 #: partials/content-cover-book-info.php:30
 msgid ""
-"This book is a cloned version of %1$s%2$s, published using Pressbooks by "
-"%3$s under a %4$s license. It may differ from the original."
+"This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
+"under a %4$s license. It may differ from the original."
 msgstr ""
-"Dieses Buch ist eine geklonte Version von %1$s%2$s. Es wurde veröffentlicht "
-"mithilfe von Pressbooks von %3$s unter einer %4$s Lizenz. Es kann vom "
-"Original abweichen."
 
 #. translators: %2$s: authors of book
+#. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
+#: partials/content-cover-book-info.php:35
 msgid " by %s"
 msgstr "von %s"
 
 #. translators: %s: link to source book
-#: partials/content-cover-book-info.php:40
+#: partials/content-cover-book-info.php:41
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
@@ -510,15 +509,15 @@ msgstr ""
 "Dieses Buch wurde von einer Quelle geklont, die nicht mehr verfügbar ist. "
 "Die Quell-URL war %s. Dieses Buch kann vom Original abweichen."
 
-#: partials/content-cover-book-info.php:61
+#: partials/content-cover-book-info.php:62
 msgid "Contributors"
 msgstr "Mitarbeiter"
 
-#: partials/content-cover-book-info.php:71
+#: partials/content-cover-book-info.php:72
 msgid "Subject"
 msgstr "Thema"
 
-#: partials/content-cover-book-info.php:85
+#: partials/content-cover-book-info.php:86
 #: partials/content-cover-metadata.php:63
 msgid "Click for more information"
 msgstr "Klicken Sie für weitere Informationen"
