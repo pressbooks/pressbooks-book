@@ -26,9 +26,4 @@ $shapeshifter-font-2-is-serif: true !default;
   @import 'CormorantGaramondFont';
 }
 
-@if variable-exists(shapeshifter-font-2) {
-  $font-3: $shapeshifter-font-2, if($shapeshifter-font-2-is-serif, $serif-prince, $sans-serif-prince);
-} @else {
-  $font-3: 'Cormorant Garamond', $serif-prince;
-  @import 'CormorantGaramondFont';
-}
+$font-3: $font2;
