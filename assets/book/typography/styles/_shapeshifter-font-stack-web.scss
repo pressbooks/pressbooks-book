@@ -15,7 +15,7 @@ $shapeshifter-fonts: ();
   @if unquote($font) == 'Cormorant Garamond' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap';
-  } @else if unquote($font) == 'Noto serif' {
+  } @else if unquote($font) == 'Noto Serif' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP|Noto+Serif+KR|Noto+Serif+SC|Noto+Serif+TC&display=swap';
   } @else if unquote($font) == 'Spectral' {
@@ -66,7 +66,10 @@ $shapeshifter-fonts: ();
     @scssphp-import-once 'FreeSerif';
   } @else if unquote($font) == 'Source Sans Pro' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap';
+  } @else if unquote($font) == 'Sorts Mill Goudy' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap';
   }
 }
 

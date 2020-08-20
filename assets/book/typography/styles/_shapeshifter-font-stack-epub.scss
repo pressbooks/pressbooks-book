@@ -15,7 +15,7 @@ $shapeshifter-fonts: ();
   @if unquote($font) == 'Cormorant Garamond' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'CormorantGaramondFont';
-  } @else if unquote($font) == 'Noto serif' {
+  } @else if unquote($font) == 'Noto Serif' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'NotoSerifFont';
   } @else if unquote($font) == 'Spectral' {
@@ -67,5 +67,8 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'Source Sans Pro' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'SourceSansProFont';
+  } @else if unquote($font) == 'Sorts Mill Goudy' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'SortsMillGoudyFont';
   }
 }
