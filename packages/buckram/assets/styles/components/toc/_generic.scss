@@ -225,7 +225,9 @@
   h3.back-matter-number {
     bookmark-level: none;
   }
-
+  .glossary-term {
+    color: #541600;
+  }
   #toc {
     display: $toc-display;
     counter-reset: part;
