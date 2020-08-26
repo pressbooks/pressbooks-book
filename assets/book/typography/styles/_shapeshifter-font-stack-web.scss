@@ -70,6 +70,9 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'Sorts Mill Goudy' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap';
+  } @else if unquote($font) == 'New Athena Unicode' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'NewAthenaUnicodeFont';
   }
 }
 

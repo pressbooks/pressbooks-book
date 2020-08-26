@@ -1,0 +1,32 @@
+// 'New Athena Unicode', @import 'NewAthenaUnicodeFont'
+
+// New Athena Unicode
+// SERIF
+
+@font-face {
+  font-family: 'New Athena Unicode';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/newathu5_5.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'New Athena Unicode';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/newathuBold5_5.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'New Athena Unicode';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/newathuItalic5_5.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'New Athena Unicode';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/newathuBoldItalic5_5.ttf') format('truetype');
+}

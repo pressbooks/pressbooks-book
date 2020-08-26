@@ -70,5 +70,8 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'Sorts Mill Goudy' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'SortsMillGoudyFont';
+  } @else if unquote($font) == 'New Athena Unicode' {
+    // noinspection CssInvalidAtRule
+    @scssphp-import-once 'NewAthenaUnicodeFont';
   }
 }
