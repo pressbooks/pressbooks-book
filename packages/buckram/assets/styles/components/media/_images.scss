@@ -211,7 +211,6 @@
       box-sizing: border-box;
       float: $image-alignnone-caption-float;
       padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
-      width: if-map-get($image-alignnone-caption-width, $type) !important;
     }
 
     &:after {
