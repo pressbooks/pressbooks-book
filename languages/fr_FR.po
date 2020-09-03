@@ -1,14 +1,14 @@
 # Copyright (C) 2020 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
-# Antonio Devís <colomet@hotmail.com>, 2017
+# Antonio D. <colomet@hotmail.com>, 2017
 # Hugh McGuire <hugh@pressbooks.com>, 2018
 # Eric Lord <elord@tciinc.ca>, 2019
 # Hubert GB <hgblouin@tciinc.ca>, 2019
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
 # Steel Wagstaff <steel@pressbooks.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.10.4\n"

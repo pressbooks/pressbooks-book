@@ -2,9 +2,9 @@
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # jorge santibañez <info@letrapixel.com>, 2017
-# Antonio Devís <colomet@hotmail.com>, 2018
+# Antonio D. <colomet@hotmail.com>, 2018
 # Eduardo Vera <info@yachaypuriq.xyz>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.10.4\n"
