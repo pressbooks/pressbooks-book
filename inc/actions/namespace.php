@@ -340,4 +340,3 @@ function register_h5p_listing_page() {
 
 	return false;
 }
-
