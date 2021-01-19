@@ -1,8 +1,8 @@
 # Copyright (C) 2021 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
-# Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2019
-# nebulon42, 2019
+# Antonio D., 2017
+# Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -10,13 +10,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
 "POT-Creation-Date: 2021-01-19T23:07:56+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: nebulon42, 2019\n"
-"Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
+"Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
+"Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-book\n"
 "X-Generator: WP-CLI 2.3.0\n"
 
@@ -35,268 +35,263 @@ msgid ""
 "writing and is also suitable for fiction. Headings are set in Cormorant "
 "Garamond, and body type is set in Lora."
 msgstr ""
-"Dieses Theme ist nach dem kanadischen Medientheoretiker Marshall McLuhan "
-"benannt, der den Ausdruck \"Das Medium ist die Botschaft\" geprägt hat. Es "
-"ist für akademische Texte konzipiert und eignet sich auch für Belletristik. "
-"Überschriften werden in Cormorant Garamond und der Fließtext in Lora "
-"gesetzt."
+"Bu tema, adını \"medya mesajdır\" ifadesini icat eden Kanadalı medya "
+"teorisyeni Marshall McLuhan'dan almıştır. Akademik yazı için tasarlanmıştır "
+"ve kurgu için de uygundur. Başlıklar Cormorant Garamond, gövde metni ise "
+"Lora olarak ayarlandı."
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr " Pressbooks (Book Oven Inc.) "
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 msgid "https://pressbooks.com"
-msgstr " https://pressbooks.com "
+msgstr "https://pressbooks.com"
 
 #: 404.php:2
 msgid "Oops! That content can&rsquo;t be found."
-msgstr "Hoppla! Dieser Inhalt kann nicht gefunden werden."
+msgstr "Oops! Bu içerik bulunamıyor."
 
 #: 404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
 msgstr ""
-"Anscheinend wurde an dieser Stelle nichts gefunden. Möchten Sie eine Suche "
-"versuchen?"
+"Görünüşe göre bu konumda hiçbir şey bulunamadı. Bir arama yapmayı dene?"
 
 #: comments.php:2
 msgid "Feedback/Errata"
-msgstr "Rückmeldung/Errata"
+msgstr "Geri bildirim / Hatalar"
 
 #: comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-"Dieser Beitrag ist passwortgeschützt. Geben Sie das Passwort ein um die "
-"Kommentare zu sehen."
+"Bu gönderi şifreyle korunmaktadır. Yorumları görebilmek için şifreyi "
+"giriniz."
 
 #: comments.php:36 comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr "<span class=\"meta-nav\">&larr;</span>Ältere Kommentare"
+msgstr "<span class=\"meta-nav\">&larr;</span> Önceki yorumlar"
 
 #: comments.php:37 comments.php:48
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Neuere Kommentare <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Yeni yorumlar <span class=\"meta-nav\">&rarr;</span>"
 
 #: comments.php:56
 msgid "Comments are closed."
-msgstr "Kommentare sind gesperrt"
+msgstr "Yorumlar kapalıdır."
 
 #: comments.php:64
 msgid "Submit"
-msgstr "Einreichen"
+msgstr "Gönder"
 
 #. translators: %s: Pressbooks
 #: footer.php:64
 msgid "Powered by %s"
-msgstr "Mit %s erstellt"
+msgstr "Powered by %s"
 
 #: footer.php:66
 msgid "Guides and Tutorials"
-msgstr "Anleitungen und Tutorials"
+msgstr "Kılavuzlar ve Öğreticiler"
 
 #: footer.php:73 footer.php:75
 msgid "Pressbooks on YouTube"
-msgstr "Pressbooks auf YouTube"
+msgstr "Pressbooks YouTube"
 
 #: footer.php:77 footer.php:81
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks auf Twitter"
+msgstr "Pressbooks Twitter"
 
 #: functions.php:16
 msgid "Dependencies Missing"
-msgstr "Abhängigkeiten fehlen"
+msgstr "Bağımlılıklar Eksik "
 
 #: functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
-msgstr ""
-"Sie müssen <code>composer install</code> im McLuhan Verzeichnis ausführen."
+msgstr "McLuhan dizininden <code>composer install</code> çalıştırmalısınız."
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr "Pressbooks-Installation kann nicht gefunden werden."
+msgstr "Pressbooks yüklemesi bulunamıyor."
 
 #: header.php:63
 msgid "Skip to content"
-msgstr "Zum Inhalt springen"
+msgstr "İçeriğe geç"
 
 #. translators: %s: name of network
 #: header.php:82
 msgid "Logo for %s"
-msgstr "Logo für %s"
+msgstr " %s için logo"
 
 #: header.php:93
 msgid "Toggle Menu"
-msgstr "Menü umschalten"
+msgstr "Toggle Menü"
 
 #: header.php:106 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr "Inhalt"
+msgstr "İçindekiler"
 
 #. translators: %s: the title of the book
 #: header.php:115
 msgid "Go to the cover page of %s"
-msgstr "Zum Deckblatt von %s"
+msgstr " %s kapak sayfasına gidin"
 
 #: header.php:119 inc/helpers/namespace.php:206
 msgid "Buy"
-msgstr "Kaufen"
+msgstr "Satın al"
 
 #: inc/actions/namespace.php:66
 msgid "Comparison loading…"
-msgstr "Vergleich wird geladen…"
+msgstr "Karşılaştırma yükleniyor…"
 
 #: inc/actions/namespace.php:67
 msgid "Comparison loaded."
-msgstr "Vergleich geladen"
+msgstr "Karşılaştırma yüklendi."
 
 #: inc/actions/namespace.php:68
 msgid "The original chapter could not be loaded."
-msgstr "Das ursprüngliche Kapitel konnte nicht geladen werden."
+msgstr "Orijinal bölüm yüklenemedi."
 
 #: inc/actions/namespace.php:69
 msgid "Toggle contents of"
-msgstr "Umschalten des Inhalts von"
+msgstr "İçeriğini değiştir: "
 
 #: inc/actions/namespace.php:217
 msgid "Enable Image Lightbox"
-msgstr "Bild-Lightbox aktivieren"
+msgstr "Resim Işık Kutusunu Etkinleştir"
 
 #: inc/actions/namespace.php:222
 msgid "Show linked images in a lightbox"
-msgstr "Verknüpfte Bilder in einer Lightbox anzeigen"
+msgstr "Bağlantılı resimleri bir ışık kutusunda göster"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr "Privat"
+msgstr "Özel"
 
 #: inc/helpers/namespace.php:140
 msgid "Public Domain"
-msgstr "Gemeinfrei (Public Domain)"
+msgstr "Kamu malı"
 
 #: inc/helpers/namespace.php:143
 msgid "Creative Commons Attribution"
-msgstr "Creative Commons Namensnennung"
+msgstr "Creative Commons Atıf"
 
 #: inc/helpers/namespace.php:146
 msgid "Creative Commons Attribution ShareAlike"
-msgstr "Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen"
+msgstr "Creative Commons Atıf Benzer Paylaş"
 
 #: inc/helpers/namespace.php:149
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr "Creative Commons Namensnennung-Keine Bearbeitung"
+msgstr "Creative Commons Atıf Türetilemez"
 
 #: inc/helpers/namespace.php:152
 msgid "Creative Commons Attribution NonCommercial"
-msgstr "Creative Commons Namensnennung-Nicht kommerziell"
+msgstr "Creative Commons Atıf Ticari Olmayan"
 
 #: inc/helpers/namespace.php:155
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
-msgstr ""
-"Creative Commons Namensnennung-Nicht kommerziell-Weitergabe unter gleichen "
-"Bedingungen"
+msgstr "Creative Commons Atıf Ticari Olmayan Benzer Paylaş"
 
 #: inc/helpers/namespace.php:158
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr "Creative Commons Namensnennung-Nicht kommerziell-Keine Bearbeitung"
+msgstr "Creative Commons Atıf Ticari Olmayan Türetilemez"
 
 #: inc/helpers/namespace.php:162
 msgid "All Rights Reserved"
-msgstr "Alle Rechte vorbehalten"
+msgstr "Tüm hakları Saklıdır"
 
 #: inc/helpers/namespace.php:176
 msgid "Check out this great book on Pressbooks."
-msgstr "Schauen Sie sich dieses großartige Buch auf Pressbooks an."
+msgstr "Pressbooks'da bulunan bu harika kitaba bir göz atın."
 
 #: inc/helpers/namespace.php:193
 msgid "Home"
-msgstr "Startseite"
+msgstr "Ana Sayfa"
 
 #: inc/helpers/namespace.php:199
 msgid "Read"
-msgstr "Lesen"
+msgstr "Oku"
 
 #: inc/helpers/namespace.php:213
 msgid "Sign in"
-msgstr "Anmelden"
+msgstr "Oturum aç"
 
 #: inc/helpers/namespace.php:220
 msgid "Admin"
-msgstr "Admin"
+msgstr "Yönetici"
 
 #: inc/helpers/namespace.php:226
 msgid "Sign out"
-msgstr "Abmelden"
+msgstr "Oturumu kapat"
 
 #: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "Autor"
-msgstr[1] "Autoren"
+msgstr[0] "Yazar"
+msgstr[1] "Yazarlar"
 
 #: inc/helpers/namespace.php:407
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] "Redaktor"
-msgstr[1] "Redakteure"
+msgstr[0] "Editör"
+msgstr[1] "Editörler"
 
 #: inc/helpers/namespace.php:408
 msgid "Translator"
 msgid_plural "Translators"
-msgstr[0] "Übersetzer"
-msgstr[1] "Übersetzer"
+msgstr[0] "Çevirmen"
+msgstr[1] "Çevirmenler"
 
 #: inc/helpers/namespace.php:409
 msgid "Reviewer"
 msgid_plural "Reviewers"
-msgstr[0] "Lektor"
-msgstr[1] "Lektoren"
+msgstr[0] "Gözden Geçiren"
+msgstr[1] "Gözden Geçirenler"
 
 #: inc/helpers/namespace.php:410
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] "Illustrator"
-msgstr[1] "Illustratoren"
+msgstr[0] "İllüstratör"
+msgstr[1] "İllüstratörler"
 
 #: inc/helpers/namespace.php:411
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] "Mitarbeiter"
-msgstr[1] "Mitarbeitende"
+msgstr[0] "Katkıda bulunan"
+msgstr[1] "Katkıda bulunanlar"
 
 #: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
 #: partials/content-cover-book-info.php:67 single.php:32
 msgid "License"
-msgstr "Lizenz"
+msgstr "Lisans"
 
 #: inc/helpers/namespace.php:413
 msgid "Primary Subject"
-msgstr "Hauptthema"
+msgstr "Ana Konu"
 
 #: inc/helpers/namespace.php:414
 msgid "Additional Subject(s)"
-msgstr "Zusatzthema/-themen"
+msgstr "Ek Konu (lar)"
 
 #: inc/helpers/namespace.php:415
 msgid "Publisher"
-msgstr "Verlag"
+msgstr "Yayımcı"
 
 #: inc/helpers/namespace.php:416
 msgid "Publication Date"
-msgstr "Erscheinungsdatum"
+msgstr "Yayın tarihi"
 
 #: inc/helpers/namespace.php:417 single.php:42
 msgid "Digital Object Identifier (DOI)"
-msgstr "Digitaler Objektbezeichner (DOI)"
+msgstr "Digital Object Identifier (DOI)"
 
 #: inc/helpers/namespace.php:418
 msgid "Ebook ISBN"
-msgstr "eBook-ISBN"
+msgstr "E-kitap ISBN"
 
 #: inc/helpers/namespace.php:419
 msgid "Print ISBN"
-msgstr "Druck-ISBN"
+msgstr "Basılı kitap ISBN"
 
 #: inc/helpers/namespace.php:420
 msgid "Hashtag"
@@ -306,184 +301,184 @@ msgstr "Hashtag"
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
 msgid "Previous: %s"
-msgstr "Zurück zu: %s "
+msgstr "Önceki: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
 msgid "Next: %s"
-msgstr "Weiter zu: %s"
+msgstr "Sonraki: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:537
 msgid "%s on"
-msgstr "%s auf"
+msgstr "%s de"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:537
 msgid "%1$s at %2$s"
-msgstr "%1$s auf %2$s"
+msgstr "%1$s / %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:537 inc/helpers/namespace.php:566
 msgid "(Edit)"
-msgstr "(Bearbeiten)"
+msgstr "(Düzenle)"
 
 #: inc/helpers/namespace.php:540
 msgid "Your comment is awaiting moderation."
-msgstr "Ihr Beitrag wartet auf die Moderation."
+msgstr "Yorumunuz onay bekliyor."
 
 #: inc/helpers/namespace.php:566
 msgid "Pingback:"
-msgstr "Pingback:"
+msgstr "Geri ping at: "
 
 #: inc/intervention.php:11
 msgid "Hello,"
-msgstr "Hallo,"
+msgstr "Merhaba,"
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr "Dieses Buch enthält keine öffentlichen Inhalte."
+msgstr "Bu kitap herhangi bir kamu malı içerik içermiyor."
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr "Über das Buch"
+msgstr "Kitap Hakkında"
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
-msgstr "Kommt bald!"
+msgstr "Yakında!"
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr "Autoren"
+msgstr "Yazarlar"
 
 #: page-buy.php:5
 msgid "Buy the Book"
-msgstr "Buch kaufen"
+msgstr "Kitabı satın al"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
-"Sie können das Buch <a href=\"%1$s\">%2$s</a> über einen der folgenden Links"
-" kaufen:"
+"Ürününü <a href=\"%1$s\">%2$s</a> aşağıdaki bağlantılara tıklayarak satın "
+"alabilirsiniz:"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:25
 msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
-msgstr "Bei <a href=\"%1$s\">amazon.com</a> kaufen"
+msgstr "Satın al <a href=\"%1$s\">amazon.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:30
 msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
-msgstr "Bei <a href=\"%1$s\">oreilly.com</a> kaufen"
+msgstr "Satın al  <a href=\"%1$s\">oreilly.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:35
 msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
-msgstr "Bei <a href=\"%1$s\">barnesandnoble.com</a> kaufen"
+msgstr "Satın al   <a href=\"%1$s\">barnesandnoble.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:40
 msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
-msgstr "Bei <a href=\"%1$s\">kobobooks.com</a>kaufen"
+msgstr " Satın al  <a href=\"%1$s\">kobobooks.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:45
 msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
-msgstr "Bei <a href=\"%1$s\">apple.com</a> kaufen"
+msgstr "Satın al <a href=\"%1$s\">apple.com</a>"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:50
 msgid "Purchase here:"
-msgstr "Hier kaufen:"
+msgstr "Buradan satın al:"
 
 #: page-h5p-listing.php:5
 msgid "H5P activities list"
-msgstr ""
+msgstr "H5P aktiviteleri listesi"
 
 #: page-h5p-listing.php:8
 msgid "Show all"
-msgstr ""
+msgstr "Hepsini göster"
 
 #: page-h5p-listing.php:8
 msgid "Hide all"
-msgstr ""
+msgstr "Hepsini gizle"
 
 #: page-h5p-listing.php:16
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: page-h5p-listing.php:17 partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr "Titel"
+msgstr "Başlık"
 
 #: page-h5p-listing.php:18
 msgid "Activity type"
-msgstr ""
+msgstr "Aktivite tipi"
 
 #: page-h5p-listing.php:19
 msgid "View"
-msgstr ""
+msgstr "Göster"
 
 #: page-h5p-listing.php:32
 msgid "View activity"
-msgstr ""
+msgstr "Aktiviteyi göster"
 
 #: page-h5p-listing.php:32
 msgid "Hide activity"
-msgstr ""
+msgstr "Aktiviteyi gizle"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:69
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "Editle"
 
 #: page.php:18
 msgid "Pages:"
-msgstr "Seiten:"
+msgstr "Sayfalar:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr "Buchtitel"
+msgstr "Kitap Başlığı"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr "Untertitel"
+msgstr "Alt Başlık"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr "Titelbild für %s"
+msgstr "%s için kapak görseli"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr "Laden Sie dieses Buch herunter"
+msgstr "Bu kitabı indirin"
 
 #: partials/content-cover-book-header.php:98
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr "Buchbeschreibung"
+msgstr "Kitap Açıklaması"
 
 #: partials/content-cover-book-header.php:110
 msgid "Read Book"
-msgstr "Buch lesen"
+msgstr "Kitap oku"
 
 #: partials/content-cover-book-header.php:117
 msgid "Buy Book"
-msgstr "Buch kaufen"
+msgstr "Kitap Satın Al"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr "Buchinformationen"
+msgstr "Kitap Bilgileri"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr "Buchquelle"
+msgstr "Kitap Kaynağı"
 
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
@@ -492,13 +487,15 @@ msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
 msgstr ""
+"Bu kitap %1$s%2$s kopyalanmış sürümüdür (%3$s yayıncı   %4$s lisansı "
+"kapsamında). Orijinalden farklı olabilir."
 
 #. translators: %2$s: authors of book
 #. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
 msgid " by %s"
-msgstr "von %s"
+msgstr " tarafından %s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
@@ -506,78 +503,78 @@ msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
 msgstr ""
-"Dieses Buch wurde von einer Quelle geklont, die nicht mehr verfügbar ist. "
-"Die Quell-URL war %s. Dieses Buch kann vom Original abweichen."
+"Bu kitap, artık mevcut olmayan bir kaynaktan klonlandı. Kaynak URL %s idi. "
+"Bu kitap orijinalinden farklı olabilir."
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
-msgstr "Mitarbeiter"
+msgstr "Katkıda bulunanlar"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr "Thema"
+msgstr "Konu"
 
 #: partials/content-cover-book-info.php:86
 #: partials/content-cover-metadata.php:63
 msgid "Click for more information"
-msgstr "Klicken Sie für weitere Informationen"
+msgstr "Daha fazla bilgi için tıklayın"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr "Metadaten"
+msgstr "Meta veri"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr "Alle Inhalte anzeigen"
+msgstr "Tüm İçeriği Göster"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr "Alle Inhalte verbergen"
+msgstr "Tüm İçeriği Gizle"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "Dieses Kapitel ist eine adaptierte Version von %1$s in %2$s von %3$s."
+msgstr "Bu bölümün uyarlandığı yer: %1$s / %2$s / %3$s ."
 
 #: partials/content-difftool.php:66
 msgid ""
 "Note: The comparison below is between this text and the <strong>current "
 "version</strong> of the text from which it was adapted."
 msgstr ""
-"Hinweis: Der nachfolgende Vergleich bezieht sich auf diesen Text und die "
-"<strong>aktuelle Version</strong> des Textes, von dem er abstammt."
+"Not: Aşağıdaki karşılaştırma, bu metin ile uyarlandığı metnin <strong>güncel"
+" versiyonu</strong> arasındadır."
 
 #: partials/content-difftool.php:67
 msgid "additions"
-msgstr "Ergänzungen"
+msgstr "eklemeler"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
-msgstr "Löschungen"
+msgstr "silme işlemleri"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr "Nichts gefunden"
+msgstr "Hiçbirşey Bulunamadı"
 
 #: partials/content-none.php:3
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Entschuldigung, aber nichts stimmt mit Ihren Suchbegriffen überein. Bitte "
-"versuchen Sie es erneut mit anderen Schlüsselwörtern."
+"Maalesef arama terimlerinizle hiçbir şey eşleşmedi. Lütfen farklı anahtar "
+"kelimelerle tekrar deneyin."
 
 #: partials/content-single-legacy.php:41 partials/content-single.php:42
 msgid "Previous Page"
-msgstr "Vorherige Seite"
+msgstr "Önceki sayfa"
 
 #: partials/content-single-legacy.php:52 partials/content-single.php:53
 msgid "Next Page"
-msgstr "Nächste Seite"
+msgstr "Sonraki Sayfa"
 
 #: private.php:4
 msgid "Access Denied"
-msgstr "Zugriff verweigert"
+msgstr "Erişim Reddedildi"
 
 #. translators: link to sign in
 #: private.php:10
@@ -585,49 +582,49 @@ msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
 msgstr ""
-"Dies ist ein privates Buch. Es ist nur für registrierte Benutzer zugänglich."
-" Wenn Sie ein Benutzerkonto haben können Sie sich %s."
+"Bu kitap gizlidir, yalnızca kayıtlı kullanıcılar tarafından erişilebilir. "
+"Hesabınız varsa%s"
 
 #: private.php:14
 msgid "sign in here"
-msgstr "hier anmelden"
+msgstr "Oturum açın"
 
 #. translators: link to Pressbooks.com
 #: private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr "Sie können auch Ihre privaten Pressbooks Bücher einrichten unter %s."
+msgstr "Kendi Pressbooks kitabınızı şu adresten de kurabilirsiniz %s"
 
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+msgstr "Şunun için Sonuç ara: %s"
 
 #: search.php:18
 msgid "Previous page"
-msgstr "Vorherige Seite"
+msgstr "Önceki sayfa"
 
 #: search.php:19
 msgid "Next page"
-msgstr "Nächste Seite"
+msgstr "Sonraki Sayfa"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr "Seitennavigation"
+msgstr "Sayfalı gezinme"
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr "Suche im Buch:"
+msgstr "Kitapta ara:"
 
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr "Im Buch suchen &hellip;"
+msgstr "Kitapta ara &hellip;"
 
 #: searchform.php:8
 msgid "Search"
-msgstr "Suchen"
+msgstr "Ara"
 
 #: single.php:58
 msgid "Share This Book"
-msgstr "Dieses Buch teilen"
+msgstr "Bu Kitabı Paylaş"
