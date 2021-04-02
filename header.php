@@ -118,5 +118,5 @@
 		<?php } ?>
 	</header>
 
-	<main id="main">
+	<main id="main" tabindex="-1">
 	<div id="content" class="site-content">
