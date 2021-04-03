@@ -18,8 +18,6 @@ class ActionsTest extends WP_UnitTestCase {
 	function test_enqueue_assets() {
 		enqueue_assets();
 		$this->assertTrue( wp_script_is( 'pressbooks/book' ) );
-		$this->assertTrue( wp_script_is( 'jquery-scrollto' ) );
-		$this->assertTrue( wp_script_is( 'jquery-localscroll' ) );
 	}
 
 	function test_render_lightbox_setting_field() {
