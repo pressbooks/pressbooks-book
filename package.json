@@ -12,8 +12,6 @@
 	},
 	"dependencies": {
 		"details-element-polyfill": "^2.4.0",
-		"jquery.localscroll": "^2.0.0",
-		"jquery.scrollto": "^2.1.2",
 		"lity": "^2.4.0",
 		"sharer.js": "^0.3.8",
 		"spinkit": "^1.2.5"

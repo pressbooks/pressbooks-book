@@ -38,9 +38,7 @@ function enqueue_assets() {
 	if ( social_media_enabled() ) {
 		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
 	}
-	wp_enqueue_script( 'jquery-scrollto', $assets->getPath( 'scripts/jquery.scrollTo.js' ), [ 'jquery' ], null, true );
-	wp_enqueue_script( 'jquery-localscroll', $assets->getPath( 'scripts/jquery.localScroll.js' ), [ 'jquery', 'jquery-scrollto' ], null, true );
-	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery', 'jquery-scrollto' ], null );
+	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
 	if ( wp_script_is( 'hypothesis', 'enqueued' ) ) {
 		wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
 		wp_localize_script(
