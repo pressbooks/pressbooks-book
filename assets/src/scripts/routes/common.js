@@ -86,7 +86,7 @@ export default {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
 
-					if ( btn === e.target || svg === e.target ) {
+					if ( btn === e.target || svg === e.target.closest( 'svg' ) ) {
 						// Switch the state
 						btn.setAttribute( 'aria-expanded', ! expanded );
 						// Switch the content's visibility
