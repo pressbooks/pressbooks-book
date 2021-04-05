@@ -1,9 +1,9 @@
 # Copyright (C) 2021 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
-# Antonio D., 2017
+# Antonio D. <colomet@hotmail.com>, 2017
 # Robert Szmurło <robert.szmurlo@ee.pw.edu.pl>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.11.0\n"
