@@ -17,13 +17,13 @@ let fs = require( 'fs' );
 const dist = 'dist';
 
 // Normalize Newlines
-const normalizeNewlines = ( dir ) => {
-	fs.readdirSync( dir ).forEach( function( file ) {
+const normalizeNewlines = dir => {
+	fs.readdirSync( dir ).forEach( function ( file ) {
 		file = path.join( dir, file );
-		fs.readFile( file, 'utf8', function( err, buffer ) {
+		fs.readFile( file, 'utf8', function ( err, buffer ) {
 			if ( err ) return console.log( err );
 			buffer = normalizeNewline( buffer );
-			fs.writeFile( file, buffer, 'utf8', function( err ) {
+			fs.writeFile( file, buffer, 'utf8', function ( err ) {
 				if ( err ) return console.log( err );
 			} );
 		} );
@@ -34,8 +34,6 @@ mix
 	.setPublicPath( 'dist' )
 	.scripts( 'node_modules/sharer.js/sharer.js', 'dist/scripts/sharer.js' )
 	.scripts( 'node_modules/lity/dist/lity.js', 'dist/scripts/lity.js' )
-	.scripts( 'node_modules/jquery.localscroll/jquery.localScroll.js', 'dist/scripts/jquery.localScroll.js' )
-	.scripts( 'node_modules/jquery.scrollto/jquery.scrollTo.js', 'dist/scripts/jquery.scrollTo.js' )
 	.scripts( 'node_modules/details-element-polyfill/dist/details-element-polyfill.js', 'dist/scripts/details-element-polyfill.js' )
 	.js( 'assets/src/scripts/book.js', 'dist/scripts/book.js' )
 	.js( 'assets/src/scripts/pane.js', 'dist/scripts/pane.js' )

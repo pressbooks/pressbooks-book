@@ -1,5 +1,3 @@
-import * as Cookies from 'js-cookie';
-
 export default {
 	init() {
 		// JavaScript to be fired on all pages
@@ -16,25 +14,20 @@ export default {
 			}
 		} )();
 
-		// Smooth scroll to anchor, expand parent if present.
-		jQuery( $ => {
-			$.localScroll.hash( { duration: 0 } );
-
-			$.localScroll( {
-				hash: true,
-				duration: 0,
-				onBefore: ( event, el ) => {
-					let hiddenParent = el.closest( 'div[hidden]' );
-					if ( hiddenParent ) {
-						hiddenParent.hidden = false;
-						let sectionTitle = hiddenParent.previousElementSibling;
-						let sectionTitleButton = sectionTitle.querySelector( 'button' );
-						sectionTitle.setAttribute( 'data-collapsed', false );
-						sectionTitleButton.setAttribute( 'aria-expanded', true );
-					}
-				},
-			} );
-		} );
+		// Scroll to anchor, expand parent if present.
+		if ( window.location.hash && window.location.hash !== '#' ) {
+			const target = document.querySelector( window.location.hash );
+			if ( target ) {
+				let hiddenParent = target.closest( 'div[hidden]' );
+				if ( hiddenParent ) {
+					hiddenParent.hidden = false;
+					let sectionTitle = hiddenParent.previousElementSibling;
+					let sectionTitleButton = sectionTitle.querySelector( 'button' );
+					sectionTitleButton.setAttribute( 'aria-expanded', true );
+					target.scrollIntoView();
+				}
+			}
+		}
 
 		// Header navigation
 		( function () {
@@ -88,7 +81,7 @@ export default {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
 
-					if ( btn === e.target || svg === e.target ) {
+					if ( btn === e.target || svg === e.target.closest( 'svg' ) ) {
 						// Switch the state
 						btn.setAttribute( 'aria-expanded', ! expanded );
 						// Switch the content's visibility
