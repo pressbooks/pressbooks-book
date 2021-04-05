@@ -278,7 +278,7 @@ $interactive-content-text-align: (epub: left, prince: left, web: left) !default;
 /// Text indent for interactive content textbox
 /// @type String | Map
 /// @since 1.3.0
-$interactive-content-text-indent: $textbox-text-indent !default;
+$interactive-content-text-indent: 0 !default;
 
 /// Caption alignment on embedded media
 /// @type String | Map
