@@ -3,7 +3,7 @@ on:
   push:
     branches: [ dev, main ]
     tags:
-      - 'v*.*.*'
+      - '*.*.*'
   pull_request:
     branches: [ dev ]
 jobs:
@@ -107,3 +107,12 @@ jobs:
         with:
           files:
             ${{github.workspace}}/*.zip
+
+      - name: Slack Notification
+          uses: rtCamp/action-slack-notify@v2
+          env:
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+            SLACK_USERNAME: 'Github Actions'
+            SLACK_ICON_EMOJI: ':octocat:'
+            SLACK_COLOR: ${{job.status}}
+          if: always()
