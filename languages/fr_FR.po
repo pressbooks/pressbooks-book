@@ -1,19 +1,19 @@
 # Copyright (C) 2021 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
-# Antonio D. <colomet@hotmail.com>, 2017
+# Antonio D., 2017
 # Hugh McGuire <hugh@pressbooks.com>, 2018
 # Eric Lord <elord@tciinc.ca>, 2019
 # Hubert GB <hgblouin@tciinc.ca>, 2019
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
 # Steel Wagstaff <steel@pressbooks.com>, 2019
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.11.0\n"
+"Project-Id-Version: McLuhan 2.11.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-01-19T23:07:56+00:00\n"
+"POT-Creation-Date: 2021-04-14T03:31:17+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
@@ -122,53 +122,53 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr "Erreur lors de ld&rsquo;installation de Pressbooks."
 
-#: header.php:63
+#: header.php:57
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
 #. translators: %s: name of network
-#: header.php:82
+#: header.php:76
 msgid "Logo for %s"
 msgstr "Logo pour %s"
 
-#: header.php:93
+#: header.php:87
 msgid "Toggle Menu"
 msgstr "Afficher/masquer le menu"
 
-#: header.php:106 index.php:14 partials/content-cover-toc.php:3
+#: header.php:100 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Table des matières"
 
 #. translators: %s: the title of the book
-#: header.php:115
+#: header.php:109
 msgid "Go to the cover page of %s"
 msgstr "Aller à la page couverture de %s"
 
-#: header.php:119 inc/helpers/namespace.php:206
+#: header.php:113 inc/helpers/namespace.php:206
 msgid "Buy"
 msgstr "Acheter"
 
-#: inc/actions/namespace.php:66
+#: inc/actions/namespace.php:64
 msgid "Comparison loading…"
 msgstr "Chargement de la comparaison..."
 
-#: inc/actions/namespace.php:67
+#: inc/actions/namespace.php:65
 msgid "Comparison loaded."
 msgstr "Chargement de la comparaison terminé."
 
-#: inc/actions/namespace.php:68
+#: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
 msgstr "Le chapitre original n&rsquo;a pas pu être chargé."
 
-#: inc/actions/namespace.php:69
+#: inc/actions/namespace.php:67
 msgid "Toggle contents of"
 msgstr "Afficher/dissimuler les contenus de"
 
-#: inc/actions/namespace.php:217
+#: inc/actions/namespace.php:215
 msgid "Enable Image Lightbox"
 msgstr "Activer la fonction Lightbox pour les images"
 
-#: inc/actions/namespace.php:222
+#: inc/actions/namespace.php:220
 msgid "Show linked images in a lightbox"
 msgstr "Afficher les images comportant un lien dans une fenêtre superposée."
 
