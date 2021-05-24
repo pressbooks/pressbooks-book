@@ -1,6 +1,6 @@
 {
   "name": "buckram",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "install-build-tools": "npm install --no-save pressbooks-build-tools",

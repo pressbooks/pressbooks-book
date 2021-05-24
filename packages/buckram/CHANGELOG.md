@@ -1,12 +1,22 @@
 # Changelog
 
+## 1.5.2
+
+###  Dependencies 
+- Bump ua-parser-js to 0.7.28: #766
+- Bump urijs to 1.19.6: #760
+- Bump dot-prop to 4.2.1: #759
+- Bump http-proxy to 1.18.1: #758
+- Bump ini to 1.3.8: #757
+- Bump lodash to 4.17.21: #761
+
 ## 1.5.1
 
 ### Patches 
 - Color can be "initial", which is incompatible with border shorthand syntax
 - Center image in table td using CSS (td img.aligncenter)
 - Kindle limits usage of the display:none property for content blocks beyond 10000 characters. If the display:none property is applied to a content block that is bigger than 
-  10000 characters, KindleGen returns an error. Fix is to use less display:none, and hope it affects less characters.
+  10000 characters, KindleGen returns an error. Fix is to use less display:none, and hope it affects fewer characters.
 - Fix: $image-caption-text-color is often a map  
 
 ## 1.5.0
