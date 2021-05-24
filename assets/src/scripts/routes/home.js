@@ -18,7 +18,7 @@ export default {
 						.find(
 							'ol'
 						)
-						.removeAttr( 'hidden' );
+						.prop( 'hidden', false );
 				} );
 				$target.parents( '.toc__toggle' ).attr( 'aria-expanded', 'true' );
 			} );
