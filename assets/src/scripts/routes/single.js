@@ -3,7 +3,7 @@ export default {
 		// Javascript to be fired on single reading view
 		jQuery( $ => {
 			let toggle = $( '.block-reading-meta__compare__toggle' );
-			toggle.click( event => {
+			toggle.on( 'click', event => {
 				let activity = $( '.block-reading-meta__compare__activity' );
 				let alert = $( '.alert' );
 				let container = $( '.block-reading-meta__compare__comparison' );
@@ -12,9 +12,9 @@ export default {
 				alert.addClass( 'visually-hidden' );
 				if ( $( event.currentTarget ).attr( 'aria-expanded' ) === 'false' ) {
 					toggle.attr( 'aria-expanded', true );
-					activity.removeAttr( 'hidden' );
+					activity.prop( 'hidden', false );
 					if ( container.hasClass( 'populated' ) ) {
-						container.removeAttr( 'hidden' );
+						container.prop( 'hidden', false );
 						activity.attr( 'hidden', true );
 					} else {
 						alert.text( pressbooksBook.comparison_loading );
@@ -54,7 +54,7 @@ export default {
 												.text( deletions );
 											activity.attr( 'hidden', true );
 											alert.text( pressbooksBook.comparison_loaded );
-											container.removeAttr( 'hidden' );
+											container.prop( 'hidden', false );
 										}
 									  });
 								} );
@@ -78,7 +78,7 @@ export default {
 				const offset = 250;
 				const duration = 0;
 
-				$( window ).scroll( function () {
+				$( window ).on( 'scroll', function () {
 					if ( $( window ).scrollTop() > offset ) {
 						$( '.nav-reading__up' ).animate( { opacity: 1 }, duration );
 					}
@@ -87,7 +87,7 @@ export default {
 					}
 				} );
 
-				$( '.nav-reading__up' ).click( function ( event ) {
+				$( '.nav-reading__up' ).on( 'click', function ( event ) {
 					event.preventDefault();
 					$( '.nav-reading__up' )
 						.blur()
@@ -96,7 +96,7 @@ export default {
 					return false;
 				} );
 
-				$( document ).keydown( function ( e ) {
+				$( document ).on( 'keydown', function ( e ) {
 					if ( $( 'body' ).hasClass( 'no-navigation' ) ) {
 						return;
 					}
@@ -124,7 +124,7 @@ export default {
 							.removeAttr( 'width' );
 					} );
 
-					$( window ).resize( function () {
+					$( window ).on( 'resize', function () {
 						$allVideos.each( function () {
 							let $el = $( this );
 							let newWidth = $el.parent().parent().width();
@@ -132,7 +132,7 @@ export default {
 								.width( newWidth )
 								.height( newWidth * $el.data( 'aspectRatio' ) );
 						} );
-					} ).resize();
+					} ).trigger( 'resize' );
 				} )();
 			} );
 		} );

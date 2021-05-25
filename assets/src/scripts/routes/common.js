@@ -77,7 +77,7 @@ export default {
 				let $svgArrow = jQuery( 'button[aria-expanded] > svg' );
 				let $toggleButton = jQuery( 'button[aria-expanded]' );
 
-				jQuery( $toggleButton, $svgArrow ).click( function ( e ) {
+				jQuery( $toggleButton, $svgArrow ).on( 'click', function ( e ) {
 					// Cast the state as a boolean
 					let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
 
@@ -173,7 +173,7 @@ export default {
 			$( '#h5p-show-hide' ).text( $( '#h5p-show-hide' ).attr( 'show-all-text' ) );
 			$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
 
-			$h5pActivities.click( function () {
+			$h5pActivities.on( 'click', function () {
 				if ( $( this ).text() === $( this ).attr( 'show-activity-text' ) ) {
 					$activityContainer.hide();
 					$( this ).closest( 'tr' ).next( this ).show( 'slow' );
@@ -185,7 +185,7 @@ export default {
 				}
 			} );
 
-			$( '#h5p-show-hide' ).click( function () {
+			$( '#h5p-show-hide' ).on( 'click', function () {
 				if ( $( this ).text() === $( this ).attr( 'show-all-text' ) ) {
 					$activityContainer.show();
 					$( this ).text( $( this ).attr( 'hide-all-text' ) );
