@@ -118,6 +118,39 @@
       clear: both;
     }
   }
+
+  p {
+    img {
+      &.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: auto;
+
+        @include caption-text-align(center);
+      }
+
+      &.alignleft {
+        float: left;
+        margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+        max-width: 50%;
+        padding-right: 0;
+        width: 100%;
+
+        @include caption-text-align(left);
+      }
+
+      &.alignright {
+        float: right;
+        margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+        max-width: 50%;
+        padding-left: 0;
+        width: 100%;
+
+        @include caption-text-align(right);
+      }
+    }
+  }
 }
 
 @else if $type == 'prince' {
@@ -220,6 +253,35 @@
         clear: both;
     }
   }
+
+  p {
+    img {
+      &.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+
+        @include caption-text-align(center);
+      }
+
+      &.alignleft {
+        float: left;
+        margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+        max-width: 50%;
+
+        @include caption-text-align(left);
+      }
+
+      &.alignright {
+        float: right;
+        margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+        max-width: 50%;
+        padding-right: 0;
+
+        @include caption-text-align(right);
+      }
+    }
+  }
 }
 
 @else if $type == 'web' {
@@ -301,6 +363,34 @@
         padding-right: 0;
 
         @include caption-text-align(right);
+      }
+    }
+
+    p {
+      img {
+        &.aligncenter {
+          margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+          text-align: center;
+
+          @include caption-text-align(center);
+        }
+
+        &.alignleft {
+          float: left;
+          margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+          max-width: 50%;
+
+          @include caption-text-align(left);
+        }
+
+        &.alignright {
+          float: right;
+          margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+          max-width: 50%;
+          padding-right: 0;
+
+          @include caption-text-align(right);
+        }
       }
     }
   }
