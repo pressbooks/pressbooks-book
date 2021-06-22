@@ -31,7 +31,9 @@ jobs:
           node-version: '10'
 
       - name: Install OS dependencies
-        run: sudo apt-get install libxml2-utils ghostscript poppler-utils
+        run: |
+          sudo apt update
+          sudo apt-get install libxml2-utils ghostscript poppler-utils
 
       - name: Start required services
         run: sudo systemctl start mysql.service
