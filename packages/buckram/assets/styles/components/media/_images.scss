@@ -124,6 +124,7 @@
       &.aligncenter {
         margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
         text-align: center;
+        max-width: 50%;
 
         @include caption-text-align(center);
       }
@@ -254,7 +255,9 @@
     img {
       &.aligncenter {
         margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+        max-width: 50%;
         text-align: center;
+        display: block;
 
         @include caption-text-align(center);
       }
@@ -367,6 +370,7 @@
         &.aligncenter {
           margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
           text-align: center;
+          max-width: 100%;
 
           @include caption-text-align(center);
         }
