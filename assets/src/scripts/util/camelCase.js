@@ -1,3 +1,4 @@
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 /**
  * the most terrible camelizer on the internet, guaranteed!
  *
