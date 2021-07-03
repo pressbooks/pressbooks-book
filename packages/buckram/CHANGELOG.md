@@ -3,7 +3,7 @@
 ### Patches
 Fix positioning for images without captions: #788
 
-### Depenendencies
+### Dependencies
 - Bump ws to 6.2.2: #787
 - Bump color-string to 1.5.5: #789
 
