@@ -21,10 +21,9 @@
 	},
 	"scripts": {
 		"install-build-tools": "npm install --no-save pressbooks-build-tools",
-		"watch": "npm run production -- --watch",
-		"prod": "npm run production",
-		"build:production": "npm run production",
-		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch": "mix watch",
+		"build": "npm run production",
+		"production": "mix --production",
 		"bootstrap": "lerna bootstrap",
 		"rmdist": "rimraf dist",
 		"test": "npm run -s lint",
@@ -34,7 +33,13 @@
 	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
-		"globals": {
+		"rules": {
+      "jsdoc/require-param-description": "off",
+      "jsdoc/require-param-type": "off",
+      "jsdoc/require-returns": "off",
+      "jsdoc/require-returns-description": "off"
+    },
+    "globals": {
 			"$": true,
 			"pressbooksBook": true,
 			"pressbooksHypothesis": true

@@ -1,7 +1,13 @@
+/**
+ *
+ */
 window.hypothesisConfig = () => {
 	return {
 		openSidebar: ( pressbooksHypothesis.openSidebar === '1' ) ? true : false,
 		showHighlights: ( pressbooksHypothesis.showHighlights === '1' ) ? true : false,
+		/**
+		 * @param layoutParams
+		 */
 		onLayoutChange: layoutParams => {
 			const navReading = document.querySelector( '.nav-reading' );
 			if ( layoutParams.expanded === true ) {
@@ -20,5 +26,5 @@ window.hypothesisConfig = () => {
 				}
 			}
 		},
-	}
+	};
 };
