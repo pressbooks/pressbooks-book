@@ -11,7 +11,8 @@ import camelCase from './camelCase';
 class Router {
 	/**
 	 * Create a new Router
-	 * @param {Object} routes
+	 *
+	 * @param {object} routes
 	 */
 	constructor( routes ) {
 		this.routes = routes;
@@ -19,6 +20,7 @@ class Router {
 
 	/**
 	 * Fire Router events
+	 *
 	 * @param {string} route DOM-based route derived from body classes (`<body class="...">`)
 	 * @param {string} [event] Events on the route. By default, `init` and `finalize` events are called.
 	 * @param {string} [arg] Any custom argument to be passed to the event.
@@ -37,10 +39,10 @@ class Router {
 	 * Automatically load and fire Router events
 	 *
 	 * Events are fired in the following order:
-	 *  * common init
-	 *  * page-specific init
-	 *  * page-specific finalize
-	 *  * common finalize
+	 *  common init
+	 *  page-specific init
+	 *  page-specific finalize
+	 *  common finalize
 	 */
 	loadEvents() {
 		// Fire common init JS
