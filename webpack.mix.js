@@ -1,7 +1,6 @@
-let mix = require( 'laravel-mix' );
 let path = require( 'path' );
-let normalizeNewline = require( 'normalize-newline' );
-let fs = require( 'fs' );
+
+let mix = require( 'laravel-mix' );
 
 /*
  |--------------------------------------------------------------------------
@@ -15,20 +14,6 @@ let fs = require( 'fs' );
  */
 
 const dist = 'dist';
-
-// Normalize Newlines
-const normalizeNewlines = dir => {
-	fs.readdirSync( dir ).forEach( function ( file ) {
-		file = path.join( dir, file );
-		fs.readFile( file, 'utf8', function ( err, buffer ) {
-			if ( err ) return console.log( err );
-			buffer = normalizeNewline( buffer );
-			fs.writeFile( file, buffer, 'utf8', function ( err ) {
-				if ( err ) return console.log( err );
-			} );
-		} );
-	} );
-};
 
 mix
 	.setPublicPath( 'dist' )
@@ -47,11 +32,7 @@ mix
 	.copy( 'node_modules/lity/dist/lity.css', 'dist/styles/lity.css' )
 	.copyDirectory( 'assets/src/images', 'dist/images' )
 	.version()
-	.options( { processCssUrls: false } )
-	.then( () => {
-		normalizeNewlines( 'dist/scripts/' );
-		normalizeNewlines( 'dist/styles/' );
-	} );
+	.options( { processCssUrls: false } );
 
 // BrowserSync
 mix.browserSync( {

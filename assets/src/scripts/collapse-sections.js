@@ -43,6 +43,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 		// Function to create a node list
 		// of the content between this <h1> and the next
+		/**
+		 * @param elem
+		 */
 		const getContent = elem => {
 			let elems = [];
 			while (
@@ -82,6 +85,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		// Assign the button
 		let btn = heading.querySelector( 'button' );
 
+		/**
+		 *
+		 */
 		btn.onclick = () => {
 			// Cast the state as a boolean
 			let expanded = btn.getAttribute( 'aria-expanded' ) === 'true' || false;
