@@ -13,7 +13,7 @@
 	"dependencies": {
 		"details-element-polyfill": "^2.4.0",
 		"lity": "^2.4.0",
-		"sharer.js": "^0.3.8",
+		"sharer.js": "^0.4.1",
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
