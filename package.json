@@ -17,10 +17,10 @@
 		"spinkit": "^1.2.5"
 	},
 	"devDependencies": {
-		"lerna": "^3.16.4"
+		"lerna": "^3.16.4",
+		"pressbooks-build-tools": "^3.0.1"
 	},
 	"scripts": {
-		"install-build-tools": "npm install --no-save pressbooks-build-tools",
 		"watch": "mix watch",
 		"build": "npm run production",
 		"production": "mix --production",
@@ -34,12 +34,12 @@
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
 		"rules": {
-      "jsdoc/require-param-description": "off",
-      "jsdoc/require-param-type": "off",
-      "jsdoc/require-returns": "off",
-      "jsdoc/require-returns-description": "off"
-    },
-    "globals": {
+			"jsdoc/require-param-description": "off",
+			"jsdoc/require-param-type": "off",
+			"jsdoc/require-returns": "off",
+			"jsdoc/require-returns-description": "off"
+		},
+		"globals": {
 			"$": true,
 			"pressbooksBook": true,
 			"pressbooksHypothesis": true

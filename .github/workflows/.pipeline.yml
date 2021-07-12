@@ -57,8 +57,6 @@ jobs:
           npm install -g lerna
           npm install
           npm run bootstrap
-          npm run install-build-tools
-          lerna run install-build-tools
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
           composer global require "phpunit/phpunit:7.5.20"
