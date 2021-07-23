@@ -1,8 +1,12 @@
 <?php /* Template Name: H5p-listing */
 get_header(); ?>
-<?php if ( \PressbooksBook\Helpers\is_book_public() ) : ?>
+<?php if ( \PressbooksBook\Helpers\is_book_public() ) :
+	$data = \PressbooksBook\Helpers\get_h5p_activities();
+	?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class( 'h5p-listing-page' ); ?>>
 			<h2 class="page-title"><?php echo __( 'H5P activities list', 'pressbooks-book' ); ?></h2>
+
+			<h3 class="page-title"><?php echo __( 'This book includes ', 'pressbooks-book' ); ?><?php echo $data['total'].' '; ?><?php echo __( 'h5p activities', 'pressbooks-book' ); ?></h3>
 
 			<div class="float-right">
 					<?php echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" ></button>', __( 'Show all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ) ); ?>
@@ -21,9 +25,8 @@ get_header(); ?>
 				</thead>
 				<tbody>
 				<?php
-				$activities = \PressbooksBook\Helpers\get_h5p_activities();
 
-				foreach ( $activities as $activity ) {
+				foreach ( $data['activities'] as $activity ) {
 					$short_code = sprintf( '[h5p id="%s"]', $activity['ID'] );
 					echo '<tr>';
 					echo sprintf( '<td>%s</td>', $activity['ID'] );
@@ -36,6 +39,9 @@ get_header(); ?>
 				?>
 				</tbody>
 			</table>
+
+		<?php echo $data['pagination']; ?>
+
 	</div>
 <?php else : ?>
 	<?php get_template_part( 'private' ); ?>
