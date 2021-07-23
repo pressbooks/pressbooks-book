@@ -1,15 +1,16 @@
 <?php /* Template Name: H5p-listing */
 get_header(); ?>
-<?php if ( \PressbooksBook\Helpers\is_book_public() ) :
+<?php
+if ( \PressbooksBook\Helpers\is_book_public() ) :
 	$data = \PressbooksBook\Helpers\get_h5p_activities();
 	?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class( 'h5p-listing-page' ); ?>>
 			<h2 class="page-title"><?php echo __( 'H5P activities list', 'pressbooks-book' ); ?></h2>
 
-			<h3 class="page-title"><?php echo __( 'This book includes ', 'pressbooks-book' ); ?><?php echo $data['total'].' '; ?><?php echo __( 'h5p activities', 'pressbooks-book' ); ?></h3>
+			<h3 class="page-title"><?php echo __( 'This book includes ', 'pressbooks-book' ); ?><?php echo $data['total'] . ' '; ?><?php echo __( 'h5p activities', 'pressbooks-book' ); ?></h3>
 
 			<div class="float-right">
-					<?php echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" ></button>', __( 'Show all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ) ); ?>
+					<?php echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" ></button>', __( 'Expand all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ) ); ?>
 			</div>
 
 			<br /><br />

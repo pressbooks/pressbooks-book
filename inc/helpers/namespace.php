@@ -690,10 +690,12 @@ function get_h5p_activities() {
 	}
 
 		$data = $wpdb->get_results(
-			"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
+			$wpdb->prepare(
+				"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
 					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID
-					LIMIT $per_page OFFSET $offset;
-				", ARRAY_A
+					LIMIT %d OFFSET %d;
+				", [ $per_page, $offset ]
+			), ARRAY_A
 		);
 
 	$pagination = paginate_links(
