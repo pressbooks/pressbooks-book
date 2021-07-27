@@ -663,11 +663,9 @@ function is_buckram() {
  *@since 2.9.2
  *
  */
-function get_h5p_activities() {
+function get_h5p_activities( $per_page = 20 ) {
 	global $wpdb;
 	$cache_key = 'h5p_book_activities';
-
-	$per_page = 2;
 
 	$page = isset( $_GET['hpage'] ) ? abs( (int) $_GET['hpage'] ) : 1;
 	if ( $page > 1 ) {
@@ -676,18 +674,10 @@ function get_h5p_activities() {
 		$offset = $page;
 	}
 
-	$total = get_transient( $cache_key . '_total' );
-
-	if ( ! $total ) {
-
-		$total = $wpdb->get_var(
-			"SELECT count(C.ID) FROM {$wpdb->prefix}h5p_contents as C
+	$total = $wpdb->get_var(
+		"SELECT count(C.ID) FROM {$wpdb->prefix}h5p_contents as C
 					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID"
-		);
-
-		set_transient( $cache_key . '_total', $total, 900 );
-
-	}
+	);
 
 		$data = $wpdb->get_results(
 			$wpdb->prepare(

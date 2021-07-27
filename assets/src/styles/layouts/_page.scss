@@ -31,10 +31,28 @@ body:not(.home) #content h2.denied-title {
   font-family: $font-family-sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 1rem;
 
   &:before {
     display: none;
+  }
+}
+
+#content h3.page-subtitle {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  span {
+    font-weight: bold;
+  }
+}
+
+#content .h5p-pagination {
+  margin: 0 auto;
+  text-align: center;
+  .page-numbers {
+    font-size: 1.2rem;
+    padding: 0.3rem;
   }
 }
 

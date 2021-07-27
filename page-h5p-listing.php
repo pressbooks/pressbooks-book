@@ -7,7 +7,10 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 	<div id="post-<?php the_ID(); ?>" <?php post_class( 'h5p-listing-page' ); ?>>
 			<h2 class="page-title"><?php echo __( 'H5P activities list', 'pressbooks-book' ); ?></h2>
 
-			<h3 class="page-title"><?php echo __( 'This book includes ', 'pressbooks-book' ); ?><?php echo $data['total'] . ' '; ?><?php echo __( 'h5p activities', 'pressbooks-book' ); ?></h3>
+			<h3 class="page-subtitle">
+				<?php echo __( 'This book includes ', 'pressbooks-book' ); ?>
+				<span><?php echo $data['total'] . ' '; ?></span>
+			<?php echo __( 'h5p activities', 'pressbooks-book' ); ?></h3>
 
 			<div class="float-right">
 					<?php echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" ></button>', __( 'Expand all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ) ); ?>
@@ -41,7 +44,9 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 				</tbody>
 			</table>
 
-		<?php echo $data['pagination']; ?>
+		<div class="h5p-pagination">
+			<?php echo $data['pagination']; ?>
+		</div>
 
 	</div>
 <?php else : ?>
