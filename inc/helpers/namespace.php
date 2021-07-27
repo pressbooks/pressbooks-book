@@ -187,7 +187,7 @@ function share_icons() {
  * @return string The primary menu contents.
  */
 function display_menu() {
-	$id_items = [
+	$item_classes = [
 		'prefix' => 'nav--primary-item',
 		'Home' => 'home',
 		'Read' => 'read',
@@ -202,16 +202,16 @@ function display_menu() {
 		'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 		( is_front_page() ) ? '#main' : get_home_url(),
 		__( 'Home', 'pressbooks-book' ),
-		$id_items['prefix'],
-		$id_items['Home']
+		$item_classes['prefix'],
+		$item_classes['Home']
 	);
 	if ( pb_get_first_post_id() ) {
 		$items .= sprintf(
 			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			pb_get_first(),
 			__( 'Read', 'pressbooks-book' ),
-			$id_items['prefix'],
-			$id_items['Read']
+			$item_classes['prefix'],
+			$item_classes['Read']
 		);
 	}
 	if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
@@ -219,8 +219,8 @@ function display_menu() {
 			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			( get_page_link() === home_url( '/buy/' ) ) ? '#main' : home_url( '/buy/' ),
 			__( 'Buy', 'pressbooks-book' ),
-			$id_items['prefix'],
-			$id_items['Buy']
+			$item_classes['prefix'],
+			$item_classes['Buy']
 		);
 	}
 	if ( ! is_user_logged_in() ) {
@@ -228,8 +228,8 @@ function display_menu() {
 			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			wp_login_url( get_permalink() ),
 			__( 'Sign in', 'pressbooks-book' ),
-			$id_items['prefix'],
-			$id_items['SignIn']
+			$item_classes['prefix'],
+			$item_classes['SignIn']
 		);
 	} else {
 		if ( is_super_admin() || is_user_member_of_blog() ) {
@@ -237,23 +237,23 @@ function display_menu() {
 				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				admin_url(),
 				__( 'Admin', 'pressbooks-book' ),
-				$id_items['prefix'],
-				$id_items['Admin']
+				$item_classes['prefix'],
+				$item_classes['Admin']
 			);
 		}
 		$items .= sprintf(
 			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			wp_logout_url( get_permalink() ),
 			__( 'Sign out', 'pressbooks-book' ),
-			$id_items['prefix'],
-			$id_items['SignOut']
+			$item_classes['prefix'],
+			$item_classes['SignOut']
 		);
 	}
 	$items .= sprintf(
 		'<li class="header__search js-search %2$s %2$s-%3$s"><div class="header__search__form">%1$s</div></li>',
 		get_search_form( false ),
-		$id_items['prefix'],
-		$id_items['Search']
+		$item_classes['prefix'],
+		$item_classes['Search']
 	);
 
 	return $items;
