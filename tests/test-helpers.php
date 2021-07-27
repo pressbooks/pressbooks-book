@@ -215,12 +215,14 @@ class HelpersTest extends WP_UnitTestCase {
 			]
 		);
 
-		$data = \PressbooksBook\Helpers\get_h5p_activities( 1 );
+		$data = \PressbooksBook\Helpers\get_h5p_activities( 1 )
+
+			var_dump($data);
 
 		$this->assertEquals( '3', $data['total'] );
 		$this->assertEquals( 1, count( $data['activities'] ) );
-		$this->assertTrue( str_contains( $data['pagination'], 'href="?hpage=2"' ) );
-		$this->assertTrue( str_contains( $data['pagination'], 'href="?hpage=3"' ) );
+		$this->assertTrue( str_contains( $data['pagination'], 'page=2"' ) );
+		$this->assertTrue( str_contains( $data['pagination'], 'page=3"' ) );
 
 	}
 }
