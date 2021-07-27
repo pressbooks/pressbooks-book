@@ -71,7 +71,13 @@ class HelpersTest extends WP_UnitTestCase {
 	function test_display_menu() {
 		$result = display_menu();
 		$this->assertInternalType( 'string', $result );
-		$this->assertContains( sprintf( '<li><a href="%1$s">Home</a></li>', get_home_url() ), $result );
+		$this->assertContains(
+			sprintf(
+				'<li class="nav--primary-item nav--primary-item-home"><a href="%1$s">Home</a></li>',
+				get_home_url()
+			),
+			$result
+		);
 	}
 
 	function test_get_source_book() {
