@@ -13,7 +13,7 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [ 5.7.2, latest]
+        wordpress: [ 5.8, latest]
 
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
