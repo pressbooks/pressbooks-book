@@ -63,7 +63,7 @@ if ( $contact_link ) {
 				<?php /* translators: %s: Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.com/help-and-support/"><?php _e( 'Guides and Tutorials', 'pressbooks-book' ); ?></a></li>
+					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.com/support/"><?php _e( 'Guides and Tutorials', 'pressbooks-book' ); ?></a></li>
 					<?php if ( $contact_link ) : ?>
 						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
 					<?php endif; ?>
