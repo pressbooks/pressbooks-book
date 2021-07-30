@@ -684,25 +684,49 @@ function is_buckram() {
  * Get all H5P activities in the book
  * Results are cached for 1 hour
  *
- * @since 2.9.2
+ * @return array
+ *@since 2.9.2
  *
- * @return bool
  */
-function get_h5p_activities() {
+function get_h5p_activities( $per_page = 20 ) {
 	global $wpdb;
 	$cache_key = 'h5p_book_activities';
 
-	$data = get_transient( $cache_key );
-
-	if ( ! $data ) {
-		$data = $wpdb->get_results(
-			"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
-					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID;
-				", ARRAY_A
-		);
-
-		set_transient( $cache_key, $data, 900 );
+	$page = isset( $_GET['hpage'] ) ? abs( (int) $_GET['hpage'] ) : 1;
+	if ( $page > 1 ) {
+		$offset = $page * $per_page - $per_page;
+	} else {
+		$offset = $page;
 	}
 
-	return $data;
+	$total = $wpdb->get_var(
+		"SELECT count(C.ID) FROM {$wpdb->prefix}h5p_contents as C
+					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID"
+	);
+
+		$data = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
+					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID
+					LIMIT %d OFFSET %d;
+				", [ $per_page, $offset ]
+			), ARRAY_A
+		);
+
+	$pagination = paginate_links(
+		[
+			'base' => add_query_arg( 'hpage', '%#%' ),
+			'format' => '',
+			'prev_text' => __( '&laquo;' ),
+			'next_text' => __( '&raquo;' ),
+			'total' => ceil( $total / $per_page ),
+			'current' => $page,
+		]
+	);
+
+	return [
+		'total' => $total,
+		'activities' => $data,
+		'pagination' => $pagination,
+	];
 }
