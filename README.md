@@ -16,8 +16,8 @@ This theme is named after Canadian media theorist Marshall McLuhan, who coined t
 ## Requirements
 
 * PHP >= 7.3
-* WordPress >= 5.7.2
-* Pressbooks >= 5.24.0
+* WordPress >= 5.8
+* Pressbooks >= 5.26.0
 
 ## Installation
 
