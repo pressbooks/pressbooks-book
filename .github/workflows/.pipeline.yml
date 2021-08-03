@@ -13,7 +13,7 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [ 5.7.2, latest]
+        wordpress: [ 5.8, latest]
 
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
@@ -57,8 +57,6 @@ jobs:
           npm install -g lerna
           npm install
           npm run bootstrap
-          npm run install-build-tools
-          lerna run install-build-tools
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
           composer global require "phpunit/phpunit:7.5.20"
