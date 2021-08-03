@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.11.3\n"
+"Project-Id-Version: McLuhan 2.12.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-07-06T18:59:58+00:00\n"
+"POT-Creation-Date: 2021-08-03T18:32:52+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -132,7 +132,7 @@ msgstr "Sadržaj"
 msgid "Go to the cover page of %s"
 msgstr "Idi na naslovnicu za %s"
 
-#: header.php:113 inc/helpers/namespace.php:206
+#: header.php:113 inc/helpers/namespace.php:221
 msgid "Buy"
 msgstr "Kupi"
 
@@ -200,27 +200,27 @@ msgstr "Sva prava pridržana"
 msgid "Check out this great book on Pressbooks."
 msgstr "Pogledajte ovu izvrsnu knjigu na Pressbooks."
 
-#: inc/helpers/namespace.php:193
+#: inc/helpers/namespace.php:204
 msgid "Home"
 msgstr "Početna"
 
-#: inc/helpers/namespace.php:199
+#: inc/helpers/namespace.php:212
 msgid "Read"
 msgstr "Pročitaj"
 
-#: inc/helpers/namespace.php:213
+#: inc/helpers/namespace.php:230
 msgid "Sign in"
 msgstr "Prijava"
 
-#: inc/helpers/namespace.php:220
+#: inc/helpers/namespace.php:239
 msgid "Admin"
 msgstr "Admin"
 
-#: inc/helpers/namespace.php:226
+#: inc/helpers/namespace.php:247
 msgid "Sign out"
 msgstr "Odjava"
 
-#: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:431 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
@@ -228,113 +228,113 @@ msgstr[0] "Autor"
 msgstr[1] "Autori"
 msgstr[2] "Autori"
 
-#: inc/helpers/namespace.php:407
+#: inc/helpers/namespace.php:432
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Urednik"
 msgstr[1] "Urednici"
 msgstr[2] "Urednici"
 
-#: inc/helpers/namespace.php:408
+#: inc/helpers/namespace.php:433
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Prevoditelj"
 msgstr[1] "Prevoditelji"
 msgstr[2] "Prevoditelji"
 
-#: inc/helpers/namespace.php:409
+#: inc/helpers/namespace.php:434
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Recenzent"
 msgstr[1] "Recenzenti"
 msgstr[2] "Recenzenti"
 
-#: inc/helpers/namespace.php:410
+#: inc/helpers/namespace.php:435
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Ilustrator"
 msgstr[1] "Ilustratori"
 msgstr[2] "Ilustratori"
 
-#: inc/helpers/namespace.php:411
+#: inc/helpers/namespace.php:436
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Suradnik"
 msgstr[1] "Suradnici"
 msgstr[2] "Suradnici"
 
-#: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
+#: inc/helpers/namespace.php:437 partials/content-cover-book-header.php:102
 #: partials/content-cover-book-info.php:67 single.php:32
 msgid "License"
 msgstr "Licenca"
 
-#: inc/helpers/namespace.php:413
+#: inc/helpers/namespace.php:438
 msgid "Primary Subject"
 msgstr "Osnovni predmet"
 
-#: inc/helpers/namespace.php:414
+#: inc/helpers/namespace.php:439
 msgid "Additional Subject(s)"
 msgstr "Dodatni predmet(i)"
 
-#: inc/helpers/namespace.php:415
+#: inc/helpers/namespace.php:440
 msgid "Publisher"
 msgstr "Izdavač"
 
-#: inc/helpers/namespace.php:416
+#: inc/helpers/namespace.php:441
 msgid "Publication Date"
 msgstr "Datum izdavanja"
 
-#: inc/helpers/namespace.php:417 single.php:42
+#: inc/helpers/namespace.php:442 single.php:42
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digital Object Identifier (DOI)"
 
-#: inc/helpers/namespace.php:418
+#: inc/helpers/namespace.php:443
 msgid "Ebook ISBN"
 msgstr "Ebook ISBN"
 
-#: inc/helpers/namespace.php:419
+#: inc/helpers/namespace.php:444
 msgid "Print ISBN"
 msgstr "ISBN tiskano izdanje"
 
-#: inc/helpers/namespace.php:420
+#: inc/helpers/namespace.php:445
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
+#: inc/helpers/namespace.php:479 inc/helpers/namespace.php:482
 msgid "Previous: %s"
 msgstr "Prethodno: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
+#: inc/helpers/namespace.php:489 inc/helpers/namespace.php:491
 msgid "Next: %s"
 msgstr "Slijedeće: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:537
+#: inc/helpers/namespace.php:562
 msgid "%s on"
 msgstr "%s na"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:537
+#: inc/helpers/namespace.php:562
 msgid "%1$s at %2$s"
 msgstr "%1$s na %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:537 inc/helpers/namespace.php:566
+#: inc/helpers/namespace.php:562 inc/helpers/namespace.php:591
 msgid "(Edit)"
 msgstr "(Uredi)"
 
-#: inc/helpers/namespace.php:540
+#: inc/helpers/namespace.php:565
 msgid "Your comment is awaiting moderation."
 msgstr "Vaš komentar čeka odobrenje."
 
-#: inc/helpers/namespace.php:566
+#: inc/helpers/namespace.php:591
 msgid "Pingback:"
 msgstr "Povratna veza:"
 
@@ -399,40 +399,58 @@ msgstr "Purchase on  <a href=\"%1$s\">apple.com</a>"
 msgid "Purchase here:"
 msgstr "Kupite ovdje:"
 
-#: page-h5p-listing.php:5
+#: page-h5p-listing.php:8
 msgid "H5P activities list"
 msgstr ""
 
-#: page-h5p-listing.php:8
-msgid "Show all"
+#: page-h5p-listing.php:10
+msgid "This book includes "
 msgstr ""
 
-#: page-h5p-listing.php:8
+#: page-h5p-listing.php:12
+msgid ""
+"H5P activities. Only those which have been inserted into book content will "
+"be included if the book is cloned."
+msgstr ""
+
+#: page-h5p-listing.php:13
+msgid "Expand all"
+msgstr ""
+
+#: page-h5p-listing.php:13
 msgid "Hide all"
 msgstr ""
 
-#: page-h5p-listing.php:16
+#: page-h5p-listing.php:13
+msgid "Expand all activities"
+msgstr ""
+
+#: page-h5p-listing.php:18
 msgid "ID"
 msgstr ""
 
-#: page-h5p-listing.php:17 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:19 partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Naslov"
 
-#: page-h5p-listing.php:18
+#: page-h5p-listing.php:20
 msgid "Activity type"
 msgstr ""
 
-#: page-h5p-listing.php:19
-msgid "View"
+#: page-h5p-listing.php:21
+msgid "Show/Hide"
 msgstr ""
 
-#: page-h5p-listing.php:32
-msgid "View activity"
+#: page-h5p-listing.php:33
+msgid "Show activity"
 msgstr ""
 
-#: page-h5p-listing.php:32
+#: page-h5p-listing.php:33
 msgid "Hide activity"
+msgstr ""
+
+#: page-h5p-listing.php:33
+msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
