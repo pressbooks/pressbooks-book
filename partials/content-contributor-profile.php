@@ -14,7 +14,7 @@ $contributor = [
     <?php // TODO: add for each statement to parse all desired contributors ?>
 	<div class="contributor_name_and_links">
 		<?php if ( $contributor['profile_picture'] ): ?>
-			<img class="contributor_profile_picture alignleft" alt="" title="" src="<?php echo $contributor['profile_picture'] ?>"/>
+			<img class="contributor_profile_picture" alt="" title="" src="<?php echo $contributor['profile_picture'] ?>"/>
 			<?php endif; ?>
 		<span class="contributor_name"><?php echo $contributor['name'] ?></span>
 		<?php if ( $contributor['institution'] ) : ?>

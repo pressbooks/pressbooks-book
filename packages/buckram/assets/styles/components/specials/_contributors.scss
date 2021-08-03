@@ -9,28 +9,31 @@
 .contributors {
   color: $body-color;
   font-size: $body-font-size;
+  border-top: 1px solid $body-color;
+  margin-top: 1rem;
 
   .contributor_profile_picture {
     float: left;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 175px;
+    max-height: 175px;
     border-radius: 50%;
-    padding-right: 10px;
+    margin-right: 1.5rem;
   }
 
   .contributor_name {
     font-family: $h1-font-family;
-    font-size: 32px;
+    font-size: 36px;
     color: $h1-color;
     display: block;
-    line-height: 1.5;
+    line-height: 1.25;
   }
 
   .contributor_institution {
     font-family: $h1-font-family;
-    font-size: 14px;
     text-transform: uppercase;
     display: block;
+    margin-bottom: .4rem;
+
   }
   .contributor_website {
     display: block;
