@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.11.3\n"
+"Project-Id-Version: McLuhan 2.12.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-07-06T18:59:58+00:00\n"
+"POT-Creation-Date: 2021-08-03T18:32:52+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: nebulon42, 2019\n"
 "Language-Team: German (https://www.transifex.com/pressbooks/teams/9194/de/)\n"
@@ -138,7 +138,7 @@ msgstr "Inhalt"
 msgid "Go to the cover page of %s"
 msgstr "Zum Deckblatt von %s"
 
-#: header.php:113 inc/helpers/namespace.php:206
+#: header.php:113 inc/helpers/namespace.php:221
 msgid "Buy"
 msgstr "Kaufen"
 
@@ -208,135 +208,135 @@ msgstr "Alle Rechte vorbehalten"
 msgid "Check out this great book on Pressbooks."
 msgstr "Schauen Sie sich dieses großartige Buch auf Pressbooks an."
 
-#: inc/helpers/namespace.php:193
+#: inc/helpers/namespace.php:204
 msgid "Home"
 msgstr "Startseite"
 
-#: inc/helpers/namespace.php:199
+#: inc/helpers/namespace.php:212
 msgid "Read"
 msgstr "Lesen"
 
-#: inc/helpers/namespace.php:213
+#: inc/helpers/namespace.php:230
 msgid "Sign in"
 msgstr "Anmelden"
 
-#: inc/helpers/namespace.php:220
+#: inc/helpers/namespace.php:239
 msgid "Admin"
 msgstr "Admin"
 
-#: inc/helpers/namespace.php:226
+#: inc/helpers/namespace.php:247
 msgid "Sign out"
 msgstr "Abmelden"
 
-#: inc/helpers/namespace.php:406 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:431 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Autor"
 msgstr[1] "Autoren"
 
-#: inc/helpers/namespace.php:407
+#: inc/helpers/namespace.php:432
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Redaktor"
 msgstr[1] "Redakteure"
 
-#: inc/helpers/namespace.php:408
+#: inc/helpers/namespace.php:433
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Übersetzer"
 msgstr[1] "Übersetzer"
 
-#: inc/helpers/namespace.php:409
+#: inc/helpers/namespace.php:434
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Lektor"
 msgstr[1] "Lektoren"
 
-#: inc/helpers/namespace.php:410
+#: inc/helpers/namespace.php:435
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Illustrator"
 msgstr[1] "Illustratoren"
 
-#: inc/helpers/namespace.php:411
+#: inc/helpers/namespace.php:436
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Mitarbeiter"
 msgstr[1] "Mitarbeitende"
 
-#: inc/helpers/namespace.php:412 partials/content-cover-book-header.php:102
+#: inc/helpers/namespace.php:437 partials/content-cover-book-header.php:102
 #: partials/content-cover-book-info.php:67 single.php:32
 msgid "License"
 msgstr "Lizenz"
 
-#: inc/helpers/namespace.php:413
+#: inc/helpers/namespace.php:438
 msgid "Primary Subject"
 msgstr "Hauptthema"
 
-#: inc/helpers/namespace.php:414
+#: inc/helpers/namespace.php:439
 msgid "Additional Subject(s)"
 msgstr "Zusatzthema/-themen"
 
-#: inc/helpers/namespace.php:415
+#: inc/helpers/namespace.php:440
 msgid "Publisher"
 msgstr "Verlag"
 
-#: inc/helpers/namespace.php:416
+#: inc/helpers/namespace.php:441
 msgid "Publication Date"
 msgstr "Erscheinungsdatum"
 
-#: inc/helpers/namespace.php:417 single.php:42
+#: inc/helpers/namespace.php:442 single.php:42
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digitaler Objektbezeichner (DOI)"
 
-#: inc/helpers/namespace.php:418
+#: inc/helpers/namespace.php:443
 msgid "Ebook ISBN"
 msgstr "eBook-ISBN"
 
-#: inc/helpers/namespace.php:419
+#: inc/helpers/namespace.php:444
 msgid "Print ISBN"
 msgstr "Druck-ISBN"
 
-#: inc/helpers/namespace.php:420
+#: inc/helpers/namespace.php:445
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:454 inc/helpers/namespace.php:457
+#: inc/helpers/namespace.php:479 inc/helpers/namespace.php:482
 msgid "Previous: %s"
 msgstr "Zurück zu: %s "
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:464 inc/helpers/namespace.php:466
+#: inc/helpers/namespace.php:489 inc/helpers/namespace.php:491
 msgid "Next: %s"
 msgstr "Weiter zu: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:537
+#: inc/helpers/namespace.php:562
 msgid "%s on"
 msgstr "%s auf"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:537
+#: inc/helpers/namespace.php:562
 msgid "%1$s at %2$s"
 msgstr "%1$s auf %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:537 inc/helpers/namespace.php:566
+#: inc/helpers/namespace.php:562 inc/helpers/namespace.php:591
 msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
-#: inc/helpers/namespace.php:540
+#: inc/helpers/namespace.php:565
 msgid "Your comment is awaiting moderation."
 msgstr "Ihr Beitrag wartet auf die Moderation."
 
-#: inc/helpers/namespace.php:566
+#: inc/helpers/namespace.php:591
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -401,40 +401,58 @@ msgstr "Bei <a href=\"%1$s\">apple.com</a> kaufen"
 msgid "Purchase here:"
 msgstr "Hier kaufen:"
 
-#: page-h5p-listing.php:5
+#: page-h5p-listing.php:8
 msgid "H5P activities list"
 msgstr ""
 
-#: page-h5p-listing.php:8
-msgid "Show all"
+#: page-h5p-listing.php:10
+msgid "This book includes "
 msgstr ""
 
-#: page-h5p-listing.php:8
+#: page-h5p-listing.php:12
+msgid ""
+"H5P activities. Only those which have been inserted into book content will "
+"be included if the book is cloned."
+msgstr ""
+
+#: page-h5p-listing.php:13
+msgid "Expand all"
+msgstr ""
+
+#: page-h5p-listing.php:13
 msgid "Hide all"
 msgstr ""
 
-#: page-h5p-listing.php:16
+#: page-h5p-listing.php:13
+msgid "Expand all activities"
+msgstr ""
+
+#: page-h5p-listing.php:18
 msgid "ID"
 msgstr ""
 
-#: page-h5p-listing.php:17 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:19 partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Titel"
 
-#: page-h5p-listing.php:18
+#: page-h5p-listing.php:20
 msgid "Activity type"
 msgstr ""
 
-#: page-h5p-listing.php:19
-msgid "View"
+#: page-h5p-listing.php:21
+msgid "Show/Hide"
 msgstr ""
 
-#: page-h5p-listing.php:32
-msgid "View activity"
+#: page-h5p-listing.php:33
+msgid "Show activity"
 msgstr ""
 
-#: page-h5p-listing.php:32
+#: page-h5p-listing.php:33
 msgid "Hide activity"
+msgstr ""
+
+#: page-h5p-listing.php:33
+msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
