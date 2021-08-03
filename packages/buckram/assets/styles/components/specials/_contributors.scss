@@ -10,10 +10,6 @@
   color: $body-color;
   font-size: $body-font-size;
 
-  a {
-    color: $link-color;
-  }
-
   .contributor_profile_picture {
     float: left;
     max-width: 150px;
@@ -27,6 +23,7 @@
     font-size: 32px;
     color: $h1-color;
     display: block;
+    line-height: 1.5;
   }
 
   .contributor_institution {
@@ -39,6 +36,7 @@
     display: block;
   }
   .contributor_links {
+    padding-top: .2rem;
     display: inline-block;
 
     svg {
@@ -48,6 +46,7 @@
     }
   }
   .contributor_bio {
+    padding-top: .75rem;
     clear: both;
   }
 }
