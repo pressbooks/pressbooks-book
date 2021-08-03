@@ -7,10 +7,8 @@
 //============================================================================//
 
 .contributors {
-  color: $body-color;
-  font-size: $body-font-size;
-  border-top: 1px solid $body-color;
-  margin-top: 1rem;
+  border-top: 1px solid;
+  padding-top: 2rem;
 
   .contributor_profile_picture {
     float: left;
@@ -23,7 +21,6 @@
   .contributor_name {
     font-family: $h1-font-family;
     font-size: 36px;
-    color: $h1-color;
     display: block;
     line-height: 1.25;
   }
@@ -43,8 +40,8 @@
     display: inline-block;
 
     svg {
-      width: 50px;
-      height: 50px;
+      width: 35px;
+      height: 35px;
       fill: var(--primary-dark);
     }
   }

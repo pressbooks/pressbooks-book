@@ -1,4 +1,6 @@
 <?php
+
+// TODO: get actual values for contributor array and make sure they match expected values, adjust as needed
 $contributor = [
 		'profile_picture' => 'https://steelwagstaff.info/wordpress/wp-content/uploads/2019/08/steel_headshot.jpg',
 		'name' => 'Steel Wagstaff',
@@ -11,7 +13,9 @@ $contributor = [
 ];
 ?>
 <section class="contributors">
-    <?php // TODO: add for each statement to parse all desired contributors ?>
+    <?php
+	// TODO: add for each statement to parse all desired contributors
+	?>
 	<div class="contributor_name_and_links">
 		<?php if ( $contributor['profile_picture'] ): ?>
 			<img class="contributor_profile_picture" alt="" title="" src="<?php echo $contributor['profile_picture'] ?>"/>
