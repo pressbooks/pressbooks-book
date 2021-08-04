@@ -10,8 +10,8 @@ $contributor['contributor_profile_picture'] = 'https://steelwagstaff.info/wordpr
 	<?php if ( $contributor['contributor_institution'] ) : ?>
 		<span class="contributor_institution"><?php echo $contributor['contributor_institution'] ?></span>
 	<?php endif; ?>
-	<?php if ( $contributor['contributor_url'] ) : ?>
-		<span class="contributor_website"><a href="<?php echo $contributor['contributor_url'] ?>" target="_blank"><?php echo $contributor['contributor_url'] ?></a></span>
+	<?php if ( $contributor['contributor_user_url'] ) : ?>
+		<span class="contributor_website"><a href="<?php echo $contributor['contributor_user_url'] ?>" target="_blank"><?php echo $contributor['contributor_url'] ?></a></span>
 	<?php endif; ?>
 	<div class="contributor_links">
 		<?php if ( $contributor['contributor_twitter'] ) : ?>
