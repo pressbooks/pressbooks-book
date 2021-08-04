@@ -8,7 +8,11 @@
 
 .contributors {
   border-top: 1px solid;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+
+  .contributor_name_and_links {
+    margin-top: 1rem;
+  }
 
   .contributor_profile_picture {
     float: left;
