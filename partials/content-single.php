@@ -63,13 +63,18 @@ if ( get_post_type( $post->ID ) !== 'part' ) {
 	}
 } else {
 	echo apply_filters( 'the_content', $post->post_content );
-} ?>
+}
+?>
 </section>
 <section class="contributors">
-	<?php if ( $authors ) {
-		foreach( $fullAuthors as $contributor ){
+	<?php
+	if ( $authors ) {
+		foreach ( $full_authors as $contributor ) {
 			include( locate_template( 'partials/content-contributor-profile.php' ) );
 		}
-} ?>
+	}
+	?>
 </section>
-<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' ); ?>
+<?php
+edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
+?>

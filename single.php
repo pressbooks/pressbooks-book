@@ -8,7 +8,7 @@
 			$subtitle     = get_post_meta( $post->ID, 'pb_subtitle', true );
 			$contributors = new \Pressbooks\Contributors();
 			$authors      = $contributors->get( $post->ID, 'authors' );
-			$fullAuthors  = $contributors->getFullContributors($post->ID, 'authors');
+			$full_authors  = $contributors->getFullContributors( $post->ID, 'authors' );
 			$datatype     = ( in_array( $post->post_type, [ 'front-matter', 'back-matter' ], true ) ) ? pb_get_section_type( $post ) : $post->post_type;
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
 				if ( $post->post_type === 'chapter' ) {

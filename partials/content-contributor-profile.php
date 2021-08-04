@@ -3,7 +3,7 @@ $contributor['contributor_profile_picture'] = 'https://steelwagstaff.info/wordpr
 ?>
 
 <div class="contributor_name_and_links">
-	<?php if ( $contributor['contributor_profile_picture'] ): ?>
+	<?php if ( $contributor['contributor_profile_picture'] ) : ?>
 		<img class="contributor_profile_picture" alt="" title="" src="<?php echo $contributor['contributor_profile_picture'] ?>"/>
 		<?php endif; ?>
 	<span class="contributor_name"><?php echo $contributor['name'] ?></span>
@@ -25,4 +25,4 @@ $contributor['contributor_profile_picture'] = 'https://steelwagstaff.info/wordpr
 			<?php endif; ?>
 	</div>
 </div>
-<div class="contributor_bio"><?php echo wp_kses($contributor['contributor_description'], true)?></div>
+<div class="contributor_bio"><?php echo wp_kses( $contributor['contributor_description'], true ) ?></div>
