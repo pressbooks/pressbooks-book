@@ -78,7 +78,7 @@
 	}
 	?>
 	</div>
-</section>
 <?php
 edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
 ?>
+</section>
