@@ -1,4 +1,4 @@
-<section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
+<section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>
 	<header>
 		<h1 class="entry-title">
 			<?php
@@ -64,20 +64,20 @@
 	} else {
 		echo apply_filters( 'the_content', $post->post_content );
 	}
-	// TODO: add better check so that we only display the About the Authors section if we have authors && at least one of the authors has more than just a name & profile pic?
+	// TODO: add better check to display About the Authors section if at least one author has more than just a name & profile pic?
 	if ( $authors ) {
 		?>
 	<div class="contributors">
 		<h3 class="about-authors">About the Authors</h3>
 		<?php
-		{
 		foreach ( $full_authors as $contributor ) {
 			include( locate_template( 'partials/content-contributor-profile.php' ) );
 		}
-		}
+		?>
+	</div>
+		<?php
 	}
 	?>
-	</div>
 </section>
 <?php
 edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
