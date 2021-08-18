@@ -1,4 +1,4 @@
-<section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
+<section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>
 	<header>
 		<h1 class="entry-title">
 			<?php
@@ -77,8 +77,8 @@
 		}
 	}
 	?>
-	</div>
 <?php
 edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
 ?>
 </section>
+</div>
