@@ -1,10 +1,6 @@
-<?php
-$contributor['contributor_profile_picture'] = 'https://steelwagstaff.info/wordpress/wp-content/uploads/2019/08/steel_headshot.jpg';
-?>
-
 <div class="contributor_name_and_links">
-	<?php if ( $contributor['contributor_profile_picture'] ) : ?>
-		<img class="contributor_profile_picture" alt="" title="" src="<?php echo $contributor['contributor_profile_picture'] ?>"/>
+	<?php if ( $contributor['contributor_picture'] ) : ?>
+		<img class="contributor_profile_picture" alt="" title="" src="<?php echo $contributor['contributor_picture'] ?>"/>
 		<?php endif; ?>
 	<span class="contributor_name"><?php echo $contributor['name'] ?></span>
 	<?php if ( $contributor['contributor_institution'] ) : ?>
