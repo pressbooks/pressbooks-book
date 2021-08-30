@@ -73,7 +73,7 @@
 			foreach ( $chapter_contributors as $contributor ) {
 				include( locate_template( 'partials/content-contributor-profile.php' ) );
 			}
-		?>
+			?>
 		</div>
 		<?php
 	}
