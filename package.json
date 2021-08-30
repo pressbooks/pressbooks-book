@@ -14,7 +14,7 @@
 		"details-element-polyfill": "^2.4.0",
 		"lity": "^2.4.0",
 		"sharer.js": "^0.4.1",
-		"spinkit": "^1.2.5"
+		"spinkit": "^2.0.1"
 	},
 	"devDependencies": {
 		"lerna": "^4.0.0",
