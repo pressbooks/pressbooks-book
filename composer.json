@@ -15,7 +15,7 @@
 		"soberwp/intervention": "1.2.0-p"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~6.5",
+		"phpunit/phpunit": "~7.5",
 		"pressbooks/coding-standards": "^1.0",
 		"wpreadme2markdown/wp2md": "^3.0"
 	},
@@ -43,6 +43,9 @@
 		"standards": [
 			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
 		],
+    "fix": [
+      "vendor/bin/phpcbf --standard=phpcs.ruleset.xml inc partials *.php"
+    ],
 		"localize": [
 			"wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
 		],

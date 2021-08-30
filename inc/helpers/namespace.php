@@ -187,48 +187,73 @@ function share_icons() {
  * @return string The primary menu contents.
  */
 function display_menu() {
+	$item_classes = [
+		'prefix' => 'nav--primary-item',
+		'Home' => 'home',
+		'Read' => 'read',
+		'Buy' => 'buy',
+		'SignIn' => 'sign-in',
+		'Admin' => 'admin',
+		'SignOut' => 'sign-out',
+		'Search' => 'search',
+	];
+
 	$items = sprintf(
-		'<li><a href="%1$s">%2$s</a></li>',
+		'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 		( is_front_page() ) ? '#main' : get_home_url(),
-		__( 'Home', 'pressbooks-book' )
+		__( 'Home', 'pressbooks-book' ),
+		$item_classes['prefix'],
+		$item_classes['Home']
 	);
 	if ( pb_get_first_post_id() ) {
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			pb_get_first(),
-			__( 'Read', 'pressbooks-book' )
+			__( 'Read', 'pressbooks-book' ),
+			$item_classes['prefix'],
+			$item_classes['Read']
 		);
 	}
 	if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			( get_page_link() === home_url( '/buy/' ) ) ? '#main' : home_url( '/buy/' ),
-			__( 'Buy', 'pressbooks-book' )
+			__( 'Buy', 'pressbooks-book' ),
+			$item_classes['prefix'],
+			$item_classes['Buy']
 		);
 	}
 	if ( ! is_user_logged_in() ) {
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			wp_login_url( get_permalink() ),
-			__( 'Sign in', 'pressbooks-book' )
+			__( 'Sign in', 'pressbooks-book' ),
+			$item_classes['prefix'],
+			$item_classes['SignIn']
 		);
 	} else {
 		if ( is_super_admin() || is_user_member_of_blog() ) {
 			$items .= sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 				admin_url(),
-				__( 'Admin', 'pressbooks-book' )
+				__( 'Admin', 'pressbooks-book' ),
+				$item_classes['prefix'],
+				$item_classes['Admin']
 			);
 		}
 		$items .= sprintf(
-			'<li><a href="%1$s">%2$s</a></li>',
+			'<li class="%3$s %3$s-%4$s"><a href="%1$s">%2$s</a></li>',
 			wp_logout_url( get_permalink() ),
-			__( 'Sign out', 'pressbooks-book' )
+			__( 'Sign out', 'pressbooks-book' ),
+			$item_classes['prefix'],
+			$item_classes['SignOut']
 		);
 	}
 	$items .= sprintf(
-		'<li class="header__search js-search"><div class="header__search__form">%s</div></li>',
-		get_search_form( false )
+		'<li class="header__search js-search %2$s %2$s-%3$s"><div class="header__search__form">%1$s</div></li>',
+		get_search_form( false ),
+		$item_classes['prefix'],
+		$item_classes['Search']
 	);
 
 	return $items;
@@ -659,25 +684,49 @@ function is_buckram() {
  * Get all H5P activities in the book
  * Results are cached for 1 hour
  *
- * @since 2.9.2
+ * @return array
+ *@since 2.9.2
  *
- * @return bool
  */
-function get_h5p_activities() {
+function get_h5p_activities( $per_page = 20 ) {
 	global $wpdb;
 	$cache_key = 'h5p_book_activities';
 
-	$data = get_transient( $cache_key );
-
-	if ( ! $data ) {
-		$data = $wpdb->get_results(
-			"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
-					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID;
-				", ARRAY_A
-		);
-
-		set_transient( $cache_key, $data, 900 );
+	$page = isset( $_GET['hpage'] ) ? abs( (int) $_GET['hpage'] ) : 1;
+	if ( $page > 1 ) {
+		$offset = $page * $per_page - $per_page;
+	} else {
+		$offset = $page;
 	}
 
-	return $data;
+	$total = $wpdb->get_var(
+		"SELECT count(C.ID) FROM {$wpdb->prefix}h5p_contents as C
+					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID"
+	);
+
+		$data = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
+					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID
+					LIMIT %d OFFSET %d;
+				", [ $per_page, $offset ]
+			), ARRAY_A
+		);
+
+	$pagination = paginate_links(
+		[
+			'base' => add_query_arg( 'hpage', '%#%' ),
+			'format' => '',
+			'prev_text' => __( '&laquo;' ),
+			'next_text' => __( '&raquo;' ),
+			'total' => ceil( $total / $per_page ),
+			'current' => $page,
+		]
+	);
+
+	return [
+		'total' => $total,
+		'activities' => $data,
+		'pagination' => $pagination,
+	];
 }

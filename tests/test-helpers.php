@@ -71,7 +71,13 @@ class HelpersTest extends WP_UnitTestCase {
 	function test_display_menu() {
 		$result = display_menu();
 		$this->assertInternalType( 'string', $result );
-		$this->assertContains( sprintf( '<li><a href="%1$s">Home</a></li>', get_home_url() ), $result );
+		$this->assertContains(
+			sprintf(
+				'<li class="nav--primary-item nav--primary-item-home"><a href="%1$s">Home</a></li>',
+				get_home_url()
+			),
+			$result
+		);
 	}
 
 	function test_get_source_book() {
@@ -105,42 +111,48 @@ class HelpersTest extends WP_UnitTestCase {
 	function test_get_book_authors() {
 		$output = get_book_authors( [] );
 		$this->assertEquals( '', $output );
-		$output = get_book_authors( [
-			'author' => [
-				'@type' => 'Person',
-				'name' => 'Some Author',
-			],
-		] );
+		$output = get_book_authors(
+			[
+				'author' => [
+					'@type' => 'Person',
+					'name' => 'Some Author',
+				],
+			]
+		);
 		$this->assertEquals( 'Some Author', $output );
-		$output = get_book_authors( [
-			'author' => [
-				[
-					'@type' => 'Person',
-					'name' => 'Thing One',
+		$output = get_book_authors(
+			[
+				'author' => [
+					[
+						'@type' => 'Person',
+						'name' => 'Thing One',
+					],
+					[
+						'@type' => 'Person',
+						'name' => 'Thing Two',
+					],
 				],
-				[
-					'@type' => 'Person',
-					'name' => 'Thing Two',
-				],
-			],
-		] );
+			]
+		);
 		$this->assertEquals( 'Thing One and Thing Two', $output );
-		$output = get_book_authors( [
-			'author' => [
-				[
-					'@type' => 'Person',
-					'name' => 'First',
+		$output = get_book_authors(
+			[
+				'author' => [
+					[
+						'@type' => 'Person',
+						'name' => 'First',
+					],
+					[
+						'@type' => 'Person',
+						'name' => 'Second',
+					],
+					[
+						'@type' => 'Person',
+						'name' => 'Third',
+					],
 				],
-				[
-					'@type' => 'Person',
-					'name' => 'Second',
-				],
-				[
-					'@type' => 'Person',
-					'name' => 'Third',
-				],
-			],
-		] );
+			]
+		);
 		$this->assertEquals( 'First, Second, and Third', $output );
 	}
 
@@ -174,5 +186,47 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->_setupGlobalPost();
 		$license = \PressbooksBook\Helpers\do_license( [] );
 		$this->assertContains( '<div class="license-attribution">', $license );
+	}
+
+	function test_get_h5p_activities() {
+
+		global $wpdb;
+		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+		dbDelta(
+			"CREATE TABLE {$wpdb->prefix}h5p_contents (
+      id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+      title VARCHAR(255) NOT NULL,
+      library_id INT UNSIGNED NOT NULL,
+      PRIMARY KEY  (id)
+    )"
+		);
+
+		dbDelta(
+			"CREATE TABLE {$wpdb->prefix}h5p_libraries (
+      id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+      title VARCHAR(255) NOT NULL,
+      PRIMARY KEY  (id)
+    )"
+		);
+
+		dbDelta(
+			[
+				"INSERT INTO {$wpdb->prefix}h5p_libraries (title) VALUES ('Activity 1');",
+				"INSERT INTO {$wpdb->prefix}h5p_libraries (title) VALUES ('Activity 2');",
+				"INSERT INTO {$wpdb->prefix}h5p_libraries (title) VALUES ('Activity 3');",
+				"INSERT INTO {$wpdb->prefix}h5p_contents (title,library_id) VALUES ('Assigned 1',1);",
+				"INSERT INTO {$wpdb->prefix}h5p_contents (title,library_id) VALUES ('Assigned 2',2);",
+				"INSERT INTO {$wpdb->prefix}h5p_contents (title,library_id) VALUES ('Assigned 3',3);",
+			]
+		);
+
+		$data = \PressbooksBook\Helpers\get_h5p_activities( 1 );
+
+		$this->assertEquals( '3', $data['total'] );
+		$this->assertEquals( 1, count( $data['activities'] ) );
+		$this->assertTrue( str_contains( $data['pagination'], 'page=2"' ) );
+		$this->assertTrue( str_contains( $data['pagination'], 'page=3"' ) );
+
 	}
 }
