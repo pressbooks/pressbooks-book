@@ -6,9 +6,22 @@
 //                           Contributors                                     //
 //============================================================================//
 
-.contributors {
+div.contributors {
   border-top: 1px solid;
   margin-top: 2rem;
+
+  &.page {
+    border-top: 0;
+
+    h3 {
+      font-family: $font-1;
+      font-size: $h1-font-size;
+    }
+
+    .contributor_name {
+      font-size: 25px;
+    }
+  }
 
   .contributor_name_and_links {
     margin-top: 2rem;
@@ -29,7 +42,7 @@
 
   .contributor_name {
     font-family: $h1-font-family;
-    font-size: 32px;
+    font-size: $h2-font-size;
     display: block;
     line-height: 1.25;
   }
