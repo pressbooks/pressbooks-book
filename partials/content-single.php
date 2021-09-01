@@ -69,7 +69,7 @@
 		$authors_title = count( $chapter_contributors ) > 1 ? 'Authors' : 'Author';
 		?>
 		<div class="contributors">
-			<h3 class="about-authors">About the Authors</h3>
+			<h3 class="about-authors">About the <?php echo $authors_title; ?></h3>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
 				include( locate_template( 'partials/content-contributor-profile.php' ) );
