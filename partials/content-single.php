@@ -68,7 +68,8 @@
 		// TODO: add better check to display About the Authors section if at least one author has more than just a name & profile pic?
 		?>
 		<div class="contributors">
-			<h3 class="about-authors">About the Authors</h3>
+			<?php /* translators: This display About the Author or Authors ir there are more than one */ ?>
+			<h3 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h3>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
 				include( locate_template( 'partials/content-contributor-profile.php' ) );
