@@ -34,6 +34,10 @@ div.contributors {
 
   .contributor_profile_picture {
     float: left;
+    @if $type == 'epub' {
+      height: 220px;
+      width: 220px;
+    }
     max-width: 155px;
     max-height: 155px;
     border-radius: 50%;
