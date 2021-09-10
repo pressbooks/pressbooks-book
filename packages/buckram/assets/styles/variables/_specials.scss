@@ -964,6 +964,31 @@ $examples-background: #f3e1e3 !default;
 /// @type String
 $examples-header-background: #7a333a !default;
 
+// Contributors
+
+/// Margin top for elements with a class of `contributors`.
+/// @type String
+$contributors-margin-top: 2rem !default;
+
+/// Margin bottom for elements with a class of `contributors`.
+/// @type String
+$contributors-margin-bottom: 2rem !default;
+
+/// Float property for contributor profile pictures.
+/// @param String
+$contributor-profile-picture-float: left !default;
+
+/// Padding right for contributor profile pictures.
+/// @param String
+$contributor-profile-picture-padding-right: 1.5rem !default;
+
+/// Border radius for contributor profile pictures.
+/// @param String
+$contributor-profile-picture-border-radius: 50% !default;
+
+/// Text transform for elements with a class of `contributor__institution`.
+/// @type String
+$contributor-institution-text-transform: uppercase !default;
 
 /// NEW VARIABLES BEFORE FINDING PLACE FOR THEM
 

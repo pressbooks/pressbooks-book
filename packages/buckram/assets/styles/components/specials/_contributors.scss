@@ -8,60 +8,41 @@
 
 div.contributors {
   border-top: 1px solid;
-  margin-top: 2rem;
+  margin-top: $contributors-margin-top;
+  font-family: $body-font-family;
 
-  &.page {
-    border-top: 0;
-
-    h3 {
-      font-family: $font-1;
-      font-size: $h1-font-size;
-    }
-
-    .contributor_name {
-      font-size: 25px;
-    }
+ .about-authors {
+    margin-top: $contributors-margin-top;
+    margin-bottom: $contributors-margin-bottom;
+    text-align: left;
   }
 
-  .contributor_name_and_links {
-    margin-top: 2rem;
-  }
-
-  .about-authors {
-   margin: 2rem 0;
-   text-align: left;
-  }
-
-  .contributor_profile_picture {
-    float: left;
+  .contributor__profile__picture {
+    float: $contributor-profile-picture-float;
+    padding-right: $contributor-profile-picture-padding-right;
     @if $type == 'epub' {
       height: 220px;
       width: 220px;
     }
     max-width: 155px;
     max-height: 155px;
-    border-radius: 50%;
-    margin-right: 1.5rem;
+    border-radius: $contributor-profile-picture-border-radius;
   }
 
-  .contributor_name {
+  .contributor__name {
     font-family: $h1-font-family;
-    font-size: $h2-font-size;
-    display: block;
-    line-height: 1.25;
+    font-size: $h3-font-size;
+    line-height: $hx-line-height;
+    margin-top: $contributors-margin-top;
   }
 
-  .contributor_institution {
+  .contributor__institution {
     font-family: $h1-font-family;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: .4rem;
+    text-transform: $contributor-institution-text-transform;
+    margin: 0;
+  }
 
-  }
-  .contributor_website {
-    display: block;
-  }
-  .contributor_links {
+  .contributor__links {
     padding-top: .4rem;
     display: inline-block;
 
@@ -71,7 +52,7 @@ div.contributors {
       fill: var(--primary-dark);
     }
   }
-  .contributor_bio {
+  .contributor__bio {
     padding-top: .75rem;
     clear: both;
   }
