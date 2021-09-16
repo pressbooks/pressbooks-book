@@ -29,10 +29,6 @@
     margin: $contributor-profile-picture-margin;
     max-height: 200px;
     border-radius: $contributor-profile-picture-border-radius;
-    @if $type == 'epub' {
-      height: 220px;
-      width: 220px;
-    }
   }
 
   .contributor__name {
