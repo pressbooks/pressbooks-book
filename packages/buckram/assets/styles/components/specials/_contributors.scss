@@ -6,7 +6,7 @@
 //                           Contributors                                     //
 //============================================================================//
 
-div.contributors {
+.contributors {
   border-top: 1px solid;
   margin-top: $contributors-margin-top;
   font-family: $body-font-family;
@@ -17,9 +17,16 @@ div.contributors {
     text-align: left;
   }
 
+  // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
+  .contributor__name__and__links:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .contributor__profile__picture {
     float: $contributor-profile-picture-float;
-    padding-right: $contributor-profile-picture-padding-right;
+    margin: $contributor-profile-picture-margin;
     @if $type == 'epub' {
       height: 220px;
       width: 220px;
@@ -32,18 +39,23 @@ div.contributors {
   .contributor__name {
     font-family: $h1-font-family;
     font-size: $h3-font-size;
-    line-height: $hx-line-height;
     margin-top: $contributors-margin-top;
+    text-indent: $contributors-text-indent;
   }
 
   .contributor__institution {
     font-family: $h1-font-family;
     text-transform: $contributor-institution-text-transform;
+    text-indent: $contributors-text-indent;
     margin: 0;
   }
 
+  .contributor__website {
+    text-indent: $contributors-text-indent;
+  }
+
   .contributor__links {
-    padding-top: .4rem;
+    margin-top: $contributor-links-margin-top;
     display: inline-block;
 
     svg {
@@ -53,9 +65,9 @@ div.contributors {
     }
   }
   .contributor__bio {
-    padding-top: .75rem;
-    clear: both;
+    text-indent: $contributors-text-indent;
   }
+
 }
 
 

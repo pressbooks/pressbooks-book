@@ -974,13 +974,17 @@ $contributors-margin-top: 2rem !default;
 /// @type String
 $contributors-margin-bottom: 2rem !default;
 
+/// Text indent for elements with a class of `contributors`.
+/// @type String
+$contributors-text-indent: 0 !default;
+
 /// Float property for contributor profile pictures.
 /// @param String
 $contributor-profile-picture-float: left !default;
 
-/// Padding right for contributor profile pictures.
+/// Padding for contributor profile pictures.
 /// @param String
-$contributor-profile-picture-padding-right: 1.5rem !default;
+$contributor-profile-picture-margin: 0 1.5rem 1rem 0 !default;
 
 /// Border radius for contributor profile pictures.
 /// @param String
@@ -989,6 +993,10 @@ $contributor-profile-picture-border-radius: 50% !default;
 /// Text transform for elements with a class of `contributor__institution`.
 /// @type String
 $contributor-institution-text-transform: uppercase !default;
+
+/// Margin top for contributor links.
+/// @param String
+$contributor-links-margin-top: .4rem !default;
 
 /// NEW VARIABLES BEFORE FINDING PLACE FOR THEM
 
