@@ -52,7 +52,18 @@ document.addEventListener( 'DOMContentLoaded', function () {
 				elem.nextElementSibling &&
 				elem.nextElementSibling.tagName !== 'H1' &&
 				! elem.nextElementSibling.classList.contains( 'nav-reading--page' ) &&
-				! ( elem.nextElementSibling.tagName === 'DIV' && elem.nextElementSibling.className === 'glossary' )
+				! (
+					(
+						elem.nextElementSibling.tagName === 'DIV' &&
+						(
+							elem.nextElementSibling.className === 'glossary' ||
+							elem.nextElementSibling.className === 'contributors' ||
+							elem.nextElementSibling.className === 'footnotes' ||
+							elem.nextElementSibling.classList.contains( 'media-attributions' )
+						)
+					)
+					|| ( elem.nextElementSibling.tagName === 'HR' && elem.nextElementSibling.classList.contains( 'before-footnotes' ) )
+				  )
 			) {
 				elems.push( elem.nextElementSibling );
 				elem = elem.nextElementSibling;
