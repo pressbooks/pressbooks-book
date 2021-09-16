@@ -979,15 +979,15 @@ $contributors-margin-bottom: 2rem !default;
 $contributors-text-indent: 0 !default;
 
 /// Float property for contributor profile pictures.
-/// @param String
+/// @type String
 $contributor-profile-picture-float: left !default;
 
 /// Padding for contributor profile pictures.
-/// @param String
+/// @type String
 $contributor-profile-picture-margin: 0 1.5rem 0 0 !default;
 
 /// Border radius for contributor profile pictures.
-/// @param String
+/// @type String
 $contributor-profile-picture-border-radius: 50% !default;
 
 /// Text transform for elements with a class of `contributor__institution`.
@@ -995,11 +995,11 @@ $contributor-profile-picture-border-radius: 50% !default;
 $contributor-institution-text-transform: uppercase !default;
 
 /// Margin top for contributor links.
-/// @param String
-$contributor-links-margin-top: .4rem !default;
+/// @type String | Map
+$contributor-links-margin-top: (epub: 0, prince: 0, web: .5rem) !default;
 
 /// Margin top for contributor bio.
-/// @param String
+/// @type String
 $contributor-bio-margin-top: 1rem !default;
 
 
