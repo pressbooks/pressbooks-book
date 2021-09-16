@@ -27,13 +27,12 @@
   .contributor__profile__picture {
     float: $contributor-profile-picture-float;
     margin: $contributor-profile-picture-margin;
+    max-height: 200px;
+    border-radius: $contributor-profile-picture-border-radius;
     @if $type == 'epub' {
       height: 220px;
       width: 220px;
     }
-    max-width: 155px;
-    max-height: 155px;
-    border-radius: $contributor-profile-picture-border-radius;
   }
 
   .contributor__name {
@@ -66,6 +65,7 @@
   }
   .contributor__bio {
     text-indent: $contributors-text-indent;
+    margin-top: $contributor-bio-margin-top;
   }
 
 }
