@@ -7,14 +7,20 @@
 //============================================================================//
 
 .contributors {
-  border-top: 1px solid;
-  margin-top: $contributors-margin-top;
-  font-family: $body-font-family;
+  .chapter-authors, .book-contributors {
+    margin-top: $contributors-margin-top;
+    font-family: $body-font-family;
+  }
 
- .about-authors {
+  .about-authors {
     margin-top: $contributors-margin-top;
     margin-bottom: $contributors-margin-bottom;
     text-align: left;
+  }
+
+  .contributor__type {
+    margin-top: $contributors-margin-top;
+    margin-bottom: $contributors-margin-bottom;
   }
 
   // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
@@ -59,11 +65,10 @@
       fill: var(--primary-dark);
     }
   }
+
   .contributor__bio {
     text-indent: $contributors-text-indent;
     margin-top: $contributor-bio-margin-top;
   }
-
 }
-
 

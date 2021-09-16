@@ -65,9 +65,9 @@
 		echo apply_filters( 'the_content', $post->post_content );
 	}
 	if ( $display_about_the_author && $authors ) {
-		// TODO: add better check to display About the Authors section if at least one author has more than just a name & profile pic?
 		?>
-		<section class="contributors">
+		<hr class="before-contributors clear">
+		<section class="contributors chapter-authors">
 			<?php /* translators: This display About the Author or Authors ir there are more than one */ ?>
 			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h2>
 			<?php
