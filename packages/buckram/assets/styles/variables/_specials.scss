@@ -978,13 +978,33 @@ $contributors-margin-bottom: 2rem !default;
 /// @type String
 $contributors-text-indent: 0 !default;
 
+/// Text align for elements with a class of `contributors`.
+/// @type String
+$contributors-text-align: left !default;
+
 /// Float property for contributor profile pictures.
 /// @type String
 $contributor-profile-picture-float: left !default;
 
-/// Padding for contributor profile pictures.
+/// Margin-top for contributor profile pictures.
+/// @type String | Map
+$contributor-profile-picture-margin-top: (
+  epub: 1.5rem,
+  prince: 1.5rem,
+  web: 0
+) !default;
+
+/// Margin-right for contributor profile pictures.
 /// @type String
-$contributor-profile-picture-margin: 0 1.5rem 0 0 !default;
+$contributor-profile-picture-margin-right: 1.5rem !default;
+
+/// Margin-left for contributor profile pictures.
+/// @type String
+$contributor-profile-picture-margin-left: 0 !default;
+
+/// Margin-bottom for contributor profile pictures.
+/// @type String
+$contributor-profile-picture-margin-bottom: 0 !default;
 
 /// Border radius for contributor profile pictures.
 /// @type String
@@ -996,12 +1016,15 @@ $contributor-institution-text-transform: uppercase !default;
 
 /// Margin top for contributor links.
 /// @type String | Map
-$contributor-links-margin-top: (epub: 0, prince: 0, web: .5rem) !default;
+$contributor-links-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: .5rem
+) !default;
 
 /// Margin top for contributor bio.
 /// @type String
 $contributor-bio-margin-top: 1rem !default;
-
 
 /// NEW VARIABLES BEFORE FINDING PLACE FOR THEM
 
