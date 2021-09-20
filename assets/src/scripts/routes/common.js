@@ -135,14 +135,13 @@ export default {
 		( function () {
 			// Get all the part titles
 			const entityTitles = document.querySelectorAll(
-				'.toc__part--full > .toc__title, .toc__chapter--full > .toc__title, .toc__front-matter--full > .toc__title, .toc__back-matter--full > .toc__title'
+				'.toc__part--full > .toc__title__container, .toc__chapter--full > .toc__title__container, .toc__front-matter--full > .toc__title__container, .toc__back-matter--full > .toc__title__container'
 			);
 
 			// Determine whether or not we are on the home page
 			const isHome = document.body.classList.contains( 'home' );
 
 			Array.prototype.forEach.call( entityTitles, entityTitle => {
-
 				// Give each part title a toggle button child
 				let ariaExpanded = ( ( isHome && entityTitle.parentNode.classList.contains( 'toc__part' ) ) || ( ! isHome && entityTitle.parentNode.classList.contains( 'toc__parent' ) ) ) ? true : false;
 				let ariaLabel = `${pressbooksBook.toggle_contents} '${entityTitle.innerText}'`;

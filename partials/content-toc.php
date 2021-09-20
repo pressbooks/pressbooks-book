@@ -48,7 +48,7 @@ $part_numbers = $options['chapter_numbers'] ?? false; ?>
 				$part_class,
 				( $part_is_visible ) ?
 					sprintf(
-						'<p class="toc__title">%s</p>',
+						'<div class="toc__title__container">%s</div>',
 						( $part_has_content ) ? "<a href='" . get_permalink( $part['ID'] ) . "'>$part_title</a>" : $part_title
 					)
 					: '',
