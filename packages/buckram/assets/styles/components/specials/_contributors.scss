@@ -62,14 +62,13 @@
       margin-top: if-map-get($contributor-links-margin-top, $type);
       display: inline-block;
 
+      a {
+        text-decoration: if-map-get($contributor-links-text-decoration, $type);
+      }
+
       svg {
         width: 45px;
         height: 45px;
-      }
-      .contributor__link {
-        &__icon {
-          text-decoration: none;
-        }
       }
     }
 
@@ -77,6 +76,6 @@
       text-indent: $contributors-text-indent;
       margin-top: $contributor-bio-margin-top;
     }
-    
+
   }
 }
