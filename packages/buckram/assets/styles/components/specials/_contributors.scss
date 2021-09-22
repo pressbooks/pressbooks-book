@@ -62,13 +62,15 @@
       margin-top: if-map-get($contributor-links-margin-top, $type);
       display: inline-block;
 
-      a {
-        text-decoration: if-map-get($contributor-links-text-decoration, $type);
-      }
-
       svg {
         width: 45px;
         height: 45px;
+      }
+    }
+
+    &__link {
+      &__icon {
+        text-decoration: none;
       }
     }
 
