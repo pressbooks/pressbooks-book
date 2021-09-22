@@ -66,6 +66,11 @@
       width: 45px;
       height: 45px;
     }
+    .contributor__link{
+      &__icon {
+        text-decoration: none;
+      }
+    }
   }
 
   .contributor__bio {
