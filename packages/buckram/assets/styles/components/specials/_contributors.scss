@@ -18,64 +18,65 @@
     text-align: $contributors-text-align;
   }
 
-  .contributor__type {
-    margin-top: $contributors-margin-top;
-    margin-bottom: $contributors-margin-bottom;
-  }
-
-  // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
-  .contributor__name__and__links:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .contributor__profile__picture {
-    float: $contributor-profile-picture-float;
-    margin-top: if-map-get($contributor-profile-picture-margin-top, $type);
-    margin-right: $contributor-profile-picture-margin-right;
-    margin-bottom: $contributor-profile-picture-margin-bottom;
-    margin-left: $contributor-profile-picture-margin-left;
-    width: 33%;
-    max-width: 400px;
-    border-radius: $contributor-profile-picture-border-radius;
-  }
-
-  .contributor__name {
-    font-family: $h1-font-family;
-    font-size: $h3-font-size;
-    text-indent: $contributors-text-indent;
-  }
-
-  .contributor__institution {
-    font-family: $h1-font-family;
-    text-transform: $contributor-institution-text-transform;
-    text-indent: $contributors-text-indent;
-    margin: 0;
-  }
-
-  .contributor__website {
-    text-indent: $contributors-text-indent;
-  }
-
-  .contributor__links {
-    margin-top: if-map-get($contributor-links-margin-top, $type);
-    display: inline-block;
-
-    svg {
-      width: 45px;
-      height: 45px;
+  .contributor {
+    &__type {
+      margin-top: $contributors-margin-top;
+      margin-bottom: $contributors-margin-bottom;
     }
-    .contributor__link {
-      &__icon {
-        text-decoration: none;
+    // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
+    &__name__and__links:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    &__profile__picture {
+      float: $contributor-profile-picture-float;
+      margin-top: if-map-get($contributor-profile-picture-margin-top, $type);
+      margin-right: $contributor-profile-picture-margin-right;
+      margin-bottom: $contributor-profile-picture-margin-bottom;
+      margin-left: $contributor-profile-picture-margin-left;
+      width: 33%;
+      max-width: 400px;
+      border-radius: $contributor-profile-picture-border-radius;
+    }
+
+    &__name {
+      font-family: $h1-font-family;
+      font-size: $h3-font-size;
+      text-indent: $contributors-text-indent;
+    }
+
+    &__institution {
+      font-family: $h1-font-family;
+      text-transform: $contributor-institution-text-transform;
+      text-indent: $contributors-text-indent;
+      margin: 0;
+    }
+
+    &__website {
+      text-indent: $contributors-text-indent;
+    }
+
+    &__links {
+      margin-top: if-map-get($contributor-links-margin-top, $type);
+      display: inline-block;
+
+      svg {
+        width: 45px;
+        height: 45px;
+      }
+      .contributor__link {
+        &__icon {
+          text-decoration: none;
+        }
       }
     }
-  }
 
-  .contributor__bio {
-    text-indent: $contributors-text-indent;
-    margin-top: $contributor-bio-margin-top;
+    &__bio {
+      text-indent: $contributors-text-indent;
+      margin-top: $contributor-bio-margin-top;
+    }
+    
   }
 }
-
