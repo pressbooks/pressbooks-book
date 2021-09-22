@@ -72,7 +72,7 @@
 			<h3 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h3>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
-				include( locate_template( 'partials/content-contributor-profile.php' ) );
+				echo $blade_engine->render( 'posttypes.contributor', [ 'contributor' => $contributor ] );
 			}
 			?>
 		</div>
