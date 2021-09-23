@@ -98,7 +98,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Run PHP Tests
-        run: vendor/bin/phpunit
+        run: composer test
 
       - name: Upload Coverage to Codecov
         run: bash <(curl -s https://codecov.io/bash)
