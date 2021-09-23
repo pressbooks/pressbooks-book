@@ -15,7 +15,7 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [ 5.8, latest]
+        wordpress: [5.8, latest]
         experimental: [false]
         include:
           - php: 7.4
@@ -98,7 +98,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Run PHP Tests
-        run: vendor/bin/phpunit
+        run: composer test
 
       - name: Upload Coverage to Codecov
         run: bash <(curl -s https://codecov.io/bash)
