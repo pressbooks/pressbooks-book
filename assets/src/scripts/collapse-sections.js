@@ -61,8 +61,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
 							elem.nextElementSibling.className === 'footnotes' ||
 							elem.nextElementSibling.classList.contains( 'media-attributions' )
 						)
+					) ||
+					(
+						elem.nextElementSibling.tagName === 'HR' &&
+						(
+							elem.nextElementSibling.classList.contains( 'before-footnotes' ) ||
+							elem.nextElementSibling.classList.contains( 'before-contributors' )
+						)
 					)
-					|| ( elem.nextElementSibling.tagName === 'HR' && elem.nextElementSibling.classList.contains( 'before-footnotes' ) )
 				  )
 			) {
 				elems.push( elem.nextElementSibling );
