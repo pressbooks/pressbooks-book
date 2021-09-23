@@ -72,6 +72,11 @@
       }
     }
 
+    &__link {
+      margin-top: $contributor-link-margin-top;
+      text-indent: $contributors-text-indent;
+    }
+
 
     &__bio {
       text-indent: $contributors-text-indent;

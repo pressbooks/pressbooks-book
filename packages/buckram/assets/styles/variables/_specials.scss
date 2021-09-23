@@ -1022,6 +1022,10 @@ $contributor-links-margin-top: (
   web: .5rem
 ) !default;
 
+/// Margin top for individual contributor link.
+/// @type String
+$contributor-link-margin-top: 0 !default;
+
 /// Text decoration for contributor links.
 /// @type String | Map
 $contributor-links-text-decoration: (
