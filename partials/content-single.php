@@ -72,7 +72,10 @@
 			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h2>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
-				echo $blade_engine->render( 'posttypes.contributor', [ 'contributor' => $contributor ] );
+				echo $blade_engine->render( 'posttypes.contributor', [
+						'contributor' => $contributor,
+						'exporting' => false,
+				] );
 			}
 			?>
 		</section>
