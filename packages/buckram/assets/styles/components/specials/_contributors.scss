@@ -19,6 +19,8 @@
   }
 
   .contributor {
+    margin-top: $contributors-margin-top;
+
     &__type {
       margin-top: $contributors-margin-top;
       margin-bottom: $contributors-margin-bottom;
@@ -45,6 +47,7 @@
       font-family: $h1-font-family;
       font-size: $h3-font-size;
       text-indent: $contributors-text-indent;
+      margin: 0;
     }
 
     &__institution {
@@ -77,11 +80,9 @@
       text-indent: $contributors-text-indent;
     }
 
-
     &__bio {
       text-indent: $contributors-text-indent;
       margin-top: $contributor-bio-margin-top;
     }
-
   }
 }
