@@ -32,7 +32,7 @@
 
     &__profile__picture {
       float: $contributor-profile-picture-float;
-      margin-top: if-map-get($contributor-profile-picture-margin-top, $type);
+      margin-top: $contributor-profile-picture-margin-top;
       margin-right: $contributor-profile-picture-margin-right;
       margin-bottom: $contributor-profile-picture-margin-bottom;
       margin-left: $contributor-profile-picture-margin-left;
@@ -51,7 +51,7 @@
       font-family: $h1-font-family;
       text-transform: $contributor-institution-text-transform;
       text-indent: $contributors-text-indent;
-      margin: 0;
+      margin: $contributor-profile-picture-margin-top;
     }
 
     &__website {
@@ -62,14 +62,14 @@
       margin-top: if-map-get($contributor-links-margin-top, $type);
       display: inline-block;
 
-      a {
-        text-decoration: if-map-get($contributor-links-text-decoration, $type);
-      }
-
       svg {
         width: 45px;
         height: 45px;
       }
+    }
+
+    &__website a, &__links a {
+        text-decoration: if-map-get($contributor-links-text-decoration, $type);
     }
 
     &__link {
@@ -77,11 +77,9 @@
       text-indent: $contributors-text-indent;
     }
 
-
     &__bio {
       text-indent: $contributors-text-indent;
       margin-top: $contributor-bio-margin-top;
     }
-
   }
 }
