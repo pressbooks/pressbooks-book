@@ -987,12 +987,8 @@ $contributors-text-align: left !default;
 $contributor-profile-picture-float: left !default;
 
 /// Margin-top for contributor profile pictures.
-/// @type String | Map
-$contributor-profile-picture-margin-top: (
-  epub: 1.5rem,
-  prince: 1.5rem,
-  web: 0
-) !default;
+/// @type String
+$contributor-profile-picture-margin-top: 0 !default;
 
 /// Margin-right for contributor profile pictures.
 /// @type String
