@@ -1025,11 +1025,8 @@ $contributor-link-margin-top: 0 !default;
 /// Text decoration for contributor links.
 /// @type String | Map
 $contributor-links-text-decoration: (
-  epub: underline,
-  prince: underline,
   web: none
 ) !default;
-
 
 /// Margin top for contributor bio.
 /// @type String
