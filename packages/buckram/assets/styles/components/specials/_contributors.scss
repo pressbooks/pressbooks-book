@@ -43,6 +43,18 @@
       border-radius: $contributor-profile-picture-border-radius;
     }
 
+    &__name__and__links > div {
+      float: $contributor-profile-picture-float;
+
+      &.contributor__info__small {
+        width: 60%;
+      }
+
+      &.contributor__info__large {
+        width: 100%;
+      }
+    }
+
     &__name {
       font-family: $h1-font-family;
       font-size: $h3-font-size;
