@@ -85,6 +85,10 @@
     &__bio {
       text-indent: $contributors-text-indent;
       margin-top: $contributor-bio-margin-top;
+
+      p {
+        text-indent: $contributors-text-indent;
+      }
     }
   }
 }
