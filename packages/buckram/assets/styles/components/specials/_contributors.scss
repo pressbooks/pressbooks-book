@@ -19,6 +19,8 @@
   }
 
   .contributor {
+    margin-top: $contributors-margin-top;
+
     &__type {
       margin-top: $contributors-margin-top;
       margin-bottom: $contributors-margin-bottom;
@@ -32,29 +34,42 @@
 
     &__profile__picture {
       float: $contributor-profile-picture-float;
-      margin-top: if-map-get($contributor-profile-picture-margin-top, $type);
-      margin-right: $contributor-profile-picture-margin-right;
-      margin-bottom: $contributor-profile-picture-margin-bottom;
-      margin-left: $contributor-profile-picture-margin-left;
+      margin: $contributor-profile-picture-margin;
       width: 33%;
       max-width: 400px;
       border-radius: $contributor-profile-picture-border-radius;
+    }
+
+    &__name__and__links > div {
+      float: $contributor-profile-picture-float;
+
+      &.contributor__info__small {
+        width: 67%;
+        padding-left: 1.5rem;
+        box-sizing: border-box;
+      }
+
+      &.contributor__info__large {
+        width: 100%;
+      }
     }
 
     &__name {
       font-family: $h1-font-family;
       font-size: $h3-font-size;
       text-indent: $contributors-text-indent;
+      margin: 0;
     }
 
     &__institution {
       font-family: $h1-font-family;
       text-transform: $contributor-institution-text-transform;
       text-indent: $contributors-text-indent;
-      margin: 0;
+      margin: $contributor-link-margin-top;
     }
 
     &__website {
+      margin-top: $contributor-link-margin-top;
       text-indent: $contributors-text-indent;
     }
 
@@ -77,11 +92,8 @@
       text-indent: $contributors-text-indent;
     }
 
-
     &__bio {
-      text-indent: $contributors-text-indent;
       margin-top: $contributor-bio-margin-top;
     }
-
   }
 }
