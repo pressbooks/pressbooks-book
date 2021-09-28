@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.12.0\n"
+"Project-Id-Version: McLuhan 2.13.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-08-03T18:32:52+00:00\n"
+"POT-Creation-Date: 2021-09-28T23:01:19+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Antonio D., 2018\n"
 "Language-Team: Latvian (https://www.transifex.com/pressbooks/teams/9194/lv/)\n"
@@ -107,29 +107,29 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr "Nevar atrast Pressbooks vietnes instalētāju."
 
-#: header.php:57
+#: header.php:60
 msgid "Skip to content"
 msgstr "Pariet pie satura"
 
 #. translators: %s: name of network
-#: header.php:76
+#: header.php:79
 msgid "Logo for %s"
 msgstr ""
 
-#: header.php:87
+#: header.php:90
 msgid "Toggle Menu"
 msgstr "Pārslēgt izvēlni"
 
-#: header.php:100 index.php:14 partials/content-cover-toc.php:3
+#: header.php:103 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Saturs "
 
 #. translators: %s: the title of the book
-#: header.php:109
+#: header.php:112
 msgid "Go to the cover page of %s"
 msgstr ""
 
-#: header.php:113 inc/helpers/namespace.php:221
+#: header.php:116 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Nopirkt"
 
@@ -161,67 +161,67 @@ msgstr "Rādīt saistītus attēlus uznirstošā logā"
 msgid "Private"
 msgstr "Privāts"
 
-#: inc/helpers/namespace.php:140
+#: inc/helpers/namespace.php:145
 msgid "Public Domain"
 msgstr "Publisks domēns"
 
-#: inc/helpers/namespace.php:143
+#: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
 msgstr "Licence ar radošas apvienības autorību norādi"
 
-#: inc/helpers/namespace.php:146
+#: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
 msgstr ""
 "Licence ar radošas apvienības autorību norādi ar tādiem pašiem noteikumiem"
 
-#: inc/helpers/namespace.php:149
+#: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
 msgstr "Licence ar radošas apvienības autorību norādi bez atvasinājumiem"
 
-#: inc/helpers/namespace.php:152
+#: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
 msgstr "Licence ar radošas apvienības autorību norādi bezpeļņas"
 
-#: inc/helpers/namespace.php:155
+#: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr ""
 "Licence ar radošas apvienības autorību norādi bezpeļņas ar tādiem pašiem "
 "noteikumiem"
 
-#: inc/helpers/namespace.php:158
+#: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr ""
 "Licence ar radošas apvienības autorību norādi bezpeļņas bez atvasinājumiem"
 
-#: inc/helpers/namespace.php:162
+#: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
 msgstr "Visas tiesības paturētas."
 
-#: inc/helpers/namespace.php:176
+#: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
 msgstr "Novērtējiet šo lielisku grāmatu Pressbooks vietnē."
 
-#: inc/helpers/namespace.php:204
+#: inc/helpers/namespace.php:209
 msgid "Home"
 msgstr "Mājaslapa"
 
-#: inc/helpers/namespace.php:212
+#: inc/helpers/namespace.php:217
 msgid "Read"
 msgstr "Lāsīt"
 
-#: inc/helpers/namespace.php:230
+#: inc/helpers/namespace.php:235
 msgid "Sign in"
 msgstr "Ieiet"
 
-#: inc/helpers/namespace.php:239
+#: inc/helpers/namespace.php:244
 msgid "Admin"
 msgstr "Administrēšana "
 
-#: inc/helpers/namespace.php:247
+#: inc/helpers/namespace.php:252
 msgid "Sign out"
 msgstr "Iziet"
 
-#: inc/helpers/namespace.php:431 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
@@ -229,113 +229,113 @@ msgstr[0] "Autoru"
 msgstr[1] "Autors"
 msgstr[2] "Autori"
 
-#: inc/helpers/namespace.php:432
+#: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Redaktora"
 msgstr[1] "Redaktors"
 msgstr[2] "Redaktori"
 
-#: inc/helpers/namespace.php:433
+#: inc/helpers/namespace.php:438
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Tulkotāju"
 msgstr[1] "Tulkotājs"
 msgstr[2] "Tulkotaji"
 
-#: inc/helpers/namespace.php:434
+#: inc/helpers/namespace.php:439
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Tehnisko redaktoru"
 msgstr[1] "Tehniskais redaktors"
 msgstr[2] "Tehniskie redaktori"
 
-#: inc/helpers/namespace.php:435
+#: inc/helpers/namespace.php:440
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Ilustratora"
 msgstr[1] "Ilustrators"
 msgstr[2] "Ilustratori"
 
-#: inc/helpers/namespace.php:436
+#: inc/helpers/namespace.php:441
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Līdzstrādnieka"
 msgstr[1] "Līdzstrādnieks"
 msgstr[2] "Līdzstrādnieki"
 
-#: inc/helpers/namespace.php:437 partials/content-cover-book-header.php:102
-#: partials/content-cover-book-info.php:67 single.php:32
+#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:102
+#: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
 msgstr "Licence"
 
-#: inc/helpers/namespace.php:438
+#: inc/helpers/namespace.php:443
 msgid "Primary Subject"
 msgstr "Pamattēma "
 
-#: inc/helpers/namespace.php:439
+#: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
 msgstr "Papildus tēma(s)"
 
-#: inc/helpers/namespace.php:440
+#: inc/helpers/namespace.php:445
 msgid "Publisher"
 msgstr "Izdevējs"
 
-#: inc/helpers/namespace.php:441
+#: inc/helpers/namespace.php:446
 msgid "Publication Date"
 msgstr "Publikācijas datums"
 
-#: inc/helpers/namespace.php:442 single.php:42
+#: inc/helpers/namespace.php:447 single.php:45
 msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
-#: inc/helpers/namespace.php:443
+#: inc/helpers/namespace.php:448
 msgid "Ebook ISBN"
 msgstr "Elektroniskās grāmatas ISBN"
 
-#: inc/helpers/namespace.php:444
+#: inc/helpers/namespace.php:449
 msgid "Print ISBN"
 msgstr "Izdrukāt ISBN"
 
-#: inc/helpers/namespace.php:445
+#: inc/helpers/namespace.php:450
 msgid "Hashtag"
 msgstr "Atsauces tags"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:479 inc/helpers/namespace.php:482
+#: inc/helpers/namespace.php:484 inc/helpers/namespace.php:487
 msgid "Previous: %s"
 msgstr ""
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:489 inc/helpers/namespace.php:491
+#: inc/helpers/namespace.php:494 inc/helpers/namespace.php:496
 msgid "Next: %s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:562
+#: inc/helpers/namespace.php:567
 msgid "%s on"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:562
+#: inc/helpers/namespace.php:567
 msgid "%1$s at %2$s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:562 inc/helpers/namespace.php:591
+#: inc/helpers/namespace.php:567 inc/helpers/namespace.php:596
 msgid "(Edit)"
 msgstr "(Rediģēt)"
 
-#: inc/helpers/namespace.php:565
+#: inc/helpers/namespace.php:570
 msgid "Your comment is awaiting moderation."
 msgstr "Jūsu komentārs gaida pārbaudi."
 
-#: inc/helpers/namespace.php:591
+#: inc/helpers/namespace.php:596
 msgid "Pingback:"
 msgstr "Atbalspaziņošana:"
 
@@ -453,7 +453,7 @@ msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:69
+#: partials/content-single.php:84
 msgid "Edit"
 msgstr "Rediģēt"
 
@@ -637,6 +637,6 @@ msgstr ""
 msgid "Search"
 msgstr "Meklēt"
 
-#: single.php:58
+#: single.php:61
 msgid "Share This Book"
 msgstr "Dalīties ar šo grāmatu"
