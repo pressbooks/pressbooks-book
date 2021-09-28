@@ -37,12 +37,14 @@
   ],
 	"scripts": {
 		"test": [
-			"vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml",
-			"@standards"
+			"vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml"
 		],
 		"standards": [
 			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
 		],
+    "fix": [
+      "vendor/bin/phpcbf --standard=phpcs.ruleset.xml inc partials *.php"
+    ],
 		"localize": [
 			"wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
 		],

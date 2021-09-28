@@ -1,0 +1,99 @@
+////
+/// @group specials
+////
+
+//============================================================================//
+//                           Contributors                                     //
+//============================================================================//
+
+.contributors {
+  .chapter-authors, .book-contributors {
+    margin-top: $contributors-margin-top;
+    font-family: $body-font-family;
+  }
+
+  .about-authors {
+    margin-top: $contributors-margin-top;
+    margin-bottom: $contributors-margin-bottom;
+    text-align: $contributors-text-align;
+  }
+
+  .contributor {
+    margin-top: $contributors-margin-top;
+
+    &__type {
+      margin-top: $contributors-margin-top;
+      margin-bottom: $contributors-margin-bottom;
+    }
+    // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
+    &__name__and__links:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    &__profile__picture {
+      float: $contributor-profile-picture-float;
+      margin: $contributor-profile-picture-margin;
+      width: 33%;
+      max-width: 400px;
+      border-radius: $contributor-profile-picture-border-radius;
+    }
+
+    &__name__and__links > div {
+      float: $contributor-profile-picture-float;
+
+      &.contributor__info__small {
+        width: 67%;
+        padding-left: 1.5rem;
+        box-sizing: border-box;
+      }
+
+      &.contributor__info__large {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      font-family: $h1-font-family;
+      font-size: $h3-font-size;
+      text-indent: $contributors-text-indent;
+      margin: 0;
+    }
+
+    &__institution {
+      font-family: $h1-font-family;
+      text-transform: $contributor-institution-text-transform;
+      text-indent: $contributors-text-indent;
+      margin: $contributor-link-margin-top;
+    }
+
+    &__website {
+      margin-top: $contributor-link-margin-top;
+      text-indent: $contributors-text-indent;
+    }
+
+    &__links {
+      margin-top: if-map-get($contributor-links-margin-top, $type);
+      display: inline-block;
+
+      a {
+        text-decoration: if-map-get($contributor-links-text-decoration, $type);
+      }
+
+      svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    &__link {
+      margin-top: $contributor-link-margin-top;
+      text-indent: $contributors-text-indent;
+    }
+
+    &__bio {
+      margin-top: $contributor-bio-margin-top;
+    }
+  }
+}
