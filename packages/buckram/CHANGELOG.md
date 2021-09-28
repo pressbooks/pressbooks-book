@@ -1,4 +1,19 @@
 # Changelog
+## 1.6.0
+### Minor changes
+- Add variables for new contributor feature
+
+### Patches
+- Fix max-width for center-aligned images: [#851](https://github.com/pressbooks/pressbooks-book/pull/851)
+
+### Dependencies
+- Bump puppeteer to 10.4.0: [#864](https://github.com/pressbooks/pressbooks-book/pull/864)
+- Bump mocha to 9.1.1: [#846](https://github.com/pressbooks/pressbooks-book/pull/846)
+- Bump pixelmatch to 5.2.1: [#810](https://github.com/pressbooks/pressbooks-book/pull/810)
+- Bump urijs to 1.19.7: [#819](https://github.com/pressbooks/pressbooks-book/pull/819)
+- Bump chai to 4.3.4: [#807](https://github.com/pressbooks/pressbooks-book/pull/807)
+- Bump sassdoc to 2.7.3: [#804](https://github.com/pressbooks/pressbooks-book/pull/804)
+
 ## 1.5.3
 ### Patches
 Fix positioning for images without captions: #788
