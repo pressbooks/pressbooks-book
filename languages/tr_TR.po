@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.12.0\n"
+"Project-Id-Version: McLuhan 2.13.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-08-03T18:32:52+00:00\n"
+"POT-Creation-Date: 2021-09-28T23:01:19+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
@@ -113,29 +113,29 @@ msgstr "McLuhan dizininden <code>composer install</code> çalıştırmalısını
 msgid "Cannot find Pressbooks install."
 msgstr "Pressbooks yüklemesi bulunamıyor."
 
-#: header.php:57
+#: header.php:60
 msgid "Skip to content"
 msgstr "İçeriğe geç"
 
 #. translators: %s: name of network
-#: header.php:76
+#: header.php:79
 msgid "Logo for %s"
 msgstr " %s için logo"
 
-#: header.php:87
+#: header.php:90
 msgid "Toggle Menu"
 msgstr "Toggle Menü"
 
-#: header.php:100 index.php:14 partials/content-cover-toc.php:3
+#: header.php:103 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "İçindekiler"
 
 #. translators: %s: the title of the book
-#: header.php:109
+#: header.php:112
 msgid "Go to the cover page of %s"
 msgstr " %s kapak sayfasına gidin"
 
-#: header.php:113 inc/helpers/namespace.php:221
+#: header.php:116 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Satın al"
 
@@ -167,171 +167,171 @@ msgstr "Bağlantılı resimleri bir ışık kutusunda göster"
 msgid "Private"
 msgstr "Özel"
 
-#: inc/helpers/namespace.php:140
+#: inc/helpers/namespace.php:145
 msgid "Public Domain"
 msgstr "Kamu malı"
 
-#: inc/helpers/namespace.php:143
+#: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
 msgstr "Creative Commons Atıf"
 
-#: inc/helpers/namespace.php:146
+#: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
 msgstr "Creative Commons Atıf Benzer Paylaş"
 
-#: inc/helpers/namespace.php:149
+#: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
 msgstr "Creative Commons Atıf Türetilemez"
 
-#: inc/helpers/namespace.php:152
+#: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
 msgstr "Creative Commons Atıf Ticari Olmayan"
 
-#: inc/helpers/namespace.php:155
+#: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr "Creative Commons Atıf Ticari Olmayan Benzer Paylaş"
 
-#: inc/helpers/namespace.php:158
+#: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr "Creative Commons Atıf Ticari Olmayan Türetilemez"
 
-#: inc/helpers/namespace.php:162
+#: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
 msgstr "Tüm hakları Saklıdır"
 
-#: inc/helpers/namespace.php:176
+#: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
 msgstr "Pressbooks'da bulunan bu harika kitaba bir göz atın."
 
-#: inc/helpers/namespace.php:204
+#: inc/helpers/namespace.php:209
 msgid "Home"
 msgstr "Ana Sayfa"
 
-#: inc/helpers/namespace.php:212
+#: inc/helpers/namespace.php:217
 msgid "Read"
 msgstr "Oku"
 
-#: inc/helpers/namespace.php:230
+#: inc/helpers/namespace.php:235
 msgid "Sign in"
 msgstr "Oturum aç"
 
-#: inc/helpers/namespace.php:239
+#: inc/helpers/namespace.php:244
 msgid "Admin"
 msgstr "Yönetici"
 
-#: inc/helpers/namespace.php:247
+#: inc/helpers/namespace.php:252
 msgid "Sign out"
 msgstr "Oturumu kapat"
 
-#: inc/helpers/namespace.php:431 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Yazar"
 msgstr[1] "Yazarlar"
 
-#: inc/helpers/namespace.php:432
+#: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Editör"
 msgstr[1] "Editörler"
 
-#: inc/helpers/namespace.php:433
+#: inc/helpers/namespace.php:438
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Çevirmen"
 msgstr[1] "Çevirmenler"
 
-#: inc/helpers/namespace.php:434
+#: inc/helpers/namespace.php:439
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Gözden Geçiren"
 msgstr[1] "Gözden Geçirenler"
 
-#: inc/helpers/namespace.php:435
+#: inc/helpers/namespace.php:440
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "İllüstratör"
 msgstr[1] "İllüstratörler"
 
-#: inc/helpers/namespace.php:436
+#: inc/helpers/namespace.php:441
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Katkıda bulunan"
 msgstr[1] "Katkıda bulunanlar"
 
-#: inc/helpers/namespace.php:437 partials/content-cover-book-header.php:102
-#: partials/content-cover-book-info.php:67 single.php:32
+#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:102
+#: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
 msgstr "Lisans"
 
-#: inc/helpers/namespace.php:438
+#: inc/helpers/namespace.php:443
 msgid "Primary Subject"
 msgstr "Ana Konu"
 
-#: inc/helpers/namespace.php:439
+#: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
 msgstr "Ek Konu (lar)"
 
-#: inc/helpers/namespace.php:440
+#: inc/helpers/namespace.php:445
 msgid "Publisher"
 msgstr "Yayımcı"
 
-#: inc/helpers/namespace.php:441
+#: inc/helpers/namespace.php:446
 msgid "Publication Date"
 msgstr "Yayın tarihi"
 
-#: inc/helpers/namespace.php:442 single.php:42
+#: inc/helpers/namespace.php:447 single.php:45
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digital Object Identifier (DOI)"
 
-#: inc/helpers/namespace.php:443
+#: inc/helpers/namespace.php:448
 msgid "Ebook ISBN"
 msgstr "E-kitap ISBN"
 
-#: inc/helpers/namespace.php:444
+#: inc/helpers/namespace.php:449
 msgid "Print ISBN"
 msgstr "Basılı kitap ISBN"
 
-#: inc/helpers/namespace.php:445
+#: inc/helpers/namespace.php:450
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:479 inc/helpers/namespace.php:482
+#: inc/helpers/namespace.php:484 inc/helpers/namespace.php:487
 msgid "Previous: %s"
 msgstr "Önceki: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:489 inc/helpers/namespace.php:491
+#: inc/helpers/namespace.php:494 inc/helpers/namespace.php:496
 msgid "Next: %s"
 msgstr "Sonraki: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:562
+#: inc/helpers/namespace.php:567
 msgid "%s on"
 msgstr "%s de"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:562
+#: inc/helpers/namespace.php:567
 msgid "%1$s at %2$s"
 msgstr "%1$s / %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:562 inc/helpers/namespace.php:591
+#: inc/helpers/namespace.php:567 inc/helpers/namespace.php:596
 msgid "(Edit)"
 msgstr "(Düzenle)"
 
-#: inc/helpers/namespace.php:565
+#: inc/helpers/namespace.php:570
 msgid "Your comment is awaiting moderation."
 msgstr "Yorumunuz onay bekliyor."
 
-#: inc/helpers/namespace.php:591
+#: inc/helpers/namespace.php:596
 msgid "Pingback:"
 msgstr "Geri ping at: "
 
@@ -451,7 +451,7 @@ msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:69
+#: partials/content-single.php:84
 msgid "Edit"
 msgstr "Editle"
 
@@ -643,6 +643,6 @@ msgstr "Kitapta ara &hellip;"
 msgid "Search"
 msgstr "Ara"
 
-#: single.php:58
+#: single.php:61
 msgid "Share This Book"
 msgstr "Bu Kitabı Paylaş"
