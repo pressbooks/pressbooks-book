@@ -33,12 +33,9 @@
 
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h2>
-								<?php if ( \PressbooksBook\Helpers\is_book_public() ) { ?>
-									<p>
-										<?php echo \PressbooksBook\Helpers\copyright_license( false ); ?>
-									</p>
-								<?php } ?>
-								<?php
+								<?php if ( \PressbooksBook\Helpers\is_book_public() ) {
+									echo \PressbooksBook\Helpers\copyright_license( false );
+								}
 								$pb_section_doi = get_post_meta( $post->ID, 'pb_section_doi', true );
 								if ( $pb_section_doi ) {
 									?>
