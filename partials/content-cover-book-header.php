@@ -35,7 +35,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 					?>
 				</div>
 				<?php
-}
+			}
 
 			/**
 			 * @author Brad Payne <brad@bradpayne.ca>
@@ -47,8 +47,8 @@ use function \Pressbooks\Image\attachment_id_from_url;
 
 			$site_option = get_site_option( 'pressbooks_sharingandprivacy_options', [ 'allow_redistribution' => 0 ] );
 			$option      = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
-if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) {
-	?>
+			if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) {
+				?>
 				<div class="book-header__cover__downloads dropdown">
 
 					<p><?php _e( 'Download this book', 'pressbooks-book' ); ?></p>
@@ -83,7 +83,7 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 					<?php endforeach; ?>
 					</ul>
 				</div>
-			<?php } ?>
+						<?php } ?>
 				<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
 				<div class="book-header__share book-header__cover__share">
 					<?php echo \PressbooksBook\Helpers\share_icons(); ?>
@@ -110,15 +110,15 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
 			</a>
 				<?php
-}
-if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
-	?>
+			}
+			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
+				?>
 	<a class="call-to-action" href="<?php echo home_url( '/buy' ); ?>">
-	<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
+				<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
 	</a>
-	<?php
-}
-?>
+				<?php
+			}
+			?>
 		</div> <!-- end .call-to-action -->
 		<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
 		<div class="book-header__share">
@@ -127,6 +127,7 @@ if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 		<?php } ?>
 		<?php
 		/** Append content to cover book header block.
+		 *
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_cover_after_book_header' );

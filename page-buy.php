@@ -17,7 +17,7 @@ get_header(); ?>
 					<?php if ( empty( $urls ) ) : ?>
 					<p><?php _e( 'It\'s coming!', 'pressbooks-book' ); ?></p>
 					<?php else : ?>
-					<?php /* translators: %1$s: url to book, %2$s: title of book */ ?>
+						<?php /* translators: %1$s: url to book, %2$s: title of book */ ?>
 					<p><?php printf( __( 'You can buy <a href="%1$s">%2$s</a> by following any of the links below:', 'pressbooks-book' ), get_bloginfo( 'url' ), get_bloginfo( 'name' ) ); ?></p>
 					<ul class="buy-book">
 						<?php if ( isset( $urls['amazon'] ) && $urls['amazon'] ) : ?>

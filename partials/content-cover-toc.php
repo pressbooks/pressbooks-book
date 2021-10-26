@@ -14,5 +14,5 @@
 	 * @since 2.0.0
 	 */
 	do_action( 'pb_book_cover_after_toc' );
-?>
+	?>
 </section>
