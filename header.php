@@ -81,7 +81,7 @@
 						restore_current_blog();
 						?>
 					<?php } else { ?>
-					<svg class="header__logo--svg" aria-role="img">
+					<svg class="header__logo--svg" role="img">
 						<use href="#logo-pressbooks" />
 					</svg><?php } ?>
 				</a>

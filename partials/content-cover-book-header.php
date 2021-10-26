@@ -84,11 +84,6 @@ if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) &&
 					</ul>
 				</div>
 			<?php } ?>
-				<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
-				<div class="book-header__share book-header__cover__share">
-					<?php echo \PressbooksBook\Helpers\share_icons(); ?>
-				</div>
-				<?php } ?>
 			</div>
 
 			<?php
