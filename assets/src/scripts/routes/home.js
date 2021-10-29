@@ -13,7 +13,7 @@ export default {
 				$dropdowns.each( function ( el ) {
 					$( this )
 						.find( 'button' )
-						.attr( 'data-expanded', 'true' );
+						.attr( 'aria-expanded', 'true' );
 					$( this )
 						.find(
 							'ol'
@@ -29,7 +29,7 @@ export default {
 				$dropdowns.each( function ( el ) {
 					$( this )
 						.find( 'button' )
-						.attr( 'data-expanded', 'false' );
+						.attr( 'aria-expanded', 'false' );
 					$( this )
 						.find(
 							'ol'
