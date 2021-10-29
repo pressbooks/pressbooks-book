@@ -13,14 +13,14 @@ export default {
 				$dropdowns.each( function ( el ) {
 					$( this )
 						.find( 'button' )
-						.attr( 'aria-expanded', 'true' );
+						.attr( 'data-expanded', 'true' );
 					$( this )
 						.find(
 							'ol'
 						)
 						.prop( 'hidden', false );
 				} );
-				$target.parents( '.toc__toggle' ).attr( 'aria-expanded', 'true' );
+				$target.parents( '.toc__toggle' ).attr( 'data-expanded', 'true' );
 			} );
 
 			$( document.body ).on( 'click', '.toc__toggle #hide', function ( e ) {
@@ -29,14 +29,14 @@ export default {
 				$dropdowns.each( function ( el ) {
 					$( this )
 						.find( 'button' )
-						.attr( 'aria-expanded', 'false' );
+						.attr( 'data-expanded', 'false' );
 					$( this )
 						.find(
 							'ol'
 						)
 						.attr( 'hidden', 'true' );
 				} );
-				$target.parents( '.toc__toggle' ).attr( 'aria-expanded', 'false' );
+				$target.parents( '.toc__toggle' ).attr( 'data-expanded', 'false' );
 			} );
 		} );
 	},
