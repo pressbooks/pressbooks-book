@@ -88,7 +88,8 @@
 			</div>
 			<div class="header__nav">
 				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
-				<nav class="js-header-nav" id="navigation">
+				<nav aria-labelledby="book-toc" class="js-header-nav" id="navigation">
+					<h2 id="book-toc" class="screen-reader-text">Book Contents Navigation</h2>
 					<ul id="nav-primary-menu" class="nav--primary">
 						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
 					</ul>
