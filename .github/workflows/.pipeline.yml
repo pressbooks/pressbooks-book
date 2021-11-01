@@ -15,7 +15,7 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [5.8, latest]
+        wordpress: [5.8.1, latest]
         experimental: [false]
         include:
           - php: 7.4
@@ -90,6 +90,7 @@ jobs:
 
       - name: Run Coverage
         run: composer require pcov/clobber; vendor/bin/pcov clobber; vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
+        if: matrix.experimental == false
 
       - name: Run Frontend Tests
         run: |
@@ -102,6 +103,7 @@ jobs:
 
       - name: Upload Coverage to Codecov
         run: bash <(curl -s https://codecov.io/bash)
+        if: matrix.experimental == false
 
       - name: Prepare Build
         if: startsWith(github.ref, 'refs/tags/')
