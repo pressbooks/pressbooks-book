@@ -478,7 +478,7 @@ function get_links( $echo = true ) {
 	if ( $echo ) :
 		?>
 		<nav aria-labelledby="reading-nav" class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
-		<h2 id="reading-nav" class="screen-reader-text">Previous/next navigation</h2>
+		<p id="reading-nav" class="screen-reader-text">Previous/next navigation</p>
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
