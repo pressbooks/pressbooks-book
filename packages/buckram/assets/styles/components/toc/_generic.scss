@@ -219,13 +219,7 @@
 }
 
 @if $type == 'prince' {
-  p.front-matter-number,
-  p.part-number,
-  p.chapter-number,
-  p.back-matter-number {
-    bookmark-level: none;
-  }
-
+  
   #toc {
     display: $toc-display;
     counter-reset: part;
