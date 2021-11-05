@@ -88,8 +88,8 @@
 			</div>
 			<div class="header__nav">
 				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
-				<nav aria-labelledby="book-toc" class="js-header-nav" id="navigation">
-					<p id="book-toc" class="screen-reader-text">Book Contents Navigation</p>
+				<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
+					<p id="primary-nav" class="screen-reader-text">Primary Navigation</p>
 					<ul id="nav-primary-menu" class="nav--primary">
 						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
 					</ul>
@@ -98,7 +98,8 @@
 		</div>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
-				<nav class="reading-header__inside">
+				<nav aria-labelledby="book-toc" class="reading-header__inside">
+					<p id="book-toc" class="screen-reader-text">Book Contents Navigation</p>
 					<?php if ( is_single() ) { ?>
 					<div class="reading-header__toc dropdown">
 						<div class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></div>

@@ -5,7 +5,9 @@
 			<button id="show" class="button"><?php _e( 'Show All Contents', 'pressbooks-book' ); ?></button>
 			<button id="hide" class="button"><?php _e( 'Hide All Contents', 'pressbooks-book' ); ?></button>
 		</div>
-		<nav><?php include( locate_template( 'partials/content-toc.php' ) ); ?></nav>
+		<nav aria-labelledby="book-toc">
+			<p id="book-toc" class="screen-reader-text">Book Contents Navigation</p>
+			<?php include( locate_template( 'partials/content-toc.php' ) ); ?></nav>
 		<?php
 	endif;
 	/**
