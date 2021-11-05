@@ -71,7 +71,7 @@
 
 @if $type == 'epub' {
   @media amzn-mobi {
-    h3.part-number {
+    p.part-number {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.3em;

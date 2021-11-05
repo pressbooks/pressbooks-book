@@ -219,10 +219,10 @@
 }
 
 @if $type == 'prince' {
-  h3.front-matter-number,
-  h3.part-number,
-  h3.chapter-number,
-  h3.back-matter-number {
+  p.front-matter-number,
+  p.part-number,
+  p.chapter-number,
+  p.back-matter-number {
     bookmark-level: none;
   }
 

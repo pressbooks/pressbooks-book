@@ -82,7 +82,7 @@
       }
     }
 
-    h2.chapter-subtitle {
+    p.chapter-subtitle {
       display: block;
       margin-bottom: 0;
       font-family: $section-subtitle-font-family;
@@ -99,7 +99,7 @@
       word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
-    h2.chapter-author {
+    p.chapter-author {
       display: block;
       margin-bottom: if-map-get($section-author-margin-bottom, $type);
       font-family: $section-author-font-family;
@@ -114,25 +114,25 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h2.chapter-title + h2.chapter-subtitle,
-    .short-title + h2.chapter-subtitle {
+    h2.chapter-title + p.chapter-subtitle,
+    .short-title + p.chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    h2.chapter-title + h2.chapter-author,
-    .short-title + h2.chapter-author {
+    p.chapter-title + p.chapter-author,
+    .short-title + p.chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
-    h2.chapter-subtitle + h2.chapter-author {
+    p.chapter-subtitle + p.chapter-author {
       margin-top: if-map-get($section-subtitle-author-spacing, $type);
     }
 
-    h2.chapter-title:last-child {
+    p.chapter-title:last-child {
       margin-bottom: if-map-get($section-title-margin-bottom, $type);
     }
 
-    h2.chapter-subtitle:last-child {
+    p.chapter-subtitle:last-child {
       margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
     }
   }
@@ -177,7 +177,7 @@ blockquote.aphorism {
       margin-bottom: 0;
     }
 
-    h3.chapter-number {
+    p.chapter-number {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.2em;
@@ -195,7 +195,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    h2.chapter-subtitle {
+    p.chapter-subtitle {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 0.9em;
@@ -204,7 +204,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    h2.chapter-author {
+    p.chapter-author {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 0.8em;
