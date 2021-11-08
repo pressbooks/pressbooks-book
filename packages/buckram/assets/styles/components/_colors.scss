@@ -167,7 +167,7 @@ h1.front-matter-title {
 }
 
 // PART TITLE COLOR
-p.part-number {
+.part-number {
   color: if-map-get($part-number-color, $type);
 }
 
@@ -185,11 +185,11 @@ h2.chapter-title {
   color: if-map-get($chapter-title-color, $type);
 }
 
-p.chapter-subtitle {
+.chapter-subtitle {
   color: if-map-get($chapter-subtitle-color, $type);
 }
 
-p.chapter-author {
+.chapter-author {
   color: if-map-get($chapter-author-color, $type);
 }
 

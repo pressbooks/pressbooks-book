@@ -82,7 +82,7 @@
       }
     }
 
-    p.chapter-subtitle {
+    .chapter-subtitle {
       display: block;
       margin-bottom: 0;
       font-family: $section-subtitle-font-family;
@@ -99,7 +99,7 @@
       word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
-    p.chapter-author {
+    .chapter-author {
       display: block;
       margin-bottom: if-map-get($section-author-margin-bottom, $type);
       font-family: $section-author-font-family;
@@ -114,25 +114,25 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h2.chapter-title + p.chapter-subtitle,
-    .short-title + p.chapter-subtitle {
+    h2.chapter-title + .chapter-subtitle,
+    .short-title + .chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    p.chapter-title + p.chapter-author,
-    .short-title + p.chapter-author {
+    .chapter-title + .chapter-author,
+    .short-title + .chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
-    p.chapter-subtitle + p.chapter-author {
+    .chapter-subtitle + .chapter-author {
       margin-top: if-map-get($section-subtitle-author-spacing, $type);
     }
 
-    p.chapter-title:last-child {
+    .chapter-title:last-child {
       margin-bottom: if-map-get($section-title-margin-bottom, $type);
     }
 
-    p.chapter-subtitle:last-child {
+    .chapter-subtitle:last-child {
       margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
     }
   }
@@ -195,7 +195,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    p.chapter-subtitle {
+    .chapter-subtitle {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 0.9em;
@@ -204,7 +204,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    p.chapter-author {
+    .chapter-author {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 0.8em;

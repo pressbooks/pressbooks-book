@@ -362,17 +362,17 @@ Version:  2.0
     font-style: normal;
   }
 
-  p.author {
+  h3.author {
     font-weight: normal;
     font-style: normal;
   }
 
-  p.publisher {
+  h4.publisher {
     font-weight: normal;
     font-style: normal;
   }
 
-  p.publisher-city {
+  h5.publisher-city {
     font-weight: normal;
     font-style: normal;
   }
@@ -416,7 +416,7 @@ Version:  2.0
     text-align: center;
   }
 
-  p.part-number {
+  h3.part-number {
     font-weight: normal;
     font-style: normal;
     font-size: 1.3em;
@@ -434,7 +434,7 @@ Version:  2.0
     text-align: center;
   }
 
-  p.chapter-number {
+  h3.chapter-number {
     font-weight: normal;
     font-style: normal;
     font-size: 1.2em;
@@ -452,7 +452,7 @@ Version:  2.0
     text-align: center;
   }
 
-  p.chapter-subtitle {
+  h2.chapter-subtitle {
     font-weight: normal;
     font-style: normal;
     font-size: 0.9em;
@@ -461,7 +461,7 @@ Version:  2.0
     text-align: center;
   }
 
-  p.chapter-author {
+  h2.chapter-author {
     font-weight: normal;
     font-style: normal;
     font-size: 0.8em;

@@ -77,7 +77,7 @@ h2.subtitle {
   }
 }
 
-p.author {
+.author {
   margin-top: if-map-get($title-author-margin-top, $type);
   margin-right: if-map-get($title-author-margin-right, $type);
   margin-left: if-map-get($title-author-margin-left, $type);
@@ -108,7 +108,7 @@ div.publisher-logo {
   text-align: $title-publisher-logo-text-align;
 }
 
-p.publisher {
+.publisher {
   display: block;
   float: if-map-get($title-publisher-float, $type);
   margin: if-map-get($title-publisher-margin-top, $type) if-map-get($title-publisher-margin-right, $type) if-map-get($title-publisher-margin-bottom, $type) if-map-get($title-publisher-margin-left, $type);
@@ -128,7 +128,7 @@ p.publisher {
   padding-bottom: if-map-get($title-publisher-padding-bottom, $type);
 }
 
-p.publisher-city {
+.publisher-city {
   float: if-map-get($title-publisher-city-float, $type);
   margin-top: 0;
   margin-left: if-map-get($title-publisher-city-margin-left, $type);
@@ -191,17 +191,17 @@ p.publisher-city {
       font-weight: normal;
     }
 
-    p.author {
+    .author {
       font-style: normal;
       font-weight: normal;
     }
 
-    p.publisher {
+    .publisher {
       font-style: normal;
       font-weight: normal;
     }
 
-    p.publisher-city {
+    .publisher-city {
       font-style: normal;
       font-weight: normal;
     }

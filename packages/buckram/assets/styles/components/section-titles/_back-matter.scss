@@ -46,7 +46,7 @@
       }
     }
 
-    p.chapter-subtitle {
+    .chapter-subtitle {
       display: block;
       margin-bottom: 0;
       font-family: $section-subtitle-font-family;
@@ -63,7 +63,7 @@
       word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
-    p.chapter-author {
+    .chapter-author {
       display: block;
       margin-bottom: if-map-get($section-author-margin-bottom, $type);
       font-family: $section-author-font-family;
@@ -78,17 +78,17 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h1.back-matter-title + p.chapter-subtitle,
+    h1.back-matter-title + .chapter-subtitle,
     .short-title + p.chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    h1.back-matter-title + p.chapter-author,
+    h1.back-matter-title + .chapter-author,
     .short-title + p.chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
-    p.chapter-subtitle + p.chapter-author {
+    .chapter-subtitle + .chapter-author {
       margin-top: if-map-get($section-subtitle-author-spacing, $type);
     }
 
@@ -96,7 +96,7 @@
       margin-bottom: if-map-get($back-matter-title-margin-bottom, $type);
     }
 
-    p.chapter-subtitle:last-child {
+    .chapter-subtitle:last-child {
       margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
     }
   }
