@@ -61,7 +61,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: phpcs, composer:v1, phpunit:, phpunit-polyfills
+          tools: phpcs, composer:v1
           coverage: pcov
 
       - name: Install Node dependencies
@@ -76,6 +76,8 @@ jobs:
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
+          composer global require "phpunit/phpunit:7.5.20"
+          composer require --dev yoast/phpunit-polyfills
 
       - name: Run Lint
         run: npm run lint
