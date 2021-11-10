@@ -150,7 +150,7 @@ p.wp-caption-text {
 }
 
 // FRONT MATTER COLOR
-h1.front-matter-title {
+.front-matter-title {
   color: if-map-get($front-matter-title-color, $type);
 }
 
@@ -171,7 +171,7 @@ h1.front-matter-title {
   color: if-map-get($part-number-color, $type);
 }
 
-h1.part-title {
+.part-title {
   color: if-map-get($part-title-color, $type);
 }
 
@@ -181,7 +181,7 @@ h1.part-title {
   color: if-map-get($chapter-number-color, $type);
 }
 
-h2.chapter-title {
+.chapter-title {
   color: if-map-get($chapter-title-color, $type);
 }
 
@@ -198,7 +198,7 @@ h2.chapter-title {
 }
 
 // BACK MATTER TITLE COLOR
-h1.back-matter-title {
+.back-matter-title {
   color: if-map-get($back-matter-title-color, $type);
 }
 
