@@ -8,7 +8,7 @@
   .chapter-title-wrap {
     margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
-    h2.chapter-title {
+    .chapter-title {
       border-bottom: if-map-get($chapter-title-border-bottom-width, $type) $chapter-title-border-bottom-style if-map-get($chapter-title-border-bottom-color, $type);
       padding-bottom: if-map-get($chapter-title-padding-bottom, $type);
       display: $chapter-title-display;
@@ -114,7 +114,7 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h2.chapter-title + .chapter-subtitle,
+    .chapter-title + .chapter-subtitle,
     .short-title + .chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
@@ -177,7 +177,7 @@ blockquote.aphorism {
       margin-bottom: 0;
     }
 
-    p.chapter-number {
+    .chapter-number {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.2em;
@@ -186,7 +186,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    h2.chapter-title {
+    .chapter-title {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.5em;
@@ -215,11 +215,11 @@ blockquote.aphorism {
   }
 
   @media amzn-kf8 {
-    .chapter-title-wrap h2.chapter-title::before {
+    .chapter-title-wrap .chapter-title::before {
       content: '';
     }
 
-    .chapter-title-wrap h2.chapter-title::after {
+    .chapter-title-wrap .chapter-title::after {
       content: '';
     }
   }

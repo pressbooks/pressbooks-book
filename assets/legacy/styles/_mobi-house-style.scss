@@ -7,11 +7,11 @@ Version:  2.0
 /* embedded fonts broken = ornament fonts broken, so replace them in KF8 */
 
 @media amzn-kf8 {
-  .chapter-title-wrap h2.chapter-title::before {
+  .chapter-title-wrap .chapter-title::before {
     content: "";
   }
 
-  .chapter-title-wrap h2.chapter-title::after {
+  .chapter-title-wrap .chapter-title::after {
     content: "";
   }
 
