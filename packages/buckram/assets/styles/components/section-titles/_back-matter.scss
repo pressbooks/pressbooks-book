@@ -12,7 +12,7 @@
       display: none;
     }
 
-    h1.back-matter-title {
+    .back-matter-title {
       display: block;
       margin-top: if-map-get($back-matter-title-margin-top, $type);
       margin-bottom: 0;
@@ -78,13 +78,13 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h1.back-matter-title + .chapter-subtitle,
-    .short-title + p.chapter-subtitle {
+    .back-matter-title + .chapter-subtitle,
+    .short-title + .chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    h1.back-matter-title + .chapter-author,
-    .short-title + p.chapter-author {
+    .back-matter-title + .chapter-author,
+    .short-title + .chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
@@ -92,7 +92,7 @@
       margin-top: if-map-get($section-subtitle-author-spacing, $type);
     }
 
-    h1.back-matter-title:last-child {
+    .back-matter-title:last-child {
       margin-bottom: if-map-get($back-matter-title-margin-bottom, $type);
     }
 
@@ -104,7 +104,7 @@
 
 @if $type == 'epub' {
   @media amzn-mobi {
-    h2.back-matter-title {
+    .back-matter-title {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.3em;
