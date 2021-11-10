@@ -15,7 +15,7 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [5.8.1, 5.8.2]
+        wordpress: [5.8, latest]
         experimental: [false]
         include:
           - php: 7.4
@@ -61,7 +61,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: phpcs, composer:v1
+          tools: phpcs, composer:v1, phpunit-polyfills
           coverage: pcov
 
       - name: Install Node dependencies
