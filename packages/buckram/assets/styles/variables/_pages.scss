@@ -255,7 +255,7 @@ $title-subtitle-line-height: $title-title-line-height !default;
 
 // Author
 
-/// Top margin for title page author on elements `<h3>` with a class of `author`.
+/// Top margin for title page author on elements with a class of `author`.
 /// @type String | Map
 $title-author-margin-top: (
   epub: 2em,
@@ -263,21 +263,21 @@ $title-author-margin-top: (
   web: 2em
 ) !default;
 
-/// Right margin for title page author on elements `<h3>` with a class of `author`.
+/// Right margin for title page author on elements with a class of `author`.
 /// @type String | Map
 /// @since 1.0.0
 $title-author-margin-right: 0 !default;
 
-/// Left margin for title page author on elements `<h3>` with a class of `author`.
+/// Left margin for title page author on elements with a class of `author`.
 /// @type String | Map
 /// @since 1.0.0
 $title-author-margin-left: 0 !default;
 
-/// Font stack for title page author on elements `<h3>` with a class of `author`.
+/// Font stack for title page author on elements with a class of `author`.
 /// @type String
 $title-author-font-family: $font-2 !default;
 
-/// Font size for title page author on elements `<h3>` with a class of `author`.
+/// Font size for title page author on elements with a class of `author`.
 /// @type String | Map
 $title-author-font-size:(
   epub: 1em,
@@ -285,27 +285,27 @@ $title-author-font-size:(
   web: 1em
 ) !default;
 
-/// Font style for title page author on elements `<h3>` with a class of `author`.
+/// Font style for title page author on elements with a class of `author`.
 /// @type String
 $title-author-font-style: normal !default;
 
-/// Font weight for title page author on elements `<h3>` with a class of `author`.
+/// Font weight for title page author on elements with a class of `author`.
 /// @type String
 $title-author-font-weight: normal !default;
 
-/// Letter spacing for title page author on elements `<h3>` with a class of `author`.
+/// Letter spacing for title page author on elements with a class of `author`.
 /// @type String
 $title-author-letter-spacing: 1px !default;
 
-/// Word spacing for title page author on elements `<h3>` with a class of `author`.
+/// Word spacing for title page author on elements with a class of `author`.
 /// @type String
 $title-author-word-spacing: 2px !default;
 
-/// Text alignment for title page author on elements `<h3>` with a class of `author`.
+/// Text alignment for title page author on elements with a class of `author`.
 /// @type String
 $title-author-align: center !default;
 
-/// Text transform for title page author on elements `<h3>` with a class of `author`.
+/// Text transform for title page author on elements with a class of `author`.
 /// @type String
 $title-author-text-transform: none !default;
 
@@ -366,64 +366,64 @@ $title-publisher-logo-margin-left: auto !default;
 
 // Publisher
 
-/// Top margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Top margin for title page publisher text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.2.0
-$title-publisher-margin-top: (epub: 0, prince: 0, web: 0) !default;
+$title-publisher-margin-top: (epub: 1.5em, prince: 1.5em, web: 0) !default;
 
-/// Right margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Right margin for title page publisher text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.2.0
 $title-publisher-margin-right: (epub: 0, prince: 0, web: 0) !default;
 
-/// Bottom margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Bottom margin for title page publisher text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.2.0
 $title-publisher-margin-bottom: (epub: 0.5em, prince: 0.5em, web: 0.5em) !default;
 
-/// Left margin for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Left margin for title page publisher text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.2.0
 $title-publisher-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
-/// Float for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Float for title page publisher text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.4.0
 $title-publisher-float: (epub: none, prince: none, web: none) !default;
 
-/// Font stack for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Font stack for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-font-family: $font-3 !default;
 
-/// Font size for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Font size for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-font-size: 0.9em !default;
 
-/// Font style for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Font style for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-font-style: normal !default;
 
-/// Font weight for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Font weight for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-font-weight: normal !default;
 
-/// Line height for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Line height for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-line-height: 1em !default;
 
-/// Letter spacing for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Letter spacing for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-letter-spacing: 1px !default;
 
-/// Word spacing for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Word spacing for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-word-spacing: 2px !default;
 
-/// Text transform for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Text transform for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-align: center !default;
 
-/// Text transform for title page publisher text on elements `<h4>` with a class of `publisher`.
+/// Text transform for title page publisher text on elements with a class of `publisher`.
 /// @type String
 $title-publisher-text-transform: none !default;
 
@@ -449,54 +449,54 @@ $title-publisher-padding-bottom: $title-title-padding-bottom !default;
 
 // Publisher city
 
-/// Right margin for title page publisher city text on elements `<h4>` with a class of `publisher`.
+/// Right margin for title page publisher city text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.2.0
 $title-publisher-city-margin-right: $title-publisher-margin-right !default;
 
-/// Left margin for title page publisher city text on elements `<h4>` with a class of `publisher`.
+/// Left margin for title page publisher city text on elements with a class of `publisher`.
 /// @type String | Map
 /// @since 1.2.0
 $title-publisher-city-margin-left: $title-publisher-margin-left !default;
 
-/// Float for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Float for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String | Map
 /// @since 1.4.0
 $title-publisher-city-float: (epub: none, prince: none, web: none) !default;
 
-/// Font stack for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Font stack for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-font-family: $font-3 !default;
 
-/// Font size for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Font size for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-font-size: 0.9em !default;
 
-/// Font style for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Font style for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-font-style: normal !default;
 
-/// Font weight for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Font weight for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-font-weight: normal !default;
 
-/// Line height for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Line height for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-line-height: 1em !default;
 
-/// Letter spacing for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Letter spacing for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-letter-spacing: 1px !default;
 
-/// Word spacing for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Word spacing for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-word-spacing: 2px !default;
 
-/// Alignment for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Alignment for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-align: center !default;
 
-/// Text transform for title page publisher city text on elements `<h5>` with a class of `publisher-city`.
+/// Text transform for title page publisher city text on elements with a class of `publisher-city`.
 /// @type String
 $title-publisher-city-text-transform: uppercase !default;
 

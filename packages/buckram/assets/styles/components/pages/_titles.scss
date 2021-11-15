@@ -90,6 +90,7 @@
   word-spacing: $title-author-word-spacing;
   text-align: $title-author-align;
   text-transform: $title-author-text-transform;
+  text-indent: 0;
   border-bottom: if-map-get($title-author-border-bottom-width, $type) $title-author-border-bottom-style if-map-get($title-author-border-bottom-color, $type);
   padding-bottom: if-map-get($title-author-padding-bottom, $type);
   @if $type != 'epub' {
@@ -124,6 +125,7 @@ div.publisher-logo {
   word-spacing: $title-publisher-word-spacing;
   text-align: $title-publisher-align;
   text-transform: $title-publisher-text-transform;
+  text-indent: 0;
   border-bottom: if-map-get($title-publisher-border-bottom-width, $type) $title-publisher-border-bottom-style if-map-get($title-publisher-border-bottom-color, $type);
   padding-bottom: if-map-get($title-publisher-padding-bottom, $type);
 }
@@ -145,11 +147,12 @@ div.publisher-logo {
   word-spacing: $title-publisher-city-word-spacing;
   text-align: $title-publisher-city-align;
   text-transform: $title-publisher-city-text-transform;
+  text-indent: 0;
   border-bottom: if-map-get($title-publisher-city-border-bottom-width, $type) $title-publisher-city-border-bottom-style if-map-get($title-publisher-city-border-bottom-color, $type);
   padding-bottom: if-map-get($title-publisher-city-padding-bottom, $type);
 }
 
-// Prince and EPUB-specific disply rules
+// Prince and EPUB-specific display rules
 @mixin titles-prince {
   #title-page {
     > .subtitle,
