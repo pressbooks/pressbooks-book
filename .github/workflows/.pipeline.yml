@@ -77,6 +77,7 @@ jobs:
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
           composer global require "phpunit/phpunit:7.5.20"
+          composer require --dev yoast/phpunit-polyfills
 
       - name: Run Lint
         run: npm run lint

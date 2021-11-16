@@ -33,14 +33,10 @@
       text-indent: 0;
     }
 
-    .chapter-subtitle {
+    .chapter-subtitle, .chapter-author {
       hyphens: none;
       text-indent: 0;
-    }
-
-    .chapter-author {
-      hyphens: none;
-      text-indent: 0;
+      color: inherit;
     }
 
     .chapter-license {
@@ -219,12 +215,6 @@
 }
 
 @if $type == 'prince' {
-  h3.front-matter-number,
-  h3.part-number,
-  h3.chapter-number,
-  h3.back-matter-number {
-    bookmark-level: none;
-  }
 
   #toc {
     display: $toc-display;
