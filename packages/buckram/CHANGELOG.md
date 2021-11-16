@@ -1,4 +1,13 @@
 # Changelog
+## 1.7.0
+### Minor changes
+- Update semantic selectors to match Pressbooks changes [#887](https://github.com/pressbooks/pressbooks-book/pull/887/files)
+
+### Dependencies
+- Bump puppeteer to 11.0.0 [#890](https://github.com/pressbooks/pressbooks-book/pull/890)
+- Bump mocha to 9.1.3 [#882](https://github.com/pressbooks/pressbooks-book/pull/882)
+- Bump nth-check to 2.0.1 [#893](https://github.com/pressbooks/pressbooks-book/pull/893)
+
 ## 1.6.0
 ### Minor changes
 - Add variables for new contributor feature
