@@ -70,7 +70,7 @@ class HelpersTest extends WP_UnitTestCase {
 
 	function test_display_menu() {
 		$result = display_menu();
-		$this->assertInternalType( 'string', $result );
+		$this->assertIsString( $result );
 		$this->assertContains(
 			sprintf(
 				'<li class="nav--primary-item nav--primary-item-home"><a href="%1$s">Home</a></li>',
@@ -158,7 +158,7 @@ class HelpersTest extends WP_UnitTestCase {
 
 	function test_get_metakeys() {
 		$output = get_metakeys();
-		$this->assertInternalType( 'array', $output );
+		$this->assertIsArray( $output );
 	}
 
 	function test_social_media_enabled() {
@@ -185,7 +185,7 @@ class HelpersTest extends WP_UnitTestCase {
 	function test_do_license() {
 		$this->_setupGlobalPost();
 		$license = \PressbooksBook\Helpers\do_license( [] );
-		$this->assertContains( '<div class="license-attribution">', $license );
+		$this->assertStringContainsString( '<div class="license-attribution">', $license );
 	}
 
 	function test_get_h5p_activities() {
