@@ -107,7 +107,7 @@ jobs:
         run: |
           composer require --dev phpunit/phpunit ^9
           composer test
-        if: matrix.experimenta == true && matrix.wordpress == 'trunk'
+        if: matrix.experimental == true && matrix.wordpress == 'trunk'
 
       - name: Run Frontend Tests
         run: |
