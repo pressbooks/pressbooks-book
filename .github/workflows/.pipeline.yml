@@ -15,12 +15,16 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [5.8.1, latest]
+        wordpress: [ 5.8.2 ]
         experimental: [false]
         include:
           - php: 7.4
             os: ubuntu-20.04
             wordpress: latest
+            experimental: true
+          - php: 7.4
+            os: ubuntu-20.04
+            wordpress: 'trunk'
             experimental: true
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
@@ -76,7 +80,6 @@ jobs:
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
-          composer global require "phpunit/phpunit:7.5.20"
           composer require --dev yoast/phpunit-polyfills
 
       - name: Run Lint
@@ -93,17 +96,24 @@ jobs:
         run: composer require pcov/clobber; vendor/bin/pcov clobber; vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
         if: matrix.experimental == false
 
-      - name: Run Frontend Tests
-        run: |
-          npm run test
-          lerna run test
+      - name: Upload Coverage to Codecov
+        run: bash <(curl -s https://codecov.io/bash)
         if: matrix.experimental == false
 
       - name: Run PHP Tests
         run: composer test
+        if: matrix.experimental == true && matrix.wordpress == 'latest'
 
-      - name: Upload Coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
+      - name: Run PHP Tests with PHPUnit 9
+        run: |
+          composer require --dev phpunit/phpunit ^9
+          composer test
+        if: matrix.experimenta == true && matrix.wordpress == 'trunk'
+
+      - name: Run Frontend Tests
+        run: |
+          npm run test
+          lerna run test
         if: matrix.experimental == false
 
       - name: Prepare Build
