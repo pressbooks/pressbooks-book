@@ -74,7 +74,6 @@ jobs:
           npm install -g lerna
           npm install
           npm run bootstrap
-        if: matrix.experimental == false
 
       - name: Install PHP dependencies
         run: |
