@@ -15,9 +15,9 @@
 		"soberwp/intervention": "1.2.0-p"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^7.5",
 		"pressbooks/coding-standards": "^1.1",
-    "wpreadme2markdown/wp2md": "^3.0"
+    "wpreadme2markdown/wp2md": "^3.0",
+		"yoast/phpunit-polyfills": "^1.0"
 	},
 	"archive": {
 		"exclude": [".github", ".tx", "bin"]
