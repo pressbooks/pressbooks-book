@@ -20,7 +20,7 @@ export default {
 						)
 						.prop( 'hidden', false );
 				} );
-				$target.parents( '.toc__toggle' ).attr( 'aria-expanded', 'true' );
+				$target.parents( '.toc__toggle' ).attr( 'data-expanded', 'true' );
 			} );
 
 			$( document.body ).on( 'click', '.toc__toggle #hide', function ( e ) {
@@ -36,7 +36,7 @@ export default {
 						)
 						.attr( 'hidden', 'true' );
 				} );
-				$target.parents( '.toc__toggle' ).attr( 'aria-expanded', 'false' );
+				$target.parents( '.toc__toggle' ).attr( 'data-expanded', 'false' );
 			} );
 		} );
 	},

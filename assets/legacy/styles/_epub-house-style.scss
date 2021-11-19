@@ -71,7 +71,7 @@ h6.short-title {
 
 /* Numberless chapters have no chapter numbers */
 
-div.chapter.numberless h3.chapter-number {
+div.chapter.numberless .chapter-number {
   display: none;
 }
 

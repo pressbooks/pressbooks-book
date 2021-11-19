@@ -132,19 +132,19 @@ $light: #eee;
   text-align: center;
 }
 
-.toc__toggle[aria-expanded="false"] #hide {
+.toc__toggle[data-expanded="false"] #hide {
   display: none;
 }
 
-.toc__toggle[aria-expanded="false"] #show {
+.toc__toggle[data-expanded="false"] #show {
   display: inline-block;
 }
 
-.toc__toggle[aria-expanded="true"] #hide {
+.toc__toggle[data-expanded="true"] #hide {
   display: inline-block;
 }
 
-.toc__toggle[aria-expanded="true"] #show {
+.toc__toggle[data-expanded="true"] #show {
   display: none;
 }
 

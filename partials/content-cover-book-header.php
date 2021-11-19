@@ -83,12 +83,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 					<?php endforeach; ?>
 					</ul>
 				</div>
-						<?php } ?>
-				<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
-				<div class="book-header__share book-header__cover__share">
-					<?php echo \PressbooksBook\Helpers\share_icons(); ?>
-				</div>
-				<?php } ?>
+			<?php } ?>
 			</div>
 
 			<?php

@@ -12,7 +12,7 @@
       display: none;
     }
 
-    h1.back-matter-title {
+    .back-matter-title {
       display: block;
       margin-top: if-map-get($back-matter-title-margin-top, $type);
       margin-bottom: 0;
@@ -46,7 +46,7 @@
       }
     }
 
-    h2.chapter-subtitle {
+    .chapter-subtitle {
       display: block;
       margin-bottom: 0;
       font-family: $section-subtitle-font-family;
@@ -63,7 +63,7 @@
       word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
-    h2.chapter-author {
+    .chapter-author {
       display: block;
       margin-bottom: if-map-get($section-author-margin-bottom, $type);
       font-family: $section-author-font-family;
@@ -78,25 +78,25 @@
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h1.back-matter-title + h2.chapter-subtitle,
-    .short-title + h2.chapter-subtitle {
+    .back-matter-title + .chapter-subtitle,
+    .short-title + .chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    h1.back-matter-title + h2.chapter-author,
-    .short-title + h2.chapter-author {
+    .back-matter-title + .chapter-author,
+    .short-title + .chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
-    h2.chapter-subtitle + h2.chapter-author {
+    .chapter-subtitle + .chapter-author {
       margin-top: if-map-get($section-subtitle-author-spacing, $type);
     }
 
-    h1.back-matter-title:last-child {
+    .back-matter-title:last-child {
       margin-bottom: if-map-get($back-matter-title-margin-bottom, $type);
     }
 
-    h2.chapter-subtitle:last-child {
+    .chapter-subtitle:last-child {
       margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
     }
   }
@@ -104,7 +104,7 @@
 
 @if $type == 'epub' {
   @media amzn-mobi {
-    h2.back-matter-title {
+    .back-matter-title {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.3em;

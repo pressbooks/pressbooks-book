@@ -40,11 +40,10 @@ get_header(); ?>
 						<li class="buy-kobo"><a href="<?php print $urls['kobo']; ?>" class="bookstore-logo-link logo"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/kobo.png" width="54" height="29" alt="kobo-logo" title="Kobo"/></a><?php printf( __( 'Purchase on  <a href="%1$s">kobobooks.com</a>', 'pressbooks-book' ), $urls['kobo'] ); ?></li>
 					<?php endif; ?>
 
-						<?php if ( isset( $urls['ibooks'] ) && $urls['ibooks'] ) : ?>
+						<?php if ( isset( $urls['applebooks'] ) && $urls['applebooks'] ) : ?>
 							<?php /* translators: %1$s: url to purchase */ ?>
-						<li class="buy-ibooks"><a href="<?php print $urls['ibooks']; ?>" class="bookstore-logo-link logo"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/ibooks.png" width="34" height="34" alt="ibooks-logo" title="iBook"/></a><?php printf( __( 'Purchase on  <a href="%1$s">apple.com</a>', 'pressbooks-book' ), $urls['ibooks'] ); ?></li>
+						<li class="buy-applebooks"><a href="<?php print $urls['applebooks']; ?>" class="bookstore-logo-link logo"><img src="<?php bloginfo( 'template_directory' ); ?>/dist/images/ibooks.png" width="34" height="34" alt="ibooks-logo" title="iBook"/></a><?php printf( __( 'Purchase on  <a href="%1$s">apple.com</a>', 'pressbooks-book' ), $urls['applebooks'] ); ?></li>
 					<?php endif; ?>
-
 						<?php if ( isset( $urls['otherservice'] ) && $urls['otherservice'] ) : ?>
 							<?php /* translators: %1$s: url to purchase */ ?>
 						<li class="buy-other"><?php _e( 'Purchase here:', 'pressbooks-book' ); ?> <a href="<?php print $urls['otherservice']; ?>"><?php print $urls['otherservice']; ?></a></li>
