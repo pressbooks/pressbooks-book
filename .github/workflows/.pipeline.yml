@@ -102,8 +102,8 @@ jobs:
 
       - name: Run PHP Tests
         run: |
-        composer update --dev yoast/phpunit-polyfills --with-dependencies --ignore-platform-reqs
-        composer test
+          composer update --dev yoast/phpunit-polyfills --with-dependencies --ignore-platform-reqs
+          composer test
         if: matrix.experimental == true && matrix.wordpress == 'latest'
 
       - name: Run PHP Tests with PHPUnit 9
