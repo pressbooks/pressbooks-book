@@ -71,7 +71,7 @@ class HelpersTest extends WP_UnitTestCase {
 	function test_display_menu() {
 		$result = display_menu();
 		$this->assertIsString( $result );
-		$this->assertContains(
+		$this->assertStringContainsString(
 			sprintf(
 				'<li class="nav--primary-item nav--primary-item-home"><a href="%1$s">Home</a></li>',
 				get_home_url()
