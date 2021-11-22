@@ -36,6 +36,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Check conventional commit messages
+        uses: wagoid/commitlint-github-action@v4
+
       - name: Install Node
         uses: actions/setup-node@v2
         with:
@@ -142,3 +145,9 @@ jobs:
         with:
           files:
             ${{github.workspace}}/*.zip
+
+      - name: Release
+        uses: GoogleCloudPlatform/release-please-action@v2
+        with:
+          release-type: php
+          package-name: pressbooks/pressbooks-book
