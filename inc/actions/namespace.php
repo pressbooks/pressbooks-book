@@ -253,16 +253,15 @@ function render_lightbox_setting_field( $args ) {
  * @return void
  */
 function text_diff() {
-	if ( check_ajax_referer( 'text_diff_nonce', 'security' ) ) {
+	if ( check_ajax_referer( 'text_diff_nonce', 'security' && ! empty( $_POST['left'] ) && ! empty( $_POST['right'] ) ) ) {
 		$diff = wp_text_diff(
-			$_POST['left'],
-			$_POST['right']
+			wp_unslash( $_POST['left'] ),
+			wp_unslash( $_POST['right'] )
 		);
 		wp_send_json_success( wp_json_encode( $diff ) );
 	}
 	wp_send_json_error();
 }
-
 
 /**
  * Suppress Media Attachment pages. This code redirects bots, unprivileged users, away from the attachment page.

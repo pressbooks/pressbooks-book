@@ -54,6 +54,7 @@
 		</div>
 		<?php
 		/** Append content to cover metadata block.
+		 *
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_cover_after_metadata' );

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="tests/bootstrap.php" backupGlobals="false" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage>
+    <include>
+      <directory suffix=".php">./inc</directory>
+    </include>
+  </coverage>
+  <php>
+    <const name="WP_TESTS_MULTISITE" value="1"/>
+  </php>
+  <testsuites>
+    <testsuite name="Pressbooks Book">
+      <directory prefix="test-" suffix=".php">./tests/</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

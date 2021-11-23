@@ -671,7 +671,6 @@ function do_license( $metadata ) {
 	return '';
 }
 
-
 /**
  * Determine if the book is using a modern version of Buckram.
  *
@@ -691,8 +690,7 @@ function is_buckram() {
  * Results are cached for 1 hour
  *
  * @return array
- *@since 2.9.2
- *
+ * @since 2.9.2
  */
 function get_h5p_activities( $per_page = 20 ) {
 	global $wpdb;
