@@ -1,4 +1,4 @@
-<section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>
+<section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 	<header>
 		<h1 class="entry-title">
 			<?php
@@ -72,7 +72,13 @@
 			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h2>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
-				echo $blade_engine->render( 'posttypes.contributor', [ 'contributor' => $contributor ] );
+				echo $blade_engine->render(
+					'posttypes.contributor',
+					[
+						'contributor' => $contributor,
+						'key' => str_random(),
+					]
+				);
 			}
 			?>
 		</section>

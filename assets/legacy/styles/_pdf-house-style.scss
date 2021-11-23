@@ -752,7 +752,7 @@ meta[name="pb-publisher-city"] {
 
 /* PART & CHAPTER STRINGS */
 
-.part-title-wrap h3.part-number {
+.part-title-wrap .part-number {
   string-set: part-number content();
 }
 
@@ -760,11 +760,11 @@ meta[name="pb-publisher-city"] {
   string-set: part-title content();
 }
 
-h3.chapter-number {
+.chapter-number {
   string-set: chapter-number content();
 }
 
-div.chapter.numberless h3.chapter-number {
+div.chapter.numberless .chapter-number {
   display: none;
 }
 
@@ -778,9 +778,9 @@ div.back-matter .back-matter-title-wrap > h1:first-of-type {
 /* "short title override" ... this sets short chapter title content (for running header) but does not display it.
 it can cause problems with spacing of things, so be careful to design around it */
 
-div.front-matter > div.ugc h6.short-title:first-of-type,
-div.chapter > div.ugc h6.short-title:first-of-type,
-div.back-matter > div.ugc h6.short-title:first-of-type {
+div.front-matter > div.ugc .short-title:first-of-type,
+div.chapter > div.ugc .short-title:first-of-type,
+div.back-matter > div.ugc .short-title:first-of-type {
   string-set: section-title content() !important; /* override running header */
   visibility: hidden; /* display:none breaks string-set: */
   font-size: 0;

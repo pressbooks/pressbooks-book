@@ -467,6 +467,10 @@
   margin-bottom: 0.5rem;
 }
 
+.block-info a, .block-meta a {
+  text-decoration: underline;
+}
+
 #content .license-attribution {
   img {
     height: 2em;
