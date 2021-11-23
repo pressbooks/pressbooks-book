@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.13.0\n"
+"Project-Id-Version: McLuhan 2.14.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-09-28T23:01:19+00:00\n"
+"POT-Creation-Date: 2021-11-23T20:40:22+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Radost G <radosvetagiuleva@abv.bg>, 2020\n"
 "Language-Team: Bulgarian (Bulgaria) (https://www.transifex.com/pressbooks/teams/9194/bg_BG/)\n"
@@ -128,16 +128,24 @@ msgstr "Лого за %s"
 msgid "Toggle Menu"
 msgstr "Превключване на менюто"
 
-#: header.php:103 index.php:14 partials/content-cover-toc.php:3
+#: header.php:92
+msgid "Primary Navigation"
+msgstr ""
+
+#: header.php:102 partials/content-cover-toc.php:9
+msgid "Book Contents Navigation"
+msgstr ""
+
+#: header.php:105 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Съдържание"
 
 #. translators: %s: the title of the book
-#: header.php:112
+#: header.php:114
 msgid "Go to the cover page of %s"
 msgstr "Отидете на заглавната страница на %s"
 
-#: header.php:116 inc/helpers/namespace.php:226
+#: header.php:118 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Купи"
 
@@ -262,7 +270,7 @@ msgid_plural "Contributors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:102
+#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
 msgstr "Лиценз"
@@ -283,7 +291,7 @@ msgstr "Издател"
 msgid "Publication Date"
 msgstr "Дата на публикуване"
 
-#: inc/helpers/namespace.php:447 single.php:45
+#: inc/helpers/namespace.php:447 single.php:43
 msgid "Digital Object Identifier (DOI)"
 msgstr "Идентификатор на цифров обект (DOI)"
 
@@ -301,39 +309,39 @@ msgstr "ХашТаг"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:484 inc/helpers/namespace.php:487
+#: inc/helpers/namespace.php:485 inc/helpers/namespace.php:488
 msgid "Previous: %s"
 msgstr "Предходни: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:494 inc/helpers/namespace.php:496
+#: inc/helpers/namespace.php:495 inc/helpers/namespace.php:497
 msgid "Next: %s"
 msgstr "Следващи: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:567
+#: inc/helpers/namespace.php:568
 msgid "%s on"
 msgstr "%sна"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:567
+#: inc/helpers/namespace.php:568
 msgid "%1$s at %2$s"
 msgstr "%1$sна %2$s "
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:567 inc/helpers/namespace.php:596
+#: inc/helpers/namespace.php:568 inc/helpers/namespace.php:597
 msgid "(Edit)"
 msgstr "(Промени)"
 
-#: inc/helpers/namespace.php:570
+#: inc/helpers/namespace.php:571
 msgid "Your comment is awaiting moderation."
 msgstr "Коментарът Ви чака одобрение от Администратор."
 
-#: inc/helpers/namespace.php:596
+#: inc/helpers/namespace.php:597
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -392,7 +400,7 @@ msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
 msgstr "Купи от apple.com"
 
 #. translators: %1$s: url to purchase
-#: page-buy.php:50
+#: page-buy.php:49
 msgid "Purchase here:"
 msgstr "Купи тук:"
 
@@ -451,7 +459,7 @@ msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:84
+#: partials/content-single.php:90
 msgid "Edit"
 msgstr "Промени"
 
@@ -477,16 +485,16 @@ msgstr "Изображение на корицата за %s"
 msgid "Download this book"
 msgstr "Запази тази книга"
 
-#: partials/content-cover-book-header.php:98
+#: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
 msgstr "Описание на книгата"
 
-#: partials/content-cover-book-header.php:110
+#: partials/content-cover-book-header.php:105
 msgid "Read Book"
 msgstr "Прочети Книга"
 
-#: partials/content-cover-book-header.php:117
+#: partials/content-cover-book-header.php:112
 msgid "Buy Book"
 msgstr "Купи Книга"
 
@@ -643,6 +651,6 @@ msgstr "Търси в книга"
 msgid "Search"
 msgstr "Търсене"
 
-#: single.php:61
+#: single.php:59
 msgid "Share This Book"
 msgstr "Сподели Тази Книга"

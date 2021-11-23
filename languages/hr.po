@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.13.0\n"
+"Project-Id-Version: McLuhan 2.14.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-09-28T23:01:19+00:00\n"
+"POT-Creation-Date: 2021-11-23T20:40:22+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -123,16 +123,24 @@ msgstr "Logo za %s"
 msgid "Toggle Menu"
 msgstr "Prebaci izbornik"
 
-#: header.php:103 index.php:14 partials/content-cover-toc.php:3
+#: header.php:92
+msgid "Primary Navigation"
+msgstr ""
+
+#: header.php:102 partials/content-cover-toc.php:9
+msgid "Book Contents Navigation"
+msgstr ""
+
+#: header.php:105 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Sadržaj"
 
 #. translators: %s: the title of the book
-#: header.php:112
+#: header.php:114
 msgid "Go to the cover page of %s"
 msgstr "Idi na naslovnicu za %s"
 
-#: header.php:116 inc/helpers/namespace.php:226
+#: header.php:118 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Kupi"
 
@@ -263,7 +271,7 @@ msgstr[0] "Suradnik"
 msgstr[1] "Suradnici"
 msgstr[2] "Suradnici"
 
-#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:102
+#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
 msgstr "Licenca"
@@ -284,7 +292,7 @@ msgstr "Izdavač"
 msgid "Publication Date"
 msgstr "Datum izdavanja"
 
-#: inc/helpers/namespace.php:447 single.php:45
+#: inc/helpers/namespace.php:447 single.php:43
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digital Object Identifier (DOI)"
 
@@ -302,39 +310,39 @@ msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:484 inc/helpers/namespace.php:487
+#: inc/helpers/namespace.php:485 inc/helpers/namespace.php:488
 msgid "Previous: %s"
 msgstr "Prethodno: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:494 inc/helpers/namespace.php:496
+#: inc/helpers/namespace.php:495 inc/helpers/namespace.php:497
 msgid "Next: %s"
 msgstr "Slijedeće: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:567
+#: inc/helpers/namespace.php:568
 msgid "%s on"
 msgstr "%s na"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:567
+#: inc/helpers/namespace.php:568
 msgid "%1$s at %2$s"
 msgstr "%1$s na %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:567 inc/helpers/namespace.php:596
+#: inc/helpers/namespace.php:568 inc/helpers/namespace.php:597
 msgid "(Edit)"
 msgstr "(Uredi)"
 
-#: inc/helpers/namespace.php:570
+#: inc/helpers/namespace.php:571
 msgid "Your comment is awaiting moderation."
 msgstr "Vaš komentar čeka odobrenje."
 
-#: inc/helpers/namespace.php:596
+#: inc/helpers/namespace.php:597
 msgid "Pingback:"
 msgstr "Povratna veza:"
 
@@ -395,7 +403,7 @@ msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
 msgstr "Purchase on  <a href=\"%1$s\">apple.com</a>"
 
 #. translators: %1$s: url to purchase
-#: page-buy.php:50
+#: page-buy.php:49
 msgid "Purchase here:"
 msgstr "Kupite ovdje:"
 
@@ -454,7 +462,7 @@ msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:84
+#: partials/content-single.php:90
 msgid "Edit"
 msgstr "Uredi"
 
@@ -480,16 +488,16 @@ msgstr "Korice za %s"
 msgid "Download this book"
 msgstr "Preuzmi ovu knjigu"
 
-#: partials/content-cover-book-header.php:98
+#: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
 msgstr "Opis knjige"
 
-#: partials/content-cover-book-header.php:110
+#: partials/content-cover-book-header.php:105
 msgid "Read Book"
 msgstr "Pročitaj knjigu"
 
-#: partials/content-cover-book-header.php:117
+#: partials/content-cover-book-header.php:112
 msgid "Buy Book"
 msgstr "Kupi knjigu"
 
@@ -644,6 +652,6 @@ msgstr "Pronađi u knjizi &hellip;"
 msgid "Search"
 msgstr "Pretraživanje"
 
-#: single.php:61
+#: single.php:59
 msgid "Share This Book"
 msgstr "Podijeli ovu knjigu"
