@@ -20,6 +20,9 @@
   word-spacing: $title-half-title-word-spacing;
   text-align: $title-half-title-align;
   text-transform: $title-half-title-text-transform;
+  @if $type == 'prince' {
+    prince-bookmark-level: none;
+  }
 }
 
 // Title Page
@@ -38,6 +41,9 @@
   text-transform: $title-title-text-transform;
   border-bottom: if-map-get($title-title-border-bottom-width, $type) $title-title-border-bottom-style if-map-get($title-title-border-bottom-color, $type);
   padding-bottom: if-map-get($title-title-padding-bottom, $type);
+  @if $type == 'prince' {
+    prince-bookmark-level: none;
+  }
   @if $type != 'epub' {
     line-height: if-map-get($title-title-line-height, $type);
   }
