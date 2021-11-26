@@ -59,3 +59,9 @@ div.index {
     width: auto;
   }
 }
+
+@if $type == 'prince' {
+  .back-matter.with-subsections .back-matter-ugc h1 {
+    prince-bookmark-level: 2;
+  }
+}
