@@ -136,6 +136,12 @@
       margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
     }
   }
+
+  @if $type == 'prince' {
+    div.part ~ .chapter .chapter-title {
+      prince-bookmark-level: 2;
+    }
+  }
 }
 
 .aphorism,

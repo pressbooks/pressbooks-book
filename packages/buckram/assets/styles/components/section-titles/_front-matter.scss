@@ -25,6 +25,9 @@
       letter-spacing: if-map-get($front-matter-title-letter-spacing, $type);
       word-spacing: if-map-get($front-matter-title-word-spacing, $type);
       hyphens: none;
+      @if $type == 'prince' {
+        prince-bookmark-level: 1;
+      }
       @if $type != 'epub' {
         line-height: if-map-get($front-matter-title-line-height, $type);
       }

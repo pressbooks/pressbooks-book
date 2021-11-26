@@ -101,6 +101,12 @@ section.epigraph
   text-indent: 0;
 }
 
+@if $type == 'prince' {
+  .front-matter.with-subsections .front-matter-ugc h1 {
+    prince-bookmark-level: 2;
+  }
+}
+
 @if $type == 'epub' {
   @media amzn-mobi {
     #copyright-page {

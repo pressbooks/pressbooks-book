@@ -221,6 +221,10 @@
     counter-reset: part;
     page-break-before: right;
 
+    h1 {
+      prince-bookmark-level: 1;
+    }
+
     a::after {
       content: $toc-page-number-before-content target-counter(attr(href), page);
       font-family: $toc-page-number-font-family;
