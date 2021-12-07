@@ -12,9 +12,9 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 				<strong><?php echo $data['total'] . ' '; ?></strong>
 			<?php echo __( 'H5P activities. Only those which have been inserted into book content will be included if the book is cloned.', 'pressbooks-book' ); ?>
 			<?php
-				if ( $activities > 1 ) {
-					echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" aria-label="%s"></button>', __( 'Expand all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ), __( 'Expand all activities', 'pressbooks-book' ) );
-				}
+			if ( $activities > 1 ) {
+				echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" aria-label="%s"></button>', __( 'Expand all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ), __( 'Expand all activities', 'pressbooks-book' ) );
+			}
 			?>
 			</p>
 			<table class="table table-borderless" id="h5p-listing-table">
