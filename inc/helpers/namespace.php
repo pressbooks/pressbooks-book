@@ -719,7 +719,7 @@ function get_h5p_activities( $per_page = 20 ) {
 			ARRAY_A
 		);
 		// phpcs:enable
-		$total = 1;
+		$total = $data ? 1 : 0;
 		$per_page = 1;
 	} else {
 		$total = $wpdb->get_var(
