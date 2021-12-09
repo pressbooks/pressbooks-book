@@ -29,7 +29,7 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 		<?php endif; ?>
 		<?php if ( $filtered_does_not_exist ) : ?>
 			<p class="h5p-count">
-				<?php echo __( 'The H5P activity does not exist in this book.', 'pressbooks-book' ); ?>
+				<?php echo __( 'The requested H5P activity does not exist in this book.', 'pressbooks-book' ); ?>
 			</p>
 		<?php endif; ?>
 		<table class="table table-borderless" id="h5p-listing-table">
