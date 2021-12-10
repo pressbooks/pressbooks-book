@@ -703,19 +703,38 @@ function get_h5p_activities( $per_page = 20 ) {
 		$offset = $page;
 	}
 
-	$total = $wpdb->get_var(
-		"SELECT count(C.ID) FROM {$wpdb->prefix}h5p_contents as C
-					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID"
-	);
-
+	$h5p_id = isset( $_GET['h5p_id'] ) ? abs( intval( $_GET['h5p_id'] ) ) : null;
+	if ( ! is_null( $h5p_id ) ) {
+		// phpcs:disable
+		$data = $wpdb->get_results(
+			$wpdb->prepare(
+			"
+				SELECT C.ID, C.title, L.title as activity_type
+				  FROM {$wpdb->prefix}h5p_contents as C
+				  LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id
+				  WHERE C.ID = %d
+				",
+				$h5p_id
+			),
+			ARRAY_A
+		);
+		// phpcs:enable
+		$total = $data ? 1 : 0;
+		$per_page = 1;
+	} else {
+		$total = $wpdb->get_var(
+			"SELECT count(C.ID) FROM {$wpdb->prefix}h5p_contents as C
+			LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID"
+		);
 		$data = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT C.ID, C.title, L.title as activity_type FROM {$wpdb->prefix}h5p_contents as C
-					LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID
-					LIMIT %d OFFSET %d;
+				LEFT JOIN {$wpdb->prefix}h5p_libraries as L on C.library_id = L.id order by C.ID
+				LIMIT %d OFFSET %d;
 				", [ $per_page, $offset ]
 			), ARRAY_A
 		);
+	}
 
 	$pagination = paginate_links(
 		[
