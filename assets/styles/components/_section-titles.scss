@@ -1,5 +1,7 @@
 // Section Titles
 
+@use "sass:math";
+
 $section-title-block-margin-top: (
   epub: 3em,
   prince: 3cm,
@@ -22,7 +24,7 @@ $section-title-block-margin-right: (
 ) !default;
 
 $section-header-margin-top: 0 !default;
-$section-header-margin-bottom: (50 / 20) * 1em !default;
+$section-header-margin-bottom: 2.5em !default;
 $section-header-margin-left: $section-title-block-margin-left !default;
 $section-header-margin-right: $section-title-block-margin-right !default;
 
@@ -52,8 +54,8 @@ $section-title-author-spacing: $section-title-margin-bottom !default;
 $section-title-font-family: $font-2 !default;
 $section-title-font-size: (
   epub: x-large,
-  prince: (24 / 9) * 1em,
-  web: (24 / 9) * 1em
+  prince: math.div(24, 9) * 1em,
+  web: math.div(24, 9) * 1em
 ) !default;
 $section-title-font-style: normal !default;
 $section-title-font-weight: normal !default;
@@ -87,8 +89,8 @@ $section-subtitle-author-spacing: (
 $section-subtitle-font-family: $font-2 !default;
 $section-subtitle-font-size: (
   epub: large,
-  prince: (15 / 9) * 1em,
-  web: (15 / 9) * 1em
+  prince: math.div(15, 9) * 1em,
+  web: math.div(15, 9) * 1em
 ) !default;
 $section-subtitle-font-style: italic !default;
 $section-subtitle-font-weight: normal !default;
@@ -343,7 +345,7 @@ $chapter-number-border-bottom-color: $section-title-border-bottom-color !default
 $chapter-number-font-family: $font-3 !default;
 $chapter-number-font-size: (
   epub: large,
-  prince: (24 / 9) * 1em,
+  prince: math.div(24, 9) * 1em,
   web: 1em
 ) !default;
 $chapter-number-font-style: normal !default;

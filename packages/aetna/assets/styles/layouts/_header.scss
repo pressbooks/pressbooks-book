@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .header {
   font-family: $font-family-sans-serif;
   padding: 3.5rem 1rem 1.5rem;
@@ -122,7 +124,7 @@
       display: none;
       font-family: $font-family-sans-serif;
       font-size: rem(24);
-      line-height: (80/24);
+      line-height: math.div(80, 24);
       color: var(--header-color);
       letter-spacing: 0;
     }

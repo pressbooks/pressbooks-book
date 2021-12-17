@@ -3,6 +3,8 @@
 //CARDO: A CONSERVATIVE SERIF
 //SERIF
 
+@use "sass:math";
+
 @font-face {
   font-family: 'Cardo';
   font-weight: bold;
@@ -30,5 +32,5 @@
 // @param {Number} $line-height The desired line-height
 // @return {Number} An adjusted line height based on an esoteric calculation.
 @function fix-descender($line-height) {
-  @return ceil(($line-height * (1645 + 640) / 2048) * 40) / 40;
+  @return ceil(math.div($line-height * (1645 + 640), 2048) * 40) * 0.025;
 }
