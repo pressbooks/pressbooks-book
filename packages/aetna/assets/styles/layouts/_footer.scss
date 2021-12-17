@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .footer {
   --brand: var(--footer-color);
   --primary-dark: var(--footer-color);
@@ -182,7 +184,7 @@
     list-style: none;
     text-align: center;
     font-weight: 600;
-    line-height: (36/16);
+    line-height: math.div(36, 16);
   }
 
   &__block {

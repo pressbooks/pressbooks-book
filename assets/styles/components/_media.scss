@@ -1,7 +1,9 @@
 // Media
+@use "sass:math";
+
 $image-caption-padding-bottom: 0.5em !default;
 $image-caption-font-family: $font-1 !default;
-$image-caption-font-size: (8 / 9) * 1em !default;
+$image-caption-font-size: math.div(8, 9) * 1em !default;
 $image-caption-font-style: italic !default;
 $image-caption-font-weight: normal !default;
 $image-caption-line-height: (
@@ -13,7 +15,7 @@ $image-caption-text-align: left !default;
 $image-caption-text-transform: none !default;
 $image-wrapper-margin-top: 0.5em !default;
 $floated-image-wrapper-margin-top: $image-wrapper-margin-top !default;
-$image-wrapper-margin-bottom: (40 / 9) * 1em !default;
+$image-wrapper-margin-bottom: math.div(40, 9) * 1em !default;
 $floated-image-wrapper-margin-bottom: 0.5em !default;
 $image-alignleft-margin-right: 1em !default;
 $image-alignright-margin-left: 1em !default;

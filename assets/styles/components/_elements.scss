@@ -1,5 +1,7 @@
 // Elements
 
+@use "sass:math";
+
 $body-font-family: $font-1 !default;
 $body-font-size: (
   epub: small,
@@ -8,12 +10,12 @@ $body-font-size: (
 ) !default;
 $body-font-style: normal !default;
 $body-font-weight: normal !default;
-$body-line-height: (14 / 9) * 1em !default;
+$body-line-height: math.div(14, 9) * 1em !default;
 
-$hx-margin-top: (30 / 14) * 1em !default;
-$hx-margin-bottom: (20 / 14) * 1em !default;
+$hx-margin-top: math.div(30, 14) * 1em !default;
+$hx-margin-bottom: math.div(20, 14) * 1em !default;
 $hx-padding-bottom: 0 !default;
-$hx-line-height: (18 / 15) * 1em !default;
+$hx-line-height: math.div(18, 15) * 1em !default;
 $hx-border-bottom-style: none !default;
 $hx-border-bottom-width: 0 !default;
 $hx-border-bottom-color: initial !default;
@@ -131,7 +133,7 @@ $blockquote-font-family: $font-1 !default;
 $blockquote-font-size: 1em !default;
 $blockquote-font-style: normal !default;
 $blockquote-font-weight: normal !default;
-$blockquote-line-height: (14 / 9) * 1em !default;
+$blockquote-line-height: math.div(14, 9) * 1em !default;
 $blockquote-margin-top: 1em !default;
 $blockquote-margin-right: 1em !default;
 $blockquote-margin-bottom: 1em !default;
@@ -156,12 +158,12 @@ $blockquote-border-left-style: none !default;
 $blockquote-border-left-color: initial !default;
 
 //LISTS
-$ol-margin-top: (20 / 14) * 1em !default;
-$ol-margin-bottom: (20 / 14) * 1em !default;
+$ol-margin-top: math.div(20, 14) * 1em !default;
+$ol-margin-bottom: math.div(20, 14) * 1em !default;
 $ol-margin-left: 0 !default;
 $ol-padding-left: 2em !default;
-$ul-margin-top: (20 / 14) * 1em !default;
-$ul-margin-bottom: (20 / 14) * 1em !default;
+$ul-margin-top: math.div(20, 14) * 1em !default;
+$ul-margin-bottom: math.div(20, 14) * 1em !default;
 $ul-margin-left: 0 !default;
 $ul-padding-left: 2em !default;
 $li-li-margin-top: 0 !default;
