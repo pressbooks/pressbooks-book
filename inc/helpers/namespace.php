@@ -164,7 +164,7 @@ function license_to_text( $license ) {
 			break;
 		case 'all-rights-reserved':
 		default:
-			return __( 'All Rights Reserved', 'pressbooks-book' );
+			return apply_filters( 'custom_license_to_text', __( 'All Rights Reserved', 'pressbooks-book' ), $license );
 	}
 }
 
