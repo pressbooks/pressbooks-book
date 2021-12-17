@@ -6,8 +6,6 @@
 //                                   Textboxes                                //
 //============================================================================//
 
-@use "sass:math";
-
 @import '../utilities';
 
 // Legacy Educational Textboxes
@@ -28,17 +26,17 @@
 
   h3 {
     padding:
-      if-map-get($edu-textbox-padding-top, $type) * math.div(1, $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-right, $type) * math.div(1, $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-bottom, $type) * math.div(1, $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-left, $type) * math.div(1, $edu-header-font-size-multiplier);
+      if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-right, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-bottom, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-left, $type) * (1 / $edu-header-font-size-multiplier);
     margin:
-      -1 * if-map-get($edu-textbox-padding-top, $type) * math.div(1, $edu-header-font-size-multiplier)
-      -1 * if-map-get($edu-textbox-padding-top, $type) * math.div(1, $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-top, $type) * math.div(1, $edu-header-font-size-multiplier)
-      -1 * if-map-get($edu-textbox-padding-top, $type) * math.div(1, $edu-header-font-size-multiplier);
-    border-top-right-radius: if-map-get($edu-textbox-border-radius, $type) * math.div(1, $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
-    border-top-left-radius: if-map-get($edu-textbox-border-radius, $type) * math.div(1, $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
+      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
+      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier);
+    border-top-right-radius: if-map-get($edu-textbox-border-radius, $type) * (1 / $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
+    border-top-left-radius: if-map-get($edu-textbox-border-radius, $type) * (1 / $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
     font-size: $edu-header-font-size-multiplier * if-map-get($textbox-font-size, $type);
     font-style: $edu-header-font-style;
     font-weight: $edu-header-font-weight;
