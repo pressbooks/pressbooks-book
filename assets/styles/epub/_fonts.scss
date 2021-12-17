@@ -16,14 +16,14 @@ $shapeshifter-font-2-is-serif: true !default;
   $font-1: $shapeshifter-font-1, if($shapeshifter-font-1-is-serif, $serif-epub, $sans-serif-epub);
 } @else {
   $font-1: 'Lora', $serif-epub;
-//  @import 'LoraFont';
+  @import 'LoraFont';
 }
 
 @if variable-exists(shapeshifter-font-2) {
   $font-2: $shapeshifter-font-2, if($shapeshifter-font-2-is-serif, $serif-epub, $sans-serif-epub);
 } @else {
   $font-2: 'Cormorant Garamond', $serif-epub;
-//  @import 'CormorantGaramondFont';
+  @import 'CormorantGaramondFont';
 }
 
 $font-3: $font-2;
