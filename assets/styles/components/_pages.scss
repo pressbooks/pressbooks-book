@@ -1,6 +1,8 @@
 // Pages
 
 // HALF TITLE PAGE
+@use "sass:math";
+
 $title-half-title-display:(
   epub: none,
   prince: initial,
@@ -32,8 +34,8 @@ $title-title-margin-left: 0 !default;
 $title-title-font-family: $font-2 !default;
 $title-title-font-size: (
   epub: x-large,
-  prince: (24 / 9) * 1em,
-  web: (24 / 9) * 1em
+  prince: math.div(24, 9) * 1em,
+  web: math.div(24, 9) * 1em
 ) !default;
 $title-title-font-style: normal !default;
 $title-title-font-weight: normal !default;
@@ -49,8 +51,8 @@ $title-subtitle-margin-left: 0 !default;
 $title-subtitle-font-family: $font-3 !default;
 $title-subtitle-font-size: (
   epub: large,
-  prince: (15 / 9) * 1em,
-  web: (15 / 9) * 1em
+  prince: math.div(15, 9) * 1em,
+  web: math.div(15, 9) * 1em
 ) !default;
 $title-subtitle-font-style: italic !default;
 $title-subtitle-font-weight: normal !default;
@@ -70,8 +72,8 @@ $title-author-margin-left: 0 !default;
 $title-author-font-family: $font-2 !default;
 $title-author-font-size: (
   epub: large,
-  prince: (15 / 9) * 1em,
-  web: (15 / 9) * 1em
+  prince: math.div(15, 9) * 1em,
+  web: math.div(15, 9) * 1em
 ) !default;
 $title-author-font-style: italic !default;
 $title-author-font-weight: normal !default;
@@ -125,13 +127,13 @@ $copyright-margin-bottom: 1em !default;
 $copyright-font-family: $font-1 !default;
 $copyright-font-size: (
   epub: small,
-  prince: (8 / 9) * 1em,
-  web: (8 / 9) * 1em
+  prince: math.div(8, 9) * 1em,
+  web: math.div(8, 9) * 1em
 ) !default;
 $copyright-font-style: normal !default;
 $copyright-font-weight: normal !default;
 $copyright-hyphens: none !default;
-$copyright-line-height: (14 / 9) * 1em;
+$copyright-line-height: math.div(14, 9) * 1em;
 $copyright-align: left !default;
 $copyright-indent: 0 !default;
 
