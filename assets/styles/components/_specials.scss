@@ -1,8 +1,6 @@
 // Special Elements
 
 // Columns
-@use "sass:math";
-
 $column-margin-top: 1em !default;
 $column-margin-bottom: 1em !default;
 $column-line-height: 1.2em !default;
@@ -28,11 +26,11 @@ $footnote-block-margin-top: 2.5em !default;
 $footnote-block-border-top: 0 !default;
 $footnote-padding-top: 1em !default;
 $footnote-padding-left: 0 !default;
-$footnote-font-size: math.div(8, 9) * 1rem !default;
+$footnote-font-size: (8 / 9) * 1rem !default;
 $footnote-font-style: normal !default;
 $footnote-font-family: $font-1 !default;
 $footnote-font-weight: normal !default;
-$footnote-line-height: math.div(14, 9) * 1em !default;
+$footnote-line-height: (14 / 9) * 1em !default;
 $footnote-indent: 0 !default;
 $footnote-blockquote-margin-top: 0.5em !default;
 $footnote-blockquote-margin-bottom: 0.5em !default;
@@ -114,8 +112,8 @@ $sidebar-align: left !default;
 
 // Separators
 $hr-width: 100% !default;
-$hr-margin-top: math.div(20, 9) * 1em !default;
-$hr-margin-bottom: math.div(20, 9) * 1em !default;
+$hr-margin-top: (20 / 9) * 1em !default;
+$hr-margin-bottom: (20 / 9) * 1em !default;
 $hr-border-style: solid !default;
 $hr-border-width: 1px !default;
 $hr-border-color: if-map-get($color-1, $type) !default;
@@ -138,7 +136,7 @@ $textbox-font-family: $font-1 !default;
 $textbox-font-size: (epub: 0.8125em, prince: 9pt, web: 1em) !default;
 $textbox-font-style: normal !default;
 $textbox-font-weight: normal !default;
-$textbox-line-height: math.div(14, 9) !default;
+$textbox-line-height: (14 / 9) !default;
 $textbox-text-align: left !default;
 $textbox-word-spacing: (
   epub: normal,
@@ -204,10 +202,10 @@ $textbox-sidebar-max-width: 25% !default;
 $edu-textbox-border-radius: 0 !default;
 $edu-textbox-border-style: none !default;
 $edu-textbox-border-width: 0 !default;
-$edu-textbox-padding-top: math.div(16, 9) * 1em !default;
-$edu-textbox-padding-right: math.div(16, 9) * 1em !default;
-$edu-textbox-padding-bottom: math.div(16, 9) * 1em !default;
-$edu-textbox-padding-left: math.div(16, 9) * 1em !default;
+$edu-textbox-padding-top: (16 / 9) * 1em !default;
+$edu-textbox-padding-right: (16 / 9) * 1em !default;
+$edu-textbox-padding-bottom: (16 / 9) * 1em !default;
+$edu-textbox-padding-left: (16 / 9) * 1em !default;
 $edu-textbox-margin-bottom: 1.35em !default;
 $edu-textbox-margin-left: (
   epub: 0,

@@ -1,9 +1,7 @@
-@use "sass:math";
-
 @function rem($pixels, $context: $base-font-size) {
-  @return #{math.div($pixels, $context)}rem;
+  @return #{$pixels / $context}rem;
 }
 
 @function percent($target, $context) {
-  @return math.div($target, $context) * 100%;
+  @return ($target / $context) * 100%;
 }
