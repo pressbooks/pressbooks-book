@@ -8,14 +8,15 @@
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
 # Steel Wagstaff <steel@pressbooks.com>, 2019
+# Thomas Weideman, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.14.0\n"
+"Project-Id-Version: McLuhan 2.15.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-23T20:40:22+00:00\n"
+"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2019\n"
+"Last-Translator: Thomas Weideman, 2021\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,11 +101,15 @@ msgstr "Propulsé par %s"
 msgid "Guides and Tutorials"
 msgstr "Guides et tutoriels"
 
-#: footer.php:73 footer.php:75
+#: footer.php:67
+msgid "Pressbooks Directory"
+msgstr ""
+
+#: footer.php:74 footer.php:76
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks sur YouTube"
 
-#: footer.php:77 footer.php:81
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks sur Twitter"
 
@@ -284,7 +289,7 @@ msgstr[1] "Collaborateurs"
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
-msgstr "License"
+msgstr "Licence"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
@@ -417,57 +422,65 @@ msgstr "Acheter sur <a href=\"%1$s\">apple.com</a>"
 msgid "Purchase here:"
 msgstr "Acheter ici&nbsp;:"
 
-#: page-h5p-listing.php:8
+#: page-h5p-listing.php:16
+msgid "Invalid H5P activity"
+msgstr ""
+
+#: page-h5p-listing.php:18
 msgid "H5P activities list"
 msgstr ""
 
-#: page-h5p-listing.php:10
+#: page-h5p-listing.php:24
 msgid "This book includes "
 msgstr ""
 
-#: page-h5p-listing.php:12
+#: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
 msgstr ""
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all"
 msgstr ""
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Hide all"
 msgstr ""
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all activities"
 msgstr ""
 
-#: page-h5p-listing.php:18
+#: page-h5p-listing.php:32
+msgid "The requested H5P activity does not exist in this book."
+msgstr ""
+
+#: page-h5p-listing.php:38
 msgid "ID"
 msgstr ""
 
-#: page-h5p-listing.php:19 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Titre"
 
-#: page-h5p-listing.php:20
+#: page-h5p-listing.php:40
 msgid "Activity type"
 msgstr ""
 
-#: page-h5p-listing.php:21
+#: page-h5p-listing.php:42
 msgid "Show/Hide"
 msgstr ""
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Show activity"
 msgstr ""
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Hide activity"
 msgstr ""
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "View h5p activity"
 msgstr ""
 
@@ -552,8 +565,8 @@ msgstr "Collaborateurs"
 msgid "Subject"
 msgstr "Sujet"
 
-#: partials/content-cover-book-info.php:86
-#: partials/content-cover-metadata.php:63
+#: partials/content-cover-book-info.php:87
+#: partials/content-cover-metadata.php:64
 msgid "Click for more information"
 msgstr "Cliquer pour plus d&rsquo;information"
 

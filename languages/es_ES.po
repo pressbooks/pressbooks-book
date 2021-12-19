@@ -7,9 +7,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.14.0\n"
+"Project-Id-Version: McLuhan 2.15.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-23T20:40:22+00:00\n"
+"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera <evera@shinydreamer.xyz>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/pressbooks/teams/9194/es/)\n"
@@ -93,11 +93,15 @@ msgstr "Funciona con %s"
 msgid "Guides and Tutorials"
 msgstr "Guías y tutoriales"
 
-#: footer.php:73 footer.php:75
+#: footer.php:67
+msgid "Pressbooks Directory"
+msgstr ""
+
+#: footer.php:74 footer.php:76
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks en YouTube"
 
-#: footer.php:77 footer.php:81
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks en Twitter"
 
@@ -129,11 +133,11 @@ msgstr "Alternar menú"
 
 #: header.php:92
 msgid "Primary Navigation"
-msgstr ""
+msgstr "Navegación principal"
 
 #: header.php:102 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
-msgstr ""
+msgstr "Navegación por el contenido del libro"
 
 #: header.php:105 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
@@ -405,15 +409,19 @@ msgstr "Comprar en <a href=\"%1$s\">apple.com</a>"
 msgid "Purchase here:"
 msgstr "Comprar aquí:"
 
-#: page-h5p-listing.php:8
+#: page-h5p-listing.php:16
+msgid "Invalid H5P activity"
+msgstr ""
+
+#: page-h5p-listing.php:18
 msgid "H5P activities list"
 msgstr "Lista de actividades H5P"
 
-#: page-h5p-listing.php:10
+#: page-h5p-listing.php:24
 msgid "This book includes "
 msgstr "Este libro incluye"
 
-#: page-h5p-listing.php:12
+#: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
@@ -421,43 +429,47 @@ msgstr ""
 "actividades H5P. Si se clona el libro, se incluirán solo aquellas que se han"
 " insertado en el contenido del mismo."
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all"
 msgstr "Expandir todo"
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Hide all"
 msgstr "Ocultar todo"
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all activities"
 msgstr "Expandir todas las actividades"
 
-#: page-h5p-listing.php:18
+#: page-h5p-listing.php:32
+msgid "The requested H5P activity does not exist in this book."
+msgstr ""
+
+#: page-h5p-listing.php:38
 msgid "ID"
 msgstr "ID"
 
-#: page-h5p-listing.php:19 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Título"
 
-#: page-h5p-listing.php:20
+#: page-h5p-listing.php:40
 msgid "Activity type"
 msgstr "Tipo de actividad"
 
-#: page-h5p-listing.php:21
+#: page-h5p-listing.php:42
 msgid "Show/Hide"
 msgstr "Mostrar/Ocultar"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Show activity"
 msgstr "Mostrar la actividad"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Hide activity"
 msgstr "Ocultar actividad"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "View h5p activity"
 msgstr "Ver la actividad H5P"
 
@@ -544,8 +556,8 @@ msgstr "Colaboradores"
 msgid "Subject"
 msgstr "Tema"
 
-#: partials/content-cover-book-info.php:86
-#: partials/content-cover-metadata.php:63
+#: partials/content-cover-book-info.php:87
+#: partials/content-cover-metadata.php:64
 msgid "Click for more information"
 msgstr "Haz clic para obtener más información"
 
