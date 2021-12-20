@@ -14,35 +14,35 @@
 			</div>
 			<?php
 		endif;
-if ( isset( $book_information['pb_is_based_on'] ) ) {
-	$source_url  = \PressbooksBook\Helpers\get_source_book_url( $book_information['pb_is_based_on'] );
-	$source_meta = \PressbooksBook\Helpers\get_source_book_meta( $source_url );
-	?>
+												if ( isset( $book_information['pb_is_based_on'] ) ) {
+													$source_url  = \PressbooksBook\Helpers\get_source_book_url( $book_information['pb_is_based_on'] );
+													$source_meta = \PressbooksBook\Helpers\get_source_book_meta( $source_url );
+													?>
 
 	<div class="block-info__subsection block-info__source">
 		<h3 class="block__subtitle"><?php _e( 'Book Source', 'pressbooks-book' ); ?></h3>
 		<p>
-			<?php
-			if ( $source_meta ) {
-				$authors = \PressbooksBook\Helpers\get_book_authors( $source_meta );
-				printf(
-					/* translators: %$1s: title of book, link to book, %2$s: attribution string for the book, %3$s: publisher of book, %4$s: license for book */
-					__( 'This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
-					sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
-					/* translators: %2$s: authors of book */
-					( $authors ) ? sprintf( __( ' by %s', 'pressbooks-book' ), $authors ) : '',
-					/* translators: %3$s: publisher of book */
-					( isset( $source_meta['publisher'] ) ) ? sprintf( __( ' by %s', 'pressbooks-book' ), $source_meta['publisher']['name'] ) : '',
-					sprintf( '<a href="%1$s">%2$s</a>', $source_meta['license']['url'], $source_meta['license']['name'] )
-				);
-			} else {
-				printf(
-					/* translators: %s: link to source book */
-					__( 'This book was cloned from a source that is no longer available. The source URL was %s. This book may differ from the original.', 'pressbooks-book' ),
-					sprintf( '<a href="%1$s">%1$s</a>', $source_url )
-				);
-			}
-			?>
+													<?php
+													if ( $source_meta ) {
+														$authors = \PressbooksBook\Helpers\get_book_authors( $source_meta );
+														printf(
+														/* translators: %$1s: title of book, link to book, %2$s: attribution string for the book, %3$s: publisher of book, %4$s: license for book */
+															__( 'This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s under a %4$s license. It may differ from the original.', 'pressbooks-book' ),
+															sprintf( '<a href="%1$s">%2$s</a>', $source_url, $source_meta['name'] ),
+															/* translators: %2$s: authors of book */
+															( $authors ) ? sprintf( __( ' by %s', 'pressbooks-book' ), $authors ) : '',
+															/* translators: %3$s: publisher of book */
+															( isset( $source_meta['publisher'] ) ) ? sprintf( __( ' by %s', 'pressbooks-book' ), $source_meta['publisher']['name'] ) : '',
+															sprintf( '<a href="%1$s">%2$s</a>', $source_meta['license']['url'], $source_meta['license']['name'] )
+														);
+													} else {
+														printf(
+														/* translators: %s: link to source book */
+															__( 'This book was cloned from a source that is no longer available. The source URL was %s. This book may differ from the original.', 'pressbooks-book' ),
+															sprintf( '<a href="%1$s">%1$s</a>', $source_url )
+														);
+													}
+													?>
 		</p>
 	</div>
 <?php } ?>
@@ -76,6 +76,7 @@ if ( isset( $book_information['pb_is_based_on'] ) ) {
 		</div>
 		<?php
 		/** Append content to cover book info block.
+		 *
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_cover_after_book_info' );

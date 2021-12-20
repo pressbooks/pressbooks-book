@@ -27,3 +27,13 @@
     width: auto;
   }
 }
+
+@if $type == 'prince' {
+  .chapter.with-subsections .chapter-ugc h1 {
+    prince-bookmark-level: 2;
+  }
+
+  div.part ~ .chapter.with-subsections .chapter-ugc h1 {
+    prince-bookmark-level: 3;
+  }
+}

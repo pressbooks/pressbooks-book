@@ -1,7 +1,13 @@
 <?xml version="1.0"?>
 <ruleset>
     <!-- Use Pressbooks Coding Standards -->
-    <rule ref="vendor/pressbooks/coding-standards" />
+    <rule ref="vendor/pressbooks/coding-standards">
+		<!-- TODO: These should be re-enabled sooner than later... -->
+		<exclude name="Squiz.Commenting"/>
+		<exclude name="Generic.Commenting"/>
+		<exclude name="Pressbooks.Security.EscapeOutput.OutputNotEscaped"/>
+		<exclude name="Pressbooks.Security.ValidatedSanitizedInput"/>
+	</rule>
     <!-- Disable Side Effects and MissingNamespace rules for bootstrapping files: -->
     <rule ref="PSR1.Files.SideEffects">
         <exclude-pattern>/functions.php</exclude-pattern>

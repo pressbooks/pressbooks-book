@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.14.0\n"
+"Project-Id-Version: McLuhan 2.15.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-23T20:40:22+00:00\n"
+"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Radost G <radosvetagiuleva@abv.bg>, 2020\n"
 "Language-Team: Bulgarian (Bulgaria) (https://www.transifex.com/pressbooks/teams/9194/bg_BG/)\n"
@@ -93,11 +93,15 @@ msgstr "Захранвано от%s"
 msgid "Guides and Tutorials"
 msgstr "Ръководства за употреба, уроци и мнения"
 
-#: footer.php:73 footer.php:75
+#: footer.php:67
+msgid "Pressbooks Directory"
+msgstr ""
+
+#: footer.php:74 footer.php:76
 msgid "Pressbooks on YouTube"
 msgstr "Платформата в Ютюб"
 
-#: footer.php:77 footer.php:81
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on Twitter"
 msgstr "Платформата в Туитър"
 
@@ -404,57 +408,65 @@ msgstr "Купи от apple.com"
 msgid "Purchase here:"
 msgstr "Купи тук:"
 
-#: page-h5p-listing.php:8
+#: page-h5p-listing.php:16
+msgid "Invalid H5P activity"
+msgstr ""
+
+#: page-h5p-listing.php:18
 msgid "H5P activities list"
 msgstr "H5P лист на дейностите"
 
-#: page-h5p-listing.php:10
+#: page-h5p-listing.php:24
 msgid "This book includes "
 msgstr ""
 
-#: page-h5p-listing.php:12
+#: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
 msgstr ""
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all"
 msgstr ""
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Hide all"
 msgstr "Скрий всичко"
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all activities"
 msgstr ""
 
-#: page-h5p-listing.php:18
+#: page-h5p-listing.php:32
+msgid "The requested H5P activity does not exist in this book."
+msgstr ""
+
+#: page-h5p-listing.php:38
 msgid "ID"
 msgstr "ID"
 
-#: page-h5p-listing.php:19 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "Заглавие"
 
-#: page-h5p-listing.php:20
+#: page-h5p-listing.php:40
 msgid "Activity type"
 msgstr "Тип дейност"
 
-#: page-h5p-listing.php:21
+#: page-h5p-listing.php:42
 msgid "Show/Hide"
 msgstr ""
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Show activity"
 msgstr ""
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Hide activity"
 msgstr "Скрий дейността"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "View h5p activity"
 msgstr ""
 
@@ -540,8 +552,8 @@ msgstr "Сътрудници"
 msgid "Subject"
 msgstr "Тема"
 
-#: partials/content-cover-book-info.php:86
-#: partials/content-cover-metadata.php:63
+#: partials/content-cover-book-info.php:87
+#: partials/content-cover-metadata.php:64
 msgid "Click for more information"
 msgstr "Кликнете за повече информация"
 

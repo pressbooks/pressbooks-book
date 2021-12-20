@@ -72,6 +72,7 @@
 <?php endif; ?>
 		<?php
 		/** Insert content before content footer.
+		 *
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_content_before_footer' );

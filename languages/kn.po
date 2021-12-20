@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.14.0\n"
+"Project-Id-Version: McLuhan 2.15.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-23T20:40:22+00:00\n"
+"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
 "Language-Team: Kannada (https://www.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -92,11 +92,15 @@ msgstr "%s ನಿಂದ ಸಾಮರ್ಥ್ಯ ಪಡೆದಿದೆ"
 msgid "Guides and Tutorials"
 msgstr "ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್‍ಗಳು"
 
-#: footer.php:73 footer.php:75
+#: footer.php:67
+msgid "Pressbooks Directory"
+msgstr ""
+
+#: footer.php:74 footer.php:76
 msgid "Pressbooks on YouTube"
 msgstr "ಯೂಟ್ಯೂಬ್ ನಲ್ಲಿ ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
 
-#: footer.php:77 footer.php:81
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on Twitter"
 msgstr "ಟ್ವಿಟರ್ ನಲ್ಲಿ ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
 
@@ -403,15 +407,19 @@ msgstr "<a href=\"%1$s\">apple.com</a> ಮೇಲೆ ಖರೀದಿಸಿ"
 msgid "Purchase here:"
 msgstr "ಇಲ್ಲಿ ಖರೀದಿಸಿ:"
 
-#: page-h5p-listing.php:8
+#: page-h5p-listing.php:16
+msgid "Invalid H5P activity"
+msgstr ""
+
+#: page-h5p-listing.php:18
 msgid "H5P activities list"
 msgstr "ಎಚ್5ಪಿ ಚಟುವಟಿಕೆಗಳ ಪಟ್ಟಿ"
 
-#: page-h5p-listing.php:10
+#: page-h5p-listing.php:24
 msgid "This book includes "
 msgstr "ಈ ಪುಸ್ತಕವು ಒಳಗೊಂಡಿದೆ "
 
-#: page-h5p-listing.php:12
+#: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
@@ -419,43 +427,47 @@ msgstr ""
 "ಎಚ್5ಪಿ ಚಟುವಟಿಕೆಗಳು. ಪುಸ್ತಕವನ್ನು ಕ್ಲೋನ್ ಮಾಡಿದರೆ ಪುಸ್ತಕದ ವಿಷಯಕ್ಕೆ "
 "ಸೇರಿಸಿದವುಗಳನ್ನು ಮಾತ್ರ ಸೇರಿಸಲಾಗುತ್ತದೆ."
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all"
 msgstr "ಎಲ್ಲಾ ವಿಸ್ತರಿಸಿ"
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Hide all"
 msgstr "ಎಲ್ಲಾ ಮರೆಮಾಡಿ"
 
-#: page-h5p-listing.php:13
+#: page-h5p-listing.php:27
 msgid "Expand all activities"
 msgstr "ಎಲ್ಲಾ ಚಟುವಟಿಕೆಗಳನ್ನು ವಿಸ್ತರಿಸಿ"
 
-#: page-h5p-listing.php:18
+#: page-h5p-listing.php:32
+msgid "The requested H5P activity does not exist in this book."
+msgstr ""
+
+#: page-h5p-listing.php:38
 msgid "ID"
 msgstr "ಐಡಿ"
 
-#: page-h5p-listing.php:19 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "ಶೀರ್ಷಿಕೆ"
 
-#: page-h5p-listing.php:20
+#: page-h5p-listing.php:40
 msgid "Activity type"
 msgstr "ಚಟುವಟಿಕೆ ಪ್ರಕಾರ"
 
-#: page-h5p-listing.php:21
+#: page-h5p-listing.php:42
 msgid "Show/Hide"
 msgstr "ತೋರಿಸು/ಮರೆಮಾಡು"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Show activity"
 msgstr "ಚಟುವಟಿಕೆ ತೋರಿಸು"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "Hide activity"
 msgstr "ಚಟುವಟಿಕೆ ಮರೆಮಾಡಿ"
 
-#: page-h5p-listing.php:33
+#: page-h5p-listing.php:55
 msgid "View h5p activity"
 msgstr "ಎಚ್5ಪಿ ಚಟುವಟಿಕೆ ವೀಕ್ಷಿಸಿ"
 
@@ -541,8 +553,8 @@ msgstr "ಕೊಡುಗೆದಾರರು"
 msgid "Subject"
 msgstr "ವಿಷಯ"
 
-#: partials/content-cover-book-info.php:86
-#: partials/content-cover-metadata.php:63
+#: partials/content-cover-book-info.php:87
+#: partials/content-cover-metadata.php:64
 msgid "Click for more information"
 msgstr "ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಕ್ಲಿಕ್ ಮಾಡಿ"
 

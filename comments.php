@@ -14,7 +14,7 @@
 <?php if ( have_comments() ) : ?>
 			<h3 id="comments-title">
 			<?php
-			printf( // WPCS: XSS OK.
+			printf(
 				esc_html(
 					/* translators: %1$d: number of responses, %2$s: title of section */
 					_nx(
