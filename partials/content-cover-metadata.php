@@ -18,7 +18,7 @@
 							<dd class="">
 							<?php
 							if ( 'pb_publication_date' === $key ) {
-									$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
+								$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
 							} elseif ( 'pb_hashtag' === $key ) {
 								$hashtag = $book_information[ $key ];
 								$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
@@ -33,6 +33,8 @@
 									$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
 								}
 								$book_information[ $key ] = implode( ', ', $output );
+							} elseif ( 'pb_institutions' === $key ) {
+								$book_information[ $key ] = implode( ', ', $book_information[ $key ] );
 							} elseif ( 'pb_book_doi' === $key ) {
 								/**
 								 * Filter the DOI resolver service URL (default: https://dx.doi.org).
