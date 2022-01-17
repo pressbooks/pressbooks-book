@@ -5,7 +5,7 @@
  * @package Pressbooks_Book
  */
 
-use function \PressbooksBook\Helpers\count_authors;
+use function \PressbooksBook\Helpers\count_items;
 use function \PressbooksBook\Helpers\display_menu;
 use function \PressbooksBook\Helpers\get_book_authors;
 use function \PressbooksBook\Helpers\get_metakeys;
@@ -171,15 +171,18 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertTrue( $result );
 	}
 
-	function test_count_authors() {
-		$result = count_authors( 'Author One, Author Two, and Author Three' );
+	function test_count_items() {
+		$result = count_items( 'Author One, Author Two, and Author Three' );
 		$this->assertEquals( 3, $result );
-		$result = count_authors( 'Author One and Author Two' );
+		$result = count_items( 'Author One and Author Two' );
 		$this->assertEquals( 2, $result );
-		$result = count_authors( 'Author One' );
+		$result = count_items( 'Author One' );
 		$this->assertEquals( 1, $result );
-		$result = count_authors( '' );
+		$result = count_items( '' );
 		$this->assertEquals( 0, $result );
+		$this->assertEquals( 3, count_items( ['Item one', 'Item two', 'Item 3'] ) );
+		$this->assertEquals( 1, count_items( ['Item one'] ) );
+		$this->assertEquals( 0, count_items( [] ) );
 	}
 
 	function test_do_license() {
