@@ -14,7 +14,7 @@
 					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) {
 						?>
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
-							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \PressbooksBook\Helpers\count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
+							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \PressbooksBook\Helpers\count_items( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
 							<dd class="">
 							<?php
 							if ( 'pb_publication_date' === $key ) {

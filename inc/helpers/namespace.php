@@ -442,7 +442,7 @@ function get_metakeys(): array {
 		'pb_book_license' => __( 'License', 'pressbooks-book' ),
 		'pb_primary_subject' => __( 'Primary Subject', 'pressbooks-book' ),
 		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
-		'pb_institutions' => __( 'Institution(s)', 'pressbooks-book' ),
+		'pb_institutions' => _n_noop( 'Institution', 'Institutions', 'pressbooks-book' ),
 		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
 		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),
 		'pb_book_doi' => __( 'Digital Object Identifier (DOI)', 'pressbooks-book' ),
@@ -606,12 +606,14 @@ function comments_template( $comment, $args, $depth ) {
  *
  * @since 2.3.0
  *
- * @param string $var
+ * @param string|array $value
  *
  * @return int
  */
-function count_authors( $var ) {
-	return count( \Pressbooks\Utility\oxford_comma_explode( $var ) );
+function count_items( $value ): int {
+	$countable = is_countable( $value ) ? $value : \Pressbooks\Utility\oxford_comma_explode( $value );
+
+	return count( $countable );
 }
 
 /**
