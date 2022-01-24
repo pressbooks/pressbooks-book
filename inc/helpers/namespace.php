@@ -756,3 +756,16 @@ function get_h5p_activities( $per_page = 20 ) {
 		'pagination' => $pagination,
 	];
 }
+
+/**
+ * Return a comma separated string of all institutions.
+ *
+ * @param array $institutions
+ *
+ * @return string
+ */
+function institutions_to_string( array $institutions ): string {
+	return implode( ', ', array_map( static function( $code ) {
+		return \Pressbooks\Metadata\get_institution_by_code( $code );
+	}, $institutions ) );
+}

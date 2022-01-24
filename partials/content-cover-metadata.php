@@ -34,7 +34,7 @@
 								}
 								$book_information[ $key ] = implode( ', ', $output );
 							} elseif ( 'pb_institutions' === $key ) {
-								$book_information[ $key ] = implode( ', ', $book_information[ $key ] );
+								$book_information[ $key ] = \PressbooksBook\Helpers\institutions_to_string( $book_information[ $key ] );
 							} elseif ( 'pb_book_doi' === $key ) {
 								/**
 								 * Filter the DOI resolver service URL (default: https://dx.doi.org).
