@@ -22,10 +22,6 @@ jobs:
             os: ubuntu-20.04
             wordpress: latest
             experimental: true
-          - php: 7.4
-            os: ubuntu-20.04
-            wordpress: 'trunk'
-            experimental: true
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
     env:
@@ -98,7 +94,7 @@ jobs:
         run: bash bin/install-wp-tests.sh wordpress_test root root localhost ${{ matrix.wordpress }}
 
       - name: Run PHP Tests and PCOV
-        run: composer require pcov/clobber; vendor/bin/pcov clobber; vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
+        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
         if: matrix.experimental == false
 
       - name: Upload Coverage to Codecov
