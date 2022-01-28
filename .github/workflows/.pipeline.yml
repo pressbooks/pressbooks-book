@@ -15,16 +15,12 @@ jobs:
       matrix:
         php: [ 7.3 ]
         os: [ ubuntu-18.04 ]
-        wordpress: [ 5.8.2 ]
+        wordpress: [ 5.9 ]
         experimental: [false]
         include:
           - php: 7.4
             os: ubuntu-20.04
             wordpress: latest
-            experimental: true
-          - php: 7.4
-            os: ubuntu-20.04
-            wordpress: 'trunk'
             experimental: true
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
@@ -98,23 +94,12 @@ jobs:
         run: bash bin/install-wp-tests.sh wordpress_test root root localhost ${{ matrix.wordpress }}
 
       - name: Run PHP Tests and PCOV
-        run: composer require pcov/clobber; vendor/bin/pcov clobber; vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
+        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
         if: matrix.experimental == false
 
       - name: Upload Coverage to Codecov
         run: bash <(curl -s https://codecov.io/bash)
         if: matrix.experimental == false
-
-      - name: Run PHP Tests
-        run: composer test
-        if: matrix.experimental == true && matrix.wordpress != 'trunk'
-
-      - name: Run PHP Tests with PHPUnit 9
-        run: |
-          composer remove --dev phpunit/phpunit
-          composer update --dev yoast/phpunit-polyfills --with-dependencies --ignore-platform-reqs
-          vendor/bin/phpunit --configuration phpunit9.xml
-        if: matrix.experimental == true && matrix.wordpress == 'trunk'
 
       - name: Prepare Build
         if: startsWith(github.ref, 'refs/tags/')
