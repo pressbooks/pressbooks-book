@@ -1,13 +1,13 @@
-# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Dubravko Cvikl <dcvikl@cvikl.hr>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.15.0\n"
+"Project-Id-Version: McLuhan 2.16.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
+"POT-Creation-Date: 2022-02-01T23:16:47+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Dubravko Cvikl <dcvikl@cvikl.hr>, 2019\n"
 "Language-Team: Croatian (Croatia) (https://www.transifex.com/pressbooks/teams/9194/hr_HR/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: hr_HR\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -289,64 +289,71 @@ msgid "Additional Subject(s)"
 msgstr "Dodatni predmet(i)"
 
 #: inc/helpers/namespace.php:445
+msgid "Institution"
+msgid_plural "Institutions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: inc/helpers/namespace.php:446
 msgid "Publisher"
 msgstr "Izdavač"
 
-#: inc/helpers/namespace.php:446
+#: inc/helpers/namespace.php:447
 msgid "Publication Date"
 msgstr "Datum izdavanja"
 
-#: inc/helpers/namespace.php:447 single.php:43
+#: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digital Object Identifier (DOI)"
 
-#: inc/helpers/namespace.php:448
+#: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
 msgstr "Ebook ISBN"
 
-#: inc/helpers/namespace.php:449
+#: inc/helpers/namespace.php:450
 msgid "Print ISBN"
 msgstr "ISBN tiskano izdanje"
 
-#: inc/helpers/namespace.php:450
+#: inc/helpers/namespace.php:451
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:485 inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
 msgstr "Prethodno: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:495 inc/helpers/namespace.php:497
+#: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
 msgstr "Slijedeće: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568
+#: inc/helpers/namespace.php:569
 msgid "%s on"
 msgstr "%s na"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568
+#: inc/helpers/namespace.php:569
 msgid "%1$s at %2$s"
 msgstr "%1$s na %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568 inc/helpers/namespace.php:597
+#: inc/helpers/namespace.php:569 inc/helpers/namespace.php:598
 msgid "(Edit)"
 msgstr "(Uredi)"
 
-#: inc/helpers/namespace.php:571
+#: inc/helpers/namespace.php:572
 msgid "Your comment is awaiting moderation."
 msgstr "Vaš komentar čeka odobrenje."
 
-#: inc/helpers/namespace.php:597
+#: inc/helpers/namespace.php:598
 msgid "Pingback:"
 msgstr "Povratna veza:"
 
@@ -554,7 +561,7 @@ msgid "Subject"
 msgstr "Predmet"
 
 #: partials/content-cover-book-info.php:87
-#: partials/content-cover-metadata.php:64
+#: partials/content-cover-metadata.php:66
 msgid "Click for more information"
 msgstr "Kliknite za više informacija"
 
