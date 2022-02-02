@@ -40,7 +40,7 @@
 			"vendor/bin/phpunit --configuration phpunit.xml"
 		],
     "test-coverage": [
-      "vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml -coverage-html=./coverage-reports"
+      "vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml --coverage-html=./coverage-reports"
     ],
 		"standards": [
 			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
