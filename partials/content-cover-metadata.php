@@ -14,11 +14,11 @@
 					if ( isset( $book_information[ $key ] ) && ! empty( $book_information[ $key ] ) ) {
 						?>
 						<div class="block-meta__subsection meta--<?php echo $key; ?>">
-							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \PressbooksBook\Helpers\count_authors( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
+							<dt class="block__subtitle block-meta__subtitle"><?php echo is_array( $val ) ? translate_nooped_plural( $val, \PressbooksBook\Helpers\count_items( $book_information[ $key ] ), 'pressbooks-book' ) : $val; ?></dt>
 							<dd class="">
 							<?php
 							if ( 'pb_publication_date' === $key ) {
-									$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
+								$book_information[ $key ] = date_i18n( 'F j, Y', (int) $book_information[ $key ] );
 							} elseif ( 'pb_hashtag' === $key ) {
 								$hashtag = $book_information[ $key ];
 								$book_information[ $key ] = "<a href='https://twitter.com/search?q=%23$hashtag'>#$hashtag</a>";
@@ -33,6 +33,8 @@
 									$output[] = \Pressbooks\Metadata\get_subject_from_thema( $code );
 								}
 								$book_information[ $key ] = implode( ', ', $output );
+							} elseif ( 'pb_institutions' === $key ) {
+								$book_information[ $key ] = \PressbooksBook\Helpers\institutions_to_string( $book_information[ $key ] );
 							} elseif ( 'pb_book_doi' === $key ) {
 								/**
 								 * Filter the DOI resolver service URL (default: https://dx.doi.org).

@@ -1,13 +1,13 @@
-# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Omshivaprakash H L <omshivaprakash@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.15.0\n"
+"Project-Id-Version: McLuhan 2.16.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
+"POT-Creation-Date: 2022-02-01T23:16:47+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
 "Language-Team: Kannada (https://www.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -285,64 +285,70 @@ msgid "Additional Subject(s)"
 msgstr "ಹೆಚ್ಚುವರಿ ವಿಷಯ(ಗಳು)"
 
 #: inc/helpers/namespace.php:445
+msgid "Institution"
+msgid_plural "Institutions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/helpers/namespace.php:446
 msgid "Publisher"
 msgstr "ಪ್ರಕಾಶಕ"
 
-#: inc/helpers/namespace.php:446
+#: inc/helpers/namespace.php:447
 msgid "Publication Date"
 msgstr "ಪ್ರಕಟಣೆ ದಿನಾಂಕ"
 
-#: inc/helpers/namespace.php:447 single.php:43
+#: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
 msgstr "ಡಿಜಿಟಲ್ ಆಬ್ಜೆಕ್ಟ್ ಐಡೆಂಟಿಫೈಯರ್ (ಡಿಒಐ)"
 
-#: inc/helpers/namespace.php:448
+#: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
 msgstr "ಇಬುಕ್ ಐಎಸ್‍ಬಿಎನ್"
 
-#: inc/helpers/namespace.php:449
+#: inc/helpers/namespace.php:450
 msgid "Print ISBN"
 msgstr "ಮುದ್ರಣ ಐಎಸ್‍ಬಿಎನ್"
 
-#: inc/helpers/namespace.php:450
+#: inc/helpers/namespace.php:451
 msgid "Hashtag"
 msgstr "ಹ್ಯಾಶ್‍ಟ್ಯಾಗ್"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:485 inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
 msgstr "ಹಿಂದಿನ: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:495 inc/helpers/namespace.php:497
+#: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
 msgstr "ಮುಂದೆ: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568
+#: inc/helpers/namespace.php:569
 msgid "%s on"
 msgstr "‍%s ಮೂಲಕ"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568
+#: inc/helpers/namespace.php:569
 msgid "%1$s at %2$s"
 msgstr "%1$s ರಲ್ಲಿ %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568 inc/helpers/namespace.php:597
+#: inc/helpers/namespace.php:569 inc/helpers/namespace.php:598
 msgid "(Edit)"
 msgstr "(ಸಂಪಾದಿಸಿ)"
 
-#: inc/helpers/namespace.php:571
+#: inc/helpers/namespace.php:572
 msgid "Your comment is awaiting moderation."
 msgstr "ನಿಮ್ಮ ಟಿಪ್ಪಣಿ ಪರಾಮರ್ಶೆಗಾಗಿ ಕಾಯುತ್ತಿದೆ."
 
-#: inc/helpers/namespace.php:597
+#: inc/helpers/namespace.php:598
 msgid "Pingback:"
 msgstr "ಮರುಕೋರಿಕೆ (Pingback):"
 
@@ -554,7 +560,7 @@ msgid "Subject"
 msgstr "ವಿಷಯ"
 
 #: partials/content-cover-book-info.php:87
-#: partials/content-cover-metadata.php:64
+#: partials/content-cover-metadata.php:66
 msgid "Click for more information"
 msgstr "ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಕ್ಲಿಕ್ ಮಾಡಿ"
 

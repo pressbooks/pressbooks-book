@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # jorge santibañez <info@letrapixel.com>, 2017
@@ -7,9 +7,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.15.0\n"
+"Project-Id-Version: McLuhan 2.16.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2021-11-24T03:03:55+00:00\n"
+"POT-Creation-Date: 2022-02-01T23:16:47+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera <evera@shinydreamer.xyz>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/pressbooks/teams/9194/es/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -95,7 +95,7 @@ msgstr "Guías y tutoriales"
 
 #: footer.php:67
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Directorio de Pressbooks"
 
 #: footer.php:74 footer.php:76
 msgid "Pressbooks on YouTube"
@@ -287,64 +287,70 @@ msgid "Additional Subject(s)"
 msgstr "Temas adicionales"
 
 #: inc/helpers/namespace.php:445
+msgid "Institution"
+msgid_plural "Institutions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/helpers/namespace.php:446
 msgid "Publisher"
 msgstr "Editorial"
 
-#: inc/helpers/namespace.php:446
+#: inc/helpers/namespace.php:447
 msgid "Publication Date"
 msgstr "Fecha de publicación"
 
-#: inc/helpers/namespace.php:447 single.php:43
+#: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
 msgstr "Identificador de objeto digital (DOI)"
 
-#: inc/helpers/namespace.php:448
+#: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
 msgstr "ISBN del libro electrónico"
 
-#: inc/helpers/namespace.php:449
+#: inc/helpers/namespace.php:450
 msgid "Print ISBN"
 msgstr "ISBN del libro impreso"
 
-#: inc/helpers/namespace.php:450
+#: inc/helpers/namespace.php:451
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:485 inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
 msgstr "Anterior: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:495 inc/helpers/namespace.php:497
+#: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
 msgstr "Siguiente: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568
+#: inc/helpers/namespace.php:569
 msgid "%s on"
 msgstr "%s en"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568
+#: inc/helpers/namespace.php:569
 msgid "%1$s at %2$s"
 msgstr "%1$s en %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:568 inc/helpers/namespace.php:597
+#: inc/helpers/namespace.php:569 inc/helpers/namespace.php:598
 msgid "(Edit)"
 msgstr "(Editar)"
 
-#: inc/helpers/namespace.php:571
+#: inc/helpers/namespace.php:572
 msgid "Your comment is awaiting moderation."
 msgstr "Tu comentario está pendiente de moderación."
 
-#: inc/helpers/namespace.php:597
+#: inc/helpers/namespace.php:598
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -411,7 +417,7 @@ msgstr "Comprar aquí:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "Actividad H5P no válida"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
@@ -443,7 +449,7 @@ msgstr "Expandir todas las actividades"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "La actividad H5P solicitada no existe en este libro."
 
 #: page-h5p-listing.php:38
 msgid "ID"
@@ -557,7 +563,7 @@ msgid "Subject"
 msgstr "Tema"
 
 #: partials/content-cover-book-info.php:87
-#: partials/content-cover-metadata.php:64
+#: partials/content-cover-metadata.php:66
 msgid "Click for more information"
 msgstr "Haz clic para obtener más información"
 

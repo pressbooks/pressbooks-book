@@ -49,7 +49,7 @@
 </div>
 		<div class="block-info__inner__content">
 			<div class="block-info__subsection block-info__lead-author">
-				<h3 class="block__subtitle"><?php echo _n( 'Author', 'Authors', \PressbooksBook\Helpers\count_authors( $book_information['pb_authors'] ), 'pressbooks-book' ); ?></h3>
+				<h3 class="block__subtitle"><?php echo _n( 'Author', 'Authors', \PressbooksBook\Helpers\count_items( $book_information['pb_authors'] ), 'pressbooks-book' ); ?></h3>
 				<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
 					<div class="block-info__authors">
 						<?php // TODO add author photo ?>
