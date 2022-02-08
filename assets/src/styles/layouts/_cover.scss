@@ -78,6 +78,14 @@
   }
 }
 
+.book-header__editor {
+  @extend .book-header__author
+}
+
+.book-header__author + .book-header__editor {
+  @extend .book-header__author
+}
+
 .book-header__cover {
   align-self: center;
   margin-bottom: 1.5rem;
