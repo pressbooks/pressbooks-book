@@ -16,6 +16,9 @@ use function \Pressbooks\Image\attachment_id_from_url;
 		<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
 			<p class="book-header__author"><span class="screen-reader-text"><?php echo translate_nooped_plural( _n_noop( 'Author', 'Authors', 'pressbooks-book' ), \PressbooksBook\Helpers\count_items( $book_information['pb_authors'] ), 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_authors']; ?></p>
 		<?php } ?>
+		<?php if ( ! empty( $book_information['pb_editors'] ) ) { ?>
+			<p class="book-header__editor"><?php _e( 'Edited By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_editors']; ?></p>
+		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
 				<div class="book-header__cover__image">
