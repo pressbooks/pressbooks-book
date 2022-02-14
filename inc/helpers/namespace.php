@@ -766,6 +766,6 @@ function get_h5p_activities( $per_page = 20 ) {
  */
 function institutions_to_string( array $institutions ): string {
 	return implode( ', ', array_map( static function( $code ) {
-		return \Pressbooks\Metadata\get_institution_by_code( $code );
+		return \Pressbooks\Metadata\get_institution_name( $code );
 	}, $institutions ) );
 }
