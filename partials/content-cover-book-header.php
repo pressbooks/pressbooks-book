@@ -22,6 +22,9 @@ use function \Pressbooks\Image\attachment_id_from_url;
 		<?php if ( ! empty( $book_information['pb_translators'] ) ) { ?>
 			<p class="book-header__editor"><?php _e( 'Translated By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_translators']; ?></p>
 		<?php } ?>
+		<?php if ( ! empty( $book_information['pb_illustrators'] ) ) { ?>
+			<p class="book-header__editor"><?php _e( 'Illustrated By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_illustrators']; ?></p>
+		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
 				<div class="book-header__cover__image">
