@@ -17,13 +17,13 @@ use function \Pressbooks\Image\attachment_id_from_url;
 			<p class="book-header__author"><span class="screen-reader-text"><?php echo translate_nooped_plural( _n_noop( 'Author', 'Authors', 'pressbooks-book' ), \PressbooksBook\Helpers\count_items( $book_information['pb_authors'] ), 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_authors']; ?></p>
 		<?php } ?>
 		<?php if ( ! empty( $book_information['pb_editors'] ) ) { ?>
-			<p class="book-header__editor"><?php _e( 'Edited By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_editors']; ?></p>
+			<p class="book-header__contributor"><?php _e( 'Edited By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_editors']; ?></p>
 		<?php } ?>
 		<?php if ( ! empty( $book_information['pb_translators'] ) ) { ?>
-			<p class="book-header__editor"><?php _e( 'Translated By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_translators']; ?></p>
+			<p class="book-header__contributor"><?php _e( 'Translated By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_translators']; ?></p>
 		<?php } ?>
 		<?php if ( ! empty( $book_information['pb_illustrators'] ) ) { ?>
-			<p class="book-header__editor"><?php _e( 'Illustrated By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_illustrators']; ?></p>
+			<p class="book-header__contributor"><?php _e( 'Illustrated By', 'pressbooks-book' ); ?>: <?php echo $book_information['pb_illustrators']; ?></p>
 		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>

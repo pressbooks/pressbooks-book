@@ -78,11 +78,11 @@
   }
 }
 
-.book-header__editor {
+.book-header__contributor {
   @extend .book-header__author
 }
 
-.book-header__author + .book-header__editor {
+.book-header__author + .book-header__contributor {
   @extend .book-header__author
 }
 
