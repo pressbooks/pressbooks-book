@@ -17,7 +17,7 @@
 	},
 	"require-dev": {
 		"pressbooks/coding-standards": "^1.1",
- 		"wpreadme2markdown/wp2md": "^3.0",
+ 		"wpreadme2markdown/wp2md": "^4.0",
 		"yoast/phpunit-polyfills": "^1.0.3"
 	},
 	"archive": {
