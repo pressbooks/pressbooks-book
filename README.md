@@ -17,7 +17,7 @@ This theme is named after Canadian media theorist Marshall McLuhan, who coined t
 
 * PHP >= 7.3
 * WordPress >= 5.9
-* Pressbooks >= 5.32.0
+* Pressbooks >= 5.33.0
 
 ## Installation
 
@@ -41,7 +41,7 @@ Then, from the GitHub Updater interface, navigate to the "Install Theme" tab. En
 
 ## Changelog
 
-### 2.16.0
+### 2.17.0
 
-* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.16.0
+* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.17.0
 * Full release history available at: https://github.com/pressbooks/pressbooks-book/releases
