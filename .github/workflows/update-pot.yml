@@ -29,7 +29,7 @@ jobs:
     - name: Update POT file
       run: wp pb make-pot . languages/pressbooks-book.pot --require=vendor/autoload.php --domain=pressbooks-book --slug=pressbooks-book --package-name="McLuhan" --headers="{\"Report-Msgid-Bugs-To\":\"https://github.com/pressbooks/pressbooks-book/issues\"}"
     - name: Commit updated POT file
-      uses: stefanzweifel/git-auto-commit-action@v4.1.1
+      uses: stefanzweifel/git-auto-commit-action@v4.13.1
       with:
         commit_message: 'chore(l10n): update languages/pressbooks-book.pot'
         file_pattern: '*.pot'
