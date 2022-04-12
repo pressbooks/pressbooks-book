@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.17.0\n"
+"Project-Id-Version: McLuhan 2.18.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2022-02-22T21:43:24+00:00\n"
+"POT-Creation-Date: 2022-04-12T14:24:19+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
@@ -126,28 +126,28 @@ msgstr "İçeriğe geç"
 msgid "Logo for %s"
 msgstr " %s için logo"
 
-#: header.php:90
+#: header.php:93
 msgid "Toggle Menu"
 msgstr "Toggle Menü"
 
-#: header.php:92
+#: header.php:95
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:102 partials/content-cover-toc.php:9
+#: header.php:105 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:105 index.php:14 partials/content-cover-toc.php:3
+#: header.php:108 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "İçindekiler"
 
 #. translators: %s: the title of the book
-#: header.php:114
+#: header.php:117
 msgid "Go to the cover page of %s"
 msgstr " %s kapak sayfasına gidin"
 
-#: header.php:118 inc/helpers/namespace.php:226
+#: header.php:121 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Satın al"
 
