@@ -44,11 +44,11 @@
 									<p>
 									<?php
 									/**
-									 * Filter the DOI resolver service URL (default: https://dx.doi.org).
+									 * Filter the DOI resolver service URL (default: https://doi.org).
 									 *
 									 * @since Pressbooks @ 5.6.0
 									 */
-									$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://dx.doi.org' );
+									$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://doi.org' );
 									printf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', trailingslashit( $doi_resolver ) . $pb_section_doi );
 									?>
 									</p>

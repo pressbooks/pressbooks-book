@@ -63,13 +63,13 @@
 	<header class="header" role="banner">
 		<div class="header__inside">
 			<div class="header__brand">
+				<?php
+				$root_id = get_network()->site_id;
+				switch_to_blog( $root_id );
+				?>
 				<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
 					<?php
-					$root_id = get_network()->site_id;
 					if ( has_custom_logo( $root_id ) ) {
-						?>
-						<?php
-						switch_to_blog( $root_id );
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
 						printf(
 							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
@@ -78,12 +78,15 @@
 							/* translators: %s: name of network */
 							sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
 						);
-						restore_current_blog();
+					} else {
 						?>
-					<?php } else { ?>
 					<svg class="header__logo--svg" role="img">
 						<use href="#logo-pressbooks" />
-					</svg><?php } ?>
+					</svg>
+						<?php
+					}
+					restore_current_blog();
+					?>
 				</a>
 			</div>
 			<div class="header__nav">
