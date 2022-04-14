@@ -5,11 +5,11 @@
 	"type": "wordpress-theme",
 	"config": {
 		"platform": {
-			"php": "7.3"
+			"php": "7.4"
 		}
 	},
 	"require": {
-		"php": ">=7.3",
+		"php": ">=7.4",
 		"composer/installers": "~1.3",
 		"pressbooks/mix": "^2.1",
 		"soberwp/intervention": "1.2.0-p",
