@@ -47,7 +47,6 @@ $includes = [
 foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
-require get_template_directory() . '/inc/intervention.php';
 
 add_action( 'init', '\PressbooksBook\Actions\register_h5p_listing_page' );
 add_action( 'wp_enqueue_scripts', '\PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files' );
