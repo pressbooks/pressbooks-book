@@ -7,7 +7,7 @@
 /**
  * Ensure dependencies are loaded
  */
-if ( ! class_exists( 'PressbooksMix\Assets' ) || ! function_exists( 'Sober\Intervention\intervention' ) ) {
+if ( ! class_exists( 'PressbooksMix\Assets' ) ) {
 	$composer = get_template_directory() . '/vendor/autoload.php';
 	if ( ! file_exists( $composer ) ) {
 		wp_die(
