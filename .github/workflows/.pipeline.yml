@@ -41,12 +41,11 @@ jobs:
         run: |
           sudo apt update
           sudo apt-get install libxml2-utils ghostscript poppler-utils
-
       - name: Start required services
         run: sudo systemctl start mysql.service
 
       - name: Cache PHP dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: vendor
           key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -61,7 +60,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: phpcs, composer:v1
+          tools: phpcs, composer
           coverage: pcov
 
       - name: Install Node dependencies
@@ -76,7 +75,6 @@ jobs:
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
-
       - name: Run Lint
         run: npm run lint
         if: matrix.experimental == false
@@ -122,7 +120,6 @@ jobs:
           wp dist-archive $GITHUB_REPO_SLUG $GITHUB_BUILD_PATH/$GITHUB_REPO_SLUG-$GITHUB_TAG.zip
           cd $GITHUB_BUILD_PATH
           ls $GITHUB_BUILD_PATH
-
       - name: Deploy
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
