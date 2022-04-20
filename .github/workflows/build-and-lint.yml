@@ -31,7 +31,6 @@ jobs:
           npm install -g lerna
           npm install
           npm run bootstrap
-          npm run build
       - name: Run Frontend Tests
         run: |
           npm run test
