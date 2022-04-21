@@ -20,7 +20,6 @@
 	},
 	"require-dev": {
 		"pressbooks/coding-standards": "^1.1",
- 		"wpreadme2markdown/wp2md": "^3.0",
 		"yoast/phpunit-polyfills": "^1.0.3"
 	},
 	"archive": {
@@ -54,7 +53,6 @@
     ],
 		"localize": [
 			"wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
-		],
-		"readme": ["vendor/bin/wp2md -i readme.txt -o README.md"]
+		]
 	}
 }
