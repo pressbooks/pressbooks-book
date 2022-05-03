@@ -7,9 +7,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.18.0\n"
+"Project-Id-Version: McLuhan 2.18.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2022-04-12T14:24:19+00:00\n"
+"POT-Creation-Date: 2022-05-03T21:03:00+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera <evera@shinydreamer.xyz>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/pressbooks/teams/9194/es/)\n"
@@ -353,10 +353,6 @@ msgstr "Tu comentario está pendiente de moderación."
 #: inc/helpers/namespace.php:598
 msgid "Pingback:"
 msgstr "Pingback:"
-
-#: inc/intervention.php:11
-msgid "Hello,"
-msgstr "Hola,"
 
 #: index.php:18
 msgid "This book does not contain any public content."

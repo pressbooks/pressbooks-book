@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.18.0\n"
+"Project-Id-Version: McLuhan 2.18.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2022-04-12T14:24:19+00:00\n"
+"POT-Creation-Date: 2022-05-03T21:03:00+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
 "Language-Team: Kannada (https://www.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -351,10 +351,6 @@ msgstr "ನಿಮ್ಮ ಟಿಪ್ಪಣಿ ಪರಾಮರ್ಶೆಗಾಗ�
 #: inc/helpers/namespace.php:598
 msgid "Pingback:"
 msgstr "ಮರುಕೋರಿಕೆ (Pingback):"
-
-#: inc/intervention.php:11
-msgid "Hello,"
-msgstr "ಹಲೋ,"
 
 #: index.php:18
 msgid "This book does not contain any public content."

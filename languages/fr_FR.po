@@ -12,9 +12,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.18.0\n"
+"Project-Id-Version: McLuhan 2.18.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2022-04-12T14:24:19+00:00\n"
+"POT-Creation-Date: 2022-05-03T21:03:00+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Thomas Weideman, 2021\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
@@ -366,10 +366,6 @@ msgstr "Votre commentaire a été soumis aux modérateurs."
 #: inc/helpers/namespace.php:598
 msgid "Pingback:"
 msgstr "Fonction rétrolien Pingback&nbsp;:"
-
-#: inc/intervention.php:11
-msgid "Hello,"
-msgstr "Bonjour,"
 
 #: index.php:18
 msgid "This book does not contain any public content."
