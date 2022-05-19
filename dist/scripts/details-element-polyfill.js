@@ -1,1 +1,194 @@
-!function(){"use strict";var t,e,n,r,i=document.createElement("details"),a="undefined"!=typeof HTMLDetailsElement&&i instanceof HTMLDetailsElement,o="open"in i||a,u="ontoggle"in i,s='\ndetails, summary {\n  display: block;\n}\ndetails:not([open]) > *:not(summary) {\n  display: none;\n}\nsummary::before {\n  content: "►";\n  padding-right: 0.3rem;\n  font-size: 0.6rem;\n  cursor: default;\n}\n[open] > summary::before {\n  content: "▼";\n}\n',c=[],d=c.forEach,l=c.slice;function f(t){(function(t,e){return(t.tagName==e?[t]:[]).concat("function"==typeof t.getElementsByTagName?l.call(t.getElementsByTagName(e)):[])})(t,"SUMMARY").forEach((function(t){var e=v(t,"DETAILS");t.setAttribute("aria-expanded",e.hasAttribute("open")),t.hasAttribute("tabindex")||t.setAttribute("tabindex","0"),t.hasAttribute("role")||t.setAttribute("role","button")}))}function m(t){return!(t.defaultPrevented||t.ctrlKey||t.metaKey||t.shiftKey||t.target.isContentEditable)}function b(t){addEventListener("click",(function(e){if(m(e)&&e.which<=1){var n=v(e.target,"SUMMARY");n&&n.parentNode&&"DETAILS"==n.parentNode.tagName&&t(n.parentNode)}}),!1),addEventListener("keydown",(function(e){if(m(e)&&(13==e.keyCode||32==e.keyCode)){var n=v(e.target,"SUMMARY");n&&n.parentNode&&"DETAILS"==n.parentNode.tagName&&(t(n.parentNode),e.preventDefault())}}),!1)}function p(t){var e=document.createEvent("Event");e.initEvent("toggle",!1,!1),t.dispatchEvent(e)}function v(t,e){if("function"==typeof t.closest)return t.closest(e);for(;t;){if(t.tagName==e)return t;t=t.parentNode}}o||(document.head.insertAdjacentHTML("afterbegin","<style>"+s+"</style>"),t=document.createElement("details").constructor.prototype,e=t.setAttribute,n=t.removeAttribute,r=Object.getOwnPropertyDescriptor(t,"open"),Object.defineProperties(t,{open:{get:function(){return"DETAILS"==this.tagName?this.hasAttribute("open"):r&&r.get?r.get.call(this):void 0},set:function(t){return"DETAILS"==this.tagName?t?this.setAttribute("open",""):this.removeAttribute("open"):r&&r.set?r.set.call(this,t):void 0}},setAttribute:{value:function(t,n){var r=this,i=function(){return e.call(r,t,n)};if("open"==t&&"DETAILS"==this.tagName){var a=this.hasAttribute("open"),o=i();if(!a){var u=this.querySelector("summary");u&&u.setAttribute("aria-expanded",!0),p(this)}return o}return i()}},removeAttribute:{value:function(t){var e=this,r=function(){return n.call(e,t)};if("open"==t&&"DETAILS"==this.tagName){var i=this.hasAttribute("open"),a=r();if(i){var o=this.querySelector("summary");o&&o.setAttribute("aria-expanded",!1),p(this)}return a}return r()}}}),b((function(t){t.hasAttribute("open")?t.removeAttribute("open"):t.setAttribute("open","")})),f(document),window.MutationObserver?new MutationObserver((function(t){d.call(t,(function(t){d.call(t.addedNodes,f)}))})).observe(document.documentElement,{subtree:!0,childList:!0}):document.addEventListener("DOMNodeInserted",(function(t){f(t.target)}))),o&&!u&&(window.MutationObserver?new MutationObserver((function(t){d.call(t,(function(t){var e=t.target,n=t.attributeName;"DETAILS"==e.tagName&&"open"==n&&p(e)}))})).observe(document.documentElement,{attributes:!0,subtree:!0}):b((function(t){var e=t.getAttribute("open");setTimeout((function(){var n=t.getAttribute("open");e!=n&&p(t)}),1)})))}();
+/*
+Details Element Polyfill 2.4.0
+Copyright © 2019 Javan Makhmali
+ */
+(function() {
+  "use strict";
+  var element = document.createElement("details");
+  var elementIsNative = typeof HTMLDetailsElement != "undefined" && element instanceof HTMLDetailsElement;
+  var support = {
+    open: "open" in element || elementIsNative,
+    toggle: "ontoggle" in element
+  };
+  var styles = '\ndetails, summary {\n  display: block;\n}\ndetails:not([open]) > *:not(summary) {\n  display: none;\n}\nsummary::before {\n  content: "►";\n  padding-right: 0.3rem;\n  font-size: 0.6rem;\n  cursor: default;\n}\n[open] > summary::before {\n  content: "▼";\n}\n';
+  var _ref = [], forEach = _ref.forEach, slice = _ref.slice;
+  if (!support.open) {
+    polyfillStyles();
+    polyfillProperties();
+    polyfillToggle();
+    polyfillAccessibility();
+  }
+  if (support.open && !support.toggle) {
+    polyfillToggleEvent();
+  }
+  function polyfillStyles() {
+    document.head.insertAdjacentHTML("afterbegin", "<style>" + styles + "</style>");
+  }
+  function polyfillProperties() {
+    var prototype = document.createElement("details").constructor.prototype;
+    var setAttribute = prototype.setAttribute, removeAttribute = prototype.removeAttribute;
+    var open = Object.getOwnPropertyDescriptor(prototype, "open");
+    Object.defineProperties(prototype, {
+      open: {
+        get: function get() {
+          if (this.tagName == "DETAILS") {
+            return this.hasAttribute("open");
+          } else {
+            if (open && open.get) {
+              return open.get.call(this);
+            }
+          }
+        },
+        set: function set(value) {
+          if (this.tagName == "DETAILS") {
+            return value ? this.setAttribute("open", "") : this.removeAttribute("open");
+          } else {
+            if (open && open.set) {
+              return open.set.call(this, value);
+            }
+          }
+        }
+      },
+      setAttribute: {
+        value: function value(name, _value) {
+          var _this = this;
+          var call = function call() {
+            return setAttribute.call(_this, name, _value);
+          };
+          if (name == "open" && this.tagName == "DETAILS") {
+            var wasOpen = this.hasAttribute("open");
+            var result = call();
+            if (!wasOpen) {
+              var summary = this.querySelector("summary");
+              if (summary) summary.setAttribute("aria-expanded", true);
+              triggerToggle(this);
+            }
+            return result;
+          }
+          return call();
+        }
+      },
+      removeAttribute: {
+        value: function value(name) {
+          var _this2 = this;
+          var call = function call() {
+            return removeAttribute.call(_this2, name);
+          };
+          if (name == "open" && this.tagName == "DETAILS") {
+            var wasOpen = this.hasAttribute("open");
+            var result = call();
+            if (wasOpen) {
+              var summary = this.querySelector("summary");
+              if (summary) summary.setAttribute("aria-expanded", false);
+              triggerToggle(this);
+            }
+            return result;
+          }
+          return call();
+        }
+      }
+    });
+  }
+  function polyfillToggle() {
+    onTogglingTrigger(function(element) {
+      element.hasAttribute("open") ? element.removeAttribute("open") : element.setAttribute("open", "");
+    });
+  }
+  function polyfillToggleEvent() {
+    if (window.MutationObserver) {
+      new MutationObserver(function(mutations) {
+        forEach.call(mutations, function(mutation) {
+          var target = mutation.target, attributeName = mutation.attributeName;
+          if (target.tagName == "DETAILS" && attributeName == "open") {
+            triggerToggle(target);
+          }
+        });
+      }).observe(document.documentElement, {
+        attributes: true,
+        subtree: true
+      });
+    } else {
+      onTogglingTrigger(function(element) {
+        var wasOpen = element.getAttribute("open");
+        setTimeout(function() {
+          var isOpen = element.getAttribute("open");
+          if (wasOpen != isOpen) {
+            triggerToggle(element);
+          }
+        }, 1);
+      });
+    }
+  }
+  function polyfillAccessibility() {
+    setAccessibilityAttributes(document);
+    if (window.MutationObserver) {
+      new MutationObserver(function(mutations) {
+        forEach.call(mutations, function(mutation) {
+          forEach.call(mutation.addedNodes, setAccessibilityAttributes);
+        });
+      }).observe(document.documentElement, {
+        subtree: true,
+        childList: true
+      });
+    } else {
+      document.addEventListener("DOMNodeInserted", function(event) {
+        setAccessibilityAttributes(event.target);
+      });
+    }
+  }
+  function setAccessibilityAttributes(root) {
+    findElementsWithTagName(root, "SUMMARY").forEach(function(summary) {
+      var details = findClosestElementWithTagName(summary, "DETAILS");
+      summary.setAttribute("aria-expanded", details.hasAttribute("open"));
+      if (!summary.hasAttribute("tabindex")) summary.setAttribute("tabindex", "0");
+      if (!summary.hasAttribute("role")) summary.setAttribute("role", "button");
+    });
+  }
+  function eventIsSignificant(event) {
+    return !(event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.target.isContentEditable);
+  }
+  function onTogglingTrigger(callback) {
+    addEventListener("click", function(event) {
+      if (eventIsSignificant(event)) {
+        if (event.which <= 1) {
+          var element = findClosestElementWithTagName(event.target, "SUMMARY");
+          if (element && element.parentNode && element.parentNode.tagName == "DETAILS") {
+            callback(element.parentNode);
+          }
+        }
+      }
+    }, false);
+    addEventListener("keydown", function(event) {
+      if (eventIsSignificant(event)) {
+        if (event.keyCode == 13 || event.keyCode == 32) {
+          var element = findClosestElementWithTagName(event.target, "SUMMARY");
+          if (element && element.parentNode && element.parentNode.tagName == "DETAILS") {
+            callback(element.parentNode);
+            event.preventDefault();
+          }
+        }
+      }
+    }, false);
+  }
+  function triggerToggle(element) {
+    var event = document.createEvent("Event");
+    event.initEvent("toggle", false, false);
+    element.dispatchEvent(event);
+  }
+  function findElementsWithTagName(root, tagName) {
+    return (root.tagName == tagName ? [ root ] : []).concat(typeof root.getElementsByTagName == "function" ? slice.call(root.getElementsByTagName(tagName)) : []);
+  }
+  function findClosestElementWithTagName(element, tagName) {
+    if (typeof element.closest == "function") {
+      return element.closest(tagName);
+    } else {
+      while (element) {
+        if (element.tagName == tagName) {
+          return element;
+        } else {
+          element = element.parentNode;
+        }
+      }
+    }
+  }
+})();

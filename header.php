@@ -90,22 +90,25 @@
 				</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
+				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php esc_html_e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
 				<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
-					<p id="primary-nav" class="screen-reader-text"><?php _e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
+					<p id="primary-nav" class="screen-reader-text"><?php esc_html_e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
 					<ul id="nav-primary-menu" class="nav--primary">
 						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
 					</ul>
 				</nav>
 			</div>
 		</div>
+		<div class="cta__banner">
+			<p class="cta__banner__text"><?php echo esc_html_e( 'Pressbooks advocates for free and open educational content.', 'pressbooks-book' ) . sprintf( ' <a href="%1$s" target="_blank">%2$s.</a>', esc_url( ' https://pressbooks.com' ), esc_html__( 'Learn more', 'pressbook-book' ) ); ?></p>
+		</div>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav aria-labelledby="book-toc" class="reading-header__inside">
-					<p id="book-toc" class="screen-reader-text"><?php _e( 'Book Contents Navigation', 'pressbooks-book' ); ?></p>
+					<p id="book-toc" class="screen-reader-text"><?php esc_html_e( 'Book Contents Navigation', 'pressbooks-book' ); ?></p>
 					<?php if ( is_single() ) { ?>
 					<div class="reading-header__toc dropdown">
-						<div class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></div>
+						<div class="reading-header__toc__title"><?php esc_html_e( 'Contents', 'pressbooks-book' ); ?></div>
 						<div class="block-reading-toc" hidden>
 							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 						</div>
@@ -118,7 +121,7 @@
 
 					<div class="reading-header__end-container">
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-						<a href="<?php echo home_url( '/buy/' ); ?>"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
+						<a href="<?php echo home_url( '/buy/' ); ?>"><?php esc_html_e( 'Buy', 'pressbooks-book' ); ?></a>
 						<?php endif; ?>
 					</div>
 				</nav>

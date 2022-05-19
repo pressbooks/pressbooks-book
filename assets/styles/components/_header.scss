@@ -1,0 +1,16 @@
+.cta__banner {
+  margin-top: 10px;
+  text-align: right;
+  background-color: var(--primary);
+  padding: 5px 100px 5px;
+  color: white;
+
+  &__text {
+    margin: 0;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
