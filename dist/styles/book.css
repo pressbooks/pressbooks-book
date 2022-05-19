@@ -2215,6 +2215,21 @@ nav {
   text-decoration: underline;
 }
 
+.cta__banner {
+  margin-top: 10px;
+  text-align: right;
+  background-color: var(--primary);
+  padding: 5px 100px 5px;
+  color: white;
+}
+.cta__banner__text {
+  margin: 0;
+}
+.cta__banner__text a {
+  color: white;
+  text-decoration: underline;
+}
+
 .home #content {
   width: 100%;
 }
