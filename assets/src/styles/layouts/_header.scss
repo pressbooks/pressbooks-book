@@ -11,6 +11,22 @@ body:not(.home) {
   }
 }
 
+.cta__banner {
+  text-align: right;
+  background-color: var(--primary);
+  padding: .5rem 1rem;
+  color: var(--primary-fg);
+
+  &__text {
+    margin: 0;
+
+    a {
+      color: var(--primary-fg);
+      text-decoration: underline;
+    }
+  }
+}
+
 .reading-header {
   --header-bg: var(--body-text);
   --header-color: var(--body-bg);
@@ -18,7 +34,6 @@ body:not(.home) {
   color: var(--header-color);
   background-color: var(--header-bg);
   font-family: $font-family-sans-serif;
-  margin-top: 3rem;
 
   //overwrite link colors of potential book theme
   .reading-header__title a,
@@ -141,8 +156,6 @@ body:not(.home) {
 
 .reading-header__title {
   background-color: var(--footer-bg);
-  border-top: solid 2px var(--body-bg);
-  border-bottom: solid 2px var(--body-bg);
   font-size: 1.25rem;
   justify-content: center;
   margin-bottom: 0;

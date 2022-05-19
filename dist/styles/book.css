@@ -1521,12 +1521,6 @@ nav {
 }
 .header {
   font-family: "Karla", sans-serif;
-  padding: 3.5rem 1rem 1.5rem;
-}
-@media screen and (min-width: 60rem) {
-  .header {
-    padding: 3rem 1rem;
-  }
 }
 
 .header__inside {
@@ -1535,6 +1529,12 @@ nav {
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 3.5rem 1rem 1.5rem;
+}
+@media screen and (min-width: 60rem) {
+  .header__inside {
+    padding: 3rem 1rem;
+  }
 }
 
 .header__logo--img,
@@ -2215,21 +2215,6 @@ nav {
   text-decoration: underline;
 }
 
-.cta__banner {
-  margin-top: 10px;
-  text-align: right;
-  background-color: var(--primary);
-  padding: 5px 100px 5px;
-  color: white;
-}
-.cta__banner__text {
-  margin: 0;
-}
-.cta__banner__text a {
-  color: white;
-  text-decoration: underline;
-}
-
 .home #content {
   width: 100%;
 }
@@ -2722,13 +2707,26 @@ body:not(.home) .header__inside {
   padding-right: 1rem;
 }
 
+.cta__banner {
+  text-align: right;
+  background-color: var(--primary);
+  padding: 0.5rem 1rem;
+  color: var(--primary-fg);
+}
+.cta__banner__text {
+  margin: 0;
+}
+.cta__banner__text a {
+  color: var(--primary-fg);
+  text-decoration: underline;
+}
+
 .reading-header {
   --header-bg: var(--body-text);
   --header-color: var(--body-bg);
   color: var(--header-color);
   background-color: var(--header-bg);
   font-family: "Karla", sans-serif;
-  margin-top: 3rem;
 }
 .reading-header .reading-header__title a,
 .reading-header .reading-header__end-container a {
@@ -2841,8 +2839,6 @@ body:not(.has-annotator-pane) .reading-header__end-container {
 
 .reading-header__title {
   background-color: var(--footer-bg);
-  border-top: solid 2px var(--body-bg);
-  border-bottom: solid 2px var(--body-bg);
   font-size: 1.25rem;
   justify-content: center;
   margin-bottom: 0;
