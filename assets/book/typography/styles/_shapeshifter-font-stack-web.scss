@@ -21,7 +21,7 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'Spectral' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'https://fonts.googleapis.com/css?family=Spectral|Spectral+SC&display=swap';
-  } @else if unquote($font) == 'Alegreya' {
+  } @else if unquote($font) == 'Alegreya Sans' {
     // noinspection CssInvalidAtRule
     @scssphp-import-once 'https://fonts.googleapis.com/css?family=Alegreya|Alegreya+SC|Alegreya+Sans|Alegreya+Sans+SC&display=swap';
   } @else if unquote($font) == 'Crimson Text' {
