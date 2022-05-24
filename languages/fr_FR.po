@@ -3,26 +3,26 @@
 # Translators:
 # Antonio D., 2017
 # Hugh McGuire <hugh@pressbooks.com>, 2018
-# Eric Lord <elord@tciinc.ca>, 2019
 # Hubert GB <hgblouin@tciinc.ca>, 2019
-# Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
 # Steel Wagstaff <steel@pressbooks.com>, 2019
 # Thomas Weideman, 2021
+# Eric Lord <elord@tciinc.ca>, 2022
+# Amelie Roberge <aroberge@tciinc.ca>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.18.1\n"
+"Project-Id-Version: McLuhan 2.19.0-dev\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2022-05-03T21:03:00+00:00\n"
+"POT-Creation-Date: 2022-05-24T20:23:39+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Thomas Weideman, 2021\n"
+"Last-Translator: Amelie Roberge <aroberge@tciinc.ca>, 2022\n"
 "Language-Team: French (https://www.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
 "X-Generator: WP-CLI 2.5.0\n"
 
@@ -255,36 +255,42 @@ msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Auteur"
 msgstr[1] "Auteurs"
+msgstr[2] "Auteurs"
 
 #: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Éditeur"
 msgstr[1] "Directeurs de rédaction"
+msgstr[2] "Directeurs de rédaction"
 
 #: inc/helpers/namespace.php:438
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Traducteur"
 msgstr[1] "Traducteurs"
+msgstr[2] "Traducteurs"
 
 #: inc/helpers/namespace.php:439
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Réviseur"
 msgstr[1] "Réviseurs"
+msgstr[2] "Réviseurs"
 
 #: inc/helpers/namespace.php:440
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Illustrateur"
 msgstr[1] "Illustrateurs"
+msgstr[2] "Illustrateurs"
 
 #: inc/helpers/namespace.php:441
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Contributeur"
 msgstr[1] "Collaborateurs"
+msgstr[2] "Collaborateurs"
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:35
@@ -304,6 +310,7 @@ msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
