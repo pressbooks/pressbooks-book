@@ -3,7 +3,7 @@
 <div class="section-comments__inner">
 
 <?php if ( post_password_required() ) : ?>
-				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'pressbooks-book' ); ?></p>
+				<p class="no-password"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'pressbooks-book' ); ?></p>
 			<div><!-- #comments -->
 		</section>
 	<?php
