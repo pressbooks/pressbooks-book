@@ -100,7 +100,7 @@
 			</div>
 		</div>
 		<div class="cta__banner">
-			<p class="cta__banner__text"><?php echo esc_html_e( 'Pressbooks advocates for free and open educational content.', 'pressbooks-book' ) . sprintf( ' <a href="%1$s" target="_blank">%2$s.</a>', esc_url( ' https://pressbooks.com' ), esc_html__( 'Learn more', 'pressbook-book' ) ); ?></p>
+			<p class="cta__banner__text"><?php echo sprintf( esc_html__( 'Want to adapt books like this? %s about how Pressbooks supports open practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( ' https://pressbooks.com' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?></p>
 		</div>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
