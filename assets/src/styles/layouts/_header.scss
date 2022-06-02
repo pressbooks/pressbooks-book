@@ -11,13 +11,13 @@ body:not(.home) {
   }
 }
 
-.cta__banner {
+.cta {
   text-align: right;
   background-color: var(--primary);
   padding: .5rem 2rem;
   color: var(--primary-fg);
 
-  &__text {
+  p {
     margin: 0;
 
     a {
