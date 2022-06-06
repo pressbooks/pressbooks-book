@@ -16,7 +16,7 @@ jobs:
     - name: Setup PHP with tools
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.3'
+        php-version: '7.4'
         tools: composer, wp-cli/wp-cli-bundle
     - name: Update POT file
       run: wp i18n make-pot . languages/pressbooks-book.pot --domain=pressbooks-book --slug=pressbooks-book --package-name="McLuhan" --headers="{\"Report-Msgid-Bugs-To\":\"https://github.com/pressbooks/pressbooks-book/issues\"}"
