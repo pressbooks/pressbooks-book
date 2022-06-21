@@ -99,6 +99,7 @@
 				</nav>
 			</div>
 		</div>
+		<!-- TODO: add conditional to only display CTA on public books -->
 		<div class="cta hidden">
 			<p><?php echo sprintf( esc_html__( 'Want to adapt books like this? %s about how Pressbooks supports open practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks/' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
 				<a id="close-cta" href="javascript:void()" title="Close banner">
