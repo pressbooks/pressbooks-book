@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-16T19:03:40+00:00\n"
+"POT-Creation-Date: 2022-06-22T19:31:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: pressbooks-book\n"
@@ -120,27 +120,27 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:103
+#: header.php:104
 msgid "Want to adapt books like this? %s about how Pressbooks supports open practices."
 msgstr ""
 
-#: header.php:108
+#: header.php:116
 #: partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:111
+#: header.php:119
 #: index.php:14
 #: partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr ""
 
 #. translators: %s: the title of the book
-#: header.php:120
+#: header.php:128
 msgid "Go to the cover page of %s"
 msgstr ""
 
-#: header.php:124
+#: header.php:132
 #: inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr ""
@@ -608,7 +608,7 @@ msgstr ""
 msgid "sign in here"
 msgstr ""
 
-#. translators: link to Pressbooks.com
+#. translators: link to Pressbooks.pub
 #: private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr ""
