@@ -25,6 +25,21 @@ body:not(.home) {
       text-decoration: underline;
     }
   }
+
+  &.hidden {
+    display: none;
+  }
+
+  #close-cta {
+    position: relative;
+    margin-left: .75rem;
+  }
+
+  .close-cta__icon {
+    position: absolute;
+    top: 2px;
+    width: 1.2rem;
+  }
 }
 
 .reading-header {
