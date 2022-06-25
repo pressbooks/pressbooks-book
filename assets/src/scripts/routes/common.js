@@ -246,7 +246,7 @@ export default {
 
 		ctaCloseButton.addEventListener( 'click', function ( event ) {
 			event.preventDefault();
-			const bookPath = window.location.pathname.split('/')[1];
+			const bookPath = window.location.pathname.split( '/' )[1];
 			document.cookie = 'display_cta=1; path=/'+bookPath;
 			toggleHide( ctaSelector );
 		} );
