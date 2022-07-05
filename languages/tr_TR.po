@@ -3,6 +3,7 @@
 # Translators:
 # Antonio D., 2017
 # Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020
+# Ali Fuat Demir <afuatdemir@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -10,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
 "POT-Creation-Date: 2022-05-24T20:29:34+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Mustafa Bulun <mustafa.bulun@bizimajans.com>, 2020\n"
+"Last-Translator: Ali Fuat Demir <afuatdemir@gmail.com>, 2022\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +96,7 @@ msgstr "Kılavuzlar ve Öğreticiler"
 
 #: footer.php:67
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Pressbooks Dizini"
 
 #: footer.php:74 footer.php:76
 msgid "Pressbooks on YouTube"
@@ -132,11 +133,11 @@ msgstr "Toggle Menü"
 
 #: header.php:95
 msgid "Primary Navigation"
-msgstr ""
+msgstr "Birincil Gezinme"
 
 #: header.php:105 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
-msgstr ""
+msgstr "Kitap İçindekiler Gezinme"
 
 #: header.php:108 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
@@ -288,8 +289,8 @@ msgstr "Ek Konu (lar)"
 #: inc/helpers/namespace.php:445
 msgid "Institution"
 msgid_plural "Institutions"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kuruluş"
+msgstr[1] "Kuruluş"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
@@ -412,7 +413,7 @@ msgstr "Buradan satın al:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "Geçersiz H5P Etkinliği"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
@@ -420,17 +421,19 @@ msgstr "H5P aktiviteleri listesi"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
-msgstr ""
+msgstr "Bu kitap şunları içermektedir"
 
 #: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
 msgstr ""
+"H5P etkinlikleri. Kitap klonlanırsa, yalnızca kitap içeriğine eklenenler "
+"dahil edilecektir."
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "Tümünü genişlet"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
@@ -438,11 +441,11 @@ msgstr "Hepsini gizle"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "Tüm etkinlikleri genişlet"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "İstenen H5P etkinliği bu kitapta yok."
 
 #: page-h5p-listing.php:38
 msgid "ID"
@@ -458,11 +461,11 @@ msgstr "Aktivite tipi"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr ""
+msgstr "Göster/Gizle"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
-msgstr ""
+msgstr "Etkinliği Göster"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
@@ -470,7 +473,7 @@ msgstr "Aktiviteyi gizle"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "H5P Etkinliğini görüntüle"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:90
