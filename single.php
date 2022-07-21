@@ -11,7 +11,7 @@
 			$authors      = $contributors->get( $post->ID, 'authors' );
 			$chapter_contributors  = $contributors->getContributorsWithMeta( $post->ID, 'authors' );
 			$datatype     = ( in_array( $post->post_type, [ 'front-matter', 'back-matter' ], true ) ) ? pb_get_section_type( $post ) : $post->post_type;
-			$blade_engine = \Pressbooks\Container::get( 'Blade' );
+			$blade_engine = \Pressbooks\Container::getInstance()->get( 'Blade' );
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
 				if ( $post->post_type === 'chapter' ) {
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';

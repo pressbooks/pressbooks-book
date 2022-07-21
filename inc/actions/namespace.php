@@ -71,21 +71,21 @@ function enqueue_assets() {
 	);
 
 	if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
-		$styles   = Container::get( 'Styles' );
-		$sass     = Container::get( 'Sass' );
+		$styles   = Container::getInstance()->get( 'Styles' );
+		$sass     = Container::getInstance()->get( 'Sass' );
 		$fullpath = $sass->pathToUserGeneratedCss() . '/style.css';
 		if ( ! @is_file( $fullpath ) ) { // @codingStandardsIgnoreLine
 			$styles->updateWebBookStyleSheet( 'pressbooks-book' );
 		}
 		wp_enqueue_style( 'pressbooks/theme', $sass->urlToUserGeneratedCss() . '/style.css', false, @filemtime( $fullpath ), 'screen, print' ); // @codingStandardsIgnoreLine
 	} else {
-		$styles = Container::get( 'Styles' );
+		$styles = Container::getInstance()->get( 'Styles' );
 		if ( $styles->isCurrentThemeCompatible( 1 ) ) {
 			// Supplementary webbook styles for older themes.
 			wp_enqueue_style( 'pressbooks/web-house-style', $assets->getPath( 'styles/web-house-style.css' ), false, null );
 		}
 		if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
-			$sass = Container::get( 'Sass' );
+			$sass = Container::getInstance()->get( 'Sass' );
 			// Custom Styles
 			if ( get_stylesheet() === 'pressbooks-book' && ! get_option( 'pressbooks_webbook_structure_version' ) ) {
 				$styles->updateWebBookStyleSheet();
@@ -121,17 +121,17 @@ function enqueue_assets() {
  * Update web book stylesheet.
  */
 function update_webbook_stylesheet() {
-	if ( false === Container::get( 'Styles' )->isCurrentThemeCompatible( 1 ) && false === Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) ) {
+	if ( false === Container::getInstance()->get( 'Styles' )->isCurrentThemeCompatible( 1 ) && false === Container::getInstance()->get( 'Styles' )->isCurrentThemeCompatible( 2 ) ) {
 		return;
 	}
 
-	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 1 ) ) {
+	if ( Container::getInstance()->get( 'Styles' )->isCurrentThemeCompatible( 1 ) ) {
 		$inputs = [
 			get_stylesheet_directory() . '/_fonts-web.scss',
 			get_stylesheet_directory() . '/_mixins.scss',
 			get_stylesheet_directory() . '/style.scss',
 		];
-	} elseif ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) ) {
+	} elseif ( Container::getInstance()->get( 'Styles' )->isCurrentThemeCompatible( 2 ) ) {
 		$inputs = [
 			get_stylesheet_directory() . '/assets/styles/web/_fonts.scss',
 			get_stylesheet_directory() . '/assets/styles/web/style.scss',
@@ -143,7 +143,7 @@ function update_webbook_stylesheet() {
 		$inputs = [];
 	}
 
-	$output = Container::get( 'Sass' )->pathToUserGeneratedCss() . '/style.css';
+	$output = Container::getInstance()->get( 'Sass' )->pathToUserGeneratedCss() . '/style.css';
 
 	$recompile = false;
 
@@ -155,7 +155,7 @@ function update_webbook_stylesheet() {
 	}
 
 	if ( true === $recompile ) {
-		Container::get( 'Styles' )->updateWebBookStyleSheet();
+		Container::getInstance()->get( 'Styles' )->updateWebBookStyleSheet();
 	}
 }
 

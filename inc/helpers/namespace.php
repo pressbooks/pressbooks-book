@@ -682,7 +682,7 @@ function do_license( $metadata ) {
  * @return bool
  */
 function is_buckram() {
-	if ( Container::get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {
+	if ( Container::getInstance()->get( 'Styles' )->isCurrentThemeCompatible( 2 ) && version_compare( Container::getInstance()->get( 'Styles' )->getBuckramVersion(), '0.3.0' ) >= 0 ) {
 		return true;
 	}
 	return false;
