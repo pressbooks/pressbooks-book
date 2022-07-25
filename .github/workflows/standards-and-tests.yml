@@ -1,4 +1,5 @@
-name: CI workflow
+name: Run Standards & Tests
+
 on:
   push:
     branches: [ dev, main ]
@@ -6,22 +7,24 @@ on:
       - '*.*.*'
   pull_request:
     branches: [ dev ]
+
 jobs:
-  tests:
+  standards-and-tests:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
-        php: [ 7.4 ]
-        os: [ ubuntu-20.04 ]
-        wordpress: [ '6.0', latest ]
+        php: [8.0]
+        os: [ubuntu-20.04]
+        wordpress: ['6.0', latest]
         experimental: [false]
         include:
-          - php: 8.0
+          - php: 8.1
             os: ubuntu-20.04
             wordpress: latest
             experimental: true
+
     name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
     env:
@@ -30,31 +33,21 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+        uses: actions/checkout@v3
 
       - name: Install OS dependencies
         run: |
           sudo apt update
-          sudo apt-get install libxml2-utils ghostscript poppler-utils
+          sudo apt-get install libxml2-utils ghostscript poppler-utils imagemagick
+
       - name: Start required services
         run: sudo systemctl start mysql.service
 
-      - name: Cache PHP dependencies
-        uses: actions/cache@v2
+      - name: Cache Composer packages
+        uses: actions/cache@v3
         with:
           path: vendor
-          key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ matrix.php }}-php-${{ hashFiles('**/composer.lock') }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -62,28 +55,12 @@ jobs:
           php-version: ${{ matrix.php }}
           tools: phpcs, composer
           coverage: pcov
-
-      - name: Install Node dependencies
-        run: |
-          node -v
-          npm install -g lerna
-          npm install
-          npm run bootstrap
-        if: matrix.experimental == false
+          extensions: imagick
 
       - name: Install PHP dependencies
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
-      - name: Run Lint
-        run: npm run lint
-        if: matrix.experimental == false
-
-      - name: Run Frontend Tests
-        run: |
-          npm run test
-          lerna run test
-        if: matrix.experimental == false
 
       - name: Run PHP CodeSniffer
         run: composer standards
@@ -120,6 +97,7 @@ jobs:
           wp dist-archive $GITHUB_REPO_SLUG $GITHUB_BUILD_PATH/$GITHUB_REPO_SLUG-$GITHUB_TAG.zip
           cd $GITHUB_BUILD_PATH
           ls $GITHUB_BUILD_PATH
+
       - name: Deploy
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
