@@ -254,8 +254,8 @@ function render_lightbox_setting_field( $args ) {
 function text_diff() {
 	if ( check_ajax_referer( 'text_diff_nonce', 'security' && ! empty( $_POST['left'] ) && ! empty( $_POST['right'] ) ) ) {
 		$diff = wp_text_diff(
-			wp_unslash( $_POST['left'] ),
-			wp_unslash( $_POST['right'] )
+			sanitize_text_field( wp_unslash( $_POST['left'] ) ),
+			sanitize_text_field( wp_unslash( $_POST['right'] ) )
 		);
 		wp_send_json_success( wp_json_encode( $diff ) );
 	}
