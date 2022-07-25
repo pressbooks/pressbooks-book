@@ -69,7 +69,7 @@
 		<hr class="before-contributors clear">
 		<section class="contributors chapter-authors">
 			<?php /* translators: This display About the Author or Authors ir there are more than one */ ?>
-			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h2>
+			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', is_countable( $chapter_contributors ) ? count( $chapter_contributors ) : 0, 'pressbooks' ), 'About the' ) ?></h2>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
 				echo $blade_engine->render(

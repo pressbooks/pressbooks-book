@@ -238,7 +238,7 @@ function render_lightbox_setting_field( $args ) {
 			'id' => 'enable_lightbox',
 			'name' => 'pressbooks_theme_options_web',
 			'option' => 'enable_lightbox',
-			'value' => ( isset( $options['enable_lightbox'] ) ) ? $options['enable_lightbox'] : '',
+			'value' => $options['enable_lightbox'] ?? '',
 			'label' => $args[0],
 		]
 	);

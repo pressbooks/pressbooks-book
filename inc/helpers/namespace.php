@@ -111,7 +111,7 @@ function license_to_icons( $license ) {
 		return '';
 	}
 	$output = '';
-	if ( strpos( $license, 'cc' ) !== false && $license !== 'cc-zero' ) {
+	if ( str_contains( $license, 'cc' ) && $license !== 'cc-zero' ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
 			if ( $part !== 'cc' ) {
@@ -139,33 +139,16 @@ function license_to_icons( $license ) {
  * @return string A human-readable license name.
  */
 function license_to_text( $license ) {
-	switch ( $license ) {
-		case 'cc-zero':
-		case 'public-domain':
-			return __( 'Public Domain', 'pressbooks-book' );
-			break;
-		case 'cc-by':
-			return __( 'Creative Commons Attribution', 'pressbooks-book' );
-			break;
-		case 'cc-by-sa':
-			return __( 'Creative Commons Attribution ShareAlike', 'pressbooks-book' );
-			break;
-		case 'cc-by-nd':
-			return __( 'Creative Commons Attribution NoDerivatives', 'pressbooks-book' );
-			break;
-		case 'cc-by-nc':
-			return __( 'Creative Commons Attribution NonCommercial', 'pressbooks-book' );
-			break;
-		case 'cc-by-nc-sa':
-			return __( 'Creative Commons Attribution NonCommercial ShareAlike', 'pressbooks-book' );
-			break;
-		case 'cc-by-nc-nd':
-			return __( 'Creative Commons Attribution NonCommercial NoDerivatives', 'pressbooks-book' );
-			break;
-		case 'all-rights-reserved':
-		default:
-			return apply_filters( 'custom_license_to_text', __( 'All Rights Reserved', 'pressbooks-book' ), $license );
-	}
+	return match ( $license ) {
+		'cc-zero', 'public-domain' => __( 'Public Domain', 'pressbooks-book' ),
+		'cc-by' => __( 'Creative Commons Attribution', 'pressbooks-book' ),
+		'cc-by-sa' => __( 'Creative Commons Attribution ShareAlike', 'pressbooks-book' ),
+		'cc-by-nd' => __( 'Creative Commons Attribution NoDerivatives', 'pressbooks-book' ),
+		'cc-by-nc' => __( 'Creative Commons Attribution NonCommercial', 'pressbooks-book' ),
+		'cc-by-nc-sa' => __( 'Creative Commons Attribution NonCommercial ShareAlike', 'pressbooks-book' ),
+		'cc-by-nc-nd' => __( 'Creative Commons Attribution NonCommercial NoDerivatives', 'pressbooks-book' ),
+	default => apply_filters( 'custom_license_to_text', __( 'All Rights Reserved', 'pressbooks-book' ), $license ),
+	};
 }
 
 /**
@@ -282,7 +265,7 @@ function get_source_book( $book_url, $checked = [] ) {
 	}
 	$response = wp_remote_get( untrailingslashit( $book_url ) . '/wp-json/pressbooks/v2/metadata/', $args );
 	if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
-		$result = json_decode( $response['body'], true );
+		$result = json_decode( $response['body'], true, 512, JSON_THROW_ON_ERROR );
 		if ( isset( $result['isBasedOn'] ) && ! in_array( $result['isBasedOn'], $checked, true ) ) {
 			$checked[] = $result['isBasedOn'];
 			$output    = get_source_book( $result['isBasedOn'], $checked );
@@ -318,12 +301,12 @@ function get_source_book_url( $book_url ) {
  *
  * @return array|false The metadata array, or false if no metadata was found.
  */
-function get_source_book_meta( $source_url ) {
+function get_source_book_meta( $source_url ): array | false {
 	$source_meta = get_transient( 'pb_book_source_metadata' );
 	if ( $source_meta === false ) {
 		$response = wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/metadata/' );
 		if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
-			$source_meta = json_decode( $response['body'], true );
+			$source_meta = json_decode( $response['body'], true, 512, JSON_THROW_ON_ERROR );
 		} else {
 			$source_meta = false;
 		}
@@ -341,12 +324,12 @@ function get_source_book_meta( $source_url ) {
  *
  * @return array|false The metadata array, or false if no metadata was found.
  */
-function get_source_book_toc( $source_url ) {
+function get_source_book_toc( $source_url ): array | false {
 	$source_toc = get_transient( 'pb_book_source_toc' );
 	if ( $source_toc === false ) {
 		$response = wp_remote_get( untrailingslashit( $source_url ) . '/wp-json/pressbooks/v2/toc/' );
 		if ( ! is_wp_error( $response ) && $response['response']['code'] === 200 ) {
-			$source_toc = json_decode( $response['body'], true );
+			$source_toc = json_decode( $response['body'], true, 512, JSON_THROW_ON_ERROR );
 		} else {
 			$source_toc = false;
 		}
@@ -390,7 +373,7 @@ function get_book_authors( $metadata ) {
  * @return array|false  The section array from the source book TOC, or false if none was found.
  */
 
-function get_original_section( $needle, $haystack ) {
+function get_original_section( $needle, $haystack ): array | false {
 	$parts     = explode( '/', untrailingslashit( $needle ) );
 	$post_type = $parts[ count( $parts ) - 2 ];
 	$slug      = $parts[ count( $parts ) - 1 ];
@@ -428,8 +411,6 @@ function get_original_section( $needle, $haystack ) {
  * Get an array of metadata keys for display in the metadata block.
  *
  * @since 2.3.0
- *
- * @return array
  */
 function get_metakeys(): array {
 	return [
@@ -468,13 +449,13 @@ function get_links( $echo = true ) {
 	$prev_chapter_id = pb_get_prev_post_id();
 	$prev_title = wp_strip_all_tags( html_entity_decode( get_the_title( $prev_chapter_id ) ) );
 	$prev_short_title = get_post_meta( $prev_chapter_id, 'pb_short_title', true );
-	$prev_label = ( $prev_short_title ) ? $prev_short_title : $prev_title;
+	$prev_label = $prev_short_title ?: $prev_title;
 
 	$next_chapter = pb_get_next();
 	$next_chapter_id = pb_get_next_post_id();
 	$next_title = wp_strip_all_tags( html_entity_decode( get_the_title( $next_chapter_id ) ) );
 	$next_short_title = get_post_meta( $next_chapter_id, 'pb_short_title', true );
-	$next_label = ( $next_short_title ) ? $next_short_title : $next_title;
+	$next_label = $next_short_title ?: $next_title;
 
 	if ( $echo ) :
 		?>
@@ -488,7 +469,7 @@ function get_links( $echo = true ) {
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
-			<?php } ?>
+<?php } ?>
 		</div>
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
@@ -498,7 +479,7 @@ function get_links( $echo = true ) {
 					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
 					<svg class="icon--svg"><use href="#arrow-right" /></svg>
 				</a>
-			<?php endif; ?>
+<?php endif; ?>
 		</div>
 		<button class="nav-reading__up" >
 			<svg class="icon--svg"><use href="#arrow-up" /></svg>
@@ -606,14 +587,12 @@ function comments_template( $comment, $args, $depth ) {
  *
  * @since 2.3.0
  *
- * @param string|array $value
  *
- * @return int
  */
-function count_items( $value ): int {
+function count_items( string | array $value ): int {
 	$countable = is_countable( $value ) ? $value : \Pressbooks\Utility\oxford_comma_explode( $value );
 
-	return count( $countable );
+	return is_countable( $countable ) ? count( $countable ) : 0;
 }
 
 /**
@@ -760,12 +739,8 @@ function get_h5p_activities( $per_page = 20 ) {
 /**
  * Return a comma separated string of all institutions.
  *
- * @param array $institutions
  *
- * @return string
  */
 function institutions_to_string( array $institutions ): string {
-	return implode( ', ', array_map( static function( $code ) {
-		return \Pressbooks\Metadata\get_institution_name( $code );
-	}, $institutions ) );
+	return implode( ', ', array_map( static fn( $code) => \Pressbooks\Metadata\get_institution_name( $code ), $institutions ) );
 }

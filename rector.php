@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\LevelSetList;
 
-return static function (RectorConfig $config): void {
+return static function ( RectorConfig $config ): void {
 	$config->paths([
 		__DIR__ . '/bin',
 		__DIR__ . '/inc',

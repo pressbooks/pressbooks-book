@@ -19,7 +19,7 @@ $part_numbers = $options['chapter_numbers'] ?? false; ?>
 	<?php echo \PressbooksBook\Helpers\toc_sections( $book_structure['front-matter'], 'front-matter', $can_read, $can_read_private, $permissive_private_content, $book_subsections ); ?>
 	<?php
 	$n = 0;
-	$multiple_parts = count( $book_structure['part'] ) > 1;
+	$multiple_parts = ( is_countable( $book_structure['part'] ) ? count( $book_structure['part'] ) : 0 ) > 1;
 	foreach ( $book_structure['part'] as $key => $part ) {
 		$part_has_chapters = false;
 		if ( ! empty( $part['chapters'] ) ) {
