@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-07-11T17:11:51+00:00\n"
+"POT-Creation-Date: 2022-07-27T19:12:10+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: pressbooks-book\n"
@@ -121,7 +121,7 @@ msgid "Primary Navigation"
 msgstr ""
 
 #: header.php:104
-msgid "Want to adapt books like this? %s about how Pressbooks supports open practices."
+msgid "Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices."
 msgstr ""
 
 #: header.php:116
