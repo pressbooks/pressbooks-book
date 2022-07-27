@@ -101,7 +101,7 @@
 		</div>
 		<?php if ( \PressbooksBook\Helpers\is_book_public() ) : ?>
 		<div class="cta hidden">
-			<p><?php echo sprintf( esc_html__( 'Want to adapt books like this? %s about how Pressbooks supports open practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
+			<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
 				<a id="close-cta" href="javascript:void()" title="Close banner">
 					<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
