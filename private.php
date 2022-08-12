@@ -19,12 +19,12 @@
 			<p>
 			<?php
 			printf(
-				/* translators: link to Pressbooks.com */
+				/* translators: link to Pressbooks.pub */
 				__( 'You can also set up your own Pressbooks book at %s.', 'pressbooks-book' ),
 				sprintf(
 					'<a href="%1$s">%2$s</a>',
-					apply_filters( 'pb_signup_url', 'https://pressbooks.com' ),
-					apply_filters( 'pb_signup_title', 'Pressbooks.com' )
+					apply_filters( 'pb_signup_url', 'https://pressbooks.pub/auth' ),
+					apply_filters( 'pb_signup_title', 'Pressbooks.pub' )
 				)
 			);
 			?>

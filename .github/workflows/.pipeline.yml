@@ -15,7 +15,7 @@ jobs:
       matrix:
         php: [ 7.4 ]
         os: [ ubuntu-20.04 ]
-        wordpress: [ 5.9.3, latest ]
+        wordpress: [ '6.0', latest ]
         experimental: [false]
         include:
           - php: 8.0

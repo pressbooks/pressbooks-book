@@ -8,6 +8,17 @@ export default {
 		document.body.classList.remove( 'no-js' );
 		document.body.classList.add( 'js' );
 
+		/**
+		 * getCookie Value
+		 *
+		 * @param name
+		 */
+		function getCookie( name ) {
+			let value = `; ${document.cookie}`;
+			let parts = value.split( `; ${name}=` );
+			if ( parts.length === 2 ) return parts.pop().split( ';' ).shift();
+		}
+
 		( function () {
 			// document.addEventListener( 'DOMContentLoaded', function () {
 			// Sets a -1 tabindex to ALL sections for .focus()-ing
@@ -213,6 +224,31 @@ export default {
 				}
 			} );
 
+		} );
+
+		const ctaSelector = document.getElementsByClassName( 'cta' );
+
+		/**
+		 * toggleHide
+		 *
+		 * @param selector
+		 */
+		const toggleHide = selector => {
+			const cta = selector[0];
+			cta.classList.toggle( 'hidden' );
+		};
+
+		if ( ! getCookie( 'display_cta' ) && ctaSelector.length > 0 ) {
+			toggleHide( ctaSelector );
+		}
+
+		const ctaCloseButton = document.getElementById( 'close-cta' );
+
+		ctaCloseButton.addEventListener( 'click', function ( event ) {
+			event.preventDefault();
+			const bookPath = window.location.pathname.split( '/' )[1];
+			document.cookie = 'display_cta=1; path=/'+bookPath;
+			toggleHide( ctaSelector );
 		} );
 
 	},
