@@ -26,7 +26,7 @@
 		"watch": "mix watch",
 		"build": "npm run production",
 		"production": "mix --production",
-		"bootstrap": "lerna bootstrap",
+		"bootstrap": "lerna bootstrap --ignore buckram",
 		"rmdist": "rimraf dist",
 		"test": "npm run -s lint",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
