@@ -90,22 +90,33 @@
 				</a>
 			</div>
 			<div class="header__nav">
-				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php _e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
+				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php esc_html_e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
 				<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
-					<p id="primary-nav" class="screen-reader-text"><?php _e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
+					<p id="primary-nav" class="screen-reader-text"><?php esc_html_e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
 					<ul id="nav-primary-menu" class="nav--primary">
 						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
 					</ul>
 				</nav>
 			</div>
 		</div>
+		<?php if ( \PressbooksBook\Helpers\is_book_public() ) : ?>
+		<div class="cta hidden">
+			<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
+				<a id="close-cta" href="javascript:void()" title="Close banner">
+					<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+					</svg>
+				</a>
+			</p>
+		</div>
+		<?php endif; ?>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav aria-labelledby="book-toc" class="reading-header__inside">
-					<p id="book-toc" class="screen-reader-text"><?php _e( 'Book Contents Navigation', 'pressbooks-book' ); ?></p>
+					<p id="book-toc" class="screen-reader-text"><?php esc_html_e( 'Book Contents Navigation', 'pressbooks-book' ); ?></p>
 					<?php if ( is_single() ) { ?>
 					<div class="reading-header__toc dropdown">
-						<div class="reading-header__toc__title"><?php _e( 'Contents', 'pressbooks-book' ); ?></div>
+						<div class="reading-header__toc__title"><?php esc_html_e( 'Contents', 'pressbooks-book' ); ?></div>
 						<div class="block-reading-toc" hidden>
 							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
 						</div>
@@ -118,7 +129,7 @@
 
 					<div class="reading-header__end-container">
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-						<a href="<?php echo home_url( '/buy/' ); ?>"><?php _e( 'Buy', 'pressbooks-book' ); ?></a>
+						<a href="<?php echo home_url( '/buy/' ); ?>"><?php esc_html_e( 'Buy', 'pressbooks-book' ); ?></a>
 						<?php endif; ?>
 					</div>
 				</nav>
