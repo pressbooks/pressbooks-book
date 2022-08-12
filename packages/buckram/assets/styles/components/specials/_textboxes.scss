@@ -180,20 +180,32 @@
   }
 }
 
+%learning-objectives {
+  @include educational-textbox($learning-objectives-header-color, $learning-objectives-header-background, $learning-objectives-color, $learning-objectives-background);
+}
+
+%key-takeaways {
+  @include educational-textbox($key-takeaways-header-color, $key-takeaways-header-background, $key-takeaways-color, $key-takeaways-background);
+}
+
+%exercises {
+  @include educational-textbox($exercises-header-color, $exercises-header-background, $exercises-color, $exercises-background);
+}
+
 .bcc-box {
   @extend .textbox;
 }
 
 .bcc-highlight {
-  @extend .textbox.learning-objectives;
+  @extend %learning-objectives;
 }
 
 .bcc-success {
-  @extend .textbox.key-takeaways;
+  @extend %key-takeaways;
 }
 
 .bcc-info {
-  @extend .textbox.exercises;
+  @extend %exercises;
 }
 
 .textbox--sidebar {
