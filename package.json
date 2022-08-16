@@ -18,7 +18,7 @@
 		"spinkit": "^2.0.1"
 	},
 	"devDependencies": {
-		"lerna": "^4.0.0",
+		"lerna": "^5.4.3",
 		"pressbooks-build-tools": "^3.0.1",
 		"recursive-copy-cli": "^1.0.20"
 	},
