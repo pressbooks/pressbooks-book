@@ -82,7 +82,7 @@ jobs:
       - name: Run Frontend Tests
         run: |
           npm run test
-          lerna run test
+          lerna run test --ignore buckram
         if: matrix.experimental == false
 
       - name: Run PHP CodeSniffer
