@@ -11,6 +11,7 @@
 		"url": "git+https://github.com/pressbooks/pressbooks-book.git"
 	},
 	"dependencies": {
+		"buckram": "^1.7.2",
 		"details-element-polyfill": "^2.4.0",
 		"lity": "^2.4.0",
 		"sharer.js": "^0.5.1",
@@ -18,18 +19,20 @@
 	},
 	"devDependencies": {
 		"lerna": "^4.0.0",
-		"pressbooks-build-tools": "^3.0.1"
+		"pressbooks-build-tools": "^3.0.1",
+		"recursive-copy-cli": "^1.0.20"
 	},
 	"scripts": {
 		"watch": "mix watch",
 		"build": "npm run production",
 		"production": "mix --production",
-		"bootstrap": "lerna bootstrap",
+		"bootstrap": "lerna bootstrap --ignore buckram",
 		"rmdist": "rimraf dist",
 		"test": "npm run -s lint",
 		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
 		"lint:scripts": "cross-env node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
-		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss"
+		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
+    "postinstall": "npx recursive-copy-cli node_modules/buckram packages/buckram -w"
 	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
