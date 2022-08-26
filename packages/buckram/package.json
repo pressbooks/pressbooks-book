@@ -28,7 +28,7 @@
     "mocha": "^10.0.0",
     "pixelmatch": "^5.2.1",
     "polyserve": "^0.27.15",
-    "pressbooks-build-tools": "^3.0.1",
+    "pressbooks-build-tools": "^4.0.0",
     "puppeteer": "^16.1.0",
     "sassdoc": "^2.7.1",
     "type-detect": "^4.0.8"

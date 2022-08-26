@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"lerna": "^4.0.0",
-		"pressbooks-build-tools": "^3.0.1",
+		"pressbooks-build-tools": "^4.0.0",
 		"recursive-copy-cli": "^1.0.20"
 	},
 	"scripts": {
