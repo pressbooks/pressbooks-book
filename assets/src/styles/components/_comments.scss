@@ -15,7 +15,7 @@
     padding: 4.5rem 1rem 2.5rem;
   }
 
-  //overwrite link colors of potential book theme
+  // overwrite link colors of potential book theme
   a {
     color: var(--footer-color);
     text-decoration: underline;
@@ -52,7 +52,7 @@
   }
 }
 
-//TODO refactor classnames and comment_form( $comment_args )
+// TODO refactor classnames and comment_form( $comment_args )
 .comment-reply-title {
   display: none;
 }

@@ -2,7 +2,7 @@
   padding-left: 0;
 
   h2 {
-    &:before {
+    &::before {
       display: none;
     }
   }

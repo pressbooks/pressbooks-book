@@ -27,13 +27,11 @@ $image-alignnone-wrapper-width: (epub: auto, prince: 100%, web: auto) !default;
 $image-aligncenter-caption-text-align: $image-caption-text-align !default;
 $image-alignleft-caption-text-align: $image-caption-text-align !default;
 $image-alignright-caption-text-align: $image-caption-text-align !default;
-
 $_image-caption-text-align: (
   center: $image-aligncenter-caption-text-align,
   left: $image-alignleft-caption-text-align,
   right: $image-alignright-caption-text-align
 );
-
 $interactive-icon-display: block !default;
 $interactive-icon-float: left !default;
 $interactive-icon-width: 3em !default;

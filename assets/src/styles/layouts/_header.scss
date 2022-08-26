@@ -50,7 +50,7 @@ body:not(.home) {
   background-color: var(--header-bg);
   font-family: $font-family-sans-serif;
 
-  //overwrite link colors of potential book theme
+  // overwrite link colors of potential book theme
   .reading-header__title a,
   .reading-header__end-container a {
     color: var(--header-color);

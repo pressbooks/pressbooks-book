@@ -13,9 +13,9 @@ window.hypothesisConfig = () => {
 			if ( layoutParams.expanded === true ) {
 				document.body.classList.add( 'has-annotator-pane' );
 				if ( ( document.body.clientWidth - layoutParams.width ) > 400 ) {
-					document.body.style.marginRight = `${layoutParams.width - 32}px`;
+					document.body.style.marginRight = `${ layoutParams.width - 32 }px`;
 					if ( navReading ) {
-						navReading.style.width = `${document.body.clientWidth}px`;
+						navReading.style.width = `${ document.body.clientWidth }px`;
 					}
 				}
 			} else {

@@ -161,7 +161,7 @@ $light: #eee;
   }
 
   @media #{$breakpoint-large} {
-    box-shadow: 2px 3px 2px 1px hsla(0,0%,53%,.09);
+    box-shadow: 2px 3px 2px 1px hsl(0deg 0% 53% / 9%);
     z-index: 100;
   }
 }

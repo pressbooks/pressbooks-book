@@ -1,3 +1,5 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+
 @import 'font-stack-epub'; // Dynamically generated
 
 $serif-epub: serif !default;
@@ -5,6 +7,7 @@ $sans-serif-epub: sans-serif !default;
 
 // Load Shape Shifter fonts, if any.
 @import 'shapeshifter-font-stack-web';
+
 $shapeshifter-font-1-is-serif: true !default;
 $shapeshifter-font-2-is-serif: true !default;
 
