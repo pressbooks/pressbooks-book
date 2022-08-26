@@ -19,7 +19,8 @@ jobs:
         wordpress: [ '6.0', latest ]
         experimental: [false]
         include:
-          - php: 8.0
+          - node: 16
+            php: 8.0
             os: ubuntu-20.04
             wordpress: latest
             experimental: true
