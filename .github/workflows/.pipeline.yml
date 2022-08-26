@@ -23,7 +23,7 @@ jobs:
             os: ubuntu-20.04
             wordpress: latest
             experimental: true
-    name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
+    name: Test - Node ${{ matrix.node }} - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
     env:
       WP_VERSION: ${{ matrix.wordpress }}
@@ -36,7 +36,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v2
         with:
-          node-version:  ${{ matrix.node }}
+          node-version: ${{ matrix.node }}
 
       - name: Install OS dependencies
         run: |
@@ -77,8 +77,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Run Frontend Tests
-        run: |
-          npm run test
+        run: npm run test
         if: matrix.experimental == false
 
       - name: Run PHP CodeSniffer
