@@ -11,6 +11,7 @@
 		"url": "git+https://github.com/pressbooks/pressbooks-book.git"
 	},
 	"dependencies": {
+		"aetna": "^1.0.0",
 		"buckram": "^1.7.2",
 		"details-element-polyfill": "^2.4.0",
 		"lity": "^2.4.0",
@@ -18,21 +19,20 @@
 		"spinkit": "^2.0.1"
 	},
 	"devDependencies": {
-		"lerna": "^4.0.0",
-		"pressbooks-build-tools": "^3.0.1",
+		"npm-run-all": "^4.1.5",
+		"pressbooks-build-tools": "^4.0.0",
 		"recursive-copy-cli": "^1.0.20"
 	},
 	"scripts": {
-		"watch": "mix watch",
-		"build": "npm run production",
-		"production": "mix --production",
-		"bootstrap": "lerna bootstrap --ignore buckram",
-		"rmdist": "rimraf dist",
-		"test": "npm run -s lint",
-		"lint": "npm run -s lint:scripts && npm run -s lint:styles",
+		"build": "mix",
 		"lint:scripts": "cross-env node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
-		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --syntax scss",
-    "postinstall": "npx recursive-copy-cli node_modules/buckram packages/buckram -w"
+		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\"",
+		"lint": "run-s lint:*",
+		"production": "mix --production",
+		"rmdist": "rimraf dist",
+		"start": "mix watch",
+		"test": "npm run lint",
+		"postinstall": "npx recursive-copy-cli node_modules/buckram packages/buckram -w"
 	},
 	"eslintConfig": {
 		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
@@ -55,7 +55,8 @@
 	"stylelint": {
 		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
 		"rules": {
-			"no-descending-specificity": null
+			"no-descending-specificity": null,
+			"scss/dollar-variable-pattern": null
 		}
 	}
 }

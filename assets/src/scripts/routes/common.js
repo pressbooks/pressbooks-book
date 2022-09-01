@@ -14,8 +14,8 @@ export default {
 		 * @param name
 		 */
 		function getCookie( name ) {
-			let value = `; ${document.cookie}`;
-			let parts = value.split( `; ${name}=` );
+			let value = `; ${ document.cookie }`;
+			let parts = value.split( `; ${ name }=` );
 			if ( parts.length === 2 ) return parts.pop().split( ';' ).shift();
 		}
 
@@ -63,7 +63,7 @@ export default {
 				// Give each div.reading-header__toc__title a toggle button child
 				heading.innerHTML = `
 				<button type="button" aria-expanded="false">
-					${heading.innerHTML}
+					${ heading.innerHTML }
 					<svg role="presentation" focusable="false" class="arrow" width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><path d="M6.255 8L0 0h12.51z" fill="currentColor" fill-rule="evenodd"></path></svg>
 				</button>
 				`;
@@ -116,7 +116,7 @@ export default {
 				document.onclick = e => {
 					const downloadClass = 'book-header__cover__downloads';
 					const $target = jQuery( e.target );
-					const $downloadButton = jQuery( `.${downloadClass}` ).find( 'button' );
+					const $downloadButton = jQuery( `.${ downloadClass }` ).find( 'button' );
 
 					if ( $downloadButton.length === 0
 						|| $target.closest( 'div' ).hasClass( downloadClass )
@@ -155,10 +155,10 @@ export default {
 			Array.prototype.forEach.call( entityTitles, entityTitle => {
 				// Give each part title a toggle button child
 				let ariaExpanded = ( ( isHome && entityTitle.parentNode.classList.contains( 'toc__part' ) ) || ( ! isHome && entityTitle.parentNode.classList.contains( 'toc__parent' ) ) ) ? true : false;
-				let ariaLabel = `${pressbooksBook.toggle_contents} '${entityTitle.innerText}'`;
+				let ariaLabel = `${ pressbooksBook.toggle_contents } '${ entityTitle.innerText }'`;
 				entityTitle.innerHTML = `
-				<span>${entityTitle.innerHTML}</span>
-				<button type="button" aria-expanded="${ariaExpanded}" aria-label="${ariaLabel}">
+				<span>${ entityTitle.innerHTML }</span>
+				<button type="button" aria-expanded="${ ariaExpanded }" aria-label="${ ariaLabel }">
 					<svg viewBox="0 0 9 9" aria-hidden="true" focusable="false">
 						<rect class="vert" height="7" width="1" y="1" x="4" />
 						<rect height="1" width="7" y="4" x="1" />

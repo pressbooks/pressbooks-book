@@ -4,7 +4,6 @@ $page-margin-top: 0.9in !default;
 $page-margin-inside: 0.75in !default;
 $page-margin-bottom: 1.05in !default;
 $page-margin-outside: 0.75in !default;
-
 $numbering-position: 'bottom-outside' !default;
 $first-numbering-position: 'bottom-outside' !default;
 $first-running-content-position: 'bottom-outside' !default;
@@ -19,7 +18,6 @@ $front-matter-page-number-font-size: 8pt !default;
 $front-matter-page-number-font-style: normal !default;
 $front-matter-page-number-font-weight: normal !default;
 $front-matter-page-number-text-transform: none !default;
-
 $page-number-font-family: $font-1 !default;
 $page-number-font-size: 8pt !default;
 $page-number-font-style: normal !default;
@@ -69,7 +67,6 @@ $runningfoot-right-font-weight: normal !default;
 $runningfoot-right-text-transform: none !default;
 $runningfoot-right-letter-spacing: normal !default;
 $runningfoot-right-word-spacing: normal !default;
-
 $front-matter-running-content-left: string(section-title) !default;
 $front-matter-running-content-right: string(section-title) !default;
 $introduction-running-content-left: string(section-title) !default;

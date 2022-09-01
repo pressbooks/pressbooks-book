@@ -15,14 +15,16 @@ jobs:
       matrix:
         php: [ 7.4 ]
         os: [ ubuntu-20.04 ]
+        node: [ '14', '16' ]
         wordpress: [ '6.0', latest ]
         experimental: [false]
         include:
-          - php: 8.0
+          - node: 16
+            php: 8.0
             os: ubuntu-20.04
             wordpress: latest
             experimental: true
-    name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
+    name: Test - Node ${{ matrix.node }} - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
     env:
       WP_VERSION: ${{ matrix.wordpress }}
@@ -35,7 +37,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: ${{ matrix.node }}
 
       - name: Install OS dependencies
         run: |
@@ -64,11 +66,7 @@ jobs:
           coverage: pcov
 
       - name: Install Node dependencies
-        run: |
-          node -v
-          npm install -g lerna
-          npm install
-          npm run bootstrap
+        run: npm ci
         if: matrix.experimental == false
 
       - name: Install PHP dependencies
@@ -80,9 +78,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Run Frontend Tests
-        run: |
-          npm run test
-          lerna run test --ignore buckram
+        run: npm run test
         if: matrix.experimental == false
 
       - name: Run PHP CodeSniffer

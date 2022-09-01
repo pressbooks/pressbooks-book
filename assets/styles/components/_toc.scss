@@ -1,3 +1,5 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+
 // Table of Contents
 // Display and Margins
 $toc-display: block !default;
@@ -26,6 +28,7 @@ $toc-back-matter-margin-top: (
   $page-margin-outside: 1in;
   $page-margin-inside: 1in;
 }
+
 $toc-left-title-width: (
   epub: 100%,
   prince: $page-width - (if-map-get($toc-left-left-gutter, 'prince') + if-map-get($toc-left-right-gutter, 'prince') + $page-margin-outside + $page-margin-inside)
@@ -76,9 +79,9 @@ $toc-front-matter-author-text-transform: none !default;
 $toc-part-number-display: inline-block !default;
 $toc-part-number-before-content: $part '\A0' !default;
 $toc-part-number-content: counter(part, upper-roman) !default;
-$toc-part-number-after-content:  '.\A0' !default;
-$toc-left-part-number-after-content:  '.\A0' !default;
-$toc-center-part-number-after-content:  '.' !default;
+$toc-part-number-after-content: '.\A0' !default;
+$toc-left-part-number-after-content: '.\A0' !default;
+$toc-center-part-number-after-content: '.' !default;
 $toc-part-number-font-family: $font-3 !default;
 $toc-part-number-font-size: inherit !default;
 $toc-part-number-font-style: normal !default;
@@ -184,9 +187,7 @@ $toc-part-line-height: $toc-base-line-height !default;
 $toc-chapter-line-height: $toc-base-line-height !default;
 $toc-back-matter-line-height: $toc-base-line-height !default;
 $toc-section-line-height: $toc-base-line-height !default;
-
 $toc-left-page-number-top: 0.2em !default;
-
 $toc-center-margin-right: 0.5cm !default;
 $toc-center-margin-left: 0.5cm !default;
 

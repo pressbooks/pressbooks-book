@@ -176,7 +176,6 @@ $textbox-sidebar-float: (
   epub: right,
   web: right
 ) !default;
-
 $textbox-sidebar-margin-top: (
   prince: 1em,
   epub: 1em,
@@ -238,7 +237,7 @@ $examples-color: #000 !default;
 $examples-header-color: #fff !default;
 $examples-background: #c0bdcd !default;
 $examples-header-background: #4f446d !default;
-$edu-header-font-size-multiplier: 1.555555556 !default;
+$edu-header-font-size-multiplier: 1.5556 !default;
 
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/specials';

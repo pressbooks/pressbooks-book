@@ -70,6 +70,7 @@ h1.reading-header__title {
 
     label {
       width: 100%;
+
       &::after {
         clear: both;
         content: "";
@@ -169,7 +170,7 @@ h1.reading-header__title {
 
 .nav-reading__previous a svg,
 .nav-reading__next a svg {
-  fill: currentColor;
+  fill: currentcolor;
   height: 1em;
   vertical-align: text-bottom;
   width: 1em;
@@ -258,7 +259,7 @@ h1.reading-header__title {
     }
 
     svg {
-      fill: currentColor;
+      fill: currentcolor;
       height: 1em;
       vertical-align: text-bottom;
       width: 1em;
@@ -294,6 +295,7 @@ h1.reading-header__title {
   &:focus {
     background: transparent;
     color: inherit;
+
     svg {
       outline: 2px solid;
     }
@@ -302,6 +304,7 @@ h1.reading-header__title {
   span {
     max-width: calc(100% - 1.5em);
     display: block;
+
     span {
       display: inline;
     }
