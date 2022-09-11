@@ -15,7 +15,7 @@ jobs:
       matrix:
         php: [ 7.4 ]
         os: [ ubuntu-20.04 ]
-        node: [ '14', '16' ]
+        node: [ '14', '16', '18' ]
         wordpress: [ '6.0', latest ]
         experimental: [false]
         include:
