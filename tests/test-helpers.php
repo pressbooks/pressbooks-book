@@ -19,9 +19,12 @@ use function \PressbooksBook\Helpers\license_to_icons;
 use function \PressbooksBook\Helpers\license_to_text;
 use function \PressbooksBook\Helpers\share_icons;
 use function \PressbooksBook\Helpers\social_media_enabled;
+use function \PressbooksBook\Helpers\should_cta_banner_be_displayed;
 
 /**
  * Helpers test case.
+ *
+ * @group helpers
  */
 class HelpersTest extends WP_UnitTestCase {
 
@@ -236,5 +239,16 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertEquals( '1', $data['total'] );
 		$this->assertEquals( 1, count( $data['activities'] ) );
 		$this->assertEquals( $_GET['h5p_id'], $data['activities'][0]['ID'] );
+	}
+
+	/**
+	 * @test
+	 */
+	public function it_test_should_cta_banner_be_displayed_method(): void {
+		update_site_option( 'pressbooks_display_cta_banner', '1' );
+		$this->assertTrue( should_cta_banner_be_displayed() );
+
+		update_site_option( 'pressbooks_display_cta_banner', '0' );
+		$this->assertFalse( should_cta_banner_be_displayed() );
 	}
 }

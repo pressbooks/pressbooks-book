@@ -543,6 +543,15 @@ function is_book_public() {
 }
 
 /**
+ * Determine if CTA banner should be displayed.
+ *
+ * @return bool
+ */
+function should_cta_banner_be_displayed() {
+	return get_site_option( 'pressbooks_display_cta_banner', '1' ) === '1';
+}
+
+/**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
