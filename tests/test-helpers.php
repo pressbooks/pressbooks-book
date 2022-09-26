@@ -250,6 +250,6 @@ class HelpersTest extends WP_UnitTestCase {
 
 		update_site_option( 'pressbooks_display_cta_banner', '0' );
 
-		update_site_option( \Pressbooks\Admin\Network\NetworkSettings::DISPLAY_CTA_BANNER_OPTION, '0' );
+		update_site_option( 'pressbooks_display_cta_banner', '0' );
 	}
 }
