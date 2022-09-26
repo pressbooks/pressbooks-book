@@ -249,7 +249,6 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertTrue( should_cta_banner_be_displayed() );
 
 		update_site_option( 'pressbooks_display_cta_banner', '0' );
-
-		update_site_option( 'pressbooks_display_cta_banner', '0' );
+		$this->assertFalse( should_cta_banner_be_displayed() );
 	}
 }

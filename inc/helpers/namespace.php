@@ -2,7 +2,6 @@
 
 namespace PressbooksBook\Helpers;
 
-use Pressbooks\Admin\Network\NetworkSettings;
 use Pressbooks\Container;
 
 /**
@@ -549,7 +548,7 @@ function is_book_public() {
  * @return bool
  */
 function should_cta_banner_be_displayed() {
-	return get_site_option( NetworkSettings::DISPLAY_CTA_BANNER_OPTION, '1' ) === '1';
+	return get_site_option( 'pressbooks_display_cta_banner', '1' ) === '1';
 }
 
 /**
