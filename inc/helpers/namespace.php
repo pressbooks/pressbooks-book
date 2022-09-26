@@ -548,7 +548,7 @@ function is_book_public() {
  *
  * @return bool
  */
-function should_cta_banner_being_displayed() {
+function should_cta_banner_be_displayed() {
 	return get_site_option( NetworkSettings::DISPLAY_CTA_BANNER_OPTION, '1' ) === '1';
 }
 

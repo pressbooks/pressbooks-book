@@ -99,7 +99,7 @@
 				</nav>
 			</div>
 		</div>
-		<?php if ( \PressbooksBook\Helpers\should_cta_banner_being_displayed() && \PressbooksBook\Helpers\is_book_public() ) : ?>
+<?php if ( \PressbooksBook\Helpers\should_cta_banner_be_displayed() && \PressbooksBook\Helpers\is_book_public() ) : ?>
 		<div class="cta hidden">
 			<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
 				<a id="close-cta" href="javascript:void()" title="Close banner">
