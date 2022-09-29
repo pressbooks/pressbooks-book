@@ -1,13 +1,13 @@
-name: CI workflow
+name: Run Standards & Tests
 on:
   push:
-    branches: [ dev, main ]
+    branches: [ dev, master ]
     tags:
       - '*.*.*'
   pull_request:
     branches: [ dev ]
 jobs:
-  tests:
+  standards-and-tests:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     strategy:
@@ -15,16 +15,18 @@ jobs:
       matrix:
         php: [ 7.4 ]
         os: [ ubuntu-20.04 ]
-        node: [ '14', '16', '18' ]
-        wordpress: [ 6.0.2, latest ]
+        wordpress: [ 6.0.2 ]
         experimental: [false]
         include:
-          - node: 16
-            php: 8.0
+          - php: 7.4
             os: ubuntu-20.04
             wordpress: latest
             experimental: true
-    name: Test - Node ${{ matrix.node }} - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
+          - php: 8.0
+            os: ubuntu-20.04
+            wordpress: latest
+            experimental: true
+    name: Test - PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
 
     env:
       WP_VERSION: ${{ matrix.wordpress }}
@@ -33,11 +35,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
 
       - name: Install OS dependencies
         run: |
@@ -52,12 +49,6 @@ jobs:
           path: vendor
           key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
 
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -65,21 +56,10 @@ jobs:
           tools: phpcs, composer
           coverage: pcov
 
-      - name: Install Node dependencies
-        run: npm ci
-        if: matrix.experimental == false
-
       - name: Install PHP dependencies
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           composer install --no-interaction
-      - name: Run Lint
-        run: npm run lint
-        if: matrix.experimental == false
-
-      - name: Run Frontend Tests
-        run: npm run test
-        if: matrix.experimental == false
 
       - name: Run PHP CodeSniffer
         run: composer standards
@@ -96,7 +76,7 @@ jobs:
         if: matrix.experimental == false
 
       - name: Upload Coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v3
         if: matrix.experimental == false
 
       - name: Prepare Build

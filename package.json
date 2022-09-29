@@ -25,8 +25,10 @@
 	},
 	"scripts": {
 		"build": "mix",
-		"lint:scripts": "cross-env node_modules/eslint/bin/eslint.js \"assets/src/scripts/**/*.js\"",
-		"lint:styles": "cross-env node_modules/stylelint/bin/stylelint.js \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\"",
+		"lint:scripts": "eslint \"assets/src/scripts/**/*.js\"",
+		"lint:styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\"",
+    "lint:fix-styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --fix" ,
+    "lint:fix-scripts": "eslint \"assets/src/scripts/**/*.js\" --fix",
 		"lint": "run-s lint:*",
 		"production": "mix --production",
 		"rmdist": "rimraf dist",
