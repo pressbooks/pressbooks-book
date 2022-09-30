@@ -1,5 +1,7 @@
 <section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
+	<?php if ( $number || get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' || $subtitle || $authors ) { ?>
 	<header>
+		<?php if ( $number || get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' ) { ?>
 		<h1 class="entry-title">
 			<?php
 			if ( $number ) {
@@ -10,13 +12,15 @@
 			}
 			?>
 		</h1>
+		<?php } ?>
 		<?php if ( $subtitle ) { ?>
 			<p data-type="subtitle"><?php echo $subtitle; ?></p>
-		<?php } ?>
-		<?php if ( $authors ) { ?>
-			<p data-type="author"><?php echo $authors; ?></p>
-		<?php } ?>
-	</header>
+			<?php } ?>
+			<?php if ( $authors ) { ?>
+				<p data-type="author"><?php echo $authors; ?></p>
+				<?php } ?>
+			</header>
+	<?php } ?>
 	<?php
 	if ( get_post_type( $post->ID ) !== 'part' ) {
 		if ( pb_should_parse_subsections() ) {
