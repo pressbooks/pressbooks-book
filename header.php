@@ -80,7 +80,12 @@
 						);
 					} else {
 						?>
-					<svg class="header__logo--svg" role="img">
+					<svg class="header__logo--svg" role="img" aria-label="
+						<?php
+						/* translators: %s: name of network */
+							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
+						?>
+							">
 						<use href="#logo-pressbooks" />
 					</svg>
 						<?php
@@ -103,8 +108,8 @@
 		<?php if ( \PressbooksBook\Helpers\should_cta_banner_be_displayed() && \PressbooksBook\Helpers\is_book_public() ) : ?>
 		<div class="cta hidden">
 			<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
-				<a id="close-cta" href="javascript:void()" title="Close banner">
-					<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img">
+				<a id="close-cta" href="javascript:void()" aria-label="Close banner">
+					<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="presentation">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
 					</svg>
 				</a>
@@ -126,7 +131,7 @@
 					<div class="reading-header__toc"></div>
 					<?php } ?>
 					<?php /* translators: %s: the title of the book */ ?>
-					<h1 class="reading-header__title" ><a href="<?php echo home_url( '/' ); ?>" title="<?php printf( __( 'Go to the cover page of %s', 'pressbooks-book' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="reading-header__title" ><a href="<?php echo home_url( '/' ); ?>" aria-label="<?php printf( __( 'Go to the cover page of %s', 'pressbooks-book' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 					<div class="reading-header__end-container">
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>

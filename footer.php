@@ -54,8 +54,12 @@ if ( $contact_link ) {
 	<div class="footer__inner">
 		<section class="footer__pressbooks">
 			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
-				<?php // TODO ?>
-				<svg class="icon--svg">
+				<svg class="icon--svg" role="img" aria-label="
+				<?php
+				/* translators: %s: name of network */
+							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
+				?>
+							">
 					<use href="#icon-pressbooks" />
 				</svg>
 			</a>
@@ -71,12 +75,12 @@ if ( $contact_link ) {
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?>">
-					<img class="youtube-link" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/yt_icon_mono_dark.png" alt="YouTube">
+				<a href="https://www.youtube.com/user/pressbooks">
+					<img class="youtube-link" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/yt_icon_mono_dark.png" alt="YouTube" aria-hidden="true">
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
-				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks" title="<?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?>">
-					<svg class="icon--svg">
+				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks">
+					<svg class="icon--svg" role="presentation">
 						<use href="#twitter" />
 					</svg>
 				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
