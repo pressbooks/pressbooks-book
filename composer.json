@@ -10,7 +10,7 @@
 		}
 	},
 	"require": {
-		"php": "^7.4|^8.0",
+		"php": "^7.4|8.0.*",
 		"composer/installers": "^2",
 		"pressbooks/mix": "^2.1",
 		"phpcompatibility/php-compatibility": "^9.3"
