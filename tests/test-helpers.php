@@ -84,20 +84,20 @@ class HelpersTest extends WP_UnitTestCase {
 	}
 
 	function test_get_source_book() {
-		$output = get_source_book( 'https://book.pressbooks.com' );
-		$this->assertEquals( 'https://book.pressbooks.com', $output );
+		$output = get_source_book( 'https://pressbooks.pub/book' );
+		$this->assertEquals( 'https://pressbooks.pub/book', $output );
 	}
 
 	function test_get_source_book_url() {
-		$output = get_source_book_url( 'https://book.pressbooks.com' );
-		$this->assertEquals( 'https://book.pressbooks.com', $output );
+		$output = get_source_book_url( 'https://pressbooks.pub/book' );
+		$this->assertEquals( 'https://pressbooks.pub/book', $output );
 	}
 
 	function test_get_source_book_meta() {
 		$output = get_source_book_toc( 'garbage/' );
 		$this->assertFalse( $output );
 
-		$output = get_source_book_meta( 'https://book.pressbooks.com' );
+		$output = get_source_book_meta( 'https://pressbooks.pub/book' );
 		$this->assertArrayHasKey( 'name', $output );
 		$this->assertEquals( "Book: A Futurist's Manifesto", $output['name'] );
 	}
@@ -106,7 +106,7 @@ class HelpersTest extends WP_UnitTestCase {
 		$results = get_source_book_toc( 'garbage/' );
 		$this->assertFalse( $results );
 
-		$results = get_source_book_toc( 'https://book.pressbooks.com/' );
+		$results = get_source_book_toc( 'https://pressbooks.pub/book/' );
 		$this->assertTrue( is_array( $results ) );
 		$this->assertNotEmpty( $results );
 	}
