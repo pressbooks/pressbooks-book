@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-09-30T17:22:41+00:00\n"
+"POT-Creation-Date: 2022-10-13T20:11:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.7.0\n"
 "X-Domain: pressbooks-book\n"
 
 #. Theme Name of the theme
@@ -471,7 +471,7 @@ msgstr ""
 
 #: page.php:13
 #: partials/content-single-legacy.php:69
-#: partials/content-single.php:90
+#: partials/content-single.php:94
 msgid "Edit"
 msgstr ""
 
@@ -586,12 +586,12 @@ msgid "Sorry, but nothing matched your search terms. Please try again with some 
 msgstr ""
 
 #: partials/content-single-legacy.php:41
-#: partials/content-single.php:42
+#: partials/content-single.php:46
 msgid "Previous Page"
 msgstr ""
 
 #: partials/content-single-legacy.php:52
-#: partials/content-single.php:53
+#: partials/content-single.php:57
 msgid "Next Page"
 msgstr ""
 
