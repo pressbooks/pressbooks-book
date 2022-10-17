@@ -710,7 +710,7 @@ function get_h5p_activities( $per_page = 20 ) {
 	$page = abs( (int) ( $_GET['hpage'] ?? 1 ) );
 	$page = max( $page, 1 );
 
-	$offset = ($page - 1) * $per_page;
+	$offset = ( $page - 1 ) * $per_page;
 
 	$h5p_id = isset( $_GET['h5p_id'] ) ? abs( intval( $_GET['h5p_id'] ) ) : null;
 	if ( ! is_null( $h5p_id ) ) {
