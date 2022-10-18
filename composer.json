@@ -4,16 +4,13 @@
 		"This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
 	"type": "wordpress-theme",
 	"config": {
-		"platform": {
-			"php": "7.4"
-		},
 		"allow-plugins": {
 			"composer/installers": true,
 			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
 	},
 	"require": {
-		"php": ">=7.4",
+		"php": "^7.4|8.0.*",
 		"composer/installers": "^2",
 		"pressbooks/mix": "^2.1",
 		"phpcompatibility/php-compatibility": "^9.3"
