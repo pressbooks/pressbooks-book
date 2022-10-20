@@ -244,7 +244,7 @@ export default {
 
 		const ctaCloseButton = document.getElementById( 'close-cta' );
 
-		if(ctaCloseButton) {
+		if ( ctaCloseButton ) {
 			ctaCloseButton.addEventListener( 'click', function ( event ) {
 				event.preventDefault();
 				const bookPath = window.location.pathname.split( '/' )[1];
