@@ -374,7 +374,7 @@ function get_book_authors( $metadata ) {
 				$authors[] = $author['name'];
 			}
 		};
-		return \Pressbooks\Utility\oxford_comma( $authors );
+		return \Pressbooks\Utility\oxford_comma( $authors, 'pressbooks-book' );
 	}
 	return '';
 }

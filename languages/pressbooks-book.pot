@@ -476,6 +476,10 @@ msgstr ""
 msgid "Subtitle"
 msgstr ""
 
+#: partials/content-cover-book-header.php:17
+msgid "and"
+msgstr ""
+
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
