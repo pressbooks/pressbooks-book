@@ -476,7 +476,7 @@ msgstr ""
 msgid "Subtitle"
 msgstr ""
 
-#: partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:377
 msgid "and"
 msgstr ""
 
