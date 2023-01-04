@@ -2,9 +2,9 @@
 /// @group specials
 ////
 
-//============================================================================//
+// ============================================================================//
 //                       Pullquotes, Asides & Sidebars                        //
-//============================================================================//
+// ============================================================================//
 
 // Asides: HTML5 <aside> tag; div.aside conversion for old e-readers
 
@@ -15,6 +15,7 @@ aside,
   @if $type != 'epub' {
     line-height: $aside-line-height;
   }
+
   text-indent: 0;
   border-top: $aside-border-top;
   border-right: $aside-border-right;
@@ -34,6 +35,7 @@ aside,
   @if $type != 'epub' {
     line-height: $pullquote-line-height;
   }
+
   text-align: $pullquote-align;
   text-indent: 0;
   border-top: if-map-get($pullquote-border-top-width, $type) $pullquote-border-top-style $pullquote-border-top-color;
@@ -46,6 +48,7 @@ aside,
 
 .pullquote {
   @extend %pullquote;
+
   margin: if-map-get($pullquote-margin-top, $type) auto if-map-get($pullquote-margin-bottom, $type);
   width: if-map-get($pullquote-width, $type);
 }
@@ -53,6 +56,7 @@ aside,
 .pullquote-left,
 .pullquote--left {
   @extend %pullquote;
+
   float: left;
   margin: if-map-get($pullquote-left-margin-top, $type) if-map-get($pullquote-left-margin-right, $type) if-map-get($pullquote-left-margin-bottom, $type) if-map-get($pullquote-left-margin-left, $type);
   text-align: $pullquote-left-align;
@@ -62,6 +66,7 @@ aside,
 .pullquote-right,
 .pullquote--right {
   @extend %pullquote;
+
   float: right;
   margin: if-map-get($pullquote-right-margin-top, $type) if-map-get($pullquote-right-margin-right, $type) if-map-get($pullquote-right-margin-bottom, $type) if-map-get($pullquote-right-margin-left, $type);
   text-align: $pullquote-right-align;

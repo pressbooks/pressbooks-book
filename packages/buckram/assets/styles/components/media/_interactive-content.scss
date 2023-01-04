@@ -9,6 +9,7 @@
   @if $type != 'epub' {
     line-height: if-map-get($interactive-content-line-height, $type);
   }
+
   margin-bottom: if-map-get($interactive-content-margin-bottom, $type);
   padding: if-map-get($interactive-content-padding-top, $type) if-map-get($interactive-content-padding-right, $type) if-map-get($interactive-content-padding-bottom, $type) if-map-get($interactive-content-padding-left, $type);
 
@@ -22,7 +23,7 @@
       if-map-get($interactive-icon-margin-right, $type)
       if-map-get($interactive-icon-margin-bottom, $type)
       if-map-get($interactive-icon-margin-left, $type);
-    background-image: url(if-map-get($interactive-icon-url, $type));
+    background-image: url('#{if-map-get($interactive-icon-url, $type)}');
     background-repeat: no-repeat;
     background-size: if-map-get($interactive-icon-background-size, $type);
   }

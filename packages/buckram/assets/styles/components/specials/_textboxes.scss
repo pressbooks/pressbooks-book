@@ -2,9 +2,9 @@
 /// @group specials
 ////
 
-//============================================================================//
+// ============================================================================//
 //                                   Textboxes                                //
-//============================================================================//
+// ============================================================================//
 
 @import '../utilities';
 
@@ -95,7 +95,7 @@
   // }
 }
 
-.textbox {
+.textbox, .bcc-box {
   padding: if-map-get($textbox-padding-top, $type) if-map-get($textbox-padding-right, $type) if-map-get($textbox-padding-bottom, $type) if-map-get($textbox-padding-left, $type);
   margin: if-map-get($textbox-margin-top, $type) if-map-get($textbox-margin-right, $type) if-map-get($textbox-margin-bottom, $type) if-map-get($textbox-margin-left, $type);
   font-family: $textbox-font-family;
@@ -107,6 +107,7 @@
   @if $type != 'epub' {
     line-height: if-map-get($textbox-line-height, $type);
   }
+
   text-align: $textbox-text-align;
   text-indent: if-map-get($textbox-text-indent, $type);
   border-style: $textbox-border-style;
@@ -192,10 +193,6 @@
   @include educational-textbox($exercises-header-color, $exercises-header-background, $exercises-color, $exercises-background);
 }
 
-.bcc-box {
-  @extend .textbox;
-}
-
 .bcc-highlight {
   @extend %learning-objectives;
 }
@@ -214,6 +211,7 @@
   @if $type == 'prince' {
     margin-inside: $textbox-sidebar-margin-inside;
   }
+
   max-width: 25%;
 }
 

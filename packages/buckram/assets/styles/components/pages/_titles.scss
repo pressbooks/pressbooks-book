@@ -48,7 +48,7 @@
     line-height: if-map-get($title-title-line-height, $type);
   }
 
-  @if ($title-title-decoration-content != "" or $title-title-decoration-display != none) {
+  @if  $title-title-decoration-content != "" or $title-title-decoration-display != none {
     &::after {
       font-family: $title-title-decoration-font-family;
       content: $title-title-decoration-content;
@@ -127,6 +127,7 @@ div.publisher-logo {
   @if $type != 'epub' {
     line-height: $title-publisher-line-height;
   }
+
   letter-spacing: $title-publisher-letter-spacing;
   word-spacing: $title-publisher-word-spacing;
   text-align: $title-publisher-align;
@@ -149,6 +150,7 @@ div.publisher-logo {
   @if $type != 'epub' {
     line-height: $title-publisher-city-line-height;
   }
+
   letter-spacing: $title-publisher-city-letter-spacing;
   word-spacing: $title-publisher-city-word-spacing;
   text-align: $title-publisher-city-align;

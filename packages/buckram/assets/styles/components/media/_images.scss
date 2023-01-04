@@ -5,7 +5,7 @@
 @mixin caption-text-align($align) {
   figcaption,
   .wp-caption-text {
-    text-align: map-get($_image-caption-text-align, $align);
+    text-align: map-get($image-caption-text-align-map, $align);
   }
 }
 
@@ -146,15 +146,13 @@ p {
       width: 100% !important;
     }
 
-    &:after {
+    &::after {
       content: "";
       display: table;
       clear: both;
     }
   }
-}
-
-@else if $type == 'prince' {
+} @else if $type == 'prince' {
   figcaption,
   .wp-caption-text {
     font-family: $image-caption-font-family;
@@ -248,15 +246,13 @@ p {
       width: if-map-get($image-alignnone-caption-width, $type) !important;
     }
 
-    &:after {
+    &::after {
         content: "";
         display: table;
         clear: both;
     }
   }
-}
-
-@else if $type == 'web' {
+} @else if $type == 'web' {
   .front-matter,
   .part,
   .chapter,
