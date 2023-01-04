@@ -17,6 +17,7 @@
   margin-top: if-map-get($copyright-margin-top, $type);
   margin-right: if-map-get($copyright-margin-right, $type);
   margin-left: if-map-get($copyright-margin-left, $type);
+
   .ugc {
     float: $copyright-float;
 
@@ -81,6 +82,7 @@ section.epigraph
     @if $type != 'epub' {
       line-height: $section-license-line-height;
     }
+
     font-size: $section-license-font-size;
     font-style: $section-license-font-style;
     margin-top: $section-license-margin-top;

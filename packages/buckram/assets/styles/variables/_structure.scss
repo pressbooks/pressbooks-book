@@ -11,6 +11,7 @@
 /// Page numbering position.
 /// @type String
 $numbering-position: 'top-outside' !default;
+
 // $numbering-position: 'top-outside-corner' !default;
 // $numbering-position: 'top-center' !default;
 // $numbering-position: 'top-inside' !default;
@@ -27,6 +28,7 @@ $numbering-position: 'top-outside' !default;
 // $first-numbering-position: null !default;
 // $first-numbering-position: 'top-center' !default;
 $first-numbering-position: 'bottom-center' !default;
+
 // $first-numbering-position: 'bottom-inside' !default;
 // $first-numbering-position: 'bottom-outside' !default;
 // TODO: Handle other positions based on recto-verso
@@ -34,33 +36,36 @@ $first-numbering-position: 'bottom-center' !default;
 /// Running content position.
 /// @type String
 $running-content-position: 'top-center' !default;
-//$running-content-position: 'top-outside-corner' !default;
-//$running-content-position: 'top-outside' !default;
-//$running-content-position: 'top-inside' !default;
-//$running-content-position: 'outside-top' !default;
-//$running-content-position: 'outside-middle' !default;
-//$running-content-position: 'outside-bottom' !default;
-//$running-content-position: 'bottom-outside-corner' !default;
-//$running-content-position: 'bottom-outside' !default;
-//$running-content-position: 'bottom-center' !default;
-//$running-content-position: 'bottom-inside' !default;
+
+// $running-content-position: 'top-outside-corner' !default;
+// $running-content-position: 'top-outside' !default;
+// $running-content-position: 'top-inside' !default;
+// $running-content-position: 'outside-top' !default;
+// $running-content-position: 'outside-middle' !default;
+// $running-content-position: 'outside-bottom' !default;
+// $running-content-position: 'bottom-outside-corner' !default;
+// $running-content-position: 'bottom-outside' !default;
+// $running-content-position: 'bottom-center' !default;
+// $running-content-position: 'bottom-inside' !default;
 
 /// First page running content position.
 /// @type Null | String
 /// @since 1.0.0
 $first-running-content-position: null !default;
+
 // $first-running-content-position: 'bottom-center' !default;
 // $first-running-content-position: 'bottom-inside' !default;
 // $first-running-content-position: 'bottom-outside' !default;
 // TODO: Handle other positions based on recto-verso
 
 // Finally, for the running separator, it either exists or it doesn't,
-//so choose between two options (null, or defined content):
+// so choose between two options (null, or defined content):
 
 $left-running-separator: '' !default;
 $right-running-separator: '' !default;
-//$left-running-separator: '\A0\A0|\A0\A0' !default;
-//$right-running-separator: '\A0\A0|\A0\A0' !default;
+
+// $left-running-separator: '\A0\A0|\A0\A0' !default;
+// $right-running-separator: '\A0\A0|\A0\A0' !default;
 
 // Page Numbers
 

@@ -2,55 +2,55 @@
 /// @group structure
 ////
 
-//========================
+// ========================
 // Blank Headers & Footers
-//========================
+// ========================
 
 // Blank Head
 
 @mixin blank-head {
   @top {
-    content: '';
+    content: unset;
   }
 
   @top-right {
-    content: '';
+    content: unset;
   }
 
   @top-right-corner {
-    content: '';
+    content: unset;
   }
 
   @right-top {
-    content: '';
+    content: unset;
   }
 
   @right-middle {
-    content: '';
+    content: unset;
   }
 
   @right-bottom {
-    content: '';
+    content: unset;
   }
 
   @left-top {
-    content: '';
+    content: unset;
   }
 
   @left-middle {
-    content: '';
+    content: unset;
   }
 
   @left-bottom {
-    content: '';
+    content: unset;
   }
 
   @top-left {
-    content: '';
+    content: unset;
   }
 
   @top-left-corner {
-    content: '';
+    content: unset;
   }
 }
 
@@ -58,23 +58,23 @@
 
 @mixin blank-foot {
   @bottom {
-    content: '';
+    content: unset;
   }
 
   @bottom-right {
-    content: '';
+    content: unset;
   }
 
   @bottom-right-corner {
-    content: '';
+    content: unset;
   }
 
   @bottom-left {
-    content: '';
+    content: unset;
   }
 
   @bottom-left-corner {
-    content: '';
+    content: unset;
   }
 }
 

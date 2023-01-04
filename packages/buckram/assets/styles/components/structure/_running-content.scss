@@ -2,9 +2,9 @@
 /// @group structure
 ////
 
-//===================================
+// ===================================
 // Running Content
-//===================================
+// ===================================
 
 // This file builds generic "page", and populates it with running content & page numbers
 // in the places we want them, using the CSS3 margin box locations.
@@ -21,7 +21,6 @@ $left-running-content: (
   chapter: $chapter-running-content-left,
   back-matter: $back-matter-running-content-left
 ) !default;
-
 $right-running-content: (
   front-matter: $front-matter-running-content-right,
   introduction: $introduction-running-content-right,
@@ -30,7 +29,6 @@ $right-running-content: (
   chapter: $chapter-running-content-right,
   back-matter: $back-matter-running-content-right
 ) !default;
-
 $left-page-number: (
   front-matter: $front-matter-page-number-left,
   introduction: $introduction-page-number-left,
@@ -39,7 +37,6 @@ $left-page-number: (
   chapter: $chapter-page-number-left,
   back-matter: $back-matter-page-number-left
 ) !default;
-
 $right-page-number: (
   front-matter: $front-matter-page-number-right,
   introduction: $introduction-page-number-right,
@@ -69,9 +66,7 @@ $right-page-number: (
   @include runninghead('first:right', convert-position('first', $first-running-content-position));
   @include runninghead('left', convert-position('left', $running-content-position));
   @include runninghead('right', convert-position('right', $running-content-position));
-}
-
-@else if head-or-foot($running-content-position) == 'foot' {
+} @else if head-or-foot($running-content-position) == 'foot' {
   @include runningfoot('first:left', convert-position('first', $first-running-content-position));
   @include runningfoot('first:right', convert-position('first', $first-running-content-position));
   @include runningfoot('left', convert-position('left', $running-content-position));
@@ -81,8 +76,8 @@ $right-page-number: (
 // Now, we've defined our variables.
 // so we can define what a generic page looks like, using the variable settings above
 // so let's make a generic page structure mixin (left page & right page)
-//note we're using if-map-get, which will enable us to pull in the right variable
-//depending on section type
+// note we're using if-map-get, which will enable us to pull in the right variable
+// depending on section type
 
 // Front Matter
 @page front-matter:first {

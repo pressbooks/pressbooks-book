@@ -6,7 +6,7 @@
 
 .interactive-content--video {
   .interactive-content__icon {
-    background-image: url(if-map-get($video-icon-url, $type));
+    background-image: url('#{if-map-get($video-icon-url, $type)}');
   }
 }
 

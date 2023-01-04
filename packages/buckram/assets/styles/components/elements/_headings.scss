@@ -2,29 +2,30 @@
 /// @group elements
 ////
 
-//============================================================================//
+// ============================================================================//
 //                                 Headings                                   //
-//============================================================================//
+// ============================================================================//
 
 @import '../utilities';
 
 @mixin heading($heading) {
   #{$heading} {
-    border-bottom: map-get($_heading-border-bottom-style, $heading) if-map-get(map-get($_heading-border-bottom-width, $heading), $type) if-map-get(map-get($_heading-border-bottom-color, $heading), $type);
-    margin-top: if-map-get(map-get($_heading-margin-top, $heading), $type);
-    margin-bottom: if-map-get(map-get($_heading-margin-bottom, $heading), $type);
-    padding-bottom: if-map-get(map-get($_heading-padding-bottom, $heading), $type);
-    font-family: if-map-get(map-get($_heading-font-family, $heading), $type);
-    font-size: if-map-get(map-get($_heading-font-size, $heading), $type);
-    font-style: map-get($_heading-font-style, $heading);
-    font-weight: map-get($_heading-font-weight, $heading);
+    border-bottom: map-get($heading-border-bottom-style-map, $heading) if-map-get(map-get($heading-border-bottom-width-map, $heading), $type) if-map-get(map-get($heading-border-bottom-color-map, $heading), $type);
+    margin-top: if-map-get(map-get($heading-margin-top-map, $heading), $type);
+    margin-bottom: if-map-get(map-get($heading-margin-bottom-map, $heading), $type);
+    padding-bottom: if-map-get(map-get($heading-padding-bottom-map, $heading), $type);
+    font-family: if-map-get(map-get($heading-font-family-map, $heading), $type);
+    font-size: if-map-get(map-get($heading-font-size-map, $heading), $type);
+    font-style: map-get($heading-font-style-map, $heading);
+    font-weight: map-get($heading-font-weight-map, $heading);
     @if $type != 'epub' {
-      line-height: if-map-get(map-get($_heading-line-height, $heading), $type);
+      line-height: if-map-get(map-get($heading-line-height-map, $heading), $type);
     }
-    text-align: map-get($_heading-align, $heading);
-    text-transform: map-get($_heading-text-transform, $heading);
-    letter-spacing: if-map-get(map-get($_heading-letter-spacing, $heading), $type);
-    word-spacing: if-map-get(map-get($_heading-word-spacing, $heading), $type);
+
+    text-align: map-get($heading-align-map, $heading);
+    text-transform: map-get($heading-text-transform-map, $heading);
+    letter-spacing: if-map-get(map-get($heading-letter-spacing-map, $heading), $type);
+    word-spacing: if-map-get(map-get($heading-word-spacing-map, $heading), $type);
   }
 }
 

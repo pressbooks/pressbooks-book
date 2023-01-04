@@ -6,6 +6,6 @@
 
 .interactive-content--audio {
   .interactive-content__icon {
-    background-image: url(if-map-get($audio-icon-url, $type));
+    background-image: url('#{if-map-get($audio-icon-url, $type)}');
   }
 }

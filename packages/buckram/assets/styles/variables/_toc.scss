@@ -243,9 +243,9 @@ $toc-part-number-content: counter(part, upper-roman) !default;
 /// Content that appears after the part number for Table of Contents
 /// @type String
 /// @since 1.0.0
-$toc-part-number-after-content:  '.\A0' !default;
-$toc-left-part-number-after-content:  '.\A0' !default;
-$toc-center-part-number-after-content:  '.' !default;
+$toc-part-number-after-content: '.\A0' !default;
+$toc-left-part-number-after-content: '.\A0' !default;
+$toc-center-part-number-after-content: '.' !default;
 
 /// Part number font stack for Table of Contents
 /// @type String
@@ -278,6 +278,7 @@ $toc-part-title-font-size: (
   prince: 1em,
   web: 1em
 ) !default;
+
 /// Part title font style for Table of Contents
 /// @type String
 $toc-part-title-font-style: normal !default;
@@ -355,7 +356,6 @@ $toc-chapter-title-text-transform: none !default;
 /// @type String
 /// @since 1.0.0
 $toc-chapter-title-align: left !default;
-
 $toc-chapter-title-display: inline !default;
 
 /// Chapter subtitle top margin for Table of Contents

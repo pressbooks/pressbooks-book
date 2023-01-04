@@ -45,6 +45,7 @@
       @if $type != 'epub' {
         line-height: if-map-get($part-title-line-height, $type);
       }
+
       text-align: if-map-get($part-title-align, $type);
       text-transform: $part-title-text-transform;
       page-break-after: avoid;
@@ -52,7 +53,7 @@
       word-spacing: if-map-get($part-title-word-spacing, $type);
       border-bottom: if-map-get($part-title-border-bottom-width, $type) $part-title-border-bottom-style if-map-get($part-title-border-bottom-color, $type);
 
-      @if ($part-title-decoration-content != "" or $part-title-decoration-display != none) {
+      @if  $part-title-decoration-content != "" or $part-title-decoration-display != none {
         &::after {
           font-family: $part-title-decoration-font-family;
           content: $part-title-decoration-content;
