@@ -14,65 +14,65 @@ $shapeshifter-fonts: ();
 @each $font in $shapeshifter-fonts {
   @if unquote($font) == 'Cormorant Garamond' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap';
   } @else if unquote($font) == 'Noto Serif' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP|Noto+Serif+KR|Noto+Serif+SC|Noto+Serif+TC&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP|Noto+Serif+KR|Noto+Serif+SC|Noto+Serif+TC&display=swap';
   } @else if unquote($font) == 'Spectral' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Spectral|Spectral+SC&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Spectral|Spectral+SC&display=swap';
   } @else if unquote($font) == 'Alegreya Sans' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Alegreya|Alegreya+SC|Alegreya+Sans|Alegreya+Sans+SC&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Alegreya|Alegreya+SC|Alegreya+Sans|Alegreya+Sans+SC&display=swap';
   } @else if unquote($font) == 'Crimson Text' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Crimson+Text&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Crimson+Text&display=swap';
   } @else if unquote($font) == 'Roboto' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Roboto&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Roboto&display=swap';
   } @else if unquote($font) == 'Open Sans' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Open+Sans&display=swap';
   } @else if unquote($font) == 'Lato' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Lato&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Lato&display=swap';
   } @else if unquote($font) == 'Montserrat' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Montserrat&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Montserrat&display=swap';
   } @else if unquote($font) == 'Raleway' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Raleway&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Raleway&display=swap';
   } @else if unquote($font) == 'Noto Sans' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+HK|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+SC|Noto+Sans+TC|Raleway&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+HK|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+SC|Noto+Sans+TC|Raleway&display=swap';
   } @else if unquote($font) == 'Rubik' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Rubik&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Rubik&display=swap';
   } @else if unquote($font) == 'Barlow' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Barlow&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Barlow&display=swap';
     // noinspection CssInvalidAtRule
   } @else if unquote($font) == 'Libre Franklin' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap';
   } @else if unquote($font) == 'K2D' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=K2D&display=swap';
+    @import'https://fonts.googleapis.com/css?family=K2D&display=swap';
   } @else if unquote($font) == 'FreeSans' {
     // noinspection CssInvalidAtRule
-    @use 'FreeSans';
+    @import'FreeSans';
   } @else if unquote($font) == 'FreeSerif' {
     // noinspection CssInvalidAtRule
-    @use 'FreeSerif';
+    @import'FreeSerif';
   } @else if unquote($font) == 'Source Sans Pro' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap';
   } @else if unquote($font) == 'Sorts Mill Goudy' {
     // noinspection CssInvalidAtRule
-    @use 'https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap';
+    @import'https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap';
   } @else if unquote($font) == 'New Athena Unicode' {
     // noinspection CssInvalidAtRule
-    @use 'NewAthenaUnicodeFont';
+    @import'NewAthenaUnicodeFont';
   }
 }
 
