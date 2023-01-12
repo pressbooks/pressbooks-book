@@ -14,64 +14,64 @@ $shapeshifter-fonts: ();
 @each $font in $shapeshifter-fonts {
   @if unquote($font) == 'Cormorant Garamond' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'CormorantGaramondFont';
+    @import'CormorantGaramondFont';
   } @else if unquote($font) == 'Noto Serif' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'NotoSerifFont';
+    @import'NotoSerifFont';
   } @else if unquote($font) == 'Spectral' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'SpectralFont';
+    @import'SpectralFont';
   } @else if unquote($font) == 'Alegreya Sans' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'AlegreyaSansFont';
+    @import'AlegreyaSansFont';
   } @else if unquote($font) == 'Crimson Text' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'CrimsonTextFont';
+    @import'CrimsonTextFont';
   } @else if unquote($font) == 'Roboto' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'RobotoFont';
+    @import'RobotoFont';
   } @else if unquote($font) == 'Open Sans' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'OpenSansFont';
+    @import'OpenSansFont';
   } @else if unquote($font) == 'Lato' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'LatoFont';
+    @import'LatoFont';
   } @else if unquote($font) == 'Montserrat' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'MontserratFont';
+    @import'MontserratFont';
   } @else if unquote($font) == 'Raleway' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'RalewayFont';
+    @import'RalewayFont';
   } @else if unquote($font) == 'Noto Sans' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'NotoSansFont';
+    @import'NotoSansFont';
   } @else if unquote($font) == 'Rubik' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'RubikFont';
+    @import'RubikFont';
   } @else if unquote($font) == 'Barlow' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'BarlowFont';
+    @import'BarlowFont';
     // noinspection CssInvalidAtRule
   } @else if unquote($font) == 'Libre Franklin' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'LibreFranklinFont';
+    @import'LibreFranklinFont';
   } @else if unquote($font) == 'K2D' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'K2DFont';
+    @import'K2DFont';
   } @else if unquote($font) == 'FreeSans' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'FreeSans';
+    @import'FreeSans';
   } @else if unquote($font) == 'FreeSerif' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'FreeSerif';
+    @import'FreeSerif';
   } @else if unquote($font) == 'Source Sans Pro' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'SourceSansProFont';
+    @import'SourceSansProFont';
   } @else if unquote($font) == 'Sorts Mill Goudy' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'SortsMillGoudyFont';
+    @import'SortsMillGoudyFont';
   } @else if unquote($font) == 'New Athena Unicode' {
     // noinspection CssInvalidAtRule
-    @scssphp-import-once 'NewAthenaUnicodeFont';
+    @import'NewAthenaUnicodeFont';
   }
 }
