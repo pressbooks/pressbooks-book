@@ -4,7 +4,7 @@
 	"author": "Pressbooks (Book Oven Inc.)",
 	"license": "GPL-3.0-or-later",
 	"engines": {
-		"node": ">= 14"
+		"node": ">= 18"
 	},
 	"repository": {
 		"type": "git",
