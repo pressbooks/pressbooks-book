@@ -7,9 +7,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.18.2\n"
-"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/\n"
-"POT-Creation-Date: 2022-05-24T20:29:34+00:00\n"
+"Project-Id-Version: McLuhan 2.24.0\n"
+"Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
+"POT-Creation-Date: 2022-11-01T20:52:53+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Ali Fuat Demir <afuatdemir@gmail.com>, 2022\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/pressbooks/teams/9194/tr_TR/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Language: tr_TR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.5.0\n"
+"X-Generator: WP-CLI 2.7.1\n"
 
 #. Theme Name of the theme
 msgid "McLuhan"
@@ -85,24 +85,31 @@ msgstr "Yorumlar kapalıdır."
 msgid "Submit"
 msgstr "Gönder"
 
+#. translators: %s: name of network
+#. translators: %s: name of organization
+#: footer.php:60 header.php:79 header.php:86 page-buy.php:28 page-buy.php:38
+#: page-buy.php:48 page-buy.php:58 page-buy.php:68
+msgid "Logo for %s"
+msgstr " %s için logo"
+
 #. translators: %s: Pressbooks
-#: footer.php:64
+#: footer.php:68
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: footer.php:66
+#: footer.php:70
 msgid "Guides and Tutorials"
 msgstr "Kılavuzlar ve Öğreticiler"
 
-#: footer.php:67
+#: footer.php:71
 msgid "Pressbooks Directory"
 msgstr "Pressbooks Dizini"
 
-#: footer.php:74 footer.php:76
+#: footer.php:80
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks YouTube"
 
-#: footer.php:78 footer.php:82
+#: footer.php:86
 msgid "Pressbooks on Twitter"
 msgstr "Pressbooks Twitter"
 
@@ -122,35 +129,40 @@ msgstr "Pressbooks yüklemesi bulunamıyor."
 msgid "Skip to content"
 msgstr "İçeriğe geç"
 
-#. translators: %s: name of network
-#: header.php:79
-msgid "Logo for %s"
-msgstr " %s için logo"
-
-#: header.php:93
+#: header.php:98
 msgid "Toggle Menu"
 msgstr "Toggle Menü"
 
-#: header.php:95
+#: header.php:100
 msgid "Primary Navigation"
 msgstr "Birincil Gezinme"
 
-#: header.php:105 partials/content-cover-toc.php:9
+#: header.php:110
+msgid ""
+"Want to create or adapt books like this? %s about how Pressbooks supports "
+"open publishing practices."
+msgstr ""
+
+#: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr "Kitap İçindekiler Gezinme"
 
-#: header.php:108 index.php:14 partials/content-cover-toc.php:3
+#: header.php:125 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "İçindekiler"
 
 #. translators: %s: the title of the book
-#: header.php:117
+#: header.php:134
 msgid "Go to the cover page of %s"
 msgstr " %s kapak sayfasına gidin"
 
-#: header.php:121 inc/helpers/namespace.php:226
+#: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Satın al"
+
+#: inc/helpers/namespace.php378ß
+msgid "and"
+msgstr ""
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
@@ -168,11 +180,11 @@ msgstr "Orijinal bölüm yüklenemedi."
 msgid "Toggle contents of"
 msgstr "İçeriğini değiştir: "
 
-#: inc/actions/namespace.php:215
+#: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
 msgstr "Resim Işık Kutusunu Etkinleştir"
 
-#: inc/actions/namespace.php:220
+#: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
 msgstr "Bağlantılı resimleri bir ışık kutusunda göster"
 
@@ -330,27 +342,27 @@ msgstr "Sonraki: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:569
+#: inc/helpers/namespace.php:578
 msgid "%s on"
 msgstr "%s de"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:569
+#: inc/helpers/namespace.php:578
 msgid "%1$s at %2$s"
 msgstr "%1$s / %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:569 inc/helpers/namespace.php:598
+#: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
 msgid "(Edit)"
 msgstr "(Düzenle)"
 
-#: inc/helpers/namespace.php:572
+#: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
 msgstr "Yorumunuz onay bekliyor."
 
-#: inc/helpers/namespace.php:598
+#: inc/helpers/namespace.php:607
 msgid "Pingback:"
 msgstr "Geri ping at: "
 
@@ -381,33 +393,13 @@ msgstr ""
 "Ürününü <a href=\"%1$s\">%2$s</a> aşağıdaki bağlantılara tıklayarak satın "
 "alabilirsiniz:"
 
-#. translators: %1$s: url to purchase
-#: page-buy.php:25
-msgid "Purchase on  <a href=\"%1$s\">amazon.com</a>"
-msgstr "Satın al <a href=\"%1$s\">amazon.com</a>"
+#: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
+#: page-buy.php:70
+msgid "Purchase on %s"
+msgstr ""
 
 #. translators: %1$s: url to purchase
-#: page-buy.php:30
-msgid "Purchase on  <a href=\"%1$s\">oreilly.com</a>"
-msgstr "Satın al  <a href=\"%1$s\">oreilly.com</a>"
-
-#. translators: %1$s: url to purchase
-#: page-buy.php:35
-msgid "Purchase on  <a href=\"%1$s\">barnesandnoble.com</a>"
-msgstr "Satın al   <a href=\"%1$s\">barnesandnoble.com</a>"
-
-#. translators: %1$s: url to purchase
-#: page-buy.php:40
-msgid "Purchase on  <a href=\"%1$s\">kobobooks.com</a>"
-msgstr " Satın al  <a href=\"%1$s\">kobobooks.com</a>"
-
-#. translators: %1$s: url to purchase
-#: page-buy.php:45
-msgid "Purchase on  <a href=\"%1$s\">apple.com</a>"
-msgstr "Satın al <a href=\"%1$s\">apple.com</a>"
-
-#. translators: %1$s: url to purchase
-#: page-buy.php:49
+#: page-buy.php:74
 msgid "Purchase here:"
 msgstr "Buradan satın al:"
 
@@ -476,7 +468,7 @@ msgid "View h5p activity"
 msgstr "H5P Etkinliğini görüntüle"
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:90
+#: partials/content-single.php:94
 msgid "Edit"
 msgstr "Editle"
 
@@ -607,11 +599,11 @@ msgstr ""
 "Maalesef arama terimlerinizle hiçbir şey eşleşmedi. Lütfen farklı anahtar "
 "kelimelerle tekrar deneyin."
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:42
+#: partials/content-single-legacy.php:41 partials/content-single.php:46
 msgid "Previous Page"
 msgstr "Önceki sayfa"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:53
+#: partials/content-single-legacy.php:52 partials/content-single.php:57
 msgid "Next Page"
 msgstr "Sonraki Sayfa"
 
@@ -632,7 +624,7 @@ msgstr ""
 msgid "sign in here"
 msgstr "Oturum açın"
 
-#. translators: link to Pressbooks.com
+#. translators: link to Pressbooks.pub
 #: private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "Kendi Pressbooks kitabınızı şu adresten de kurabilirsiniz %s"
