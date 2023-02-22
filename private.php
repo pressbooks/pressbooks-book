@@ -7,7 +7,6 @@
 			<?php
 			printf(
 				__( 'This book is private, and accessible only to registered users. To access the content, either sign in to your account or request access to this book.', 'pressbooks-book' ),
-				
 			);
 			?>
 			</p>
