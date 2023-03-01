@@ -1,3 +1,6 @@
+<?php
+edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
+?>
 <section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 	<?php if ( $number || get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' || $subtitle || $authors ) { ?>
 	<header>
@@ -90,6 +93,3 @@
 	}
 	?>
 </section>
-<?php
-edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
-?>
