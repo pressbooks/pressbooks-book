@@ -24,7 +24,7 @@
 		"recursive-copy-cli": "^1.0.20"
 	},
 	"scripts": {
-		"build": "mix",
+		"build": "mix --production",
 		"lint:scripts": "eslint \"assets/src/scripts/**/*.js\"",
 		"lint:styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\"",
 		"fix-styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --fix" ,
