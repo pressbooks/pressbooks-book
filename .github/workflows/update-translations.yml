@@ -25,7 +25,7 @@ jobs:
     # Remove this step once you are satisfied with the results; alternatively, you can leave it in place and remove
     # the commented out step that follows.
     - name: Open PR with changes
-      uses: peter-evans/create-pull-request@v4
+      uses: peter-evans/create-pull-request@v5
       with:
         title: 'chore(l10n): update translations'
     # - name: Commit updated translation files
