@@ -1,8 +1,7 @@
 # Copyright (C) 2022 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
-# Thomas Dumm <thomas.dumm@delivros-orellfuessli.ch>, 2019
-# nebulon42, 2019
+# Eduardo Vera, 2023
 # 
 msgid ""
 msgstr ""
@@ -10,13 +9,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "POT-Creation-Date: 2022-11-01T20:52:53+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: nebulon42, 2019\n"
-"Language-Team: German (https://app.transifex.com/pressbooks/teams/9194/de/)\n"
+"Last-Translator: Eduardo Vera, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: pressbooks-book\n"
 "X-Generator: WP-CLI 2.7.1\n"
 
@@ -35,487 +34,468 @@ msgid ""
 "writing and is also suitable for fiction. Headings are set in Cormorant "
 "Garamond, and body type is set in Lora."
 msgstr ""
-"Dieses Theme ist nach dem kanadischen Medientheoretiker Marshall McLuhan "
-"benannt, der den Ausdruck \"Das Medium ist die Botschaft\" geprägt hat. Es "
-"ist für akademische Texte konzipiert und eignet sich auch für Belletristik. "
-"Überschriften werden in Cormorant Garamond und der Fließtext in Lora "
-"gesetzt."
+"このテーマは、「メディアはメッセージである」という言葉を作り出すカナダのメディア理論家マーシャル・マクルーハンにちなんで名付けられました。アカデミックライティングに設計されていてフィクションにも適しています。見出しのフォントは"
+" Cormorant Garamond、本文のフォントは Lora に設定しています。"
 
 #. Author of the theme
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr " Pressbooks (Book Oven Inc.) "
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 msgid "https://pressbooks.com"
-msgstr " https://pressbooks.com "
+msgstr "https://pressbooks.com"
 
 #: 404.php:2
 msgid "Oops! That content can&rsquo;t be found."
-msgstr "Hoppla! Dieser Inhalt kann nicht gefunden werden."
+msgstr "エラー: お探しのコンテンツが見つかりません。"
 
 #: 404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
-msgstr ""
-"Anscheinend wurde an dieser Stelle nichts gefunden. Möchten Sie eine Suche "
-"versuchen?"
+msgstr "ここには何も見つからないようです。検索をお試しますか ?"
 
 #: comments.php:2
 msgid "Feedback/Errata"
-msgstr "Rückmeldung/Errata"
+msgstr "フィードバックと正誤表"
 
 #: comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
-msgstr ""
-"Dieser Beitrag ist passwortgeschützt. Geben Sie das Passwort ein um die "
-"Kommentare zu sehen."
+msgstr "この投稿はパスワードで保護されています。コメントを読むにはパスワードを入力してください。"
 
 #: comments.php:36 comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr "<span class=\"meta-nav\">&larr;</span>Ältere Kommentare"
+msgstr "<span class=\"meta-nav\">&larr;</span> 古いコメント"
 
 #: comments.php:37 comments.php:48
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Neuere Kommentare <span class=\"meta-nav\">&rarr;</span>"
+msgstr "新しいコメント <span class=\"meta-nav\">&rarr;</span>"
 
 #: comments.php:56
 msgid "Comments are closed."
-msgstr "Kommentare sind gesperrt"
+msgstr "コメントは受け付けていません。"
 
 #: comments.php:64
 msgid "Submit"
-msgstr "Einreichen"
+msgstr "送信"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
 #: footer.php:60 header.php:79 header.php:86 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
 msgid "Logo for %s"
-msgstr "Logo für %s"
+msgstr "%s のロゴ"
 
 #. translators: %s: Pressbooks
 #: footer.php:68
 msgid "Powered by %s"
-msgstr "Mit %s erstellt"
+msgstr "Powered by %s"
 
 #: footer.php:70
 msgid "Guides and Tutorials"
-msgstr "Anleitungen und Tutorials"
+msgstr "ガイドとチュートリアル"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Pressbooks ディレクトリ"
 
 #: footer.php:80
 msgid "Pressbooks on YouTube"
-msgstr "Pressbooks auf YouTube"
+msgstr "Pressbooks の YouTube"
 
 #: footer.php:86
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks auf Twitter"
+msgstr "Pressbooks の Twitter"
 
 #: functions.php:16
 msgid "Dependencies Missing"
-msgstr "Abhängigkeiten fehlen"
+msgstr "依存関係が見つかりません"
 
 #: functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
-msgstr ""
-"Sie müssen <code>composer install</code> im McLuhan Verzeichnis ausführen."
+msgstr "McLuhan ディレクトリのルートから <code>composer install</code> を実行する必要があります。"
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr "Pressbooks-Installation kann nicht gefunden werden."
+msgstr "Pressbooks のインストールが見つかりません。"
 
 #: header.php:60
 msgid "Skip to content"
-msgstr "Zum Inhalt springen"
+msgstr "コンテンツへスキップ"
 
 #: header.php:98
 msgid "Toggle Menu"
-msgstr "Menü umschalten"
+msgstr "メニューを切り替え"
 
 #: header.php:100
 msgid "Primary Navigation"
-msgstr ""
+msgstr "メインナビゲーション"
 
 #: header.php:110
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
-msgstr ""
+msgstr "このような本を作成または翻案しますか ? Pressbooks がオープン出版慣行をサポートする方法の詳細を %s。"
 
 #: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
-msgstr ""
+msgstr "本コンテンツナビゲーション"
 
 #: header.php:125 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr "Inhalt"
+msgstr "コンテンツ"
 
 #. translators: %s: the title of the book
 #: header.php:134
 msgid "Go to the cover page of %s"
-msgstr "Zum Deckblatt von %s"
+msgstr "「%s」の表紙ページへ移動"
 
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
-msgstr "Kaufen"
+msgstr "購入"
 
 #: inc/helpers/namespace.php378ß
 msgid "and"
-msgstr ""
+msgstr "および"
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
-msgstr "Vergleich wird geladen…"
+msgstr "比較を読み込み中…"
 
 #: inc/actions/namespace.php:65
 msgid "Comparison loaded."
-msgstr "Vergleich geladen"
+msgstr "比較が読み込まれた。"
 
 #: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
-msgstr "Das ursprüngliche Kapitel konnte nicht geladen werden."
+msgstr "元の章が読み込めませんでした。"
 
 #: inc/actions/namespace.php:67
 msgid "Toggle contents of"
-msgstr "Umschalten des Inhalts von"
+msgstr "コンテンツを切り替え:"
 
 #: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
-msgstr "Bild-Lightbox aktivieren"
+msgstr "画像のライトボックスを有効化"
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
-msgstr "Verknüpfte Bilder in einer Lightbox anzeigen"
+msgstr "ライトボックスでリンクされた画像を表示"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr "Privat"
+msgstr "非公開"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
-msgstr "Gemeinfrei (Public Domain)"
+msgstr "パブリック・ドメイン"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
-msgstr "Creative Commons Namensnennung"
+msgstr "クリエイティブ・コモンズ 表示"
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
-msgstr "Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen"
+msgstr "クリエイティブ・コモンズ 表示-継承"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr "Creative Commons Namensnennung-Keine Bearbeitung"
+msgstr "クリエイティブ・コモンズ 表示-改変禁止"
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
-msgstr "Creative Commons Namensnennung-Nicht kommerziell"
+msgstr "クリエイティブ・コモンズ 表示-非営利"
 
 #: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
-msgstr ""
-"Creative Commons Namensnennung-Nicht kommerziell-Weitergabe unter gleichen "
-"Bedingungen"
+msgstr "クリエイティブ・コモンズ 表示-非営利-継承"
 
 #: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr "Creative Commons Namensnennung-Nicht kommerziell-Keine Bearbeitung"
+msgstr "クリエイティブ・コモンズ 表示-非営利-改変禁止"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
-msgstr "Alle Rechte vorbehalten"
+msgstr "All Rights Reserved"
 
 #: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
-msgstr "Schauen Sie sich dieses großartige Buch auf Pressbooks an."
+msgstr "Pressbooks にこの偉大なる本を表示"
 
 #: inc/helpers/namespace.php:209
 msgid "Home"
-msgstr "Startseite"
+msgstr "ホーム"
 
 #: inc/helpers/namespace.php:217
 msgid "Read"
-msgstr "Lesen"
+msgstr "読む"
 
 #: inc/helpers/namespace.php:235
 msgid "Sign in"
-msgstr "Anmelden"
+msgstr "ログイン"
 
 #: inc/helpers/namespace.php:244
 msgid "Admin"
-msgstr "Admin"
+msgstr "管理"
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
-msgstr "Abmelden"
+msgstr "ログアウト"
 
 #: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "Autor"
-msgstr[1] "Autoren"
+msgstr[0] "著者"
 
 #: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] "Redaktor"
-msgstr[1] "Redakteure"
+msgstr[0] "編集者"
 
 #: inc/helpers/namespace.php:438
 msgid "Translator"
 msgid_plural "Translators"
-msgstr[0] "Übersetzer"
-msgstr[1] "Übersetzer"
+msgstr[0] "翻訳者"
 
 #: inc/helpers/namespace.php:439
 msgid "Reviewer"
 msgid_plural "Reviewers"
-msgstr[0] "Lektor"
-msgstr[1] "Lektoren"
+msgstr[0] "校閲者"
 
 #: inc/helpers/namespace.php:440
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] "Illustrator"
-msgstr[1] "Illustratoren"
+msgstr[0] "イラストレーター"
 
 #: inc/helpers/namespace.php:441
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] "Mitarbeiter"
-msgstr[1] "Mitarbeitende"
+msgstr[0] "寄稿者"
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
-msgstr "Lizenz"
+msgstr "ライセンス"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
-msgstr "Hauptthema"
+msgstr "主要な件名"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
-msgstr "Zusatzthema/-themen"
+msgstr "追加の件名"
 
 #: inc/helpers/namespace.php:445
 msgid "Institution"
 msgid_plural "Institutions"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "機関"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
-msgstr "Verlag"
+msgstr "出版社"
 
 #: inc/helpers/namespace.php:447
 msgid "Publication Date"
-msgstr "Erscheinungsdatum"
+msgstr "刊行日付"
 
 #: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
-msgstr "Digitaler Objektbezeichner (DOI)"
+msgstr "デジタルオブジェクト識別子 (DOI)"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
-msgstr "eBook-ISBN"
+msgstr "電子書籍の ISBN"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
-msgstr "Druck-ISBN"
+msgstr "紙の本の ISBN"
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
-msgstr "Hashtag"
+msgstr "ハッシュタグ"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
-msgstr "Zurück zu: %s "
+msgstr "前: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
-msgstr "Weiter zu: %s"
+msgstr "次: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%s on"
-msgstr "%s auf"
+msgstr "%s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%1$s at %2$s"
-msgstr "%1$s auf %2$s"
+msgstr "%1$s %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
 msgid "(Edit)"
-msgstr "(Bearbeiten)"
+msgstr "(編集)"
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
-msgstr "Ihr Beitrag wartet auf die Moderation."
+msgstr "あなたのコメントは承認待ちです。"
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
-msgstr "Pingback:"
+msgstr "ピンバック:"
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr "Dieses Buch enthält keine öffentlichen Inhalte."
+msgstr "この本に公開コンテンツがありません。"
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr "Über das Buch"
+msgstr "本について"
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
-msgstr "Kommt bald!"
+msgstr "導入予定 !"
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr "Autoren"
+msgstr "著者"
 
 #: page-buy.php:5
 msgid "Buy the Book"
-msgstr "Buch kaufen"
+msgstr "本を購入"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
-msgstr ""
-"Sie können das Buch <a href=\"%1$s\">%2$s</a> über einen der folgenden Links"
-" kaufen:"
+msgstr "いずれかの以下のリンク先より「<a href=\"%1$s\">%2$s</a>」を購入できます。"
 
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
 msgid "Purchase on %s"
-msgstr ""
+msgstr "%s に購入"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
 msgid "Purchase here:"
-msgstr "Hier kaufen:"
+msgstr "ここに購入:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "無効な H5P アクティビティ。"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
-msgstr ""
+msgstr "H5P アクティビティリスト"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
-msgstr ""
+msgstr "この本では  "
 
 #: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
-msgstr ""
+msgstr "件の H5P アクティビティが含まれます。本が複製された場合、本のコンテンツに挿入されたものだけが含まれます。"
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "すべてを展開"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
-msgstr ""
+msgstr "すべてを非表示"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "すべてのアクティビティを展開"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "リクエストされた H5P アクティビティがこの本に現在しません。"
 
 #: page-h5p-listing.php:38
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr "Titel"
+msgstr "タイトル"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
-msgstr ""
+msgstr "アクティビティの種類"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr ""
+msgstr "表示/非表示"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
-msgstr ""
+msgstr "アクティビティを表示"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
+msgstr "アクティビティを非表示"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "H5P アクティビティを表示"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:94
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "編集"
 
 #: page.php:18
 msgid "Pages:"
-msgstr "Seiten:"
+msgstr "ページ:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr "Buchtitel"
+msgstr "書名"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr "Untertitel"
+msgstr "字幕"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr "Titelbild für %s"
+msgstr "「%s」の表紙画像"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr "Laden Sie dieses Buch herunter"
+msgstr "この本をダウンロード"
 
 #: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr "Buchbeschreibung"
+msgstr "本の説明"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
-msgstr "Buch lesen"
+msgstr "本を読む"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
-msgstr "Buch kaufen"
+msgstr "本を購入"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr "Buchinformationen"
+msgstr "本の情報"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr "Buchquelle"
+msgstr "本のソース"
 
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
@@ -524,142 +504,136 @@ msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
 msgstr ""
+"この本は %2$s の「%1$s」の複製されたバージョンであり、Pressbooks を使用して %3$s から %4$s "
+"ライセンスで公開しました。元とは異なる場合があります。"
 
 #. translators: %2$s: authors of book
 #. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
 msgid " by %s"
-msgstr "von %s"
+msgstr " %s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
-msgstr ""
-"Dieses Buch wurde von einer Quelle geklont, die nicht mehr verfügbar ist. "
-"Die Quell-URL war %s. Dieses Buch kann vom Original abweichen."
+msgstr "この本はアクセスできないソースを複製されたものです。ソース URL は %s でした。この本は元とは異なる場合があります。"
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
-msgstr "Mitarbeiter"
+msgstr "寄稿者"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr "Thema"
+msgstr "件名"
 
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
 msgid "Click for more information"
-msgstr "Klicken Sie für weitere Informationen"
+msgstr "詳しくは、クリックしてください。"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr "Metadaten"
+msgstr "メタデータ"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr "Alle Inhalte anzeigen"
+msgstr "すべてのコンテンツを表示"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr "Alle Inhalte verbergen"
+msgstr "すべてのコンテンツを非表示"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "Dieses Kapitel ist eine adaptierte Version von %1$s in %2$s von %3$s."
+msgstr "この章は %3$s の「%2$s」の「%1$s」を翻案したものです。"
 
 #: partials/content-difftool.php:66
 msgid ""
 "Note: The comparison below is between this text and the <strong>current "
 "version</strong> of the text from which it was adapted."
-msgstr ""
-"Hinweis: Der nachfolgende Vergleich bezieht sich auf diesen Text und die "
-"<strong>aktuelle Version</strong> des Textes, von dem er abstammt."
+msgstr "注: 以下の比較は、この文章から翻案元の文章の<strong>現在のバージョン</strong>です。"
 
 #: partials/content-difftool.php:67
 msgid "additions"
-msgstr "Ergänzungen"
+msgstr "追加"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
-msgstr "Löschungen"
+msgstr "削除"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr "Nichts gefunden"
+msgstr "何も見つかりませんでした"
 
 #: partials/content-none.php:3
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Entschuldigung, aber nichts stimmt mit Ihren Suchbegriffen überein. Bitte "
-"versuchen Sie es erneut mit anderen Schlüsselwörtern."
+msgstr "検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度お試しください。"
 
 #: partials/content-single-legacy.php:41 partials/content-single.php:46
 msgid "Previous Page"
-msgstr "Vorherige Seite"
+msgstr "前のページ"
 
 #: partials/content-single-legacy.php:52 partials/content-single.php:57
 msgid "Next Page"
-msgstr "Nächste Seite"
+msgstr "次のページ"
 
 #: private.php:4
 msgid "Access Denied"
-msgstr "Zugriff verweigert"
+msgstr "アクセスが拒否されました。"
 
 #. translators: link to sign in
 #: private.php:10
 msgid ""
 "This book is private, and accessible only to registered users. If you have "
 "an account you can %s."
-msgstr ""
-"Dies ist ein privates Buch. Es ist nur für registrierte Benutzer zugänglich."
-" Wenn Sie ein Benutzerkonto haben können Sie sich %s."
+msgstr "この本は非表示であり、登録したユーザーのみがアクセスできます。アカウントがある場合は、%sできます。"
 
 #: private.php:14
 msgid "sign in here"
-msgstr "hier anmelden"
+msgstr "ここにログイン"
 
 #. translators: link to Pressbooks.pub
 #: private.php:23
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr "Sie können auch Ihre privaten Pressbooks Bücher einrichten unter %s."
+msgstr "自分の Pressbooks 本が %s で作成することができます。"
 
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+msgstr "検索結果: %s"
 
 #: search.php:18
 msgid "Previous page"
-msgstr "Vorherige Seite"
+msgstr "前のページ"
 
 #: search.php:19
 msgid "Next page"
-msgstr "Nächste Seite"
+msgstr "次のページ"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr "Seitennavigation"
+msgstr "ページされたナビゲーション"
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr "Suche im Buch:"
+msgstr "本内で検索"
 
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr "Im Buch suchen &hellip;"
+msgstr "本内で検索…"
 
 #: searchform.php:8
 msgid "Search"
-msgstr "Suchen"
+msgstr "検索"
 
 #: single.php:59
 msgid "Share This Book"
-msgstr "Dieses Buch teilen"
+msgstr "この本を共有"
