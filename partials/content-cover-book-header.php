@@ -70,7 +70,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 						// add_filter('pressbooks_download_tracking_code', function( $tracking, $filetype ) {
 						//  return "_gaq.push(['_trackEvent','exportFiles','Downloads','{$title}:{$filetype}']);";
 						// }, 10, 2); @codingStandardsIgnoreEnd
-						$tracking = apply_filters( 'pressbooks_download_tracking_code', "ga('send','event','exportFiles','Downloads','{$title}:{$filetype}');", $filetype, $title );
+						$tracking = apply_filters( 'pressbooks_download_tracking_code', "gtag( 'event','exportFiles', {action: 'download', title: '{$title}', file_type: '{$filetype}'});", $filetype, $title );
 						?>
 					<li class="dropdown-item">
 						<a rel="nofollow" onclick="<?php echo $tracking; ?>" itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="<?php echo $url; ?>">
