@@ -1,6 +1,6 @@
 # Buckram
 
-[![License](https://badgen.net/github/license/pressbooks/buckram)](https://github.com/pressbooks/buckram/blob/main/LICENSE) [![Build Status](https://badgen.net/github/status/pressbooks/buckram)](https://github.com/pressbooks/buckram/actions) [![Latest Release](https://badgen.net/npm/v/buckram)](https://www.npmjs.com/package/buckram)
+[![License](https://badgen.net/github/license/pressbooks/buckram)](https://github.com/pressbooks/buckram/blob/production/LICENSE) [![Build Status](https://badgen.net/github/status/pressbooks/buckram)](https://github.com/pressbooks/buckram/actions) [![Latest Release](https://badgen.net/npm/v/buckram)](https://www.npmjs.com/package/buckram)
 
 Opinionated SCSS components for books (web, EPUB and PDF).
 
@@ -23,8 +23,8 @@ npm test
 
 ## Releasing
 
-[release-please](https://github.com/googleapis/release-please) will generate release notes in a PR automatically based on commits to `dev`.
+Buckram uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), enforced with [commitlint](https://commitlint.js.org/). This facilitates releasing new versions of the package via [Release Please](https://github.com/googleapis/release-please). Release notes will be automatically added to a PR based on commits to `dev`.
 
-Merging the PR to tag a new GitHub release and update [CHANGELOG.md](CHANGELOG.md).
+To cut a release, merge the current [release pull request](https://github.com/google-github-actions/release-please-action#whats-a-release-pr). This will tag a new GitHub release and update [CHANGELOG.md](CHANGELOG.md).
 
-Then, run `npm publish`.
+Then, run `npm publish` from the root of the package and enter your one-time password when prompted. For more information on publishing to npm, see the [npm publish documentation](https://docs.npmjs.com/cli/publish).

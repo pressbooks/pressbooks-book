@@ -62,7 +62,8 @@
   .pullquote--outside + p,
   .pullquote-inside + p,
   .pullquote--inside + p,
-  .sidebar + p {
+  .sidebar + p,
+  .textbox--sidebar + p {
     margin-top: $para-margin-top;
     text-indent: $para-indent;
   }
@@ -199,23 +200,6 @@
       hyphens: none;
     }
 
-    // When paragraphs follow a floated element, make sure indents work as expected.
-    // NOTE: this should only happen when paragraph separators = indent.
-
-    .wp-caption.alignleft + p,
-    .wp-nocaption.alignleft + p,
-    .wp-caption.alignright + p,
-    .wp-nocaption.alignright + p,
-    .float-top + p,
-    .float-bottom + p,
-    .pullquote + p,
-    .pullquote-right + p,
-    .pullquote-left + p,
-    .pullquote-outside + p,
-    .sidebar + p {
-      margin-top: $para-margin-top;
-      text-indent: $para-indent;
-    }
 
     // Hanging Indents
     .hanging-indent {
