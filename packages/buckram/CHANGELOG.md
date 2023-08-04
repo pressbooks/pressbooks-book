@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/pressbooks/buckram/compare/v1.8.1...v1.8.2) (2023-07-16)
+
+
+### Bug Fixes
+
+* update release instructions ([#332](https://github.com/pressbooks/buckram/issues/332)) ([b60dda3](https://github.com/pressbooks/buckram/commit/b60dda36f6858f2bb55e4f536abdf1080194fac0))
+
 ## [1.8.1](https://github.com/pressbooks/buckram/compare/v1.8.0...v1.8.1) (2023-01-04)
 
 

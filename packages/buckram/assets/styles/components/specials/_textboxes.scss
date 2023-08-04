@@ -212,7 +212,7 @@
     margin-inside: $textbox-sidebar-margin-inside;
   }
 
-  max-width: 25%;
+  max-width: $textbox-sidebar-max-width;
 }
 
 @if $type == 'epub' {
