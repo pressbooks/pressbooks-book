@@ -24,6 +24,10 @@ meta[name="pb-authors"] {
   string-set: book-author attr('content');
 }
 
+meta[name="pb-editors"] {
+  string-set: book-editor attr('content');
+}
+
 meta[name="pb-publisher"] {
   string-set: book-publisher attr('content');
 }
