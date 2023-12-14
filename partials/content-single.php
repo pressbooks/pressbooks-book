@@ -75,8 +75,8 @@ edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</d
 		?>
 		<hr class="before-contributors clear">
 		<section class="contributors chapter-authors">
-			<?php /* translators: This display About the Author or Authors ir there are more than one */ ?>
-			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h2>
+			<?php /* translators: This displays About the Author or Authors ir there are more than one */ ?>
+			<h2 class="about-authors"><?php echo _n( 'About the author', 'About the authors', count( $chapter_contributors ), 'pressbooks-book' ); ?></h2>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
 				echo $blade_engine->render(
