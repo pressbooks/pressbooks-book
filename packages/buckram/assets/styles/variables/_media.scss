@@ -133,7 +133,7 @@ $image-alignleft-caption-text-align: $image-caption-text-align !default;
 $image-alignright-caption-text-align: $image-caption-text-align !default;
 
 // Secret!
-$_image-caption-text-align: (
+$image-caption-text-align-map: (
   center: $image-aligncenter-caption-text-align,
   left: $image-alignleft-caption-text-align,
   right: $image-alignright-caption-text-align

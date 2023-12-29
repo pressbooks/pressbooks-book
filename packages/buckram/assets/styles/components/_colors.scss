@@ -59,9 +59,7 @@
   table p {
     color: if-map-get($table-para-color, $type);
   }
-}
-
-@else {
+} @else {
 .front-matter,
 .part,
 .chapter,
@@ -226,12 +224,14 @@ div.sidebar {
   background-color: if-map-get($sidebar-color, $type);
 }
 
-.textbox {
+.textbox,
+.bcc-box {
   background-color: if-map-get($textbox-background-color, $type);
   border-color: if-map-get($textbox-border-color, $type);
 }
 
-.textbox.shaded {
+.textbox.shaded,
+.bcc-box.shaded {
   background-color: if-map-get($textbox-shaded-background-color, $type);
 }
 

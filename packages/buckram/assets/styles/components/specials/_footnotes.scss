@@ -2,15 +2,14 @@
 /// @group specials
 ////
 
-//============================================================================//
+// ============================================================================//
 //                            Footnotes & Endnotes                            //
-//============================================================================//
+// ============================================================================//
 
 @import '../utilities';
 
 // Prince footnotes
 @mixin prince-footnotes {
-
   // Reset counter at the beginning of a new section
   .front-matter,
   .part,
@@ -79,34 +78,28 @@
 
 @if $type == 'prince' {
   @include prince-footnotes;
-}
-
-@else if $type == 'epub' {
+} @else if $type == 'epub' {
   @include epub-footnotes;
 }
 
 // Our footnote function eats <p> & <blockquote> tags, so users should wrap new
 // paragraphs & blockquotes in a span, as per below
 
-.fn-p {
+.fn-p,
+.fn_p // Deprecated; only included for backwards-compatibility.
+{
   display: block;
   text-indent: $para-indent;
 }
 
-.fn_p { // Deprecated; only included for backwards-compatibility.
-  @extend .fn-p;
-}
-
-.fn-blockquote {
+.fn-blockquote,
+.fn_blockquote // Deprecated; only included for backwards-compatibility.
+{
   display: block;
   margin-top: $footnote-blockquote-margin-top;
   margin-bottom: $footnote-blockquote-margin-bottom;
   margin-left: $footnote-blockquote-margin-left;
   font-size: $footnote-blockquote-font-size;
-}
-
-.fn_blockquote { // Deprecated; only included for backwards-compatibility.
-  @extend .fn-blockquote;
 }
 
 // Endnotes

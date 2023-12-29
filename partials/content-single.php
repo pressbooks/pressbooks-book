@@ -1,3 +1,6 @@
+<?php
+edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
+?>
 <section data-type="<?php echo $datatype; ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 	<?php if ( $number || get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' || $subtitle || $authors ) { ?>
 	<header>
@@ -72,8 +75,7 @@
 		?>
 		<hr class="before-contributors clear">
 		<section class="contributors chapter-authors">
-			<?php /* translators: This display About the Author or Authors ir there are more than one */ ?>
-			<h2 class="about-authors"><?php echo sprintf( _n( '%s Author', '%s Authors', count( $chapter_contributors ), 'pressbooks' ), 'About the' ) ?></h2>
+			<h2 class="about-authors"><?php echo _n( 'About the author', 'About the authors', count( $chapter_contributors ), 'pressbooks-book' ); ?></h2>
 			<?php
 			foreach ( $chapter_contributors as $contributor ) {
 				echo $blade_engine->render(
@@ -90,6 +92,3 @@
 	}
 	?>
 </section>
-<?php
-edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
-?>

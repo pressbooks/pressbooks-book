@@ -27,6 +27,7 @@
       @if $type != 'epub' {
         line-height: if-map-get($back-matter-title-line-height, $type);
       }
+
       text-align: $back-matter-title-align;
       text-transform: $back-matter-title-text-transform;
       border-bottom: if-map-get($back-matter-title-border-bottom-width, $type) $back-matter-title-border-bottom-style if-map-get($back-matter-title-border-bottom-color, $type);
@@ -34,7 +35,7 @@
       letter-spacing: if-map-get($back-matter-title-letter-spacing, $type);
       word-spacing: if-map-get($back-matter-title-word-spacing, $type);
 
-      @if ($back-matter-title-decoration-content != "" or $back-matter-title-decoration-display != none) {
+      @if  $back-matter-title-decoration-content != "" or $back-matter-title-decoration-display != none {
         &::after {
           font-family: $back-matter-title-decoration-font-family;
           content: $back-matter-title-decoration-content;
@@ -62,6 +63,7 @@
       @if $type != 'epub' {
         column-span: all;
       }
+
       letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
       word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }

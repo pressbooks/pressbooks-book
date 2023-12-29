@@ -156,11 +156,12 @@ $footnote-blockquote-margin-bottom: 0.5em !default;
 /// @type String
 $footnote-blockquote-margin-left: 1.5em !default;
 
-/// Font-size Margin for footnote blockquote for elements with a class of `fn-blockquote`.
+/// Font-size for footnote blockquote for elements with a class of `fn-blockquote`.
 /// @type String
 $footnote-blockquote-font-size: 0.95em !default;
 
-
+/// Font-size Margin for footnote blockquote for elements with a class of `fn-blockquote`.
+/// @type String
 $footnote-number-marker-font-size: $sup-sub-font-size !default;
 $footnote-number-marker-line-height: $sup-sub-line-height !default;
 

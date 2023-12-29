@@ -2,9 +2,9 @@
 /// @group elements
 ////
 
-//============================================================================//
+// ============================================================================//
 //                                   Lists                                    //
-//============================================================================//
+// ============================================================================//
 @import "../utilities";
 
 %ol {
@@ -62,7 +62,7 @@
 
   li::before {
     counter-increment: level-1;
-    content: counter(level-1)".\A0";
+    content: counter(level-1) ".\A0";
     display: inline-block;
     text-align: right;
     width: if-map-get($ol-padding-left, $type);
@@ -75,7 +75,7 @@
 
   ol li::before {
     counter-increment: level-2;
-    content: counter(level-2, lower-alpha)".\A0";
+    content: counter(level-2, lower-alpha) ".\A0";
     min-width: if-map-get($ol-padding-left, $type);
     width: auto;
   }
@@ -87,7 +87,7 @@
 
   ol ol li::before {
     counter-increment: level-3;
-    content: counter(level-3, lower-roman)".\A0";
+    content: counter(level-3, lower-roman) ".\A0";
   }
 
   ol ol ol {
@@ -97,7 +97,7 @@
 
   ol ol ol li::before {
     counter-increment: level-4;
-    content: counter(level-4)")\A0";
+    content: counter(level-4) ")\A0";
   }
 
   ol ol ol ol {
@@ -107,7 +107,7 @@
 
   ol ol ol ol li::before {
     counter-increment: level-5;
-    content: counter(level-5, lower-alpha)")\A0";
+    content: counter(level-5, lower-alpha) ")\A0";
   }
 
   ol ol ol ol ol {
@@ -117,7 +117,7 @@
 
   ol ol ol ol ol li::before {
     counter-increment: level-6;
-    content: counter(level-6, lower-roman)")\A0";
+    content: counter(level-6, lower-roman) ")\A0";
   }
 }
 
@@ -152,7 +152,7 @@
 
   li::before {
     counter-increment: level-1;
-    content: counter(level-1, upper-roman)".\A0";
+    content: counter(level-1, upper-roman) ".\A0";
     display: inline-block;
     text-align: right;
     width: if-map-get($ol-padding-left, $type);
@@ -165,7 +165,7 @@
 
   ol li::before {
     counter-increment: level-2;
-    content: counter(level-2, upper-alpha)".\A0";
+    content: counter(level-2, upper-alpha) ".\A0";
     min-width: if-map-get($ol-padding-left, $type);
     width: auto;
   }
@@ -177,7 +177,7 @@
 
   ol ol li::before {
     counter-increment: level-3;
-    content: counter(level-3)".\A0";
+    content: counter(level-3) ".\A0";
   }
 
   ol ol ol {
@@ -187,7 +187,7 @@
 
   ol ol ol li::before {
     counter-increment: level-4;
-    content: counter(level-4, lower-alpha)".\A0";
+    content: counter(level-4, lower-alpha) ".\A0";
   }
 
   ol ol ol ol {
@@ -197,7 +197,7 @@
 
   ol ol ol ol li::before {
     counter-increment: level-5;
-    content: "("counter(level-5)")\A0";
+    content: "("counter(level-5) ")\A0";
   }
 
   ol ol ol ol ol {
@@ -207,7 +207,7 @@
 
   ol ol ol ol ol li::before {
     counter-increment: level-6;
-    content: "("counter(level-6, lower-alpha)")\A0";
+    content: "("counter(level-6, lower-alpha) ")\A0";
   }
 }
 
@@ -218,7 +218,7 @@
 
   li::before {
     counter-increment: level-1;
-    content: counter(level-1)".\A0";
+    content: counter(level-1) ".\A0";
     display: inline-block;
     text-align: right;
     width: if-map-get($ol-padding-left, $type);
@@ -231,7 +231,7 @@
 
   ol li::before {
     counter-increment: level-2;
-    content: counter(level-1)"."counter(level-2)".\A0";
+    content: counter(level-1) "."counter(level-2) ".\A0";
     min-width: if-map-get($ol-padding-left, $type);
     width: auto;
   }
@@ -243,7 +243,7 @@
 
   ol ol li::before {
     counter-increment: level-3;
-    content: counter(level-1)"."counter(level-2)"."counter(level-3)".\A0";
+    content: counter(level-1) "."counter(level-2) "."counter(level-3) ".\A0";
   }
 
   ol ol ol {
@@ -253,7 +253,7 @@
 
   ol ol ol li::before {
     counter-increment: level-4;
-    content: counter(level-1)"."counter(level-2)"."counter(level-3)"."counter(level-4)".\A0";
+    content: counter(level-1) "."counter(level-2) "."counter(level-3) "."counter(level-4) ".\A0";
   }
 
   ol ol ol ol {
@@ -263,7 +263,7 @@
 
   ol ol ol ol li::before {
     counter-increment: level-5;
-    content: counter(level-1)"."counter(level-2)"."counter(level-3)"."counter(level-4)"."counter(level-5)".\A0";
+    content: counter(level-1) "."counter(level-2) "."counter(level-3) "."counter(level-4) "."counter(level-5) ".\A0";
   }
 
   ol ol ol ol ol {
@@ -273,7 +273,7 @@
 
   ol ol ol ol ol li::before {
     counter-increment: level-6;
-    content: counter(level-1)"."counter(level-2)"."counter(level-3)"."counter(level-4)"."counter(level-5)"."counter(level-6)"\A0";
+    content: counter(level-1) "."counter(level-2) "."counter(level-3) "."counter(level-4) "."counter(level-5) "."counter(level-6) "\A0";
   }
 }
 
@@ -326,7 +326,7 @@
     margin-top: if-map-get($li-li-margin-top, $type);
   }
 
-  @include generic-ordered-lists();
+  @include generic-ordered-lists;
 
   dl dt {
     @extend %dt;
@@ -403,7 +403,7 @@
       @extend %decimal;
     }
 
-    @include generic-ordered-lists();
+    @include generic-ordered-lists;
   }
 
   dl dt {

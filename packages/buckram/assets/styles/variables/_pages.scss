@@ -7,7 +7,7 @@
 // HALF TITLE PAGE
 /// Half Title page display.
 /// @type String | Map
-$title-half-title-display:(
+$title-half-title-display: (
   epub: none,
   prince: initial,
   web: none
@@ -88,7 +88,7 @@ $title-title-font-family: $font-2 !default;
 
 /// Font size for title page title on elements `<h1>` with a class of `title`.
 /// @type String | Map
-$title-title-font-size:(
+$title-title-font-size: (
   epub: 1.75em,
   prince: 2em,
   web: 1.75em
@@ -136,7 +136,7 @@ $title-title-decoration-display: none !default;
 /// Defines the title page title decoration font size.
 /// @type String | Map
 /// @since 1.0.0
-$title-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
+$title-title-decoration-font-size: (epub:  0, prince: 0, web: 0) !default;
 
 /// Defines the title page title decoration font weight.
 /// @type String
@@ -146,12 +146,12 @@ $title-title-decoration-font-weight: normal !default;
 /// Defines the title page title decoration margin bottom.
 /// @type String | Map
 /// @since 1.0.0
-$title-title-decoration-margin-bottom: (epub:  0em, prince: 0em, web: 0em) !default;
+$title-title-decoration-margin-bottom: (epub:  0, prince: 0, web: 0) !default;
 
 /// Defines the title page title decoration margin top.
 /// @type String | Map
 /// @since 1.0.0
-$title-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
+$title-title-decoration-margin-top: (epub:  0, prince: 0, web: 0) !default;
 
 /// Defines bottom border width for the title page title.
 /// @type String | Map
@@ -198,7 +198,7 @@ $title-subtitle-font-family: $font-3 !default;
 
 /// Font size for title page subtitle on elements `<h2>` with a class of `subtitle`.
 /// @type String | Map
-$title-subtitle-font-size:(
+$title-subtitle-font-size: (
   epub: 1.25em,
   prince: 1.5em,
   web: 1.25em
@@ -279,7 +279,7 @@ $title-author-font-family: $font-2 !default;
 
 /// Font size for title page author on elements with a class of `author`.
 /// @type String | Map
-$title-author-font-size:(
+$title-author-font-size: (
   epub: 1em,
   prince: 1.5em,
   web: 1em

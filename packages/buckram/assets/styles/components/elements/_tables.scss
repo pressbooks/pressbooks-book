@@ -2,9 +2,9 @@
 /// @group elements
 ////
 
-//============================================================================//
+// ============================================================================//
 //                                  Tables                                    //
-//============================================================================//
+// ============================================================================//
 
 @import '../utilities';
 
@@ -24,12 +24,14 @@
     @if $type != 'prince' {
       overflow-x: scroll;
     }
+
     font-family: $table-font-family;
     font-size: $table-font-size;
     hyphens: $table-hyphens;
     @if $type == 'prince' {
       line-height: $table-line-height;
     }
+
     text-align: $table-align;
     border-collapse: collapse;
     border-top: $table-border-width solid if-map-get($line-color-1, $type);
@@ -48,6 +50,7 @@
         line-height: $table-caption-line-height;
       }
     }
+
     &.lines {
       border-color: if-map-get($line-color-1, $type);
     }
@@ -152,6 +155,7 @@
     @if $type == 'prince' {
       line-height: $table-th-line-height;
     }
+
     text-align: $table-th-align;
     vertical-align: $table-th-vertical-align;
     border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
@@ -167,6 +171,7 @@
     @if $type == 'prince' {
       line-height: $table-td-line-height;
     }
+
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
   }
@@ -175,9 +180,7 @@
     border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
     border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
   }
-}
-
-@else {
+} @else {
   .front-matter,
   .part,
   .chapter,

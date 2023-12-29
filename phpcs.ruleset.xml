@@ -17,5 +17,5 @@
     </rule>
 	<!-- Run against the PHPCompatibility ruleset -->
 	<rule ref="PHPCompatibility"/>
-	<config name="testVersion" value="8.0-8.1"/>
+	<config name="testVersion" value="8.1-8.2"/>
 </ruleset>
