@@ -1,0 +1,37 @@
+name: Update Translations
+
+on:
+  pull_request:
+    paths:
+      - 'languages/*.po'
+  workflow_dispatch:
+
+jobs:
+  update-mo-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: wp-cli/wp-cli-bundle
+
+      - name: Generate .mo files from .po files
+        run: wp i18n make-mo languages
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Commit and push .mo files
+        run: |
+          git add -A
+          git commit -m "chore: update .mo files"
+          git push origin ${{ github.head_ref }}
