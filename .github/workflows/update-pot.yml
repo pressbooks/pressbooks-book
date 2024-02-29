@@ -17,7 +17,7 @@ jobs:
     - name: Setup PHP with tools
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '8.1'
         tools: composer, wp-cli/wp-cli-bundle
     - name: Update POT file
       run: wp i18n make-pot . languages/pressbooks-book.pot --domain=pressbooks-book --slug=pressbooks-book --package-name="McLuhan" --headers="{\"Report-Msgid-Bugs-To\":\"https://github.com/pressbooks/pressbooks-book/issues\"}"
@@ -27,9 +27,9 @@ jobs:
       with:
         token: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
         labels: automerge-pot
-        commit-message: 'chore(l10n): update languages/pressbooks.pot'
-        title: 'chore(l10n): update languages/pressbooks.pot'
-        body: 'This pull request updates the POT file for the Pressbooks project.'
+        commit-message: 'chore(l10n): update pot file'
+        title: 'chore(l10n): update pot file'
+        body: 'This pull request updates the POT file for this theme.'
         branch: chore/update-pot-file
     - name: Merge pull request with updated POT file
       if: ${{ steps.cprpot.outputs.pull-request-number }}
