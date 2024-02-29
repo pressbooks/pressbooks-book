@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){var t=document.querySelectorAll('#content a[href$=".gif"], #content a[href$=".jpg"], #content a[href$=".png"]');Array.prototype.forEach.call(t,(function(t){t.setAttribute("data-lity","true")}))}));
