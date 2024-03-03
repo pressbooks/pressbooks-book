@@ -404,7 +404,7 @@ msgstr "Comprar en %s"
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
 msgid "Purchase here:"
-msgstr ""
+msgstr "Comprar aquí:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
