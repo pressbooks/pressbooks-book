@@ -664,8 +664,8 @@ msgstr "Buscar en el libro&hellip;"
 
 #: searchform.php:8
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: single.php:59
 msgid "Share This Book"
-msgstr ""
+msgstr "Comparte este libro"
