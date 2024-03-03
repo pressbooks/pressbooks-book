@@ -275,11 +275,11 @@ msgstr "ライセンス"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
-msgstr ""
+msgstr "主要な件名"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
-msgstr ""
+msgstr "追加の件名"
 
 #: inc/helpers/namespace.php:445
 msgid "Institution"
