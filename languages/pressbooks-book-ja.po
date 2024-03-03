@@ -179,7 +179,7 @@ msgstr "ライトボックスでリンクされた画像を表示"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr ""
+msgstr "非公開"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
