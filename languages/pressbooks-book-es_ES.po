@@ -460,15 +460,15 @@ msgstr "Mostrar/Ocultar"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
-msgstr ""
+msgstr "Mostrar la actividad"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
+msgstr "Ocultar la actividad"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "Ver la actividad H5P"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
