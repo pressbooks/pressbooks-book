@@ -523,12 +523,12 @@ msgstr "寄稿者"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr ""
+msgstr "件名"
 
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
 msgid "Click for more information"
-msgstr ""
+msgstr "詳しくは、クリックしてください。"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
