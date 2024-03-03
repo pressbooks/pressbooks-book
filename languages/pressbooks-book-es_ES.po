@@ -341,7 +341,7 @@ msgstr "Anterior: %s"
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
-msgstr ""
+msgstr "Siguiente: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
