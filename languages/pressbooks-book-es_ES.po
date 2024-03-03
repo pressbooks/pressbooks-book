@@ -642,7 +642,7 @@ msgstr "Resultados de búsqueda de: %s"
 
 #: search.php:18
 msgid "Previous page"
-msgstr ""
+msgstr "Página anterior"
 
 #: search.php:19
 msgid "Next page"
