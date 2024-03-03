@@ -646,11 +646,11 @@ msgstr "Página anterior"
 
 #: search.php:19
 msgid "Next page"
-msgstr ""
+msgstr "Página siguiente"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr ""
+msgstr "Navegación paginada"
 
 #: searchform.php:3
 msgctxt "label"
