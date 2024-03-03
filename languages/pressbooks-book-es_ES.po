@@ -234,11 +234,11 @@ msgstr "Leer"
 
 #: inc/helpers/namespace.php:235
 msgid "Sign in"
-msgstr ""
+msgstr "Acceder"
 
 #: inc/helpers/namespace.php:244
 msgid "Admin"
-msgstr ""
+msgstr "Administración"
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
