@@ -655,12 +655,12 @@ msgstr "Navegación paginada"
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr ""
+msgstr "Buscar en el libro:"
 
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr ""
+msgstr "Buscar en el libro&hellip;"
 
 #: searchform.php:8
 msgid "Search"
