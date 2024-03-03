@@ -223,7 +223,7 @@ msgstr "ホーム"
 
 #: inc/helpers/namespace.php:217
 msgid "Read"
-msgstr ""
+msgstr "読む"
 
 #: inc/helpers/namespace.php:235
 msgid "Sign in"
