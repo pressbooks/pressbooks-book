@@ -187,11 +187,11 @@ msgstr "パブリック・ドメイン"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
-msgstr ""
+msgstr "クリエイティブ・コモンズ 表示"
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
-msgstr ""
+msgstr "クリエイティブ・コモンズ 表示-継承"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
