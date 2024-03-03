@@ -371,11 +371,11 @@ msgstr "Pingback:"
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr ""
+msgstr "Este libro no tiene contenido público."
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr ""
+msgstr "Acerca del libro"
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
