@@ -473,11 +473,11 @@ msgstr "Ver la actividad H5P"
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: page.php:18
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
