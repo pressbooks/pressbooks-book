@@ -551,11 +551,11 @@ msgstr "この章は %3$s の「%2$s」の「%1$s」を翻案したものです�
 msgid ""
 "Note: The comparison below is between this text and the <strong>current "
 "version</strong> of the text from which it was adapted."
-msgstr ""
+msgstr "注: 以下の比較は、この文章から翻案元の文章の<strong>現在のバージョン</strong>です。"
 
 #: partials/content-difftool.php:67
 msgid "additions"
-msgstr ""
+msgstr "追加"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
