@@ -248,9 +248,9 @@ msgstr "Salir"
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Autor"
+msgstr[1] "Autores"
+msgstr[2] "Autores"
 
 #: inc/helpers/namespace.php:437
 msgid "Editor"
