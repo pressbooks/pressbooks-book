@@ -242,7 +242,7 @@ msgstr "Administración"
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
-msgstr ""
+msgstr "Salir"
 
 #: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
