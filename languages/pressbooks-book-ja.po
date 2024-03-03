@@ -314,25 +314,25 @@ msgstr "ハッシュタグ"
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
-msgstr ""
+msgstr "前: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
-msgstr ""
+msgstr "次: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%s on"
-msgstr ""
+msgstr "%s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
