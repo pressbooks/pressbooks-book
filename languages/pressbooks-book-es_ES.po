@@ -214,11 +214,11 @@ msgstr "Creative Commons Atribución NoComercial CompartirIgual"
 
 #: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr ""
+msgstr "Creative Commons Atribución NoComercial SinDerivadas"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Todos los derechos reservados"
 
 #: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
