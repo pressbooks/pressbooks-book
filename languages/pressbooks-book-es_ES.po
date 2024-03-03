@@ -533,7 +533,7 @@ msgstr ""
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
 msgid " by %s"
-msgstr ""
+msgstr " por %s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
@@ -541,6 +541,9 @@ msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
 msgstr ""
+"Este libro fue clonado a partir de un origen que ya no está disponible. La "
+"dirección URL del origen era %s. Puede haber diferencias respecto al "
+"original."
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
