@@ -381,15 +381,15 @@ msgstr "%s に購入"
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
 msgid "Purchase here:"
-msgstr ""
+msgstr "ここに購入:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "無効な H5P アクティビティ。"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
-msgstr ""
+msgstr "H5P アクティビティリスト"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
