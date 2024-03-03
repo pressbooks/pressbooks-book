@@ -393,7 +393,7 @@ msgstr "H5P アクティビティリスト"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
-msgstr ""
+msgstr "この本では  "
 
 #: page-h5p-listing.php:26
 msgid ""
