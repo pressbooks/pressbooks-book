@@ -515,11 +515,11 @@ msgstr " %s"
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
-msgstr ""
+msgstr "この本はアクセスできないソースを複製されたものです。ソース URL は %s でした。この本は元とは異なる場合があります。"
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
-msgstr ""
+msgstr "寄稿者"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
