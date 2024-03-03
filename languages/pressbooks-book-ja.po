@@ -603,11 +603,11 @@ msgstr "自分の Pressbooks 本が %s で作成することができます。"
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "検索結果: %s"
 
 #: search.php:18
 msgid "Previous page"
-msgstr ""
+msgstr "前のページ"
 
 #: search.php:19
 msgid "Next page"
