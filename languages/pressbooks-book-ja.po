@@ -215,7 +215,7 @@ msgstr "All Rights Reserved"
 
 #: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
-msgstr ""
+msgstr "Pressbooks にこの偉大なる本を表示"
 
 #: inc/helpers/namespace.php:209
 msgid "Home"
