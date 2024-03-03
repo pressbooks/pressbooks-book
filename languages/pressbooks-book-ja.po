@@ -284,7 +284,7 @@ msgstr "追加の件名"
 #: inc/helpers/namespace.php:445
 msgid "Institution"
 msgid_plural "Institutions"
-msgstr[0] ""
+msgstr[0] "機関"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
