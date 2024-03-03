@@ -633,12 +633,12 @@ msgstr ""
 #. translators: link to Pressbooks.pub
 #: private.php:17
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr ""
+msgstr "También puedes crear tu propio libro de Pressbooks en %s."
 
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados de búsqueda de: %s"
 
 #: search.php:18
 msgid "Previous page"
