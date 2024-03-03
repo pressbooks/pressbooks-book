@@ -408,11 +408,11 @@ msgstr "Comprar aquí:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "La actividad H5P no es válida."
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
-msgstr ""
+msgstr "Lista de actividades H5P"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
