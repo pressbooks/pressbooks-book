@@ -231,7 +231,7 @@ msgstr "ログイン"
 
 #: inc/helpers/namespace.php:244
 msgid "Admin"
-msgstr ""
+msgstr "管理"
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
