@@ -580,6 +580,8 @@ msgid ""
 "Note: The comparison below is between this text and the <strong>current "
 "version</strong> of the text from which it was adapted."
 msgstr ""
+"Nota: La siguiente comparación es entre este texto y la <strong>versión "
+"actual</strong> del texto a partir del cual fue adaptado."
 
 #: partials/content-difftool.php:67
 msgid "additions"
