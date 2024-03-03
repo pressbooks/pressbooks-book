@@ -452,11 +452,11 @@ msgstr "編集"
 
 #: page.php:18
 msgid "Pages:"
-msgstr ""
+msgstr "ページ:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr ""
+msgstr "書名"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
