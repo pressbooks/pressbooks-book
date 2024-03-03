@@ -246,7 +246,7 @@ msgstr[0] "著者"
 #: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] ""
+msgstr[0] "編集者"
 
 #: inc/helpers/namespace.php:438
 msgid "Translator"
