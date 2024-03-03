@@ -290,7 +290,7 @@ msgstr[2] "Colaboradores"
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:35
 msgid "License"
-msgstr ""
+msgstr "Licencia"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
