@@ -423,11 +423,11 @@ msgstr "ID"
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
-msgstr ""
+msgstr "アクティビティの種類"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
