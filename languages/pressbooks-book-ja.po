@@ -435,20 +435,20 @@ msgstr "表示/非表示"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
-msgstr ""
+msgstr "アクティビティを表示"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
+msgstr "アクティビティを非表示"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "H5P アクティビティを表示"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: page.php:18
 msgid "Pages:"
