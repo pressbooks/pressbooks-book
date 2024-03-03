@@ -294,11 +294,11 @@ msgstr "Licencia"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
-msgstr ""
+msgstr "Tema principal"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
-msgstr ""
+msgstr "Temas adicionales"
 
 #: inc/helpers/namespace.php:445
 msgid "Institution"
