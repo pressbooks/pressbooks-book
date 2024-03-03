@@ -186,11 +186,11 @@ msgstr "Mostrar las imágenes enlazadas en una caja de luz"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr ""
+msgstr "Privado"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
-msgstr ""
+msgstr "Dominio público"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
