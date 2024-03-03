@@ -495,16 +495,16 @@ msgstr "Imagen de cubierta de %s"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr ""
+msgstr "Descargar este libro"
 
 #: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr ""
+msgstr "Descripción del libro"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
-msgstr ""
+msgstr "Leer el libro"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
