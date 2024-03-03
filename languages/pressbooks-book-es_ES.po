@@ -585,7 +585,7 @@ msgstr ""
 
 #: partials/content-difftool.php:67
 msgid "additions"
-msgstr ""
+msgstr "añadidos"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
