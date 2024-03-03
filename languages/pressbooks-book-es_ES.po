@@ -379,11 +379,11 @@ msgstr "Acerca del libro"
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
-msgstr ""
+msgstr "¡Ya viene!"
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr ""
+msgstr "Autores"
 
 #: page-buy.php:5
 msgid "Buy the Book"
