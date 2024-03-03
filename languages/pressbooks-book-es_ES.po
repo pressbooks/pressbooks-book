@@ -560,11 +560,11 @@ msgstr "Haz clic para obtener más información"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr ""
+msgstr "Metadatos"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr ""
+msgstr "Mostrar todo el contenido"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
