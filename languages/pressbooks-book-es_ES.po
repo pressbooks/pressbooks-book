@@ -347,13 +347,13 @@ msgstr "Siguiente: %s"
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%s on"
-msgstr ""
+msgstr "%s en"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s a las %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
