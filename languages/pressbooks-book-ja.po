@@ -611,11 +611,11 @@ msgstr "前のページ"
 
 #: search.php:19
 msgid "Next page"
-msgstr ""
+msgstr "次のページ"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr ""
+msgstr "ページされたナビゲーション"
 
 #: searchform.php:3
 msgctxt "label"
