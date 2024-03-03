@@ -288,15 +288,15 @@ msgstr[0] "機関"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
-msgstr ""
+msgstr "出版社"
 
 #: inc/helpers/namespace.php:447
 msgid "Publication Date"
-msgstr ""
+msgstr "刊行日付"
 
 #: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
-msgstr ""
+msgstr "デジタルオブジェクト識別子 (DOI)"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
