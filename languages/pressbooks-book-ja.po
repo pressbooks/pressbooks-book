@@ -376,7 +376,7 @@ msgstr "いずれかの以下のリンク先より「<a href=\"%1$s\">%2$s</a>�
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
 msgid "Purchase on %s"
-msgstr ""
+msgstr "%s に購入"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
