@@ -235,13 +235,13 @@ msgstr "管理"
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
-msgstr ""
+msgstr "ログアウト"
 
 #: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
+msgstr[0] "著者"
 
 #: inc/helpers/namespace.php:437
 msgid "Editor"
