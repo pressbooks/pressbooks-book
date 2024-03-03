@@ -371,7 +371,7 @@ msgstr "本を購入"
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
-msgstr ""
+msgstr "いずれかの以下のリンク先より「<a href=\"%1$s\">%2$s</a>」を購入できます。"
 
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
