@@ -598,7 +598,7 @@ msgstr ""
 #. translators: link to Pressbooks.pub
 #: private.php:17
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr ""
+msgstr "自分の Pressbooks 本が %s で作成することができます。"
 
 #. translators: search string
 #: search.php:6
