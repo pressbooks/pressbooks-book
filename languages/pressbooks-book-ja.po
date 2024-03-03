@@ -540,12 +540,12 @@ msgstr "すべてのコンテンツを表示"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr ""
+msgstr "すべてのコンテンツを非表示"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr ""
+msgstr "この章は %3$s の「%2$s」の「%1$s」を翻案したものです。"
 
 #: partials/content-difftool.php:66
 msgid ""
