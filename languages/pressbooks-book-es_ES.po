@@ -432,15 +432,15 @@ msgstr "Expandir todo"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
-msgstr ""
+msgstr "Ocultar todo"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "Expandir todas las actividades"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "La actividad H5P solicitada no existe en este libro."
 
 #: page-h5p-listing.php:38
 msgid "ID"
