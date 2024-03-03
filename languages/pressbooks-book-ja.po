@@ -470,12 +470,12 @@ msgstr "「%s」の表紙画像"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr ""
+msgstr "この本をダウンロード"
 
 #: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr ""
+msgstr "本の説明"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
