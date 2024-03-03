@@ -431,7 +431,7 @@ msgstr "アクティビティの種類"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr ""
+msgstr "表示/非表示"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
