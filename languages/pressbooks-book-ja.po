@@ -399,7 +399,7 @@ msgstr "この本では  "
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
-msgstr ""
+msgstr "件の H5P アクティビティが含まれます。本が複製された場合、本のコンテンツに挿入されたものだけが含まれます。"
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
