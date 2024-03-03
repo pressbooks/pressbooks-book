@@ -195,11 +195,11 @@ msgstr "クリエイティブ・コモンズ 表示-継承"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr ""
+msgstr "クリエイティブ・コモンズ 表示-改変禁止"
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
-msgstr ""
+msgstr "クリエイティブ・コモンズ 表示-非営利"
 
 #: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
