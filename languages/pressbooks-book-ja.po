@@ -620,12 +620,12 @@ msgstr "ページされたナビゲーション"
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr ""
+msgstr "本内で検索"
 
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr ""
+msgstr "本内で検索…"
 
 #: searchform.php:8
 msgid "Search"
