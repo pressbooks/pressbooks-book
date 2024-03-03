@@ -547,7 +547,7 @@ msgstr ""
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
-msgstr ""
+msgstr "Colaboradores"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
