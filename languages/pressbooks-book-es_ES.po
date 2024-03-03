@@ -516,7 +516,7 @@ msgstr "Información del libro"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr ""
+msgstr "Origen del libro"
 
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
