@@ -403,15 +403,15 @@ msgstr "件の H5P アクティビティが含まれます。本が複製され�
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "すべてを展開"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
-msgstr ""
+msgstr "すべてを非表示"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "すべてのアクティビティを展開"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
