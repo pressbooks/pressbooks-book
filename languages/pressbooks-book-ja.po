@@ -300,15 +300,15 @@ msgstr "デジタルオブジェクト識別子 (DOI)"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
-msgstr ""
+msgstr "電子書籍の ISBN"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
-msgstr ""
+msgstr "紙の本の ISBN"
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
-msgstr ""
+msgstr "ハッシュタグ"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
