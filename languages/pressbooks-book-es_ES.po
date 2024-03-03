@@ -589,11 +589,11 @@ msgstr "añadidos"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
-msgstr ""
+msgstr "borrados"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr ""
+msgstr "No se ha encontrado nada"
 
 #: partials/content-none.php:3
 msgid ""
