@@ -335,7 +335,7 @@ msgstr "Hashtag"
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
-msgstr ""
+msgstr "Anterior: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
