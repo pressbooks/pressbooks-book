@@ -460,13 +460,13 @@ msgstr "書名"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr ""
+msgstr "字幕"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr ""
+msgstr "「%s」の表紙画像"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
