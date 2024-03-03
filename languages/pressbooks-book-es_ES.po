@@ -551,12 +551,12 @@ msgstr "Colaboradores"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr ""
+msgstr "Tema"
 
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
 msgid "Click for more information"
-msgstr ""
+msgstr "Haz clic para obtener más información"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
