@@ -629,8 +629,8 @@ msgstr "本内で検索…"
 
 #: searchform.php:8
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: single.php:59
 msgid "Share This Book"
-msgstr ""
+msgstr "この本を共有"
