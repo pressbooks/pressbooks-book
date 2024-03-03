@@ -219,7 +219,7 @@ msgstr "Pressbooks にこの偉大なる本を表示"
 
 #: inc/helpers/namespace.php:209
 msgid "Home"
-msgstr ""
+msgstr "ホーム"
 
 #: inc/helpers/namespace.php:217
 msgid "Read"
