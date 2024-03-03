@@ -614,9 +614,9 @@ msgstr "Página siguiente"
 #: partials/content-single.php:78
 msgid "About the author"
 msgid_plural "About the authors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Sobre el autor"
+msgstr[1] "Sobre los autores"
+msgstr[2] "Sobre los autores"
 
 #: private.php:4
 msgid "Access Denied"
