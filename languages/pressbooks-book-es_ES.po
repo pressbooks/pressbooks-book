@@ -198,11 +198,11 @@ msgstr "Creative Commons Atribución"
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
-msgstr ""
+msgstr "Creative Commons Atribución CompartirIgual"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr ""
+msgstr "Creative Commons Atribución SinDerivadas"
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
