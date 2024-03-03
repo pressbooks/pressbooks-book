@@ -563,13 +563,13 @@ msgstr "削除"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr ""
+msgstr "何も見つかりませんでした"
 
 #: partials/content-none.php:3
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度お試しください。"
 
 #: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
