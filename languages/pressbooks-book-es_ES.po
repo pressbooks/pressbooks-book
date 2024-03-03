@@ -620,13 +620,15 @@ msgstr[2] "Sobre los autores"
 
 #: private.php:4
 msgid "Access Denied"
-msgstr ""
+msgstr "Acceso denegado"
 
 #: private.php:9
 msgid ""
 "This book is private, and accessible only to registered users. To access the"
 " content, either sign in to your account or request access to this book."
 msgstr ""
+"Este libro es privado y accesible solo para los usuarios registrados. Para "
+"acceder al contenido,, accede a tu cuenta o solicita acceso a este libro."
 
 #. translators: link to Pressbooks.pub
 #: private.php:17
