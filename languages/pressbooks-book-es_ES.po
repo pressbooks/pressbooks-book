@@ -491,7 +491,7 @@ msgstr "Subtítulo"
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr ""
+msgstr "Imagen de cubierta de %s"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
