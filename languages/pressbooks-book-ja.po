@@ -207,7 +207,7 @@ msgstr "クリエイティブ・コモンズ 表示-非営利-継承"
 
 #: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr ""
+msgstr "クリエイティブ・コモンズ 表示-非営利-改変禁止"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
