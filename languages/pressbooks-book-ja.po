@@ -500,6 +500,8 @@ msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
 msgstr ""
+"この本は %2$s の「%1$s」の複製されたバージョンであり、Pressbooks を使用して %3$s から %4$s "
+"ライセンスで公開しました。元とは異なる場合があります。"
 
 #. translators: %2$s: authors of book
 #. translators: %3$s: publisher of book
