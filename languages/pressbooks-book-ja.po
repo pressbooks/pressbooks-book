@@ -559,7 +559,7 @@ msgstr "追加"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
-msgstr ""
+msgstr "削除"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
