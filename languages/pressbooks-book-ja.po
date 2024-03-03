@@ -582,11 +582,11 @@ msgstr "次のページ"
 #: partials/content-single.php:78
 msgid "About the author"
 msgid_plural "About the authors"
-msgstr[0] ""
+msgstr[0] "著者について"
 
 #: private.php:4
 msgid "Access Denied"
-msgstr ""
+msgstr "アクセスが拒否されました。"
 
 #: private.php:9
 msgid ""
