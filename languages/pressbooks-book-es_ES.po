@@ -568,12 +568,12 @@ msgstr "Mostrar todo el contenido"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr ""
+msgstr "Ocultar todo el contenido"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
 msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr ""
+msgstr "Este capítulo es una adaptación de %1$s en %2$s por %3$s."
 
 #: partials/content-difftool.php:66
 msgid ""
