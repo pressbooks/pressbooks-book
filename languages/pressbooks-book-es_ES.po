@@ -481,11 +481,11 @@ msgstr "Páginas:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr ""
+msgstr "Título del libro"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr ""
+msgstr "Subtítulo"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
