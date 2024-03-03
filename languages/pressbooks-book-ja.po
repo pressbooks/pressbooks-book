@@ -479,19 +479,19 @@ msgstr "本の説明"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
-msgstr ""
+msgstr "本を読む"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
-msgstr ""
+msgstr "本を購入"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr ""
+msgstr "本の情報"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr ""
+msgstr "本のソース"
 
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
