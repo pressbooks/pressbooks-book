@@ -428,7 +428,7 @@ msgstr ""
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "Expandir todo"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
