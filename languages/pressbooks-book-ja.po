@@ -362,11 +362,11 @@ msgstr "導入予定 !"
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr ""
+msgstr "著者"
 
 #: page-buy.php:5
 msgid "Buy the Book"
-msgstr ""
+msgstr "本を購入"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
