@@ -338,27 +338,27 @@ msgstr "%1$s %2$s"
 #. comment
 #: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
 msgid "(Edit)"
-msgstr ""
+msgstr "(編集)"
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "あなたのコメントは承認待ちです。"
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
-msgstr ""
+msgstr "ピンバック:"
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr ""
+msgstr "この本に公開コンテンツがありません。"
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr ""
+msgstr "本について"
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
-msgstr ""
+msgstr "導入予定 !"
 
 #: page-authors.php:31
 msgid "Authors"
