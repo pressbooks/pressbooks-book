@@ -211,7 +211,7 @@ msgstr "クリエイティブ・コモンズ 表示-非営利-改変禁止"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "All Rights Reserved"
 
 #: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
