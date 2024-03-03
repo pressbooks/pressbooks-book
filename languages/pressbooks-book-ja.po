@@ -183,7 +183,7 @@ msgstr "非公開"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
-msgstr ""
+msgstr "パブリック・ドメイン"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
