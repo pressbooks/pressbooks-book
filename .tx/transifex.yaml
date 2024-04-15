@@ -4,7 +4,7 @@ git:
           file_format: PO
           source_file: languages/pressbooks-book.pot
           source_language: en
-          translation_files_expression: languages/pressbooks-book-<lang>.po
+          translation_files_expression: languages/<lang>.po
     settings:
         pr_branch_name: chore/update-translations-<br_unique_id>
         language_mapping:
