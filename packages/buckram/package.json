@@ -29,7 +29,7 @@
     "pixelmatch": "^5.2.1",
     "polyserve": "^0.27.15",
     "pressbooks-build-tools": "^4.0.0",
-    "puppeteer": "^21.0.3",
+    "puppeteer": "^22.6.5",
     "sassdoc": "^2.7.1",
     "type-detect": "^4.0.8"
   },
