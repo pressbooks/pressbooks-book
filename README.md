@@ -38,8 +38,6 @@ Install the [GitHub Updater plugin](https://github.com/afragen/github-updater).
 
 Then, from the GitHub Updater interface, navigate to the "Install Theme" tab. Enter [https://github.com/pressbooks/pressbooks-book](https://github.com/pressbooks/pressbooks-book) as the Theme URI, then click "Install Theme". Tagged updates to this theme will then be available as normal WordPress updates.
 
-## Changelog
+### Changelog
 
-### 2.26.2
-* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.26.2
-* Full release history available at: https://github.com/pressbooks/pressbooks-book/releases
+Please see the [CHANGELOG](CHANGELOG.md) file for more information.
