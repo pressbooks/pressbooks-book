@@ -40,6 +40,4 @@ Then, from the GitHub Updater interface, navigate to the "Install Theme" tab. En
 
 ## Changelog
 
-### 2.26.2
-* See: https://github.com/pressbooks/pressbooks-book/releases/tag/2.26.2
-* Full release history available at: https://github.com/pressbooks/pressbooks-book/releases
+Please see the [CHANGELOG](CHANGELOG.md) file for more information.
