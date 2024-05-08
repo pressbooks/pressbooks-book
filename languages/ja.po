@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.26.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-05-08T16:43:41+00:00\n"
+"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/ja/)\n"
@@ -140,6 +140,10 @@ msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr "このような本を作成または翻案しますか ? Pressbooks がオープン出版慣行をサポートする方法の詳細を %s。"
+
+#: header.php:110
+msgid "Learn more"
+msgstr ""
 
 #: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
