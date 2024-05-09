@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Antonio D., 2017
@@ -7,16 +7,17 @@
 # Hubert GB <hgblouin@tciinc.ca>, 2019
 # Amelie Roberge <aroberge@tciinc.ca>, 2019
 # Dac Chartrand <dac@pressbooks.com>, 2019
-# Steel Wagstaff <steel@pressbooks.com>, 2019
 # Thomas Weideman, 2021
+# Steel Wagstaff <steel@pressbooks.com>, 2023
+# Felipe Dalcin, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.24.0\n"
+"Project-Id-Version: McLuhan 2.26.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2022-11-01T20:52:53+00:00\n"
+"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Thomas Weideman, 2021\n"
+"Last-Translator: Felipe Dalcin, 2024\n"
 "Language-Team: French (https://app.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,17 +25,20 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.10.0\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "McLuhan"
 msgstr "McLuhan"
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://pressbooks.com/themes/pressbooks-book"
 msgstr "https://pressbooks.com/themes/pressbooks-book"
 
 #. Description of the theme
+#: style.css
 msgid ""
 "This theme is named after Canadian media theorist Marshall McLuhan, who "
 "coined the phrase “the medium is the message.” It is designed for academic "
@@ -48,10 +52,12 @@ msgstr ""
 "Les en-têtes sont en Cormorant Garamond et le corps du texte en Lora."
 
 #. Author of the theme
+#: style.css
 msgid "Pressbooks (Book Oven Inc.)"
 msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
+#: style.css
 msgid "https://pressbooks.com"
 msgstr "https://pressbooks.com"
 
@@ -110,7 +116,7 @@ msgstr "Guides et tutoriels"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Annuaire Pressbooks"
 
 #: footer.php:80
 msgid "Pressbooks on YouTube"
@@ -144,17 +150,23 @@ msgstr "Afficher/masquer le menu"
 
 #: header.php:100
 msgid "Primary Navigation"
-msgstr ""
+msgstr "Navigation Principale"
 
 #: header.php:110
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr ""
+"Voulez-vous créer ou adapter des livres comme celui-ci ? %s comment "
+"Pressbooks soutient les pratiques d'édition ouverte."
+
+#: header.php:110
+msgid "Learn more"
+msgstr ""
 
 #: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
-msgstr ""
+msgstr "Contenu du livre Navigation"
 
 #: header.php:125 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
@@ -168,10 +180,6 @@ msgstr "Aller à la page couverture de %s"
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "Acheter"
-
-#: inc/helpers/namespace.php378ß
-msgid "and"
-msgstr ""
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
@@ -320,9 +328,9 @@ msgstr "Sujets supplémentaires"
 #: inc/helpers/namespace.php:445
 msgid "Institution"
 msgid_plural "Institutions"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Institution"
+msgstr[1] "Institutions"
+msgstr[2] "Institutions"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
@@ -334,7 +342,7 @@ msgstr "Date de publication"
 
 #: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
-msgstr "identificateur d&rsquo;objets numériques (DOI)"
+msgstr "Identificateur d&rsquo;objets numériques (DOI)"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
@@ -342,7 +350,7 @@ msgstr "NINL du livre numérique"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
-msgstr "Imprimer le NINL"
+msgstr "NINL du livre imprimé"
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
@@ -416,7 +424,7 @@ msgstr ""
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
 msgid "Purchase on %s"
-msgstr ""
+msgstr "Acheter sur %s"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
@@ -425,37 +433,39 @@ msgstr "Acheter ici&nbsp;:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "Activité H5P invalide"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
-msgstr ""
+msgstr "Liste des activités H5P"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
-msgstr ""
+msgstr "Ce livre comprend"
 
 #: page-h5p-listing.php:26
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
 msgstr ""
+"les activités H5P. Seules celles qui ont été insérées dans le contenu du "
+"livre seront incluses si le livre est cloné."
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "Développer tout"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
-msgstr ""
+msgstr "Cacher tout"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "Développer toutes les activités"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "L'activité H5P demandée n'existe pas dans ce livre."
 
 #: page-h5p-listing.php:38
 msgid "ID"
@@ -467,26 +477,26 @@ msgstr "Titre"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
-msgstr ""
+msgstr "Type d'activité"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr ""
+msgstr "Afficher/Masquer"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
-msgstr ""
+msgstr "Afficher l'activité"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
+msgstr "Masquer l'activité"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "Afficher l'activité H5P"
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:94
+#: partials/content-single.php:2
 msgid "Edit"
 msgstr "Modifier"
 
@@ -540,6 +550,8 @@ msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
 msgstr ""
+"Ce livre est une version clonée de %1$s%2$s, publiée avec Pressbooks%3$s "
+"sous la licence %4$s. Il se peut qu'il soit différent de l'original."
 
 #. translators: %2$s: authors of book
 #. translators: %3$s: publisher of book
@@ -616,33 +628,36 @@ msgstr ""
 "Désolé, votre recherche n&rsquo;a donné aucun résultat. Veuillez réessayer "
 "avec des mots-clés différents."
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:46
+#: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
 msgstr "Page précédente"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:57
+#: partials/content-single-legacy.php:52 partials/content-single.php:60
 msgid "Next Page"
 msgstr "Page suivante"
+
+#: partials/content-single.php:78
+msgid "About the author"
+msgid_plural "About the authors"
+msgstr[0] "À propos de l'auteur"
+msgstr[1] "À propos des auteurs"
+msgstr[2] "À propos des auteurs"
 
 #: private.php:4
 msgid "Access Denied"
 msgstr "Accès refusé"
 
-#. translators: link to sign in
-#: private.php:10
+#: private.php:9
 msgid ""
-"This book is private, and accessible only to registered users. If you have "
-"an account you can %s."
+"This book is private, and accessible only to registered users. To access the"
+" content, either sign in to your account or request access to this book."
 msgstr ""
-"Ce livre est privé. Seuls les utilisateurs autorisés peuvent y avoir accès. "
-"Si vous avez un compte, vous pouvez %s."
-
-#: private.php:14
-msgid "sign in here"
-msgstr "se connecter ici"
+"Ce livre est privé et accessible uniquement aux utilisateurs enregistrés. "
+"Pour accéder au contenu, connectez-vous à votre compte ou demandez l'accès à"
+" ce livre."
 
 #. translators: link to Pressbooks.pub
-#: private.php:23
+#: private.php:17
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "Vous pouvez également créer votre propre livre Pressbooks à %s"
 

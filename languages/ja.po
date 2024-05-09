@@ -1,13 +1,13 @@
-# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Eduardo Vera, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.24.0\n"
+"Project-Id-Version: McLuhan 2.26.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2022-11-01T20:52:53+00:00\n"
+"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/ja/)\n"
@@ -17,17 +17,20 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.10.0\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "McLuhan"
 msgstr "McLuhan"
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://pressbooks.com/themes/pressbooks-book"
 msgstr "https://pressbooks.com/themes/pressbooks-book"
 
 #. Description of the theme
+#: style.css
 msgid ""
 "This theme is named after Canadian media theorist Marshall McLuhan, who "
 "coined the phrase “the medium is the message.” It is designed for academic "
@@ -38,10 +41,12 @@ msgstr ""
 " Cormorant Garamond、本文のフォントは Lora に設定しています。"
 
 #. Author of the theme
+#: style.css
 msgid "Pressbooks (Book Oven Inc.)"
 msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
+#: style.css
 msgid "https://pressbooks.com"
 msgstr "https://pressbooks.com"
 
@@ -136,6 +141,10 @@ msgid ""
 "open publishing practices."
 msgstr "このような本を作成または翻案しますか ? Pressbooks がオープン出版慣行をサポートする方法の詳細を %s。"
 
+#: header.php:110
+msgid "Learn more"
+msgstr ""
+
 #: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr "本コンテンツナビゲーション"
@@ -152,10 +161,6 @@ msgstr "「%s」の表紙ページへ移動"
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
 msgstr "購入"
-
-#: inc/helpers/namespace.php378ß
-msgid "and"
-msgstr "および"
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
@@ -450,7 +455,7 @@ msgid "View h5p activity"
 msgstr "H5P アクティビティを表示"
 
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:94
+#: partials/content-single.php:2
 msgid "Edit"
 msgstr "編集"
 
@@ -575,31 +580,32 @@ msgid ""
 "different keywords."
 msgstr "検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度お試しください。"
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:46
+#: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
 msgstr "前のページ"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:57
+#: partials/content-single-legacy.php:52 partials/content-single.php:60
 msgid "Next Page"
 msgstr "次のページ"
+
+#: partials/content-single.php:78
+msgid "About the author"
+msgid_plural "About the authors"
+msgstr[0] "著者について"
 
 #: private.php:4
 msgid "Access Denied"
 msgstr "アクセスが拒否されました。"
 
-#. translators: link to sign in
-#: private.php:10
+#: private.php:9
 msgid ""
-"This book is private, and accessible only to registered users. If you have "
-"an account you can %s."
-msgstr "この本は非表示であり、登録したユーザーのみがアクセスできます。アカウントがある場合は、%sできます。"
-
-#: private.php:14
-msgid "sign in here"
-msgstr "ここにログイン"
+"This book is private, and accessible only to registered users. To access the"
+" content, either sign in to your account or request access to this book."
+msgstr ""
+"この本は非表示であり、登録したユーザーのみがアクセスできます。コンテンツにアクセスするには、アカウントにログインするか、この本へのアクセスをリクエストしてください。"
 
 #. translators: link to Pressbooks.pub
-#: private.php:23
+#: private.php:17
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "自分の Pressbooks 本が %s で作成することができます。"
 

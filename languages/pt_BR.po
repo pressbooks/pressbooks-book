@@ -1,7 +1,7 @@
 # Copyright (C) 2024 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
-# Antonio D., 2018
+# Felipe Dalcin, 2024
 # 
 msgid ""
 msgstr ""
@@ -9,13 +9,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Antonio D., 2018\n"
-"Language-Team: Latvian (https://app.transifex.com/pressbooks/teams/9194/lv/)\n"
+"Last-Translator: Felipe Dalcin, 2024\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/pressbooks/teams/9194/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lv\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
 "X-Generator: WP-CLI 2.10.0\n"
 
@@ -50,22 +50,20 @@ msgstr ""
 
 #: 404.php:2
 msgid "Oops! That content can&rsquo;t be found."
-msgstr "Ups! Nav iespējams atrast šo saturu."
+msgstr ""
 
 #: 404.php:3
 msgid "It looks like nothing was found at this location. Try a search?"
-msgstr "Izskatās, ka šajā vietā nekas nav. Pamēģināt pameklēt?"
+msgstr ""
 
 #: comments.php:2
 msgid "Feedback/Errata"
-msgstr "Atgriezeniskā saite/Piedāvāto labojumu saraksts"
+msgstr ""
 
 #: comments.php:6
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-"Šī publikācija ir aizsargāta ar paroli. Ievadiet paroli, lai ieraudzītu "
-"komentārus."
 
 #: comments.php:36 comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
@@ -77,11 +75,11 @@ msgstr ""
 
 #: comments.php:56
 msgid "Comments are closed."
-msgstr "Komentāri ir aizslēgti."
+msgstr ""
 
 #: comments.php:64
 msgid "Submit"
-msgstr "Iesniegt"
+msgstr ""
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
@@ -97,7 +95,7 @@ msgstr ""
 
 #: footer.php:70
 msgid "Guides and Tutorials"
-msgstr ""
+msgstr "Guias e Tutoriais"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
@@ -105,15 +103,15 @@ msgstr ""
 
 #: footer.php:80
 msgid "Pressbooks on YouTube"
-msgstr ""
+msgstr "Pressbooks no Youtube"
 
 #: footer.php:86
 msgid "Pressbooks on Twitter"
-msgstr "Pressbooks profils Twitter'ā"
+msgstr "Pressbooks no Twitter"
 
 #: functions.php:16
 msgid "Dependencies Missing"
-msgstr "Atkarīgo daļu nepieciešamība"
+msgstr ""
 
 #: functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
@@ -121,15 +119,15 @@ msgstr ""
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
-msgstr "Nevar atrast Pressbooks vietnes instalētāju."
+msgstr ""
 
 #: header.php:60
 msgid "Skip to content"
-msgstr "Pariet pie satura"
+msgstr ""
 
 #: header.php:98
 msgid "Toggle Menu"
-msgstr "Pārslēgt izvēlni"
+msgstr ""
 
 #: header.php:100
 msgid "Primary Navigation"
@@ -151,7 +149,7 @@ msgstr ""
 
 #: header.php:125 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr "Saturs "
+msgstr ""
 
 #. translators: %s: the title of the book
 #: header.php:134
@@ -160,19 +158,19 @@ msgstr ""
 
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
-msgstr "Nopirkt"
+msgstr "Comprar"
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
-msgstr "Salīdzinājuma ielāde..."
+msgstr "Carregando comparação"
 
 #: inc/actions/namespace.php:65
 msgid "Comparison loaded."
-msgstr "Salīdzinājums ielādējās."
+msgstr "Comparação carregada"
 
 #: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
-msgstr "Oriģināla nodaļa nevar būt ielādēta."
+msgstr ""
 
 #: inc/actions/namespace.php:67
 msgid "Toggle contents of"
@@ -180,146 +178,142 @@ msgstr ""
 
 #: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
-msgstr "Aktivēt uznirstošo logu ar bildi"
+msgstr ""
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
-msgstr "Rādīt saistītus attēlus uznirstošā logā"
+msgstr ""
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr "Privāts"
+msgstr ""
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
-msgstr "Publisks domēns"
+msgstr ""
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
-msgstr "Licence ar radošas apvienības autorību norādi"
+msgstr ""
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
 msgstr ""
-"Licence ar radošas apvienības autorību norādi ar tādiem pašiem noteikumiem"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr "Licence ar radošas apvienības autorību norādi bez atvasinājumiem"
+msgstr ""
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
-msgstr "Licence ar radošas apvienības autorību norādi bezpeļņas"
+msgstr ""
 
 #: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr ""
-"Licence ar radošas apvienības autorību norādi bezpeļņas ar tādiem pašiem "
-"noteikumiem"
 
 #: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr ""
-"Licence ar radošas apvienības autorību norādi bezpeļņas bez atvasinājumiem"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
-msgstr "Visas tiesības paturētas."
+msgstr ""
 
 #: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
-msgstr "Novērtējiet šo lielisku grāmatu Pressbooks vietnē."
+msgstr ""
 
 #: inc/helpers/namespace.php:209
 msgid "Home"
-msgstr "Mājaslapa"
+msgstr ""
 
 #: inc/helpers/namespace.php:217
 msgid "Read"
-msgstr "Lāsīt"
+msgstr ""
 
 #: inc/helpers/namespace.php:235
 msgid "Sign in"
-msgstr "Ieiet"
+msgstr ""
 
 #: inc/helpers/namespace.php:244
 msgid "Admin"
-msgstr "Administrēšana "
+msgstr ""
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
-msgstr "Iziet"
+msgstr ""
 
 #: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] "Autoru"
-msgstr[1] "Autors"
-msgstr[2] "Autori"
-
-#: inc/helpers/namespace.php:437
-msgid "Editor"
-msgid_plural "Editors"
-msgstr[0] "Redaktora"
-msgstr[1] "Redaktors"
-msgstr[2] "Redaktori"
-
-#: inc/helpers/namespace.php:438
-msgid "Translator"
-msgid_plural "Translators"
-msgstr[0] "Tulkotāju"
-msgstr[1] "Tulkotājs"
-msgstr[2] "Tulkotaji"
-
-#: inc/helpers/namespace.php:439
-msgid "Reviewer"
-msgid_plural "Reviewers"
-msgstr[0] "Tehnisko redaktoru"
-msgstr[1] "Tehniskais redaktors"
-msgstr[2] "Tehniskie redaktori"
-
-#: inc/helpers/namespace.php:440
-msgid "Illustrator"
-msgid_plural "Illustrators"
-msgstr[0] "Ilustratora"
-msgstr[1] "Ilustrators"
-msgstr[2] "Ilustratori"
-
-#: inc/helpers/namespace.php:441
-msgid "Contributor"
-msgid_plural "Contributors"
-msgstr[0] "Līdzstrādnieka"
-msgstr[1] "Līdzstrādnieks"
-msgstr[2] "Līdzstrādnieki"
-
-#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:35
-msgid "License"
-msgstr "Licence"
-
-#: inc/helpers/namespace.php:443
-msgid "Primary Subject"
-msgstr "Pamattēma "
-
-#: inc/helpers/namespace.php:444
-msgid "Additional Subject(s)"
-msgstr "Papildus tēma(s)"
-
-#: inc/helpers/namespace.php:445
-msgid "Institution"
-msgid_plural "Institutions"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
+#: inc/helpers/namespace.php:437
+msgid "Editor"
+msgid_plural "Editors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: inc/helpers/namespace.php:438
+msgid "Translator"
+msgid_plural "Translators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: inc/helpers/namespace.php:439
+msgid "Reviewer"
+msgid_plural "Reviewers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: inc/helpers/namespace.php:440
+msgid "Illustrator"
+msgid_plural "Illustrators"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: inc/helpers/namespace.php:441
+msgid "Contributor"
+msgid_plural "Contributors"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
+#: partials/content-cover-book-info.php:67 single.php:35
+msgid "License"
+msgstr ""
+
+#: inc/helpers/namespace.php:443
+msgid "Primary Subject"
+msgstr ""
+
+#: inc/helpers/namespace.php:444
+msgid "Additional Subject(s)"
+msgstr ""
+
+#: inc/helpers/namespace.php:445
+msgid "Institution"
+msgid_plural "Institutions"
+msgstr[0] "Instituição"
+msgstr[1] "Instituições"
+msgstr[2] "Instituições"
+
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
-msgstr "Izdevējs"
+msgstr ""
 
 #: inc/helpers/namespace.php:447
 msgid "Publication Date"
-msgstr "Publikācijas datums"
+msgstr "Data de Publicação"
 
 #: inc/helpers/namespace.php:448 single.php:43
 msgid "Digital Object Identifier (DOI)"
@@ -327,15 +321,15 @@ msgstr ""
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
-msgstr "Elektroniskās grāmatas ISBN"
+msgstr ""
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
-msgstr "Izdrukāt ISBN"
+msgstr ""
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
-msgstr "Atsauces tags"
+msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
@@ -365,35 +359,35 @@ msgstr ""
 #. comment
 #: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
 msgid "(Edit)"
-msgstr "(Rediģēt)"
+msgstr ""
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
-msgstr "Jūsu komentārs gaida pārbaudi."
+msgstr ""
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
-msgstr "Atbalspaziņošana:"
+msgstr ""
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr "Šajā grāmata nav nekāda publiskā satura."
+msgstr ""
 
 #: page-about.php:5
 msgid "About The Book"
-msgstr "Par grāmatu"
+msgstr "Sobre o Livro"
 
 #: page-about.php:21 page-buy.php:10 page-buy.php:18
 msgid "It's coming!"
-msgstr "Drīz!"
+msgstr ""
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr "Autori"
+msgstr ""
 
 #: page-buy.php:5
 msgid "Buy the Book"
-msgstr "Nopirkt grāmatu"
+msgstr ""
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
@@ -408,7 +402,7 @@ msgstr ""
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
 msgid "Purchase here:"
-msgstr "Iegadāties te:"
+msgstr ""
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
@@ -450,7 +444,7 @@ msgstr ""
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr "Virsraksts"
+msgstr "Título"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
@@ -475,19 +469,19 @@ msgstr ""
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
 msgid "Edit"
-msgstr "Rediģēt"
+msgstr "Editar"
 
 #: page.php:18
 msgid "Pages:"
-msgstr "Lapaspuses:"
+msgstr "Páginas:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr "Grāmatas virsraksts"
+msgstr "Título do Livro"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr "Apakšvirsraksts "
+msgstr ""
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
@@ -497,28 +491,28 @@ msgstr ""
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr "lejuplādēt šo gramatu"
+msgstr "Baixar este livro"
 
 #: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr "Grāmatas apraksts "
+msgstr "Descrição do Livro"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
-msgstr "Lasīt grāmatu"
+msgstr "Ler Livro"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
-msgstr "Nopirkt grāmatu"
+msgstr "Comprar Livro"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr "Informācija par grāmatu"
+msgstr "Informações do Livro"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
-msgstr "Grāmatas avots"
+msgstr ""
 
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
@@ -541,31 +535,33 @@ msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
 msgstr ""
+"Este livro foi clonado de uma fonte que não está mais disponível. A URL de "
+"origem era %s. Este livro pode ser diferente do original."
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
-msgstr "Līdzstrādnieki"
+msgstr ""
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr "Tēma"
+msgstr "Assunto"
 
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
 msgid "Click for more information"
-msgstr "Noklikšķiniet, lai iegūtu papildinformāciju"
+msgstr "Clique para mais informações"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr "Metadati"
+msgstr ""
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr ""
+msgstr "Mostrar Todo o Conteúdo"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr ""
+msgstr "Ocultar Todo o Conteúdo"
 
 #. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
 #: partials/content-difftool.php:52
@@ -580,31 +576,31 @@ msgstr ""
 
 #: partials/content-difftool.php:67
 msgid "additions"
-msgstr "papildinājumi"
+msgstr "adições"
 
 #: partials/content-difftool.php:67
 msgid "deletions"
-msgstr "izdzēšanas"
+msgstr "exclusões"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr "Nekas netika atrasts "
+msgstr "Nada Encontrado"
 
 #: partials/content-none.php:3
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Atvainojiet, bet nekas neatbilst Jūsu meklējamajiem terminiem. Lūdzu, "
-"mēģiniet vēlreiz, ievadot citus atslēgvārdus."
+"Desculpe, mas nada corresponde aos seus termos de pesquisa. Por favor, tente"
+" novamente com algumas palavras-chave diferentes."
 
 #: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
-msgstr "Iepriekšējā lapaspuse"
+msgstr "Página Anterior"
 
 #: partials/content-single-legacy.php:52 partials/content-single.php:60
 msgid "Next Page"
-msgstr "Nākamā lapaspuse"
+msgstr "Próxima Página"
 
 #: partials/content-single.php:78
 msgid "About the author"
@@ -615,50 +611,52 @@ msgstr[2] ""
 
 #: private.php:4
 msgid "Access Denied"
-msgstr "Piekļuve nav atļauta"
+msgstr "Acesso Negado"
 
 #: private.php:9
 msgid ""
 "This book is private, and accessible only to registered users. To access the"
 " content, either sign in to your account or request access to this book."
 msgstr ""
+"Este livro é privado e acessível apenas a usuários registrados. Para acessar"
+" o conteúdo, faça login em sua conta ou solicite acesso a este livro."
 
 #. translators: link to Pressbooks.pub
 #: private.php:17
 msgid "You can also set up your own Pressbooks book at %s."
-msgstr ""
+msgstr "Você também pode criar seu próprio livro Pressbooks em %s."
 
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados da busca por: %s"
 
 #: search.php:18
 msgid "Previous page"
-msgstr "Iepriekšējā lapaspuse"
+msgstr "Página anterior"
 
 #: search.php:19
 msgid "Next page"
-msgstr "Nākamā lapaspuse"
+msgstr "Próxima página"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr "Navigācija lapaspusē"
+msgstr "Navegação paginada"
 
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr "Atrast grāmatā:"
+msgstr "Pesquisar no livro:"
 
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr ""
+msgstr "Pesquisar no livro &hellip;"
 
 #: searchform.php:8
 msgid "Search"
-msgstr "Meklēt"
+msgstr ""
 
 #: single.php:59
 msgid "Share This Book"
-msgstr "Dalīties ar šo grāmatu"
+msgstr "Compartilhe Este Livro"
