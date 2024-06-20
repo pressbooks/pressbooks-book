@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.26.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
+"POT-Creation-Date: 2024-06-20T18:13:02+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: nebulon42, 2019\n"
 "Language-Team: German (https://app.transifex.com/pressbooks/teams/9194/de/)\n"
@@ -295,7 +295,7 @@ msgstr[0] "Mitarbeiter"
 msgstr[1] "Mitarbeitende"
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:35
+#: partials/content-cover-book-info.php:67 single.php:33
 msgid "License"
 msgstr "Lizenz"
 
@@ -321,7 +321,7 @@ msgstr "Verlag"
 msgid "Publication Date"
 msgstr "Erscheinungsdatum"
 
-#: inc/helpers/namespace.php:448 single.php:43
+#: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digitaler Objektbezeichner (DOI)"
 
@@ -571,27 +571,6 @@ msgstr "Alle Inhalte anzeigen"
 msgid "Hide All Contents"
 msgstr "Alle Inhalte verbergen"
 
-#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
-#: partials/content-difftool.php:52
-msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "Dieses Kapitel ist eine adaptierte Version von %1$s in %2$s von %3$s."
-
-#: partials/content-difftool.php:66
-msgid ""
-"Note: The comparison below is between this text and the <strong>current "
-"version</strong> of the text from which it was adapted."
-msgstr ""
-"Hinweis: Der nachfolgende Vergleich bezieht sich auf diesen Text und die "
-"<strong>aktuelle Version</strong> des Textes, von dem er abstammt."
-
-#: partials/content-difftool.php:67
-msgid "additions"
-msgstr "Ergänzungen"
-
-#: partials/content-difftool.php:67
-msgid "deletions"
-msgstr "Löschungen"
-
 #: partials/content-none.php:2
 msgid "Nothing Found"
 msgstr "Nichts gefunden"
@@ -664,6 +643,6 @@ msgstr "Im Buch suchen &hellip;"
 msgid "Search"
 msgstr "Suchen"
 
-#: single.php:59
+#: single.php:57
 msgid "Share This Book"
 msgstr "Dieses Buch teilen"
