@@ -29,8 +29,6 @@
 
 					<div class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
-							<?php include( locate_template( 'partials/content-difftool.php' ) ); ?>
-
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h2>
 								<?php
