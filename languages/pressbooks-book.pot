@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
+"POT-Creation-Date: 2024-06-20T18:13:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: pressbooks-book\n"
@@ -285,7 +285,7 @@ msgstr[1] ""
 #: inc/helpers/namespace.php:442
 #: partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67
-#: single.php:35
+#: single.php:33
 msgid "License"
 msgstr ""
 
@@ -312,7 +312,7 @@ msgid "Publication Date"
 msgstr ""
 
 #: inc/helpers/namespace.php:448
-#: single.php:43
+#: single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
@@ -558,23 +558,6 @@ msgstr ""
 msgid "Hide All Contents"
 msgstr ""
 
-#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
-#: partials/content-difftool.php:52
-msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr ""
-
-#: partials/content-difftool.php:66
-msgid "Note: The comparison below is between this text and the <strong>current version</strong> of the text from which it was adapted."
-msgstr ""
-
-#: partials/content-difftool.php:67
-msgid "additions"
-msgstr ""
-
-#: partials/content-difftool.php:67
-msgid "deletions"
-msgstr ""
-
 #: partials/content-none.php:2
 msgid "Nothing Found"
 msgstr ""
@@ -643,6 +626,6 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: single.php:59
+#: single.php:57
 msgid "Share This Book"
 msgstr ""
