@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.26.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
+"POT-Creation-Date: 2024-06-20T18:13:02+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Radost G <radosvetagiuleva@abv.bg>, 2020\n"
 "Language-Team: Bulgarian (Bulgaria) (https://app.transifex.com/pressbooks/teams/9194/bg_BG/)\n"
@@ -292,7 +292,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:35
+#: partials/content-cover-book-info.php:67 single.php:33
 msgid "License"
 msgstr "Лиценз"
 
@@ -318,7 +318,7 @@ msgstr "Издател"
 msgid "Publication Date"
 msgstr "Дата на публикуване"
 
-#: inc/helpers/namespace.php:448 single.php:43
+#: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "Идентификатор на цифров обект (DOI)"
 
@@ -568,27 +568,6 @@ msgstr "Покажи Цялото Съдържание"
 msgid "Hide All Contents"
 msgstr "Скрий Цялото Съдържание"
 
-#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
-#: partials/content-difftool.php:52
-msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "Тази глава е адаптирана на база: %1$s в %2$s от %3$s"
-
-#: partials/content-difftool.php:66
-msgid ""
-"Note: The comparison below is between this text and the <strong>current "
-"version</strong> of the text from which it was adapted."
-msgstr ""
-"Забележка: Сравнението по-долу е между този текст  <strong> и текущата "
-"версия на текста </strong>, от който е адаптиран."
-
-#: partials/content-difftool.php:67
-msgid "additions"
-msgstr "Допълнения"
-
-#: partials/content-difftool.php:67
-msgid "deletions"
-msgstr "Изтривания"
-
 #: partials/content-none.php:2
 msgid "Nothing Found"
 msgstr "Нищо не е намерено"
@@ -661,6 +640,6 @@ msgstr "Търси в книга"
 msgid "Search"
 msgstr "Търсене"
 
-#: single.php:59
+#: single.php:57
 msgid "Share This Book"
 msgstr "Сподели Тази Книга"

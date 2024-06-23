@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.26.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-05-08T19:47:08+00:00\n"
+"POT-Creation-Date: 2024-06-20T18:13:02+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
 "Language-Team: Kannada (https://app.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -289,7 +289,7 @@ msgstr[0] "ಕೊಡುಗೆದಾರ"
 msgstr[1] "ಕೊಡುಗೆದಾರರು"
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:35
+#: partials/content-cover-book-info.php:67 single.php:33
 msgid "License"
 msgstr "ಪರವಾನಗಿ"
 
@@ -315,7 +315,7 @@ msgstr "ಪ್ರಕಾಶಕ"
 msgid "Publication Date"
 msgstr "ಪ್ರಕಟಣೆ ದಿನಾಂಕ"
 
-#: inc/helpers/namespace.php:448 single.php:43
+#: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "ಡಿಜಿಟಲ್ ಆಬ್ಜೆಕ್ಟ್ ಐಡೆಂಟಿಫೈಯರ್ (ಡಿಒಐ)"
 
@@ -569,27 +569,6 @@ msgstr "ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ತೋರಿಸು"
 msgid "Hide All Contents"
 msgstr "ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ಮರೆಮಾಡಿ"
 
-#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
-#: partials/content-difftool.php:52
-msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "ಈ ಅಧ್ಯಾಯವನ್ನು %2$s %1$s %3$s ಅಳವಡಿಸಿಕೊಂಡಿದೆ."
-
-#: partials/content-difftool.php:66
-msgid ""
-"Note: The comparison below is between this text and the <strong>current "
-"version</strong> of the text from which it was adapted."
-msgstr ""
-"ಸೂಚನೆ: ಈ ಪಠ್ಯ ಮತ್ತು ಅದನ್ನು ಅಳವಡಿಸಿದ ಪಠ್ಯದ <strong>ಪ್ರಸ್ತುತ ಆವೃತ್ತಿಯ</strong>"
-" ನಡುವೆ ಕೆಳಗಿನ ಹೋಲಿಕೆ ಇದೆ."
-
-#: partials/content-difftool.php:67
-msgid "additions"
-msgstr "ಸೇರ್ಪಡೆಗಳು"
-
-#: partials/content-difftool.php:67
-msgid "deletions"
-msgstr "ಅಳಿಸುವಿಕೆಗಳು"
-
 #: partials/content-none.php:2
 msgid "Nothing Found"
 msgstr "ಏನೂ ಸಿಗಲಿಲ್ಲ"
@@ -663,6 +642,6 @@ msgstr "ಪುಸ್ತಕದಲ್ಲಿ ಶೋಧಿಸು ..."
 msgid "Search"
 msgstr "ಹುಡುಕಿ"
 
-#: single.php:59
+#: single.php:57
 msgid "Share This Book"
 msgstr "ಈ ಪುಸ್ತಕವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ"
