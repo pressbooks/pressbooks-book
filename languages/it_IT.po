@@ -521,7 +521,7 @@ msgstr "Leggi il libro"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
-msgstr ""
+msgstr "Acquista il libro"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
