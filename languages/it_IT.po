@@ -461,7 +461,7 @@ msgstr "ID"
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
