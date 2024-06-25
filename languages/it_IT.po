@@ -473,7 +473,7 @@ msgstr "Mostra/Nascondi"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
-msgstr ""
+msgstr "Mostra attività"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
