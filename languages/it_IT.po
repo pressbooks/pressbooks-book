@@ -334,7 +334,7 @@ msgstr "Digital Object Identifier (DOI)"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
-msgstr "ISBN dell'ebook "
+msgstr "ISBN dell'Ebook "
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
