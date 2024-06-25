@@ -396,7 +396,7 @@ msgstr "In arrivo!"
 
 #: page-authors.php:31
 msgid "Authors"
-msgstr "Autori"
+msgstr "Autori/Autrici"
 
 #: page-buy.php:5
 msgid "Buy the Book"
