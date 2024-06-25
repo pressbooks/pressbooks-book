@@ -584,7 +584,7 @@ msgstr "Nascondi tutti i contenuti"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr ""
+msgstr "Non è stato trovato niente"
 
 #: partials/content-none.php:3
 msgid ""
