@@ -219,7 +219,7 @@ msgstr "Attribuzione Creative Commons Attribution NoDerivatives"
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
-msgstr ""
+msgstr "Creative Commons Attribuzione Non Commerciale"
 
 #: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
