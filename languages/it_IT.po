@@ -296,9 +296,9 @@ msgstr[2] "Illustratori/Illustratrici "
 #: inc/helpers/namespace.php:441
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Collaboratore/Collaboratrice"
+msgstr[1] "Collaboratori/Collaboratrici"
+msgstr[2] "Collaboratori/Collaboratrici"
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:33
