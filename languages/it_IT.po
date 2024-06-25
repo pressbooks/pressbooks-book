@@ -449,7 +449,7 @@ msgstr "Nascondi "
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "Espandi tutte le attività"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
