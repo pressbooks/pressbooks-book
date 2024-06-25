@@ -125,7 +125,8 @@ msgstr "Dipendenze Mancanti"
 #: functions.php:17
 msgid "You must run <code>composer install</code> from the McLuhan directory."
 msgstr ""
-"È necessario eseguire il 1 composer install 1 dalla directory di McLuhan."
+"È necessario eseguire <code>composer install</code> dalla directory di "
+"McLuhan."
 
 #: functions.php:28
 msgid "Cannot find Pressbooks install."
