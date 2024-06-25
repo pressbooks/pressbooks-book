@@ -372,7 +372,7 @@ msgstr "%1$s al/alla %2$s"
 #. comment
 #: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
 msgid "(Edit)"
-msgstr ""
+msgstr "(Modifica)"
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
