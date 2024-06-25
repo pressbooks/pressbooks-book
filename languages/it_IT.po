@@ -195,7 +195,7 @@ msgstr "Abilitare Image Lightbox"
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
-msgstr ""
+msgstr "Mostra le immagini collegate in una lightbox"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
