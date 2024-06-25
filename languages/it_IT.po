@@ -469,7 +469,7 @@ msgstr "Tipo di attività"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr ""
+msgstr "Mostra/Nascondi"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
