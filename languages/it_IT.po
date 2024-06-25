@@ -652,7 +652,7 @@ msgstr "Cerca nel libro:"
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr ""
+msgstr "Cerca nel libro &hellip;"
 
 #: searchform.php:8
 msgid "Search"
