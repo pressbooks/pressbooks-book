@@ -195,7 +195,7 @@ msgstr "Abilitare Image Lightbox"
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
-msgstr "Mostra le immagini collegate in una lightbox"
+msgstr "Visualizza le immagini collegate in una lightbox"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
@@ -469,7 +469,7 @@ msgstr "Tipo di attività"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr "Mostra/Nascondi"
+msgstr "Visualizza/Nascondi"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
