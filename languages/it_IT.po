@@ -568,7 +568,7 @@ msgstr "Tema"
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
 msgid "Click for more information"
-msgstr ""
+msgstr "Clicca per maggiori informazioni"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
