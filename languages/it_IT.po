@@ -563,7 +563,7 @@ msgstr "Collaboratori/Collaboratrici"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr ""
+msgstr "Tema"
 
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
