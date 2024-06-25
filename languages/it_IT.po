@@ -175,7 +175,7 @@ msgstr "Compra"
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
-msgstr ""
+msgstr "Confronto di caricamento..."
 
 #: inc/actions/namespace.php:65
 msgid "Comparison loaded."
