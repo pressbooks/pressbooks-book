@@ -453,7 +453,7 @@ msgstr "Espandi tutte le attività"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "L'attività H5P richiesta non esiste in questo libro."
 
 #: page-h5p-listing.php:38
 msgid "ID"
