@@ -421,7 +421,7 @@ msgstr "Acquista qui:"
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "Attività H5P non valida"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
