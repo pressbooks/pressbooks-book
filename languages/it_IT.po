@@ -366,7 +366,7 @@ msgstr "%s su"
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "1%1$s al 2%2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
