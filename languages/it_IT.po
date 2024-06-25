@@ -251,7 +251,7 @@ msgstr "Accedi"
 
 #: inc/helpers/namespace.php:244
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: inc/helpers/namespace.php:252
 msgid "Sign out"
