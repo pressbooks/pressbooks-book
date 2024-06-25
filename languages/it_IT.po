@@ -247,7 +247,7 @@ msgstr "Leggi"
 
 #: inc/helpers/namespace.php:235
 msgid "Sign in"
-msgstr ""
+msgstr "Accedi"
 
 #: inc/helpers/namespace.php:244
 msgid "Admin"
