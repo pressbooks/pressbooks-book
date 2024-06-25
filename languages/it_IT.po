@@ -580,7 +580,7 @@ msgstr "Mostrare tutti i contenuti"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr ""
+msgstr "Nascondi tutti i contenuti"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
