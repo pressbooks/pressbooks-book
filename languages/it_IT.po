@@ -342,7 +342,7 @@ msgstr "ISBN dell'edizione cartacea"
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
-msgstr ""
+msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
