@@ -108,7 +108,7 @@ msgstr "Guide e tutorial"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
-msgstr ""
+msgstr "Elenco dei pressbooks"
 
 #: footer.php:80
 msgid "Pressbooks on YouTube"
