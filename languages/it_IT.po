@@ -311,7 +311,7 @@ msgstr "Tema primario"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
-msgstr ""
+msgstr "Temi aggiuntivi"
 
 #: inc/helpers/namespace.php:445
 msgid "Institution"
