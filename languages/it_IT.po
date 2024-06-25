@@ -227,7 +227,7 @@ msgstr "Creative Commons Attribuzione Non Commerciale ShareAlike"
 
 #: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
-msgstr ""
+msgstr "Creative Commons Attribuzione Non Commerciale NoDerivati"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
