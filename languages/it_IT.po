@@ -158,7 +158,7 @@ msgstr "Per saperne di più"
 
 #: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
-msgstr ""
+msgstr "Navigazione dei contenuti del libro"
 
 #: header.php:125 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
