@@ -307,7 +307,7 @@ msgstr "Licenza"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
-msgstr ""
+msgstr "Tema primario"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
