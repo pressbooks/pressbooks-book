@@ -465,7 +465,7 @@ msgstr "Titolo"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
-msgstr ""
+msgstr "Tipo di attività"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
