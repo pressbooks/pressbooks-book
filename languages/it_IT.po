@@ -95,7 +95,7 @@ msgstr "Invia"
 #: footer.php:60 header.php:79 header.php:86 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
 msgid "Logo for %s"
-msgstr "Logo per %1s"
+msgstr "Logo per 1%s"
 
 #. translators: %s: Pressbooks
 #: footer.php:68
