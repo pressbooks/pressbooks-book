@@ -406,7 +406,7 @@ msgstr "Acquista il libro"
 #: page-buy.php:21
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
-"È possibile acquistare  <a href=\"%1$s\">%2$s</a> seguendo uno dei link "
+"Puoi acquistare  <a href=\"%1$s\">%2$s</a> seguendo uno dei link "
 "sottostanti:"
 
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
