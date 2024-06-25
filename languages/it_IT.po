@@ -268,9 +268,9 @@ msgstr[2] "Autori/Autrici"
 #: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Editore/Editrice"
+msgstr[1] "Editori/Editrici"
+msgstr[2] "Editori/Editrici"
 
 #: inc/helpers/namespace.php:438
 msgid "Translator"
