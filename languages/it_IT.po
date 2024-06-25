@@ -338,7 +338,7 @@ msgstr "Ebook ISBN"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
-msgstr "Edizione cartacea ISBN"
+msgstr "ISBN dell' Edizione cartacea"
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
