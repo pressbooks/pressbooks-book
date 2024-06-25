@@ -100,7 +100,7 @@ msgstr "Logo per %1s"
 #. translators: %s: Pressbooks
 #: footer.php:68
 msgid "Powered by %s"
-msgstr "Alimentato da 1%s"
+msgstr "Fornito da %s"
 
 #: footer.php:70
 msgid "Guides and Tutorials"
