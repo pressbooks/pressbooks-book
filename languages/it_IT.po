@@ -360,7 +360,7 @@ msgstr "Successivo: %s"
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%s on"
-msgstr ""
+msgstr "1%s su"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
