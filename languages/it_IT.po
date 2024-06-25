@@ -47,7 +47,7 @@ msgstr ""
 #. Author of the theme
 #: style.css
 msgid "Pressbooks (Book Oven Inc.)"
-msgstr ""
+msgstr "Pressbooks (Book Oven Inc.)"
 
 #. Author URI of the theme
 #: style.css
