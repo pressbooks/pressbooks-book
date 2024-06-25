@@ -481,7 +481,7 @@ msgstr "Nascondi attività"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "Visualizza l'attività di h5p"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
