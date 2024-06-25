@@ -179,7 +179,7 @@ msgstr "Confronto di caricamento..."
 
 #: inc/actions/namespace.php:65
 msgid "Comparison loaded."
-msgstr ""
+msgstr "Confronto caricato."
 
 #: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
