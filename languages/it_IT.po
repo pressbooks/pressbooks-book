@@ -203,7 +203,7 @@ msgstr "Privato"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
-msgstr ""
+msgstr "Dominio pubblico"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
