@@ -445,7 +445,7 @@ msgstr "Espandi"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
-msgstr ""
+msgstr "Nascondi "
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
