@@ -261,9 +261,9 @@ msgstr "Esci"
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Autore/Autrice "
+msgstr[1] "Autori/Autrici "
+msgstr[2] "Autori/Autrici"
 
 #: inc/helpers/namespace.php:437
 msgid "Editor"
