@@ -642,7 +642,7 @@ msgstr "Pagina successiva"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr "Navigazione numerata"
+msgstr "Navigazione a pagine"
 
 #: searchform.php:3
 msgctxt "label"
