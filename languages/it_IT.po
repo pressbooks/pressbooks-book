@@ -457,7 +457,7 @@ msgstr "L'attività H5P richiesta non esiste in questo libro."
 
 #: page-h5p-listing.php:38
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
