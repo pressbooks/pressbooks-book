@@ -199,7 +199,7 @@ msgstr "Mostra le immagini collegate in una lightbox"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr ""
+msgstr "Privato"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
