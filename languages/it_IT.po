@@ -167,7 +167,7 @@ msgstr "Contenuti"
 #. translators: %s: the title of the book
 #: header.php:134
 msgid "Go to the cover page of %s"
-msgstr ""
+msgstr "Vai alla copertina di 1%s"
 
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
