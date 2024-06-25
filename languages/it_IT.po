@@ -412,7 +412,7 @@ msgstr ""
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
 msgid "Purchase on %s"
-msgstr ""
+msgstr "Acquistabile su 1%s"
 
 #. translators: %1$s: url to purchase
 #: page-buy.php:74
