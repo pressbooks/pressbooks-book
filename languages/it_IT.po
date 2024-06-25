@@ -634,11 +634,11 @@ msgstr "Risultati della ricerca per: %s"
 
 #: search.php:18
 msgid "Previous page"
-msgstr "Pagina Precedente"
+msgstr "Pagina precedente"
 
 #: search.php:19
 msgid "Next page"
-msgstr "Pagina Successiva"
+msgstr "Pagina successiva"
 
 #: search.php:20
 msgid "Paged navigation"
