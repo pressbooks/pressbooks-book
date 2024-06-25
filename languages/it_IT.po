@@ -183,7 +183,7 @@ msgstr "Confronto caricato."
 
 #: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
-msgstr ""
+msgstr "Non è stato possibile caricare il capitolo originale."
 
 #: inc/actions/namespace.php:67
 msgid "Toggle contents of"
