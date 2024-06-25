@@ -207,11 +207,11 @@ msgstr "Dominio pubblico"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
-msgstr "Attribuzione Creative Commons"
+msgstr "Creative Commons Attribuzione"
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
-msgstr "Attribuzione Creative Commons ShareAlike"
+msgstr "Creative Commons Attribuzione ShareAlike"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
