@@ -619,7 +619,7 @@ msgid ""
 " content, either sign in to your account or request access to this book."
 msgstr ""
 "Questo libro è privato e accessibile solo agli utenti registrati. Per "
-"accedere al contenuto, accedere al proprio account o richiedere l'accesso a "
+"visualizzare il contenuto, accedi al tuo account o richiedi l'accesso a "
 "questo libro."
 
 #. translators: link to Pressbooks.pub
