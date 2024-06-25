@@ -191,7 +191,7 @@ msgstr "Mostrare il contenuto di"
 
 #: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
-msgstr ""
+msgstr "Abilitare Image Lightbox"
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
