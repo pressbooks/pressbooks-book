@@ -149,8 +149,8 @@ msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr ""
-"Volete creare o adattare libri come questo? Su Pressbooks supporta le "
-"pratiche editoriali aperte."
+"Volete creare o adattare libri come questo? Pressbooks supporta le pratiche "
+"editoriali aperte."
 
 #: header.php:110
 msgid "Learn more"
