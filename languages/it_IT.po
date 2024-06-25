@@ -576,7 +576,7 @@ msgstr "Metadati"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr ""
+msgstr "Mostrare tutti i contenuti"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
