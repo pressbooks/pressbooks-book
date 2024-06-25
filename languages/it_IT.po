@@ -316,9 +316,9 @@ msgstr "Temi aggiuntivi"
 #: inc/helpers/namespace.php:445
 msgid "Institution"
 msgid_plural "Institutions"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Istituzione"
+msgstr[1] "Istituzioni"
+msgstr[2] "Istituzioni"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
