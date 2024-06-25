@@ -494,7 +494,7 @@ msgstr "Pagine:"
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr ""
+msgstr "Titolo del libro"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
