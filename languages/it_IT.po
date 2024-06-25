@@ -239,7 +239,7 @@ msgstr "Date un'occhiata a questo libro su Pressbooks."
 
 #: inc/helpers/namespace.php:209
 msgid "Home"
-msgstr ""
+msgstr "Pagina iniziale"
 
 #: inc/helpers/namespace.php:217
 msgid "Read"
