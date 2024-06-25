@@ -330,11 +330,11 @@ msgstr "Data di pubblicazione"
 
 #: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
-msgstr ""
+msgstr "Digital Object Identifier (DOI)"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
-msgstr ""
+msgstr "Ebook ISBN"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
