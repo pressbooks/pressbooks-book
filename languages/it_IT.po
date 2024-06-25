@@ -326,7 +326,7 @@ msgstr "Casa editrice"
 
 #: inc/helpers/namespace.php:447
 msgid "Publication Date"
-msgstr ""
+msgstr "Data di pubblicazione"
 
 #: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
