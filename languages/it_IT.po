@@ -187,7 +187,7 @@ msgstr "Non è stato possibile caricare il capitolo originale."
 
 #: inc/actions/namespace.php:67
 msgid "Toggle contents of"
-msgstr "Mostrare il contenuto di"
+msgstr "Visualizzare il contenuto di"
 
 #: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
