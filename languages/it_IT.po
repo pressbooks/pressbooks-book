@@ -376,7 +376,7 @@ msgstr "(Modifica)"
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Il suo commento è in attesa di approvazione."
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
