@@ -538,8 +538,8 @@ msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
 msgstr ""
-"Questo libro è una versione duplicata di 1%1$s 2%2$s , pubblicato da "
-"Pressbooks 3%3$s con licenza 4%4$s. Può differire dall'originale."
+"Questo libro è una versione duplicata di %1$s %2$s, pubblicato da Pressbooks"
+" %3$s con licenza %4$s. Può differire dall'originale."
 
 #. translators: %2$s: authors of book
 #. translators: %3$s: publisher of book
