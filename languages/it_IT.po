@@ -436,6 +436,8 @@ msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
 msgstr ""
+"attività H5P. Solo quelle che sono state inserite nel contenuto del libro "
+"saranno incluse se il libro viene duplicato."
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
