@@ -380,7 +380,7 @@ msgstr "Il suo commento è in attesa di approvazione."
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
-msgstr ""
+msgstr "Pingback:"
 
 #: index.php:18
 msgid "This book does not contain any public content."
