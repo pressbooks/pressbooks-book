@@ -477,7 +477,7 @@ msgstr "Mostra attività"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
+msgstr "Nascondi attività"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
