@@ -322,7 +322,7 @@ msgstr[2] "Istituzioni"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
-msgstr ""
+msgstr "Casa editrice"
 
 #: inc/helpers/namespace.php:447
 msgid "Publication Date"
