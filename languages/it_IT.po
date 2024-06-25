@@ -112,7 +112,7 @@ msgstr "Elenco dei materiali Pressbooks"
 
 #: footer.php:80
 msgid "Pressbooks on YouTube"
-msgstr ""
+msgstr "Pressbook su YouTube"
 
 #: footer.php:86
 msgid "Pressbooks on Twitter"
