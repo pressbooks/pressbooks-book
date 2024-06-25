@@ -207,7 +207,7 @@ msgstr "Dominio pubblico"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
-msgstr ""
+msgstr "Attribuzion Creativ Commons"
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
