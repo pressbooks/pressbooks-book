@@ -630,7 +630,7 @@ msgstr "Potete anche creare il vostro libro Pressbooks su %s."
 #. translators: search string
 #: search.php:6
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Risultati della ricerca per: %s"
 
 #: search.php:18
 msgid "Previous page"
