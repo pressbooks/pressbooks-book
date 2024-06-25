@@ -289,9 +289,9 @@ msgstr[2] "Revisori"
 #: inc/helpers/namespace.php:440
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Illustratore/Illustratrice"
+msgstr[1] "Illustratori/Illustratrici"
+msgstr[2] "Illustratori/Illustratrici "
 
 #: inc/helpers/namespace.php:441
 msgid "Contributor"
