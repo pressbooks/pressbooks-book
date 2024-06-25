@@ -618,6 +618,9 @@ msgid ""
 "This book is private, and accessible only to registered users. To access the"
 " content, either sign in to your account or request access to this book."
 msgstr ""
+"Questo libro è privato e accessibile solo agli utenti registrati. Per "
+"accedere al contenuto, accedere al proprio account o richiedere l'accesso a "
+"questo libro."
 
 #. translators: link to Pressbooks.pub
 #: private.php:17
