@@ -23,12 +23,12 @@ msgstr ""
 #. Theme Name of the theme
 #: style.css
 msgid "McLuhan"
-msgstr ""
+msgstr "McLuhan"
 
 #. Theme URI of the theme
 #: style.css
 msgid "https://pressbooks.com/themes/pressbooks-book"
-msgstr ""
+msgstr "https://pressbooks.com/themes/pressbooks-book"
 
 #. Description of the theme
 #: style.css
