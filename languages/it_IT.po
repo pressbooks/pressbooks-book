@@ -104,7 +104,7 @@ msgstr "Fornito da %s"
 
 #: footer.php:70
 msgid "Guides and Tutorials"
-msgstr ""
+msgstr "Guide e tutorial"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
