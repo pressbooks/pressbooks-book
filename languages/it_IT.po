@@ -171,7 +171,7 @@ msgstr "Vai alla copertina di 1%s"
 
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
-msgstr "Compra"
+msgstr "Acquista "
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
@@ -400,7 +400,7 @@ msgstr "Autori/Autrici"
 
 #: page-buy.php:5
 msgid "Buy the Book"
-msgstr "Compra il libro"
+msgstr "Acquista il libro"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
