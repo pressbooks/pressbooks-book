@@ -441,7 +441,7 @@ msgstr ""
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "Espandi"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
