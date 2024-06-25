@@ -282,9 +282,9 @@ msgstr[2] "Traduttori/Traduttrici"
 #: inc/helpers/namespace.php:439
 msgid "Reviewer"
 msgid_plural "Reviewers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Revisore"
+msgstr[1] "Revisori"
+msgstr[2] "Revisori"
 
 #: inc/helpers/namespace.php:440
 msgid "Illustrator"
