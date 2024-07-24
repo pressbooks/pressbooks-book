@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.4](https://github.com/pressbooks/pressbooks-book/compare/2.26.3...2.26.4) (2024-05-09)
+
+
+### Bug Fixes
+
+* translation domain typo ([#1221](https://github.com/pressbooks/pressbooks-book/issues/1221)) ([3ef881e](https://github.com/pressbooks/pressbooks-book/commit/3ef881e4e7e0da8bee59eb365dc4e14353aeb220))
+
 ## [2.26.3](https://github.com/pressbooks/pressbooks-book/compare/2.26.2...2.26.3) (2024-04-25)
 
 
