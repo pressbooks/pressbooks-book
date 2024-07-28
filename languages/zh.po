@@ -517,7 +517,7 @@ msgstr "本书是%1$s%2$s的克隆版本，使用 Pressbooks%3$s 经%4$s许可�
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
 msgid " by %s"
-msgstr ""
+msgstr " by %s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
