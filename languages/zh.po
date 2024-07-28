@@ -532,12 +532,12 @@ msgstr "贡献者"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
-msgstr ""
+msgstr "主题"
 
 #: partials/content-cover-book-info.php:87
 #: partials/content-cover-metadata.php:66
 msgid "Click for more information"
-msgstr ""
+msgstr "点击获取更多信息"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
