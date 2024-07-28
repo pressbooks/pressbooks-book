@@ -252,17 +252,17 @@ msgstr "登出"
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
-msgstr[0] ""
+msgstr[0] "作者"
 
 #: inc/helpers/namespace.php:437
 msgid "Editor"
 msgid_plural "Editors"
-msgstr[0] ""
+msgstr[0] "编辑"
 
 #: inc/helpers/namespace.php:438
 msgid "Translator"
 msgid_plural "Translators"
-msgstr[0] ""
+msgstr[0] "译者"
 
 #: inc/helpers/namespace.php:439
 msgid "Reviewer"
