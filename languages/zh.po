@@ -286,7 +286,7 @@ msgstr "授权"
 
 #: inc/helpers/namespace.php:443
 msgid "Primary Subject"
-msgstr ""
+msgstr "主主题"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
