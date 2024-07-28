@@ -410,11 +410,11 @@ msgstr "该书包含"
 msgid ""
 "H5P activities. Only those which have been inserted into book content will "
 "be included if the book is cloned."
-msgstr ""
+msgstr "H5P 活动。如果克隆了该书，则仅包含已插入书籍内容的活动。"
 
 #: page-h5p-listing.php:27
 msgid "Expand all"
-msgstr ""
+msgstr "展开全部"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
