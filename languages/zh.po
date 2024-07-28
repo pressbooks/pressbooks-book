@@ -524,11 +524,11 @@ msgstr " by %s"
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
-msgstr ""
+msgstr "本书是从不再可用的来源克隆的。来源 URL 为%s 。本书可能与原版不同。"
 
 #: partials/content-cover-book-info.php:62
 msgid "Contributors"
-msgstr ""
+msgstr "贡献者"
 
 #: partials/content-cover-book-info.php:72
 msgid "Subject"
