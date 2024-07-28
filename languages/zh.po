@@ -426,15 +426,15 @@ msgstr "展开全部活动"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
-msgstr ""
+msgstr "本书中不存在所请求的 H5P 活动。"
 
 #: page-h5p-listing.php:38
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 #: page-h5p-listing.php:40
 msgid "Activity type"
