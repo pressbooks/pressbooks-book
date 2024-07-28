@@ -418,7 +418,7 @@ msgstr "展开全部"
 
 #: page-h5p-listing.php:27
 msgid "Hide all"
-msgstr ""
+msgstr "隐藏全部"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
