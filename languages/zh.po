@@ -622,4 +622,4 @@ msgstr "搜索"
 
 #: single.php:57
 msgid "Share This Book"
-msgstr ""
+msgstr "分享该书"
