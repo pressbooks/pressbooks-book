@@ -559,7 +559,7 @@ msgstr "未找到任何东西"
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "抱歉，没有符合您搜索条件的内容。请使用其他关键字重试。"
 
 #: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
