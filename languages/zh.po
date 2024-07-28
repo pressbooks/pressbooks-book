@@ -490,7 +490,7 @@ msgstr "书籍导航"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
-msgstr ""
+msgstr "读书"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
