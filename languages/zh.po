@@ -127,7 +127,7 @@ msgstr "找不到 Pressbooks 安装。"
 
 #: header.php:60
 msgid "Skip to content"
-msgstr ""
+msgstr "跳到内容区"
 
 #: header.php:98
 msgid "Toggle Menu"
