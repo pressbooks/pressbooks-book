@@ -404,7 +404,7 @@ msgstr "H5P活动列表"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
-msgstr ""
+msgstr "该书包含"
 
 #: page-h5p-listing.php:26
 msgid ""
