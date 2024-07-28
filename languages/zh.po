@@ -182,7 +182,7 @@ msgstr "打开/关闭内容of"
 
 #: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
-msgstr ""
+msgstr "启用图片弹出全屏显示效果"
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
