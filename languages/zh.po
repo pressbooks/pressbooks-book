@@ -299,11 +299,11 @@ msgstr[0] "机构"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
-msgstr ""
+msgstr "出版商"
 
 #: inc/helpers/namespace.php:447
 msgid "Publication Date"
-msgstr ""
+msgstr "出版日期"
 
 #: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
