@@ -272,12 +272,12 @@ msgstr[0] "审稿人"
 #: inc/helpers/namespace.php:440
 msgid "Illustrator"
 msgid_plural "Illustrators"
-msgstr[0] ""
+msgstr[0] "插画师"
 
 #: inc/helpers/namespace.php:441
 msgid "Contributor"
 msgid_plural "Contributors"
-msgstr[0] ""
+msgstr[0] "贡献者"
 
 #: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:33
