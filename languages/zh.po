@@ -267,7 +267,7 @@ msgstr[0] "译者"
 #: inc/helpers/namespace.php:439
 msgid "Reviewer"
 msgid_plural "Reviewers"
-msgstr[0] ""
+msgstr[0] "审稿人"
 
 #: inc/helpers/namespace.php:440
 msgid "Illustrator"
