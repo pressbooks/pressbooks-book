@@ -582,7 +582,7 @@ msgstr "拒绝访问"
 msgid ""
 "This book is private, and accessible only to registered users. To access the"
 " content, either sign in to your account or request access to this book."
-msgstr ""
+msgstr "此书为私人书籍，仅供注册用户访问。要访问内容，请登录您的帐户或请求访问此书。"
 
 #. translators: link to Pressbooks.pub
 #: private.php:17
