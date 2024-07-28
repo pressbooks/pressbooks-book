@@ -290,12 +290,12 @@ msgstr "主主题"
 
 #: inc/helpers/namespace.php:444
 msgid "Additional Subject(s)"
-msgstr ""
+msgstr "额外主题"
 
 #: inc/helpers/namespace.php:445
 msgid "Institution"
 msgid_plural "Institutions"
-msgstr[0] ""
+msgstr[0] "机构"
 
 #: inc/helpers/namespace.php:446
 msgid "Publisher"
