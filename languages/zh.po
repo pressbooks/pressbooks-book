@@ -494,11 +494,11 @@ msgstr "读书"
 
 #: partials/content-cover-book-header.php:112
 msgid "Buy Book"
-msgstr ""
+msgstr "买书"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr ""
+msgstr "书籍信息"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
