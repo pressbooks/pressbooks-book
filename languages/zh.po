@@ -222,15 +222,15 @@ msgstr "知识共享署名非商业性禁止演绎"
 
 #: inc/helpers/namespace.php:167
 msgid "All Rights Reserved"
-msgstr "版权所有"
+msgstr "保留所有权利"
 
 #: inc/helpers/namespace.php:181
 msgid "Check out this great book on Pressbooks."
-msgstr ""
+msgstr "在 Pressbooks 上查看这本好书。"
 
 #: inc/helpers/namespace.php:209
 msgid "Home"
-msgstr ""
+msgstr "首页"
 
 #: inc/helpers/namespace.php:217
 msgid "Read"
