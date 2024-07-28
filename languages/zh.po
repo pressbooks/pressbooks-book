@@ -614,11 +614,11 @@ msgstr "在书中搜索："
 #: searchform.php:4
 msgctxt "placeholder"
 msgid "Search in book &hellip;"
-msgstr ""
+msgstr "在书中搜索&hellip;"
 
 #: searchform.php:8
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: single.php:57
 msgid "Share This Book"
