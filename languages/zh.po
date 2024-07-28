@@ -158,7 +158,7 @@ msgstr "内容"
 #. translators: %s: the title of the book
 #: header.php:134
 msgid "Go to the cover page of %s"
-msgstr ""
+msgstr "跳到%s的封面"
 
 #: header.php:138 inc/helpers/namespace.php:226
 msgid "Buy"
