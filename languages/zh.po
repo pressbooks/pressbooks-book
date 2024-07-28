@@ -442,7 +442,7 @@ msgstr "活动类型"
 
 #: page-h5p-listing.php:42
 msgid "Show/Hide"
-msgstr ""
+msgstr "显示/隐藏"
 
 #: page-h5p-listing.php:55
 msgid "Show activity"
