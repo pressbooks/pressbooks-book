@@ -353,7 +353,7 @@ msgstr "（编辑）"
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "您的评论在审核中。"
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
