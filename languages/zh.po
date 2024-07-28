@@ -486,7 +486,7 @@ msgstr "下载该书"
 #: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
-msgstr ""
+msgstr "书籍导航"
 
 #: partials/content-cover-book-header.php:105
 msgid "Read Book"
