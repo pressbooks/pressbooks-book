@@ -194,7 +194,7 @@ msgstr "私有"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
-msgstr ""
+msgstr "公共领域"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
