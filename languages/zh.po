@@ -349,7 +349,7 @@ msgstr "%1$s在%2$s"
 #. comment
 #: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
 msgid "(Edit)"
-msgstr ""
+msgstr "（编辑）"
 
 #: inc/helpers/namespace.php:581
 msgid "Your comment is awaiting moderation."
