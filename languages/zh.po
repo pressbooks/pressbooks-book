@@ -131,11 +131,11 @@ msgstr "跳到内容区"
 
 #: header.php:98
 msgid "Toggle Menu"
-msgstr ""
+msgstr "打开/关闭菜单"
 
 #: header.php:100
 msgid "Primary Navigation"
-msgstr ""
+msgstr "主菜单"
 
 #: header.php:110
 msgid ""
