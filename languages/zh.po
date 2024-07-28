@@ -311,7 +311,7 @@ msgstr "数字对象标识符（DOI）"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
-msgstr ""
+msgstr "电子书 ISBN"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
