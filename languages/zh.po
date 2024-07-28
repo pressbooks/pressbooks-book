@@ -210,7 +210,7 @@ msgstr "知识共享署名禁止演绎"
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
-msgstr ""
+msgstr "知识共享署名非商业"
 
 #: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
