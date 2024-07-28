@@ -174,7 +174,7 @@ msgstr "比较已加载。"
 
 #: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
-msgstr ""
+msgstr "无法加载原始章节。"
 
 #: inc/actions/namespace.php:67
 msgid "Toggle contents of"
