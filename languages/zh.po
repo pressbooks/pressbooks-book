@@ -198,7 +198,7 @@ msgstr "公共领域"
 
 #: inc/helpers/namespace.php:148
 msgid "Creative Commons Attribution"
-msgstr ""
+msgstr "知识共享署名"
 
 #: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution ShareAlike"
