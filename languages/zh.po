@@ -609,7 +609,7 @@ msgstr "分页导航"
 #: searchform.php:3
 msgctxt "label"
 msgid "Search in book:"
-msgstr ""
+msgstr "在书中搜索："
 
 #: searchform.php:4
 msgctxt "placeholder"
