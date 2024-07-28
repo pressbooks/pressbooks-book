@@ -549,11 +549,11 @@ msgstr "显示所有内容"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
-msgstr ""
+msgstr "隐藏所有内容"
 
 #: partials/content-none.php:2
 msgid "Nothing Found"
-msgstr ""
+msgstr "未找到任何东西"
 
 #: partials/content-none.php:3
 msgid ""
