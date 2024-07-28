@@ -166,11 +166,11 @@ msgstr "购买"
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
-msgstr ""
+msgstr "比较正在加载…"
 
 #: inc/actions/namespace.php:65
 msgid "Comparison loaded."
-msgstr ""
+msgstr "比较已加载。"
 
 #: inc/actions/namespace.php:66
 msgid "The original chapter could not be loaded."
