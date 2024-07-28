@@ -422,7 +422,7 @@ msgstr "隐藏全部"
 
 #: page-h5p-listing.php:27
 msgid "Expand all activities"
-msgstr ""
+msgstr "展开全部活动"
 
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
