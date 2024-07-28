@@ -567,12 +567,12 @@ msgstr "前一页"
 
 #: partials/content-single-legacy.php:52 partials/content-single.php:60
 msgid "Next Page"
-msgstr ""
+msgstr "后一页"
 
 #: partials/content-single.php:78
 msgid "About the author"
 msgid_plural "About the authors"
-msgstr[0] ""
+msgstr[0] "关于作者"
 
 #: private.php:4
 msgid "Access Denied"
