@@ -477,11 +477,11 @@ msgstr "副标题"
 #: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
 msgid "Cover image for %s"
-msgstr ""
+msgstr "%s的封面图片"
 
 #: partials/content-cover-book-header.php:54
 msgid "Download this book"
-msgstr ""
+msgstr "下载该书"
 
 #: partials/content-cover-book-header.php:93
 #: partials/content-cover-book-info.php:6
