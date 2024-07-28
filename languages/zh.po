@@ -510,7 +510,7 @@ msgstr "书籍来源"
 msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
-msgstr ""
+msgstr "本书是%1$s%2$s的克隆版本，使用 Pressbooks%3$s 经%4$s许可出版。它可能与原版有所不同。"
 
 #. translators: %2$s: authors of book
 #. translators: %3$s: publisher of book
