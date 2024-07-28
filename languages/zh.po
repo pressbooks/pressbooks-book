@@ -141,7 +141,7 @@ msgstr "主菜单"
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
-msgstr ""
+msgstr "想要创作或改编这样的书籍吗%s？了解 Pressbooks 如何支持开放出版实践。"
 
 #: header.php:110
 msgid "Learn more"
