@@ -178,7 +178,7 @@ msgstr "无法加载原始章节。"
 
 #: inc/actions/namespace.php:67
 msgid "Toggle contents of"
-msgstr ""
+msgstr "打开/关闭内容of"
 
 #: inc/actions/namespace.php:214
 msgid "Enable Image Lightbox"
