@@ -145,15 +145,15 @@ msgstr "想要创作或改编这样的书籍吗%s？了解 Pressbooks 如何支�
 
 #: header.php:110
 msgid "Learn more"
-msgstr ""
+msgstr "了解更多"
 
 #: header.php:122 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
-msgstr ""
+msgstr "书籍内容导航"
 
 #: header.php:125 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
-msgstr ""
+msgstr "内容"
 
 #. translators: %s: the title of the book
 #: header.php:134
