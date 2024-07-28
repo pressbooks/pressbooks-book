@@ -186,11 +186,11 @@ msgstr "启用图片弹出全屏显示效果"
 
 #: inc/actions/namespace.php:219
 msgid "Show linked images in a lightbox"
-msgstr ""
+msgstr "将链接的图片弹出全屏显示"
 
 #: inc/filters/namespace.php:19
 msgid "Private"
-msgstr ""
+msgstr "私有"
 
 #: inc/helpers/namespace.php:145
 msgid "Public Domain"
