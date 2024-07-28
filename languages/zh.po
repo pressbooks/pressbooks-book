@@ -450,11 +450,11 @@ msgstr "显示活动"
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
+msgstr "隐藏活动"
 
 #: page-h5p-listing.php:55
 msgid "View h5p activity"
-msgstr ""
+msgstr "查看H5P活动"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
