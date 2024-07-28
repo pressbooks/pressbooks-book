@@ -315,7 +315,7 @@ msgstr "电子书 ISBN"
 
 #: inc/helpers/namespace.php:450
 msgid "Print ISBN"
-msgstr ""
+msgstr "纸质本 ISBN"
 
 #: inc/helpers/namespace.php:451
 msgid "Hashtag"
