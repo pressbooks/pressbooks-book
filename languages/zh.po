@@ -206,7 +206,7 @@ msgstr "知识共享署名相同方式共享"
 
 #: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution NoDerivatives"
-msgstr ""
+msgstr "知识共享署名禁止演绎"
 
 #: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NonCommercial"
