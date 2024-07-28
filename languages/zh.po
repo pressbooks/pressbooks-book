@@ -396,11 +396,11 @@ msgstr "在此购买："
 
 #: page-h5p-listing.php:16
 msgid "Invalid H5P activity"
-msgstr ""
+msgstr "无效的H5P活动"
 
 #: page-h5p-listing.php:18
 msgid "H5P activities list"
-msgstr ""
+msgstr "H5P活动列表"
 
 #: page-h5p-listing.php:24
 msgid "This book includes "
