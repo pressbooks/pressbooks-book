@@ -307,7 +307,7 @@ msgstr "出版日期"
 
 #: inc/helpers/namespace.php:448 single.php:41
 msgid "Digital Object Identifier (DOI)"
-msgstr ""
+msgstr "数字对象标识符（DOI）"
 
 #: inc/helpers/namespace.php:449
 msgid "Ebook ISBN"
