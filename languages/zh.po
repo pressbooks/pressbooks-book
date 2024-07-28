@@ -357,7 +357,7 @@ msgstr "您的评论在审核中。"
 
 #: inc/helpers/namespace.php:607
 msgid "Pingback:"
-msgstr ""
+msgstr "引用通告"
 
 #: index.php:18
 msgid "This book does not contain any public content."
