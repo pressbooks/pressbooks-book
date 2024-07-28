@@ -361,7 +361,7 @@ msgstr "引用通告"
 
 #: index.php:18
 msgid "This book does not contain any public content."
-msgstr ""
+msgstr "本书不包含任何公开内容。"
 
 #: page-about.php:5
 msgid "About The Book"
