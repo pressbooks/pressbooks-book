@@ -343,7 +343,7 @@ msgstr "%s在"
 #. comment
 #: inc/helpers/namespace.php:578
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s在%2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
