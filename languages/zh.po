@@ -604,7 +604,7 @@ msgstr "后一页"
 
 #: search.php:20
 msgid "Paged navigation"
-msgstr ""
+msgstr "分页导航"
 
 #: searchform.php:3
 msgctxt "label"
