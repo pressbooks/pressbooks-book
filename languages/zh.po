@@ -541,11 +541,11 @@ msgstr "点击获取更多信息"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
-msgstr ""
+msgstr "元数据"
 
 #: partials/content-cover-toc.php:5
 msgid "Show All Contents"
-msgstr ""
+msgstr "显示所有内容"
 
 #: partials/content-cover-toc.php:6
 msgid "Hide All Contents"
