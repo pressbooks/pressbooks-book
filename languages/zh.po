@@ -325,13 +325,13 @@ msgstr "Hashtag"
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
 msgid "Previous: %s"
-msgstr ""
+msgstr "前一：%s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
 #: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
 msgid "Next: %s"
-msgstr ""
+msgstr "后一：%s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
