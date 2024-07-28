@@ -467,11 +467,11 @@ msgstr "页面："
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
-msgstr ""
+msgstr "书籍标题"
 
 #: partials/content-cover-book-header.php:14
 msgid "Subtitle"
-msgstr ""
+msgstr "副标题"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:26
