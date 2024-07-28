@@ -214,7 +214,7 @@ msgstr "知识共享署名非商业"
 
 #: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
-msgstr ""
+msgstr "知识共享署名非商业性相同方式共享"
 
 #: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
