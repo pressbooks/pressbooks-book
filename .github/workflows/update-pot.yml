@@ -23,7 +23,7 @@ jobs:
       run: wp i18n make-pot . languages/pressbooks-book.pot --domain=pressbooks-book --slug=pressbooks-book --package-name="McLuhan" --headers="{\"Report-Msgid-Bugs-To\":\"https://github.com/pressbooks/pressbooks-book/issues\"}"
     - name: Create Pull Request for POT file
       id: cprpot
-      uses: peter-evans/create-pull-request@v6
+      uses: peter-evans/create-pull-request@v7
       with:
         token: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
         labels: automerge-pot
