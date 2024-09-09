@@ -17,7 +17,7 @@
 	},
 	"require-dev": {
 		"pressbooks/coding-standards": "^1.1",
-		"yoast/phpunit-polyfills": "^1.1"
+		"yoast/phpunit-polyfills": "^3.0"
 	},
 	"archive": {
 		"exclude": [".github", ".tx", "bin"]
