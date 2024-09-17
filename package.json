@@ -27,7 +27,7 @@
 		"build": "mix --production",
 		"lint:scripts": "eslint \"assets/src/scripts/**/*.js\"",
 		"lint:styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\"",
-		"fix-styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --fix" ,
+		"fix-styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --fix",
 		"fix-scripts": "eslint \"assets/src/scripts/**/*.js\" --fix",
 		"lint": "run-s lint:*",
 		"production": "mix --production",
