@@ -9,4 +9,4 @@ on:
 
 jobs:
   update-mo-files:
-    uses: pressbooks/reusable-workflows/.github/workflows/update-mo.yml@dev
+    uses: pressbooks/reusable-workflows/.github/workflows/update-mo.yml@main
