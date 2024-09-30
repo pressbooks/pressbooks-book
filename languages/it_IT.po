@@ -3,14 +3,15 @@
 # Translators:
 # Antonio D., 2018
 # frankjmueller, 2024
+# Steel Wagstaff <steel@pressbooks.com>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.26.3\n"
+"Project-Id-Version: McLuhan 2.26.4\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-06-20T18:13:02+00:00\n"
+"POT-Creation-Date: 2024-09-18T15:00:34+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: frankjmueller, 2024\n"
+"Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/pressbooks/teams/9194/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -42,7 +43,7 @@ msgstr ""
 "che ha coniato la frase \"il mezzo è il messaggio\". È stato progettato per "
 "la scrittura accademica ed è adatto anche alla narrativa. I titoli sono "
 "impostati in Cormorant Garamond, mentre il tipo di corpo è impostato in "
-"\"Lora\"."
+"Lora."
 
 #. Author of the theme
 #: style.css
