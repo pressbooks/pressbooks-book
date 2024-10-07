@@ -41,6 +41,12 @@
     footnote-style-position: outside;
   }
 
+  .mathjax {
+    width: $footnote-mathjax-width;
+    padding-bottom: $footnote-mathjax-padding-bottom;
+  }
+  
+
   // Footnote & Endnote number markers (in body text)
 
   .endnote::footnote-call,

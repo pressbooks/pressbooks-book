@@ -1,63 +1,7 @@
 {
-  "_args": [
-    [
-      "buckram@1.8.2",
-      "/app/web/app/themes/pressbooks-book"
-    ]
-  ],
-  "_from": "buckram@1.8.2",
-  "_id": "buckram@1.8.2",
-  "_inBundle": false,
-  "_integrity": "sha512-Q/YNx8fSFxwd81sJfHbxLVd+PTrmggxg5ODKONAA00DsSO0DBIo/sSJT1a3DOHhCYimtS79neehK/EQHer5+yA==",
-  "_location": "/buckram",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "buckram@1.8.2",
-    "name": "buckram",
-    "escapedName": "buckram",
-    "rawSpec": "1.8.2",
-    "saveSpec": null,
-    "fetchSpec": "1.8.2"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/buckram/-/buckram-1.8.2.tgz",
-  "_spec": "1.8.2",
-  "_where": "/app/web/app/themes/pressbooks-book",
-  "author": {
-    "name": "Pressbooks",
-    "url": "Book Oven Inc."
-  },
-  "bugs": {
-    "url": "https://github.com/pressbooks/buckram/issues"
-  },
-  "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^10.0.0",
-    "pixelmatch": "^5.2.1",
-    "polyserve": "^0.27.15",
-    "pressbooks-build-tools": "^4.0.0",
-    "puppeteer": "^20.5.0",
-    "sassdoc": "^2.7.1",
-    "type-detect": "^4.0.8"
-  },
-  "engines": {
-    "node": ">= 14"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/pressbooks-build-tools/config/eslint.js"
-  },
-  "homepage": "https://github.com/pressbooks/buckram#readme",
-  "license": "GPL-3.0-or-later",
   "name": "buckram",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pressbooks/buckram.git"
-  },
+  "version": "1.8.3",
+  "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "build": "composer install && composer test",
     "diff": "npm run -s build && mocha",
@@ -66,6 +10,32 @@
     "lint:styles": "stylelint 'assets/styles/**/*.scss'",
     "test": "npm run -s lint && npm run -s build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pressbooks/buckram.git"
+  },
+  "author": "Pressbooks (Book Oven Inc.)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pressbooks/buckram/issues"
+  },
+  "homepage": "https://github.com/pressbooks/buckram#readme",
+  "engines": {
+    "node": ">= 18"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^10.0.0",
+    "pixelmatch": "^5.2.1",
+    "polyserve": "^0.27.15",
+    "pressbooks-build-tools": "^4.0.0",
+    "puppeteer": "^21.1.1",
+    "sassdoc": "^2.7.1",
+    "type-detect": "^4.0.8"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/pressbooks-build-tools/config/eslint.js"
+  },
   "stylelint": {
     "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
     "rules": {
@@ -73,6 +43,5 @@
       "no-duplicate-at-import-rules": null,
       "scss/no-global-function-names": null
     }
-  },
-  "version": "1.8.2"
+  }
 }
