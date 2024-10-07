@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.6](https://github.com/pressbooks/pressbooks-book/compare/2.26.5...2.26.6) (2024-10-07)
+
+
+### Bug Fixes
+
+* mathjax footnotes moved to buckram ([#1268](https://github.com/pressbooks/pressbooks-book/issues/1268)) ([b89b6de](https://github.com/pressbooks/pressbooks-book/commit/b89b6de8e5fe4f38b9912d93ae898f7177e5a6cc))
+
 ## [2.26.5](https://github.com/pressbooks/pressbooks-book/compare/2.26.4...2.26.5) (2024-09-24)
 
 
