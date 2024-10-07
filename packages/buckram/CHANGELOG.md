@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.3](https://github.com/pressbooks/buckram/compare/v1.8.2...v1.8.3) (2024-10-07)
+
+
+### Bug Fixes
+
+* mathjax footnote support ([#364](https://github.com/pressbooks/buckram/issues/364)) ([6560bf7](https://github.com/pressbooks/buckram/commit/6560bf7aa05b32b78bb4891398870e3bade3dadc))
+
 ## [1.8.2](https://github.com/pressbooks/buckram/compare/v1.8.1...v1.8.2) (2023-07-16)
 
 
