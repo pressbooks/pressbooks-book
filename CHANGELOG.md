@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.7](https://github.com/pressbooks/pressbooks-book/compare/2.26.6...2.26.7) (2024-10-07)
+
+
+### Bug Fixes
+
+* bump buckram to 1.8.3 ([#1271](https://github.com/pressbooks/pressbooks-book/issues/1271)) ([804bd59](https://github.com/pressbooks/pressbooks-book/commit/804bd59326e77a433b5c8e3d397c89dafc487dde))
+
 ## [2.26.6](https://github.com/pressbooks/pressbooks-book/compare/2.26.5...2.26.6) (2024-10-07)
 
 
