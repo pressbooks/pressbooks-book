@@ -36,12 +36,12 @@
   },
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^5.1.1",
     "mocha": "^10.0.0",
-    "pixelmatch": "^5.2.1",
+    "pixelmatch": "^6.0.0",
     "polyserve": "^0.27.15",
     "pressbooks-build-tools": "^4.0.0",
-    "puppeteer": "^20.5.0",
+    "puppeteer": "^23.5.0",
     "sassdoc": "^2.7.1",
     "type-detect": "^4.0.8"
   },
