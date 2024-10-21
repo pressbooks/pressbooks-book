@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.4](https://github.com/pressbooks/buckram/compare/v1.8.3...v1.8.4) (2024-10-21)
+
+
+### Bug Fixes
+
+* mathjax class scope ([#367](https://github.com/pressbooks/buckram/issues/367)) ([711a842](https://github.com/pressbooks/buckram/commit/711a8428fd844ae79d0bcc27f0035de11d634c5f))
+
 ## [1.8.3](https://github.com/pressbooks/buckram/compare/v1.8.2...v1.8.3) (2024-10-07)
 
 
