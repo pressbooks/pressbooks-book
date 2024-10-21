@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.8](https://github.com/pressbooks/pressbooks-book/compare/2.26.7...2.26.8) (2024-10-21)
+
+
+### Bug Fixes
+
+* bump buckram 1.8.4 ([#1278](https://github.com/pressbooks/pressbooks-book/issues/1278)) ([1e89717](https://github.com/pressbooks/pressbooks-book/commit/1e897170a722e8cb7d35ca6409d8a05ba9d54efa))
+
 ## [2.26.7](https://github.com/pressbooks/pressbooks-book/compare/2.26.6...2.26.7) (2024-10-07)
 
 
