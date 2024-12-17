@@ -182,7 +182,7 @@ function share_icons() {
 	$enabled_options = isset( $options['social_media_options'] ) ? $options['social_media_options'] : [];
 	$icons = '';
 
-	if (in_array ('twitter', $enabled_options, true ) ) {
+	if ( in_array( 'twitter', $enabled_options, true ) ) {
 		// If setting is enabled, display X/Twitter share button
 		$icons .= sprintf(
 			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s">
@@ -191,12 +191,12 @@ function share_icons() {
                 <use href="#twitter"/>
             </svg>
         </a>',
-			esc_attr($share_message),
-			esc_url($post_url)
+			esc_attr( $share_message ),
+			esc_url( $post_url )
 		);
 	}
 
-	if (in_array ('linkedin', $enabled_options, true ) ) {
+	if ( in_array( 'linkedin', $enabled_options, true ) ) {
 		// If setting is enabled, display LinkedIn share button
 		$icons .= sprintf(
 			'<a class="sharer" data-sharer="linkedin" data-title="%1$s" data-url="%2$s">
@@ -205,14 +205,13 @@ function share_icons() {
                 <use href="#linkedin-icon"/>
             </svg>
         </a>',
-			esc_attr($share_message),
-			esc_url($post_url)
+			esc_attr( $share_message ),
+			esc_url( $post_url )
 		);
 	}
 
-
 	// If setting is enabled, display email share button
-	if (in_array ('email', $enabled_options, true ) ) {
+	if ( in_array( 'email', $enabled_options, true ) ) {
 		$icons .= sprintf(
 			'<a class="sharer" data-sharer="email" data-title="%1$s" data-url="%2$s" data-via="pressbooks">
             <svg role="img" aria-labelledby="email-logo" class="icon--svg">
@@ -220,14 +219,13 @@ function share_icons() {
                 <use href="#email"/>
             </svg>
         </a>',
-			esc_attr($share_message),
-			esc_url($post_url)
+			esc_attr( $share_message ),
+			esc_url( $post_url )
 		);
 	}
 
 	return $icons;
 }
-
 
 /**
  * Return an HTML blob for the primary menu contents.
