@@ -68,7 +68,7 @@ class HelpersTest extends WP_UnitTestCase {
 	}
 
 	function test_share_icons() {
-		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book on Pressbooks."', share_icons() );
+		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book published with Pressbooks."', share_icons() );
 	}
 
 	function test_display_menu() {
