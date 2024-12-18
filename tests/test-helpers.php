@@ -68,7 +68,16 @@ class HelpersTest extends WP_UnitTestCase {
 	}
 
 	function test_share_icons() {
-		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book on Pressbooks."', share_icons() );
+		update_option('pressbooks_theme_options_web', ['social_media_options' => [
+			'twitter',
+		]]);
+		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book published with Pressbooks."', share_icons() );
+		$this->assertStringNotContainsString( 'linkedin', share_icons() );
+		update_option('pressbooks_theme_options_web', ['social_media_options' => [
+			'twitter',
+			'linkedin',
+		]]);
+		$this->assertStringContainsString( '<a class="sharer" data-sharer="linkedin" data-title="Check out this great book published with Pressbooks."', share_icons() );
 	}
 
 	function test_display_menu() {

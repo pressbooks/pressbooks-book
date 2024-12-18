@@ -70,20 +70,22 @@ if ( $contact_link ) {
 					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.com/support/"><?php _e( 'Guides and Tutorials', 'pressbooks-book' ); ?></a></li>
 					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-pressbooks-directory">|<a href="https://pressbooks.directory"><?php _e( 'Pressbooks Directory', 'pressbooks-book' ); ?></a></li>
 					<?php if ( $contact_link ) : ?>
-						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
+						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-book' ); ?></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a href="https://www.youtube.com/user/pressbooks">
-					<img class="youtube-link" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/yt_icon_mono_dark.png" alt="YouTube" aria-hidden="true">
+				<a class="youtube" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?>">
+					<svg class="icon--svg">
+						<use href="#youtube-icon" />
+					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
-				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks">
-					<svg class="icon--svg" role="presentation">
-						<use href="#twitter" />
+				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca" title="<?php _e( 'Pressbooks on LinkedIn', 'pressbooks-book' ); ?>">
+					<svg class="icon--svg">
+						<use href="#linkedin-icon" />
 					</svg>
-				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
+					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?></span></a>
 			</div>
 
 		</section>

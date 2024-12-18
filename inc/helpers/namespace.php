@@ -176,12 +176,55 @@ function license_to_text( $license ) {
  * @return string The share widget.
  */
 function share_icons() {
-	return sprintf(
-		'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-via="%3$s"><svg role="img" aria-labelledby="twitter-logo" class="icon--svg"><title id="twitter-logo">Share on Twitter</title><use href="#twitter"/></svg></a>',
-		__( 'Check out this great book on Pressbooks.', 'pressbooks-book' ),
-		get_the_permalink(),
-		'pressbooks'
-	);
+	$share_message = __( 'Check out this great book published with Pressbooks.', 'pressbooks-book' );
+	$post_url = get_the_permalink();
+	$options = get_option( 'pressbooks_theme_options_web' );
+	$enabled_options = isset( $options['social_media_options'] ) ? $options['social_media_options'] : [];
+	$icons = '';
+
+	if ( in_array( 'twitter', $enabled_options, true ) ) {
+		// If setting is enabled, display X/Twitter share button
+		$icons .= sprintf(
+			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s">
+            <svg role="img" aria-labelledby="twitter-logo" class="icon--svg">
+                <title id="twitter-logo">Share on X</title>
+                <use href="#twitter"/>
+            </svg>
+        </a>',
+			esc_attr( $share_message ),
+			esc_url( $post_url )
+		);
+	}
+
+	if ( in_array( 'linkedin', $enabled_options, true ) ) {
+		// If setting is enabled, display LinkedIn share button
+		$icons .= sprintf(
+			'<a class="sharer" data-sharer="linkedin" data-title="%1$s" data-url="%2$s">
+            <svg role="img" aria-labelledby="linkedin-logo" class="icon--svg">
+                <title id="linkedin-logo">Share on LinkedIn</title>
+                <use href="#linkedin-icon"/>
+            </svg>
+        </a>',
+			esc_attr( $share_message ),
+			esc_url( $post_url )
+		);
+	}
+
+	// If setting is enabled, display email share button
+	if ( in_array( 'email', $enabled_options, true ) ) {
+		$icons .= sprintf(
+			'<a class="sharer" data-sharer="email" data-title="%1$s" data-url="%2$s" data-via="pressbooks">
+            <svg role="img" aria-labelledby="email-logo" class="icon--svg">
+                <title id="email-logo">Share via Email</title>
+                <use href="#email"/>
+            </svg>
+        </a>',
+			esc_attr( $share_message ),
+			esc_url( $post_url )
+		);
+	}
+
+	return $icons;
 }
 
 /**
