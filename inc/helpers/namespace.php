@@ -181,18 +181,23 @@ function share_icons() {
 	$options = get_option( 'pressbooks_theme_options_web' );
 	$enabled_options = isset( $options['social_media_options'] ) ? $options['social_media_options'] : [];
 	$icons = '';
+	$metadata = pb_get_book_information();
+	$hashtags = isset( $metadata['pb_hashtag'] ) && ! empty( $metadata['pb_hashtag'] )
+		? $metadata['pb_hashtag']
+		: '';
 
 	if ( in_array( 'twitter', $enabled_options, true ) ) {
 		// If setting is enabled, display X/Twitter share button
 		$icons .= sprintf(
-			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s">
+			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-hashtags="%3$s">
             <svg role="img" aria-labelledby="twitter-logo" class="icon--svg">
                 <title id="twitter-logo">Share on X</title>
                 <use href="#twitter"/>
             </svg>
         </a>',
 			esc_attr( $share_message ),
-			esc_url( $post_url )
+			esc_url( $post_url ),
+			esc_attr( $hashtags )
 		);
 	}
 
