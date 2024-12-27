@@ -105,7 +105,7 @@ msgstr "Pressbooks ディレクトリ"
 
 #: footer.php:73
 msgid "Contact"
-msgstr ""
+msgstr "お問い合わせ"
 
 #: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
