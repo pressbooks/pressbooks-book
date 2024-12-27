@@ -3,8 +3,8 @@
 # Translators:
 # jorge santibañez <info@letrapixel.com>, 2017
 # Antonio D., 2018
-# Eduardo Vera, 2023
 # Oscar Arzola, 2024
+# Eduardo Vera, 2024
 # 
 msgid ""
 msgstr ""
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "POT-Creation-Date: 2024-12-18T00:06:44+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Oscar Arzola, 2024\n"
+"Last-Translator: Eduardo Vera, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/pressbooks/teams/9194/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgstr "Directorio de Pressbooks"
 
 #: footer.php:73
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
@@ -120,7 +120,7 @@ msgstr "Pressbooks en YouTube"
 
 #: footer.php:84
 msgid "Pressbooks on LinkedIn"
-msgstr ""
+msgstr "Pressbooks en LinkedIn"
 
 #: functions.php:16
 msgid "Dependencies Missing"
