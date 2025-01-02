@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-18T00:06:44+00:00\n"
+"POT-Creation-Date: 2025-01-02T16:49:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: pressbooks-book\n"
@@ -161,7 +161,7 @@ msgid "Go to the cover page of %s"
 msgstr ""
 
 #: header.php:140
-#: inc/helpers/namespace.php:269
+#: inc/helpers/namespace.php:274
 msgid "Buy"
 msgstr ""
 
@@ -229,27 +229,27 @@ msgstr ""
 msgid "Check out this great book published with Pressbooks."
 msgstr ""
 
-#: inc/helpers/namespace.php:252
+#: inc/helpers/namespace.php:257
 msgid "Home"
 msgstr ""
 
-#: inc/helpers/namespace.php:260
+#: inc/helpers/namespace.php:265
 msgid "Read"
 msgstr ""
 
-#: inc/helpers/namespace.php:278
+#: inc/helpers/namespace.php:283
 msgid "Sign in"
 msgstr ""
 
-#: inc/helpers/namespace.php:287
+#: inc/helpers/namespace.php:292
 msgid "Admin"
 msgstr ""
 
-#: inc/helpers/namespace.php:295
+#: inc/helpers/namespace.php:300
 msgid "Sign out"
 msgstr ""
 
-#: inc/helpers/namespace.php:479
+#: inc/helpers/namespace.php:484
 #: partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
@@ -257,117 +257,117 @@ msgid_plural "Authors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:480
+#: inc/helpers/namespace.php:485
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:481
+#: inc/helpers/namespace.php:486
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:482
+#: inc/helpers/namespace.php:487
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:483
+#: inc/helpers/namespace.php:488
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:484
+#: inc/helpers/namespace.php:489
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:485
+#: inc/helpers/namespace.php:490
 #: partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67
 #: single.php:33
 msgid "License"
 msgstr ""
 
-#: inc/helpers/namespace.php:486
+#: inc/helpers/namespace.php:491
 msgid "Primary Subject"
 msgstr ""
 
-#: inc/helpers/namespace.php:487
+#: inc/helpers/namespace.php:492
 msgid "Additional Subject(s)"
 msgstr ""
 
-#: inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:493
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:494
 msgid "Publisher"
 msgstr ""
 
-#: inc/helpers/namespace.php:490
+#: inc/helpers/namespace.php:495
 msgid "Publication Date"
 msgstr ""
 
-#: inc/helpers/namespace.php:491
+#: inc/helpers/namespace.php:496
 #: single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
-#: inc/helpers/namespace.php:492
+#: inc/helpers/namespace.php:497
 msgid "Ebook ISBN"
 msgstr ""
 
-#: inc/helpers/namespace.php:493
+#: inc/helpers/namespace.php:498
 msgid "Print ISBN"
 msgstr ""
 
-#: inc/helpers/namespace.php:494
+#: inc/helpers/namespace.php:499
 msgid "Hashtag"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:529
-#: inc/helpers/namespace.php:532
+#: inc/helpers/namespace.php:534
+#: inc/helpers/namespace.php:537
 msgid "Previous: %s"
 msgstr ""
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:539
-#: inc/helpers/namespace.php:541
+#: inc/helpers/namespace.php:544
+#: inc/helpers/namespace.php:546
 msgid "Next: %s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
-#: inc/helpers/namespace.php:621
+#: inc/helpers/namespace.php:626
 msgid "%s on"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
-#: inc/helpers/namespace.php:621
+#: inc/helpers/namespace.php:626
 msgid "%1$s at %2$s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
-#: inc/helpers/namespace.php:621
-#: inc/helpers/namespace.php:650
+#: inc/helpers/namespace.php:626
+#: inc/helpers/namespace.php:655
 msgid "(Edit)"
 msgstr ""
 
-#: inc/helpers/namespace.php:624
+#: inc/helpers/namespace.php:629
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/helpers/namespace.php:650
+#: inc/helpers/namespace.php:655
 msgid "Pingback:"
 msgstr ""
 
