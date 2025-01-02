@@ -13,9 +13,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.26.3\n"
+"Project-Id-Version: McLuhan 2.26.8\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-06-20T18:13:02+00:00\n"
+"POT-Creation-Date: 2024-12-18T00:06:44+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Felipe Dalcin, 2024\n"
 "Language-Team: French (https://app.transifex.com/pressbooks/teams/9194/fr/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -100,7 +100,7 @@ msgstr "Soumettre"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:79 header.php:86 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:81 header.php:88 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
 msgid "Logo for %s"
 msgstr "Logo pour %s"
@@ -118,13 +118,17 @@ msgstr "Guides et tutoriels"
 msgid "Pressbooks Directory"
 msgstr "Annuaire Pressbooks"
 
-#: footer.php:80
+#: footer.php:73
+msgid "Contact"
+msgstr ""
+
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks sur YouTube"
 
-#: footer.php:86
-msgid "Pressbooks on Twitter"
-msgstr "Pressbooks sur Twitter"
+#: footer.php:84
+msgid "Pressbooks on LinkedIn"
+msgstr ""
 
 #: functions.php:16
 msgid "Dependencies Missing"
@@ -140,19 +144,19 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr "Erreur lors de ld&rsquo;installation de Pressbooks."
 
-#: header.php:60
+#: header.php:62
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: header.php:98
+#: header.php:100
 msgid "Toggle Menu"
 msgstr "Afficher/masquer le menu"
 
-#: header.php:100
+#: header.php:102
 msgid "Primary Navigation"
 msgstr "Navigation Principale"
 
-#: header.php:110
+#: header.php:112
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
@@ -160,24 +164,24 @@ msgstr ""
 "Voulez-vous créer ou adapter des livres comme celui-ci ? %s comment "
 "Pressbooks soutient les pratiques d'édition ouverte."
 
-#: header.php:110
+#: header.php:112
 msgid "Learn more"
 msgstr ""
 
-#: header.php:122 partials/content-cover-toc.php:9
+#: header.php:124 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr "Contenu du livre Navigation"
 
-#: header.php:125 index.php:14 partials/content-cover-toc.php:3
+#: header.php:127 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Table des matières"
 
 #. translators: %s: the title of the book
-#: header.php:134
+#: header.php:136
 msgid "Go to the cover page of %s"
 msgstr "Aller à la page couverture de %s"
 
-#: header.php:138 inc/helpers/namespace.php:226
+#: header.php:140 inc/helpers/namespace.php:269
 msgid "Buy"
 msgstr "Acheter"
 
@@ -245,31 +249,31 @@ msgstr ""
 msgid "All Rights Reserved"
 msgstr "Tous droits réservés"
 
-#: inc/helpers/namespace.php:181
-msgid "Check out this great book on Pressbooks."
-msgstr "Découvrez cet excellent livre sur Pressbooks."
+#: inc/helpers/namespace.php:179
+msgid "Check out this great book published with Pressbooks."
+msgstr ""
 
-#: inc/helpers/namespace.php:209
+#: inc/helpers/namespace.php:252
 msgid "Home"
 msgstr "Accueil"
 
-#: inc/helpers/namespace.php:217
+#: inc/helpers/namespace.php:260
 msgid "Read"
 msgstr "Lire"
 
-#: inc/helpers/namespace.php:235
+#: inc/helpers/namespace.php:278
 msgid "Sign in"
 msgstr "Se connecter"
 
-#: inc/helpers/namespace.php:244
+#: inc/helpers/namespace.php:287
 msgid "Admin"
 msgstr "Administrateur"
 
-#: inc/helpers/namespace.php:252
+#: inc/helpers/namespace.php:295
 msgid "Sign out"
 msgstr "Se déconnecter"
 
-#: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:479 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
@@ -277,120 +281,120 @@ msgstr[0] "Auteur"
 msgstr[1] "Auteurs"
 msgstr[2] "Auteurs"
 
-#: inc/helpers/namespace.php:437
+#: inc/helpers/namespace.php:480
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Éditeur"
 msgstr[1] "Directeurs de rédaction"
 msgstr[2] "Directeurs de rédaction"
 
-#: inc/helpers/namespace.php:438
+#: inc/helpers/namespace.php:481
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Traducteur"
 msgstr[1] "Traducteurs"
 msgstr[2] "Traducteurs"
 
-#: inc/helpers/namespace.php:439
+#: inc/helpers/namespace.php:482
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Réviseur"
 msgstr[1] "Réviseurs"
 msgstr[2] "Réviseurs"
 
-#: inc/helpers/namespace.php:440
+#: inc/helpers/namespace.php:483
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Illustrateur"
 msgstr[1] "Illustrateurs"
 msgstr[2] "Illustrateurs"
 
-#: inc/helpers/namespace.php:441
+#: inc/helpers/namespace.php:484
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Contributeur"
 msgstr[1] "Collaborateurs"
 msgstr[2] "Collaborateurs"
 
-#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
+#: inc/helpers/namespace.php:485 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:33
 msgid "License"
 msgstr "Licence"
 
-#: inc/helpers/namespace.php:443
+#: inc/helpers/namespace.php:486
 msgid "Primary Subject"
 msgstr "Sujet principal"
 
-#: inc/helpers/namespace.php:444
+#: inc/helpers/namespace.php:487
 msgid "Additional Subject(s)"
 msgstr "Sujets supplémentaires"
 
-#: inc/helpers/namespace.php:445
+#: inc/helpers/namespace.php:488
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] "Institution"
 msgstr[1] "Institutions"
 msgstr[2] "Institutions"
 
-#: inc/helpers/namespace.php:446
+#: inc/helpers/namespace.php:489
 msgid "Publisher"
 msgstr "Éditeur"
 
-#: inc/helpers/namespace.php:447
+#: inc/helpers/namespace.php:490
 msgid "Publication Date"
 msgstr "Date de publication"
 
-#: inc/helpers/namespace.php:448 single.php:41
+#: inc/helpers/namespace.php:491 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "Identificateur d&rsquo;objets numériques (DOI)"
 
-#: inc/helpers/namespace.php:449
+#: inc/helpers/namespace.php:492
 msgid "Ebook ISBN"
 msgstr "NINL du livre numérique"
 
-#: inc/helpers/namespace.php:450
+#: inc/helpers/namespace.php:493
 msgid "Print ISBN"
 msgstr "NINL du livre imprimé"
 
-#: inc/helpers/namespace.php:451
+#: inc/helpers/namespace.php:494
 msgid "Hashtag"
 msgstr "Mot-clic"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:529 inc/helpers/namespace.php:532
 msgid "Previous: %s"
 msgstr "Précédent&nbsp;: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
+#: inc/helpers/namespace.php:539 inc/helpers/namespace.php:541
 msgid "Next: %s"
 msgstr "Suivant&nbsp;: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578
+#: inc/helpers/namespace.php:621
 msgid "%s on"
 msgstr "%s le"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578
+#: inc/helpers/namespace.php:621
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
+#: inc/helpers/namespace.php:621 inc/helpers/namespace.php:650
 msgid "(Edit)"
 msgstr "(Modifier)"
 
-#: inc/helpers/namespace.php:581
+#: inc/helpers/namespace.php:624
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire a été soumis aux modérateurs."
 
-#: inc/helpers/namespace.php:607
+#: inc/helpers/namespace.php:650
 msgid "Pingback:"
 msgstr "Fonction rétrolien Pingback&nbsp;:"
 
