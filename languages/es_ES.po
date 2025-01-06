@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # jorge santibañez <info@letrapixel.com>, 2017
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.26.8\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-12-18T00:06:44+00:00\n"
+"POT-Creation-Date: 2025-01-06T19:23:51+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/pressbooks/teams/9194/es/)\n"
@@ -172,7 +172,7 @@ msgstr "Contenido"
 msgid "Go to the cover page of %s"
 msgstr "Ir a la cubierta de %s"
 
-#: header.php:140 inc/helpers/namespace.php:269
+#: header.php:140 inc/helpers/namespace.php:274
 msgid "Buy"
 msgstr "Comprar"
 
@@ -240,27 +240,27 @@ msgstr "Todos los derechos reservados"
 msgid "Check out this great book published with Pressbooks."
 msgstr "Echa un vistazo a este fabuloso libro publicado con Pressbooks."
 
-#: inc/helpers/namespace.php:252
+#: inc/helpers/namespace.php:257
 msgid "Home"
 msgstr "Inicio"
 
-#: inc/helpers/namespace.php:260
+#: inc/helpers/namespace.php:265
 msgid "Read"
 msgstr "Leer"
 
-#: inc/helpers/namespace.php:278
+#: inc/helpers/namespace.php:283
 msgid "Sign in"
 msgstr "Acceder"
 
-#: inc/helpers/namespace.php:287
+#: inc/helpers/namespace.php:292
 msgid "Admin"
 msgstr "Administración"
 
-#: inc/helpers/namespace.php:295
+#: inc/helpers/namespace.php:300
 msgid "Sign out"
 msgstr "Salir"
 
-#: inc/helpers/namespace.php:479 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:484 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
@@ -268,120 +268,124 @@ msgstr[0] "Autor"
 msgstr[1] "Autores"
 msgstr[2] "Autores"
 
-#: inc/helpers/namespace.php:480
+#: inc/helpers/namespace.php:485
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Editor"
 msgstr[1] "Editores"
 msgstr[2] "Editores"
 
-#: inc/helpers/namespace.php:481
+#: inc/helpers/namespace.php:486
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Traductor"
 msgstr[1] "Traductores"
 msgstr[2] "Traductores"
 
-#: inc/helpers/namespace.php:482
+#: inc/helpers/namespace.php:487
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Revisor"
 msgstr[1] "Revisores"
 msgstr[2] "Revisores"
 
-#: inc/helpers/namespace.php:483
+#: inc/helpers/namespace.php:488
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Ilustrador"
 msgstr[1] "Ilustradores"
 msgstr[2] "Ilustradores"
 
-#: inc/helpers/namespace.php:484
+#: inc/helpers/namespace.php:489
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Colaborador"
 msgstr[1] "Colaboradores"
 msgstr[2] "Colaboradores"
 
-#: inc/helpers/namespace.php:485 partials/content-cover-book-header.php:97
+#: inc/helpers/namespace.php:490 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:33
 msgid "License"
 msgstr "Licencia"
 
-#: inc/helpers/namespace.php:486
+#: inc/helpers/namespace.php:491
 msgid "Primary Subject"
 msgstr "Tema principal"
 
-#: inc/helpers/namespace.php:487
+#: inc/helpers/namespace.php:492
 msgid "Additional Subject(s)"
 msgstr "Temas adicionales"
 
-#: inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:493
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] "Institución"
 msgstr[1] "Instituciones"
 msgstr[2] "Instituciones"
 
-#: inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:494
 msgid "Publisher"
 msgstr "Editorial"
 
-#: inc/helpers/namespace.php:490
+#: inc/helpers/namespace.php:495
+msgid "Publisher City"
+msgstr ""
+
+#: inc/helpers/namespace.php:496
 msgid "Publication Date"
 msgstr "Fecha de publicación"
 
-#: inc/helpers/namespace.php:491 single.php:41
+#: inc/helpers/namespace.php:497 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "Identificador de objeto digital (DOI)"
 
-#: inc/helpers/namespace.php:492
+#: inc/helpers/namespace.php:498
 msgid "Ebook ISBN"
 msgstr "ISBN del libro electrónico"
 
-#: inc/helpers/namespace.php:493
+#: inc/helpers/namespace.php:499
 msgid "Print ISBN"
 msgstr "ISBN del libro impreso"
 
-#: inc/helpers/namespace.php:494
+#: inc/helpers/namespace.php:500
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:529 inc/helpers/namespace.php:532
+#: inc/helpers/namespace.php:535 inc/helpers/namespace.php:538
 msgid "Previous: %s"
 msgstr "Anterior: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:539 inc/helpers/namespace.php:541
+#: inc/helpers/namespace.php:545 inc/helpers/namespace.php:547
 msgid "Next: %s"
 msgstr "Siguiente: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:621
+#: inc/helpers/namespace.php:627
 msgid "%s on"
 msgstr "%s en"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:621
+#: inc/helpers/namespace.php:627
 msgid "%1$s at %2$s"
 msgstr "%1$s a las %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:621 inc/helpers/namespace.php:650
+#: inc/helpers/namespace.php:627 inc/helpers/namespace.php:656
 msgid "(Edit)"
 msgstr "(Editar)"
 
-#: inc/helpers/namespace.php:624
+#: inc/helpers/namespace.php:630
 msgid "Your comment is awaiting moderation."
 msgstr "Tu comentario está pendiente de moderación."
 
-#: inc/helpers/namespace.php:650
+#: inc/helpers/namespace.php:656
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -450,10 +454,6 @@ msgstr "Expandir todo"
 msgid "Hide all"
 msgstr "Ocultar todo"
 
-#: page-h5p-listing.php:27
-msgid "Expand all activities"
-msgstr "Expandir todas las actividades"
-
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
 msgstr "La actividad H5P solicitada no existe en este libro."
@@ -481,10 +481,6 @@ msgstr "Mostrar la actividad"
 #: page-h5p-listing.php:55
 msgid "Hide activity"
 msgstr "Ocultar la actividad"
-
-#: page-h5p-listing.php:55
-msgid "View h5p activity"
-msgstr "Ver la actividad H5P"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
