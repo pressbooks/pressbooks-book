@@ -196,34 +196,49 @@ export default {
 			const $h5pActivities = $( '.h5p-row-item' );
 			const $activityContainer = $( '.h5p-activity-container' );
 			$activityContainer.hide();
-			$( '#h5p-show-hide' ).text( $( '#h5p-show-hide' ).attr( 'show-all-text' ) );
-			$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
+			$( '#h5p-show-hide' )
+				.text( $( '#h5p-show-hide' ).attr( 'show-all-text' ) )
+				.attr( 'aria-label', $( '#h5p-show-hide' ).attr( 'show-all-text' ) );
+			$( '.h5p-row-item' )
+				.text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) )
+				.attr( 'aria-label', $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
 
 			$h5pActivities.on( 'click', function () {
 				if ( $( this ).text() === $( this ).attr( 'show-activity-text' ) ) {
 					$activityContainer.hide();
 					$( this ).closest( 'tr' ).next( this ).show( 'slow' );
-					$( this ).text( $( this ).attr( 'hide-activity-text' ) );
+					$( this )
+						.text( $( this ).attr( 'hide-activity-text' ) )
+						.attr( 'aria-label', $( this ).attr( 'hide-activity-text' ) );
 					window.dispatchEvent( new Event( 'resize' ) );
 				} else {
 					$( this ).closest( 'tr' ).next( this ).hide();
-					$( this ).text( $( this ).attr( 'show-activity-text' ) );
+					$( this )
+						.text( $( this ).attr( 'show-activity-text' ) )
+						.attr( 'aria-label', $( this ).attr( 'show-activity-text' ) );
 				}
 			} );
 
 			$( '#h5p-show-hide' ).on( 'click', function () {
 				if ( $( this ).text() === $( this ).attr( 'show-all-text' ) ) {
 					$activityContainer.show();
-					$( this ).text( $( this ).attr( 'hide-all-text' ) );
-					$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'hide-activity-text' ) );
+					$( this )
+						.text( $( this ).attr( 'hide-all-text' ) )
+						.attr( 'aria-label', $( this ).attr( 'hide-all-text' ) );
+					$( '.h5p-row-item' )
+						.text( $( '.h5p-row-item' ).attr( 'hide-activity-text' ) )
+						.attr( 'aria-label', $( '.h5p-row-item' ).attr( 'hide-activity-text' ) );
 					window.dispatchEvent( new Event( 'resize' ) );
 				} else {
 					$activityContainer.hide();
-					$( this ).text( $( this ).attr( 'show-all-text' ) );
-					$( '.h5p-row-item' ).text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
+					$( this )
+						.text( $( this ).attr( 'show-all-text' ) )
+						.attr( 'aria-label', $( this ).attr( 'show-all-text' ) );
+					$( '.h5p-row-item' )
+						.text( $( '.h5p-row-item' ).attr( 'show-activity-text' ) )
+						.attr( 'aria-label', $( '.h5p-row-item' ).attr( 'show-activity-text' ) );
 				}
 			} );
-
 		} );
 
 		const ctaSelector = document.getElementsByClassName( 'cta' );
