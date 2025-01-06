@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-02T16:49:53+00:00\n"
+"POT-Creation-Date: 2025-01-06T19:23:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: pressbooks-book\n"
@@ -313,61 +313,65 @@ msgid "Publisher"
 msgstr ""
 
 #: inc/helpers/namespace.php:495
-msgid "Publication Date"
+msgid "Publisher City"
 msgstr ""
 
 #: inc/helpers/namespace.php:496
+msgid "Publication Date"
+msgstr ""
+
+#: inc/helpers/namespace.php:497
 #: single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
-#: inc/helpers/namespace.php:497
+#: inc/helpers/namespace.php:498
 msgid "Ebook ISBN"
 msgstr ""
 
-#: inc/helpers/namespace.php:498
+#: inc/helpers/namespace.php:499
 msgid "Print ISBN"
 msgstr ""
 
-#: inc/helpers/namespace.php:499
+#: inc/helpers/namespace.php:500
 msgid "Hashtag"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:534
-#: inc/helpers/namespace.php:537
+#: inc/helpers/namespace.php:535
+#: inc/helpers/namespace.php:538
 msgid "Previous: %s"
 msgstr ""
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:544
-#: inc/helpers/namespace.php:546
+#: inc/helpers/namespace.php:545
+#: inc/helpers/namespace.php:547
 msgid "Next: %s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
-#: inc/helpers/namespace.php:626
+#: inc/helpers/namespace.php:627
 msgid "%s on"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
-#: inc/helpers/namespace.php:626
+#: inc/helpers/namespace.php:627
 msgid "%1$s at %2$s"
 msgstr ""
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
-#: inc/helpers/namespace.php:626
-#: inc/helpers/namespace.php:655
+#: inc/helpers/namespace.php:627
+#: inc/helpers/namespace.php:656
 msgid "(Edit)"
 msgstr ""
 
-#: inc/helpers/namespace.php:629
+#: inc/helpers/namespace.php:630
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/helpers/namespace.php:655
+#: inc/helpers/namespace.php:656
 msgid "Pingback:"
 msgstr ""
 
@@ -435,10 +439,6 @@ msgstr ""
 msgid "Hide all"
 msgstr ""
 
-#: page-h5p-listing.php:27
-msgid "Expand all activities"
-msgstr ""
-
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
 msgstr ""
@@ -466,10 +466,6 @@ msgstr ""
 
 #: page-h5p-listing.php:55
 msgid "Hide activity"
-msgstr ""
-
-#: page-h5p-listing.php:55
-msgid "View h5p activity"
 msgstr ""
 
 #: page.php:13
