@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # 董正隆 <iamot6@yahoo.com.tw>, 2017
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: McLuhan 2.26.8\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2024-12-18T00:06:44+00:00\n"
+"POT-Creation-Date: 2025-01-06T19:23:51+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: fish free <winofchina@hotmail.com>, 2024\n"
 "Language-Team: Chinese (https://app.transifex.com/pressbooks/teams/9194/zh/)\n"
@@ -164,7 +164,7 @@ msgstr "内容"
 msgid "Go to the cover page of %s"
 msgstr "跳到%s的封面"
 
-#: header.php:140 inc/helpers/namespace.php:269
+#: header.php:140 inc/helpers/namespace.php:274
 msgid "Buy"
 msgstr "购买"
 
@@ -232,134 +232,138 @@ msgstr "保留所有权利"
 msgid "Check out this great book published with Pressbooks."
 msgstr ""
 
-#: inc/helpers/namespace.php:252
+#: inc/helpers/namespace.php:257
 msgid "Home"
 msgstr "首页"
 
-#: inc/helpers/namespace.php:260
+#: inc/helpers/namespace.php:265
 msgid "Read"
 msgstr "阅读"
 
-#: inc/helpers/namespace.php:278
+#: inc/helpers/namespace.php:283
 msgid "Sign in"
 msgstr "登入"
 
-#: inc/helpers/namespace.php:287
+#: inc/helpers/namespace.php:292
 msgid "Admin"
 msgstr "管理"
 
-#: inc/helpers/namespace.php:295
+#: inc/helpers/namespace.php:300
 msgid "Sign out"
 msgstr "登出"
 
-#: inc/helpers/namespace.php:479 partials/content-cover-book-header.php:17
+#: inc/helpers/namespace.php:484 partials/content-cover-book-header.php:17
 #: partials/content-cover-book-info.php:52
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "作者"
 
-#: inc/helpers/namespace.php:480
+#: inc/helpers/namespace.php:485
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "编辑"
 
-#: inc/helpers/namespace.php:481
+#: inc/helpers/namespace.php:486
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "译者"
 
-#: inc/helpers/namespace.php:482
+#: inc/helpers/namespace.php:487
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "审稿人"
 
-#: inc/helpers/namespace.php:483
+#: inc/helpers/namespace.php:488
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "插画师"
 
-#: inc/helpers/namespace.php:484
+#: inc/helpers/namespace.php:489
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "贡献者"
 
-#: inc/helpers/namespace.php:485 partials/content-cover-book-header.php:97
+#: inc/helpers/namespace.php:490 partials/content-cover-book-header.php:97
 #: partials/content-cover-book-info.php:67 single.php:33
 msgid "License"
 msgstr "授权"
 
-#: inc/helpers/namespace.php:486
+#: inc/helpers/namespace.php:491
 msgid "Primary Subject"
 msgstr "主主题"
 
-#: inc/helpers/namespace.php:487
+#: inc/helpers/namespace.php:492
 msgid "Additional Subject(s)"
 msgstr "额外主题"
 
-#: inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:493
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] "机构"
 
-#: inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:494
 msgid "Publisher"
 msgstr "出版商"
 
-#: inc/helpers/namespace.php:490
+#: inc/helpers/namespace.php:495
+msgid "Publisher City"
+msgstr ""
+
+#: inc/helpers/namespace.php:496
 msgid "Publication Date"
 msgstr "出版日期"
 
-#: inc/helpers/namespace.php:491 single.php:41
+#: inc/helpers/namespace.php:497 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "数字对象标识符（DOI）"
 
-#: inc/helpers/namespace.php:492
+#: inc/helpers/namespace.php:498
 msgid "Ebook ISBN"
 msgstr "电子书 ISBN"
 
-#: inc/helpers/namespace.php:493
+#: inc/helpers/namespace.php:499
 msgid "Print ISBN"
 msgstr "纸质本 ISBN"
 
-#: inc/helpers/namespace.php:494
+#: inc/helpers/namespace.php:500
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:529 inc/helpers/namespace.php:532
+#: inc/helpers/namespace.php:535 inc/helpers/namespace.php:538
 msgid "Previous: %s"
 msgstr "前一：%s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:539 inc/helpers/namespace.php:541
+#: inc/helpers/namespace.php:545 inc/helpers/namespace.php:547
 msgid "Next: %s"
 msgstr "后一：%s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:621
+#: inc/helpers/namespace.php:627
 msgid "%s on"
 msgstr "%s在"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:621
+#: inc/helpers/namespace.php:627
 msgid "%1$s at %2$s"
 msgstr "%1$s在%2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:621 inc/helpers/namespace.php:650
+#: inc/helpers/namespace.php:627 inc/helpers/namespace.php:656
 msgid "(Edit)"
 msgstr "（编辑）"
 
-#: inc/helpers/namespace.php:624
+#: inc/helpers/namespace.php:630
 msgid "Your comment is awaiting moderation."
 msgstr "您的评论在审核中。"
 
-#: inc/helpers/namespace.php:650
+#: inc/helpers/namespace.php:656
 msgid "Pingback:"
 msgstr "引用通告"
 
@@ -424,10 +428,6 @@ msgstr "展开全部"
 msgid "Hide all"
 msgstr "隐藏全部"
 
-#: page-h5p-listing.php:27
-msgid "Expand all activities"
-msgstr "展开全部活动"
-
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
 msgstr "本书中不存在所请求的 H5P 活动。"
@@ -455,10 +455,6 @@ msgstr "显示活动"
 #: page-h5p-listing.php:55
 msgid "Hide activity"
 msgstr "隐藏活动"
-
-#: page-h5p-listing.php:55
-msgid "View h5p activity"
-msgstr "查看H5P活动"
 
 #: page.php:13 partials/content-single-legacy.php:69
 #: partials/content-single.php:2
