@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.26.9](https://github.com/pressbooks/pressbooks-book/compare/2.26.8...2.26.9) (2025-01-06)
+
+
+### Bug Fixes
+
+* add hashtags to share ([#1296](https://github.com/pressbooks/pressbooks-book/issues/1296)) ([cec0692](https://github.com/pressbooks/pressbooks-book/commit/cec06929de91128129835bb7ab799b7ea3cc0f75))
+* add publisher city to metadata block ([#1300](https://github.com/pressbooks/pressbooks-book/issues/1300)) ([e9e3929](https://github.com/pressbooks/pressbooks-book/commit/e9e3929e4cb0a39e19ea724ef510921f4b7ce7fa))
+* update aria labels on H5P listing page ([#1301](https://github.com/pressbooks/pressbooks-book/issues/1301)) ([a63d81e](https://github.com/pressbooks/pressbooks-book/commit/a63d81e7b5e81c94a68c0cb81c10a6697ca51c1d))
+* update Twitter & YouTube icons ([#1290](https://github.com/pressbooks/pressbooks-book/issues/1290)) ([305d5b3](https://github.com/pressbooks/pressbooks-book/commit/305d5b3b3cacd307dab21a7ceff3a6fa1c1fc247))
+
 ## [2.26.8](https://github.com/pressbooks/pressbooks-book/compare/2.26.7...2.26.8) (2024-10-21)
 
 
