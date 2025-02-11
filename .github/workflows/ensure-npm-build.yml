@@ -6,4 +6,4 @@ on:
 
 jobs:
   update-npm-build:
-    uses: pressbooks/reusable-workflows/.github/workflows/npm-build.yml@dev
+    uses: pressbooks/reusable-workflows/.github/workflows/npm-build.yml@main
