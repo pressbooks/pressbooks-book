@@ -1,4 +1,4 @@
-name: Update .mo files
+name: Update .mo files 🌐
 
 on:
   pull_request:
