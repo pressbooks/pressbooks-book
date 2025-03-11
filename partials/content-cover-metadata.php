@@ -63,6 +63,15 @@
 		?>
 	</div>
 	<div class="block-toggle__cta">
-		<a class="block-toggle__cta__button button--circle--primary js-toggle-block"><svg><use href="#arrow-down" /></svg><span class="screen-reader-text"><?php _e( 'Click for more information', 'pressbooks-book' ) ?></span></a>
+		<button
+			class="block-toggle__cta__button button--circle--primary js-toggle-block"
+			aria-expanded="false"
+			aria-controls="metadata-info"
+		>
+			<svg><use href="#arrow-down" /></svg>
+			<span class="screen-reader-text">
+				<?php _e( 'Click for more information', 'pressbooks-book' ) ?>
+			</span>
+		</button>
 	</div>
 </section>
