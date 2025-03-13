@@ -1,6 +1,6 @@
 {
   "name": "buckram",
-  "version": "1.8.5",
+  "version": "1.8.6",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "build": "composer install && composer test",
