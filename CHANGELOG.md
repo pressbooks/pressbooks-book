@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.26.10](https://github.com/pressbooks/pressbooks-book/compare/2.26.9...2.26.10) (2025-03-13)
+
+
+### Chores
+
+* bump buckram ([#1315](https://github.com/pressbooks/pressbooks-book/issues/1315)) ([b142d84](https://github.com/pressbooks/pressbooks-book/commit/b142d84b848a9b246f32d7458f07ecba7084003b))
+* bump bucram ([#1312](https://github.com/pressbooks/pressbooks-book/issues/1312)) ([4b416d0](https://github.com/pressbooks/pressbooks-book/commit/4b416d03ccfbe58115533e4cc2ccec03b80683b0))
+* **deps-dev:** bump yoast/phpunit-polyfills from 1.1.2 to 1.1.3 in the composer-dev-dependencies group ([#1306](https://github.com/pressbooks/pressbooks-book/issues/1306)) ([c39c35d](https://github.com/pressbooks/pressbooks-book/commit/c39c35de26f39cac22513bf03100df92433fd61d))
+* **deps-dev:** bump yoast/phpunit-polyfills from 1.1.3 to 1.1.4 in the composer-dev-dependencies group ([#1309](https://github.com/pressbooks/pressbooks-book/issues/1309)) ([5d5cb9b](https://github.com/pressbooks/pressbooks-book/commit/5d5cb9b4db7a6d8fa77897e598bf0ec153b1da8a))
+* **i10n:** Updates for project McLuhan ([#1307](https://github.com/pressbooks/pressbooks-book/issues/1307)) ([bc45414](https://github.com/pressbooks/pressbooks-book/commit/bc454144bfa7e43c8f5a378ca33f7193a4993b66))
+* update release metadata ([#1316](https://github.com/pressbooks/pressbooks-book/issues/1316)) ([858be61](https://github.com/pressbooks/pressbooks-book/commit/858be61e88697861246113bac16f0d115f025d35))
+* update workflows ([#1311](https://github.com/pressbooks/pressbooks-book/issues/1311)) ([aa51b8e](https://github.com/pressbooks/pressbooks-book/commit/aa51b8efb4799e900a6c724e21a2fd68217690a2))
+
 ## [2.26.9](https://github.com/pressbooks/pressbooks-book/compare/2.26.8...2.26.9) (2025-01-06)
 
 
