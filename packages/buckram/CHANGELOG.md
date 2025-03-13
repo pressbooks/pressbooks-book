@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.6](https://github.com/pressbooks/buckram/compare/v1.8.5...v1.8.6) (2025-03-11)
+
+
+### Bug Fixes
+
+* inherit line-height ([#376](https://github.com/pressbooks/buckram/issues/376)) ([a2fd44c](https://github.com/pressbooks/buckram/commit/a2fd44c0a02ba17ad78fb349bf5cf57d707b022b))
+
 ## [1.8.5](https://github.com/pressbooks/buckram/compare/v1.8.4...v1.8.5) (2025-03-04)
 
 
