@@ -110,19 +110,22 @@ function license_to_icons( $license ) {
 	if ( ! $license ) {
 		return '';
 	}
+
 	$output = '';
+	$svg_tag = '<svg class="icon" style="fill: currentColor" role="presentation"><use href="#%s" /></svg>';
+
 	if ( strpos( $license, 'cc' ) !== false && $license !== 'cc-zero' ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
 			if ( $part !== 'cc' ) {
 				$part = 'cc-' . $part;
 			}
-			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use href="#%s" /></svg>', $part );
+			$output .= sprintf( $svg_tag, $part );
 		}
 	} elseif ( $license === 'cc-zero' ) {
-		$output .= '<svg class="icon" style="fill: currentColor"><use href="#cc-zero" /></svg>';
+		$output .= sprintf( $svg_tag, 'cc-zero' );
 	} elseif ( $license === 'public-domain' ) {
-		$output .= '<svg class="icon" style="fill: currentColor"><use href="#cc-pd" /></svg>';
+		$output .= sprintf( $svg_tag, 'cc-pd' );
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
