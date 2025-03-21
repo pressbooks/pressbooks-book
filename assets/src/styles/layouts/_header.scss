@@ -11,6 +11,15 @@ body:not(.home) {
   }
 }
 
+button.header__nav-icon {
+  appearance: none;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  color: transparent;
+  padding: 0;
+}
+
 .cta {
   text-align: right;
   background-color: var(--primary);
