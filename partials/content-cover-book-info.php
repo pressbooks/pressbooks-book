@@ -1,6 +1,6 @@
 <section class="block block-info block-toggle js-block">
-	<h2 class="block__title block-info__title"><?php _e( 'Book Information', 'pressbooks-book' ); ?></h2>
-	<div class="block-info__inner block-toggle__content">
+	<h2 class="block__title block-info__title" id="block-info-title"><?php _e( 'Book Information', 'pressbooks-book' ); ?></h2>
+	<div class="block-info__inner block-toggle__content" id="block-info">
 		<div class="block-info__inner__content"><?php if ( ! empty( $book_information['pb_about_unlimited'] ) ) : ?>
 			<div class="block-info__subsection block-info__description">
 				<h3 class="block__subtitle"><?php _e( 'Book Description', 'pressbooks-book' ); ?></h3>
@@ -88,10 +88,11 @@
 			class="block-toggle__cta__button button--circle--primary js-toggle-block"
 			aria-expanded="false"
 			aria-controls="block-info"
+			aria-labelledby="block-info-title"
 		>
 			<svg><use href="#arrow-down" /></svg>
 			<span class="screen-reader-text">
-				<?php _e( 'Click for more information', 'pressbooks-book' ) ?>
+				<?php _e( 'Book info', 'pressbooks-book' ) ?>
 			</span>
 		</button>
 	</div>

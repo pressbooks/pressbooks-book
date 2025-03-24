@@ -1,8 +1,8 @@
 <section class="block block-meta block-toggle js-block">
 	<div class="block-meta__content-box">
-		<h2 class="block__title block-meta__title"><?php _e( 'Metadata', 'pressbooks-book' ); ?></h2>
+		<h2 class="block__title block-meta__title" id="block-metadata-title"><?php _e( 'Metadata', 'pressbooks-book' ); ?></h2>
 
-		<div class="block-meta__inner block-toggle__content">
+		<div class="block-meta__inner block-toggle__content" id="block-metadata">
 			<dl class="block-meta__list">
 				<div class="block-meta__subsection block-meta__pb_title">
 					<dt class="block__subtitle block-meta__subtitle"><?php _e( 'Title', 'pressbooks-book' ); ?></dt>
@@ -66,11 +66,12 @@
 		<button
 			class="block-toggle__cta__button button--circle--primary js-toggle-block"
 			aria-expanded="false"
-			aria-controls="metadata-info"
+			aria-controls="block-metadata"
+			aria-labelledby="block-metadata-title"
 		>
 			<svg><use href="#arrow-down" /></svg>
 			<span class="screen-reader-text">
-				<?php _e( 'Click for more information', 'pressbooks-book' ) ?>
+				<?php _e( 'Book metadata', 'pressbooks-book' ) ?>
 			</span>
 		</button>
 	</div>
