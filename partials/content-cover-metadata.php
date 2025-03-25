@@ -70,9 +70,6 @@
 			aria-labelledby="block-metadata-title"
 		>
 			<svg><use href="#arrow-down" /></svg>
-			<span class="screen-reader-text">
-				<?php _e( 'Book metadata', 'pressbooks-book' ) ?>
-			</span>
 		</button>
 	</div>
 </section>

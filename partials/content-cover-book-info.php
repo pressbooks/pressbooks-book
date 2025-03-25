@@ -91,9 +91,6 @@
 			aria-labelledby="block-info-title"
 		>
 			<svg><use href="#arrow-down" /></svg>
-			<span class="screen-reader-text">
-				<?php _e( 'Book info', 'pressbooks-book' ) ?>
-			</span>
 		</button>
 	</div>
 </section>
