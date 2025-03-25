@@ -129,7 +129,7 @@ msgstr "Pressbooks sur YouTube"
 
 #: footer.php:84
 msgid "Pressbooks on LinkedIn"
-msgstr ""
+msgstr "Pressbooks sur LinkedIn"
 
 #: functions.php:16
 msgid "Dependencies Missing"
