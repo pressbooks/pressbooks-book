@@ -121,7 +121,7 @@ msgstr "Annuaire Pressbooks"
 
 #: footer.php:73
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
