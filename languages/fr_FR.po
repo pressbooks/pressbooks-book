@@ -167,7 +167,7 @@ msgstr ""
 
 #: header.php:112
 msgid "Learn more"
-msgstr ""
+msgstr "En savoir plus"
 
 #: header.php:124 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
