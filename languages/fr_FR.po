@@ -252,7 +252,7 @@ msgstr "Tous droits réservés"
 
 #: inc/helpers/namespace.php:179
 msgid "Check out this great book published with Pressbooks."
-msgstr ""
+msgstr "Découvrez cet excellent livre sur Pressbooks."
 
 #: inc/helpers/namespace.php:257
 msgid "Home"
