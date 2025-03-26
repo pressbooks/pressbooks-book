@@ -48,7 +48,8 @@ export default {
 		( function () {
 			const navToggle = document.querySelector( '.js-header-nav-toggle' );
 			navToggle.addEventListener( 'click', function ( event ) {
-				event.preventDefault();
+				const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+				navToggle.setAttribute('aria-expanded', !expanded);
 				document.querySelector( '.header__nav' ).classList.toggle( 'header__nav--active' );
 			} );
 		} )();
