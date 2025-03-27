@@ -10,6 +10,7 @@
 # Thomas Weideman, 2021
 # Steel Wagstaff <steel@pressbooks.com>, 2023
 # Felipe Dalcin, 2024
+# Mich Spieler, 2025
 # 
 msgid ""
 msgstr ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "POT-Creation-Date: 2025-01-06T19:23:51+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Felipe Dalcin, 2024\n"
+"Last-Translator: Mich Spieler, 2025\n"
 "Language-Team: French (https://app.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,7 +121,7 @@ msgstr "Annuaire Pressbooks"
 
 #: footer.php:73
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
@@ -128,7 +129,7 @@ msgstr "Pressbooks sur YouTube"
 
 #: footer.php:84
 msgid "Pressbooks on LinkedIn"
-msgstr ""
+msgstr "Pressbooks sur LinkedIn"
 
 #: functions.php:16
 msgid "Dependencies Missing"
@@ -166,7 +167,7 @@ msgstr ""
 
 #: header.php:112
 msgid "Learn more"
-msgstr ""
+msgstr "En savoir plus"
 
 #: header.php:124 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
@@ -251,7 +252,7 @@ msgstr "Tous droits réservés"
 
 #: inc/helpers/namespace.php:179
 msgid "Check out this great book published with Pressbooks."
-msgstr ""
+msgstr "Découvrez cet excellent livre sur Pressbooks."
 
 #: inc/helpers/namespace.php:257
 msgid "Home"
@@ -342,7 +343,7 @@ msgstr "Éditeur"
 
 #: inc/helpers/namespace.php:495
 msgid "Publisher City"
-msgstr ""
+msgstr "Ville de l’éditeur"
 
 #: inc/helpers/namespace.php:496
 msgid "Publication Date"
