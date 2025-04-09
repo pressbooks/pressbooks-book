@@ -31,5 +31,5 @@ $shapeshifter-font-2-is-serif: true !default;
 $font-3: $font-2;
 
 @if variable-exists(custom-fonts-imported) {
-  @import '../../../../../uploads/assets/custom-fonts/_custom-fonts.scss';
+  @import '../../../../../uploads/assets/custom-fonts/custom-fonts';
 }
