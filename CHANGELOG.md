@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.26.11](https://github.com/pressbooks/pressbooks-book/compare/2.26.10...2.26.11) (2025-04-24)
+
+
+### Bug Fixes
+
+* add role presentation to license icon in the book home page ([#1314](https://github.com/pressbooks/pressbooks-book/issues/1314)) ([d41c26f](https://github.com/pressbooks/pressbooks-book/commit/d41c26f261c9bf6640581bf986dce503426a0f2a))
+* change aria-expanded property when button is clicked ([#1319](https://github.com/pressbooks/pressbooks-book/issues/1319)) ([85b6159](https://github.com/pressbooks/pressbooks-book/commit/85b61593528252cb9be489ba4d1ef1f30300b4db))
+* info and metadata buttons ([#1313](https://github.com/pressbooks/pressbooks-book/issues/1313)) ([ba96bee](https://github.com/pressbooks/pressbooks-book/commit/ba96beeaccb6c07a5b764ef66e6c57fe4471cf28))
+* mobile nav toggle communicates state ([#1320](https://github.com/pressbooks/pressbooks-book/issues/1320)) ([b463026](https://github.com/pressbooks/pressbooks-book/commit/b4630267ce77e11e934b5607bc65f884d6782774))
+
+
+### Chores
+
+* bump aetna ([#1322](https://github.com/pressbooks/pressbooks-book/issues/1322)) ([d6e4899](https://github.com/pressbooks/pressbooks-book/commit/d6e4899ef2ad12459620380d28fbceb81e22c238))
+* **deps:** bump sharer.js from 0.5.2 to 0.5.3 in the npm-dependencies group ([#1323](https://github.com/pressbooks/pressbooks-book/issues/1323)) ([fd5f764](https://github.com/pressbooks/pressbooks-book/commit/fd5f764c2c5301000340d2f5825204346fe9b9ab))
+* **i10n:** French translations updates ([#1321](https://github.com/pressbooks/pressbooks-book/issues/1321)) ([c33128b](https://github.com/pressbooks/pressbooks-book/commit/c33128bf69dee37022691e887448dd62e8d171ef))
+* **i10n:** Updates for project McLuhan ([#1325](https://github.com/pressbooks/pressbooks-book/issues/1325)) ([feccf8f](https://github.com/pressbooks/pressbooks-book/commit/feccf8f1a4afb90a4fae4ed4f8d0694c08546c8e))
+
 ## [2.26.10](https://github.com/pressbooks/pressbooks-book/compare/2.26.9...2.26.10) (2025-03-13)
 
 
