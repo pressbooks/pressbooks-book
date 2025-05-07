@@ -82,7 +82,7 @@
   @extend .book-header__author;
 }
 
-.book-header__author + .book-header__contributor {
+.book-header__author .book-header__contributor {
   @extend .book-header__author;
 }
 
