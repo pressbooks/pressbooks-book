@@ -80,6 +80,7 @@
 
 .book-header__contributor {
   @extend .book-header__author;
+  margin-top: 0;
 }
 
 .book-header__author .book-header__contributor {
