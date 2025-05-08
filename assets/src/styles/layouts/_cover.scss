@@ -74,7 +74,7 @@
   margin-bottom: 1rem;
 
   @media #{$breakpoint-large} {
-    margin-bottom: 2.25rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -223,6 +223,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 2.375rem;
+  margin-top: 1.75rem;
 
   @media #{$breakpoint-tablet-and-up} {
     align-self: unset;
