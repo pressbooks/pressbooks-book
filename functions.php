@@ -76,3 +76,12 @@ if ( is_admin() ) {
 	add_action( 'wp_ajax_text_diff', '\PressbooksBook\Actions\text_diff' );
 	add_action( 'wp_ajax_nopriv_text_diff', '\PressbooksBook\Actions\text_diff' );
 }
+
+function pb_content_only() {
+    return isset( $_GET['lti_view'] );
+}
+
+add_filter( 'query_vars', function ( $vars ) {
+    $vars[] = 'lti_view';
+    return $vars;
+});

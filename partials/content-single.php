@@ -33,8 +33,8 @@ edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</d
 			$content = apply_filters( 'the_content', get_the_content() );
 			echo $content;
 		}
-		global $multipage;
-		if ( $multipage ) {
+        global $multipage;
+		if ( $multipage && $content_only === false ) {
 			?>
 			<div class="nav-reading--page">
 				<?php

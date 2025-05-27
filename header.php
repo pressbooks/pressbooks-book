@@ -18,6 +18,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php if ( ! pb_content_only() ) { ?>
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -57,8 +58,9 @@
 		<symbol id="email" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></symbol>
 	</defs>
 </svg>
-
+<?php } ?>
 <div id="page" class="site">
+    <?php  if ( ! pb_content_only() ) { ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>
 	<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
 
@@ -144,6 +146,6 @@
 			</div>
 		<?php } ?>
 	</header>
-
+<?php } ?>
 	<main id="main">
 	<div id="content" class="site-content" tabindex="-1">
