@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.27.0](https://github.com/pressbooks/pressbooks-book/compare/2.26.11...2.27.0) (2025-05-13)
+
+
+### Features
+
+* support edited volumes and other contributor types ([#981](https://github.com/pressbooks/pressbooks-book/issues/981)) ([37bc96e](https://github.com/pressbooks/pressbooks-book/commit/37bc96e845d50efa557783b1eb82efc241ecb10a))
+
+
+### Bug Fixes
+
+* author and contributors spacing in book home page ([#1329](https://github.com/pressbooks/pressbooks-book/issues/1329)) ([7c6cfc6](https://github.com/pressbooks/pressbooks-book/commit/7c6cfc6bf24b32df0bfbdcdc9298086d70da074c))
+* contributor style in for book home page ([#1328](https://github.com/pressbooks/pressbooks-book/issues/1328)) ([3b9ce04](https://github.com/pressbooks/pressbooks-book/commit/3b9ce04afcd432c44cba6983d6b7f86ba1483373))
+* replace guides and tutorials link with user guide ([#1326](https://github.com/pressbooks/pressbooks-book/issues/1326)) ([898e1ac](https://github.com/pressbooks/pressbooks-book/commit/898e1ac1f4a1fb7b76768fee5c0239c2db2d57ce))
+
+
+### Chores
+
+* lowercase author by ([#1330](https://github.com/pressbooks/pressbooks-book/issues/1330)) ([36afc54](https://github.com/pressbooks/pressbooks-book/commit/36afc542499be28b47d0b772f22e2ca193c5e1f2))
+
 ## [2.26.11](https://github.com/pressbooks/pressbooks-book/compare/2.26.10...2.26.11) (2025-04-24)
 
 
