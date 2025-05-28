@@ -1,9 +1,9 @@
 <?php if ( have_posts() ) {
 	while ( have_posts() ) :
 		the_post();
-        get_header();
-        $content_only = pb_content_only();
-        if ( \PressbooksBook\Helpers\is_book_public() ) :
+		get_header();
+		$content_only = pb_content_only();
+		if ( \PressbooksBook\Helpers\is_book_public() ) :
 			$web_options  = get_option( 'pressbooks_theme_options_web' );
 			$number       = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
 			$subtitle     = get_post_meta( $post->ID, 'pb_subtitle', true );
@@ -26,9 +26,11 @@
 			}
 			?>
 </div><!-- #content -->
-            <?php if ( ! pb_content_only() ) {
-                \PressbooksBook\Helpers\get_links();
-            }?>
+			<?php
+			if ( ! pb_content_only() ) {
+				\PressbooksBook\Helpers\get_links();
+			}
+			?>
 					<div class="block block-reading-meta">
 						<div class="block-reading-meta__inner">
 							<div class="block-reading-meta__subsection">
@@ -76,9 +78,9 @@
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_content_before_footer' );
-        if ( ! pb_content_only() ) {
-            get_footer();
-        }
+		if ( ! pb_content_only() ) {
+			get_footer();
+		}
 		?>
 <?php endwhile;
 };?>

@@ -78,10 +78,10 @@ if ( is_admin() ) {
 }
 
 function pb_content_only() {
-    return isset( $_GET['lti_view'] );
+	return isset( $_GET['lti_view'] );
 }
 
 add_filter( 'query_vars', function ( $vars ) {
-    $vars[] = 'lti_view';
-    return $vars;
+	$vars[] = 'lti_view';
+	return $vars;
 });
