@@ -19,7 +19,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 		<?php if ( ! empty( $book_information['pb_editors'] ) ) { ?>
 			<p class="book-header__contributor"><?php echo esc_html__( 'Edited by ', 'pressbooks-book' ) . esc_html( $book_information['pb_editors'] ); ?></p>
 		<?php } ?>
-		<?php if ( ! empty( $book_information['pb_tranlators'] ) ) { ?>
+		<?php if ( ! empty( $book_information['pb_translators'] ) ) { ?>
 			<p class="book-header__contributor"><?php echo esc_html__( 'Translated by ', 'pressbooks-book' ) . esc_html( $book_information['pb_translators'] ); ?></p>
 		<?php } ?>
 		<div class="book-header__cover">
