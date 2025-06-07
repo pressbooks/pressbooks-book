@@ -4,6 +4,50 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Open Graph meta tags -->
+	<?php
+	$book_information = pb_get_book_information();
+	$post_id = get_queried_object_id();
+	$og_title = wp_get_document_title();
+	// Set type to book for home page and article for all other pages
+	$og_type = ( is_front_page() && is_page() ) ? 'book' : 'article';
+	$og_url = get_permalink( $post_id );
+	$og_image = $book_information['pb_cover_image'];
+	$og_image_alt = __( 'Cover image for ', 'pressbooks-book' ) . get_bloginfo( 'name' );
+	// Use featured image, if available
+	if ( has_post_thumbnail( $post_id ) ) {
+		$og_image = get_the_post_thumbnail_url( $post_id, 'full' );
+		$og_image_alt = get_post_meta( get_post_thumbnail_id( $post_id ), '_wp_attachment_image_alt', true );
+	}
+	$og_description = $og_title;
+	if ( ! empty( $book_information['pb_about_140'] ) ) {
+		$og_description = $book_information['pb_about_140'];
+	} elseif ( ! empty( $book_information['pb_about_50'] ) ) {
+		$og_description = $book_information['pb_about_50'];
+	} elseif ( ! empty( $book_information['pb_about_unlimited'] ) ) {
+		$og_description = $book_information['pb_about_unlimited'];
+	} elseif ( ! empty( get_the_excerpt( $post_id ) ) ) {
+		$og_description = wp_trim_words( get_the_excerpt( $post_id ), 25 );
+	}
+	$og_site_name = get_bloginfo( 'name' );
+
+	// Allow customization of Open Graph meta tags with filters
+	$og_title = apply_filters( 'pressbooks_og_title', $og_title );
+	$og_description = apply_filters( 'pressbooks_og_description', $og_description );
+	$og_url = apply_filters( 'pressbooks_og_url', $og_url );
+	$og_image = apply_filters( 'pressbooks_og_image', $og_image );
+	$og_site_name = apply_filters( 'pressbooks_og_site_name', $og_site_name );
+	$og_image_alt = apply_filters( 'pressbooks_og_image_alt', $og_image_alt );
+	?>
+
+	<meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>" />
+	<meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>" />
+	<meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>" />
+	<meta property="og:url" content="<?php echo esc_url( $og_url ); ?>" />
+	<meta property="og:image" content="<?php echo esc_url( $og_image ); ?>" />
+	<meta property="og:image:alt" content="<?php echo esc_attr( $og_image_alt ); ?>" />
+	<meta property="og:site_name" content="<?php echo esc_attr( $og_site_name ); ?>" />
+
 	<?php
 	$root_id = get_network()->site_id;
 	switch_to_blog( $root_id );
