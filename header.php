@@ -4,12 +4,57 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/dist/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon-16x16.png">
+	<!-- Open Graph meta tags -->
+	<?php
+	$book_information = pb_get_book_information();
+	$post_id = get_queried_object_id();
+	$og_title = wp_get_document_title();
+	// Set type to book for home page and article for all other pages
+	$og_type = ( is_front_page() && is_page() ) ? 'book' : 'article';
+	$og_url = get_permalink( $post_id );
+	$og_image = $book_information['pb_cover_image'];
+	$og_image_alt = __( 'Cover image for ', 'pressbooks-book' ) . get_bloginfo( 'name' );
+	// Use featured image, if available
+	if ( has_post_thumbnail( $post_id ) ) {
+		$og_image = get_the_post_thumbnail_url( $post_id, 'full' );
+		$og_image_alt = get_post_meta( get_post_thumbnail_id( $post_id ), '_wp_attachment_image_alt', true );
+	}
+	$og_description = $og_title;
+	if ( ! empty( $book_information['pb_about_140'] ) ) {
+		$og_description = $book_information['pb_about_140'];
+	} elseif ( ! empty( $book_information['pb_about_50'] ) ) {
+		$og_description = $book_information['pb_about_50'];
+	} elseif ( ! empty( $book_information['pb_about_unlimited'] ) ) {
+		$og_description = $book_information['pb_about_unlimited'];
+	} elseif ( ! empty( get_the_excerpt( $post_id ) ) ) {
+		$og_description = wp_trim_words( get_the_excerpt( $post_id ), 25 );
+	}
+	$og_site_name = get_bloginfo( 'name' );
+
+	// Allow customization of Open Graph meta tags with filters
+	$og_title = apply_filters( 'pressbooks_og_title', $og_title );
+	$og_description = apply_filters( 'pressbooks_og_description', $og_description );
+	$og_url = apply_filters( 'pressbooks_og_url', $og_url );
+	$og_image = apply_filters( 'pressbooks_og_image', $og_image );
+	$og_site_name = apply_filters( 'pressbooks_og_site_name', $og_site_name );
+	$og_image_alt = apply_filters( 'pressbooks_og_image_alt', $og_image_alt );
+	?>
+
+	<meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>" />
+	<meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>" />
+	<meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>" />
+	<meta property="og:url" content="<?php echo esc_url( $og_url ); ?>" />
+	<meta property="og:image" content="<?php echo esc_url( $og_image ); ?>" />
+	<meta property="og:image:alt" content="<?php echo esc_attr( $og_image_alt ); ?>" />
+	<meta property="og:site_name" content="<?php echo esc_attr( $og_site_name ); ?>" />
+
+	<?php
+	$root_id = get_network()->site_id;
+	switch_to_blog( $root_id );
+	wp_site_icon();
+	restore_current_blog();
+	?>
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/site.webmanifest">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/dist/images/safari-pinned-tab.svg" color="#b01109">
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon.ico">
 	<meta name="application-name" content="Pressbooks">
 	<meta name="msapplication-TileColor" content="#b01109">
 	<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/browserconfig.xml">
@@ -60,84 +105,83 @@
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>
-	<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
-
 	<header class="header" role="banner">
-		<div class="header__inside">
-			<div class="header__brand">
-				<?php
-				$root_id = get_network()->site_id;
-				switch_to_blog( $root_id );
-				?>
-				<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+		<div class="header__container">
+			<div class="header__inside">
+				<div class="header__brand">
 					<?php
-					if ( has_custom_logo( $root_id ) ) {
-						$custom_logo_id = get_theme_mod( 'custom_logo' );
-						printf(
-							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
-							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-							/* translators: %s: name of network */
-							sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
-						);
-					} else {
-						?>
-					<svg class="header__logo--svg" role="img" aria-label="
-						<?php
-						/* translators: %s: name of network */
-							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
-						?>
-							">
-						<use href="#logo-pressbooks" />
-					</svg>
-						<?php
-					}
-					restore_current_blog();
+					switch_to_blog( $root_id );
 					?>
-				</a>
-			</div>
-			<div class="header__nav">
-				<button class="header__nav-icon js-header-nav-toggle" aria-expanded="false" aria-controls="navigation"><?php _e( 'Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></button>
-				<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
-					<p id="primary-nav" class="screen-reader-text"><?php esc_html_e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
-					<ul id="nav-primary-menu" class="nav--primary">
-						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
-					</ul>
-				</nav>
+					<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+						<?php
+						if ( has_custom_logo( $root_id ) ) {
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							printf(
+								'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
+								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+								/* translators: %s: name of network */
+								sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
+							);
+						} else {
+							?>
+							<svg class="header__logo--svg" role="img" aria-label="
+							<?php
+							/* translators: %s: name of network */
+							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
+							?>
+							">
+								<use href="#logo-pressbooks" />
+							</svg>
+							<?php
+						}
+						restore_current_blog();
+						?>
+					</a>
+				</div>
+				<div class="header__nav">
+					<button class="header__nav-icon js-header-nav-toggle" aria-expanded="false" aria-controls="navigation"><?php _e( 'Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></button>
+					<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
+						<p id="primary-nav" class="screen-reader-text"><?php esc_html_e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
+						<ul id="nav-primary-menu" class="nav--primary">
+							<?php echo \PressbooksBook\Helpers\display_menu(); ?>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 
 		<?php if ( \PressbooksBook\Helpers\should_cta_banner_be_displayed() && \PressbooksBook\Helpers\is_book_public() ) : ?>
-		<div class="cta hidden">
-			<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbooks-book' ) ) ); ?>
-				<a id="close-cta" href="javascript:void()" aria-label="Close banner">
-					<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="presentation">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-				</a>
-			</p>
-		</div>
+			<div class="cta hidden">
+				<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbooks-book' ) ) ); ?>
+					<a id="close-cta" href="javascript:void()" aria-label="Close banner">
+						<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="presentation">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</a>
+				</p>
+			</div>
 		<?php endif; ?>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav aria-labelledby="book-toc" class="reading-header__inside">
 					<p id="book-toc" class="screen-reader-text"><?php esc_html_e( 'Book Contents Navigation', 'pressbooks-book' ); ?></p>
 					<?php if ( is_single() ) { ?>
-					<div class="reading-header__toc dropdown">
-						<div class="reading-header__toc__title"><?php esc_html_e( 'Contents', 'pressbooks-book' ); ?></div>
-						<div class="block-reading-toc" hidden>
-							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
+						<div class="reading-header__toc dropdown">
+							<div class="reading-header__toc__title"><?php esc_html_e( 'Contents', 'pressbooks-book' ); ?></div>
+							<div class="block-reading-toc" hidden>
+								<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
+							</div>
 						</div>
-					</div>
 					<?php } else { ?>
-					<div class="reading-header__toc"></div>
+						<div class="reading-header__toc"></div>
 					<?php } ?>
 					<?php /* translators: %s: the title of the book */ ?>
 					<h1 class="reading-header__title" ><a href="<?php echo home_url( '/' ); ?>" aria-label="<?php printf( __( 'Go to the cover page of %s', 'pressbooks-book' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 					<div class="reading-header__end-container">
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-						<a href="<?php echo home_url( '/buy/' ); ?>"><?php esc_html_e( 'Buy', 'pressbooks-book' ); ?></a>
+							<a href="<?php echo home_url( '/buy/' ); ?>"><?php esc_html_e( 'Buy', 'pressbooks-book' ); ?></a>
 						<?php endif; ?>
 					</div>
 				</nav>
@@ -146,4 +190,4 @@
 	</header>
 
 	<main id="main">
-	<div id="content" class="site-content" tabindex="-1">
+		<div id="content" class="site-content" tabindex="-1">
