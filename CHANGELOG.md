@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.28.0](https://github.com/pressbooks/pressbooks-book/compare/2.27.0...2.28.0) (2025-06-10)
+
+
+### Features
+
+* add Open Graph meta tags, adjust header structure to match Aldine ([#1340](https://github.com/pressbooks/pressbooks-book/issues/1340)) ([25695e8](https://github.com/pressbooks/pressbooks-book/commit/25695e810fa46239bed668af03d1998c466c397f))
+* add support for Urdu, Modern Hebrew, and Amharic ([#1343](https://github.com/pressbooks/pressbooks-book/issues/1343)) ([daaeb8e](https://github.com/pressbooks/pressbooks-book/commit/daaeb8e5119862b9834402f9e1ca12c35febfa45))
+* display authors, editors, and translators on book home page in consistent way ([#1339](https://github.com/pressbooks/pressbooks-book/issues/1339)) ([b756c7b](https://github.com/pressbooks/pressbooks-book/commit/b756c7b80890e063160fe5ce03e7bc9eb7fd3657))
+
+
+### Bug Fixes
+
+* add helper classes for contributor types  ([#1346](https://github.com/pressbooks/pressbooks-book/issues/1346)) ([1cce35f](https://github.com/pressbooks/pressbooks-book/commit/1cce35fb80bcf48a45a92e07ef4c93720ffc24a4))
+* convert `by` to lowercase ([#1345](https://github.com/pressbooks/pressbooks-book/issues/1345)) ([254abd5](https://github.com/pressbooks/pressbooks-book/commit/254abd51fd128a8297b4d092a4736d3f61a53469))
+* display only editors or authors ([#1333](https://github.com/pressbooks/pressbooks-book/issues/1333)) ([c73cabd](https://github.com/pressbooks/pressbooks-book/commit/c73cabdbb719268d272c3495c936457910d11961))
+* display series title and number on book homepage ([#1338](https://github.com/pressbooks/pressbooks-book/issues/1338)) ([f9f03b7](https://github.com/pressbooks/pressbooks-book/commit/f9f03b70b5745cc7b55e51bcc7bef511820920c4))
+
+
+### Chores
+
+* update update-pot.yml ([#1342](https://github.com/pressbooks/pressbooks-book/issues/1342)) ([c04facc](https://github.com/pressbooks/pressbooks-book/commit/c04facc74dea1780ce6ef53774d9b701e2b98b0a))
+
 ## [2.27.0](https://github.com/pressbooks/pressbooks-book/compare/2.26.11...2.27.0) (2025-05-13)
 
 
