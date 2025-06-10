@@ -9,13 +9,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  jobs:
-    update-pot-file:
-      uses: pressbooks/reusable-workflows/.github/workflows/update-pot.yml@main
-      secrets: inherit
-      with:
-        domain: 'pressbooks-book'
-        slug: 'pressbooks-book'
-        package_name: 'McLuhan'
-        headers: '{"Report-Msgid-Bugs-To": "https://github.com/pressbooks/pressbooks-book/issues"}'
-        pull_request_number: ${{ github.event.pull_request.number }}
+  update-pot-file:
+    uses: pressbooks/reusable-workflows/.github/workflows/update-pot.yml@main
+    secrets: inherit
+    with:
+      domain: 'pressbooks-book'
+      slug: 'pressbooks-book'
+      package_name: 'McLuhan'
+      headers: '{"Report-Msgid-Bugs-To": "https://github.com/pressbooks/pressbooks-book/issues"}'
+      pull_request_number: ${{ github.event.pull_request.number }}

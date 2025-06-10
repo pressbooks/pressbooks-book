@@ -8,16 +8,19 @@ use function \Pressbooks\Image\attachment_id_from_url;
 	<div class="book-header__inner">
 		<?php \PressbooksBook\Helpers\get_links( false ); ?>
 		<h1 class="section__title book-header__title">
-			<span class="screen-reader-text"><?php _e( 'Book Title', 'pressbooks-book' ); ?>: </span><?php bloginfo( 'name' ); ?>
+			<span class="screen-reader-text"><?php esc_html_e( 'Book Title', 'pressbooks-book' ); ?>: </span><?php bloginfo( 'name' ); ?>
 		</h1>
 		<?php if ( ! empty( $book_information['pb_subtitle'] ) ) : ?>
-			<p class="book-header__subtitle"><span class="screen-reader-text"><?php _e( 'Subtitle', 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_subtitle']; ?></p>
+			<p class="book-header__subtitle"><span class="screen-reader-text"><?php esc_html_e( 'Subtitle', 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
 		<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
-			<p class="book-header__author"><span class="screen-reader-text"><?php echo translate_nooped_plural( _n_noop( 'Author', 'Authors', 'pressbooks-book' ), \PressbooksBook\Helpers\count_items( $book_information['pb_authors'] ), 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_authors']; ?></p>
+			<p class="book-header__contributor"><?php echo esc_html__( 'By ', 'pressbooks-book' ) . esc_html( $book_information['pb_authors'] ); ?></p>
 		<?php } ?>
-		<?php if ( empty( $book_information['pb_authors'] ) && ! empty( $book_information['pb_editors'] ) ) { ?>
-			<p class="book-header__contributor"><?php _e( 'Edited by ', 'pressbooks-book' ); ?> <?php echo $book_information['pb_editors']; ?></p>
+		<?php if ( ! empty( $book_information['pb_editors'] ) ) { ?>
+			<p class="book-header__contributor"><?php echo esc_html__( 'Edited by ', 'pressbooks-book' ) . esc_html( $book_information['pb_editors'] ); ?></p>
+		<?php } ?>
+		<?php if ( ! empty( $book_information['pb_translators'] ) ) { ?>
+			<p class="book-header__contributor"><?php echo esc_html__( 'Translated by ', 'pressbooks-book' ) . esc_html( $book_information['pb_translators'] ); ?></p>
 		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
@@ -54,7 +57,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 				?>
 				<div class="book-header__cover__downloads dropdown">
 
-					<p><?php _e( 'Download this book', 'pressbooks-book' ); ?></p>
+					<p><?php esc_html_e( 'Download this book', 'pressbooks-book' ); ?></p>
 					<ul>
 					<?php
 					foreach ( $files as $filetype => $filename ) :
@@ -93,11 +96,11 @@ use function \Pressbooks\Image\attachment_id_from_url;
 
 			if ( ! empty( $book_information['pb_about_50'] ) ) {
 				?>
-				<p class="book-header__description"><span class="screen-reader-text"><?php _e( 'Book Description', 'pressbooks-book' ); ?>: </span><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
+				<p class="book-header__description"><span class="screen-reader-text"><?php esc_html_e( 'Book Description', 'pressbooks-book' ); ?>: </span><?php echo pb_decode( $book_information['pb_about_50'] ); ?></p>
 			<?php } ?>
 		<?php global $first_chapter; ?>
 		<div class="book-header__license">
-			<span class="screen-reader-text"><?php _e( 'License', 'pressbooks-book' ); ?>: </span>
+			<span class="screen-reader-text"><?php esc_html_e( 'License', 'pressbooks-book' ); ?>: </span>
 			<?php $license = ( isset( $book_information['pb_book_license'] ) ) ? $book_information['pb_book_license'] : 'all-rights-reserved'; ?>
 			<div class="book-header__license__icons license-icons"><?php echo \PressbooksBook\Helpers\license_to_icons( $license ); ?></div>
 			<span class="book-header__license__text license-text"><?php echo \PressbooksBook\Helpers\license_to_text( $license ); ?></span>
@@ -105,14 +108,14 @@ use function \Pressbooks\Image\attachment_id_from_url;
 		<div class="book-header__cta">
 			<?php if ( pb_get_first_post_id() ) { ?>
 			<a class="call-to-action" href="<?php echo $first_chapter; ?>">
-				<?php _e( 'Read Book', 'pressbooks-book' ); ?>
+				<?php esc_html_e( 'Read Book', 'pressbooks-book' ); ?>
 			</a>
 				<?php
 			}
 			if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) {
 				?>
 	<a class="call-to-action" href="<?php echo home_url( '/buy' ); ?>">
-				<?php _e( 'Buy Book', 'pressbooks-book' ); ?>
+				<?php esc_html_e( 'Buy Book', 'pressbooks-book' ); ?>
 	</a>
 				<?php
 			}
