@@ -71,13 +71,13 @@ if ( $contact_link ) {
 			</div>
 			<div class="footer__pressbooks__social">
 				<a class="youtube" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?>">
-					<svg class="icon--svg">
+					<svg class="icon--svg" title="YouTube logo">
 						<use href="#youtube-icon" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
 				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca" title="<?php _e( 'Pressbooks on LinkedIn', 'pressbooks-book' ); ?>">
-					<svg class="icon--svg">
+					<svg class="icon--svg" title="LinkedIn logo">
 						<use href="#linkedin-icon" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?></span></a>
