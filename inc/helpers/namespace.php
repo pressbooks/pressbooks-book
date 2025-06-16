@@ -538,7 +538,7 @@ function get_links( $echo = true ) {
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
 				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_title ); ?>">
-					<svg class="icon--svg"><use href="#arrow-left" /></svg>
+					<svg class="icon--svg" title="Previous"><use href="#arrow-left" /></svg>
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
@@ -550,7 +550,7 @@ function get_links( $echo = true ) {
 				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_title ); ?>">
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
-					<svg class="icon--svg"><use href="#arrow-right" /></svg>
+					<svg class="icon--svg" title="Next"><use href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
 		</div>
