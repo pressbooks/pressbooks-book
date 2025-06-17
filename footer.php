@@ -54,7 +54,7 @@ if ( $contact_link ) {
 	<div class="footer__inner">
 		<section class="footer__pressbooks">
 			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
-				<svg class="icon--svg" role="img" title="Pressbooks logo" aria-label="Pressbooks logo">
+				<svg class="icon--svg" role="img" aria-label="<?php echo esc_html__( 'Pressbooks logo', 'pressbooks-aldine' ); ?>">
 					<title><?php echo esc_html__( 'Pressbooks logo', 'pressbooks-aldine' ); ?></title>
 					<use href="#icon-pressbooks" />
 				</svg>
