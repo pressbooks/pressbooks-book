@@ -17,4 +17,3 @@ jobs:
       slug: 'pressbooks-book'
       package_name: 'McLuhan'
       headers: '{"Report-Msgid-Bugs-To": "https://github.com/pressbooks/pressbooks-book/issues"}'
-      pull_request_number: ${{ github.event.pull_request.number }}
