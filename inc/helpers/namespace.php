@@ -494,6 +494,8 @@ function get_metakeys(): array {
 		'pb_primary_subject' => __( 'Primary Subject', 'pressbooks-book' ),
 		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
 		'pb_institutions' => _n_noop( 'Institution', 'Institutions', 'pressbooks-book' ),
+		'pb_series_title' => __( 'Series Title', 'pressbooks-book' ),
+		'pb_series_number' => __( 'Series Number', 'pressbooks-book' ),
 		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
 		'pb_publisher_city' => __( 'Publisher City', 'pressbooks-book' ),
 		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),

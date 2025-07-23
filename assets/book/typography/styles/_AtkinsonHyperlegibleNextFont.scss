@@ -1,0 +1,32 @@
+// 'Atkinson Hyperlegible Next', @import 'AtkinsonHyperlegibleNextFont'
+
+// Atkinson Hyperlegible Next
+// SANS-SERIF
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/AtkinsonHyperlegibleNext-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/AtkinsonHyperlegibleNext-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/AtkinsonHyperlegibleNext-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/AtkinsonHyperlegibleNext-BoldItalic.otf') format('opentype');
+}
