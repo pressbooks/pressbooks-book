@@ -34,7 +34,7 @@ edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</d
 			echo $content;
 		}
 		global $multipage;
-		if ( $multipage && $content_only === false ) {
+		if ( $multipage ) {
 			?>
 			<div class="nav-reading--page">
 				<?php
@@ -71,7 +71,7 @@ edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</d
 	} else {
 		echo apply_filters( 'the_content', $post->post_content );
 	}
-	if ( $display_about_the_author && $authors && $content_only ) {
+	if ( $display_about_the_author && $authors ) {
 		?>
 		<hr class="before-contributors clear">
 		<section class="contributors chapter-authors">
