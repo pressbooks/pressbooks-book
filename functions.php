@@ -71,17 +71,16 @@ add_filter( 'the_title', 'PressbooksBook\Filters\add_private_to_title', 10, 2 );
 add_action( 'pb_theme_options_web_add_settings_fields', '\PressbooksBook\Actions\add_lightbox_setting', 10, 2 );
 add_filter( 'pb_theme_options_web_booleans', '\PressbooksBook\Filters\add_lightbox_to_settings' );
 add_action( 'template_redirect', '\PressbooksBook\Actions\redirect_attachment_page' );
+add_filter( 'query_vars', function ( $vars ) {
+	$vars[] = 'lti_view';
+	return $vars;
+});
+add_filter( 'wp_redirect', function( $location ) {
+	return add_query_arg( 'lti_view', '1', $location );
+});
+add_action( 'pb_content_only', '\PressbooksBook\Actions\pb_content_only' );
 
 if ( is_admin() ) {
 	add_action( 'wp_ajax_text_diff', '\PressbooksBook\Actions\text_diff' );
 	add_action( 'wp_ajax_nopriv_text_diff', '\PressbooksBook\Actions\text_diff' );
 }
-
-function pb_content_only() {
-	return isset( $_GET['lti_view'] );
-}
-
-add_filter( 'query_vars', function ( $vars ) {
-	$vars[] = 'lti_view';
-	return $vars;
-});

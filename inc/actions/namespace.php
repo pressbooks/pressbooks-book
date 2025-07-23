@@ -336,3 +336,7 @@ function register_h5p_listing_page() {
 
 	return false;
 }
+
+function pb_content_only( $initial = false ): bool {
+	return get_query_var( 'lti_view' ) || $initial;
+}

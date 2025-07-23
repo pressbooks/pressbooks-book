@@ -1,9 +1,17 @@
-<?php if ( have_posts() ) {
+<?php
+
+use function PressbooksBook\Helpers\copyright_license;
+use function PressbooksBook\Helpers\is_book_public;
+use function PressbooksBook\Helpers\is_buckram;
+use function PressbooksBook\Helpers\share_icons;
+use function PressbooksBook\Helpers\social_media_enabled;
+
+if ( have_posts() ) {
 	while ( have_posts() ) :
 		the_post();
 		get_header();
-		$content_only = pb_content_only();
-		if ( \PressbooksBook\Helpers\is_book_public() ) :
+		$display_content_only = apply_filters( 'pb_content_only', false );
+		if ( is_book_public() ) :
 			$web_options  = get_option( 'pressbooks_theme_options_web' );
 			$number       = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
 			$subtitle     = get_post_meta( $post->ID, 'pb_subtitle', true );
@@ -19,7 +27,7 @@
 				}
 			} ?>
 			<?php
-			if ( \PressbooksBook\Helpers\is_buckram() || pb_is_custom_theme() ) {
+			if ( is_buckram() || pb_is_custom_theme() ) {
 				include( locate_template( 'partials/content-single.php' ) );
 			} else {
 				include( locate_template( 'partials/content-single-legacy.php' ) );
@@ -27,7 +35,7 @@
 			?>
 </div><!-- #content -->
 			<?php
-			if ( ! pb_content_only() ) {
+			if ( ! $display_content_only ) {
 				\PressbooksBook\Helpers\get_links();
 			}
 			?>
@@ -36,8 +44,8 @@
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'License', 'pressbooks-book' ); ?></h2>
 								<?php
-								if ( \PressbooksBook\Helpers\is_book_public() ) {
-									echo \PressbooksBook\Helpers\copyright_license( false );
+								if ( is_book_public() ) {
+									echo copyright_license( false );
 								}
 								$pb_section_doi = get_post_meta( $post->ID, 'pb_section_doi', true );
 								if ( $pb_section_doi ) {
@@ -56,12 +64,12 @@
 									</p>
 								<?php } ?>
 							</div>
-							<?php if ( \PressbooksBook\Helpers\social_media_enabled() ) { ?>
+							<?php if ( social_media_enabled() ) { ?>
 							<div class="block-reading-meta__subsection">
 								<h2 class="section__subtitle block-reading-meta__subtitle"><?php _e( 'Share This Book', 'pressbooks-book' ); ?></h2>
 								<div class="block-reading-meta__share">
 									<?php
-										echo \PressbooksBook\Helpers\share_icons();
+										echo share_icons();
 									?>
 								</div>
 							</div>
@@ -78,7 +86,7 @@
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_content_before_footer' );
-		if ( ! pb_content_only() ) {
+		if ( ! $display_content_only ) {
 			get_footer();
 		}
 		?>

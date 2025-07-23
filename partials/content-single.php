@@ -71,7 +71,7 @@ edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</d
 	} else {
 		echo apply_filters( 'the_content', $post->post_content );
 	}
-	if ( $display_about_the_author && $authors ) {
+	if ( $display_about_the_author && $authors && $content_only ) {
 		?>
 		<hr class="before-contributors clear">
 		<section class="contributors chapter-authors">

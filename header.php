@@ -18,7 +18,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php if ( ! pb_content_only() ) { ?>
+<?php if ( ! apply_filters( 'pb_content_only', false ) ) { ?>
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -60,7 +60,7 @@
 </svg>
 <?php } ?>
 <div id="page" class="site">
-	<?php if ( ! pb_content_only() ) { ?>
+	<?php if ( ! apply_filters( 'pb_content_only', false ) ) { ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>
 		<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
 
