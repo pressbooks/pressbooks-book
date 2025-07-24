@@ -1,31 +1,13 @@
 <?php
 
 use function PressbooksBook\Helpers\copyright_license;
+use function PressbooksBook\Helpers\get_allowed_html_before_content;
 use function PressbooksBook\Helpers\is_book_public;
 use function PressbooksBook\Helpers\is_buckram;
 use function PressbooksBook\Helpers\share_icons;
 use function PressbooksBook\Helpers\social_media_enabled;
 use Pressbooks\Container;
 use Pressbooks\Contributors;
-
-$allowed_before_html = wp_kses_allowed_html( 'post' );
-
-$allowed_before_html['svg'] = [
-	'class' => [],
-	'data-slot' => [],
-	'aria-hidden' => [],
-	'fill' => [],
-	'stroke-width' => [],
-	'stroke' => [],
-	'viewbox' => true,
-	'xmlns' => [],
-];
-
-$allowed_before_html['path'] = [
-	'd' => [],
-	'stroke-linecap' => [],
-	'stroke-linejoin' => [],
-];
 
 if ( have_posts() ) {
 	while ( have_posts() ) :
@@ -47,7 +29,7 @@ if ( have_posts() ) {
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
-			<?php echo wp_kses( apply_filters( 'pb_content_before', '' ), $allowed_before_html ); ?>
+			<?php echo wp_kses( apply_filters( 'pb_content_before', '' ), get_allowed_html_before_content() ); ?>
 			<?php
 			if ( is_buckram() || pb_is_custom_theme() ) {
 				include( locate_template( 'partials/content-single.php' ) );
