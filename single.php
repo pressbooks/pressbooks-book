@@ -17,7 +17,7 @@ $allowed_before_html['svg'] = [
 	'fill' => [],
 	'stroke-width' => [],
 	'stroke' => [],
-	'viewBox' => [],
+	'viewbox' => true,
 	'xmlns' => [],
 ];
 
