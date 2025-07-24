@@ -5,6 +5,27 @@ use function PressbooksBook\Helpers\is_book_public;
 use function PressbooksBook\Helpers\is_buckram;
 use function PressbooksBook\Helpers\share_icons;
 use function PressbooksBook\Helpers\social_media_enabled;
+use Pressbooks\Container;
+use Pressbooks\Contributors;
+
+$allowed_before_html = wp_kses_allowed_html( 'post' );
+
+$allowed_before_html['svg'] = [
+	'class' => [],
+	'data-slot' => [],
+	'aria-hidden' => [],
+	'fill' => [],
+	'stroke-width' => [],
+	'stroke' => [],
+	'viewBox' => [],
+	'xmlns' => [],
+];
+
+$allowed_before_html['path'] = [
+	'd' => [],
+	'stroke-linecap' => [],
+	'stroke-linejoin' => [],
+];
 
 if ( have_posts() ) {
 	while ( have_posts() ) :
@@ -15,17 +36,18 @@ if ( have_posts() ) {
 			$web_options  = get_option( 'pressbooks_theme_options_web' );
 			$number       = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
 			$subtitle     = get_post_meta( $post->ID, 'pb_subtitle', true );
-			$contributors = new \Pressbooks\Contributors();
+			$contributors = new Contributors();
 			$display_about_the_author = ! empty( get_option( 'pressbooks_theme_options_global', [] )['about_the_author'] );
 			$authors      = $contributors->get( $post->ID, 'authors' );
 			$chapter_contributors  = $contributors->getContributorsWithMeta( $post->ID, 'authors' );
 			$datatype     = ( in_array( $post->post_type, [ 'front-matter', 'back-matter' ], true ) ) ? pb_get_section_type( $post ) : $post->post_type;
-			$blade_engine = \Pressbooks\Container::get( 'Blade' );
+			$blade_engine = Container::get( 'Blade' );
 			if ( isset( $web_options['part_title'] ) && absint( $web_options['part_title'] ) === 1 ) {
 				if ( $post->post_type === 'chapter' ) {
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
+			<?php echo wp_kses( apply_filters( 'pb_content_before', '' ), $allowed_before_html ); ?>
 			<?php
 			if ( is_buckram() || pb_is_custom_theme() ) {
 				include( locate_template( 'partials/content-single.php' ) );
