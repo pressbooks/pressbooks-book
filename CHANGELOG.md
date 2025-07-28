@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.29.0](https://github.com/pressbooks/pressbooks-book/compare/2.28.0...2.29.0) (2025-07-28)
+
+
+### Features
+
+* add Atkinson Hyperlegible Next to Shapeshifter font choices ([#1349](https://github.com/pressbooks/pressbooks-book/issues/1349)) ([7f4ae85](https://github.com/pressbooks/pressbooks-book/commit/7f4ae85d704d9fdc75d88cb315a1efadb7e0a1fc))
+
+
+### Bug Fixes
+
+* escape DOI url ([#1354](https://github.com/pressbooks/pressbooks-book/issues/1354)) ([c118fe9](https://github.com/pressbooks/pressbooks-book/commit/c118fe91e490a062d54fadac1f55a0a0b278e50c))
+* pot workflow ([#1352](https://github.com/pressbooks/pressbooks-book/issues/1352)) ([a8ba8b2](https://github.com/pressbooks/pressbooks-book/commit/a8ba8b2f29551add190d6cb13194529bcc37506f))
+* sanitize page buy URLs rendering ([#1353](https://github.com/pressbooks/pressbooks-book/issues/1353)) ([b798923](https://github.com/pressbooks/pressbooks-book/commit/b7989230358326724a8f3e101046a67dcdeb461e))
+
+
+### Chores
+
+* build assets ([#1351](https://github.com/pressbooks/pressbooks-book/issues/1351)) ([3906467](https://github.com/pressbooks/pressbooks-book/commit/3906467ceef4401f2a49caec9ce69b67fafc0b91))
+* **i10n:** Updates for project McLuhan ([#1357](https://github.com/pressbooks/pressbooks-book/issues/1357)) ([f48804d](https://github.com/pressbooks/pressbooks-book/commit/f48804da39d84c23525bf7d5aa953b679754fb46))
+* **i18n:** update languages for project pressbooks-book ([#1355](https://github.com/pressbooks/pressbooks-book/issues/1355)) ([12ad0ee](https://github.com/pressbooks/pressbooks-book/commit/12ad0eee617d42812ae61ae432cce4759be60cc1))
+
 ## [2.28.0](https://github.com/pressbooks/pressbooks-book/compare/2.27.0...2.28.0) (2025-06-10)
 
 
