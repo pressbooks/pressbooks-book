@@ -47,7 +47,7 @@
 									 * @since Pressbooks @ 5.6.0
 									 */
 									$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://doi.org' );
-									printf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', trailingslashit( $doi_resolver ) . $pb_section_doi );
+									printf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', esc_url( trailingslashit( $doi_resolver ) . $pb_section_doi ) );
 									?>
 									</p>
 								<?php } ?>
