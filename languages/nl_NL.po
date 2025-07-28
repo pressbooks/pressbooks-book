@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.26.8\n"
+"Project-Id-Version: McLuhan 2.28.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2025-01-06T19:23:51+00:00\n"
+"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Nienke Coppens <nienke.coppens@gmail.com>, 2020\n"
 "Language-Team: Dutch (Netherlands) (https://app.transifex.com/pressbooks/teams/9194/nl_NL/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -91,19 +91,21 @@ msgstr "Verstuur"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:81 header.php:88 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:124 header.php:131 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
+#, php-format
 msgid "Logo for %s"
 msgstr "Logo voor %s"
 
 #. translators: %s: Pressbooks
 #: footer.php:68
+#, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
 #: footer.php:70
-msgid "Guides and Tutorials"
-msgstr "Handleidingen en Tutorials"
+msgid "Pressbooks User Guide"
+msgstr ""
 
 #: footer.php:71
 msgid "Pressbooks Directory"
@@ -133,42 +135,44 @@ msgstr "U moet <code>composer install</code> uitvoeren vanuit de McLuhan map."
 msgid "Cannot find Pressbooks install."
 msgstr "Kan de Pressbooks installatie niet vinden."
 
-#: header.php:62
+#: header.php:16
+msgid "Cover image for "
+msgstr ""
+
+#: header.php:107
 msgid "Skip to content"
 msgstr "Spring naar inhoud"
 
-#: header.php:100
-msgid "Toggle Menu"
-msgstr "Schakelen Menu"
-
-#: header.php:102
+#: header.php:145
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:112
+#: header.php:156
+#, php-format
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr ""
 
-#: header.php:112
+#: header.php:156
 msgid "Learn more"
 msgstr ""
 
-#: header.php:124 partials/content-cover-toc.php:9
+#: header.php:168 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:127 index.php:14 partials/content-cover-toc.php:3
+#: header.php:171 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Inhoud"
 
 #. translators: %s: the title of the book
-#: header.php:136
+#: header.php:180
+#, php-format
 msgid "Go to the cover page of %s"
 msgstr "Ga naar de cover pagina van %s"
 
-#: header.php:140 inc/helpers/namespace.php:274
+#: header.php:184 inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "Koop"
 
@@ -200,181 +204,192 @@ msgstr "Toon gelinkte afbeeldingen in een lightbox"
 msgid "Private"
 msgstr "Priv&eacute;"
 
-#: inc/helpers/namespace.php:145
+#: inc/helpers/namespace.php:148
 msgid "Public Domain"
 msgstr "Public Domain"
 
-#: inc/helpers/namespace.php:148
+#: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution"
 msgstr "Creative Commons Attribution"
 
-#: inc/helpers/namespace.php:151
+#: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution ShareAlike"
 msgstr "Creative Commons Attribution ShareAlike"
 
-#: inc/helpers/namespace.php:154
+#: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NoDerivatives"
 msgstr "Creative Commons Attribution NoDerivatives"
 
-#: inc/helpers/namespace.php:157
+#: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial"
 msgstr "Creative Commons Attribution NonCommercial"
 
-#: inc/helpers/namespace.php:160
+#: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr "Creative Commons Attribution NonCommercial ShareAlike"
 
-#: inc/helpers/namespace.php:163
+#: inc/helpers/namespace.php:166
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr "Creative Commons Attribution NonCommercial NoDerivatives"
 
-#: inc/helpers/namespace.php:167
+#: inc/helpers/namespace.php:170
 msgid "All Rights Reserved"
 msgstr "Alle Rechten Voorbehouden"
 
-#: inc/helpers/namespace.php:179
+#: inc/helpers/namespace.php:182
 msgid "Check out this great book published with Pressbooks."
 msgstr ""
 
-#: inc/helpers/namespace.php:257
+#: inc/helpers/namespace.php:260
 msgid "Home"
 msgstr "Home"
 
-#: inc/helpers/namespace.php:265
+#: inc/helpers/namespace.php:268
 msgid "Read"
 msgstr "Lezen"
 
-#: inc/helpers/namespace.php:283
+#: inc/helpers/namespace.php:286
 msgid "Sign in"
 msgstr "Aanmelden"
 
-#: inc/helpers/namespace.php:292
+#: inc/helpers/namespace.php:295
 msgid "Admin"
 msgstr "Beheer"
 
-#: inc/helpers/namespace.php:300
+#: inc/helpers/namespace.php:303
 msgid "Sign out"
 msgstr "Afmelden"
 
-#: inc/helpers/namespace.php:484 partials/content-cover-book-header.php:17
-#: partials/content-cover-book-info.php:52
+#: inc/helpers/namespace.php:487 partials/content-cover-book-info.php:53
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "Auteur"
 msgstr[1] "Auteurs"
 
-#: inc/helpers/namespace.php:485
+#: inc/helpers/namespace.php:488 partials/content-cover-book-info.php:59
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "Editor"
 msgstr[1] "Editors"
 
-#: inc/helpers/namespace.php:486
+#: inc/helpers/namespace.php:489
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "Vertaler"
 msgstr[1] "Vertalers"
 
-#: inc/helpers/namespace.php:487
+#: inc/helpers/namespace.php:490
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "Recensent"
 msgstr[1] "Recensenten"
 
-#: inc/helpers/namespace.php:488
+#: inc/helpers/namespace.php:491
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "Illustrator"
 msgstr[1] "Illustrators"
 
-#: inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:492
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "Bijdrager"
 msgstr[1] "Bijdragers"
 
-#: inc/helpers/namespace.php:490 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:33
+#: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
+#: partials/content-cover-book-info.php:73 single.php:33
 msgid "License"
 msgstr "Licentie"
 
-#: inc/helpers/namespace.php:491
+#: inc/helpers/namespace.php:494
 msgid "Primary Subject"
 msgstr "Hoofdonderwerp"
 
-#: inc/helpers/namespace.php:492
+#: inc/helpers/namespace.php:495
 msgid "Additional Subject(s)"
 msgstr "Extra Onderwerp(en)"
 
-#: inc/helpers/namespace.php:493
+#: inc/helpers/namespace.php:496
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:494
+#: inc/helpers/namespace.php:497
+msgid "Series Title"
+msgstr ""
+
+#: inc/helpers/namespace.php:498
+msgid "Series Number"
+msgstr ""
+
+#: inc/helpers/namespace.php:499
 msgid "Publisher"
 msgstr "Uitgever"
 
-#: inc/helpers/namespace.php:495
+#: inc/helpers/namespace.php:500
 msgid "Publisher City"
 msgstr ""
 
-#: inc/helpers/namespace.php:496
+#: inc/helpers/namespace.php:501
 msgid "Publication Date"
 msgstr "Datum van Uitgave"
 
-#: inc/helpers/namespace.php:497 single.php:41
+#: inc/helpers/namespace.php:502 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digital Object Identifier (DOI)"
 
-#: inc/helpers/namespace.php:498
+#: inc/helpers/namespace.php:503
 msgid "Ebook ISBN"
 msgstr "Ebook ISBN"
 
-#: inc/helpers/namespace.php:499
+#: inc/helpers/namespace.php:504
 msgid "Print ISBN"
 msgstr "Print ISBN"
 
-#: inc/helpers/namespace.php:500
+#: inc/helpers/namespace.php:505
 msgid "Hashtag"
 msgstr "Hashtag"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:535 inc/helpers/namespace.php:538
+#: inc/helpers/namespace.php:540 inc/helpers/namespace.php:543
+#, php-format
 msgid "Previous: %s"
 msgstr "Vorige: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:545 inc/helpers/namespace.php:547
+#: inc/helpers/namespace.php:550 inc/helpers/namespace.php:552
+#, php-format
 msgid "Next: %s"
 msgstr "Volgende: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:627
+#: inc/helpers/namespace.php:632
+#, php-format
 msgid "%s on"
 msgstr "%s op"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:627
+#: inc/helpers/namespace.php:632
+#, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s op%2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:627 inc/helpers/namespace.php:656
+#: inc/helpers/namespace.php:632 inc/helpers/namespace.php:661
 msgid "(Edit)"
 msgstr "(Bewerk)"
 
-#: inc/helpers/namespace.php:630
+#: inc/helpers/namespace.php:635
 msgid "Your comment is awaiting moderation."
 msgstr "Uw commentaar wacht op moderatie."
 
-#: inc/helpers/namespace.php:656
+#: inc/helpers/namespace.php:661
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -400,6 +415,7 @@ msgstr "Koop het Boek"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
+#, php-format
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
 "U kunt <a href=\"%1$s\">%2$s</a> kopen door een van de links hieronder te "
@@ -407,6 +423,7 @@ msgstr ""
 
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
+#, php-format
 msgid "Purchase on %s"
 msgstr ""
 
@@ -486,26 +503,39 @@ msgstr "Boektitel"
 msgid "Subtitle"
 msgstr "Ondertitel"
 
+#: partials/content-cover-book-header.php:17
+msgid "by "
+msgstr ""
+
+#: partials/content-cover-book-header.php:20
+msgid "Edited by "
+msgstr ""
+
+#: partials/content-cover-book-header.php:23
+msgid "Translated by "
+msgstr ""
+
 #. translators: %s: title of book
-#: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
+#: partials/content-cover-book-header.php:38
+#, php-format
 msgid "Cover image for %s"
 msgstr "Omslagafbeelding voor %s"
 
-#: partials/content-cover-book-header.php:54
+#: partials/content-cover-book-header.php:60
 msgid "Download this book"
 msgstr "Download dit boek"
 
-#: partials/content-cover-book-header.php:93
+#: partials/content-cover-book-header.php:99
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
 msgstr "Boekomschrijving"
 
-#: partials/content-cover-book-header.php:105
+#: partials/content-cover-book-header.php:111
 msgid "Read Book"
 msgstr "Lees Boek"
 
-#: partials/content-cover-book-header.php:112
+#: partials/content-cover-book-header.php:118
 msgid "Buy Book"
 msgstr "Koop Boek"
 
@@ -520,6 +550,7 @@ msgstr "Boek Bron"
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
 #: partials/content-cover-book-info.php:30
+#, php-format
 msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
@@ -529,11 +560,13 @@ msgstr ""
 #. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
+#, php-format
 msgid " by %s"
 msgstr " door%s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
+#, php-format
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
@@ -541,18 +574,13 @@ msgstr ""
 "Dit boek is gekloond van een bron die niet langer beschikbaar is. De bron "
 "URL was %s. Dit boek kan afwijken van het origineel."
 
-#: partials/content-cover-book-info.php:62
+#: partials/content-cover-book-info.php:68
 msgid "Contributors"
 msgstr "Bijdragers"
 
-#: partials/content-cover-book-info.php:72
+#: partials/content-cover-book-info.php:78
 msgid "Subject"
 msgstr "Onderwerp"
-
-#: partials/content-cover-book-info.php:87
-#: partials/content-cover-metadata.php:66
-msgid "Click for more information"
-msgstr "Klik voor meer informatie"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
@@ -604,11 +632,13 @@ msgstr ""
 
 #. translators: link to Pressbooks.pub
 #: private.php:17
+#, php-format
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "U kunt ook uw eigen Pressbook aanmaken op %s."
 
 #. translators: search string
 #: search.php:6
+#, php-format
 msgid "Search Results for: %s"
 msgstr "Zoekresultaten voor: %s"
 
