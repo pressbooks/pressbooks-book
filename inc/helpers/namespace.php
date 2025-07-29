@@ -829,3 +829,34 @@ function institutions_to_string( array $institutions ): string {
 		return \Pressbooks\Metadata\get_institution_name( $code );
 	}, $institutions ) );
 }
+
+/**
+ * Get allowed HTML tags for the before content area.
+ *
+ * @since 2.3.0
+ *
+ * @return array
+ */
+function get_allowed_html_before_content(): array {
+
+	$allowed_before_html = wp_kses_allowed_html( 'post' );
+
+	$allowed_before_html['svg'] = [
+		'class' => [],
+		'data-slot' => [],
+		'aria-hidden' => [],
+		'fill' => [],
+		'stroke-width' => [],
+		'stroke' => [],
+		'viewbox' => true,
+		'xmlns' => [],
+	];
+
+	$allowed_before_html['path'] = [
+		'd' => [],
+		'stroke-linecap' => [],
+		'stroke-linejoin' => [],
+	];
+
+	return $allowed_before_html;
+}
