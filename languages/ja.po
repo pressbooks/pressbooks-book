@@ -99,7 +99,7 @@ msgstr "Powered by %s"
 
 #: footer.php:70
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Pressbooks ユーザーガイド"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
@@ -131,7 +131,7 @@ msgstr "Pressbooks のインストールが見つかりません。"
 
 #: header.php:16
 msgid "Cover image for "
-msgstr ""
+msgstr "表紙画像 — "
 
 #: header.php:107
 msgid "Skip to content"
@@ -304,11 +304,11 @@ msgstr[0] "機関"
 
 #: inc/helpers/namespace.php:497
 msgid "Series Title"
-msgstr ""
+msgstr "シリーズタイトル"
 
 #: inc/helpers/namespace.php:498
 msgid "Series Number"
-msgstr ""
+msgstr "シリーズ番号"
 
 #: inc/helpers/namespace.php:499
 msgid "Publisher"
@@ -490,15 +490,15 @@ msgstr "字幕"
 
 #: partials/content-cover-book-header.php:17
 msgid "by "
-msgstr ""
+msgstr "著者: "
 
 #: partials/content-cover-book-header.php:20
 msgid "Edited by "
-msgstr ""
+msgstr "編集者:"
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
-msgstr ""
+msgstr "翻訳者:"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:32
