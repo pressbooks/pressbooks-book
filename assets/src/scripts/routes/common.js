@@ -47,7 +47,7 @@ export default {
 		// Header navigation
 		( function () {
 			const navToggle = document.querySelector( '.js-header-nav-toggle' );
-			if(navToggle) {
+			if ( navToggle ) {
 				navToggle.addEventListener( 'click', function () {
 					const expanded = navToggle.getAttribute( 'aria-expanded' ) === 'true' || false;
 					navToggle.setAttribute( 'aria-expanded', ! expanded );
