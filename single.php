@@ -94,9 +94,7 @@ if ( have_posts() ) {
 		 * @since 2.0.0
 		 */
 		do_action( 'pb_book_content_before_footer' );
-		if ( ! $display_content_only ) {
-			get_footer();
-		}
+		get_footer();
 		?>
 <?php endwhile;
 };?>
