@@ -527,7 +527,7 @@ msgstr "Editado por"
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
-msgstr ""
+msgstr "Traducido por"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:32
