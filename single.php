@@ -29,7 +29,11 @@ if ( have_posts() ) {
 					echo "<div class='part-title'><p><small>" . get_the_title( $post->post_parent ) . '</small></p></div>';
 				}
 			} ?>
-			<?php echo wp_kses( apply_filters( 'pb_content_before', '' ), get_allowed_html_before_content() ); ?>
+			<?php
+			if ( $display_content_only ) {
+				echo wp_kses( apply_filters( 'pb_content_before', '' ), get_allowed_html_before_content() );
+			}
+			?>
 			<?php
 			if ( is_buckram() || pb_is_custom_theme() ) {
 				include( locate_template( 'partials/content-single.php' ) );
