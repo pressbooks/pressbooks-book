@@ -519,11 +519,11 @@ msgstr "Subtítulo"
 
 #: partials/content-cover-book-header.php:17
 msgid "by "
-msgstr ""
+msgstr "por"
 
 #: partials/content-cover-book-header.php:20
 msgid "Edited by "
-msgstr ""
+msgstr "Editado por"
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
