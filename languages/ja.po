@@ -304,7 +304,7 @@ msgstr[0] "機関"
 
 #: inc/helpers/namespace.php:497
 msgid "Series Title"
-msgstr ""
+msgstr "シリーズタイトル"
 
 #: inc/helpers/namespace.php:498
 msgid "Series Number"
