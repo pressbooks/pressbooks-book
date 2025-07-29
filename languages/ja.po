@@ -308,7 +308,7 @@ msgstr ""
 
 #: inc/helpers/namespace.php:498
 msgid "Series Number"
-msgstr ""
+msgstr "シリーズ番号"
 
 #: inc/helpers/namespace.php:499
 msgid "Publisher"
