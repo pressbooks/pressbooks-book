@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.30.0](https://github.com/pressbooks/pressbooks-book/compare/2.29.0...2.30.0) (2025-07-29)
+
+
+### Features
+
+* create a content only view that can be used by LTI ([#1334](https://github.com/pressbooks/pressbooks-book/issues/1334)) ([adad1b6](https://github.com/pressbooks/pressbooks-book/commit/adad1b60857861293c581020e24cf22b37fedbbc))
+
+
+### Bug Fixes
+
+* edit button and h5p activities display ([#1361](https://github.com/pressbooks/pressbooks-book/issues/1361)) ([655ce1f](https://github.com/pressbooks/pressbooks-book/commit/655ce1fe75ba1bc8b46aa7936ff058f8ad5c2637))
+
+
+### Chores
+
+* **i10n:** Updates for project McLuhan ([#1358](https://github.com/pressbooks/pressbooks-book/issues/1358)) ([b12ebbf](https://github.com/pressbooks/pressbooks-book/commit/b12ebbfe247453c28965e14cd729cd007362c358))
+* **i18n:** update languages for project pressbooks-book ([#1359](https://github.com/pressbooks/pressbooks-book/issues/1359)) ([168e240](https://github.com/pressbooks/pressbooks-book/commit/168e240085ef4322810f515deb7ff4de1972dae5))
+
 ## [2.29.0](https://github.com/pressbooks/pressbooks-book/compare/2.28.0...2.29.0) (2025-07-28)
 
 
