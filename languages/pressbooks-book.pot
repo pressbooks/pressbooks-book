@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.28.0\n"
+"Project-Id-Version: McLuhan 2.29.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
+"POT-Creation-Date: 2025-07-29T16:03:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pressbooks-book\n"
@@ -76,8 +76,8 @@ msgstr ""
 #. translators: %s: name of network
 #. translators: %s: name of organization
 #: footer.php:60
-#: header.php:124
-#: header.php:131
+#: header.php:128
+#: header.php:135
 #: page-buy.php:28
 #: page-buy.php:38
 #: page-buy.php:48
@@ -130,41 +130,41 @@ msgstr ""
 msgid "Cover image for "
 msgstr ""
 
-#: header.php:107
+#: header.php:109
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:145
+#: header.php:149
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:156
+#: header.php:160
 #, php-format
 msgid "Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices."
 msgstr ""
 
-#: header.php:156
+#: header.php:160
 msgid "Learn more"
 msgstr ""
 
-#: header.php:168
+#: header.php:172
 #: partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:171
+#: header.php:175
 #: index.php:14
 #: partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr ""
 
 #. translators: %s: the title of the book
-#: header.php:180
+#: header.php:184
 #, php-format
 msgid "Go to the cover page of %s"
 msgstr ""
 
-#: header.php:184
+#: header.php:188
 #: inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr ""
@@ -294,7 +294,7 @@ msgstr[1] ""
 #: inc/helpers/namespace.php:493
 #: partials/content-cover-book-header.php:103
 #: partials/content-cover-book-info.php:73
-#: single.php:33
+#: single.php:53
 msgid "License"
 msgstr ""
 
@@ -333,7 +333,7 @@ msgid "Publication Date"
 msgstr ""
 
 #: inc/helpers/namespace.php:502
-#: single.php:41
+#: single.php:61
 msgid "Digital Object Identifier (DOI)"
 msgstr ""
 
@@ -487,8 +487,8 @@ msgid "Hide activity"
 msgstr ""
 
 #: page.php:13
-#: partials/content-single-legacy.php:69
-#: partials/content-single.php:2
+#: partials/content-single-legacy.php:71
+#: partials/content-single.php:3
 msgid "Edit"
 msgstr ""
 
@@ -597,16 +597,16 @@ msgid "Sorry, but nothing matched your search terms. Please try again with some 
 msgstr ""
 
 #: partials/content-single-legacy.php:41
-#: partials/content-single.php:49
+#: partials/content-single.php:51
 msgid "Previous Page"
 msgstr ""
 
 #: partials/content-single-legacy.php:52
-#: partials/content-single.php:60
+#: partials/content-single.php:62
 msgid "Next Page"
 msgstr ""
 
-#: partials/content-single.php:78
+#: partials/content-single.php:80
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] ""
@@ -658,6 +658,6 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: single.php:57
+#: single.php:77
 msgid "Share This Book"
 msgstr ""
