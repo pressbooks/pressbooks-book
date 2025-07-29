@@ -131,7 +131,7 @@ msgstr "Pressbooks のインストールが見つかりません。"
 
 #: header.php:16
 msgid "Cover image for "
-msgstr ""
+msgstr "表紙画像 — "
 
 #: header.php:107
 msgid "Skip to content"
