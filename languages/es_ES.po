@@ -329,11 +329,11 @@ msgstr[2] "Instituciones"
 
 #: inc/helpers/namespace.php:497
 msgid "Series Title"
-msgstr ""
+msgstr "Título de la serie"
 
 #: inc/helpers/namespace.php:498
 msgid "Series Number"
-msgstr ""
+msgstr "Número de la serie"
 
 #: inc/helpers/namespace.php:499
 msgid "Publisher"
