@@ -99,7 +99,7 @@ msgstr "Powered by %s"
 
 #: footer.php:70
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Pressbooks ユーザーガイド"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
