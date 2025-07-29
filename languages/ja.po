@@ -498,7 +498,7 @@ msgstr "編集者:"
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
-msgstr ""
+msgstr "翻訳者:"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:32
