@@ -56,26 +56,25 @@
 
     input {
       font-size: 1.125rem;
-      color: var(--primary);
-      border-bottom: 2px solid var(--primary);
+      color: var(--header-links);
+      border-bottom: 2px solid var(--header-links);
       line-height: 1.5;
 
       &::placeholder {
-        color: #666;
+        color: var(--header-links);
       }
 
       &:focus {
         outline: none;
-        border-bottom: 2px solid var(--primary-dark);
+        border-bottom: 2px solid var(--header-links);
       }
     }
 
     button {
-      color: var(--primary);
+      color: var(--header-links);
 
       &:focus {
-        color: var(--primary-dark);
-        outline: solid 2px var(--primary-dark);
+        outline: solid 2px var(--header-links);
       }
     }
   }
