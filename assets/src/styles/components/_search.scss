@@ -9,7 +9,7 @@
 .header__search .header__search__form form,
 .error404 form.search-form {
   width: 100%;
-  border-bottom: 1px solid var(--primary-fg);
+  border-bottom: 1px solid var(--header-links);
 
   label {
     position: relative;
@@ -25,9 +25,10 @@
     width: 100%;
     font-size: 1.5rem;
     line-height: 3.3333;
+    color: var(--header-links);
 
     &::placeholder {
-      color: var(--primary-fg);
+      color: var(--header-links);
     }
   }
 
@@ -36,7 +37,7 @@
     padding: 0;
     width: 1.5rem;
     background: transparent;
-    color: var(--primary-fg);
+    color: var(--header-links);
     display: inline-block;
 
     svg {
@@ -56,13 +57,8 @@
 
     input {
       font-size: 1.125rem;
-      color: var(--header-links);
       border-bottom: 2px solid var(--header-links);
       line-height: 1.5;
-
-      &::placeholder {
-        color: var(--header-links);
-      }
 
       &:focus {
         outline: none;
@@ -71,7 +67,6 @@
     }
 
     button {
-      color: var(--header-links);
 
       &:focus {
         outline: solid 2px var(--header-links);
