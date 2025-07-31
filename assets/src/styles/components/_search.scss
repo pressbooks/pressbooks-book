@@ -18,7 +18,6 @@
   }
 
   input {
-    color: white;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -30,6 +29,11 @@
     &::placeholder {
       color: var(--header-links);
     }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid var(--header-links);
+    }
   }
 
   button {
@@ -39,6 +43,10 @@
     background: transparent;
     color: var(--header-links);
     display: inline-block;
+
+    &:focus {
+      outline: solid 2px var(--header-links);
+    }
 
     svg {
       display: inline-block;
@@ -59,18 +67,6 @@
       font-size: 1.125rem;
       border-bottom: 2px solid var(--header-links);
       line-height: 1.5;
-
-      &:focus {
-        outline: none;
-        border-bottom: 2px solid var(--header-links);
-      }
-    }
-
-    button {
-
-      &:focus {
-        outline: solid 2px var(--header-links);
-      }
     }
   }
 }
