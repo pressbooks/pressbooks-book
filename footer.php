@@ -57,7 +57,7 @@ if ( $contact_link ) {
 				<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 					<use href="#icon-pressbooks" />
 				</svg>
-                <span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-book' ); ?></span>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-book' ); ?></span>
 			</a>
 			<div class="footer__pressbooks__links">
 				<?php /* translators: %s: Pressbooks */ ?>
@@ -73,7 +73,7 @@ if ( $contact_link ) {
 			<div class="footer__pressbooks__social">
 				<a class="youtube" href="https://www.youtube.com/user/pressbooks">
 					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
-                        <use href="#youtube-icon" />
+						<use href="#youtube-icon" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
