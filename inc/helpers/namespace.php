@@ -550,7 +550,7 @@ function get_links( $echo = true ) {
 				<a href="<?php echo $next_chapter ?>">
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
-					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-left"><use href="#arrow-right" /></svg>
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
 		</div>
