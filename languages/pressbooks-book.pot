@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.29.0\n"
+"Project-Id-Version: McLuhan 2.30.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-29T16:03:58+00:00\n"
+"POT-Creation-Date: 2025-08-21T20:56:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pressbooks-book\n"
@@ -73,45 +73,30 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#. translators: %s: name of network
-#. translators: %s: name of organization
 #: footer.php:60
-#: header.php:128
-#: header.php:135
-#: page-buy.php:28
-#: page-buy.php:38
-#: page-buy.php:48
-#: page-buy.php:58
-#: page-buy.php:68
-#, php-format
-msgid "Logo for %s"
+msgid "Pressbooks"
 msgstr ""
 
 #. translators: %s: Pressbooks
-#: footer.php:68
+#: footer.php:64
 #, php-format
 msgid "Powered by %s"
 msgstr ""
 
-#: footer.php:70
+#: footer.php:66
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#: footer.php:71
+#: footer.php:67
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:73
+#: footer.php:69
 msgid "Contact"
 msgstr ""
 
 #: footer.php:78
-#: footer.php:82
 msgid "Pressbooks on YouTube"
-msgstr ""
-
-#: footer.php:84
-msgid "Pressbooks on LinkedIn"
 msgstr ""
 
 #: functions.php:16
@@ -132,6 +117,19 @@ msgstr ""
 
 #: header.php:109
 msgid "Skip to content"
+msgstr ""
+
+#. translators: %s: name of network
+#. translators: %s: name of organization
+#: header.php:128
+#: header.php:135
+#: page-buy.php:28
+#: page-buy.php:38
+#: page-buy.php:48
+#: page-buy.php:58
+#: page-buy.php:68
+#, php-format
+msgid "Logo for %s"
 msgstr ""
 
 #: header.php:149
@@ -349,17 +347,13 @@ msgstr ""
 msgid "Hashtag"
 msgstr ""
 
-#. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:540
 #: inc/helpers/namespace.php:543
 #, php-format
 msgid "Previous: %s"
 msgstr ""
 
-#. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:550
 #: inc/helpers/namespace.php:552
 #, php-format
 msgid "Next: %s"
@@ -488,7 +482,7 @@ msgstr ""
 
 #: page.php:13
 #: partials/content-single-legacy.php:71
-#: partials/content-single.php:3
+#: partials/content-single.php:2
 msgid "Edit"
 msgstr ""
 
@@ -597,16 +591,16 @@ msgid "Sorry, but nothing matched your search terms. Please try again with some 
 msgstr ""
 
 #: partials/content-single-legacy.php:41
-#: partials/content-single.php:51
+#: partials/content-single.php:49
 msgid "Previous Page"
 msgstr ""
 
 #: partials/content-single-legacy.php:52
-#: partials/content-single.php:62
+#: partials/content-single.php:60
 msgid "Next Page"
 msgstr ""
 
-#: partials/content-single.php:80
+#: partials/content-single.php:78
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] ""
