@@ -53,15 +53,11 @@ if ( $contact_link ) {
 ">
 	<div class="footer__inner">
 		<section class="footer__pressbooks">
-			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
-				<svg class="icon--svg" role="img" aria-label="
-				<?php
-				/* translators: %s: name of network */
-							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
-				?>
-							">
+			<a class="footer__pressbooks__icon" href="https://pressbooks.com">
+				<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 					<use href="#icon-pressbooks" />
 				</svg>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-book' ); ?></span>
 			</a>
 			<div class="footer__pressbooks__links">
 				<?php /* translators: %s: Pressbooks */ ?>
@@ -75,14 +71,14 @@ if ( $contact_link ) {
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a class="youtube" href="https://www.youtube.com/user/pressbooks" title="<?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?>">
-					<svg class="icon--svg">
+				<a class="youtube" href="https://www.youtube.com/user/pressbooks">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 						<use href="#youtube-icon" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
-				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca" title="<?php _e( 'Pressbooks on LinkedIn', 'pressbooks-book' ); ?>">
-					<svg class="icon--svg">
+				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 						<use href="#linkedin-icon" />
 					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?></span></a>
