@@ -136,3 +136,17 @@ body:not(.home) #content h2.denied-title {
 .bookstore-logo-link img {
   margin-right: 0.5rem;
 }
+
+body.single-chapter {
+  ed11y-element-panel {
+    margin: 0 5px 18px 0;
+  }
+  @media screen and (max-width: 540px) {
+    ed11y-element-panel {
+  /* stylelint-disable-next-line custom-property-pattern */
+      --ed11y-baseFontSize: 20px;
+
+      margin: 0 5px 56px 0;
+    }
+  }
+}
