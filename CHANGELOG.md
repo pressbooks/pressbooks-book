@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.30.1](https://github.com/pressbooks/pressbooks-book/compare/2.30.0...2.30.1) (2025-08-21)
+
+
+### Bug Fixes
+
+* add titles to SVGs in footer and reading interface ([#1347](https://github.com/pressbooks/pressbooks-book/issues/1347)) ([266a75b](https://github.com/pressbooks/pressbooks-book/commit/266a75b6f61ddd2a2f3a9bc96d6074cc2a873b24))
+* update nav menu styles ([#1365](https://github.com/pressbooks/pressbooks-book/issues/1365)) ([332157d](https://github.com/pressbooks/pressbooks-book/commit/332157dff72f638c25a25289581ed1351d4f6e23))
+
 ## [2.30.0](https://github.com/pressbooks/pressbooks-book/compare/2.29.0...2.30.0) (2025-07-29)
 
 
