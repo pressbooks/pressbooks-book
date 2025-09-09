@@ -141,7 +141,7 @@ body.single-chapter {
   ed11y-element-panel {
     margin: 0 5px 18px 0;
   }
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 960px) {
     ed11y-element-panel {
   /* stylelint-disable-next-line custom-property-pattern */
       --ed11y-baseFontSize: 20px;
