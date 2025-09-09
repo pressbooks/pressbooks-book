@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.30.2](https://github.com/pressbooks/pressbooks-book/compare/2.30.1...2.30.2) (2025-09-09)
+
+
+### Bug Fixes
+
+* ed11y widget position ([#1371](https://github.com/pressbooks/pressbooks-book/issues/1371)) ([828362c](https://github.com/pressbooks/pressbooks-book/commit/828362cad1e23907a01789d96422737c63576583))
+
 ## [2.30.1](https://github.com/pressbooks/pressbooks-book/compare/2.30.0...2.30.1) (2025-08-21)
 
 
