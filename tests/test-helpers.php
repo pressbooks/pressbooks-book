@@ -7,6 +7,7 @@
 
 use function \PressbooksBook\Helpers\count_items;
 use function \PressbooksBook\Helpers\display_menu;
+use function PressbooksBook\Helpers\get_allowed_html_before_content;
 use function \PressbooksBook\Helpers\get_book_authors;
 use function \PressbooksBook\Helpers\get_metakeys;
 use function \PressbooksBook\Helpers\get_name_for_filetype;
@@ -47,11 +48,11 @@ class HelpersTest extends WP_UnitTestCase {
 
 	function test_license_to_icons() {
 		$output = license_to_icons( 'cc-by' );
-		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use href="#cc" /></svg><svg class="icon" style="fill: currentColor"><use href="#cc-by" /></svg>', $output );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor" role="presentation"><use href="#cc" /></svg><svg class="icon" style="fill: currentColor" role="presentation"><use href="#cc-by" /></svg>', $output );
 		$output = license_to_icons( 'public-domain' );
-		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use href="#cc-pd" /></svg>', $output );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor" role="presentation"><use href="#cc-pd" /></svg>', $output );
 		$output = license_to_icons( 'cc-zero' );
-		$this->assertEquals( '<svg class="icon" style="fill: currentColor"><use href="#cc-zero" /></svg>', $output );
+		$this->assertEquals( '<svg class="icon" style="fill: currentColor" role="presentation"><use href="#cc-zero" /></svg>', $output );
 		$output = license_to_icons( 'all-rights-reserved' );
 		$this->assertEquals( '', $output );
 		$output = license_to_icons( 'foo' );
@@ -68,7 +69,16 @@ class HelpersTest extends WP_UnitTestCase {
 	}
 
 	function test_share_icons() {
-		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book on Pressbooks."', share_icons() );
+		update_option('pressbooks_theme_options_web', ['social_media_options' => [
+			'twitter',
+		]]);
+		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book published with Pressbooks."', share_icons() );
+		$this->assertStringNotContainsString( 'linkedin', share_icons() );
+		update_option('pressbooks_theme_options_web', ['social_media_options' => [
+			'twitter',
+			'linkedin',
+		]]);
+		$this->assertStringContainsString( '<a class="sharer" data-sharer="linkedin" data-title="Check out this great book published with Pressbooks."', share_icons() );
 	}
 
 	function test_display_menu() {
@@ -250,5 +260,18 @@ class HelpersTest extends WP_UnitTestCase {
 
 		update_site_option( 'pressbooks_display_cta_banner', '0' );
 		$this->assertFalse( should_cta_banner_be_displayed() );
+	}
+
+	function test_get_allowed_html_before_content() {
+		$allowed_html = get_allowed_html_before_content();
+		$this->assertIsArray( $allowed_html );
+		$this->assertArrayHasKey( 'a', $allowed_html );
+		$this->assertArrayHasKey( 'p', $allowed_html );
+		$this->assertArrayHasKey( 'br', $allowed_html );
+		$this->assertArrayHasKey( 'svg', $allowed_html );
+		$html = '<p>Test paragraph</p><script>alert("This should not be allowed")</script><a href="https://example.com">Test link</a>';
+		$sanitized_html = wp_kses( $html, $allowed_html );
+		$this->assertStringContainsString( '<p>Test paragraph</p>', $sanitized_html );
+		$this->assertStringNotContainsString( '<script>', $sanitized_html );
 	}
 }

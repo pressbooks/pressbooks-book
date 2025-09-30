@@ -297,6 +297,13 @@
       td img.alignright {
         float: right;
       }
+
+      th,td {
+        p {
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
     }
 
     table,

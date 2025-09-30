@@ -1,13 +1,13 @@
-# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Omshivaprakash H L <omshivaprakash@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.24.0\n"
+"Project-Id-Version: McLuhan 2.28.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2022-11-01T20:52:53+00:00\n"
+"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Omshivaprakash H L <omshivaprakash@gmail.com>, 2021\n"
 "Language-Team: Kannada (https://app.transifex.com/pressbooks/teams/9194/kn/)\n"
@@ -17,17 +17,20 @@ msgstr ""
 "Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "McLuhan"
 msgstr "ಮೆಕ್‍ಲುಹಾನ್"
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://pressbooks.com/themes/pressbooks-book"
 msgstr "https://pressbooks.com/themes/pressbooks-book"
 
 #. Description of the theme
+#: style.css
 msgid ""
 "This theme is named after Canadian media theorist Marshall McLuhan, who "
 "coined the phrase “the medium is the message.” It is designed for academic "
@@ -41,10 +44,12 @@ msgstr ""
 "ಹೊಂದಿಸಲಾಗಿದೆ."
 
 #. Author of the theme
+#: style.css
 msgid "Pressbooks (Book Oven Inc.)"
 msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ (ಬುಕ್ ಓವನ್ ಇಂಕ್.)"
 
 #. Author URI of the theme
+#: style.css
 msgid "https://pressbooks.com"
 msgstr "https://pressbooks.com"
 
@@ -85,31 +90,37 @@ msgstr "ಸಲ್ಲಿಸು"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:79 header.php:86 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:124 header.php:131 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
+#, php-format
 msgid "Logo for %s"
 msgstr "%s ಲೋಗೋ"
 
 #. translators: %s: Pressbooks
 #: footer.php:68
+#, php-format
 msgid "Powered by %s"
 msgstr "%s ನಿಂದ ಸಾಮರ್ಥ್ಯ ಪಡೆದಿದೆ"
 
 #: footer.php:70
-msgid "Guides and Tutorials"
-msgstr "ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್‍ಗಳು"
+msgid "Pressbooks User Guide"
+msgstr ""
 
 #: footer.php:71
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:80
+#: footer.php:73
+msgid "Contact"
+msgstr ""
+
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
 msgstr "ಯೂಟ್ಯೂಬ್ ನಲ್ಲಿ ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
 
-#: footer.php:86
-msgid "Pressbooks on Twitter"
-msgstr "ಟ್ವಿಟರ್ ನಲ್ಲಿ ಪ್ರೆಸ್‍ಬುಕ್ಸ್"
+#: footer.php:84
+msgid "Pressbooks on LinkedIn"
+msgstr ""
 
 #: functions.php:16
 msgid "Dependencies Missing"
@@ -123,44 +134,46 @@ msgstr "ನೀವು ಮೆಕ್‍ಲುಹಾನ್ <code>composer install</c
 msgid "Cannot find Pressbooks install."
 msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: header.php:60
+#: header.php:16
+msgid "Cover image for "
+msgstr ""
+
+#: header.php:107
 msgid "Skip to content"
 msgstr "ವಿಷಯಕ್ಕೆ ಬಿಟ್ಟುಬಿಡಿ"
 
-#: header.php:98
-msgid "Toggle Menu"
-msgstr "ಟಾಗಲ್ ಮೆನು"
-
-#: header.php:100
+#: header.php:145
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:110
+#: header.php:156
+#, php-format
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr ""
 
-#: header.php:122 partials/content-cover-toc.php:9
+#: header.php:156
+msgid "Learn more"
+msgstr ""
+
+#: header.php:168 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:125 index.php:14 partials/content-cover-toc.php:3
+#: header.php:171 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "ಪರಿವಿಡಿ"
 
 #. translators: %s: the title of the book
-#: header.php:134
+#: header.php:180
+#, php-format
 msgid "Go to the cover page of %s"
 msgstr "%s ಮುಖಪುಟಕ್ಕೆ ಹೋಗಿ"
 
-#: header.php:138 inc/helpers/namespace.php:226
+#: header.php:184 inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "ಖರೀದಿಸಿ"
-
-#: inc/helpers/namespace.php378ß
-msgid "and"
-msgstr ""
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
@@ -190,177 +203,192 @@ msgstr "ಲಿಂಕ್ ಮಾಡಿದ ಚಿತ್ರಗಳನ್ನು ಲೈ
 msgid "Private"
 msgstr "ಖಾಸಗಿ"
 
-#: inc/helpers/namespace.php:145
+#: inc/helpers/namespace.php:148
 msgid "Public Domain"
 msgstr "ಸಾರ್ವಜನಿಕ ಡೊಮೇನ್"
 
-#: inc/helpers/namespace.php:148
+#: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution"
 msgstr "ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಷನ್"
 
-#: inc/helpers/namespace.php:151
+#: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution ShareAlike"
 msgstr "ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಷನ್ ಶೇರ್ ಅಲೈಕ್"
 
-#: inc/helpers/namespace.php:154
+#: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NoDerivatives"
 msgstr "ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಷನ್ ನೋಡೆರಿವೇಟಿವ್ಸ್"
 
-#: inc/helpers/namespace.php:157
+#: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial"
 msgstr "ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಷನ್ ನಾನ್ ಕಮರ್ಷಿಯಲ್"
 
-#: inc/helpers/namespace.php:160
+#: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr "ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಷನ್ ನಾನ್ ಕಮರ್ಷಿಯಲ್ ಶೇರ್ ಅಲೈಕ್"
 
-#: inc/helpers/namespace.php:163
+#: inc/helpers/namespace.php:166
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr "ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಷನ್ ನಾನ್ ಕಮರ್ಷಿಯಲ್ ನೋಡೆರಿವೇಟಿವ್ಸ್"
 
-#: inc/helpers/namespace.php:167
+#: inc/helpers/namespace.php:170
 msgid "All Rights Reserved"
 msgstr "ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ"
 
-#: inc/helpers/namespace.php:181
-msgid "Check out this great book on Pressbooks."
-msgstr "ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಈ ಮಹಾನ್ ಪುಸ್ತಕವನ್ನು ಪರಿಶೀಲಿಸಿ."
+#: inc/helpers/namespace.php:182
+msgid "Check out this great book published with Pressbooks."
+msgstr ""
 
-#: inc/helpers/namespace.php:209
+#: inc/helpers/namespace.php:260
 msgid "Home"
 msgstr "ಮುಖಪುಟ"
 
-#: inc/helpers/namespace.php:217
+#: inc/helpers/namespace.php:268
 msgid "Read"
 msgstr "ಓದಿ"
 
-#: inc/helpers/namespace.php:235
+#: inc/helpers/namespace.php:286
 msgid "Sign in"
 msgstr "ಸೈನ್ ಇನ್"
 
-#: inc/helpers/namespace.php:244
+#: inc/helpers/namespace.php:295
 msgid "Admin"
 msgstr "ನಿರ್ವಹಣೆಗಾರ"
 
-#: inc/helpers/namespace.php:252
+#: inc/helpers/namespace.php:303
 msgid "Sign out"
 msgstr "ಸೈನ್ ಔಟ್"
 
-#: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
-#: partials/content-cover-book-info.php:52
+#: inc/helpers/namespace.php:487 partials/content-cover-book-info.php:53
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "ಲೇಖಕ"
 msgstr[1] "ಲೇಖಕರು"
 
-#: inc/helpers/namespace.php:437
+#: inc/helpers/namespace.php:488 partials/content-cover-book-info.php:59
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "ಸಂಪಾದಕ"
 msgstr[1] "ಸಂಪಾದಕರು"
 
-#: inc/helpers/namespace.php:438
+#: inc/helpers/namespace.php:489
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] "ಅನುವಾದಕ"
 msgstr[1] "ಅನುವಾದಕರು"
 
-#: inc/helpers/namespace.php:439
+#: inc/helpers/namespace.php:490
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] "ಸಮೀಕ್ಷಕ"
 msgstr[1] "ಸಮೀಕ್ಷಕರು"
 
-#: inc/helpers/namespace.php:440
+#: inc/helpers/namespace.php:491
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] "ಇಲಸ್ಟ್ರೇಟರ್"
 msgstr[1] "ಇಲಸ್ಟ್ರೇಟರ್‍ ಗಳು"
 
-#: inc/helpers/namespace.php:441
+#: inc/helpers/namespace.php:492
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "ಕೊಡುಗೆದಾರ"
 msgstr[1] "ಕೊಡುಗೆದಾರರು"
 
-#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:35
+#: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
+#: partials/content-cover-book-info.php:73 single.php:33
 msgid "License"
 msgstr "ಪರವಾನಗಿ"
 
-#: inc/helpers/namespace.php:443
+#: inc/helpers/namespace.php:494
 msgid "Primary Subject"
 msgstr "ಪ್ರಾಥಮಿಕ ವಿಷಯ"
 
-#: inc/helpers/namespace.php:444
+#: inc/helpers/namespace.php:495
 msgid "Additional Subject(s)"
 msgstr "ಹೆಚ್ಚುವರಿ ವಿಷಯ(ಗಳು)"
 
-#: inc/helpers/namespace.php:445
+#: inc/helpers/namespace.php:496
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:446
+#: inc/helpers/namespace.php:497
+msgid "Series Title"
+msgstr ""
+
+#: inc/helpers/namespace.php:498
+msgid "Series Number"
+msgstr ""
+
+#: inc/helpers/namespace.php:499
 msgid "Publisher"
 msgstr "ಪ್ರಕಾಶಕ"
 
-#: inc/helpers/namespace.php:447
+#: inc/helpers/namespace.php:500
+msgid "Publisher City"
+msgstr ""
+
+#: inc/helpers/namespace.php:501
 msgid "Publication Date"
 msgstr "ಪ್ರಕಟಣೆ ದಿನಾಂಕ"
 
-#: inc/helpers/namespace.php:448 single.php:43
+#: inc/helpers/namespace.php:502 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "ಡಿಜಿಟಲ್ ಆಬ್ಜೆಕ್ಟ್ ಐಡೆಂಟಿಫೈಯರ್ (ಡಿಒಐ)"
 
-#: inc/helpers/namespace.php:449
+#: inc/helpers/namespace.php:503
 msgid "Ebook ISBN"
 msgstr "ಇಬುಕ್ ಐಎಸ್‍ಬಿಎನ್"
 
-#: inc/helpers/namespace.php:450
+#: inc/helpers/namespace.php:504
 msgid "Print ISBN"
 msgstr "ಮುದ್ರಣ ಐಎಸ್‍ಬಿಎನ್"
 
-#: inc/helpers/namespace.php:451
+#: inc/helpers/namespace.php:505
 msgid "Hashtag"
 msgstr "ಹ್ಯಾಶ್‍ಟ್ಯಾಗ್"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:540 inc/helpers/namespace.php:543
+#, php-format
 msgid "Previous: %s"
 msgstr "ಹಿಂದಿನ: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
+#: inc/helpers/namespace.php:550 inc/helpers/namespace.php:552
+#, php-format
 msgid "Next: %s"
 msgstr "ಮುಂದೆ: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578
+#: inc/helpers/namespace.php:632
+#, php-format
 msgid "%s on"
 msgstr "‍%s ಮೂಲಕ"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578
+#: inc/helpers/namespace.php:632
+#, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s ರಲ್ಲಿ %2$s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
+#: inc/helpers/namespace.php:632 inc/helpers/namespace.php:661
 msgid "(Edit)"
 msgstr "(ಸಂಪಾದಿಸಿ)"
 
-#: inc/helpers/namespace.php:581
+#: inc/helpers/namespace.php:635
 msgid "Your comment is awaiting moderation."
 msgstr "ನಿಮ್ಮ ಟಿಪ್ಪಣಿ ಪರಾಮರ್ಶೆಗಾಗಿ ಕಾಯುತ್ತಿದೆ."
 
-#: inc/helpers/namespace.php:607
+#: inc/helpers/namespace.php:661
 msgid "Pingback:"
 msgstr "ಮರುಕೋರಿಕೆ (Pingback):"
 
@@ -386,6 +414,7 @@ msgstr "ಪುಸ್ತಕವನ್ನು ಖರೀದಿಸಿ"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
+#, php-format
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr ""
 "ಕೆಳಗಿನ ಯಾವುದೇ ಲಿಂಕ್ ಗಳನ್ನು ಅನುಸರಿಸುವ ಮೂಲಕ ನೀವು <a href=\"%1$s\">%2$s</a> "
@@ -393,6 +422,7 @@ msgstr ""
 
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
+#, php-format
 msgid "Purchase on %s"
 msgstr ""
 
@@ -429,10 +459,6 @@ msgstr "ಎಲ್ಲಾ ವಿಸ್ತರಿಸಿ"
 msgid "Hide all"
 msgstr "ಎಲ್ಲಾ ಮರೆಮಾಡಿ"
 
-#: page-h5p-listing.php:27
-msgid "Expand all activities"
-msgstr "ಎಲ್ಲಾ ಚಟುವಟಿಕೆಗಳನ್ನು ವಿಸ್ತರಿಸಿ"
-
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
 msgstr ""
@@ -461,12 +487,8 @@ msgstr "ಚಟುವಟಿಕೆ ತೋರಿಸು"
 msgid "Hide activity"
 msgstr "ಚಟುವಟಿಕೆ ಮರೆಮಾಡಿ"
 
-#: page-h5p-listing.php:55
-msgid "View h5p activity"
-msgstr "ಎಚ್5ಪಿ ಚಟುವಟಿಕೆ ವೀಕ್ಷಿಸಿ"
-
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:94
+#: partials/content-single.php:2
 msgid "Edit"
 msgstr "ಸಂಪಾದಿಸಿ"
 
@@ -482,26 +504,39 @@ msgstr "ಪುಸ್ತಕ ಶೀರ್ಷಿಕೆ"
 msgid "Subtitle"
 msgstr "ಉಪಶೀರ್ಷಿಕೆ"
 
+#: partials/content-cover-book-header.php:17
+msgid "by "
+msgstr ""
+
+#: partials/content-cover-book-header.php:20
+msgid "Edited by "
+msgstr ""
+
+#: partials/content-cover-book-header.php:23
+msgid "Translated by "
+msgstr ""
+
 #. translators: %s: title of book
-#: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
+#: partials/content-cover-book-header.php:38
+#, php-format
 msgid "Cover image for %s"
 msgstr "%s ಗಾಗಿ ಇಮೇಜ್ ಕವರ್ ಮಾಡಿ"
 
-#: partials/content-cover-book-header.php:54
+#: partials/content-cover-book-header.php:60
 msgid "Download this book"
 msgstr "ಈ ಪುಸ್ತಕವನ್ನು ಡೌನ್ ಲೋಡ್ ಮಾಡಿ"
 
-#: partials/content-cover-book-header.php:93
+#: partials/content-cover-book-header.php:99
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
 msgstr "ಪುಸ್ತಕ ವಿವರಣೆ"
 
-#: partials/content-cover-book-header.php:105
+#: partials/content-cover-book-header.php:111
 msgid "Read Book"
 msgstr "ಪುಸ್ತಕ ಓದಿ"
 
-#: partials/content-cover-book-header.php:112
+#: partials/content-cover-book-header.php:118
 msgid "Buy Book"
 msgstr "ಪುಸ್ತಕ ಖರೀದಿಸಿ"
 
@@ -516,6 +551,7 @@ msgstr "ಪುಸ್ತಕ ಮೂಲ"
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
 #: partials/content-cover-book-info.php:30
+#, php-format
 msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
@@ -527,11 +563,13 @@ msgstr ""
 #. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
+#, php-format
 msgid " by %s"
 msgstr "‍%s ಮೂಲಕ"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
+#, php-format
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
@@ -539,18 +577,13 @@ msgstr ""
 "ಈ ಪುಸ್ತಕವನ್ನು ಇನ್ನು ಮುಂದೆ ಲಭ್ಯವಿಲ್ಲದ ಮೂಲದಿಂದ ಕ್ಲೋನ್ ಮಾಡಲಾಗಿದೆ. ಮೂಲ ಯುಆರ್ ಎಲ್"
 " %s. ಈ ಪುಸ್ತಕವು ಮೂಲಪುಸ್ತಕಕ್ಕಿಂತ ಭಿನ್ನವಾಗಿರಬಹುದು."
 
-#: partials/content-cover-book-info.php:62
+#: partials/content-cover-book-info.php:68
 msgid "Contributors"
 msgstr "ಕೊಡುಗೆದಾರರು"
 
-#: partials/content-cover-book-info.php:72
+#: partials/content-cover-book-info.php:78
 msgid "Subject"
 msgstr "ವಿಷಯ"
-
-#: partials/content-cover-book-info.php:87
-#: partials/content-cover-metadata.php:66
-msgid "Click for more information"
-msgstr "ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಕ್ಲಿಕ್ ಮಾಡಿ"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
@@ -564,27 +597,6 @@ msgstr "ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ತೋರಿಸು"
 msgid "Hide All Contents"
 msgstr "ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ಮರೆಮಾಡಿ"
 
-#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
-#: partials/content-difftool.php:52
-msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "ಈ ಅಧ್ಯಾಯವನ್ನು %2$s %1$s %3$s ಅಳವಡಿಸಿಕೊಂಡಿದೆ."
-
-#: partials/content-difftool.php:66
-msgid ""
-"Note: The comparison below is between this text and the <strong>current "
-"version</strong> of the text from which it was adapted."
-msgstr ""
-"ಸೂಚನೆ: ಈ ಪಠ್ಯ ಮತ್ತು ಅದನ್ನು ಅಳವಡಿಸಿದ ಪಠ್ಯದ <strong>ಪ್ರಸ್ತುತ ಆವೃತ್ತಿಯ</strong>"
-" ನಡುವೆ ಕೆಳಗಿನ ಹೋಲಿಕೆ ಇದೆ."
-
-#: partials/content-difftool.php:67
-msgid "additions"
-msgstr "ಸೇರ್ಪಡೆಗಳು"
-
-#: partials/content-difftool.php:67
-msgid "deletions"
-msgstr "ಅಳಿಸುವಿಕೆಗಳು"
-
 #: partials/content-none.php:2
 msgid "Nothing Found"
 msgstr "ಏನೂ ಸಿಗಲಿಲ್ಲ"
@@ -597,39 +609,40 @@ msgstr ""
 "ಕ್ಷಮಿಸಿ, ಆದರೆ ನಿಮ್ಮ ಹುಡುಕಾಟ ದ ನಿಯಮಗಳಿಗೆ ಯಾವುದೂ ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು "
 "ಕೆಲವು ವಿಭಿನ್ನ ಕೀವರ್ಡ್ ಗಳೊಂದಿಗೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:46
+#: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
 msgstr "ಹಿಂದಿನ ಪುಟ "
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:57
+#: partials/content-single-legacy.php:52 partials/content-single.php:60
 msgid "Next Page"
 msgstr "ಮುಂದಿನ ಪುಟ"
+
+#: partials/content-single.php:78
+msgid "About the author"
+msgid_plural "About the authors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: private.php:4
 msgid "Access Denied"
 msgstr "ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ"
 
-#. translators: link to sign in
-#: private.php:10
+#: private.php:9
 msgid ""
-"This book is private, and accessible only to registered users. If you have "
-"an account you can %s."
+"This book is private, and accessible only to registered users. To access the"
+" content, either sign in to your account or request access to this book."
 msgstr ""
-"ಈ ಪುಸ್ತಕವು ಖಾಸಗಿಯಾಗಿದೆ, ಮತ್ತು ನೋಂದಾಯಿತ ಬಳಕೆದಾರರಿಗೆ ಮಾತ್ರ ಪ್ರವೇಶಿಸಬಹುದು. ನೀವು"
-" ಖಾತೆಯನ್ನು ಹೊಂದಿದ್ದರೆ ನೀವು %s."
-
-#: private.php:14
-msgid "sign in here"
-msgstr "ಇಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿ"
 
 #. translators: link to Pressbooks.pub
-#: private.php:23
+#: private.php:17
+#, php-format
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr ""
 "ನೀವು %s ನಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಪ್ಪ್ರೆಸ್‍ಬುಕ್ಸ್ ಪುಸ್ತಕವನ್ನು ಸಹ ಸ್ಥಾಪಿಸಬಹುದು."
 
 #. translators: search string
 #: search.php:6
+#, php-format
 msgid "Search Results for: %s"
 msgstr "ಇದಕ್ಕಾಗಿ ಫಲಿತಾಂಶಗಳನ್ನು ಹುಡುಕಿ: %s"
 
@@ -659,6 +672,6 @@ msgstr "ಪುಸ್ತಕದಲ್ಲಿ ಶೋಧಿಸು ..."
 msgid "Search"
 msgstr "ಹುಡುಕಿ"
 
-#: single.php:59
+#: single.php:57
 msgid "Share This Book"
 msgstr "ಈ ಪುಸ್ತಕವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ"

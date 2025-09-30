@@ -38,6 +38,14 @@ export default {
 				} );
 				$target.parents( '.toc__toggle' ).attr( 'data-expanded', 'false' );
 			} );
+
+			const toggleButtons = $( '.js-toggle-block' );
+			if (toggleButtons) {
+				toggleButtons.on( 'click', function () {
+					const isExpanded = $( this ).attr( 'aria-expanded' ) === 'true';
+					$( this ).attr( 'aria-expanded', ( !isExpanded ).toString() );
+				} );
+			}
 		} );
 	},
 	finalize() {

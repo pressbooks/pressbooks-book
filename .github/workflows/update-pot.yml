@@ -1,41 +1,19 @@
-name: Update POT file
+name: Update POT file 🌐
 
 on:
   push:
-    branches:
-    - dev
+    branches: [dev]
     paths:
-    - '**.php'
-    - '**.js'
+      - "**/*.php"
+      - "**/*.js"
   workflow_dispatch:
 
 jobs:
-  update-pot:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Setup PHP with tools
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
-        tools: composer, wp-cli/wp-cli-bundle
-    - name: Update POT file
-      run: wp i18n make-pot . languages/pressbooks-book.pot --domain=pressbooks-book --slug=pressbooks-book --package-name="McLuhan" --headers="{\"Report-Msgid-Bugs-To\":\"https://github.com/pressbooks/pressbooks-book/issues\"}"
-    - name: Create Pull Request for POT file
-      id: cprpot
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
-        labels: automerge-pot
-        commit-message: 'chore(l10n): update languages/pressbooks.pot'
-        title: 'chore(l10n): update languages/pressbooks.pot'
-        body: 'This pull request updates the POT file for the Pressbooks project.'
-        branch: chore/update-pot-file
-    - name: Merge pull request with updated POT file
-      if: ${{ steps.cprpot.outputs.pull-request-number }}
-      uses: "pascalgn/automerge-action@v0.15.6"
-      env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        MERGE_LABELS: automerge-pot
-        MERGE_METHOD: squash
-        PULL_REQUEST: "${{ steps.cprpot.outputs.pull-request-number }}"
+  update-pot-file:
+    uses: pressbooks/reusable-workflows/.github/workflows/update-pot.yml@main
+    secrets: inherit
+    with:
+      domain: 'pressbooks-book'
+      slug: 'pressbooks-book'
+      package_name: 'McLuhan'
+      headers: '{"Report-Msgid-Bugs-To": "https://github.com/pressbooks/pressbooks-book/issues"}'

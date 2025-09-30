@@ -110,19 +110,22 @@ function license_to_icons( $license ) {
 	if ( ! $license ) {
 		return '';
 	}
+
 	$output = '';
+	$svg_tag = '<svg class="icon" style="fill: currentColor" role="presentation"><use href="#%s" /></svg>';
+
 	if ( strpos( $license, 'cc' ) !== false && $license !== 'cc-zero' ) {
 		$parts = explode( '-', $license );
 		foreach ( $parts as $part ) {
 			if ( $part !== 'cc' ) {
 				$part = 'cc-' . $part;
 			}
-			$output .= sprintf( '<svg class="icon" style="fill: currentColor"><use href="#%s" /></svg>', $part );
+			$output .= sprintf( $svg_tag, $part );
 		}
 	} elseif ( $license === 'cc-zero' ) {
-		$output .= '<svg class="icon" style="fill: currentColor"><use href="#cc-zero" /></svg>';
+		$output .= sprintf( $svg_tag, 'cc-zero' );
 	} elseif ( $license === 'public-domain' ) {
-		$output .= '<svg class="icon" style="fill: currentColor"><use href="#cc-pd" /></svg>';
+		$output .= sprintf( $svg_tag, 'cc-pd' );
 	} elseif ( $license === 'all-rights-reserved' ) {
 		return '';
 	}
@@ -176,12 +179,60 @@ function license_to_text( $license ) {
  * @return string The share widget.
  */
 function share_icons() {
-	return sprintf(
-		'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-via="%3$s"><svg role="img" aria-labelledby="twitter-logo" class="icon--svg"><title id="twitter-logo">Share on Twitter</title><use href="#twitter"/></svg></a>',
-		__( 'Check out this great book on Pressbooks.', 'pressbooks-book' ),
-		get_the_permalink(),
-		'pressbooks'
-	);
+	$share_message = __( 'Check out this great book published with Pressbooks.', 'pressbooks-book' );
+	$post_url = get_the_permalink();
+	$options = get_option( 'pressbooks_theme_options_web' );
+	$enabled_options = isset( $options['social_media_options'] ) ? $options['social_media_options'] : [];
+	$icons = '';
+	$metadata = pb_get_book_information();
+	$hashtags = isset( $metadata['pb_hashtag'] ) && ! empty( $metadata['pb_hashtag'] )
+		? $metadata['pb_hashtag']
+		: '';
+
+	if ( in_array( 'twitter', $enabled_options, true ) ) {
+		// If setting is enabled, display X/Twitter share button
+		$icons .= sprintf(
+			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-hashtags="%3$s">
+            <svg role="img" aria-labelledby="twitter-logo" class="icon--svg">
+                <title id="twitter-logo">Share on X</title>
+                <use href="#twitter"/>
+            </svg>
+        </a>',
+			esc_attr( $share_message ),
+			esc_url( $post_url ),
+			esc_attr( $hashtags )
+		);
+	}
+
+	if ( in_array( 'linkedin', $enabled_options, true ) ) {
+		// If setting is enabled, display LinkedIn share button
+		$icons .= sprintf(
+			'<a class="sharer" data-sharer="linkedin" data-title="%1$s" data-url="%2$s">
+            <svg role="img" aria-labelledby="linkedin-logo" class="icon--svg">
+                <title id="linkedin-logo">Share on LinkedIn</title>
+                <use href="#linkedin-icon"/>
+            </svg>
+        </a>',
+			esc_attr( $share_message ),
+			esc_url( $post_url )
+		);
+	}
+
+	// If setting is enabled, display email share button
+	if ( in_array( 'email', $enabled_options, true ) ) {
+		$icons .= sprintf(
+			'<a class="sharer" data-sharer="email" data-title="%1$s" data-url="%2$s" data-via="pressbooks">
+            <svg role="img" aria-labelledby="email-logo" class="icon--svg">
+                <title id="email-logo">Share via Email</title>
+                <use href="#email"/>
+            </svg>
+        </a>',
+			esc_attr( $share_message ),
+			esc_url( $post_url )
+		);
+	}
+
+	return $icons;
 }
 
 /**
@@ -443,7 +494,10 @@ function get_metakeys(): array {
 		'pb_primary_subject' => __( 'Primary Subject', 'pressbooks-book' ),
 		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
 		'pb_institutions' => _n_noop( 'Institution', 'Institutions', 'pressbooks-book' ),
+		'pb_series_title' => __( 'Series Title', 'pressbooks-book' ),
+		'pb_series_number' => __( 'Series Number', 'pressbooks-book' ),
 		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
+		'pb_publisher_city' => __( 'Publisher City', 'pressbooks-book' ),
 		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),
 		'pb_book_doi' => __( 'Digital Object Identifier (DOI)', 'pressbooks-book' ),
 		'pb_ebook_isbn' => __( 'Ebook ISBN', 'pressbooks-book' ),
@@ -483,8 +537,8 @@ function get_links( $echo = true ) {
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
-				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_title ); ?>">
-					<svg class="icon--svg"><use href="#arrow-left" /></svg>
+				<a href="<?php echo $prev_chapter; ?>">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-left" /></svg>
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
@@ -493,10 +547,10 @@ function get_links( $echo = true ) {
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
 				<?php /* translators: %s: post title, */ ?>
-				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_title ); ?>">
+				<a href="<?php echo $next_chapter ?>">
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
-					<svg class="icon--svg"><use href="#arrow-right" /></svg>
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
 		</div>
@@ -774,4 +828,35 @@ function institutions_to_string( array $institutions ): string {
 	return implode( ', ', array_map( static function( $code ) {
 		return \Pressbooks\Metadata\get_institution_name( $code );
 	}, $institutions ) );
+}
+
+/**
+ * Get allowed HTML tags for the before content area.
+ *
+ * @since 2.3.0
+ *
+ * @return array
+ */
+function get_allowed_html_before_content(): array {
+
+	$allowed_before_html = wp_kses_allowed_html( 'post' );
+
+	$allowed_before_html['svg'] = [
+		'class' => [],
+		'data-slot' => [],
+		'aria-hidden' => [],
+		'fill' => [],
+		'stroke-width' => [],
+		'stroke' => [],
+		'viewbox' => true,
+		'xmlns' => [],
+	];
+
+	$allowed_before_html['path'] = [
+		'd' => [],
+		'stroke-linecap' => [],
+		'stroke-linejoin' => [],
+	];
+
+	return $allowed_before_html;
 }

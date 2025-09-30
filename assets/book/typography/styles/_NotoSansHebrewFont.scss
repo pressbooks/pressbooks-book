@@ -1,0 +1,15 @@
+// 'Noto Sans Hebrew', @import 'NotoSansHebrewFont'
+
+@font-face {
+  font-family: 'Noto Sans Hebrew';
+  font-style: normal;
+  font-weight: normal;
+  src: url('uploads/assets/fonts/NotoSansHebrew-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Hebrew';
+  font-style: normal;
+  font-weight: bold;
+  src: url('uploads/assets/fonts/NotoSansHebrew-Bold.otf') format('opentype');
+}

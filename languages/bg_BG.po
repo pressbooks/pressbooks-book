@@ -1,13 +1,13 @@
-# Copyright (C) 2022 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
 # Translators:
 # Radost G <radosvetagiuleva@abv.bg>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.24.0\n"
+"Project-Id-Version: McLuhan 2.28.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2022-11-01T20:52:53+00:00\n"
+"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Radost G <radosvetagiuleva@abv.bg>, 2020\n"
 "Language-Team: Bulgarian (Bulgaria) (https://app.transifex.com/pressbooks/teams/9194/bg_BG/)\n"
@@ -17,17 +17,20 @@ msgstr ""
 "Language: bg_BG\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: pressbooks-book\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "McLuhan"
 msgstr "Маклуън"
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://pressbooks.com/themes/pressbooks-book"
 msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid ""
 "This theme is named after Canadian media theorist Marshall McLuhan, who "
 "coined the phrase “the medium is the message.” It is designed for academic "
@@ -40,10 +43,12 @@ msgstr ""
 " Cormorant Garamond, а типът оформление на тялото е в стил Lora."
 
 #. Author of the theme
+#: style.css
 msgid "Pressbooks (Book Oven Inc.)"
 msgstr ""
 
 #. Author URI of the theme
+#: style.css
 msgid "https://pressbooks.com"
 msgstr ""
 
@@ -86,31 +91,37 @@ msgstr "Потвърди"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:79 header.php:86 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:124 header.php:131 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
+#, php-format
 msgid "Logo for %s"
 msgstr "Лого за %s"
 
 #. translators: %s: Pressbooks
 #: footer.php:68
+#, php-format
 msgid "Powered by %s"
 msgstr "Захранвано от%s"
 
 #: footer.php:70
-msgid "Guides and Tutorials"
-msgstr "Ръководства за употреба, уроци и мнения"
+msgid "Pressbooks User Guide"
+msgstr ""
 
 #: footer.php:71
 msgid "Pressbooks Directory"
 msgstr ""
 
-#: footer.php:80
+#: footer.php:73
+msgid "Contact"
+msgstr ""
+
+#: footer.php:78 footer.php:82
 msgid "Pressbooks on YouTube"
 msgstr "Платформата в Ютюб"
 
-#: footer.php:86
-msgid "Pressbooks on Twitter"
-msgstr "Платформата в Туитър"
+#: footer.php:84
+msgid "Pressbooks on LinkedIn"
+msgstr ""
 
 #: functions.php:16
 msgid "Dependencies Missing"
@@ -126,44 +137,46 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr "Платформата не е инсталирана."
 
-#: header.php:60
+#: header.php:16
+msgid "Cover image for "
+msgstr ""
+
+#: header.php:107
 msgid "Skip to content"
 msgstr "Преминете към съдържанието"
 
-#: header.php:98
-msgid "Toggle Menu"
-msgstr "Превключване на менюто"
-
-#: header.php:100
+#: header.php:145
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:110
+#: header.php:156
+#, php-format
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr ""
 
-#: header.php:122 partials/content-cover-toc.php:9
+#: header.php:156
+msgid "Learn more"
+msgstr ""
+
+#: header.php:168 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:125 index.php:14 partials/content-cover-toc.php:3
+#: header.php:171 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Съдържание"
 
 #. translators: %s: the title of the book
-#: header.php:134
+#: header.php:180
+#, php-format
 msgid "Go to the cover page of %s"
 msgstr "Отидете на заглавната страница на %s"
 
-#: header.php:138 inc/helpers/namespace.php:226
+#: header.php:184 inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "Купи"
-
-#: inc/helpers/namespace.php378ß
-msgid "and"
-msgstr ""
 
 #: inc/actions/namespace.php:64
 msgid "Comparison loading…"
@@ -193,177 +206,192 @@ msgstr "Показване на свързани изображения в ла�
 msgid "Private"
 msgstr "Частен"
 
-#: inc/helpers/namespace.php:145
+#: inc/helpers/namespace.php:148
 msgid "Public Domain"
 msgstr "Публичен Домейн"
 
-#: inc/helpers/namespace.php:148
+#: inc/helpers/namespace.php:151
 msgid "Creative Commons Attribution"
 msgstr "Creative Commons Attribution - Права"
 
-#: inc/helpers/namespace.php:151
+#: inc/helpers/namespace.php:154
 msgid "Creative Commons Attribution ShareAlike"
 msgstr "Creative Commons Attribution ShareAlike - Права"
 
-#: inc/helpers/namespace.php:154
+#: inc/helpers/namespace.php:157
 msgid "Creative Commons Attribution NoDerivatives"
 msgstr "Creative Commons Attribution NoDerivatives - Права"
 
-#: inc/helpers/namespace.php:157
+#: inc/helpers/namespace.php:160
 msgid "Creative Commons Attribution NonCommercial"
 msgstr "Creative Commons Attribution NonCommercial - Права"
 
-#: inc/helpers/namespace.php:160
+#: inc/helpers/namespace.php:163
 msgid "Creative Commons Attribution NonCommercial ShareAlike"
 msgstr "Creative Commons Attribution NonCommercial ShareAlike - Права"
 
-#: inc/helpers/namespace.php:163
+#: inc/helpers/namespace.php:166
 msgid "Creative Commons Attribution NonCommercial NoDerivatives"
 msgstr "Creative Commons  Attribution NonCommercial NoDerivatives - Права"
 
-#: inc/helpers/namespace.php:167
+#: inc/helpers/namespace.php:170
 msgid "All Rights Reserved"
 msgstr "Всички права запазени"
 
-#: inc/helpers/namespace.php:181
-msgid "Check out this great book on Pressbooks."
-msgstr "Вижте тази Прекрасна Книга в Платформата"
+#: inc/helpers/namespace.php:182
+msgid "Check out this great book published with Pressbooks."
+msgstr ""
 
-#: inc/helpers/namespace.php:209
+#: inc/helpers/namespace.php:260
 msgid "Home"
 msgstr "Основна (Home) страница"
 
-#: inc/helpers/namespace.php:217
+#: inc/helpers/namespace.php:268
 msgid "Read"
 msgstr "Прочети"
 
-#: inc/helpers/namespace.php:235
+#: inc/helpers/namespace.php:286
 msgid "Sign in"
 msgstr "Вписване"
 
-#: inc/helpers/namespace.php:244
+#: inc/helpers/namespace.php:295
 msgid "Admin"
 msgstr "Админ"
 
-#: inc/helpers/namespace.php:252
+#: inc/helpers/namespace.php:303
 msgid "Sign out"
 msgstr "Отписване"
 
-#: inc/helpers/namespace.php:436 partials/content-cover-book-header.php:17
-#: partials/content-cover-book-info.php:52
+#: inc/helpers/namespace.php:487 partials/content-cover-book-info.php:53
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:437
+#: inc/helpers/namespace.php:488 partials/content-cover-book-info.php:59
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:438
+#: inc/helpers/namespace.php:489
 msgid "Translator"
 msgid_plural "Translators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:439
+#: inc/helpers/namespace.php:490
 msgid "Reviewer"
 msgid_plural "Reviewers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:440
+#: inc/helpers/namespace.php:491
 msgid "Illustrator"
 msgid_plural "Illustrators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:441
+#: inc/helpers/namespace.php:492
 msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:442 partials/content-cover-book-header.php:97
-#: partials/content-cover-book-info.php:67 single.php:35
+#: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
+#: partials/content-cover-book-info.php:73 single.php:33
 msgid "License"
 msgstr "Лиценз"
 
-#: inc/helpers/namespace.php:443
+#: inc/helpers/namespace.php:494
 msgid "Primary Subject"
 msgstr "Основна Тема"
 
-#: inc/helpers/namespace.php:444
+#: inc/helpers/namespace.php:495
 msgid "Additional Subject(s)"
 msgstr "Допълнителни Тема (Теми)"
 
-#: inc/helpers/namespace.php:445
+#: inc/helpers/namespace.php:496
 msgid "Institution"
 msgid_plural "Institutions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers/namespace.php:446
+#: inc/helpers/namespace.php:497
+msgid "Series Title"
+msgstr ""
+
+#: inc/helpers/namespace.php:498
+msgid "Series Number"
+msgstr ""
+
+#: inc/helpers/namespace.php:499
 msgid "Publisher"
 msgstr "Издател"
 
-#: inc/helpers/namespace.php:447
+#: inc/helpers/namespace.php:500
+msgid "Publisher City"
+msgstr ""
+
+#: inc/helpers/namespace.php:501
 msgid "Publication Date"
 msgstr "Дата на публикуване"
 
-#: inc/helpers/namespace.php:448 single.php:43
+#: inc/helpers/namespace.php:502 single.php:41
 msgid "Digital Object Identifier (DOI)"
 msgstr "Идентификатор на цифров обект (DOI)"
 
-#: inc/helpers/namespace.php:449
+#: inc/helpers/namespace.php:503
 msgid "Ebook ISBN"
 msgstr "Eлектронна книжка ISBN"
 
-#: inc/helpers/namespace.php:450
+#: inc/helpers/namespace.php:504
 msgid "Print ISBN"
 msgstr "Отпечатай ISBN"
 
-#: inc/helpers/namespace.php:451
+#: inc/helpers/namespace.php:505
 msgid "Hashtag"
 msgstr "ХашТаг"
 
 #. translators: %s: post title
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:486 inc/helpers/namespace.php:489
+#: inc/helpers/namespace.php:540 inc/helpers/namespace.php:543
+#, php-format
 msgid "Previous: %s"
 msgstr "Предходни: %s"
 
 #. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:496 inc/helpers/namespace.php:498
+#: inc/helpers/namespace.php:550 inc/helpers/namespace.php:552
+#, php-format
 msgid "Next: %s"
 msgstr "Следващи: %s"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578
+#: inc/helpers/namespace.php:632
+#, php-format
 msgid "%s on"
 msgstr "%sна"
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578
+#: inc/helpers/namespace.php:632
+#, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$sна %2$s "
 
 #. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
 #. comment
-#: inc/helpers/namespace.php:578 inc/helpers/namespace.php:607
+#: inc/helpers/namespace.php:632 inc/helpers/namespace.php:661
 msgid "(Edit)"
 msgstr "(Промени)"
 
-#: inc/helpers/namespace.php:581
+#: inc/helpers/namespace.php:635
 msgid "Your comment is awaiting moderation."
 msgstr "Коментарът Ви чака одобрение от Администратор."
 
-#: inc/helpers/namespace.php:607
+#: inc/helpers/namespace.php:661
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -389,11 +417,13 @@ msgstr "Купи Книгата"
 
 #. translators: %1$s: url to book, %2$s: title of book
 #: page-buy.php:21
+#, php-format
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr "Можете да закупите %2$s, като следвате някоя от връзките по-долу:"
 
 #: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
 #: page-buy.php:70
+#, php-format
 msgid "Purchase on %s"
 msgstr ""
 
@@ -428,10 +458,6 @@ msgstr ""
 msgid "Hide all"
 msgstr "Скрий всичко"
 
-#: page-h5p-listing.php:27
-msgid "Expand all activities"
-msgstr ""
-
 #: page-h5p-listing.php:32
 msgid "The requested H5P activity does not exist in this book."
 msgstr ""
@@ -460,12 +486,8 @@ msgstr ""
 msgid "Hide activity"
 msgstr "Скрий дейността"
 
-#: page-h5p-listing.php:55
-msgid "View h5p activity"
-msgstr ""
-
 #: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:94
+#: partials/content-single.php:2
 msgid "Edit"
 msgstr "Промени"
 
@@ -481,26 +503,39 @@ msgstr "Заглавие на книгата"
 msgid "Subtitle"
 msgstr "Субтитри"
 
+#: partials/content-cover-book-header.php:17
+msgid "by "
+msgstr ""
+
+#: partials/content-cover-book-header.php:20
+msgid "Edited by "
+msgstr ""
+
+#: partials/content-cover-book-header.php:23
+msgid "Translated by "
+msgstr ""
+
 #. translators: %s: title of book
-#: partials/content-cover-book-header.php:26
 #: partials/content-cover-book-header.php:32
+#: partials/content-cover-book-header.php:38
+#, php-format
 msgid "Cover image for %s"
 msgstr "Изображение на корицата за %s"
 
-#: partials/content-cover-book-header.php:54
+#: partials/content-cover-book-header.php:60
 msgid "Download this book"
 msgstr "Запази тази книга"
 
-#: partials/content-cover-book-header.php:93
+#: partials/content-cover-book-header.php:99
 #: partials/content-cover-book-info.php:6
 msgid "Book Description"
 msgstr "Описание на книгата"
 
-#: partials/content-cover-book-header.php:105
+#: partials/content-cover-book-header.php:111
 msgid "Read Book"
 msgstr "Прочети Книга"
 
-#: partials/content-cover-book-header.php:112
+#: partials/content-cover-book-header.php:118
 msgid "Buy Book"
 msgstr "Купи Книга"
 
@@ -515,6 +550,7 @@ msgstr "Източник на книгата"
 #. translators: %$1s: title of book, link to book, %2$s: attribution string
 #. for the book, %3$s: publisher of book, %4$s: license for book
 #: partials/content-cover-book-info.php:30
+#, php-format
 msgid ""
 "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
 "under a %4$s license. It may differ from the original."
@@ -526,11 +562,13 @@ msgstr ""
 #. translators: %3$s: publisher of book
 #: partials/content-cover-book-info.php:33
 #: partials/content-cover-book-info.php:35
+#, php-format
 msgid " by %s"
 msgstr "от %s"
 
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
+#, php-format
 msgid ""
 "This book was cloned from a source that is no longer available. The source "
 "URL was %s. This book may differ from the original."
@@ -538,18 +576,13 @@ msgstr ""
 "Тази книга е клонирана от източник, който вече не е наличен. Адресът на "
 "източникът бе %s. Тази книга може да се различава от оригинала."
 
-#: partials/content-cover-book-info.php:62
+#: partials/content-cover-book-info.php:68
 msgid "Contributors"
 msgstr "Сътрудници"
 
-#: partials/content-cover-book-info.php:72
+#: partials/content-cover-book-info.php:78
 msgid "Subject"
 msgstr "Тема"
-
-#: partials/content-cover-book-info.php:87
-#: partials/content-cover-metadata.php:66
-msgid "Click for more information"
-msgstr "Кликнете за повече информация"
 
 #: partials/content-cover-metadata.php:3
 msgid "Metadata"
@@ -563,27 +596,6 @@ msgstr "Покажи Цялото Съдържание"
 msgid "Hide All Contents"
 msgstr "Скрий Цялото Съдържание"
 
-#. translators: %1$s: chapter title, %2$s: book title, %3$s: book author(s)
-#: partials/content-difftool.php:52
-msgid "This chapter is adapted from %1$s in %2$s by %3$s."
-msgstr "Тази глава е адаптирана на база: %1$s в %2$s от %3$s"
-
-#: partials/content-difftool.php:66
-msgid ""
-"Note: The comparison below is between this text and the <strong>current "
-"version</strong> of the text from which it was adapted."
-msgstr ""
-"Забележка: Сравнението по-долу е между този текст  <strong> и текущата "
-"версия на текста </strong>, от който е адаптиран."
-
-#: partials/content-difftool.php:67
-msgid "additions"
-msgstr "Допълнения"
-
-#: partials/content-difftool.php:67
-msgid "deletions"
-msgstr "Изтривания"
-
 #: partials/content-none.php:2
 msgid "Nothing Found"
 msgstr "Нищо не е намерено"
@@ -596,38 +608,39 @@ msgstr ""
 "Съжаляваме, няма съвпадение със заложения критерий за търсене. Моля, "
 "опитайте отново с други ключови думи."
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:46
+#: partials/content-single-legacy.php:41 partials/content-single.php:49
 msgid "Previous Page"
 msgstr "Предходна страница"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:57
+#: partials/content-single-legacy.php:52 partials/content-single.php:60
 msgid "Next Page"
 msgstr "Следваща страница"
+
+#: partials/content-single.php:78
+msgid "About the author"
+msgid_plural "About the authors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: private.php:4
 msgid "Access Denied"
 msgstr "Достъпът е отказан"
 
-#. translators: link to sign in
-#: private.php:10
+#: private.php:9
 msgid ""
-"This book is private, and accessible only to registered users. If you have "
-"an account you can %s."
+"This book is private, and accessible only to registered users. To access the"
+" content, either sign in to your account or request access to this book."
 msgstr ""
-"Тази книга е частна и достъпна само за регистрирани потребители. Ако имате "
-"акаунт, можете %s."
-
-#: private.php:14
-msgid "sign in here"
-msgstr "Вписване оттук"
 
 #. translators: link to Pressbooks.pub
-#: private.php:23
+#: private.php:17
+#, php-format
 msgid "You can also set up your own Pressbooks book at %s."
 msgstr "Вие също може Да Създадете Книжка: %s"
 
 #. translators: search string
 #: search.php:6
+#, php-format
 msgid "Search Results for: %s"
 msgstr "Търсене на резултати по: %s"
 
@@ -657,6 +670,6 @@ msgstr "Търси в книга"
 msgid "Search"
 msgstr "Търсене"
 
-#: single.php:59
+#: single.php:57
 msgid "Share This Book"
 msgstr "Сподели Тази Книга"

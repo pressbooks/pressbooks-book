@@ -4,12 +4,57 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/dist/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon-16x16.png">
+	<!-- Open Graph meta tags -->
+	<?php
+	$book_information = pb_get_book_information();
+	$post_id = get_queried_object_id();
+	$og_title = wp_get_document_title();
+	// Set type to book for home page and article for all other pages
+	$og_type = ( is_front_page() && is_page() ) ? 'book' : 'article';
+	$og_url = get_permalink( $post_id );
+	$og_image = $book_information['pb_cover_image'];
+	$og_image_alt = __( 'Cover image for ', 'pressbooks-book' ) . get_bloginfo( 'name' );
+	// Use featured image, if available
+	if ( has_post_thumbnail( $post_id ) ) {
+		$og_image = get_the_post_thumbnail_url( $post_id, 'full' );
+		$og_image_alt = get_post_meta( get_post_thumbnail_id( $post_id ), '_wp_attachment_image_alt', true );
+	}
+	$og_description = $og_title;
+	if ( ! empty( $book_information['pb_about_140'] ) ) {
+		$og_description = $book_information['pb_about_140'];
+	} elseif ( ! empty( $book_information['pb_about_50'] ) ) {
+		$og_description = $book_information['pb_about_50'];
+	} elseif ( ! empty( $book_information['pb_about_unlimited'] ) ) {
+		$og_description = $book_information['pb_about_unlimited'];
+	} elseif ( ! empty( get_the_excerpt( $post_id ) ) ) {
+		$og_description = wp_trim_words( get_the_excerpt( $post_id ), 25 );
+	}
+	$og_site_name = get_bloginfo( 'name' );
+
+	// Allow customization of Open Graph meta tags with filters
+	$og_title = apply_filters( 'pressbooks_og_title', $og_title );
+	$og_description = apply_filters( 'pressbooks_og_description', $og_description );
+	$og_url = apply_filters( 'pressbooks_og_url', $og_url );
+	$og_image = apply_filters( 'pressbooks_og_image', $og_image );
+	$og_site_name = apply_filters( 'pressbooks_og_site_name', $og_site_name );
+	$og_image_alt = apply_filters( 'pressbooks_og_image_alt', $og_image_alt );
+	?>
+
+	<meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>" />
+	<meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>" />
+	<meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>" />
+	<meta property="og:url" content="<?php echo esc_url( $og_url ); ?>" />
+	<meta property="og:image" content="<?php echo esc_url( $og_image ); ?>" />
+	<meta property="og:image:alt" content="<?php echo esc_attr( $og_image_alt ); ?>" />
+	<meta property="og:site_name" content="<?php echo esc_attr( $og_site_name ); ?>" />
+
+	<?php
+	$root_id = get_network()->site_id;
+	switch_to_blog( $root_id );
+	wp_site_icon();
+	restore_current_blog();
+	?>
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/site.webmanifest">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/dist/images/safari-pinned-tab.svg" color="#b01109">
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/dist/images/favicon.ico">
 	<meta name="application-name" content="Pressbooks">
 	<meta name="msapplication-TileColor" content="#b01109">
 	<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/browserconfig.xml">
@@ -18,6 +63,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php if ( ! apply_filters( 'pb_content_only', false ) ) { ?>
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<symbol id="icon-pressbooks" fill="currentColor" viewBox="0 0 45 44">
@@ -49,99 +95,103 @@
 		<symbol id="search" fill="currentColor" viewBox="0 0 512 512"><path d="M493 384L368 259c18-29 29-62 29-99 0-106-86-192-192-192S13 54 13 160s86 192 192 192c36 0 70-11 99-28l125 124c9 9 23 9 32 0l32-32c9-9 9-23 0-32zm-288-96c-71 0-128-57-128-128S134 32 205 32c70 0 128 57 128 128s-58 128-128 128z"/></symbol>
 		<symbol id="share-books" fill="currentColor" viewBox="0 0 512 512"><path d="M240 188v36h36zm56-28h36l-36-36zM256-32C115-32 0 83 0 224s115 256 256 256 256-115 256-256S397-32 256-32zm40 256v104c0 9-7 16-16 16h-96c-9 0-16-7-16-16V184c0-9 7-16 16-16h56v3l4-3 52 52-3 4zm56-64v104c0 9-7 16-16 16h-24v-16h24v-88h-40c-9 0-16-7-16-16v-40h-40v32h-16v-32c0-9 7-16 16-16h56v3l4-3 52 52-3 4zm-128 64v-40h-40v144h96v-88h-40c-9 0-16-7-16-16z"/></symbol>
 		<symbol id="speechbubble" fill="currentColor" viewBox="0 0 512 512"><path d="M375 169H123c-7 0-12-7-12-14 0-8 5-14 12-14h252c7 0 12 6 12 14 0 7-5 14-12 14zm-29 55c0-8-6-14-13-14H123c-7 0-12 6-12 14s5 14 12 14h210c7 0 13-6 13-14zm99 125h18c27 0 49-22 49-48V78c0-27-22-48-49-48H49C22 30 0 52 0 78v223c0 26 22 47 49 47h305l45 70zm16-291c13 0 23 10 23 23v224c0 13-10 23-23 23h-32l-31 48-31-48H51c-13 0-23-10-23-23V81c0-13 10-23 23-23z"/></symbol>
-		<symbol id="twitter" fill="currentColor" viewBox="0 0 512 512"><path d="M161 433c193 0 299-161 299-300v-14c20-15 38-34 52-55-19 9-40 14-60 17 22-13 38-34 46-59-21 13-43 21-67 26-32-35-84-44-126-21s-64 71-53 117c-84-4-163-44-216-110C8 82 22 144 68 175c-17 0-33-5-48-13v1c0 50 36 94 85 104-16 4-32 5-48 2 14 43 54 72 98 73-37 30-83 46-130 45-8 0-17 0-25-1 48 31 104 47 161 47"/></symbol>
+		<symbol id="twitter" fill="currentColor" viewbox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></symbol>
 		<symbol id="twitter-icon" fill="currentColor" viewBox="0 0 1792 1792"><path d="M1408 610q-56 25-121 34 68-40 93-117-65 38-134 51-61-66-153-66-87 0-148.5 61.5t-61.5 148.5q0 29 5 48-129-7-242-65t-192-155q-29 50-29 106 0 114 91 175-47-1-100-26v2q0 75 50 133.5t123 72.5q-29 8-51 8-13 0-39-4 21 63 74.5 104t121.5 42q-116 90-261 90-26 0-50-3 148 94 322 94 112 0 210-35.5t168-95 120.5-137 75-162 24.5-168.5q0-18-1-27 63-45 105-109zm256-194v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></symbol>
-		<symbol id="linkedin-icon" fill="currentColor" viewBox="0 0 1792 1792"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></symbol>
-		<symbol id="github-icon" fill="currentColor" viewBox="0 0 1792 1792"><path d="M647 1200q4-6-3-13-9-7-14-2-4 6 3 13 9 7 14 2zm-28-41q-5-7-12-4-6 4 0 12 7 8 12 5 6-4 0-13zm-41-40q2-4-5-8-7-2-8 2-3 5 4 8 8 2 9-2zm21 23q2-1 1.5-4.5t-3.5-5.5q-6-7-10-3t1 11q6 6 11 2zm86 75q2-7-9-11-9-3-13 4-2 7 9 11 9 3 13-4zm42 3q0-8-12-8-10 0-10 8t11 8 11-8zm39-7q-2-7-13-5t-9 9q2 8 12 6t10-10zm642-317q0-212-150-362t-362-150-362 150-150 362q0 167 98 300.5t252 185.5q18 3 26.5-5t8.5-20q0-52-1-95-6 1-15.5 2.5t-35.5 2-48-4-43.5-20-29.5-41.5q-23-59-57-74-2-1-4.5-3.5l-8-8-7-9.5 4-7.5 19.5-3.5q6 0 15 2t30 15.5 33 35.5q16 28 37.5 42t43.5 14 38-3.5 30-9.5q7-47 33-69-49-6-86-18.5t-73-39-55.5-76-19.5-119.5q0-79 53-137-24-62 5-136 19-6 54.5 7.5t60.5 29.5l26 16q58-17 128-17t128 17q11-7 28.5-18t55.5-26 57-9q29 74 5 136 53 58 53 137 0 57-14 100.5t-35.5 70-53.5 44.5-62.5 26-68.5 12q35 31 35 95 0 40-.5 89t-.5 51q0 12 8.5 20t26.5 5q154-52 252-185.5t98-300.5zm256-480v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></symbol>
+		<symbol id="linkedin-icon" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></symbol>
+		<symbol id="youtube-icon" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>" </symbol>
+		<symbol id="github-icon" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol>
+		<symbol id="email" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></symbol>
 	</defs>
 </svg>
-
+<?php } ?>
 <div id="page" class="site">
+	<?php if ( ! apply_filters( 'pb_content_only', false ) ) { ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pressbooks-book' ); ?></a>
-	<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
+		<?php get_template_part( 'partials/content', 'accessibility-toolbar' ); ?>
 
 	<header class="header" role="banner">
-		<div class="header__inside">
-			<div class="header__brand">
-				<?php
-				$root_id = get_network()->site_id;
-				switch_to_blog( $root_id );
-				?>
-				<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+		<div class="header__container">
+			<div class="header__inside">
+				<div class="header__brand">
 					<?php
-					if ( has_custom_logo( $root_id ) ) {
-						$custom_logo_id = get_theme_mod( 'custom_logo' );
-						printf(
-							'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
-							wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
-							wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
-							/* translators: %s: name of network */
-							sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
-						);
-					} else {
-						?>
-					<svg class="header__logo--svg" role="img" aria-label="
-						<?php
-						/* translators: %s: name of network */
-							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
-						?>
-							">
-						<use href="#logo-pressbooks" />
-					</svg>
-						<?php
-					}
-					restore_current_blog();
+					switch_to_blog( $root_id );
 					?>
-				</a>
-			</div>
-			<div class="header__nav">
-				<a class="header__nav-icon js-header-nav-toggle" href="#navigation"><?php esc_html_e( 'Toggle Menu', 'pressbooks-book' ); ?><span class="header__nav-icon__icon"></span></a>
-				<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
-					<p id="primary-nav" class="screen-reader-text"><?php esc_html_e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
-					<ul id="nav-primary-menu" class="nav--primary">
-						<?php echo \PressbooksBook\Helpers\display_menu(); ?>
-					</ul>
-				</nav>
+					<a aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?>" href="<?php echo network_home_url(); ?>">
+						<?php
+						if ( has_custom_logo( $root_id ) ) {
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							printf(
+								'<img class="header__logo--img" src="%1$s" srcset="%2$s" alt="%3$s" />',
+								wp_get_attachment_image_src( $custom_logo_id, 'logo' )[0],
+								wp_get_attachment_image_srcset( $custom_logo_id, 'large' ),
+								/* translators: %s: name of network */
+								sprintf( __( 'Logo for %s', 'pressbooks-book' ), get_bloginfo( 'name', 'display' ) )
+							);
+						} else {
+							?>
+							<svg class="header__logo--svg" role="img" aria-label="
+							<?php
+							/* translators: %s: name of network */
+							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
+							?>
+							">
+								<use href="#logo-pressbooks" />
+							</svg>
+							<?php
+						}
+						restore_current_blog();
+						?>
+					</a>
+				</div>
+				<div class="header__nav">
+					<button class="header__nav-icon js-header-nav-toggle" aria-expanded="false" aria-controls="navigation"><?php _e( 'Menu', 'pressbooks-aldine' ); ?><span class="header__nav-icon__icon"></span></button>
+					<nav aria-labelledby="primary-nav" class="js-header-nav" id="navigation">
+						<p id="primary-nav" class="screen-reader-text"><?php esc_html_e( 'Primary Navigation', 'pressbooks-book' ); ?></p>
+						<ul id="nav-primary-menu" class="nav--primary">
+							<?php echo \PressbooksBook\Helpers\display_menu(); ?>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 
 		<?php if ( \PressbooksBook\Helpers\should_cta_banner_be_displayed() && \PressbooksBook\Helpers\is_book_public() ) : ?>
-		<div class="cta hidden">
-			<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbook-book' ) ) ); ?>
-				<a id="close-cta" href="javascript:void()" aria-label="Close banner">
-					<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="presentation">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-				</a>
-			</p>
-		</div>
+			<div class="cta hidden">
+				<p><?php echo sprintf( esc_html__( 'Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices.', 'pressbooks-book' ), sprintf( '<a href="%1$s" target="_blank">%2$s</a>', esc_url( 'https://pressbooks.com/adapt-open-textbooks?utm_source=book&utm_medium=banner&utm_campaign=bbc' ), esc_html__( 'Learn more', 'pressbooks-book' ) ) ); ?>
+					<a id="close-cta" href="javascript:void()" aria-label="Close banner">
+						<svg xmlns="http://www.w3.org/2000/svg" class="close-cta__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="presentation">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</a>
+				</p>
+			</div>
 		<?php endif; ?>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav aria-labelledby="book-toc" class="reading-header__inside">
 					<p id="book-toc" class="screen-reader-text"><?php esc_html_e( 'Book Contents Navigation', 'pressbooks-book' ); ?></p>
 					<?php if ( is_single() ) { ?>
-					<div class="reading-header__toc dropdown">
-						<div class="reading-header__toc__title"><?php esc_html_e( 'Contents', 'pressbooks-book' ); ?></div>
-						<div class="block-reading-toc" hidden>
-							<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
+						<div class="reading-header__toc dropdown">
+							<div class="reading-header__toc__title"><?php esc_html_e( 'Contents', 'pressbooks-book' ); ?></div>
+							<div class="block-reading-toc" hidden>
+								<?php include( locate_template( 'partials/content-toc.php' ) ); ?>
+							</div>
 						</div>
-					</div>
 					<?php } else { ?>
-					<div class="reading-header__toc"></div>
+						<div class="reading-header__toc"></div>
 					<?php } ?>
 					<?php /* translators: %s: the title of the book */ ?>
 					<h1 class="reading-header__title" ><a href="<?php echo home_url( '/' ); ?>" aria-label="<?php printf( __( 'Go to the cover page of %s', 'pressbooks-book' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 					<div class="reading-header__end-container">
 						<?php if ( array_filter( get_option( 'pressbooks_ecommerce_links', [] ) ) ) : ?>
-						<a href="<?php echo home_url( '/buy/' ); ?>"><?php esc_html_e( 'Buy', 'pressbooks-book' ); ?></a>
+							<a href="<?php echo home_url( '/buy/' ); ?>"><?php esc_html_e( 'Buy', 'pressbooks-book' ); ?></a>
 						<?php endif; ?>
 					</div>
 				</nav>
 			</div>
 		<?php } ?>
 	</header>
-
+<?php } ?>
 	<main id="main">
-	<div id="content" class="site-content" tabindex="-1">
+		<div id="content" class="site-content" tabindex="-1">

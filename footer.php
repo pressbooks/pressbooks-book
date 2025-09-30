@@ -53,37 +53,35 @@ if ( $contact_link ) {
 ">
 	<div class="footer__inner">
 		<section class="footer__pressbooks">
-			<a class="footer__pressbooks__icon" href="https://pressbooks.com" title="Pressbooks">
-				<svg class="icon--svg" role="img" aria-label="
-				<?php
-				/* translators: %s: name of network */
-							printf( __( 'Logo for %s', 'pressbooks-book' ), 'Pressbooks' );
-				?>
-							">
+			<a class="footer__pressbooks__icon" href="https://pressbooks.com">
+				<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 					<use href="#icon-pressbooks" />
 				</svg>
+				<span class="screen-reader-text"><?php _e( 'Pressbooks', 'pressbooks-book' ); ?></span>
 			</a>
 			<div class="footer__pressbooks__links">
 				<?php /* translators: %s: Pressbooks */ ?>
 				<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( __( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				<ul class="footer__pressbooks__links__list">
-					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide-tutorials"><a href="https://pressbooks.com/support/"><?php _e( 'Guides and Tutorials', 'pressbooks-book' ); ?></a></li>
+					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-guide"><a href="https://guide.pressbooks.com"><?php _e( 'Pressbooks User Guide', 'pressbooks-book' ); ?></a></li>
 					<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-pressbooks-directory">|<a href="https://pressbooks.directory"><?php _e( 'Pressbooks Directory', 'pressbooks-book' ); ?></a></li>
 					<?php if ( $contact_link ) : ?>
-						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-aldine' ); ?></a></li>
+						<li class="footer__pressbooks__links__list-item footer__pressbooks__links__list-item-contact">|<a href="<?php echo $contact_link; ?>"><?php _e( 'Contact', 'pressbooks-book' ); ?></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
 			<div class="footer__pressbooks__social">
-				<a href="https://www.youtube.com/user/pressbooks">
-					<img class="youtube-link" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/yt_icon_mono_dark.png" alt="YouTube" aria-hidden="true">
+				<a class="youtube" href="https://www.youtube.com/user/pressbooks">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
+						<use href="#youtube-icon" />
+					</svg>
 					<span class="screen-reader-text"><?php _e( 'Pressbooks on YouTube', 'pressbooks-book' ); ?></span>
 				</a>
-				<a class="twitter" href="https://twitter.com/intent/follow?screen_name=pressbooks">
-					<svg class="icon--svg" role="presentation">
-						<use href="#twitter" />
+				<a class="linkedin" href="https://www.linkedin.com/company/pressbooks/?originalSubdomain=ca">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
+						<use href="#linkedin-icon" />
 					</svg>
-				<span class="screen-reader-text"><?php _e( 'Pressbooks on Twitter', 'pressbooks-book' ); ?></span></a>
+					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?></span></a>
 			</div>
 
 		</section>
