@@ -28,7 +28,7 @@
         text-align: $part-title-align;
         text-transform: $part-title-text-transform;
 
-        span {
+        span.number {
           border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) if-map-get($part-number-border-bottom-color, $type);
           display: $part-number-display;
           margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
@@ -124,7 +124,7 @@
         text-align: $chapter-title-align;
         text-transform: $chapter-title-text-transform;
 
-        span {
+        span.number {
           border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
           display: $chapter-number-display;
           margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
@@ -149,7 +149,7 @@
       }
 
       .numberless & {
-        h1 span {
+        h1 span.number {
           display: none;
           content: '';
         }

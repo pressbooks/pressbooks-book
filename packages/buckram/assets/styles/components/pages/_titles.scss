@@ -39,7 +39,8 @@
   word-spacing: $title-title-word-spacing;
   text-align: $title-title-align;
   text-transform: $title-title-text-transform;
-  border-bottom: if-map-get($title-title-border-bottom-width, $type) $title-title-border-bottom-style if-map-get($title-title-border-bottom-color, $type);
+  border-bottom: if-map-get($title-title-border-bottom-width, $type) $title-title-border-bottom-style;
+  border-bottom-color: if-map-get($title-title-border-bottom-color, $type);
   padding-bottom: if-map-get($title-title-padding-bottom, $type);
   @if $type == 'prince' {
     prince-bookmark-level: none;
@@ -76,7 +77,8 @@
   word-spacing: $title-subtitle-word-spacing;
   text-align: $title-subtitle-align;
   text-transform: $title-subtitle-text-transform;
-  border-bottom: if-map-get($title-subtitle-border-bottom-width, $type) $title-subtitle-border-bottom-style if-map-get($title-subtitle-border-bottom-color, $type);
+  border-bottom: if-map-get($title-subtitle-border-bottom-width, $type) $title-subtitle-border-bottom-style;
+  border-bottom-color: if-map-get($title-subtitle-border-bottom-color, $type);
   padding-bottom: if-map-get($title-subtitle-padding-bottom, $type);
   @if $type != 'epub' {
     line-height: if-map-get($title-subtitle-line-height, $type);
@@ -97,7 +99,8 @@
   text-align: $title-author-align;
   text-transform: $title-author-text-transform;
   text-indent: 0;
-  border-bottom: if-map-get($title-author-border-bottom-width, $type) $title-author-border-bottom-style if-map-get($title-author-border-bottom-color, $type);
+  border-bottom: if-map-get($title-author-border-bottom-width, $type) $title-author-border-bottom-style;
+  border-bottom-color: if-map-get($title-author-border-bottom-color, $type);
   padding-bottom: if-map-get($title-author-padding-bottom, $type);
   @if $type != 'epub' {
     line-height: if-map-get($title-author-line-height, $type);
@@ -133,7 +136,8 @@ div.publisher-logo {
   text-align: $title-publisher-align;
   text-transform: $title-publisher-text-transform;
   text-indent: 0;
-  border-bottom: if-map-get($title-publisher-border-bottom-width, $type) $title-publisher-border-bottom-style if-map-get($title-publisher-border-bottom-color, $type);
+  border-bottom: if-map-get($title-publisher-border-bottom-width, $type) $title-publisher-border-bottom-style;
+  border-bottom-color: if-map-get($title-publisher-border-bottom-color, $type);
   padding-bottom: if-map-get($title-publisher-padding-bottom, $type);
 }
 
@@ -156,7 +160,8 @@ div.publisher-logo {
   text-align: $title-publisher-city-align;
   text-transform: $title-publisher-city-text-transform;
   text-indent: 0;
-  border-bottom: if-map-get($title-publisher-city-border-bottom-width, $type) $title-publisher-city-border-bottom-style if-map-get($title-publisher-city-border-bottom-color, $type);
+  border-bottom: if-map-get($title-publisher-city-border-bottom-width, $type) $title-publisher-city-border-bottom-style;
+  border-bottom-color: if-map-get($title-publisher-city-border-bottom-color, $type);
   padding-bottom: if-map-get($title-publisher-city-padding-bottom, $type);
 }
 
