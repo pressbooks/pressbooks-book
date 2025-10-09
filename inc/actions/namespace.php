@@ -203,9 +203,26 @@ function customizer_colors() {
  *
  * @since 2.30.4
  */
-function noindex_downloads() {
-if ( isset( $_GET['type'] ) && strpos( $_SERVER['REQUEST_URI'], '/open/download' ) !== false ) {
-	header( 'X-Robots-Tag: noindex, nofollow', true );
+function noindex_downloads()
+{
+	if (isset($_GET['type']) && strpos($_SERVER['REQUEST_URI'], '/open/download') !== false) {
+		header('X-Robots-Tag: noindex, nofollow', true);
+	}
+}
+
+/**
+ * Disallow /open/download in robots.txt
+ *
+ * @since 2.30.4
+ *
+ * @param string   $output   The robots.txt output so far.
+ * @param \WP_Query $wp_query The WP_Query instance (passed by reference).
+ *
+ * @return string The modified robots.txt output.
+ */
+function disallow_downloads_for_robots( string $output, \WP_Query $wp_query ): string {
+	$output .= "\nUser-agent: *\nDisallow: /open/download\n";
+	return $output;
 }
 
 /**
