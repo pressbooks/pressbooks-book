@@ -203,8 +203,7 @@ function customizer_colors() {
  *
  * @since 2.30.4
  */
-function noindex_downloads()
-{
+function noindex_downloads() {
 	if (isset($_GET['type']) && strpos($_SERVER['REQUEST_URI'], '/open/download') !== false) {
 		header('X-Robots-Tag: noindex, nofollow', true);
 	}
