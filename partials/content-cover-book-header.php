@@ -55,7 +55,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 			$option      = get_option( 'pbt_redistribute_settings', [ 'latest_files_public' => 0 ] );
 			if ( ! empty( $files ) && ( ! empty( $site_option['allow_redistribution'] ) ) && ( ! empty( $option['latest_files_public'] ) ) ) {
 				?>
-				<div class="book-header__cover__downloads dropdown">
+				<div class="book-header__cover__downloads dropdown" data-nosnippet>
 
 					<p><?php esc_html_e( 'Download this book', 'pressbooks-book' ); ?></p>
 					<ul>

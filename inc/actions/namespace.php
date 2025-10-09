@@ -199,6 +199,16 @@ function customizer_colors() {
 }
 
 /**
+ * Add X-Robots-Tag header to download URLs to prevent indexing by search engines.
+ *
+ * @since 2.30.4
+ */
+function noindex_downloads() {
+	if ( isset($_GET['type']) && strpos($_SERVER['REQUEST_URI'], '/open/download') !== false ) {
+		header( 'X-Robots-Tag: noindex, nofollow', true );
+	}
+
+/**
  * Add web theme option for lightbox functionality.
  *
  * @since 2.4.0
