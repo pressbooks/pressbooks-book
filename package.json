@@ -4,15 +4,15 @@
 	"author": "Pressbooks (Book Oven Inc.)",
 	"license": "GPL-3.0-or-later",
 	"engines": {
-		"node": ">= 18"
+		"node": ">= 22"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/pressbooks/pressbooks-book.git"
 	},
 	"dependencies": {
-		"aetna": "^1.0.5",
-		"buckram": "^1.8.6",
+		"aetna": "^1.1.0",
+		"buckram": "^1.8.8",
 		"details-element-polyfill": "^2.4.0",
 		"lity": "^2.4.0",
 		"sharer.js": "^0.5.1",

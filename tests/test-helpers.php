@@ -7,6 +7,7 @@
 
 use function \PressbooksBook\Helpers\count_items;
 use function \PressbooksBook\Helpers\display_menu;
+use function PressbooksBook\Helpers\get_allowed_html_before_content;
 use function \PressbooksBook\Helpers\get_book_authors;
 use function \PressbooksBook\Helpers\get_metakeys;
 use function \PressbooksBook\Helpers\get_name_for_filetype;
@@ -259,5 +260,18 @@ class HelpersTest extends WP_UnitTestCase {
 
 		update_site_option( 'pressbooks_display_cta_banner', '0' );
 		$this->assertFalse( should_cta_banner_be_displayed() );
+	}
+
+	function test_get_allowed_html_before_content() {
+		$allowed_html = get_allowed_html_before_content();
+		$this->assertIsArray( $allowed_html );
+		$this->assertArrayHasKey( 'a', $allowed_html );
+		$this->assertArrayHasKey( 'p', $allowed_html );
+		$this->assertArrayHasKey( 'br', $allowed_html );
+		$this->assertArrayHasKey( 'svg', $allowed_html );
+		$html = '<p>Test paragraph</p><script>alert("This should not be allowed")</script><a href="https://example.com">Test link</a>';
+		$sanitized_html = wp_kses( $html, $allowed_html );
+		$this->assertStringContainsString( '<p>Test paragraph</p>', $sanitized_html );
+		$this->assertStringNotContainsString( '<script>', $sanitized_html );
 	}
 }

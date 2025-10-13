@@ -494,6 +494,8 @@ function get_metakeys(): array {
 		'pb_primary_subject' => __( 'Primary Subject', 'pressbooks-book' ),
 		'pb_additional_subjects' => __( 'Additional Subject(s)', 'pressbooks-book' ),
 		'pb_institutions' => _n_noop( 'Institution', 'Institutions', 'pressbooks-book' ),
+		'pb_series_title' => __( 'Series Title', 'pressbooks-book' ),
+		'pb_series_number' => __( 'Series Number', 'pressbooks-book' ),
 		'pb_publisher' => __( 'Publisher', 'pressbooks-book' ),
 		'pb_publisher_city' => __( 'Publisher City', 'pressbooks-book' ),
 		'pb_publication_date' => __( 'Publication Date', 'pressbooks-book' ),
@@ -535,8 +537,8 @@ function get_links( $echo = true ) {
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
-				<a href="<?php echo $prev_chapter; ?>" title="<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_title ); ?>">
-					<svg class="icon--svg"><use href="#arrow-left" /></svg>
+				<a href="<?php echo $prev_chapter; ?>">
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-left" /></svg>
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
 				</a>
@@ -545,10 +547,10 @@ function get_links( $echo = true ) {
 		<div class="nav-reading__next js-nav-next">
 			<?php if ( $next_chapter !== '/' ) : ?>
 				<?php /* translators: %s: post title, */ ?>
-				<a href="<?php echo $next_chapter ?>" title="<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_title ); ?>">
+				<a href="<?php echo $next_chapter ?>">
 					<?php /* translators: %s: post short title or title */ ?>
 					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
-					<svg class="icon--svg"><use href="#arrow-right" /></svg>
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
 		</div>
@@ -826,4 +828,35 @@ function institutions_to_string( array $institutions ): string {
 	return implode( ', ', array_map( static function( $code ) {
 		return \Pressbooks\Metadata\get_institution_name( $code );
 	}, $institutions ) );
+}
+
+/**
+ * Get allowed HTML tags for the before content area.
+ *
+ * @since 2.3.0
+ *
+ * @return array
+ */
+function get_allowed_html_before_content(): array {
+
+	$allowed_before_html = wp_kses_allowed_html( 'post' );
+
+	$allowed_before_html['svg'] = [
+		'class' => [],
+		'data-slot' => [],
+		'aria-hidden' => [],
+		'fill' => [],
+		'stroke-width' => [],
+		'stroke' => [],
+		'viewbox' => true,
+		'xmlns' => [],
+	];
+
+	$allowed_before_html['path'] = [
+		'd' => [],
+		'stroke-linecap' => [],
+		'stroke-linejoin' => [],
+	];
+
+	return $allowed_before_html;
 }

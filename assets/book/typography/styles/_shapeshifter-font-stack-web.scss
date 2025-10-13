@@ -73,6 +73,9 @@ $shapeshifter-fonts: ();
   } @else if unquote($font) == 'New Athena Unicode' {
     // noinspection CssInvalidAtRule
     @import'NewAthenaUnicodeFont';
+  } @else if unquote($font) == 'Atkinson Hyperlegible Next' {
+    // noinspection CssInvalidAtRule
+    @import'AtkinsonHyperlegibleNextFont';
   }
 }
 

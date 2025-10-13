@@ -28,16 +28,18 @@ hr {
   margin: if-map-get($hr-margin-top, $type) auto $hr-margin-bottom;
   border-top: none;
   border-right: none;
-  border-bottom: $hr-border-style $hr-border-width $hr-border-color;
+  border-bottom: $hr-border-style $hr-border-width;
+  border-bottom-color: $hr-border-color;
   border-left: none;
   text-align: center;
 
   &.break-symbols {
     padding-top: if-map-get($hr-break-symbols-padding-top, $type);
-    border-top: if-map-get($hr-break-symbols-border-top-width, $type) if-map-get($hr-break-symbols-border-top-style, $type) if-map-get($hr-break-symbols-border-top-color, $type);
+    border: 0;
+    border-top: if-map-get($hr-break-symbols-border-top-width, $type) if-map-get($hr-break-symbols-border-top-style, $type);
+    border-top-color: if-map-get($hr-break-symbols-border-top-color, $type);
     margin-top: if-map-get($hr-break-symbols-margin-top, $type);
     margin-bottom: $hr-break-symbols-margin-bottom;
-    border: 0;
 
     &::after {
       display: block;

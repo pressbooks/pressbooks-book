@@ -1,6 +1,6 @@
 <h2 class="entry-title"><?php
 if ( $number ) {
-	echo "<span>$number</span>  ";
+	echo "<span class=\"number\">$number</span>  ";
 }
 if ( get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' ) {
 	the_title();
@@ -66,4 +66,8 @@ if ( get_post_type( $post->ID ) !== 'part' ) {
 ?>
 </div><!-- .entry-content -->
 </div><!-- #post-## -->
-<?php edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' ); ?>
+<?php
+if ( ! apply_filters( 'pb_content_only', false ) ) {
+	edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
+}
+?>

@@ -175,7 +175,7 @@ p.wp-caption-text {
 
 // CHAPTER TITLE COLOR
 .chapter-number,
-.entry-title span {
+.entry-title span.number {
   color: if-map-get($chapter-number-color, $type);
 }
 

@@ -42,7 +42,7 @@
 								 * @since Pressbooks @ 5.6.0
 								 */
 								$doi_resolver = apply_filters( 'pb_doi_resolver', 'https://doi.org' );
-								$book_information[ $key ] = sprintf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', trailingslashit( $doi_resolver ) . $book_information[ $key ] );
+								$book_information[ $key ] = sprintf( '<a itemprop="sameAs" href="%1$s">%1$s</a>', esc_url( trailingslashit( $doi_resolver ) . $book_information[ $key ] ) );
 							}
 								echo $book_information[ $key ];
 							?>
