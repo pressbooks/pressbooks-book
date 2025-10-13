@@ -36,5 +36,5 @@ $shapeshifter-font-2-is-serif: true !default;
 }
 
 @if variable-exists(custom-fonts-imported) {
-  @import '../../../../../uploads/assets/custom-fonts/custom-fonts';
+  @import '../../../../../uploads/assets/custom-fonts/custom-fonts.css';
 }
