@@ -38,8 +38,10 @@ aside,
 
   text-align: $pullquote-align;
   text-indent: 0;
-  border-top: if-map-get($pullquote-border-top-width, $type) $pullquote-border-top-style $pullquote-border-top-color;
-  border-bottom: if-map-get($pullquote-border-bottom-width, $type) $pullquote-border-bottom-style $pullquote-border-bottom-color;
+  border-top: if-map-get($pullquote-border-top-width, $type) $pullquote-border-top-style;
+  border-top-color: $pullquote-border-top-color;
+  border-bottom: if-map-get($pullquote-border-bottom-width, $type) $pullquote-border-bottom-style;
+  border-bottom-color: $pullquote-border-bottom-color;
   padding-top: if-map-get($pullquote-padding-top, $type);
   padding-bottom: if-map-get($pullquote-padding-bottom, $type);
   page-break-inside: avoid;

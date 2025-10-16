@@ -36,7 +36,7 @@ $part_numbers = $options['chapter_numbers'] ?? false; ?>
 		if ( $part_has_chapters || $part_has_content ) {
 			$n++;
 			$part_number = \Pressbooks\L10n\romanize( $n );
-			$part_title = ( $part_numbers ) ? "<span class='toc__title__number'>$part_number</span>. {$part['post_title']}" : $part['post_title'];
+			$part_title = ( $part_numbers ) ? "<span class='toc__title__number'>$part_number. </span>{$part['post_title']}" : $part['post_title'];
 			$part_class = 'toc__part';
 			$part_class .= ( $part_has_chapters ) ? ' toc__part--full' : ' toc__part--empty';
 			if ( isset( $post ) ) {

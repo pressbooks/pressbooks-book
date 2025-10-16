@@ -34,10 +34,11 @@
 
     text-align: $table-align;
     border-collapse: collapse;
-    border-top: $table-border-width solid if-map-get($line-color-1, $type);
-    border-right: if-map-get($table-border-right-width, $type) if-map-get($table-border-right-style, $type) if-map-get($line-color-1, $type);
-    border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
-    border-left: if-map-get($table-border-left-width, $type) if-map-get($table-border-left-style, $type) if-map-get($line-color-1, $type);
+    border-color: if-map-get($line-color-1, $type);
+    border-top: $table-border-width solid;
+    border-right: if-map-get($table-border-right-width, $type) if-map-get($table-border-right-style, $type);
+    border-bottom: $table-border-width solid;
+    border-left: if-map-get($table-border-left-width, $type) if-map-get($table-border-left-style, $type);
 
     p {
       text-align: $table-align;
@@ -56,8 +57,8 @@
     }
 
     &.lines tr {
-      border-top: $table-border-width solid if-map-get($line-color-1, $type);
-      border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
+      border-top: $table-border-width solid;
+      border-bottom: $table-border-width solid;
       border-color: if-map-get($line-color-1, $type);
     }
 
@@ -81,7 +82,7 @@
 
     &.border {
       border: $table-border-width solid;
-      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+      border-color: if-map-get($line-color-1, $type);
     }
 
     &.no-border,
@@ -105,7 +106,7 @@
     &.grid tfoot,
     &.grid thead {
       border: 1px solid;
-      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+      border-color: if-map-get($line-color-1, $type);
     }
 
     &.alignleft {
@@ -158,15 +159,16 @@
 
     text-align: $table-th-align;
     vertical-align: $table-th-vertical-align;
-    border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
-    border-right: if-map-get($table-th-border-right-width, $type) if-map-get($table-th-border-right-style, $type) if-map-get($line-color-1, $type);
-    border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type) if-map-get($line-color-1, $type);
-    border-left: if-map-get($table-th-border-left-width, $type) if-map-get($table-th-border-left-style, $type) if-map-get($line-color-1, $type);
+    border-color: if-map-get($line-color-1, $type);
+    border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type);
+    border-right: if-map-get($table-th-border-right-width, $type) if-map-get($table-th-border-right-style, $type);
+    border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type);
+    border-left: if-map-get($table-th-border-left-width, $type) if-map-get($table-th-border-left-style, $type);
   }
 
   td {
     border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
-    border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+    border-color: if-map-get($line-color-1, $type);
     padding: $table-td-padding-top $table-td-padding-right $table-td-padding-bottom $table-td-padding-left;
     @if $type == 'prince' {
       line-height: $table-td-line-height;
@@ -177,8 +179,9 @@
   }
 
   tr {
-    border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
-    border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
+    border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type);
+    border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type);
+    border-color: if-map-get($line-color-1, $type);
   }
 } @else {
   .front-matter,
@@ -198,8 +201,8 @@
       line-height: $table-line-height;
       text-align: $table-align;
       border-collapse: collapse;
-      border-top: $table-border-width solid if-map-get($line-color-1, $type);
-      border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
+      border-top: $table-border-width solid;
+      border-bottom: $table-border-width solid;
       border-color: if-map-get($line-color-1, $type);
 
       p {
@@ -217,8 +220,8 @@
       }
 
       &.lines tr {
-        border-top: $table-border-width solid if-map-get($line-color-1, $type);
-        border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
+        border-top: $table-border-width solid;
+        border-bottom: $table-border-width solid;
         border-color: if-map-get($line-color-1, $type);
       }
 
@@ -242,7 +245,7 @@
 
       &.border {
         border: $table-border-width solid;
-        border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+        border-color: if-map-get($line-color-1, $type);
       }
 
       &.no-border,
@@ -266,7 +269,7 @@
       &.grid tfoot,
       &.grid thead {
         border: 1px solid;
-        border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+        border-color: if-map-get($line-color-1, $type);
       }
 
       &.alignleft {
@@ -317,8 +320,9 @@
       line-height: $table-th-line-height;
       text-align: $table-th-align;
       vertical-align: middle;
-      border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
-      border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type) if-map-get($line-color-1, $type);
+      border-color: if-map-get($line-color-1, $type);
+      border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type);
+      border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type);
     }
 
     td {
@@ -327,12 +331,13 @@
       text-align: $table-td-align;
       vertical-align: middle;
       border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
-      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+      border-color: if-map-get($line-color-1, $type);
     }
 
     tr {
-      border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
-      border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
+      border-color: if-map-get($line-color-1, $type);
+      border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type);
+      border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type);
     }
   }
 }

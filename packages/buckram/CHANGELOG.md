@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.8](https://github.com/pressbooks/buckram/compare/v1.8.7...v1.8.8) (2025-10-02)
+
+
+### Bug Fixes
+
+* use .number class for chapter numbers ([#385](https://github.com/pressbooks/buckram/issues/385)) ([0da654b](https://github.com/pressbooks/buckram/commit/0da654bba6f57112e559be5996c3b982baf8bc52))
+
+## [1.8.7](https://github.com/pressbooks/buckram/compare/v1.8.6...v1.8.7) (2025-09-30)
+
+
+### Bug Fixes
+
+* remove usage of border color variable in shorthand ([#382](https://github.com/pressbooks/buckram/issues/382)) ([decb1af](https://github.com/pressbooks/buckram/commit/decb1af876745c6adf78e6eb4e186c0a7e6b6d63))
+
 ## [1.8.6](https://github.com/pressbooks/buckram/compare/v1.8.5...v1.8.6) (2025-03-11)
 
 

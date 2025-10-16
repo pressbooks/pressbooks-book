@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.30.3](https://github.com/pressbooks/pressbooks-book/compare/2.30.2...2.30.3) (2025-10-06)
+
+
+### Bug Fixes
+
+* improve buy page display conditions ([#1379](https://github.com/pressbooks/pressbooks-book/issues/1379)) ([2ca7da8](https://github.com/pressbooks/pressbooks-book/commit/2ca7da892546155e09c731546ab9b967de99ed1a))
+* resolve style issue with chapter titles including translations ([#1374](https://github.com/pressbooks/pressbooks-book/issues/1374)) ([ee73785](https://github.com/pressbooks/pressbooks-book/commit/ee737855a98ea601bd2b2614ddd03a9ba599b6ff))
+* update toc__title_number span ([#1380](https://github.com/pressbooks/pressbooks-book/issues/1380)) ([fbb8663](https://github.com/pressbooks/pressbooks-book/commit/fbb8663f281f2265ff9ce8ea890409ce0985ed31))
+
+
+### Chores
+
+* bump node and buckram ([#1377](https://github.com/pressbooks/pressbooks-book/issues/1377)) ([d82be13](https://github.com/pressbooks/pressbooks-book/commit/d82be131099a1d5e63fcadd18d8ff07644528b57))
+
 ## [2.30.2](https://github.com/pressbooks/pressbooks-book/compare/2.30.1...2.30.2) (2025-09-09)
 
 
