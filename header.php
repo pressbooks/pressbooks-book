@@ -8,7 +8,8 @@
 	<?php
 	$book_information = pb_get_book_information();
 	$post_id = get_queried_object_id();
-	$og_title = wp_get_document_title();
+	// Use book title for front page instead of document title which returns "Cover"
+	$og_title = ( is_front_page() && is_page() ) ? get_bloginfo( 'name' ) : wp_get_document_title();
 	// Set type to book for home page and article for all other pages
 	$og_type = ( is_front_page() && is_page() ) ? 'book' : 'article';
 	$og_url = get_permalink( $post_id );
