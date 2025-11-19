@@ -169,8 +169,8 @@
 		<?php endif; ?>
 		<?php
 		// Display archive banner if book is archived
-		if ( function_exists( '\Pressbooks\Modules\ArchiveBanner\display_archive_banner' ) ) {
-			\Pressbooks\Modules\ArchiveBanner\display_archive_banner();
+		if ( function_exists( '\PressbooksBook\ArchiveBanner\display' ) ) {
+			\PressbooksBook\ArchiveBanner\display();
 		}
 		?>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
