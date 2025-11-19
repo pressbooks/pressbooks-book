@@ -167,6 +167,12 @@
 				</p>
 			</div>
 		<?php endif; ?>
+		<?php
+		// Display archive banner if book is archived
+		if ( function_exists( '\Pressbooks\Modules\ArchiveBanner\display_archive_banner' ) ) {
+			\Pressbooks\Modules\ArchiveBanner\display_archive_banner();
+		}
+		?>
 		<?php if ( ! is_front_page() && pb_get_first_post_id() ) { ?>
 			<div class="reading-header">
 				<nav aria-labelledby="book-toc" class="reading-header__inside">
