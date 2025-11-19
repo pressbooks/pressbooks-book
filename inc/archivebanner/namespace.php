@@ -11,12 +11,11 @@
 
 namespace PressbooksBook\ArchiveBanner;
 
-use Pressbooks\Container;
 use Pressbooks\DataCollector\Book;
 
 /**
  * Display the archive banner
- * 
+ *
  * Called directly from header.php
  * Styles are in assets/src/styles/layouts/_header.scss
  */
@@ -26,7 +25,7 @@ function display() {
 	}
 
 	$site_details = get_blog_details();
-	
+
 	if ( empty( $site_details->archived ) || '1' !== $site_details->archived ) {
 		return;
 	}
