@@ -556,6 +556,15 @@
   }
 }
 
+.block-related-materials__description {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--body-text);
+  opacity: 0.8;
+  margin-top: 0.25rem;
+  margin-left: 1.75rem;
+}
+
 .block-related-materials__badge {
   display: inline-block;
   font-size: 0.875rem;

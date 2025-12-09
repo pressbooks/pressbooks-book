@@ -1,9 +1,9 @@
 <?php
-if ( ! function_exists( '\Pressbooks\Metadata\get_related_materials' ) ) {
+if ( ! function_exists( '\Pressbooks\Metadata\get_supplemental_materials' ) ) {
 	return;
 }
 
-$related_materials = \Pressbooks\Metadata\get_related_materials();
+$related_materials = \Pressbooks\Metadata\get_supplemental_materials();
 
 if ( empty( $related_materials ) ) {
 	return;
@@ -11,7 +11,7 @@ if ( empty( $related_materials ) ) {
 ?>
 
 <section class="block block-related-materials block-toggle js-block">
-	<h2 class="block__title block-related-materials__title" id="block-related-materials-title"><?php _e( 'Ancillary Resources', 'pressbooks-book' ); ?></h2>
+	<h2 class="block__title block-related-materials__title" id="block-related-materials-title"><?php _e( 'Supplemental Materials', 'pressbooks-book' ); ?></h2>
 	<div class="block-related-materials__inner block-toggle__content" id="block-related-materials">
 		<div class="block-related-materials__inner__content">
 			<ul class="block-related-materials__list">
@@ -21,8 +21,11 @@ if ( empty( $related_materials ) ) {
 							<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 								<use href="#icon-link" />
 							</svg>
-							<?php echo esc_html( ! empty( $material['description'] ) ? $material['description'] : $material['url'] ); ?>
+							<?php echo esc_html( ! empty( $material['title'] ) ? $material['title'] : $material['url'] ); ?>
 						</a>
+						<?php if ( ! empty( $material['description'] ) ) : ?>
+							<span class="block-related-materials__description"><?php echo esc_html( $material['description'] ); ?></span>
+						<?php endif; ?>
 						<?php if ( $material['privacy'] === 'private' && is_user_logged_in() && current_user_can( 'edit_posts' ) ) : ?>
 							<span class="block-related-materials__badge block-related-materials__badge--private"><?php _e( '(Private)', 'pressbooks-book' ); ?></span>
 						<?php endif; ?>
@@ -32,11 +35,11 @@ if ( empty( $related_materials ) ) {
 		</div>
 		<?php
 		/**
-		 * Append content to cover related materials block.
+		 * Append content to cover supplemental materials block.
 		 *
 		 * @since 2.0.0
 		 */
-		do_action( 'pb_book_cover_after_related_materials' );
+		do_action( 'pb_book_cover_after_supplemental_materials' );
 		?>
 	</div>
 
