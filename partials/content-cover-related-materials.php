@@ -15,7 +15,7 @@ if ( empty( $related_materials ) ) {
 		<h2 class="block__title block-meta__title" id="block-supplemental-materials-title"><?php _e( 'Supplemental Materials', 'pressbooks-book' ); ?></h2>
 
 		<div class="block-meta__inner block-toggle__content" id="block-supplemental-materials">
-			<dl>
+			<dl class="supplemental-materials-list">
 				<?php foreach ( $related_materials as $material ) : ?>
 					<div class="block-meta__subsection">
 						<dt class="block__subtitle block-meta__subtitle">
