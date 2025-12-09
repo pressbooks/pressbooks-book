@@ -20,6 +20,7 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 						]
 					);
 					?>
+
 				</div><!-- .entry-content -->
 			</div><!-- #post-## -->
 <?php else : ?>

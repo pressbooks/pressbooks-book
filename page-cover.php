@@ -9,6 +9,7 @@ if ( \PressbooksBook\Helpers\is_book_public() ) {
 	include( locate_template( 'partials/content-cover-book-header.php' ) );
 	include( locate_template( 'partials/content-cover-toc.php' ) );
 	include( locate_template( 'partials/content-cover-book-info.php' ) );
+	include( locate_template( 'partials/content-cover-related-materials.php' ) );
 	include( locate_template( 'partials/content-cover-metadata.php' ) );
 } else { ?>
 	<section class="block private-block">
