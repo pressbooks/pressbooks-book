@@ -13,12 +13,12 @@ $formatted_date = $args['formatted_date'] ?? null;
 			<?php
 			printf(
 				/* translators: %s: The date when the book was archived */
-				esc_html__( 'This book was archived by its publisher on %s. It is now read-only.', 'pressbooks-book' ),
+				esc_html__( 'This book was archived by its publisher on %s. It is no longer being updated.', 'pressbooks-book' ),
 				'<strong>' . esc_html( $formatted_date ) . '</strong>'
 			);
 			?>
 		<?php else : ?>
-			<?php esc_html_e( 'This book was archived by its publisher. It is now read-only.', 'pressbooks-book' ); ?>
+			<?php esc_html_e( 'This book was archived by its publisher. It is no longer being updated.', 'pressbooks-book' ); ?>
 		<?php endif; ?>
 	</p>
 </div>
