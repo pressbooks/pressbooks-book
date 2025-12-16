@@ -40,6 +40,7 @@ if ( ! pb_meets_minimum_requirements() ) {
 
 $includes = [
 	'actions',
+	'archivebanner',
 	'filters',
 	'helpers',
 ];
