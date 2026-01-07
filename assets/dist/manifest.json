@@ -1,0 +1,41 @@
+{
+  "assets/legacy/styles/web-house-style.scss": {
+    "file": "assets/styles/web-house-style-BivVdyQ6.css",
+    "src": "assets/legacy/styles/web-house-style.scss",
+    "isEntry": true,
+    "name": "styles/web-house-style",
+    "names": [
+      "styles/web-house-style.css"
+    ]
+  },
+  "assets/src/scripts/book.js": {
+    "file": "assets/scripts/book-gnGWqMq8.js",
+    "name": "scripts/book",
+    "src": "assets/src/scripts/book.js",
+    "isEntry": true,
+    "css": [
+      "assets/book-CajbrdaT.css"
+    ]
+  },
+  "assets/src/scripts/collapse-sections.js": {
+    "file": "assets/scripts/collapse-sections-B1VjnOqh.js",
+    "name": "scripts/collapse-sections",
+    "src": "assets/src/scripts/collapse-sections.js",
+    "isEntry": true
+  },
+  "assets/src/scripts/lightbox.js": {
+    "file": "assets/scripts/lightbox-D3nC7JQY.js",
+    "name": "scripts/lightbox",
+    "src": "assets/src/scripts/lightbox.js",
+    "isEntry": true,
+    "css": [
+      "assets/lightbox-CEgUYVzJ.css"
+    ]
+  },
+  "assets/src/scripts/pane.js": {
+    "file": "assets/scripts/pane-BNmizoFB.js",
+    "name": "scripts/pane",
+    "src": "assets/src/scripts/pane.js",
+    "isEntry": true
+  }
+}

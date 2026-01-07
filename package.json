@@ -1,6 +1,7 @@
 {
 	"name": "@pressbooks/pressbooks-book",
-	"description": "This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
+	"type": "module",
+	"description": "This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase 'the medium is the message.' It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
 	"author": "Pressbooks (Book Oven Inc.)",
 	"license": "GPL-3.0-or-later",
 	"engines": {
@@ -19,25 +20,22 @@
 		"spinkit": "^2.0.1"
 	},
 	"devDependencies": {
-		"npm-run-all": "^4.1.5",
-		"pressbooks-build-tools": "^4.0.0",
-		"recursive-copy-cli": "^1.0.20"
+		"pressbooks-build-tools": "^5.0.0",
+		"vite-plugin-static-copy": "^3.0.0"
 	},
 	"scripts": {
-		"build": "mix --production",
-		"lint:scripts": "eslint \"assets/src/scripts/**/*.js\"",
-		"lint:styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\"",
-		"fix-styles": "stylelint \"assets/src/styles/**/*.scss\" \"assets/styles/**/*.scss\" --fix",
-		"fix-scripts": "eslint \"assets/src/scripts/**/*.js\" --fix",
-		"lint": "run-s lint:*",
-		"production": "mix --production",
-		"rmdist": "rimraf dist",
-		"start": "mix watch",
-		"test": "npm run lint",
+		"build": "pressbooks-build-tools build",
+		"watch": "pressbooks-build-tools dev",
+		"lint": "npm run lint:scripts && npm run lint:styles",
+		"lint:scripts": "pressbooks-build-tools lint:scripts 'assets/src/scripts/**/*.js'",
+		"lint:styles": "pressbooks-build-tools lint:styles 'assets/src/styles/**/*.scss' 'assets/styles/**/*.scss'",
+		"fix": "npm run fix:scripts && npm run fix:styles",
+		"fix:scripts": "pressbooks-build-tools fix:scripts 'assets/src/scripts/**/*.js'",
+		"fix:styles": "pressbooks-build-tools fix:styles 'assets/src/styles/**/*.scss' 'assets/styles/**/*.scss'",
 		"postinstall": "npx recursive-copy-cli node_modules/buckram packages/buckram -w"
 	},
 	"eslintConfig": {
-		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js",
+		"extends": "./node_modules/pressbooks-build-tools/config/eslint.cjs",
 		"rules": {
 			"jsdoc/require-param-description": "off",
 			"jsdoc/require-param-type": "off",
