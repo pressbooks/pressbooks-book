@@ -15,7 +15,28 @@ if ( ! file_exists( $_tests_dir . '/includes/functions.php' ) ) {
 }
 
 // Define WP_CONTENT_DIR so frontend-tools Assets class can find manifest
-define( 'WP_CONTENT_DIR', dirname( __DIR__, 3 ) );
+// Assets class uses: WP_CONTENT_DIR . '/themes/{slug}' to locate theme assets
+// We need to set this so the path resolves correctly for both local and CI environments
+$theme_dir = dirname( __DIR__ );
+$theme_slug = basename( $theme_dir );
+$themes_dir = dirname( $theme_dir );
+
+// Check if we're already in a proper 'themes' directory structure
+if ( basename( $themes_dir ) === 'themes' ) {
+	// Standard structure: /path/to/themes/pressbooks-book
+	define( 'WP_CONTENT_DIR', dirname( $themes_dir ) );
+} else {
+	// CI structure: Theme not in a 'themes' folder - create symlink
+	$fake_themes_dir = dirname( $themes_dir ) . '/themes';
+	if ( ! is_dir( $fake_themes_dir ) ) {
+		mkdir( $fake_themes_dir, 0755, true );
+	}
+	$symlink_path = $fake_themes_dir . '/' . $theme_slug;
+	if ( ! file_exists( $symlink_path ) ) {
+		symlink( $theme_dir, $symlink_path );
+	}
+	define( 'WP_CONTENT_DIR', dirname( $fake_themes_dir ) );
+}
 
 // Give access to tests_add_filter() function.
 require_once $_tests_dir . '/includes/functions.php';
