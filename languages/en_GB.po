@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.28.0\n"
+"Project-Id-Version: McLuhan 2.29.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
+"POT-Creation-Date: 2025-07-29T16:03:58+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Steel Wagstaff <steel@pressbooks.com>, 2021\n"
 "Language-Team: English (United Kingdom) (https://app.transifex.com/pressbooks/teams/9194/en_GB/)\n"
@@ -88,7 +88,7 @@ msgstr "Submit"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:124 header.php:131 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:128 header.php:135 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
 #, php-format
 msgid "Logo for %s"
@@ -137,40 +137,40 @@ msgstr "Cannot find Pressbooks install."
 msgid "Cover image for "
 msgstr ""
 
-#: header.php:107
+#: header.php:109
 msgid "Skip to content"
 msgstr "Skip to content"
 
-#: header.php:145
+#: header.php:149
 msgid "Primary Navigation"
 msgstr ""
 
-#: header.php:156
+#: header.php:160
 #, php-format
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr ""
 
-#: header.php:156
+#: header.php:160
 msgid "Learn more"
 msgstr ""
 
-#: header.php:168 partials/content-cover-toc.php:9
+#: header.php:172 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr ""
 
-#: header.php:171 index.php:14 partials/content-cover-toc.php:3
+#: header.php:175 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Contents"
 
 #. translators: %s: the title of the book
-#: header.php:180
+#: header.php:184
 #, php-format
 msgid "Go to the cover page of %s"
 msgstr "Go to the cover page of %s"
 
-#: header.php:184 inc/helpers/namespace.php:277
+#: header.php:188 inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "Buy"
 
@@ -295,7 +295,7 @@ msgstr[0] "Contributor"
 msgstr[1] "Contributors"
 
 #: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
-#: partials/content-cover-book-info.php:73 single.php:33
+#: partials/content-cover-book-info.php:73 single.php:53
 msgid "License"
 msgstr "Licence"
 
@@ -333,7 +333,7 @@ msgstr ""
 msgid "Publication Date"
 msgstr "Publication Date"
 
-#: inc/helpers/namespace.php:502 single.php:41
+#: inc/helpers/namespace.php:502 single.php:61
 msgid "Digital Object Identifier (DOI)"
 msgstr "Digital Object Identifier (DOI)"
 
@@ -483,8 +483,8 @@ msgstr ""
 msgid "Hide activity"
 msgstr "Hide activity"
 
-#: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:2
+#: page.php:13 partials/content-single-legacy.php:71
+#: partials/content-single.php:3
 msgid "Edit"
 msgstr "Edit"
 
@@ -605,15 +605,15 @@ msgstr ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:49
+#: partials/content-single-legacy.php:41 partials/content-single.php:51
 msgid "Previous Page"
 msgstr "Previous Page"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:60
+#: partials/content-single-legacy.php:52 partials/content-single.php:62
 msgid "Next Page"
 msgstr "Next Page"
 
-#: partials/content-single.php:78
+#: partials/content-single.php:80
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] ""
@@ -667,6 +667,6 @@ msgstr "Search in book &hellip;"
 msgid "Search"
 msgstr "Search"
 
-#: single.php:57
+#: single.php:77
 msgid "Share This Book"
 msgstr "Share This Book"
