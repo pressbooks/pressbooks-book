@@ -9,6 +9,97 @@ export default {
 		document.body.classList.add( 'js' );
 
 		/**
+		 * Accessibility: New Window/Tab Warnings
+		 * Adds visual and screen reader warnings for links that open in a new window/tab
+		 */
+		( function () {
+			// Check if pbAccessibility is defined
+			if ( typeof pbAccessibility === 'undefined' ) {
+				return;
+			}
+
+			// Track processed links
+			const processedLinks = new WeakSet();
+
+			/**
+			 * Process all unprocessed links with target="_blank"
+			 */
+			function processLinks() {
+				const links = document.querySelectorAll( 'a[target="_blank"]' );
+
+				links.forEach( ( link ) => {
+					if ( processedLinks.has( link ) ) {
+						return;
+					}
+
+					addAccessibilityFeatures( link );
+					processedLinks.add( link );
+				} );
+			}
+
+			/**
+			 * Add accessibility features to a link
+			 */
+			function addAccessibilityFeatures( link ) {
+				// Add visual icon
+				addVisualIcon( link );
+
+				// Add/update aria-label
+				updateAriaLabel( link );
+			}
+
+			/**
+			 * Add visual icon to indicate new window
+			 */
+			function addVisualIcon( link ) {
+				const icon = document.createElement( 'span' );
+				icon.classList.add( 'pb-external-link-icon' );
+				icon.setAttribute( 'aria-hidden', 'true' );
+				link.appendChild( icon );
+			}
+
+			/**
+			 * Update aria-label to include new window warning
+			 */
+			function updateAriaLabel( link ) {
+				let labelText = '';
+
+				// Get existing label text
+				if ( link.hasAttribute( 'aria-label' ) ) {
+					labelText = link.getAttribute( 'aria-label' );
+				} else if ( link.querySelector( 'img' ) ) {
+					labelText = link.querySelector( 'img' ).getAttribute( 'alt' ) || '';
+				} else if ( link.textContent ) {
+					labelText = link.textContent.trim();
+				}
+
+				// Append new window warning
+				const newLabel = labelText
+					? `${ labelText }, ${ pbAccessibility.opensNewWindow }`
+					: pbAccessibility.opensNewWindow;
+
+				link.setAttribute( 'aria-label', newLabel );
+			}
+
+			// Initialize on load
+			if ( document.readyState === 'loading' ) {
+				document.addEventListener( 'DOMContentLoaded', processLinks );
+			} else {
+				processLinks();
+			}
+
+			// Handle dynamically added content (e.g., from AJAX)
+			const observer = new MutationObserver( () => {
+				processLinks();
+			} );
+
+			observer.observe( document.body, {
+				childList: true,
+				subtree: true,
+			} );
+		} )();
+
+		/**
 		 * getCookie Value
 		 *
 		 * @param name
