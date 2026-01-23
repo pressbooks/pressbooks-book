@@ -13,6 +13,7 @@ export default {
 		 * Adds visual and screen reader warnings for links that open in a new window/tab
 		 */
 		( function () {
+			/* global pbAccessibility */
 			// Check if pbAccessibility is defined
 			if ( typeof pbAccessibility === 'undefined' ) {
 				return;
@@ -27,7 +28,7 @@ export default {
 			function processLinks() {
 				const links = document.querySelectorAll( 'a[target="_blank"]' );
 
-				links.forEach( ( link ) => {
+				links.forEach( link => {
 					if ( processedLinks.has( link ) ) {
 						return;
 					}
@@ -39,6 +40,8 @@ export default {
 
 			/**
 			 * Add accessibility features to a link
+			 *
+			 * @param link
 			 */
 			function addAccessibilityFeatures( link ) {
 				// Add visual icon
@@ -50,6 +53,8 @@ export default {
 
 			/**
 			 * Add visual icon to indicate new window
+			 *
+			 * @param link
 			 */
 			function addVisualIcon( link ) {
 				const icon = document.createElement( 'span' );
@@ -60,6 +65,8 @@ export default {
 
 			/**
 			 * Update aria-label to include new window warning
+			 *
+			 * @param link
 			 */
 			function updateAriaLabel( link ) {
 				let labelText = '';
