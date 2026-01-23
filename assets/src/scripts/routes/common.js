@@ -82,7 +82,7 @@ export default {
 
 				// Append new window warning
 				const newLabel = labelText
-					? `${ labelText }, ${ pbAccessibility.opensNewWindow }`
+					? `${ labelText } (${ pbAccessibility.opensNewWindow })`
 					: pbAccessibility.opensNewWindow;
 
 				link.setAttribute( 'aria-label', newLabel );
