@@ -47,8 +47,8 @@ export default {
 				// Add visual icon
 				addVisualIcon( link );
 
-				// Add/update aria-label
-				updateAriaLabel( link );
+				// Add screen reader text
+				addScreenReaderText( link );
 			}
 
 			/**
@@ -64,28 +64,15 @@ export default {
 			}
 
 			/**
-			 * Update aria-label to include new window warning
+			 * Add screen reader text for new window warning
 			 *
 			 * @param link
 			 */
-			function updateAriaLabel( link ) {
-				let labelText = '';
-
-				// Get existing label text
-				if ( link.hasAttribute( 'aria-label' ) ) {
-					labelText = link.getAttribute( 'aria-label' );
-				} else if ( link.querySelector( 'img' ) ) {
-					labelText = link.querySelector( 'img' ).getAttribute( 'alt' ) || '';
-				} else if ( link.textContent ) {
-					labelText = link.textContent.trim();
-				}
-
-				// Append new window warning
-				const newLabel = labelText
-					? `${ labelText } (${ pbAccessibility.opensNewWindow })`
-					: pbAccessibility.opensNewWindow;
-
-				link.setAttribute( 'aria-label', newLabel );
+			function addScreenReaderText( link ) {
+				const srText = document.createElement( 'span' );
+				srText.classList.add( 'screen-reader-text' );
+				srText.textContent = `(${ pbAccessibility.opensNewWindow })`;
+				link.appendChild( srText );
 			}
 
 			// Initialize on load
