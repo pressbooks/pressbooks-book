@@ -532,7 +532,7 @@ msgstr "Sous-titre"
 
 #: partials/content-cover-book-header.php:17
 msgid "by "
-msgstr "par"
+msgstr "par "
 
 #: partials/content-cover-book-header.php:20
 msgid "Edited by "
