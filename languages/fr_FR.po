@@ -540,7 +540,7 @@ msgstr "Sous la direction de"
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
-msgstr "Traduit par"
+msgstr "Traduit par "
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:32
