@@ -13,8 +13,7 @@ if ( have_posts() ) {
 	while ( have_posts() ) :
 		the_post();
 		get_header();
-		$initial_content_only = isset( $_GET['content_only'] ) && $_GET['content_only'];
-		$display_content_only = apply_filters( 'pb_content_only', $initial_content_only );
+		$display_content_only = apply_filters( 'pb_content_only', false );
 		if ( is_book_public() ) :
 			$web_options  = get_option( 'pressbooks_theme_options_web' );
 			$number       = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
