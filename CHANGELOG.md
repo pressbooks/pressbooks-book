@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.31.1](https://github.com/pressbooks/pressbooks-book/compare/2.31.0...2.31.1) (2026-01-20)
+
+
+### Chores
+
+* **i18n:** update translations and revert transifex setup ([#1397](https://github.com/pressbooks/pressbooks-book/issues/1397)) ([b1cdb5e](https://github.com/pressbooks/pressbooks-book/commit/b1cdb5e8815e64ca61c156915a3241ab80443730))
+
+## [2.31.0](https://github.com/pressbooks/pressbooks-book/compare/2.30.3...2.31.0) (2025-12-16)
+
+
+### Features
+
+* archive books ([#1389](https://github.com/pressbooks/pressbooks-book/issues/1389)) ([c703e67](https://github.com/pressbooks/pressbooks-book/commit/c703e67e99f603cd70ea19359851a6efa40f8038))
+* remove .po generation workflow and tx files ([#1390](https://github.com/pressbooks/pressbooks-book/issues/1390)) ([e5dcfa4](https://github.com/pressbooks/pressbooks-book/commit/e5dcfa4b9427e32815620baed6495edc0e1632ab))
+
+
+### Bug Fixes
+
+* use book title as og:title for home page ([#1383](https://github.com/pressbooks/pressbooks-book/issues/1383)) ([961511f](https://github.com/pressbooks/pressbooks-book/commit/961511f1316e1a0a09df505e1fa2460fef51bf0d))
+
 ## [2.30.3](https://github.com/pressbooks/pressbooks-book/compare/2.30.2...2.30.3) (2025-10-06)
 
 
