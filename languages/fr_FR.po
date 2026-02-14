@@ -10,15 +10,15 @@
 # Thomas Weideman, 2021
 # Steel Wagstaff <steel@pressbooks.com>, 2023
 # Felipe Dalcin, 2024
-# Mich Spieler, 2025
+# Mich Spieler, 2026
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.28.0\n"
+"Project-Id-Version: McLuhan 2.29.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
+"POT-Creation-Date: 2025-07-29T16:03:58+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: Mich Spieler, 2025\n"
+"Last-Translator: Mich Spieler, 2026\n"
 "Language-Team: French (https://app.transifex.com/pressbooks/teams/9194/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,7 +101,7 @@ msgstr "Soumettre"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:124 header.php:131 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:128 header.php:135 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
 #, php-format
 msgid "Logo for %s"
@@ -115,7 +115,7 @@ msgstr "Propulsé par %s"
 
 #: footer.php:70
 msgid "Pressbooks User Guide"
-msgstr ""
+msgstr "Guide d'utilisation Pressbooks"
 
 #: footer.php:71
 msgid "Pressbooks Directory"
@@ -149,17 +149,17 @@ msgstr "Erreur lors de ld&rsquo;installation de Pressbooks."
 
 #: header.php:16
 msgid "Cover image for "
-msgstr ""
+msgstr "Image de couverture de "
 
-#: header.php:107
+#: header.php:109
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: header.php:145
+#: header.php:149
 msgid "Primary Navigation"
 msgstr "Navigation Principale"
 
-#: header.php:156
+#: header.php:160
 #, php-format
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
@@ -168,25 +168,25 @@ msgstr ""
 "Voulez-vous créer ou adapter des livres comme celui-ci ? %s comment "
 "Pressbooks soutient les pratiques d'édition ouverte."
 
-#: header.php:156
+#: header.php:160
 msgid "Learn more"
 msgstr "En savoir plus"
 
-#: header.php:168 partials/content-cover-toc.php:9
+#: header.php:172 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr "Contenu du livre Navigation"
 
-#: header.php:171 index.php:14 partials/content-cover-toc.php:3
+#: header.php:175 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "Table des matières"
 
 #. translators: %s: the title of the book
-#: header.php:180
+#: header.php:184
 #, php-format
 msgid "Go to the cover page of %s"
 msgstr "Aller à la page couverture de %s"
 
-#: header.php:184 inc/helpers/namespace.php:277
+#: header.php:188 inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "Acheter"
 
@@ -321,7 +321,7 @@ msgstr[1] "Collaborateurs"
 msgstr[2] "Collaborateurs"
 
 #: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
-#: partials/content-cover-book-info.php:73 single.php:33
+#: partials/content-cover-book-info.php:73 single.php:53
 msgid "License"
 msgstr "Licence"
 
@@ -342,11 +342,11 @@ msgstr[2] "Institutions"
 
 #: inc/helpers/namespace.php:497
 msgid "Series Title"
-msgstr ""
+msgstr "Titre de la série"
 
 #: inc/helpers/namespace.php:498
 msgid "Series Number"
-msgstr ""
+msgstr "Numéro dans la série"
 
 #: inc/helpers/namespace.php:499
 msgid "Publisher"
@@ -360,7 +360,7 @@ msgstr "Ville de l’éditeur"
 msgid "Publication Date"
 msgstr "Date de publication"
 
-#: inc/helpers/namespace.php:502 single.php:41
+#: inc/helpers/namespace.php:502 single.php:61
 msgid "Digital Object Identifier (DOI)"
 msgstr "Identificateur d&rsquo;objets numériques (DOI)"
 
@@ -491,7 +491,7 @@ msgstr "L'activité H5P demandée n'existe pas dans ce livre."
 
 #: page-h5p-listing.php:38
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
 msgid "Title"
@@ -513,8 +513,8 @@ msgstr "Afficher l'activité"
 msgid "Hide activity"
 msgstr "Masquer l'activité"
 
-#: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:2
+#: page.php:13 partials/content-single-legacy.php:71
+#: partials/content-single.php:3
 msgid "Edit"
 msgstr "Modifier"
 
@@ -532,15 +532,15 @@ msgstr "Sous-titre"
 
 #: partials/content-cover-book-header.php:17
 msgid "by "
-msgstr ""
+msgstr "par"
 
 #: partials/content-cover-book-header.php:20
 msgid "Edited by "
-msgstr ""
+msgstr "Sous la direction de"
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
-msgstr ""
+msgstr "Traduit par"
 
 #. translators: %s: title of book
 #: partials/content-cover-book-header.php:32
@@ -636,15 +636,15 @@ msgstr ""
 "Désolé, votre recherche n&rsquo;a donné aucun résultat. Veuillez réessayer "
 "avec des mots-clés différents."
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:49
+#: partials/content-single-legacy.php:41 partials/content-single.php:51
 msgid "Previous Page"
 msgstr "Page précédente"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:60
+#: partials/content-single-legacy.php:52 partials/content-single.php:62
 msgid "Next Page"
 msgstr "Page suivante"
 
-#: partials/content-single.php:78
+#: partials/content-single.php:80
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] "À propos de l'auteur"
@@ -702,6 +702,6 @@ msgstr "Rechercher dans le livre &hellip;"
 msgid "Search"
 msgstr "Chercher"
 
-#: single.php:57
+#: single.php:77
 msgid "Share This Book"
 msgstr "Partagez ce livre"

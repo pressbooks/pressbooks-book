@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.28.0\n"
+"Project-Id-Version: McLuhan 2.29.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2025-07-22T18:34:39+00:00\n"
+"POT-Creation-Date: 2025-07-29T16:03:58+00:00\n"
 "PO-Revision-Date: 2017-06-22 17:45+0000\n"
 "Last-Translator: Eduardo Vera, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/pressbooks/teams/9194/ja/)\n"
@@ -85,7 +85,7 @@ msgstr "送信"
 
 #. translators: %s: name of network
 #. translators: %s: name of organization
-#: footer.php:60 header.php:124 header.php:131 page-buy.php:28 page-buy.php:38
+#: footer.php:60 header.php:128 header.php:135 page-buy.php:28 page-buy.php:38
 #: page-buy.php:48 page-buy.php:58 page-buy.php:68
 #, php-format
 msgid "Logo for %s"
@@ -133,40 +133,40 @@ msgstr "Pressbooks のインストールが見つかりません。"
 msgid "Cover image for "
 msgstr "表紙画像 — "
 
-#: header.php:107
+#: header.php:109
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: header.php:145
+#: header.php:149
 msgid "Primary Navigation"
 msgstr "メインナビゲーション"
 
-#: header.php:156
+#: header.php:160
 #, php-format
 msgid ""
 "Want to create or adapt books like this? %s about how Pressbooks supports "
 "open publishing practices."
 msgstr "このような本を作成または翻案しますか ? Pressbooks がオープン出版慣行をサポートする方法の詳細を %s。"
 
-#: header.php:156
+#: header.php:160
 msgid "Learn more"
 msgstr "さらに詳しく"
 
-#: header.php:168 partials/content-cover-toc.php:9
+#: header.php:172 partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr "本コンテンツナビゲーション"
 
-#: header.php:171 index.php:14 partials/content-cover-toc.php:3
+#: header.php:175 index.php:14 partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "コンテンツ"
 
 #. translators: %s: the title of the book
-#: header.php:180
+#: header.php:184
 #, php-format
 msgid "Go to the cover page of %s"
 msgstr "「%s」の表紙ページへ移動"
 
-#: header.php:184 inc/helpers/namespace.php:277
+#: header.php:188 inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "購入"
 
@@ -285,7 +285,7 @@ msgid_plural "Contributors"
 msgstr[0] "寄稿者"
 
 #: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
-#: partials/content-cover-book-info.php:73 single.php:33
+#: partials/content-cover-book-info.php:73 single.php:53
 msgid "License"
 msgstr "ライセンス"
 
@@ -322,7 +322,7 @@ msgstr "出版社の都市"
 msgid "Publication Date"
 msgstr "刊行日付"
 
-#: inc/helpers/namespace.php:502 single.php:41
+#: inc/helpers/namespace.php:502 single.php:61
 msgid "Digital Object Identifier (DOI)"
 msgstr "デジタルオブジェクト識別子 (DOI)"
 
@@ -471,8 +471,8 @@ msgstr "アクティビティを表示"
 msgid "Hide activity"
 msgstr "アクティビティを非表示"
 
-#: page.php:13 partials/content-single-legacy.php:69
-#: partials/content-single.php:2
+#: page.php:13 partials/content-single-legacy.php:71
+#: partials/content-single.php:3
 msgid "Edit"
 msgstr "編集"
 
@@ -589,15 +589,15 @@ msgid ""
 "different keywords."
 msgstr "検索キーワードに一致するものが見つかりませんでした。別のキーワードでもう一度お試しください。"
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:49
+#: partials/content-single-legacy.php:41 partials/content-single.php:51
 msgid "Previous Page"
 msgstr "前のページ"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:60
+#: partials/content-single-legacy.php:52 partials/content-single.php:62
 msgid "Next Page"
 msgstr "次のページ"
 
-#: partials/content-single.php:78
+#: partials/content-single.php:80
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] "著者について"
@@ -651,6 +651,6 @@ msgstr "本内で検索…"
 msgid "Search"
 msgstr "検索"
 
-#: single.php:57
+#: single.php:77
 msgid "Share This Book"
 msgstr "この本を共有"

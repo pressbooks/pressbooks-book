@@ -51,6 +51,26 @@ button.header__nav-icon {
   }
 }
 
+// Archive Banner
+.pb-archive-banner {
+	background-color: #f2c744;
+	padding: 0.75rem 2rem;
+	text-align: center;
+
+	p {
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	@media print {
+		display: none;
+	}
+}
+
 .reading-header {
   --header-bg: var(--body-text);
   --header-color: var(--body-bg);
