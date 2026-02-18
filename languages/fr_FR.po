@@ -536,7 +536,7 @@ msgstr "par "
 
 #: partials/content-cover-book-header.php:20
 msgid "Edited by "
-msgstr "Sous la direction de"
+msgstr "Sous la direction de "
 
 #: partials/content-cover-book-header.php:23
 msgid "Translated by "
