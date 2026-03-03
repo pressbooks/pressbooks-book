@@ -7,7 +7,7 @@
 
 [![Packagist](https://img.shields.io/packagist/dt/pressbooks/pressbooks-book.svg)](https://packagist.org/packages/pressbooks/pressbooks-book)
 [![codecov](https://codecov.io/gh/pressbooks/pressbooks-book/branch/dev/graph/badge.svg)](https://codecov.io/gh/pressbooks/pressbooks-book/branch/dev)
-[![Translate McLuhan](https://img.shields.io/badge/dynamic/json.svg?label=translated&url=https%3A%2F%2Ftenpercent.now.sh%2F%3Forganization%3Dpressbooks%26project%3Dpressbooks-book&query=%24.status&colorB=e05d44&suffix=%25)](https://www.transifex.com/pressbooks/pressbooks-book/translate/)
+[![Translate McLuhan](https://badges.crowdin.net/e/pressbooks-book/localized.svg)](https://crowdin.com/project/pressbooks-book)
 
 
 This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora. McLuhan is the default book theme for Pressbooks.

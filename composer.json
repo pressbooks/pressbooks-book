@@ -20,7 +20,7 @@
 		"yoast/phpunit-polyfills": "^1.1"
 	},
 	"archive": {
-		"exclude": [".github", ".tx", "bin"]
+		"exclude": [".github", "bin"]
 	},
 	"license": "GPL-3.0-or-later",
 	"authors": [

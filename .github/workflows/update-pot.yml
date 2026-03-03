@@ -2,7 +2,7 @@ name: Update POT file 🌐
 
 on:
   push:
-    branches: [dev]
+    branches: [translation-workflow-test]
     paths:
       - "**/*.php"
       - "**/*.js"
