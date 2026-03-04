@@ -312,7 +312,7 @@ function register_h5p_listing_page() {
 	global $wpdb;
 
 	$post_name = 'h5p-listing';
-	$post_title = __( 'H5P listing', 'pressbooks' );
+	$post_title = __( 'H5P listing', 'pressbooks-book' );
 	$post_type = 'page';
 	$user_id = 1;
 
@@ -325,7 +325,7 @@ function register_h5p_listing_page() {
 		'ping_status' => 'closed',
 		'post_content' => '<!-- Here be dragons. -->',
 		'post_author' => $user_id,
-		'tags_input' => __( 'Default Data', 'pressbooks' ),
+		'tags_input' => __( 'Default Data', 'pressbooks-book' ),
 	];
 
 	$exists = $wpdb->get_var(
