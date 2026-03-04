@@ -22,6 +22,7 @@ on:
 
 jobs:
   upload-sources:
+    name: Upload Sources
     if: github.event_name == 'push'
     uses: pressbooks/reusable-workflows/.github/workflows/crowdin.yml@crowdin
     with:
@@ -32,6 +33,7 @@ jobs:
     secrets: inherit
 
   download-translations:
+    name: Pull Translations
     if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'download')
     uses: pressbooks/reusable-workflows/.github/workflows/crowdin.yml@crowdin
     with:
@@ -43,6 +45,7 @@ jobs:
     secrets: inherit
 
   seed-translations:
+    name: Seed Translations
     if: github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'seed'
     uses: pressbooks/reusable-workflows/.github/workflows/crowdin.yml@crowdin
     with:
