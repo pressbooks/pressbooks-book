@@ -1,11 +1,10 @@
 "project_id_env": "CROWDIN_OPEN_PROJECT_ID"
 "api_token_env": "CROWDIN_API_SECRET"
-"pull_request_title": "chore(l10n): Translations updates"
+"pull_request_title": "chore(l10n): update languages"
 "preserve_hierarchy": true
 "files": [
   {
     "source": "/languages/pressbooks-book.pot",
-    "dest": "/languages/pressbooks-book.pot",
     "translation": "/languages/%locale_with_underscore%.po",
     "languages_mapping": {
       "locale_with_underscore": {
