@@ -9,12 +9,12 @@
     ]
   },
   "assets/src/scripts/book.js": {
-    "file": "assets/scripts/book-gnGWqMq8.js",
+    "file": "assets/scripts/book-Do6ZVJvD.js",
     "name": "scripts/book",
     "src": "assets/src/scripts/book.js",
     "isEntry": true,
     "css": [
-      "assets/book-CajbrdaT.css"
+      "assets/book-CKItm0Ji.css"
     ]
   },
   "assets/src/scripts/collapse-sections.js": {
@@ -24,7 +24,7 @@
     "isEntry": true
   },
   "assets/src/scripts/lightbox.js": {
-    "file": "assets/scripts/lightbox-D3nC7JQY.js",
+    "file": "assets/scripts/lightbox-DqegKR3j.js",
     "name": "scripts/lightbox",
     "src": "assets/src/scripts/lightbox.js",
     "isEntry": true,

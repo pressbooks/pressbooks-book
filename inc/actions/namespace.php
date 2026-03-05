@@ -2,7 +2,6 @@
 
 namespace PressbooksBook\Actions;
 
-use function \PressbooksBook\Helpers\social_media_enabled;
 use PressbooksFrontendTools\Assets;
 use PressbooksFrontendTools\AssetType;
 use Pressbooks\Container;
