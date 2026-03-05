@@ -72,6 +72,14 @@ function enqueue_assets() {
 		]
 	);
 
+	wp_localize_script(
+		'pressbooks/book',
+		'pbAccessibility',
+		[
+			'opensNewWindow' => __( 'opens in new tab', 'pressbooks-book' ),
+		]
+	);
+
 	if ( pb_is_custom_theme() ) { // Custom CSS is no longer supported.
 		$styles   = Container::get( 'Styles' );
 		$sass     = Container::get( 'Sass' );

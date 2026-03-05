@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.31.1](https://github.com/pressbooks/pressbooks-book/compare/2.31.0...2.31.1) (2026-01-20)
+
+
+### Chores
+
+* **i18n:** update translations and revert transifex setup ([#1397](https://github.com/pressbooks/pressbooks-book/issues/1397)) ([b1cdb5e](https://github.com/pressbooks/pressbooks-book/commit/b1cdb5e8815e64ca61c156915a3241ab80443730))
+
 ## [2.31.0](https://github.com/pressbooks/pressbooks-book/compare/2.30.3...2.31.0) (2025-12-16)
 
 

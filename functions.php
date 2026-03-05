@@ -49,6 +49,14 @@ foreach ( $includes as $include ) {
 	require get_template_directory() . "/inc/$include/namespace.php";
 }
 
+// Enable content-only mode via query parameter for external services (e.g., link checkers)
+add_filter( 'pb_content_only', function ( $content_only ) {
+	if ( isset( $_GET['content_only'] ) && $_GET['content_only'] ) {
+		return true;
+	}
+	return $content_only;
+} );
+
 add_action( 'init', '\PressbooksBook\Actions\register_h5p_listing_page' );
 add_action( 'wp_enqueue_scripts', '\PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files' );
 add_action( 'pb_cache_delete', '\PressbooksBook\Actions\delete_cached_contents' );
