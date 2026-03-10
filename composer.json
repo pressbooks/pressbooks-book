@@ -10,7 +10,7 @@
 		}
 	},
 	"require": {
-		"php": "^8.1",
+		"php": "^8.3",
 		"composer/installers": "^2",
 		"pressbooks/frontend-tools": "^1.0",
 		"phpcompatibility/php-compatibility": "^9.3"
@@ -35,21 +35,21 @@
       "nonfiction",
       "textbook"
   ],
-	"scripts": {
-		"test": [
-			"vendor/bin/phpunit --configuration phpunit.xml"
-		],
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit --configuration phpunit.xml"
+    ],
     "test-coverage": [
       "vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml --coverage-html=./coverage-reports"
     ],
-		"standards": [
-			"vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
-		],
+    "standards": [
+      "vendor/bin/phpcs --standard=phpcs.ruleset.xml inc partials *.php"
+    ],
     "fix": [
       "vendor/bin/phpcbf --standard=phpcs.ruleset.xml inc partials *.php"
     ],
-		"localize": [
-			"wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
-		]
-	}
+    "localize": [
+      "wp-pot -o=languages/pressbooks-book.pot -d=pressbooks-book -t 'Pressbooks (Book Oven Inc.) <code@pressbooks.com>' -s '*.php'"
+    ]
+  }
 }

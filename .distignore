@@ -8,7 +8,7 @@ tests
 .github
 .gitignore
 .travis.yml
-.tx
+crowdin.yml
 packages/aetna
 packages/buckram/tests
 phpcs.ruleset.xml
