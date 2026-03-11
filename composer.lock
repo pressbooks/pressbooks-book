@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74328bd1179365ce5ece90ada4b72d8a",
+    "content-hash": "da134f7bff2074e8a2ec046d30d26562",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,6 +153,45 @@
             "time": "2024-06-24T20:46:46+00:00"
         },
         {
+            "name": "kucrut/vite-for-wp",
+            "version": "v0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kucrut/vite-for-wp.git",
+                "reference": "45ec51bbaedbc4e7335db3b3d4a4923962634fea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kucrut/vite-for-wp/zipball/45ec51bbaedbc4e7335db3b3d4a4923962634fea",
+                "reference": "45ec51bbaedbc4e7335db3b3d4a4923962634fea",
+                "shasum": ""
+            },
+            "require-dev": {
+                "wp-coding-standards/wpcs": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "vite-for-wp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Dzikri Aziz"
+                }
+            ],
+            "description": "Vite integration for WordPress plugins and themes development.",
+            "support": {
+                "issues": "https://github.com/kucrut/vite-for-wp/issues",
+                "source": "https://github.com/kucrut/vite-for-wp/tree/v0.12.0"
+            },
+            "time": "2025-06-26T03:15:40+00:00"
+        },
+        {
             "name": "phpcompatibility/php-compatibility",
             "version": "9.3.5",
             "source": {
@@ -215,26 +254,29 @@
             "time": "2019-12-27T09:44:58+00:00"
         },
         {
-            "name": "pressbooks/mix",
-            "version": "2.1.3",
+            "name": "pressbooks/frontend-tools",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pressbooks/mix.git",
-                "reference": "25aaa7691cf78917ff2b037260596cdcf7a8c8c7"
+                "url": "https://github.com/pressbooks/frontend-tools.git",
+                "reference": "4d69c650715526793b5da5ebdd9175392fb5b7ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pressbooks/mix/zipball/25aaa7691cf78917ff2b037260596cdcf7a8c8c7",
-                "reference": "25aaa7691cf78917ff2b037260596cdcf7a8c8c7",
+                "url": "https://api.github.com/repos/pressbooks/frontend-tools/zipball/4d69c650715526793b5da5ebdd9175392fb5b7ac",
+                "reference": "4d69c650715526793b5da5ebdd9175392fb5b7ac",
                 "shasum": ""
             },
+            "require": {
+                "kucrut/vite-for-wp": "^0.12.0"
+            },
             "require-dev": {
-                "pressbooks/coding-standards": "^1.1"
+                "laravel/pint": "^1.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "PressbooksMix\\": "inc/"
+                    "PressbooksFrontendTools\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -245,13 +287,17 @@
                 {
                     "name": "Pressbooks (Book Oven Inc.)",
                     "email": "code@pressbooks.com"
+                },
+                {
+                    "name": "Oscar Arzola",
+                    "email": "os@pressbooks.com"
                 }
             ],
             "support": {
-                "issues": "https://github.com/pressbooks/mix/issues",
-                "source": "https://github.com/pressbooks/mix/tree/2.1.3"
+                "issues": "https://github.com/pressbooks/frontend-tools/issues",
+                "source": "https://github.com/pressbooks/frontend-tools/tree/1.0.0"
             },
-            "time": "2022-05-03T18:58:59+00:00"
+            "time": "2025-11-19T19:57:02+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

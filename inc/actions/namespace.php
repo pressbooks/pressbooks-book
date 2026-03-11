@@ -2,8 +2,8 @@
 
 namespace PressbooksBook\Actions;
 
-use function \PressbooksBook\Helpers\social_media_enabled;
-use PressbooksMix\Assets;
+use PressbooksFrontendTools\Assets;
+use PressbooksFrontendTools\AssetType;
 use Pressbooks\Container;
 use Pressbooks\Options;
 
@@ -25,22 +25,25 @@ function delete_cached_contents() {
  * @return void
  */
 function enqueue_assets() {
-	$assets = new Assets( 'pressbooks-book', 'theme' );
-	$assets->setSrcDirectory( 'assets' )->setDistDirectory( 'dist' );
+	$assets = new Assets( 'pressbooks-book', AssetType::THEME );
 	$options = get_option( 'pressbooks_theme_options_web' );
 	$hypothesis_options = get_option( 'wp_hypothesis_options' );
 
 	if ( ! defined( 'PB_GUTENBERG_TESTING' ) || ! PB_GUTENBERG_TESTING ) {
 		wp_dequeue_style( 'wp-block-library' );
 	}
-	wp_enqueue_style( 'book/book', $assets->getPath( 'styles/book.css' ), false, null );
+
+	// Main book script (includes book.css, sharer.js, details-element-polyfill)
+	$assets->enqueue( 'assets/src/scripts/book.js', 'pressbooks/book', [
+		'dependencies' => [ 'jquery' ],
+	] );
+
 	wp_enqueue_style( 'book/webfonts', 'https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700|Spectral:400,700', false, null );
-	if ( social_media_enabled() ) {
-		wp_enqueue_script( 'sharer', $assets->getPath( 'scripts/sharer.js' ) );
-	}
-	wp_enqueue_script( 'pressbooks/book', $assets->getPath( 'scripts/book.js' ), [ 'jquery' ], null );
+
 	if ( wp_script_is( 'hypothesis', 'enqueued' ) ) {
-		wp_enqueue_script( 'pressbooks/pane', $assets->getPath( 'scripts/pane.js' ), false, null, true );
+		$assets->enqueue( 'assets/src/scripts/pane.js', 'pressbooks/pane', [
+			'in-footer' => true,
+		] );
 		wp_localize_script(
 			'pressbooks/pane',
 			'pressbooksHypothesis',
@@ -53,8 +56,6 @@ function enqueue_assets() {
 			wp_dequeue_script( $handle );
 		}
 	}
-	// <details> tag needs polyfill for MS Edge
-	wp_enqueue_script( 'details-element-polyfill', $assets->getPath( 'scripts/details-element-polyfill.js' ), [], '2.4.0', true );
 
 	wp_localize_script(
 		'pressbooks/book',
@@ -90,7 +91,9 @@ function enqueue_assets() {
 		$styles = Container::get( 'Styles' );
 		if ( $styles->isCurrentThemeCompatible( 1 ) ) {
 			// Supplementary webbook styles for older themes.
-			wp_enqueue_style( 'pressbooks/web-house-style', $assets->getPath( 'styles/web-house-style.css' ), false, null );
+			$assets->enqueue( 'assets/legacy/styles/web-house-style.scss', 'pressbooks/web-house-style', [
+				'css-only' => true,
+			] );
 		}
 		if ( $styles->isCurrentThemeCompatible( 1 ) || $styles->isCurrentThemeCompatible( 2 ) ) {
 			$sass = Container::get( 'Sass' );
@@ -114,13 +117,14 @@ function enqueue_assets() {
 	}
 	if ( ! is_front_page() ) {
 		if ( isset( $options['collapse_sections'] ) && absint( $options['collapse_sections'] ) === 1 ) {
-			wp_enqueue_script( 'pressbooks/collapse-sections', $assets->getPath( 'scripts/collapse-sections.js' ), false, null );
+			$assets->enqueue( 'assets/src/scripts/collapse-sections.js', 'pressbooks/collapse-sections' );
 		}
 
 		if ( isset( $options['enable_lightbox'] ) && absint( $options['enable_lightbox'] ) === 1 ) {
-			wp_enqueue_script( 'lity', $assets->getPath( 'scripts/lity.js' ), [ 'jquery' ], null );
-			wp_enqueue_style( 'lity', $assets->getPath( 'styles/lity.css' ), false, null );
-			wp_enqueue_script( 'pressbooks/lightbox', $assets->getPath( 'scripts/lightbox.js' ), false, null );
+			// Lightbox script includes lity.js and lity.css
+			$assets->enqueue( 'assets/src/scripts/lightbox.js', 'pressbooks/lightbox', [
+				'dependencies' => [ 'jquery' ],
+			] );
 		}
 	}
 }

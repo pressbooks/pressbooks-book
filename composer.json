@@ -1,42 +1,39 @@
 {
-  "name": "pressbooks/pressbooks-book",
-  "description": "This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
-  "type": "wordpress-theme",
-  "config": {
-    "allow-plugins": {
-      "composer/installers": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  },
-  "require": {
-    "php": "^8.3",
-    "composer/installers": "^2",
-    "pressbooks/mix": "^2.1",
-    "phpcompatibility/php-compatibility": "^9.3"
-  },
-  "require-dev": {
-    "pressbooks/coding-standards": "^1.1",
-    "yoast/phpunit-polyfills": "^1.1"
-  },
-  "archive": {
-    "exclude": [
-      ".github",
-      ".tx",
-      "bin"
-    ]
-  },
-  "license": "GPL-3.0-or-later",
-  "authors": [
-    {
-      "name": "Pressbooks (Book Oven Inc.)",
-      "email": "code@pressbooks.com"
-    }
-  ],
+	"name": "pressbooks/pressbooks-book",
+	"description":
+		"This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora.",
+	"type": "wordpress-theme",
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"require": {
+		"php": "^8.3",
+		"composer/installers": "^2",
+		"pressbooks/frontend-tools": "^1.0",
+		"phpcompatibility/php-compatibility": "^9.3"
+	},
+	"require-dev": {
+		"pressbooks/coding-standards": "^1.1",
+		"yoast/phpunit-polyfills": "^1.1"
+	},
+	"archive": {
+		"exclude": [".github", ".tx", "bin"]
+	},
+	"license": "GPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Pressbooks (Book Oven Inc.)",
+			"email": "code@pressbooks.com"
+		}
+	],
   "keywords": [
-    "academic",
-    "literary",
-    "nonfiction",
-    "textbook"
+      "academic",
+      "literary",
+      "nonfiction",
+      "textbook"
   ],
   "scripts": {
     "test": [
