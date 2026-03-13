@@ -14,7 +14,7 @@
 	$og_type = ( is_front_page() && is_page() ) ? 'book' : 'article';
 	$og_url = get_permalink( $post_id );
 	$og_image = $book_information['pb_cover_image'];
-	$og_image_alt = __( 'Cover image for ', 'pressbooks-book' ) . get_bloginfo( 'name' );
+	$og_image_alt = sprintf( __( 'Cover image for %s', 'pressbooks-book' ), get_bloginfo( 'name' ) );
 	// Use featured image, if available
 	if ( has_post_thumbnail( $post_id ) ) {
 		$og_image = get_the_post_thumbnail_url( $post_id, 'full' );
