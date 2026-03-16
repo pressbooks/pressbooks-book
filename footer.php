@@ -43,7 +43,7 @@ if ( $contact_link ) {
 	$contact_link_href = sprintf(
 		'&bull; <a href="%1$s">%2$s</a>',
 		$contact_link,
-		__( 'Contact', 'pressbooks' )
+		__( 'Contact', 'pressbooks-book' )
 	);
 } else {
 	$contact_link_href = '';
@@ -81,7 +81,7 @@ if ( $contact_link ) {
 					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false">
 						<use href="#linkedin-icon" />
 					</svg>
-					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-aldine' ); ?></span></a>
+					<span class="screen-reader-text"><?php _e( 'Pressbooks on LinkedIn', 'pressbooks-book' ); ?></span></a>
 			</div>
 
 		</section>

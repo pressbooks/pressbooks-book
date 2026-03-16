@@ -194,7 +194,7 @@ function share_icons() {
 		$icons .= sprintf(
 			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-hashtags="%3$s">
             <svg role="img" aria-labelledby="twitter-logo" class="icon--svg">
-                <title id="twitter-logo">Share on X</title>
+                <title id="twitter-logo">' . esc_html__( 'Share on X', 'pressbooks-book' ) . '</title>
                 <use href="#twitter"/>
             </svg>
         </a>',
@@ -209,7 +209,7 @@ function share_icons() {
 		$icons .= sprintf(
 			'<a class="sharer" data-sharer="linkedin" data-title="%1$s" data-url="%2$s">
             <svg role="img" aria-labelledby="linkedin-logo" class="icon--svg">
-                <title id="linkedin-logo">Share on LinkedIn</title>
+                <title id="linkedin-logo">' . esc_html__( 'Share on LinkedIn', 'pressbooks-book' ) . '</title>
                 <use href="#linkedin-icon"/>
             </svg>
         </a>',
@@ -223,7 +223,7 @@ function share_icons() {
 		$icons .= sprintf(
 			'<a class="sharer" data-sharer="email" data-title="%1$s" data-url="%2$s" data-via="pressbooks">
             <svg role="img" aria-labelledby="email-logo" class="icon--svg">
-                <title id="email-logo">Share via Email</title>
+                <title id="email-logo">' . esc_html__( 'Share via Email', 'pressbooks-book' ) . '</title>
                 <use href="#email"/>
             </svg>
         </a>',
@@ -533,7 +533,7 @@ function get_links( $echo = true ) {
 	if ( $echo ) :
 		?>
 		<nav aria-labelledby="reading-nav" class="nav-reading <?php echo $multipage ? 'nav-reading--multipage' : '' ?>" role="navigation">
-		<p id="reading-nav" class="screen-reader-text">Previous/next navigation</p>
+		<p id="reading-nav" class="screen-reader-text"><?php _e( 'Previous/next navigation', 'pressbooks-book' ); ?></p>
 		<div class="nav-reading__previous js-nav-previous">
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
@@ -556,7 +556,7 @@ function get_links( $echo = true ) {
 		</div>
 		<button class="nav-reading__up" >
 			<svg class="icon--svg"><use href="#arrow-up" /></svg>
-			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks' ); ?></span>
+			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks-book' ); ?></span>
 		</button>
 		</nav>
 		<?php
@@ -629,7 +629,7 @@ function comments_template( $comment, $args, $depth ) {
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
 					<?php /* translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment */ ?>
-					<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(), get_comment_time() ); ?> <span class="says">says:</span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
+					<?php printf( __( '%s on', 'pressbooks-book' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?> <?php printf( __( '%1$s at %2$s', 'pressbooks-book' ), get_comment_date(), get_comment_time() ); ?> <span class="says"><?php _e( 'says:', 'pressbooks-book' ); ?></span><?php edit_comment_link( __( '(Edit)', 'pressbooks-book' ), ' ' ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( empty( $comment->comment_approved ) ) : ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'pressbooks-book' ); ?></em>
@@ -803,8 +803,8 @@ function get_h5p_activities( $per_page = 20 ) {
 		[
 			'base' => add_query_arg( 'hpage', '%#%' ),
 			'format' => '',
-			'prev_text' => __( '&laquo;' ),
-			'next_text' => __( '&raquo;' ),
+			'prev_text' => __( '&laquo;', 'pressbooks-book' ),
+			'next_text' => __( '&raquo;', 'pressbooks-book' ),
 			'total' => ceil( $total / $per_page ),
 			'current' => $page,
 		]

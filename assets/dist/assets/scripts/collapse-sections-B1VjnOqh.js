@@ -1,0 +1,9 @@
+document.addEventListener("DOMContentLoaded",function(){function l(e){const o=e.match(/^https?:\/\/([^/?#]+)(?:[/?#]|$)/i),i=o&&o[1];return typeof i=="string"||i instanceof String?i:""}const c=document.querySelectorAll("#content section h1:not(.entry-title)");Array.prototype.forEach.call(c,e=>{e.innerHTML=`
+		<button aria-expanded="false" class="button--text">
+		  <span>${e.innerHTML}</span>
+		  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+			<rect class="vert" height="8" width="2" y="1" x="4"/>
+			<rect height="2" width="8" y="4" x="1"/>
+		  </svg>
+		</button>`,e.setAttribute("data-collapsed","true");let i=(t=>{let a=[];for(;t.nextElementSibling&&t.nextElementSibling.tagName!=="H1"&&!t.nextElementSibling.classList.contains("nav-reading--page")&&!(t.nextElementSibling.tagName==="DIV"&&(t.nextElementSibling.className==="glossary"||t.nextElementSibling.className==="contributors"||t.nextElementSibling.className==="footnotes"||t.nextElementSibling.classList.contains("media-attributions"))||t.nextElementSibling.tagName==="HR"&&(t.nextElementSibling.classList.contains("before-footnotes")||t.nextElementSibling.classList.contains("before-contributors")));)a.push(t.nextElementSibling),t=t.nextElementSibling;return a.forEach(n=>{n.parentNode.removeChild(n)}),a})(e),s=document.createElement("div");s.hidden=!0,i.forEach(t=>{s.appendChild(t)}),e.parentNode.insertBefore(s,e.nextElementSibling);let r=e.querySelector("button");r.onclick=()=>{let t=r.getAttribute("aria-expanded")==="true"||!1;if(r.setAttribute("aria-expanded",!t),e.setAttribute("data-collapsed",t),s.hidden=t,window.dispatchEvent(new Event("resize")),!t&&!e.hasAttribute("data-unfurled")){const a=s.querySelectorAll("iframe");Array.prototype.forEach.call(a,n=>{l(n.src).includes("phet.colorado.edu")&&(n.src=n.src)})}e.setAttribute("data-unfurled",!0)}})});
+//# sourceMappingURL=collapse-sections-B1VjnOqh.js.map

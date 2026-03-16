@@ -1,4 +1,9 @@
-// import external dependencies
+// Import styles
+import '../styles/book.scss';
+
+// Import vendor dependencies
+import 'sharer.js';
+import 'details-element-polyfill';
 
 // import local dependencies
 import common from './routes/common';
