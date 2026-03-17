@@ -21,9 +21,7 @@ if ( \PressbooksBook\Helpers\is_book_public() ) :
 		</h1>
 		<?php if ( ! isset( $_GET['h5p_id'] ) ) : ?>
 			<p class="h5p-count">
-				<?php echo __( 'This book includes ', 'pressbooks-book' ); ?>
-				<strong><?php echo $data['total'] . ' '; ?></strong>
-				<?php echo __( 'H5P activities. Only those which have been inserted into book content will be included if the book is cloned.', 'pressbooks-book' ); ?>
+				<?php printf( __( 'This book includes <strong>%s</strong> H5P activities. Only those which have been inserted into book content will be included if the book is cloned.', 'pressbooks-book' ), $data['total'] ); ?>
 				<?php echo sprintf( '<button type="button" id="h5p-show-hide" class="btn btn-secondary btn-sm" show-all-text="%s" hide-all-text="%s" aria-label="%s"></button>', __( 'Expand all', 'pressbooks-book' ), __( 'Hide all', 'pressbooks-book' ), __( 'Expand all', 'pressbooks-book' ) ); ?>
 			</p>
 		<?php endif; ?>
