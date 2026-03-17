@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.31.1\n"
+"Project-Id-Version: McLuhan 2.32.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-03-11T18:05:13+00:00\n"
+"POT-Creation-Date: 2026-03-17T12:24:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pressbooks-book\n"
@@ -125,8 +125,12 @@ msgstr ""
 msgid "Cannot find Pressbooks install."
 msgstr ""
 
+#. translators: %s: title of book
 #: header.php:17
-msgid "Cover image for "
+#: partials/content-cover-book-header.php:32
+#: partials/content-cover-book-header.php:38
+#, php-format
+msgid "Cover image for %s"
 msgstr ""
 
 #: header.php:110
@@ -493,47 +497,44 @@ msgid "H5P activities list"
 msgstr ""
 
 #: page-h5p-listing.php:24
-msgid "This book includes "
+#, php-format
+msgid "This book includes <strong>%s</strong> H5P activities. Only those which have been inserted into book content will be included if the book is cloned."
 msgstr ""
 
-#: page-h5p-listing.php:26
-msgid "H5P activities. Only those which have been inserted into book content will be included if the book is cloned."
-msgstr ""
-
-#: page-h5p-listing.php:27
+#: page-h5p-listing.php:25
 msgid "Expand all"
 msgstr ""
 
-#: page-h5p-listing.php:27
+#: page-h5p-listing.php:25
 msgid "Hide all"
 msgstr ""
 
-#: page-h5p-listing.php:32
+#: page-h5p-listing.php:30
 msgid "The requested H5P activity does not exist in this book."
 msgstr ""
 
-#: page-h5p-listing.php:38
+#: page-h5p-listing.php:36
 msgid "ID"
 msgstr ""
 
-#: page-h5p-listing.php:39
+#: page-h5p-listing.php:37
 #: partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr ""
 
-#: page-h5p-listing.php:40
+#: page-h5p-listing.php:38
 msgid "Activity type"
 msgstr ""
 
-#: page-h5p-listing.php:42
+#: page-h5p-listing.php:40
 msgid "Show/Hide"
 msgstr ""
 
-#: page-h5p-listing.php:55
+#: page-h5p-listing.php:53
 msgid "Show activity"
 msgstr ""
 
-#: page-h5p-listing.php:55
+#: page-h5p-listing.php:53
 msgid "Hide activity"
 msgstr ""
 
@@ -566,22 +567,18 @@ msgid "Subtitle"
 msgstr ""
 
 #: partials/content-cover-book-header.php:17
-msgid "by "
+#, php-format
+msgid "by %s"
 msgstr ""
 
 #: partials/content-cover-book-header.php:20
-msgid "Edited by "
+#, php-format
+msgid "Edited by %s"
 msgstr ""
 
 #: partials/content-cover-book-header.php:23
-msgid "Translated by "
-msgstr ""
-
-#. translators: %s: title of book
-#: partials/content-cover-book-header.php:32
-#: partials/content-cover-book-header.php:38
 #, php-format
-msgid "Cover image for %s"
+msgid "Translated by %s"
 msgstr ""
 
 #: partials/content-cover-book-header.php:60
