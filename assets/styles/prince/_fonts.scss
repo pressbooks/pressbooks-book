@@ -34,7 +34,3 @@ $shapeshifter-font-2-is-serif: true !default;
 } @else {
   $font-3: 'Cormorant Garamond', $serif-prince;
 }
-
-@if variable-exists(custom-fonts-imported) {
-  @import '../../../../../uploads/assets/custom-fonts/custom-fonts.css';
-}
