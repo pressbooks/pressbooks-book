@@ -1,24 +1,25 @@
-# Copyright (C) 2025 Pressbooks (Book Oven Inc.)
+# Copyright (C) 2026 Pressbooks (Book Oven Inc.)
 # This file is distributed under the GPL v3.0 or later.
-# Translators:
-# 董正隆 <iamot6@yahoo.com.tw>, 2017
-# fish free <winofchina@hotmail.com>, 2024
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: McLuhan 2.29.0\n"
+"Project-Id-Version: pressbooks-open-source\n"
 "Report-Msgid-Bugs-To: https://github.com/pressbooks/pressbooks-book/issues\n"
-"POT-Creation-Date: 2025-07-29T16:03:58+00:00\n"
-"PO-Revision-Date: 2017-06-22 17:45+0000\n"
-"Last-Translator: fish free <winofchina@hotmail.com>, 2024\n"
-"Language-Team: Chinese (https://app.transifex.com/pressbooks/teams/9194/zh/)\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Domain: pressbooks-book\n"
+"POT-Creation-Date: 2026-03-13T22:10:15+00:00\n"
+"PO-Revision-Date: 2026-03-18 00:06\n"
 "X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: pressbooks-book\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: pressbooks-open-source\n"
+"X-Crowdin-Project-ID: 866076\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /pressbooks-book/languages/pressbooks-book.pot\n"
+"X-Crowdin-File-ID: 140\n"
+"Language: zh_CN\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -32,15 +33,8 @@ msgstr "https://pressbooks.com/themes/pressbooks-book"
 
 #. Description of the theme
 #: style.css
-msgid ""
-"This theme is named after Canadian media theorist Marshall McLuhan, who "
-"coined the phrase “the medium is the message.” It is designed for academic "
-"writing and is also suitable for fiction. Headings are set in Cormorant "
-"Garamond, and body type is set in Lora."
-msgstr ""
-"此主题以加拿大媒体理论家马歇尔·麦克卢汉 (Marshall McLuhan) "
-"的名字命名，他提出了“媒介即信息”这一短语。它专为学术写作而设计，也适用于小说。标题采用 Cormorant Garamond 字体，正文采用 Lora"
-" 字体。"
+msgid "This theme is named after Canadian media theorist Marshall McLuhan, who coined the phrase “the medium is the message.” It is designed for academic writing and is also suitable for fiction. Headings are set in Cormorant Garamond, and body type is set in Lora."
+msgstr "此主题以加拿大媒体理论家马歇尔·麦克卢汉 (Marshall McLuhan) 的名字命名，他提出了“媒介即信息”这一短语。它专为学术写作而设计，也适用于小说。标题采用 Cormorant Garamond 字体，正文采用 Lora 字体。"
 
 #. Author of the theme
 #: style.css
@@ -65,15 +59,24 @@ msgid "Feedback/Errata"
 msgstr "反馈/勘误"
 
 #: comments.php:6
-msgid ""
-"This post is password protected. Enter the password to view any comments."
+msgid "This post is password protected. Enter the password to view any comments."
 msgstr "该文章有密码保护。请输入密码以查看评论。"
 
-#: comments.php:36 comments.php:47
+#. translators: %1$d: number of responses, %2$s: title of section
+#: comments.php:20
+#, php-format
+msgctxt "comments title"
+msgid "%1$d Response to %2$s"
+msgid_plural "%1$d Responses to %2$s"
+msgstr[0] ""
+
+#: comments.php:36
+#: comments.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span>较早的评论"
 
-#: comments.php:37 comments.php:48
+#: comments.php:37
+#: comments.php:48
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "较新的评论<span class=\"meta-nav\">&larr;</span>"
 
@@ -85,33 +88,30 @@ msgstr "已禁用评论。"
 msgid "Submit"
 msgstr "提交"
 
-#. translators: %s: name of network
-#. translators: %s: name of organization
-#: footer.php:60 header.php:128 header.php:135 page-buy.php:28 page-buy.php:38
-#: page-buy.php:48 page-buy.php:58 page-buy.php:68
-#, php-format
-msgid "Logo for %s"
-msgstr "%s的Logo"
+#: footer.php:46
+#: footer.php:69
+msgid "Contact"
+msgstr ""
+
+#: footer.php:60
+msgid "Pressbooks"
+msgstr ""
 
 #. translators: %s: Pressbooks
-#: footer.php:68
+#: footer.php:64
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: footer.php:70
+#: footer.php:66
 msgid "Pressbooks User Guide"
 msgstr ""
 
-#: footer.php:71
+#: footer.php:67
 msgid "Pressbooks Directory"
 msgstr "Pressbooks目录"
 
-#: footer.php:73
-msgid "Contact"
-msgstr ""
-
-#: footer.php:78 footer.php:82
+#: footer.php:78
 msgid "Pressbooks on YouTube"
 msgstr "Pressbooks Youtube频道"
 
@@ -131,74 +131,111 @@ msgstr "您须在McLuhan目录下执行<code>composer install</code>。"
 msgid "Cannot find Pressbooks install."
 msgstr "找不到 Pressbooks 安装。"
 
-#: header.php:16
-msgid "Cover image for "
-msgstr ""
+#. translators: %s: title of book
+#: header.php:17
+#: partials/content-cover-book-header.php:32
+#: partials/content-cover-book-header.php:38
+#, php-format
+msgid "Cover image for %s"
+msgstr "%s的封面图片"
 
-#: header.php:109
+#: header.php:110
 msgid "Skip to content"
 msgstr "跳到内容区"
 
-#: header.php:149
+#. translators: %s: name of network
+#: header.php:129
+#: header.php:136
+#, php-format
+msgid "Logo for %s"
+msgstr "%s的Logo"
+
+#: header.php:148
+msgid "Menu"
+msgstr ""
+
+#: header.php:150
 msgid "Primary Navigation"
 msgstr "主菜单"
 
-#: header.php:160
+#: header.php:161
 #, php-format
-msgid ""
-"Want to create or adapt books like this? %s about how Pressbooks supports "
-"open publishing practices."
+msgid "Want to create or adapt books like this? %s about how Pressbooks supports open publishing practices."
 msgstr "想要创作或改编这样的书籍吗%s？了解 Pressbooks 如何支持开放出版实践。"
 
-#: header.php:160
+#: header.php:161
 msgid "Learn more"
 msgstr "了解更多"
 
-#: header.php:172 partials/content-cover-toc.php:9
+#: header.php:162
+msgid "Close banner"
+msgstr ""
+
+#: header.php:179
+#: partials/content-cover-toc.php:9
 msgid "Book Contents Navigation"
 msgstr "书籍内容导航"
 
-#: header.php:175 index.php:14 partials/content-cover-toc.php:3
+#: header.php:182
+#: index.php:14
+#: partials/content-cover-toc.php:3
 msgid "Contents"
 msgstr "内容"
 
 #. translators: %s: the title of the book
-#: header.php:184
+#: header.php:191
 #, php-format
 msgid "Go to the cover page of %s"
 msgstr "跳到%s的封面"
 
-#: header.php:188 inc/helpers/namespace.php:277
+#: header.php:195
+#: inc/helpers/namespace.php:277
 msgid "Buy"
 msgstr "购买"
 
-#: inc/actions/namespace.php:64
+#: inc/actions/namespace.php:65
 msgid "Comparison loading…"
 msgstr "比较正在加载…"
 
-#: inc/actions/namespace.php:65
+#: inc/actions/namespace.php:66
 msgid "Comparison loaded."
 msgstr "比较已加载。"
 
-#: inc/actions/namespace.php:66
+#: inc/actions/namespace.php:67
 msgid "The original chapter could not be loaded."
 msgstr "无法加载原始章节。"
 
-#: inc/actions/namespace.php:67
+#: inc/actions/namespace.php:68
 msgid "Toggle contents of"
 msgstr "打开/关闭内容of"
 
-#: inc/actions/namespace.php:214
+#: inc/actions/namespace.php:78
+msgid "opens in new tab"
+msgstr ""
+
+#: inc/actions/namespace.php:226
 msgid "Enable Image Lightbox"
 msgstr "启用图片弹出全屏显示效果"
 
-#: inc/actions/namespace.php:219
+#: inc/actions/namespace.php:231
 msgid "Show linked images in a lightbox"
 msgstr "将链接的图片弹出全屏显示"
+
+#: inc/actions/namespace.php:319
+msgid "H5P listing"
+msgstr ""
+
+#: inc/actions/namespace.php:332
+msgid "Default Data"
+msgstr ""
 
 #: inc/filters/namespace.php:19
 msgid "Private"
 msgstr "私有"
+
+#: inc/filters/namespace.php:100
+msgid "Read more &raquo;"
+msgstr ""
 
 #: inc/helpers/namespace.php:148
 msgid "Public Domain"
@@ -236,6 +273,18 @@ msgstr "保留所有权利"
 msgid "Check out this great book published with Pressbooks."
 msgstr ""
 
+#: inc/helpers/namespace.php:197
+msgid "Share on X"
+msgstr ""
+
+#: inc/helpers/namespace.php:212
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: inc/helpers/namespace.php:226
+msgid "Share via Email"
+msgstr ""
+
 #: inc/helpers/namespace.php:260
 msgid "Home"
 msgstr "首页"
@@ -256,12 +305,14 @@ msgstr "管理"
 msgid "Sign out"
 msgstr "登出"
 
-#: inc/helpers/namespace.php:487 partials/content-cover-book-info.php:53
+#: inc/helpers/namespace.php:487
+#: partials/content-cover-book-info.php:53
 msgid "Author"
 msgid_plural "Authors"
 msgstr[0] "作者"
 
-#: inc/helpers/namespace.php:488 partials/content-cover-book-info.php:59
+#: inc/helpers/namespace.php:488
+#: partials/content-cover-book-info.php:59
 msgid "Editor"
 msgid_plural "Editors"
 msgstr[0] "编辑"
@@ -286,8 +337,10 @@ msgid "Contributor"
 msgid_plural "Contributors"
 msgstr[0] "贡献者"
 
-#: inc/helpers/namespace.php:493 partials/content-cover-book-header.php:103
-#: partials/content-cover-book-info.php:73 single.php:53
+#: inc/helpers/namespace.php:493
+#: partials/content-cover-book-header.php:103
+#: partials/content-cover-book-info.php:73
+#: single.php:53
 msgid "License"
 msgstr "授权"
 
@@ -324,7 +377,8 @@ msgstr ""
 msgid "Publication Date"
 msgstr "出版日期"
 
-#: inc/helpers/namespace.php:502 single.php:61
+#: inc/helpers/namespace.php:502
+#: single.php:61
 msgid "Digital Object Identifier (DOI)"
 msgstr "数字对象标识符（DOI）"
 
@@ -340,37 +394,46 @@ msgstr "纸质本 ISBN"
 msgid "Hashtag"
 msgstr "Hashtag"
 
-#. translators: %s: post title
+#: inc/helpers/namespace.php:536
+msgid "Previous/next navigation"
+msgstr ""
+
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:540 inc/helpers/namespace.php:543
+#: inc/helpers/namespace.php:543
 #, php-format
 msgid "Previous: %s"
 msgstr "前一：%s"
 
-#. translators: %s: post title,
 #. translators: %s: post short title or title
-#: inc/helpers/namespace.php:550 inc/helpers/namespace.php:552
+#: inc/helpers/namespace.php:552
 #, php-format
 msgid "Next: %s"
 msgstr "后一：%s"
 
-#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
-#. comment
+#: inc/helpers/namespace.php:559
+msgid "Back to top"
+msgstr ""
+
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
 #: inc/helpers/namespace.php:632
 #, php-format
 msgid "%s on"
 msgstr "%s在"
 
-#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
-#. comment
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
 #: inc/helpers/namespace.php:632
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s在%2$s"
 
-#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of
-#. comment
-#: inc/helpers/namespace.php:632 inc/helpers/namespace.php:661
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
+#: inc/helpers/namespace.php:632
+msgid "says:"
+msgstr ""
+
+#. translators: %s: name of commenter, %1$s: date of comment, %2$s: time of comment
+#: inc/helpers/namespace.php:632
+#: inc/helpers/namespace.php:661
 msgid "(Edit)"
 msgstr "（编辑）"
 
@@ -382,6 +445,14 @@ msgstr "您的评论在审核中。"
 msgid "Pingback:"
 msgstr "引用通告"
 
+#: inc/helpers/namespace.php:806
+msgid "&laquo;"
+msgstr ""
+
+#: inc/helpers/namespace.php:807
+msgid "&raquo;"
+msgstr ""
+
 #: index.php:18
 msgid "This book does not contain any public content."
 msgstr "本书不包含任何公开内容。"
@@ -390,7 +461,7 @@ msgstr "本书不包含任何公开内容。"
 msgid "About The Book"
 msgstr "关于该书"
 
-#: page-about.php:21 page-buy.php:10 page-buy.php:18
+#: page-about.php:21
 msgid "It's coming!"
 msgstr "快来了！"
 
@@ -398,24 +469,21 @@ msgstr "快来了！"
 msgid "Authors"
 msgstr "作者"
 
-#: page-buy.php:5
+#: page-buy.php:23
 msgid "Buy the Book"
 msgstr "购买此书"
 
-#. translators: %1$s: url to book, %2$s: title of book
-#: page-buy.php:21
+#: page-buy.php:28
 #, php-format
 msgid "You can buy <a href=\"%1$s\">%2$s</a> by following any of the links below:"
 msgstr "您可以通过下面任一链接购买<a href=\"%1$s\">%2$s</a>："
 
-#: page-buy.php:30 page-buy.php:40 page-buy.php:50 page-buy.php:60
-#: page-buy.php:70
+#: page-buy.php:51
 #, php-format
-msgid "Purchase on %s"
-msgstr "购买于%s"
+msgid "Purchase from %s"
+msgstr ""
 
-#. translators: %1$s: url to purchase
-#: page-buy.php:74
+#: page-buy.php:59
 msgid "Purchase here:"
 msgstr "在此购买："
 
@@ -428,59 +496,66 @@ msgid "H5P activities list"
 msgstr "H5P活动列表"
 
 #: page-h5p-listing.php:24
-msgid "This book includes "
-msgstr "该书包含"
+#, php-format
+msgid "This book includes <strong>%s</strong> H5P activities. Only those which have been inserted into book content will be included if the book is cloned."
+msgstr ""
 
-#: page-h5p-listing.php:26
-msgid ""
-"H5P activities. Only those which have been inserted into book content will "
-"be included if the book is cloned."
-msgstr "H5P 活动。如果克隆了该书，则仅包含已插入书籍内容的活动。"
-
-#: page-h5p-listing.php:27
+#: page-h5p-listing.php:25
 msgid "Expand all"
 msgstr "展开全部"
 
-#: page-h5p-listing.php:27
+#: page-h5p-listing.php:25
 msgid "Hide all"
 msgstr "隐藏全部"
 
-#: page-h5p-listing.php:32
+#: page-h5p-listing.php:30
 msgid "The requested H5P activity does not exist in this book."
 msgstr "本书中不存在所请求的 H5P 活动。"
 
-#: page-h5p-listing.php:38
+#: page-h5p-listing.php:36
 msgid "ID"
 msgstr "ID"
 
-#: page-h5p-listing.php:39 partials/content-cover-metadata.php:8
+#: page-h5p-listing.php:37
+#: partials/content-cover-metadata.php:8
 msgid "Title"
 msgstr "标题"
 
-#: page-h5p-listing.php:40
+#: page-h5p-listing.php:38
 msgid "Activity type"
 msgstr "活动类型"
 
-#: page-h5p-listing.php:42
+#: page-h5p-listing.php:40
 msgid "Show/Hide"
 msgstr "显示/隐藏"
 
-#: page-h5p-listing.php:55
+#: page-h5p-listing.php:53
 msgid "Show activity"
 msgstr "显示活动"
 
-#: page-h5p-listing.php:55
+#: page-h5p-listing.php:53
 msgid "Hide activity"
 msgstr "隐藏活动"
 
-#: page.php:13 partials/content-single-legacy.php:71
-#: partials/content-single.php:3
+#: page.php:13
+#: partials/content-single-legacy.php:71
+#: partials/content-single.php:2
 msgid "Edit"
 msgstr "编辑"
 
 #: page.php:18
 msgid "Pages:"
 msgstr "页面："
+
+#. translators: %s: The date when the book was archived
+#: partials/archive-banner.php:16
+#, php-format
+msgid "This book was archived by its publisher on %s. It is no longer being updated."
+msgstr ""
+
+#: partials/archive-banner.php:21
+msgid "This book was archived by its publisher. It is no longer being updated."
+msgstr ""
 
 #: partials/content-cover-book-header.php:11
 msgid "Book Title"
@@ -491,23 +566,19 @@ msgid "Subtitle"
 msgstr "副标题"
 
 #: partials/content-cover-book-header.php:17
-msgid "by "
+#, php-format
+msgid "by %s"
 msgstr ""
 
 #: partials/content-cover-book-header.php:20
-msgid "Edited by "
+#, php-format
+msgid "Edited by %s"
 msgstr ""
 
 #: partials/content-cover-book-header.php:23
-msgid "Translated by "
-msgstr ""
-
-#. translators: %s: title of book
-#: partials/content-cover-book-header.php:32
-#: partials/content-cover-book-header.php:38
 #, php-format
-msgid "Cover image for %s"
-msgstr "%s的封面图片"
+msgid "Translated by %s"
+msgstr ""
 
 #: partials/content-cover-book-header.php:60
 msgid "Download this book"
@@ -534,13 +605,10 @@ msgstr "书籍信息"
 msgid "Book Source"
 msgstr "书籍来源"
 
-#. translators: %$1s: title of book, link to book, %2$s: attribution string
-#. for the book, %3$s: publisher of book, %4$s: license for book
+#. translators: %$1s: title of book, link to book, %2$s: attribution string for the book, %3$s: publisher of book, %4$s: license for book
 #: partials/content-cover-book-info.php:30
 #, php-format
-msgid ""
-"This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s "
-"under a %4$s license. It may differ from the original."
+msgid "This book is a cloned version of %1$s%2$s, published using Pressbooks%3$s under a %4$s license. It may differ from the original."
 msgstr "本书是%1$s%2$s的克隆版本，使用 Pressbooks%3$s 经%4$s许可出版。它可能与原版有所不同。"
 
 #. translators: %2$s: authors of book
@@ -554,9 +622,7 @@ msgstr " by %s"
 #. translators: %s: link to source book
 #: partials/content-cover-book-info.php:41
 #, php-format
-msgid ""
-"This book was cloned from a source that is no longer available. The source "
-"URL was %s. This book may differ from the original."
+msgid "This book was cloned from a source that is no longer available. The source URL was %s. This book may differ from the original."
 msgstr "本书是从不再可用的来源克隆的。来源 URL 为%s 。本书可能与原版不同。"
 
 #: partials/content-cover-book-info.php:68
@@ -584,20 +650,20 @@ msgid "Nothing Found"
 msgstr "未找到任何东西"
 
 #: partials/content-none.php:3
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr "抱歉，没有符合您搜索条件的内容。请使用其他关键字重试。"
 
-#: partials/content-single-legacy.php:41 partials/content-single.php:51
+#: partials/content-single-legacy.php:41
+#: partials/content-single.php:49
 msgid "Previous Page"
 msgstr "前一页"
 
-#: partials/content-single-legacy.php:52 partials/content-single.php:62
+#: partials/content-single-legacy.php:52
+#: partials/content-single.php:60
 msgid "Next Page"
 msgstr "后一页"
 
-#: partials/content-single.php:80
+#: partials/content-single.php:78
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] "关于作者"
@@ -607,9 +673,7 @@ msgid "Access Denied"
 msgstr "拒绝访问"
 
 #: private.php:9
-msgid ""
-"This book is private, and accessible only to registered users. To access the"
-" content, either sign in to your account or request access to this book."
+msgid "This book is private, and accessible only to registered users. To access the content, either sign in to your account or request access to this book."
 msgstr "此书为私人书籍，仅供注册用户访问。要访问内容，请登录您的帐户或请求访问此书。"
 
 #. translators: link to Pressbooks.pub
@@ -653,3 +717,4 @@ msgstr "搜索"
 #: single.php:77
 msgid "Share This Book"
 msgstr "分享该书"
+
