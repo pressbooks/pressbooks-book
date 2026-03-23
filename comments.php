@@ -22,7 +22,7 @@
 						'%1$d Responses to %2$s',
 						get_comments_number(),
 						'comments title',
-						'pressbooks'
+						'pressbooks-book'
 					)
 				),
 				number_format_i18n( get_comments_number() ),

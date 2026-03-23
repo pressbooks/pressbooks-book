@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.32.0](https://github.com/pressbooks/pressbooks-book/compare/2.31.1...2.32.0) (2026-03-11)
+
+
+### Features
+
+* add content only query params ([#1405](https://github.com/pressbooks/pressbooks-book/issues/1405)) ([b77cc38](https://github.com/pressbooks/pressbooks-book/commit/b77cc38af52f4c91cd594757b9574065b67e00db))
+* make external links accessible ([#1401](https://github.com/pressbooks/pressbooks-book/issues/1401)) ([d3f9074](https://github.com/pressbooks/pressbooks-book/commit/d3f9074dc25ddffec9031c4754ba51d8f6926430))
+* new build tools ([#1396](https://github.com/pressbooks/pressbooks-book/issues/1396)) ([a96f37a](https://github.com/pressbooks/pressbooks-book/commit/a96f37adbe2721e90bdc1eda343daacf84993079))
+
+
+### Chores
+
+* **l10n:** migrate from Transifex to Crowdin ([#1409](https://github.com/pressbooks/pressbooks-book/issues/1409)) ([7f46ac2](https://github.com/pressbooks/pressbooks-book/commit/7f46ac2f4fa3287fd08f707beb146c7b621b026a))
+
 ## [2.31.1](https://github.com/pressbooks/pressbooks-book/compare/2.31.0...2.31.1) (2026-01-20)
 
 

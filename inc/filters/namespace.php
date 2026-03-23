@@ -97,7 +97,7 @@ function status_code_adjustment( $status_header, $code ) {
 
 function excerpt_more( $more ) {
 	global $post;
-	return '<a class="more-tag" href="' . get_permalink( $post->ID ) . '"> Read more &raquo;</a>';
+	return '<a class="more-tag" href="' . get_permalink( $post->ID ) . '"> ' . __( 'Read more &raquo;', 'pressbooks-book' ) . '</a>';
 }
 
 /**
