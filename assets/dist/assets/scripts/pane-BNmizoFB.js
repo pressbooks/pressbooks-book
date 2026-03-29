@@ -1,0 +1,2 @@
+window.hypothesisConfig=()=>({openSidebar:pressbooksHypothesis.openSidebar==="1",showHighlights:pressbooksHypothesis.showHighlights==="1",onLayoutChange:t=>{const e=document.querySelector(".nav-reading");t.expanded===!0?(document.body.classList.add("has-annotator-pane"),document.body.clientWidth-t.width>400&&(document.body.style.marginRight=`${t.width-32}px`,e&&(e.style.width=`${document.body.clientWidth}px`))):(document.body.classList.remove("has-annotator-pane"),document.body.style.marginRight="0",e&&(e.style.width="100vw"))}});
+//# sourceMappingURL=pane-BNmizoFB.js.map

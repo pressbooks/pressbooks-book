@@ -40,7 +40,6 @@ export default {
 
 			/**
 			 * Add accessibility features to a link
-			 *
 			 * @param link
 			 */
 			function addAccessibilityFeatures( link ) {
@@ -53,7 +52,6 @@ export default {
 
 			/**
 			 * Add visual icon to indicate new window
-			 *
 			 * @param link
 			 */
 			function addVisualIcon( link ) {
@@ -65,7 +63,6 @@ export default {
 
 			/**
 			 * Add screen reader text for new window warning
-			 *
 			 * @param link
 			 */
 			function addScreenReaderText( link ) {
@@ -95,7 +92,6 @@ export default {
 
 		/**
 		 * getCookie Value
-		 *
 		 * @param name
 		 */
 		function getCookie( name ) {
@@ -333,7 +329,6 @@ export default {
 
 		/**
 		 * toggleHide
-		 *
 		 * @param selector
 		 */
 		const toggleHide = selector => {

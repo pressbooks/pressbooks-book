@@ -14,13 +14,13 @@ use function \Pressbooks\Image\attachment_id_from_url;
 			<p class="book-header__subtitle"><span class="screen-reader-text"><?php esc_html_e( 'Subtitle', 'pressbooks-book' ); ?>: </span><?php echo $book_information['pb_subtitle']; ?></p>
 		<?php endif; ?>
 		<?php if ( ! empty( $book_information['pb_authors'] ) ) { ?>
-			<p class="book-header__contributor authors"><?php echo esc_html__( 'by ', 'pressbooks-book' ) . esc_html( $book_information['pb_authors'] ); ?></p>
+			<p class="book-header__contributor authors"><?php printf( esc_html__( 'by %s', 'pressbooks-book' ), esc_html( $book_information['pb_authors'] ) ); ?></p>
 		<?php } ?>
 		<?php if ( ! empty( $book_information['pb_editors'] ) ) { ?>
-			<p class="book-header__contributor editors"><?php echo esc_html__( 'Edited by ', 'pressbooks-book' ) . esc_html( $book_information['pb_editors'] ); ?></p>
+			<p class="book-header__contributor editors"><?php printf( esc_html__( 'Edited by %s', 'pressbooks-book' ), esc_html( $book_information['pb_editors'] ) ); ?></p>
 		<?php } ?>
 		<?php if ( ! empty( $book_information['pb_translators'] ) ) { ?>
-			<p class="book-header__contributor translators"><?php echo esc_html__( 'Translated by ', 'pressbooks-book' ) . esc_html( $book_information['pb_translators'] ); ?></p>
+			<p class="book-header__contributor translators"><?php printf( esc_html__( 'Translated by %s', 'pressbooks-book' ), esc_html( $book_information['pb_translators'] ) ); ?></p>
 		<?php } ?>
 		<div class="book-header__cover">
 			<?php if ( ! empty( $book_information['pb_cover_image'] ) ) { ?>
