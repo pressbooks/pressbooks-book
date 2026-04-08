@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.33.0](https://github.com/pressbooks/pressbooks-book/compare/2.32.0...2.33.0) (2026-03-30)
+
+
+### Features
+
+* import font face declarations if custom fonts exist ([#1324](https://github.com/pressbooks/pressbooks-book/issues/1324)) ([6f4b823](https://github.com/pressbooks/pressbooks-book/commit/6f4b82339e9bc349752e5d36fe2d5e9c3b712cb8))
+
+
+### Bug Fixes
+
+* add focus ring to search field (resolves pressbooks/private[#2276](https://github.com/pressbooks/pressbooks-book/issues/2276)) ([#1407](https://github.com/pressbooks/pressbooks-book/issues/1407)) ([47acf3d](https://github.com/pressbooks/pressbooks-book/commit/47acf3d3d55b2024b5dccb475f93509d37d0ee17))
+* remove extra spaces in translations ([#1411](https://github.com/pressbooks/pressbooks-book/issues/1411)) ([da26813](https://github.com/pressbooks/pressbooks-book/commit/da2681335492b4cab74388a8d36607d1d0f1798e))
+
+
+### Chores
+
+* **l10n:** update languages ([#1410](https://github.com/pressbooks/pressbooks-book/issues/1410)) ([e40e0bc](https://github.com/pressbooks/pressbooks-book/commit/e40e0bc9a9ea1c30c25abd1437770747f5e7e8b6))
+
 ## [2.32.0](https://github.com/pressbooks/pressbooks-book/compare/2.31.1...2.32.0) (2026-03-11)
 
 
