@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.33.1](https://github.com/pressbooks/pressbooks-book/compare/2.33.0...2.33.1) (2026-04-09)
+
+
+### Chores
+
+* build assets ([#1426](https://github.com/pressbooks/pressbooks-book/issues/1426)) ([52f23c8](https://github.com/pressbooks/pressbooks-book/commit/52f23c807c43cae4ade8b06d50a73721645b8e4b))
+
 ## [2.33.0](https://github.com/pressbooks/pressbooks-book/compare/2.32.0...2.33.0) (2026-03-30)
 
 
