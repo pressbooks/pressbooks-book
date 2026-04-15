@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/pressbooks/buckram/compare/v1.8.8...v1.9.0) (2026-04-15)
+
+
+### Features
+
+* prince 16 support ([#411](https://github.com/pressbooks/buckram/issues/411)) ([6a0460a](https://github.com/pressbooks/buckram/commit/6a0460a4e0e554e9a7547d5ca313a32d0dfe9a9b))
+
 ## [1.8.8](https://github.com/pressbooks/buckram/compare/v1.8.7...v1.8.8) (2025-10-02)
 
 

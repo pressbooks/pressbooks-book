@@ -113,15 +113,18 @@
   border-style: $textbox-border-style;
   border-width: if-map-get($textbox-border-width, $type);
   border-radius: if-map-get($textbox-border-radius, $type);
+  box-decoration-break: $box-decoration-break;
 
   ul {
     margin-top: $textbox-ul-margin-top;
     margin-bottom: $textbox-ul-margin-bottom;
+    padding-left: $textbox-ul-padding-left;
   }
 
   ol {
     margin-top: $textbox-ol-margin-top;
     margin-bottom: $textbox-ol-margin-bottom;
+    padding-left: $textbox-ol-padding-left;
   }
 
   li {

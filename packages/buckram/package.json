@@ -1,6 +1,6 @@
 {
   "name": "buckram",
-  "version": "1.8.8",
+  "version": "1.9.0",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "build": "composer install && composer test",
@@ -41,7 +41,15 @@
     "rules": {
       "no-descending-specificity": null,
       "no-duplicate-at-import-rules": null,
-      "scss/no-global-function-names": null
+      "scss/no-global-function-names": null,
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "first-of-group"
+          ]
+        }
+      ]
     }
   }
 }
