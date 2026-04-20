@@ -755,6 +755,13 @@ $blockquote-border-left-style: none !default;
 /// @since 1.0.0
 $blockquote-border-left-color: initial !default;
 
+/// Box decoration break behavior for elements that may span page breaks (textboxes, asides, blockquotes).
+/// Set to `clone` to restore Prince 15 behavior where borders, padding, and backgrounds
+/// are repeated on each page fragment. Prince 16+ defaults to `slice` per CSS spec.
+/// @type String
+/// @since 1.9.0
+$box-decoration-break: clone !default;
+
 /// Top margin for `<ol>` elements.
 /// @type String | Map
 $ol-margin-top: 1em !default;

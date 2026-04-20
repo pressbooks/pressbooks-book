@@ -19,6 +19,7 @@
     word-spacing: if-map-get($blockquote-word-spacing, $type);
     border-left: if-map-get($blockquote-border-left-width, $type) $blockquote-border-left-style;
     border-left-color: $blockquote-border-left-color;
+    box-decoration-break: $box-decoration-break;
     @if $type == 'prince' {
       line-height: $blockquote-line-height;
     }
