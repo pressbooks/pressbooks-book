@@ -80,12 +80,14 @@ class ActionsTest extends WP_UnitTestCase {
 	}
 
 	function test_register_h5p_listing_page_on_h5p_activation_registers_page() {
-		$result = register_h5p_listing_page_on_h5p_activation( 'h5p/h5p.php' );
+		register_h5p_listing_page_on_h5p_activation( 'h5p/h5p.php' );
 		if ( class_exists( 'H5P_Plugin' ) ) {
-			$this->assertIsInt( $result );
-			$this->assertGreaterThan( 0, $result );
+			$page = get_page_by_path( 'h5p-listing', OBJECT, 'page' );
+			$this->assertNotNull( $page );
+			$this->assertEquals( 'publish', $page->post_status );
 		} else {
-			$this->assertFalse( $result );
+			$page = get_page_by_path( 'h5p-listing', OBJECT, 'page' );
+			$this->assertNull( $page );
 		}
 	}
 
