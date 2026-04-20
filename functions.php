@@ -58,7 +58,7 @@ add_filter( 'pb_content_only', function ( $content_only ) {
 } );
 
 add_action( 'activated_plugin', '\PressbooksBook\Actions\register_h5p_listing_page_on_h5p_activation', 10, 2 );
-add_action( 'save_post_page', '\PressbooksBook\Actions\register_h5p_listing_page' );
+add_action( 'save_post', '\PressbooksBook\Actions\maybe_register_h5p_listing_page' );
 add_action( 'wp_enqueue_scripts', '\PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files' );
 add_action( 'pb_cache_delete', '\PressbooksBook\Actions\delete_cached_contents' );
 add_action( 'wp_enqueue_scripts', '\PressbooksBook\Actions\enqueue_assets' );

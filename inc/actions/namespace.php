@@ -319,6 +319,20 @@ function register_h5p_listing_page_on_h5p_activation( $plugin ) {
 }
 
 /**
+ * Register H5P listing page when a Pressbooks content type is saved.
+ *
+ * @since 2.9.2
+ * @param int $post_id Post ID.
+ */
+function maybe_register_h5p_listing_page( $post_id ) {
+	$post_type = get_post_type( $post_id );
+
+	if ( in_array( $post_type, [ 'chapter', 'front-matter', 'back-matter' ], true ) ) {
+		register_h5p_listing_page();
+	}
+}
+
+/**
  * Add H5P listing page.
  *
  * @since 2.9.2

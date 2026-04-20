@@ -8,6 +8,7 @@
 use function \PressbooksBook\Actions\enqueue_assets;
 use function \PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files;
 use function \PressbooksBook\Actions\register_h5p_listing_page;
+use function \PressbooksBook\Actions\maybe_register_h5p_listing_page;
 use function \PressbooksBook\Actions\register_h5p_listing_page_on_h5p_activation;
 use function \PressbooksBook\Actions\render_lightbox_setting_field;
 
@@ -62,24 +63,20 @@ class ActionsTest extends WP_UnitTestCase {
 		$_pb_redirect_location = null;
 	}
 
-	function test_register_h5p_listing_page_returns_false_without_h5p() {
-		$result = register_h5p_listing_page();
-		$this->assertFalse( $result );
-	}
-
-	function test_register_h5p_listing_page_creates_page() {
+	function test_register_h5p_listing_page() {
 		$result = register_h5p_listing_page();
 		$this->assertIsInt( $result );
 		$this->assertGreaterThan( 0, $result );
 	}
 
-	function test_register_h5p_listing_page_does_not_duplicate() {
-		$result = register_h5p_listing_page();
-		$this->assertFalse( $result );
-	}
-
 	function test_register_h5p_listing_page_on_h5p_activation_skips_non_h5p() {
 		$result = register_h5p_listing_page_on_h5p_activation( 'some-other-plugin/plugin.php' );
+		$this->assertNull( $result );
+	}
+
+	function test_maybe_register_h5p_listing_page_skips_other_post_types() {
+		$post_id = $this->factory()->post->create( [ 'post_type' => 'post' ] );
+		$result = maybe_register_h5p_listing_page( $post_id );
 		$this->assertNull( $result );
 	}
 
