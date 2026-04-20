@@ -65,8 +65,12 @@ class ActionsTest extends WP_UnitTestCase {
 
 	function test_register_h5p_listing_page() {
 		$result = register_h5p_listing_page();
-		$this->assertIsInt( $result );
-		$this->assertGreaterThan( 0, $result );
+		if ( class_exists( 'H5P_Plugin' ) ) {
+			$this->assertIsInt( $result );
+			$this->assertGreaterThan( 0, $result );
+		} else {
+			$this->assertFalse( $result );
+		}
 	}
 
 	function test_register_h5p_listing_page_on_h5p_activation_skips_non_h5p() {
