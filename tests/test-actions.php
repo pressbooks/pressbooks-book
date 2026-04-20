@@ -5,6 +5,10 @@
  * @package Pressbooks_Book
  */
 
+if ( ! class_exists( 'H5P_Plugin' ) ) {
+	class H5P_Plugin {}
+}
+
 use function \PressbooksBook\Actions\enqueue_assets;
 use function \PressbooksBook\Actions\enqueue_h5p_listing_bootstrap_files;
 use function \PressbooksBook\Actions\register_h5p_listing_page;
@@ -64,31 +68,27 @@ class ActionsTest extends WP_UnitTestCase {
 	}
 
 	function test_register_h5p_listing_page() {
-		$result = register_h5p_listing_page();
-		if ( class_exists( 'H5P_Plugin' ) ) {
-			$this->assertIsInt( $result );
-			$this->assertGreaterThan( 0, $result );
-			$this->assertFalse( register_h5p_listing_page() );
-		} else {
-			$this->assertFalse( $result );
+		$page = get_page_by_path( 'h5p-listing', OBJECT, 'page' );
+		if ( $page ) {
+			wp_delete_post( $page->ID, true );
 		}
+
+		$result = register_h5p_listing_page();
+		$this->assertIsInt( $result );
+		$this->assertGreaterThan( 0, $result );
+
+		$this->assertFalse( register_h5p_listing_page() );
 	}
 
 	function test_register_h5p_listing_page_on_h5p_activation_skips_non_h5p() {
-		$result = register_h5p_listing_page_on_h5p_activation( 'some-other-plugin/plugin.php' );
-		$this->assertNull( $result );
+		$this->assertNull( register_h5p_listing_page_on_h5p_activation( 'some-other-plugin/plugin.php' ) );
 	}
 
 	function test_register_h5p_listing_page_on_h5p_activation_registers_page() {
 		register_h5p_listing_page_on_h5p_activation( 'h5p/h5p.php' );
-		if ( class_exists( 'H5P_Plugin' ) ) {
-			$page = get_page_by_path( 'h5p-listing', OBJECT, 'page' );
-			$this->assertNotNull( $page );
-			$this->assertEquals( 'publish', $page->post_status );
-		} else {
-			$page = get_page_by_path( 'h5p-listing', OBJECT, 'page' );
-			$this->assertNull( $page );
-		}
+		$page = get_page_by_path( 'h5p-listing', OBJECT, 'page' );
+		$this->assertNotNull( $page );
+		$this->assertEquals( 'publish', $page->post_status );
 	}
 
 	function test_maybe_register_h5p_listing_page_skips_other_post_types() {
