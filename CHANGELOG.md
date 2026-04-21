@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.33.2](https://github.com/pressbooks/pressbooks-book/compare/2.33.1...2.33.2) (2026-04-20)
+
+
+### Bug Fixes
+
+* h5p listing page creation improvements ([#1436](https://github.com/pressbooks/pressbooks-book/issues/1436)) ([60aa204](https://github.com/pressbooks/pressbooks-book/commit/60aa204287f0a52d87e33397057ae81fd44574e2))
+* remove stray quotation mark ([#1430](https://github.com/pressbooks/pressbooks-book/issues/1430)) ([39e86d1](https://github.com/pressbooks/pressbooks-book/commit/39e86d1bd64b03cd5e4c5b487a497a330f9e53a2))
+
 ## [2.33.1](https://github.com/pressbooks/pressbooks-book/compare/2.33.0...2.33.1) (2026-04-09)
 
 

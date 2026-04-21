@@ -307,18 +307,51 @@ function enqueue_h5p_listing_bootstrap_files( $page = '' ) {
 }
 
 /**
- * Add H5P listing page
- * Fire on the plugin initialization.
+ * Register H5P listing page when the H5P plugin is activated.
+ *
+ * @since 2.9.2
+ * @param string $plugin Path to the activated plugin.
+ */
+function register_h5p_listing_page_on_h5p_activation( $plugin ) {
+	if ( 'h5p/h5p.php' === $plugin ) {
+		register_h5p_listing_page();
+	}
+}
+
+/**
+ * Register H5P listing page when a Pressbooks content type is saved.
+ *
+ * @since 2.9.2
+ * @param int $post_id Post ID.
+ */
+function maybe_register_h5p_listing_page( $post_id ) {
+	$post_type = get_post_type( $post_id );
+
+	if ( in_array( $post_type, [ 'chapter', 'front-matter', 'back-matter' ], true ) ) {
+		register_h5p_listing_page();
+	}
+}
+
+/**
+ * Add H5P listing page.
  *
  * @since 2.9.2
  */
 function register_h5p_listing_page() {
-	global $wpdb;
+	if ( ! class_exists( 'H5P_Plugin' ) ) {
+		return false;
+	}
 
 	$post_name = 'h5p-listing';
 	$post_title = __( 'H5P listing', 'pressbooks-book' );
 	$post_type = 'page';
 	$user_id = 1;
+
+	$exists = get_page_by_path( $post_name, OBJECT, $post_type );
+
+	if ( $exists && $exists->post_status === 'publish' ) {
+		return false;
+	}
 
 	$data = [
 		'post_title' => $post_title,
@@ -332,19 +365,5 @@ function register_h5p_listing_page() {
 		'tags_input' => __( 'Default Data', 'pressbooks-book' ),
 	];
 
-	$exists = $wpdb->get_var(
-		$wpdb->prepare(
-			"SELECT ID FROM {$wpdb->posts} WHERE post_title = %s AND post_type = %s AND post_name = %s AND post_status = 'publish' ", [
-				$post_title,
-				$post_type,
-				$post_name,
-			]
-		)
-	);
-
-	if ( empty( $exists ) ) {
-		return wp_insert_post( $data, true );
-	}
-
-	return false;
+	return wp_insert_post( $data, true );
 }
