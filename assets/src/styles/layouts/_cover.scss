@@ -153,6 +153,12 @@
   display: flex;
   margin-top: 1rem;
 
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   svg {
     width: 1.875rem;
     height: 2.25rem;
