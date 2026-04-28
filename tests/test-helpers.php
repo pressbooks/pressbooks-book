@@ -274,4 +274,18 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertStringContainsString( '<p>Test paragraph</p>', $sanitized_html );
 		$this->assertStringNotContainsString( '<script>', $sanitized_html );
 	}
+
+	function test_ci_token_header_is_injected_when_env_set() {
+		putenv( 'X_PB_CI_TOKEN=test-secret-token' );
+		$args = apply_filters( 'http_request_args', [ 'headers' => [] ] );
+		$this->assertArrayHasKey( 'x-pb-ci-token', $args['headers'] );
+		$this->assertEquals( 'test-secret-token', $args['headers']['x-pb-ci-token'] );
+		putenv( 'X_PB_CI_TOKEN' );
+	}
+
+	function test_ci_token_header_not_injected_when_env_unset() {
+		putenv( 'X_PB_CI_TOKEN' );
+		$args = apply_filters( 'http_request_args', [ 'headers' => [] ] );
+		$this->assertArrayNotHasKey( 'x-pb-ci-token', $args['headers'] );
+	}
 }
