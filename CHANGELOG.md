@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.33.3](https://github.com/pressbooks/pressbooks-book/compare/2.33.2...2.33.3) (2026-04-28)
+
+
+### Bug Fixes
+
+* focus social links ([#1439](https://github.com/pressbooks/pressbooks-book/issues/1439)) ([d19dadd](https://github.com/pressbooks/pressbooks-book/commit/d19daddccc132181a7c651cd9d4b781a772ee498))
+
 ## [2.33.2](https://github.com/pressbooks/pressbooks-book/compare/2.33.1...2.33.2) (2026-04-20)
 
 
