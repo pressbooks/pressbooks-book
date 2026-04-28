@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.1](https://github.com/pressbooks/buckram/compare/v1.9.0...v1.9.1) (2026-04-28)
+
+
+### Bug Fixes
+
+* **deps:** bump pressbooks-build-tools to v6 ([#408](https://github.com/pressbooks/buckram/issues/408)) ([893d388](https://github.com/pressbooks/buckram/commit/893d38867cc0ce6b703438ea212ce824c7c939d6))
+* set tag types for TOC properly in PDF exports ([#395](https://github.com/pressbooks/buckram/issues/395)) ([b9ecded](https://github.com/pressbooks/buckram/commit/b9ecdedd5366a0bb982b20eed3283224ac3ccef8))
+
 ## [1.9.0](https://github.com/pressbooks/buckram/compare/v1.8.8...v1.9.0) (2026-04-15)
 
 

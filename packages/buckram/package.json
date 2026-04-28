@@ -1,14 +1,15 @@
 {
   "name": "buckram",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Opinionated SCSS components for books (web, EPUB and PDF).",
   "scripts": {
     "build": "composer install && composer test",
-    "diff": "npm run -s build && mocha",
+    "diff": "run-s build mocha",
     "docs": "cross-env NODE_ENV=development node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
-    "lint": "npm run -s lint:styles",
-    "lint:styles": "stylelint 'assets/styles/**/*.scss'",
-    "test": "npm run -s lint && npm run -s build"
+    "lint": "pressbooks-build-tools lint:styles 'assets/styles/**/*.scss'",
+    "fix": "pressbooks-build-tools fix:styles 'assets/styles/**/*.scss'",
+    "mocha": "mocha",
+    "test": "run-s lint build"
   },
   "repository": {
     "type": "git",
@@ -26,18 +27,16 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^10.0.0",
+    "npm-run-all2": "^8.0.4",
     "pixelmatch": "^5.2.1",
     "polyserve": "^0.27.15",
-    "pressbooks-build-tools": "^4.0.0",
+    "pressbooks-build-tools": "^6.0.0",
     "puppeteer": "^23.6.0",
     "sassdoc": "^2.7.1",
     "type-detect": "^4.0.8"
   },
-  "eslintConfig": {
-    "extends": "./node_modules/pressbooks-build-tools/config/eslint.js"
-  },
   "stylelint": {
-    "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
+    "extends": "pressbooks-build-tools/stylelint",
     "rules": {
       "no-descending-specificity": null,
       "no-duplicate-at-import-rules": null,
