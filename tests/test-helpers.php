@@ -72,13 +72,13 @@ class HelpersTest extends WP_UnitTestCase {
 		update_option('pressbooks_theme_options_web', ['social_media_options' => [
 			'twitter',
 		]]);
-		$this->assertStringStartsWith( '<a class="sharer" data-sharer="twitter" data-title="Check out this great book published with Pressbooks."', share_icons() );
+		$this->assertStringStartsWith( '<a href="#" class="sharer" data-sharer="twitter" data-title="Check out this great book published with Pressbooks."', share_icons() );
 		$this->assertStringNotContainsString( 'linkedin', share_icons() );
 		update_option('pressbooks_theme_options_web', ['social_media_options' => [
 			'twitter',
 			'linkedin',
 		]]);
-		$this->assertStringContainsString( '<a class="sharer" data-sharer="linkedin" data-title="Check out this great book published with Pressbooks."', share_icons() );
+		$this->assertStringContainsString( '<a href="#" class="sharer" data-sharer="linkedin" data-title="Check out this great book published with Pressbooks."', share_icons() );
 	}
 
 	function test_display_menu() {
@@ -273,5 +273,19 @@ class HelpersTest extends WP_UnitTestCase {
 		$sanitized_html = wp_kses( $html, $allowed_html );
 		$this->assertStringContainsString( '<p>Test paragraph</p>', $sanitized_html );
 		$this->assertStringNotContainsString( '<script>', $sanitized_html );
+	}
+
+	function test_ci_token_header_is_injected_when_env_set() {
+		putenv( 'X_PB_CI_TOKEN=test-secret-token' );
+		$args = apply_filters( 'http_request_args', [ 'headers' => [] ] );
+		$this->assertArrayHasKey( 'x-pb-ci-token', $args['headers'] );
+		$this->assertEquals( 'test-secret-token', $args['headers']['x-pb-ci-token'] );
+		putenv( 'X_PB_CI_TOKEN' );
+	}
+
+	function test_ci_token_header_not_injected_when_env_unset() {
+		putenv( 'X_PB_CI_TOKEN' );
+		$args = apply_filters( 'http_request_args', [ 'headers' => [] ] );
+		$this->assertArrayNotHasKey( 'x-pb-ci-token', $args['headers'] );
 	}
 }

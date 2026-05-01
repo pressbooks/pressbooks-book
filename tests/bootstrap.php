@@ -69,6 +69,19 @@ function _register_theme() {
 		return $current_theme;
 	});
 }
+function _add_ci_token_to_http_requests( $args ) {
+	$token = getenv( 'X_PB_CI_TOKEN' );
+	if ( ! $token ) {
+		return $args;
+	}
+	if ( ! isset( $args['headers'] ) || ! is_array( $args['headers'] ) ) {
+		$args['headers'] = [];
+	}
+	$args['headers']['x-pb-ci-token'] = $token;
+	return $args;
+}
+tests_add_filter( 'http_request_args', '_add_ci_token_to_http_requests' );
+
 tests_add_filter( 'muplugins_loaded', '_register_theme' );
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
 

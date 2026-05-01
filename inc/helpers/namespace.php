@@ -192,7 +192,7 @@ function share_icons() {
 	if ( in_array( 'twitter', $enabled_options, true ) ) {
 		// If setting is enabled, display X/Twitter share button
 		$icons .= sprintf(
-			'<a class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-hashtags="%3$s">
+			'<a href="#" class="sharer" data-sharer="twitter" data-title="%1$s" data-url="%2$s" data-hashtags="%3$s">
             <svg role="img" aria-labelledby="twitter-logo" class="icon--svg">
                 <title id="twitter-logo">' . esc_html__( 'Share on X', 'pressbooks-book' ) . '</title>
                 <use href="#twitter"/>
@@ -207,7 +207,7 @@ function share_icons() {
 	if ( in_array( 'linkedin', $enabled_options, true ) ) {
 		// If setting is enabled, display LinkedIn share button
 		$icons .= sprintf(
-			'<a class="sharer" data-sharer="linkedin" data-title="%1$s" data-url="%2$s">
+			'<a href="#" class="sharer" data-sharer="linkedin" data-title="%1$s" data-url="%2$s">
             <svg role="img" aria-labelledby="linkedin-logo" class="icon--svg">
                 <title id="linkedin-logo">' . esc_html__( 'Share on LinkedIn', 'pressbooks-book' ) . '</title>
                 <use href="#linkedin-icon"/>
@@ -221,7 +221,7 @@ function share_icons() {
 	// If setting is enabled, display email share button
 	if ( in_array( 'email', $enabled_options, true ) ) {
 		$icons .= sprintf(
-			'<a class="sharer" data-sharer="email" data-title="%1$s" data-url="%2$s" data-via="pressbooks">
+			'<a href="#" class="sharer" data-sharer="email" data-title="%1$s" data-url="%2$s" data-via="pressbooks">
             <svg role="img" aria-labelledby="email-logo" class="icon--svg">
                 <title id="email-logo">' . esc_html__( 'Share via Email', 'pressbooks-book' ) . '</title>
                 <use href="#email"/>
