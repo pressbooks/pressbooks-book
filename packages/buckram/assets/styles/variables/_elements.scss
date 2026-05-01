@@ -760,7 +760,7 @@ $blockquote-border-left-color: initial !default;
 /// are repeated on each page fragment. Prince 16+ defaults to `slice` per CSS spec.
 /// @type String
 /// @since 1.9.0
-$box-decoration-break: clone !default;
+$box-decoration-break: slice !default;
 
 /// Top margin for `<ol>` elements.
 /// @type String | Map
