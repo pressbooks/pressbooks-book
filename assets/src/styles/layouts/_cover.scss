@@ -154,6 +154,7 @@
   margin-top: 1rem;
 
   a {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,9 +179,6 @@
     }
   }
 
-  a {
-    cursor: pointer;
-  }
 }
 
 .book-header__share.book-header__cover__share {

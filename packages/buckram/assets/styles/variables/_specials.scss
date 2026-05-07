@@ -204,6 +204,12 @@ $endnote-ol-margin-top: 0.4em !default;
 /// @type String
 $endnote-ol-margin-left: 0 !default;
 
+/// Left padding on ordered lists within endnotes on `<ol>` elements that are children of elements with a class of `endnotes`.
+/// Required for correct list indentation in Prince 16+ which uses padding-based list indentation.
+/// @type String
+/// @since 1.9.0
+$endnote-ol-padding-left: 0 !default;
+
 /// Font size on ordered lists within endnotes on `<ol>` elements that are children of elements with a class of `endnotes`.
 /// @type String
 $endnote-ol-font-size: 0.85em !default;
@@ -690,6 +696,12 @@ $textbox-ol-margin-top: 1em !default;
 /// @since 1.0.0
 $textbox-ol-margin-bottom: 0.75em !default;
 
+/// Textbox left padding on `<ol>` elements that are children of elements with a class of `textbox`.
+/// Required for correct list indentation in Prince 16+ which uses padding-based list indentation.
+/// @type String
+/// @since 1.9.0
+$textbox-ol-padding-left: 1em !default;
+
 /// Textbox header top margin on `<ul>` elements that are children of elements with a class of `textbox`.
 /// @type String
 /// @since 1.0.0
@@ -699,6 +711,12 @@ $textbox-ul-margin-top: 1em !default;
 /// @type String
 /// @since 1.0.0
 $textbox-ul-margin-bottom: 0.75em !default;
+
+/// Textbox left padding on `<ul>` elements that are children of elements with a class of `textbox`.
+/// Required for correct list indentation in Prince 16+ which uses padding-based list indentation.
+/// @type String
+/// @since 1.9.0
+$textbox-ul-padding-left: 1em !default;
 
 /// Textbox header left margin on `<li>` elements that are children of elements with a class of `textbox`.
 /// @type String

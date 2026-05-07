@@ -58,6 +58,14 @@ $first-running-content-position: null !default;
 // $first-running-content-position: 'bottom-outside' !default;
 // TODO: Handle other positions based on recto-verso
 
+/// Page pseudo-class used for the first page of each section group.
+/// Prince 16+ uses 'first-of-group', Prince 15 and earlier use 'first'.
+/// Set to 'first' to restore Prince 15 behavior where the first page
+/// of each named page group was matched by :first.
+/// @type String
+/// @since 1.10.0
+$first-page-pseudo: 'first-of-group' !default;
+
 // Finally, for the running separator, it either exists or it doesn't,
 // so choose between two options (null, or defined content):
 

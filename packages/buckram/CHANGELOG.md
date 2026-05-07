@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.10.0](https://github.com/pressbooks/buckram/compare/v1.9.1...v1.10.0) (2026-05-06)
+
+
+### Features
+
+* new dynamic parameters ([#415](https://github.com/pressbooks/buckram/issues/415)) ([a71a7ef](https://github.com/pressbooks/buckram/commit/a71a7ef72c29873793d029d6348a5c3113a488b7))
+
+## [1.9.1](https://github.com/pressbooks/buckram/compare/v1.9.0...v1.9.1) (2026-04-28)
+
+
+### Bug Fixes
+
+* **deps:** bump pressbooks-build-tools to v6 ([#408](https://github.com/pressbooks/buckram/issues/408)) ([893d388](https://github.com/pressbooks/buckram/commit/893d38867cc0ce6b703438ea212ce824c7c939d6))
+* set tag types for TOC properly in PDF exports ([#395](https://github.com/pressbooks/buckram/issues/395)) ([b9ecded](https://github.com/pressbooks/buckram/commit/b9ecdedd5366a0bb982b20eed3283224ac3ccef8))
+
+## [1.9.0](https://github.com/pressbooks/buckram/compare/v1.8.8...v1.9.0) (2026-04-15)
+
+
+### Features
+
+* prince 16 support ([#411](https://github.com/pressbooks/buckram/issues/411)) ([6a0460a](https://github.com/pressbooks/buckram/commit/6a0460a4e0e554e9a7547d5ca313a32d0dfe9a9b))
+
 ## [1.8.8](https://github.com/pressbooks/buckram/compare/v1.8.7...v1.8.8) (2025-10-02)
 
 

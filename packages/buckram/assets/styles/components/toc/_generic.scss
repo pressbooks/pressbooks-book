@@ -252,10 +252,14 @@
     }
 
     ul {
+      /* stylelint-disable-next-line value-keyword-case */
+      -prince-pdf-tag-type: TOC;
       counter-reset: chapter;
     }
 
     li {
+      /* stylelint-disable-next-line value-keyword-case */
+      -prince-pdf-tag-type: TOCI;
       page-break-inside: avoid;
       position: relative;
     }

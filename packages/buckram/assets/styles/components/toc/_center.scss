@@ -36,6 +36,16 @@
 
 @if $type == 'prince' {
   #toc {
+    ul {
+      /* stylelint-disable-next-line value-keyword-case */
+      -prince-pdf-tag-type: TOC;
+    }
+
+    li {
+      /* stylelint-disable-next-line value-keyword-case */
+      -prince-pdf-tag-type: TOCI;
+    }
+
     a::after {
       display: $toc-center-page-number-display;
     }
