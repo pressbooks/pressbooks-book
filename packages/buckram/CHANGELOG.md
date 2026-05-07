@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/pressbooks/buckram/compare/v1.9.1...v1.10.0) (2026-05-06)
+
+
+### Features
+
+* new dynamic parameters ([#415](https://github.com/pressbooks/buckram/issues/415)) ([a71a7ef](https://github.com/pressbooks/buckram/commit/a71a7ef72c29873793d029d6348a5c3113a488b7))
+
 ## [1.9.1](https://github.com/pressbooks/buckram/compare/v1.9.0...v1.9.1) (2026-04-28)
 
 
