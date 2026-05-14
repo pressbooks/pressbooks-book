@@ -538,9 +538,9 @@ function get_links( $echo = true ) {
 			<?php if ( $prev_chapter !== '/' ) { ?>
 				<?php /* translators: %s: post title */ ?>
 				<a href="<?php echo $prev_chapter; ?>">
-					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-left" /></svg>
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false" width="512" height="410"><use href="#arrow-left" /></svg>
 					<?php /* translators: %s: post short title or title */ ?>
-					<?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?>
+					<span class="nav-reading__label"><?php printf( __( 'Previous: %s', 'pressbooks-book' ), $prev_label ); ?></span>
 				</a>
 			<?php } ?>
 		</div>
@@ -549,13 +549,13 @@ function get_links( $echo = true ) {
 				<?php /* translators: %s: post title, */ ?>
 				<a href="<?php echo $next_chapter ?>">
 					<?php /* translators: %s: post short title or title */ ?>
-					<?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?>
-					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false"><use href="#arrow-right" /></svg>
+					<span class="nav-reading__label"><?php printf( __( 'Next: %s', 'pressbooks-book' ), $next_label ); ?></span>
+					<svg class="icon--svg" role="none" aria-hidden="true" focusable="false" width="512" height="410"><use href="#arrow-right" /></svg>
 				</a>
 			<?php endif; ?>
 		</div>
 		<button class="nav-reading__up" >
-			<svg class="icon--svg"><use href="#arrow-up" /></svg>
+			<svg class="icon--svg" width="410" height="512"><use href="#arrow-up" /></svg>
 			<span class="screen-reader-text"><?php _e( 'Back to top', 'pressbooks-book' ); ?></span>
 		</button>
 		</nav>
