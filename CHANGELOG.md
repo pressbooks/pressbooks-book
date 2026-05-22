@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.34.0](https://github.com/pressbooks/pressbooks-book/compare/2.33.3...2.34.0) (2026-05-22)
+
+
+### Features
+
+* prince 16 support ([#1437](https://github.com/pressbooks/pressbooks-book/issues/1437)) ([8a6b0ca](https://github.com/pressbooks/pressbooks-book/commit/8a6b0ca95e596ca2c7f7cf3fb729a9d843341120))
+
+
+### Bug Fixes
+
+* improve alt text for logo image ([#1452](https://github.com/pressbooks/pressbooks-book/issues/1452)) ([73bb99c](https://github.com/pressbooks/pressbooks-book/commit/73bb99ca11105f701eb5f83801663543f5901138))
+
 ## [2.33.3](https://github.com/pressbooks/pressbooks-book/compare/2.33.2...2.33.3) (2026-04-28)
 
 
