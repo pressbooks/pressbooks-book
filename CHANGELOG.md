@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.34.1](https://github.com/pressbooks/pressbooks-book/compare/2.34.0...2.34.1) (2026-05-27)
+
+
+### Chores
+
+* update deps ([#1456](https://github.com/pressbooks/pressbooks-book/issues/1456)) ([95ec0c6](https://github.com/pressbooks/pressbooks-book/commit/95ec0c686becaf55a7922e8fc9c660582c2c3b62))
+
 ## [2.34.0](https://github.com/pressbooks/pressbooks-book/compare/2.33.3...2.34.0) (2026-05-22)
 
 
