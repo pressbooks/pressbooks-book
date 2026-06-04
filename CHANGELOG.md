@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.34.2](https://github.com/pressbooks/pressbooks-book/compare/2.34.1...2.34.2) (2026-06-01)
+
+
+### Bug Fixes
+
+* **a11y:** resolve issue with reflow (resolves [#1053](https://github.com/pressbooks/pressbooks-book/issues/1053)) ([#1445](https://github.com/pressbooks/pressbooks-book/issues/1445)) ([1aebeb5](https://github.com/pressbooks/pressbooks-book/commit/1aebeb5d0152b2352b398969bea2f0a607721ed7))
+
 ## [2.34.1](https://github.com/pressbooks/pressbooks-book/compare/2.34.0...2.34.1) (2026-05-27)
 
 
