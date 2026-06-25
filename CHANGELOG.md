@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.34.3](https://github.com/pressbooks/pressbooks-book/compare/2.34.2...2.34.3) (2026-06-25)
+
+
+### Bug Fixes
+
+* links accessibility ([#1464](https://github.com/pressbooks/pressbooks-book/issues/1464)) ([c7e124d](https://github.com/pressbooks/pressbooks-book/commit/c7e124d28d0110d4b0b78c59356f81376a2623b2))
+
+
+### Chores
+
+* update class existence check for assets ([#1462](https://github.com/pressbooks/pressbooks-book/issues/1462)) ([76fdbd6](https://github.com/pressbooks/pressbooks-book/commit/76fdbd63a437d8f195f028c29cb3dbf062e2d4f2))
+
 ## [2.34.2](https://github.com/pressbooks/pressbooks-book/compare/2.34.1...2.34.2) (2026-06-01)
 
 
