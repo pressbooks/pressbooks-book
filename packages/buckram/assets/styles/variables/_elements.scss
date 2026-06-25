@@ -1280,7 +1280,7 @@ $sup-line-height: $sup-sub-line-height !default;
 /// Text decoration for `<a>` elements.
 /// @type String
 $link-text-decoration: (
-  epub: none,
+  epub: underline,
   prince: underline,
   web: underline
 ) !default;

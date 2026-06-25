@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.10.2](https://github.com/pressbooks/buckram/compare/v1.10.1...v1.10.2) (2026-06-25)
+
+
+### Bug Fixes
+
+* keep wrapped links clickable and single-tagged in PDF export ([#425](https://github.com/pressbooks/buckram/issues/425)) ([b5fd4cc](https://github.com/pressbooks/buckram/commit/b5fd4cc38be3583069efaeea462832298712bb46))
+
+## [1.10.1](https://github.com/pressbooks/buckram/compare/v1.10.0...v1.10.1) (2026-06-16)
+
+
+### Bug Fixes
+
+* links should be underlined by default for all formats (fix [#419](https://github.com/pressbooks/buckram/issues/419)) ([#420](https://github.com/pressbooks/buckram/issues/420)) ([c0653ad](https://github.com/pressbooks/buckram/commit/c0653ad45a6a6dff99089623eb2cf4ed5901323a))
+* prevent hyphenation within links (see pressbooks/pressbooks[#2512](https://github.com/pressbooks/buckram/issues/2512)) ([#422](https://github.com/pressbooks/buckram/issues/422)) ([be1fb8f](https://github.com/pressbooks/buckram/commit/be1fb8f199e7f477962eec969f558561711806c1))
+
 ## [1.10.0](https://github.com/pressbooks/buckram/compare/v1.9.1...v1.10.0) (2026-05-06)
 
 
