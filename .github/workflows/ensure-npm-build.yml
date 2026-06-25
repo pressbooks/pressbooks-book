@@ -7,3 +7,5 @@ on:
 jobs:
   update-npm-build:
     uses: pressbooks/reusable-workflows/.github/workflows/npm-build.yml@main
+    secrets:
+      PAT_FOR_GITHUB_ACTIONS: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
