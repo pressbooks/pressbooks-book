@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.34.4](https://github.com/pressbooks/pressbooks-book/compare/2.34.3...2.34.4) (2026-07-07)
+
+
+### Chores
+
+* **l10n:** update languages ([#1417](https://github.com/pressbooks/pressbooks-book/issues/1417)) ([b1cf082](https://github.com/pressbooks/pressbooks-book/commit/b1cf0828c67acd19e1df7805eac6c019bddde132))
+
 ## [2.34.3](https://github.com/pressbooks/pressbooks-book/compare/2.34.2...2.34.3) (2026-06-25)
 
 
