@@ -16,16 +16,11 @@
 }
 
 @if $type == 'prince' {
-  // Render each anchor as a single atomic box so PrinceXML emits one PDF link
-  // rectangle (and one OBJR tag) for the whole anchor, even when a long URL
-  // wraps across lines. This keeps the entire URL clickable
-  // (pressbooks/pressbooks#2512) and stops screen readers repeating the link
-  // from duplicate OBJR tags (pressbooks/private#2394). max-width and
-  // overflow-wrap let the URL wrap inside the box instead of overflowing.
   a {
     display: inline-block;
-    max-width: 100%;
     overflow-wrap: break-word;
+    text-indent: 0;
+    max-width: 100%;
   }
 
   .print a {

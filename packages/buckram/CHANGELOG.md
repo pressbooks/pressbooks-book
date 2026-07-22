@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.3](https://github.com/pressbooks/buckram/compare/v1.10.2...v1.10.3) (2026-07-22)
+
+
+### Bug Fixes
+
+* rendering links indent ([#433](https://github.com/pressbooks/buckram/issues/433)) ([7c5ace3](https://github.com/pressbooks/buckram/commit/7c5ace38a06bda84d36a500b1be26d6df0e6383f))
+
 ## [1.10.2](https://github.com/pressbooks/buckram/compare/v1.10.1...v1.10.2) (2026-06-25)
 
 
