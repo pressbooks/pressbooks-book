@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.35.0](https://github.com/pressbooks/pressbooks-book/compare/2.34.4...2.35.0) (2026-07-23)
+
+
+### Features
+
+* modify downloads div to include data-nosnippet attribute ([#1467](https://github.com/pressbooks/pressbooks-book/issues/1467)) ([5fc36f1](https://github.com/pressbooks/pressbooks-book/commit/5fc36f1294f6a13768af3dd816baccadb137bfda))
+
+
+### Bug Fixes
+
+* text indent on prince links ([#1469](https://github.com/pressbooks/pressbooks-book/issues/1469)) ([e3afb0b](https://github.com/pressbooks/pressbooks-book/commit/e3afb0b4ee080408d7a202aa4ce4bdcf9555c88a))
+
+
+### Chores
+
+* bump buckram version ([#1471](https://github.com/pressbooks/pressbooks-book/issues/1471)) ([70da103](https://github.com/pressbooks/pressbooks-book/commit/70da103f81d1eb145885bc4202ed6730acd8960c))
+
 ## [2.34.4](https://github.com/pressbooks/pressbooks-book/compare/2.34.3...2.34.4) (2026-07-07)
 
 
