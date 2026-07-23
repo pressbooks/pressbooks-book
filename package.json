@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"aetna": "^1.1.0",
-		"buckram": "^1.10.3",
+		"buckram": "^1.10.4",
 		"details-element-polyfill": "^2.4.0",
 		"lity": "^2.4.0",
 		"sharer.js": "^0.5.1",
