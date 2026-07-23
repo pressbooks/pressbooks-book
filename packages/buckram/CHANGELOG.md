@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.4](https://github.com/pressbooks/buckram/compare/v1.10.3...v1.10.4) (2026-07-23)
+
+
+### Bug Fixes
+
+* toc display with inline block for a single clickable OBJR ([#437](https://github.com/pressbooks/buckram/issues/437)) ([7e62a6a](https://github.com/pressbooks/buckram/commit/7e62a6a6de8b47bb771e5555363a6b3da5680d80))
+
 ## [1.10.3](https://github.com/pressbooks/buckram/compare/v1.10.2...v1.10.3) (2026-07-22)
 
 
