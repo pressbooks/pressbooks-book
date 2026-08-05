@@ -10,8 +10,8 @@ if ( ! isset( $book_subsections ) ) {
 
 // Setup TOC specific variables
 global $blog_id;
-$can_read = current_user_can_for_blog( $blog_id, 'read' );
-$can_read_private = current_user_can_for_blog( $blog_id, 'read_private_posts' );
+$can_read = current_user_can_for_site( $blog_id, 'read' );
+$can_read_private = current_user_can_for_site( $blog_id, 'read_private_posts' );
 $permissive_private_content = (int) get_option( 'permissive_private_content', 0 );
 $options = get_option( 'pressbooks_theme_options_global' );
 $part_numbers = $options['chapter_numbers'] ?? false; ?>
