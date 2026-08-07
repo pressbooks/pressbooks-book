@@ -590,7 +590,7 @@ function social_media_enabled() {
 function is_book_public() {
 	global $blog_id;
 	$blog_public = absint( get_option( 'blog_public' ) );
-	if ( $blog_public === 1 || $blog_public === 0 && current_user_can_for_blog( $blog_id, 'read' ) ) {
+	if ( $blog_public === 1 || $blog_public === 0 && current_user_can_for_site( $blog_id, 'read' ) ) {
 		return true;
 	}
 	return false;

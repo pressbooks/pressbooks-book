@@ -46,6 +46,27 @@ class HelpersTest extends WP_UnitTestCase {
 		$this->assertEquals( 'Word', $output );
 	}
 
+	/**
+	 * Characterization test guarding is_book_public() across the
+	 * current_user_can_for_blog() -> current_user_can_for_site() swap (the
+	 * former was deprecated in WP 6.7.0). Covers both branches: a public book
+	 * is public to anyone; a private book is public only to a user who can read.
+	 *
+	 * @group wp7
+	 */
+	function test_is_book_public_reflects_blog_public_and_read_capability() {
+		// Public book: public regardless of the current user.
+		update_option( 'blog_public', 1 );
+		wp_set_current_user( 0 );
+		$this->assertTrue( is_book_public() );
+
+		// Private book: public only via the per-site read-capability check.
+		update_option( 'blog_public', 0 );
+		$admin = $this->factory()->user->create( [ 'role' => 'administrator' ] );
+		wp_set_current_user( $admin );
+		$this->assertTrue( is_book_public() );
+	}
+
 	function test_license_to_icons() {
 		$output = license_to_icons( 'cc-by' );
 		$this->assertEquals( '<svg class="icon" style="fill: currentColor" role="presentation"><use href="#cc" /></svg><svg class="icon" style="fill: currentColor" role="presentation"><use href="#cc-by" /></svg>', $output );
