@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.36.0](https://github.com/pressbooks/pressbooks-book/compare/2.35.0...2.36.0) (2026-08-11)
+
+
+### Features
+
+* WP 7.x support ([#1472](https://github.com/pressbooks/pressbooks-book/issues/1472)) ([2ecca6a](https://github.com/pressbooks/pressbooks-book/commit/2ecca6a5f0fd4ad3ec3bd54683ed6e17946bd1eb))
+
+
+### Chores
+
+* **l10n:** update languages ([#1466](https://github.com/pressbooks/pressbooks-book/issues/1466)) ([d3f2a78](https://github.com/pressbooks/pressbooks-book/commit/d3f2a78562380640fc618cae4c191080a44a3bda))
+
 ## [2.35.0](https://github.com/pressbooks/pressbooks-book/compare/2.34.4...2.35.0) (2026-07-23)
 
 
