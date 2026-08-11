@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-03-13T22:10:15+00:00\n"
-"PO-Revision-Date: 2026-06-11 00:28\n"
+"PO-Revision-Date: 2026-08-06 00:16\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pressbooks-book\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -607,7 +607,7 @@ msgstr "Acheter le livre"
 
 #: partials/content-cover-book-info.php:2
 msgid "Book Information"
-msgstr "Information sur le livre"
+msgstr "Informations du livre"
 
 #: partials/content-cover-book-info.php:23
 msgid "Book Source"
@@ -675,7 +675,7 @@ msgstr "Page suivante"
 msgid "About the author"
 msgid_plural "About the authors"
 msgstr[0] "À propos de l'auteur"
-msgstr[1] "À propos des auteurs"
+msgstr[1] "À propos des auteur·rices"
 
 #: private.php:4
 msgid "Access Denied"
