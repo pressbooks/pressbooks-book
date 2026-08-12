@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.36.1](https://github.com/pressbooks/pressbooks-book/compare/2.36.0...2.36.1) (2026-08-12)
+
+
+### Bug Fixes
+
+* update minimum required versions ([#1474](https://github.com/pressbooks/pressbooks-book/issues/1474)) ([64542f6](https://github.com/pressbooks/pressbooks-book/commit/64542f6bcfe13265d4e7b609f326681281e76d56))
+
 ## [2.36.0](https://github.com/pressbooks/pressbooks-book/compare/2.35.0...2.36.0) (2026-08-11)
 
 
