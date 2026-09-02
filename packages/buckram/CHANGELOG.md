@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.5](https://github.com/pressbooks/buckram/compare/v1.10.4...v1.10.5) (2026-09-02)
+
+
+### Bug Fixes
+
+* let links wrap naturally in PDF export ([#445](https://github.com/pressbooks/buckram/issues/445)) ([f9beb20](https://github.com/pressbooks/buckram/commit/f9beb201eb1c945163a5f1d3d5a280eb868e88b4))
+
 ## [1.10.4](https://github.com/pressbooks/buckram/compare/v1.10.3...v1.10.4) (2026-07-23)
 
 

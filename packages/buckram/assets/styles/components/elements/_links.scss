@@ -8,19 +8,21 @@
 
 @import "../utilities";
 
+// Links never hyphenate, in exports or the webbook
+a {
+  hyphens: none;
+}
+
 @if $type != 'web' {
   a {
-    hyphens: none;
     text-decoration: if-map-get($link-text-decoration, $type);
   }
 }
 
 @if $type == 'prince' {
+  // Links wrap naturally; long URLs break mid-word without hyphens
   a {
-    display: inline-block;
     overflow-wrap: break-word;
-    text-indent: 0;
-    max-width: 100%;
   }
 
   .print a {
