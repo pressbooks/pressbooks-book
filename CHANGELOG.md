@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.36.2](https://github.com/pressbooks/pressbooks-book/compare/2.36.1...2.36.2) (2026-09-02)
+
+
+### Chores
+
+* bump buckram ([#1476](https://github.com/pressbooks/pressbooks-book/issues/1476)) ([21b06bb](https://github.com/pressbooks/pressbooks-book/commit/21b06bb80c6eb0fe1902e663f72cc883083b7c75))
+
 ## [2.36.1](https://github.com/pressbooks/pressbooks-book/compare/2.36.0...2.36.1) (2026-08-12)
 
 
