@@ -62,6 +62,8 @@ Cherry Swash is Copyright (c) Nataliya Kasatkina and is released under the SIL O
 Cinzel is Copyright (c) Natanael Gama and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Cinzel
 
+Cormorant Garamond is Copyright (c) 2015 the Cormorant Project Authors (github.com/CatharsisFonts/Cormorant) and is licensed under the SIL Open Font License, Version 1.1.
+
 Covered By Your Grace is Copyright (c) Kimberly Geswein and is released under the SIL Open Font License 1.1.
 @see: https://www.google.com/fonts/specimen/Covered+By+Your+Grace
 
