@@ -3,14 +3,16 @@ if ( ! apply_filters( 'pb_content_only', false ) ) {
 	edit_post_link( __( 'Edit', 'pressbooks-book' ), '<div class="edit-link">', '</div>', $post->ID, 'call-to-action' );
 }
 ?>
-<h2 class="entry-title"><?php
+<h2 class="entry-title">
+<?php
 if ( $number ) {
 	echo "<span class=\"number\">$number</span>  ";
 }
 if ( get_post_meta( $post->ID, 'pb_show_title', true ) || $post->post_type === 'part' ) {
 	the_title();
 }
-?></h2>
+?>
+</h2>
 <div id="post-<?php the_ID(); ?>" <?php post_class( pb_get_section_type( $post ) ); ?>>
 <div class="entry-content">
 <?php
