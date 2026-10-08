@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.36.3](https://github.com/pressbooks/pressbooks-book/compare/2.36.2...2.36.3) (2026-09-22)
+
+
+### Bug Fixes
+
+* move chapter edit link to top in legacy partial ([#1479](https://github.com/pressbooks/pressbooks-book/issues/1479)) ([827413a](https://github.com/pressbooks/pressbooks-book/commit/827413a0cf7ecf79a4fc5d5c1d97548df91d4b7d))
+
 ## [2.36.2](https://github.com/pressbooks/pressbooks-book/compare/2.36.1...2.36.2) (2026-09-02)
 
 
