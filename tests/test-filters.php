@@ -60,4 +60,32 @@ class FiltersTest extends WP_UnitTestCase {
 
 		$this->assertSame( $book_icon_url, $result );
 	}
+
+	function test_embed_site_title_uses_pressbooks_icon_when_no_site_icon_exists() {
+		$book_id = self::factory()->blog->create();
+
+		switch_to_blog( $book_id );
+		ob_start();
+		the_embed_site_title();
+		$html = ob_get_clean();
+		restore_current_blog();
+
+		$this->assertStringContainsString( get_template_directory_uri() . '/dist/images/favicon-32x32.png', $html );
+		$this->assertStringNotContainsString( 'w-logo', $html );
+	}
+
+	function test_pressbooks_icon_fallback_matches_requested_size() {
+		$book_id = self::factory()->blog->create();
+		$images = get_template_directory_uri() . '/dist/images';
+
+		switch_to_blog( $book_id );
+		$small = get_site_icon_url( 16 );
+		$medium = get_site_icon_url( 64 );
+		$large = get_site_icon_url( 512 );
+		restore_current_blog();
+
+		$this->assertSame( "$images/favicon-32x32.png", $small );
+		$this->assertSame( "$images/android-chrome-192x192.png", $medium );
+		$this->assertSame( "$images/android-chrome-512x512.png", $large );
+	}
 }

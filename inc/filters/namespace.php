@@ -179,7 +179,8 @@ function add_lightbox_to_settings( $settings ) {
 }
 
 /**
- * Fall back to the network (main site) icon when a book has no site icon of its own.
+ * Fall back to the network (main site) icon when a book has no site icon of its own,
+ * and to the bundled Pressbooks icon when the network has none either.
  *
  * Without this, contexts that call get_site_icon_url() on the book, such as
  * the oEmbed template, fall back to the WordPress logo.
@@ -200,5 +201,17 @@ function network_site_icon_url( $url, $size, $blog_id ) {
 		return $url;
 	}
 
-	return get_site_icon_url( $size, $url, $main_site_id );
+	if ( (int) get_blog_option( $main_site_id, 'site_icon' ) ) {
+		return get_site_icon_url( $size, $url, $main_site_id );
+	}
+
+	if ( $size <= 32 ) {
+		$icon = 'favicon-32x32.png';
+	} elseif ( $size <= 192 ) {
+		$icon = 'android-chrome-192x192.png';
+	} else {
+		$icon = 'android-chrome-512x512.png';
+	}
+
+	return get_template_directory_uri() . "/dist/images/$icon";
 }
