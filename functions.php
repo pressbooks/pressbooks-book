@@ -74,6 +74,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 add_filter( 'pb_pdf_hacks', '\PressbooksBook\Filters\pdf_hacks' );
 add_filter( 'pb_epub_hacks', '\PressbooksBook\Filters\ebook_hacks' );
 add_filter( 'pre_get_posts', '\PressbooksBook\Filters\filter_search' );
+add_filter( 'get_site_icon_url', '\PressbooksBook\Filters\network_site_icon_url', 10, 3 );
 add_action( 'after_setup_theme', '\PressbooksBook\Actions\theme_setup' );
 add_action( 'wp_head', '\PressbooksBook\Actions\customizer_colors' );
 add_action( 'wp_head', '\PressbooksBook\Actions\webbook_width' );
