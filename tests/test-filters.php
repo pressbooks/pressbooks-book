@@ -106,4 +106,24 @@ class FiltersTest extends WP_UnitTestCase {
 		$this->assertSame( "$images/android-chrome-192x192.png", $medium );
 		$this->assertSame( "$images/android-chrome-512x512.png", $large );
 	}
+
+	function test_admin_bar_has_no_site_icon_for_book_without_one() {
+		$book_id = self::factory()->blog->create();
+		$user_id = self::factory()->user->create( [ 'role' => 'administrator' ] );
+		grant_super_admin( $user_id );
+		wp_set_current_user( $user_id );
+		require_once ABSPATH . WPINC . '/class-wp-admin-bar.php';
+
+		switch_to_blog( $book_id );
+		set_current_screen( 'dashboard' );
+		$admin_bar = new \WP_Admin_Bar();
+		$admin_bar->initialize();
+		$admin_bar->add_menus();
+		do_action_ref_array( 'admin_bar_menu', [ &$admin_bar ] );
+		$title = $admin_bar->get_node( 'site-name' )->title;
+		set_current_screen( 'front' );
+		restore_current_blog();
+
+		$this->assertStringNotContainsString( 'site-icon', $title );
+	}
 }
