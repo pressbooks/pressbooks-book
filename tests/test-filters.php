@@ -74,6 +74,24 @@ class FiltersTest extends WP_UnitTestCase {
 		$this->assertStringNotContainsString( 'w-logo', $html );
 	}
 
+	function test_embed_site_title_uses_pressbooks_icon_when_network_icon_attachment_is_missing() {
+		$book_id = self::factory()->blog->create();
+		update_option( 'site_icon', PHP_INT_MAX );
+
+		switch_to_blog( $book_id );
+		ob_start();
+		the_embed_site_title();
+		$html = ob_get_clean();
+		restore_current_blog();
+
+		$this->assertStringContainsString( get_template_directory_uri() . '/dist/images/favicon-32x32.png', $html );
+		$this->assertStringNotContainsString( 'w-logo', $html );
+	}
+
+	function test_main_site_without_icon_keeps_core_fallback() {
+		$this->assertSame( 'core-fallback', get_site_icon_url( 32, 'core-fallback' ) );
+	}
+
 	function test_pressbooks_icon_fallback_matches_requested_size() {
 		$book_id = self::factory()->blog->create();
 		$images = get_template_directory_uri() . '/dist/images';

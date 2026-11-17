@@ -201,8 +201,9 @@ function network_site_icon_url( $url, $size, $blog_id ) {
 		return $url;
 	}
 
-	if ( (int) get_blog_option( $main_site_id, 'site_icon' ) ) {
-		return get_site_icon_url( $size, $url, $main_site_id );
+	$network_icon_url = get_site_icon_url( $size, '', $main_site_id );
+	if ( $network_icon_url ) {
+		return $network_icon_url;
 	}
 
 	if ( $size <= 32 ) {
