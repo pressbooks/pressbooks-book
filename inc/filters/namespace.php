@@ -197,7 +197,8 @@ function network_site_icon_url( $url, $size, $blog_id ) {
 	$blog_id = $blog_id ? (int) $blog_id : get_current_blog_id();
 	$main_site_id = get_main_site_id();
 
-	if ( $blog_id === $main_site_id || (int) get_blog_option( $blog_id, 'site_icon' ) ) {
+	// wp-admin keeps core behaviour: the Pressbooks admin bar isn't built for a site icon next to the book title.
+	if ( is_admin() || $blog_id === $main_site_id || (int) get_blog_option( $blog_id, 'site_icon' ) ) {
 		return $url;
 	}
 
