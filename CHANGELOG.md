@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.36.4](https://github.com/pressbooks/pressbooks-book/compare/2.36.3...2.36.4) (2026-11-17)
+
+
+### Bug Fixes
+
+* remove site icon from the book title in the admin bar ([#1489](https://github.com/pressbooks/pressbooks-book/issues/1489)) ([83e04ca](https://github.com/pressbooks/pressbooks-book/commit/83e04ca0b3ca1b33254753c1a959ac014f89a7dd))
+* use network site icon in chapter embeds ([#1487](https://github.com/pressbooks/pressbooks-book/issues/1487)) ([682fc7d](https://github.com/pressbooks/pressbooks-book/commit/682fc7d4f33654cdc1a6d79efdc45c9bd3b8e358))
+
 ## [2.36.3](https://github.com/pressbooks/pressbooks-book/compare/2.36.2...2.36.3) (2026-09-22)
 
 
