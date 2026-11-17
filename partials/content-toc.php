@@ -35,8 +35,8 @@ $part_numbers = $options['chapter_numbers'] ?? false; ?>
 		$part_class = ( $part_has_chapters ) ? 'toc__part toc__part--full' : 'toc__part toc__part--empty';
 		if ( $part_has_chapters || $part_has_content ) {
 			$n++;
-			$part_number = \Pressbooks\L10n\romanize( $n );
-			$part_title = ( $part_numbers ) ? "<span class='toc__title__number'>$part_number. </span>{$part['post_title']}" : $part['post_title'];
+			$part_number = function_exists( 'pb_get_part_number' ) ? pb_get_part_number( $n ) : \Pressbooks\L10n\romanize( $n );
+			$part_title = ( $part_numbers && $part_number ) ? "<span class='toc__title__number'>$part_number. </span>{$part['post_title']}" : $part['post_title'];
 			$part_class = 'toc__part';
 			$part_class .= ( $part_has_chapters ) ? ' toc__part--full' : ' toc__part--empty';
 			if ( isset( $post ) ) {

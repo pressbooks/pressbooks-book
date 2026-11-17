@@ -16,7 +16,7 @@ if ( have_posts() ) {
 		$display_content_only = apply_filters( 'pb_content_only', false );
 		if ( is_book_public() ) :
 			$web_options  = get_option( 'pressbooks_theme_options_web' );
-			$number       = ( $post->post_type === 'chapter' ) ? pb_get_chapter_number( $post->ID ) : false;
+			$number       = ( $post->post_type === 'chapter' ) ? ( function_exists( 'pb_get_section_number' ) ? pb_get_section_number( $post->ID ) : pb_get_chapter_number( $post->ID ) ) : false;
 			$subtitle     = get_post_meta( $post->ID, 'pb_subtitle', true );
 			$contributors = new Contributors();
 			$display_about_the_author = ! empty( get_option( 'pressbooks_theme_options_global', [] )['about_the_author'] );

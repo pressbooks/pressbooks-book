@@ -36,7 +36,7 @@ function toc_sections( $sections, $post_type, $can_read, $can_read_private, $per
 				}
 			}
 		}
-		$chapter_number = pb_get_chapter_number( $section['ID'] );
+		$chapter_number = function_exists( 'pb_get_section_number' ) ? pb_get_section_number( $section['ID'] ) : pb_get_chapter_number( $section['ID'] );
 		$subsection_output = '';
 		$subsections = false;
 		if ( pb_should_parse_subsections() ) {
