@@ -51,9 +51,6 @@
 
 	<?php
 	$root_id = get_network()->site_id;
-	switch_to_blog( $root_id );
-	wp_site_icon();
-	restore_current_blog();
 	?>
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/site.webmanifest">
 	<meta name="application-name" content="Pressbooks">
